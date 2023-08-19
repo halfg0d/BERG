@@ -1,0 +1,21 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_machine_assimilator }
+	}
+	modifier = {
+		job_replicator_add = -1
+		job_maintenance_drone_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_designation = col_crucible
+	}
+	modifier = {
+		job_replicator_add = -1
+		job_crucible_drone_add = 2
+	}
+}
+inline_script = "vanilla/capitals/machine/berg_scripts_jobs_desc"

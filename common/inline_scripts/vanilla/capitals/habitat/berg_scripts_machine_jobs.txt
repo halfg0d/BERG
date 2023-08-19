@@ -1,0 +1,23 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	job_coordinator_add = @berg_capital_$tier$_coordinator
+	job_replicator_add = @berg_capital_$tier$_replicator
+	job_maintenance_drone_add = @berg_capital_$tier$_maintenance
+	planet_amenities_add = 3
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_active_tradition = tr_synthetics_finish_machine
+		}
+	}
+	modifier = {
+		job_replicator_add = 1
+	}
+}
+inline_script = "vanilla/capitals/habitat/ber_scripts_machine_jobs_desc"

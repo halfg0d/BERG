@@ -1,0 +1,118 @@
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_civic = civic_exalted_priesthood
+		}
+		$trigger$
+	}
+	text = job_high_priest_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_civic = civic_aristocratic_elite
+		}
+		$trigger$
+	}
+	text = job_noble_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_civic = civic_technocracy
+		}
+		$trigger$
+	}
+	text = job_head_researcher_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_civic = civic_merchant_guilds
+		}
+		$trigger$
+	}
+	text = job_merchant_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_authority = auth_corporate }
+			is_regular_empire = yes
+		}
+		$trigger$
+	}
+	text = job_politician_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_active_tradition = tr_synthetics_finish }
+		$trigger$
+	}
+	text = job_roboticist_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_authority = auth_corporate
+		}
+		$trigger$
+	}
+	text = job_executive_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	text = job_enforcer_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_toxic_knights
+		}
+		has_planet_flag = toxic_knights_habitat
+	}
+	text = job_knight_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_toxic_knights
+			NOR = {
+				has_country_flag = toxoids_7011_b
+				has_country_flag = toxoids_7040_b
+				has_country_flag = toxoids_7130_b
+			}
+		}
+		has_planet_flag = toxic_knights_habitat
+	}
+	text = job_knight_commander_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_origin = origin_toxic_knights
+			OR = {
+				has_country_flag = toxoids_7011_b
+				has_country_flag = toxoids_7040_b
+				has_country_flag = toxoids_7130_b
+			}
+		}
+		has_planet_flag = toxic_knights_habitat
+	}
+	text = job_knight_commander_research_effect_desc
+}

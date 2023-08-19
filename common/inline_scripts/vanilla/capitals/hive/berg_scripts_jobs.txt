@@ -1,0 +1,10 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_progenitor_hive }
+		is_planet_class = pc_hive
+	}
+	job_spawning_drone_add = -1
+	job_offspring_drone_add = 1
+}
+inline_script = "vanilla/capitals/hive/berg_scripts_jobs_desc"

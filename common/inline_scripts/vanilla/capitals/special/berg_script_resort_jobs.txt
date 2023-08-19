@@ -1,0 +1,42 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			NOT = { has_authority = auth_corporate }
+		}
+	}
+	job_politician_add = @berg_capitals_$tier$_politician
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_authority = auth_corporate }
+	}
+	modifier = {
+		job_executive_add = @berg_capitals_$tier$_politician
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_warrior_culture
+		}
+	}
+	modifier = {
+		job_duelist_add = @berg_capitals_$tier$_entertainer
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_warrior_culture }
+		}
+	}
+	modifier = {
+		job_entertainer_add = @berg_capitals_$tier$_entertainer
+	}
+}
+inline_script = "vanilla/capitals/special/berg_script_resort_jobs_desc"

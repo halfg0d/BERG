@@ -1,0 +1,35 @@
+triggered_planet_modifier = {
+	potential = {
+		always = $prod1$
+		exists = owner
+		owner = { has_technology = tech_capital_productivity_1 }
+	}
+	modifier = {
+		planet_jobs_productive_upkeep_mult = 0.1
+		planet_jobs_productive_produces_mult = 0.1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		always = $prod2$
+		exists = owner
+		owner = { has_technology = tech_capital_productivity_2 }
+	}
+	modifier = {
+		planet_jobs_productive_upkeep_mult = 0.1
+		planet_jobs_productive_produces_mult = 0.1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		always = $prod3$
+		exists = owner
+		owner = { has_technology = tech_capital_productivity_3 }
+	}
+	modifier = {
+		planet_jobs_productive_upkeep_mult = 0.1
+		planet_jobs_productive_produces_mult = 0.1
+	}
+}

@@ -1,0 +1,21 @@
+triggered_desc = {
+	trigger = {
+		NOT = { has_designation = col_crucible }
+	}
+	text = job_replicator_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		has_designation = col_crucible
+	}
+	text = job_crucible_drone_effect_desc
+}
+
+triggered_desc = {
+	text = job_patrol_drone_effect_desc
+}
+
+triggered_desc = {
+	text = job_maintenance_drone_effect_desc
+}

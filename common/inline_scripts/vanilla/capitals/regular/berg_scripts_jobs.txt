@@ -1,0 +1,94 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			NOR = {
+				has_authority = auth_corporate
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_aristocratic_elite
+				has_civic = civic_merchant_guilds
+				has_civic = civic_technocracy
+			}
+		}
+		$trigger$
+	}
+	modifier = {
+		job_politician_add = @berg_capital_$tier$_politician1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_authority = auth_corporate }
+		$trigger$
+	}
+	modifier = {
+		job_executive_add = @berg_capital_$tier$_executive
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_exalted_priesthood }
+		$trigger$
+	}
+	modifier = {
+		job_high_priest_add = @berg_capital_$tier$_high_priest
+		job_politician_add = @berg_capital_$tier$_politician2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_aristocratic_elite }
+		$trigger$
+	}
+	modifier = {
+		job_noble_add = @berg_capital_$tier$_noble
+		job_politician_add = @berg_capital_$tier$_politician2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_technocracy }
+		$trigger$
+	}
+	modifier = {
+		job_head_researcher_add = @berg_capital_$tier$_head_researcher
+		job_politician_add = @berg_capital_$tier$_politician2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_merchant_guilds }
+		$trigger$
+	}
+	modifier = {
+		job_merchant_add = @berg_capital_$tier$_merchant
+		job_politician_add = @berg_capital_$tier$_politician2
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		has_planet_flag = toxic_knights_habitat
+		exists = owner
+		owner = {
+			has_origin = origin_toxic_knights
+		}
+	}
+	modifier = {
+		job_knight_commander_add = @berg_capital_$tier$_knight_commander
+		job_knight_add =@berg_capital_$tier$_knight
+	}
+}
+inline_script = {
+	script = "vanilla/capitals/regular/berg_scripts_jobs_desc"
+	trigger = $trigger$
+}

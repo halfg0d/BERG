@@ -1,0 +1,11 @@
+triggered_desc = {
+	text = job_synapse_drone_effect_desc
+}
+
+triggered_desc = {
+	text = job_maintenance_drone_effect_desc
+}
+
+triggered_desc = {
+	text = job_patrol_drone_effect_desc
+}

@@ -1,0 +1,25 @@
+##############
+## Habitat Capitals
+##############
+
+# Habitat Administration
+@berg_capital_h1_synapse_drone = 2
+@berg_capital_h1_coordinator = 1
+@berg_capital_h1_replicator = 1
+@berg_capital_h1_maintenance = 2
+@berg_capital_h1_politician = 1
+
+@berg_capital_h2_synapse_drone = 3
+@berg_capital_h2_coordinator = 2
+@berg_capital_h2_replicator = 1
+@berg_capital_h2_maintenance = 3
+@berg_capital_h2_politician = 2
+@berg_capital_h2_knight_commander = 1
+@berg_capital_h2_knight = 1
+@berg_capital_h2_politician1 = 2
+@berg_capital_h2_politician2 = 1
+@berg_capital_h2_executive = 2
+@berg_capital_h2_high_priest = 1
+@berg_capital_h2_noble = 1
+@berg_capital_h2_head_researcher = 1
+@berg_capital_h2_merchant = 1

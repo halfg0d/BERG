@@ -1,0 +1,23 @@
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			NOT = { has_authority = auth_corporate }
+		}
+	}
+	text = job_politician_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_authority = auth_corporate
+		}
+	}
+	text = job_executive_effect_desc
+}
+
+triggered_desc = {
+	text = job_slave_overseer_effect_desc
+}

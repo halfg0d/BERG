@@ -1,0 +1,54 @@
+##############
+## Regular Capitals
+##############
+
+# Planetary Administration
+@berg_capital_r1_politician1 = 2
+@berg_capital_r1_politician2 = 1
+@berg_capital_r1_executive = 2
+@berg_capital_r1_high_priest = 1
+@berg_capital_r1_noble = 1
+@berg_capital_r1_head_researcher = 1
+@berg_capital_r1_merchant = 1
+# Major Capital
+@berg_capital_r2_politician1 = 3
+@berg_capital_r2_politician2 = 2
+@berg_capital_r2_executive = 3
+@berg_capital_r2_high_priest = 1
+@berg_capital_r2_noble = 1
+@berg_capital_r2_head_researcher = 1
+@berg_capital_r2_merchant = 1
+# System Capital
+@berg_capital_r3_politician1 = 4
+@berg_capital_r3_politician2 = 2
+@berg_capital_r3_executive = 4
+@berg_capital_r3_high_priest = 2
+@berg_capital_r3_noble = 2
+@berg_capital_r3_head_researcher = 2
+@berg_capital_r3_merchant = 2
+# Imperial Capital
+@berg_capital_imperial_regular_politician1 = 6
+@berg_capital_imperial_regular_politician2 = 3
+@berg_capital_imperial_regular_executive = 3
+@berg_capital_imperial_regular_high_priest = 3 
+@berg_capital_imperial_regular_noble = 3
+@berg_capital_imperial_regular_head_researcher = 3
+@berg_capital_imperial_regular_merchant = 3
+
+##############
+## Machine Capitals
+##############
+@machine_test = 2137
+##############
+## Special Capitals
+##############
+@berg_capitals_resort1_entertainer = 1
+@berg_capitals_resort1_politician = 1
+
+@berg_capitals_resort2_entertainer = 2
+@berg_capitals_resort2_politician = 1
+
+@berg_capitals_thrall1_politician = 2
+@berg_capitals_thrall1_overseer = 2
+@berg_capitals_thrall2_politician = 2
+@berg_capitals_thrall2_overseer = 4
