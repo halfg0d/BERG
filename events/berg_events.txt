@@ -1,0 +1,13 @@
+namespace = berg_mod_flag
+
+# For some one who need that mod to work with other
+event = {
+	id = berg_mod_flag.1
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = { NOT = { has_global_flag = berg_active } }
+
+	immediate = { set_global_flag = berg_active }
+}
