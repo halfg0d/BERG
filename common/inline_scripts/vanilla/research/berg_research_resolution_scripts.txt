@@ -1,0 +1,29 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_galactic_community_member = yes
+		}
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+		has_modifier = pm_extradimensional_experimentation
+	}
+	modifier = {
+		job_dimensional_portal_researcher_add = @berg_research_r$tier$_dimensional_jobs
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_galactic_community_member = yes
+		}
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+		has_modifier = pm_extradimensional_experimentation
+	}
+	modifier = {
+		job_dimensional_portal_researcher_gestalt_add = @berg_research_r&tier&_dimensional_jobs
+	}
+}

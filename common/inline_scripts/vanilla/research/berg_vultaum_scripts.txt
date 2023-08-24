@@ -1,0 +1,61 @@
+#Modifiers
+planet_modifier = {
+	planet_researchers_physics_research_produces_add = @berg_research_v$tier$_physic
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_archaeoengineers }
+	}
+	planet_researchers_physics_research_produces_add = @berg_research_v$tier$_physic_ap
+}
+#Jobs
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_head_researcher_add = @berg_research_v$tier$_jobs
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	modifier = {
+		job_brain_drone_add = @berg_research_v$tier$_jobs
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	modifier = {
+		job_calculator_add = @berg_research_v$tier$_jobs
+	}
+}
+#Descriptions
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_head_researcher_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	text = job_brain_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	text = job_calculator_effect_desc
+}

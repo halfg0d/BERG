@@ -1,0 +1,18 @@
+#############
+# Science buildings
+#############
+@berg_research_r1_jobs = 2
+@berg_research_r2_jobs = 4
+@berg_research_r3_jobs = 6
+@berg_research_r3_dimensional_jobs = 1
+@berg_research_i1_mult = 0.15
+@berg_research_i1_job = 1
+@berg_research_a1_jobs = 3
+@berg_research_a1_jobs_ap = 2
+@berg_research_a1_mult = 1.0
+@berg_research_a1_mult_relic = 0.5
+@berg_research_a1_artifacts = 1000
+@berg_research_a1_artifacts_ap = 2000
+@berg_research_v1_jobs = 1
+@berg_research_v1_physic = 1
+@berg_research_v1_physic_ap = 1
