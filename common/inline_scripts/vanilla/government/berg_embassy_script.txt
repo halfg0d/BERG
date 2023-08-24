@@ -1,0 +1,3 @@
+country_modifier = {
+	envoys_add = @berg_government_em$tier$_envoy
+}

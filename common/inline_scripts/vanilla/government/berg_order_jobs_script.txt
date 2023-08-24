@@ -1,0 +1,16 @@
+planet_modifier = {
+	job_squire_add = @berg_government_$building$_squire
+	job_knight_add = @berg_government_$building$_knight
+
+	planet_immigration_pull_add = @berg_government_$building_immigration
+	planet_resettlement_unemployed_destination_mult = @berg_government_$building$_resettlement
+}
+triggered_desc = {
+	text = building_order_keep_effect
+}
+triggered_desc = {
+	text = job_knight_effect_desc
+}
+triggered_desc = {
+	text = job_squire_effect_desc
+}

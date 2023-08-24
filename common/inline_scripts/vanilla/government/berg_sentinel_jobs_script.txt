@@ -1,0 +1,6 @@
+planet_modifier = {
+	job_patrol_drone_add = @berg_government_g$tier$_job
+}
+triggered_desc = {
+	text = job_patrol_drone_effect_desc
+}

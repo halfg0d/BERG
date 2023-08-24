@@ -1,0 +1,23 @@
+#############
+# Government buildings
+#############
+@berg_government_n1_jobs = 1
+@berg_government_n1_housing = 1
+@berg_government_s1_mult = 0.05
+@berg_government_s1_political_power = -0.25
+@berg_government_s1_resettlement = -0.50
+@berg_government_e1_job = 2
+@berg_government_e2_job = 5
+@berg_government_g1_job = 2
+@berg_government_c1_squire = 1
+@berg_government_c1_knight = 1
+@berg_government_c1_immigration = 1
+@berg_government_c1_resettlement = 0.2
+@berg_government_o1_squire = 1
+@berg_government_o1_knight = 1
+@berg_government_o1_immigration = 5
+@berg_government_o1_resettlement = 1
+@berg_government_p1_job = 2
+@berg_government_p1_stability = 5
+@berg_government_em1_envoy = 1
+@berg_government_em2_envoy = 2

@@ -44,12 +44,10 @@ building_noble_estates = {
 			owner = { has_civic = civic_aristocratic_elite }
 		}
 	}
-
-	planet_modifier = {
-		job_noble_add = 1
-		planet_housing_add = 1
+	inline_script = {
+		script = vanilla/government/berg_noble_scripts
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -58,10 +56,6 @@ building_noble_estates = {
 		upkeep = {
 			energy = 2
 		}
-	}
-
-	triggered_desc = {
-		text = job_noble_effect_desc
 	}
 }
 
@@ -103,13 +97,10 @@ building_slave_processing = {
 			has_modifier = resort_colony
 		}
 	}
-
-	planet_modifier = {
-		planet_jobs_slave_produces_mult = 0.05
-		pop_cat_slave_political_power = -0.25
-		planet_resettlement_unemployed_mult = -0.50
+	inline_script = {
+		script = vanilla/government/berg_slave_processing_scripts
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -119,17 +110,8 @@ building_slave_processing = {
 			energy = 2
 		}
 	}
-
 	prerequisites = {
 		"tech_neural_implants"
-	}
-
-	triggered_desc = {
-		text = building_slave_processing_slave_army_effect_desc
-	}
-
-	triggered_desc = {
-		text = building_slave_processing_migrate_effect_desc
 	}
 }
 
@@ -166,10 +148,10 @@ building_precinct_house = {
 		}
 	}
 
-	planet_modifier = {
-		job_enforcer_add = 2
+	inline_script = {
+		script = vanilla/government/berg_enforcer_jobs_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -182,10 +164,6 @@ building_precinct_house = {
 
 	prerequisites = {
 		"tech_planetary_government"
-	}
-
-	triggered_desc = {
-		text = job_enforcer_effect_desc
 	}
 
 	show_tech_unlock_if = {
@@ -219,9 +197,9 @@ building_hall_judgment = {
 		exists = owner
 		owner = { is_regular_empire = no }
 	}
-
-	planet_modifier = {
-		job_enforcer_add = 5
+	inline_script = {
+		script = vanilla/government/berg_enforcer_jobs_script
+		tier = 2
 	}
 
 	resources = {
@@ -238,10 +216,6 @@ building_hall_judgment = {
 
 	prerequisites = {
 		"tech_colonial_centralization"
-	}
-
-	triggered_desc = {
-		text = job_enforcer_effect_desc
 	}
 
 	show_tech_unlock_if = {
@@ -279,9 +253,6 @@ building_sentinel_posts = {
 		}
 	}
 
-	planet_modifier = {
-		job_patrol_drone_add = 2
-	}
 
 	resources = {
 		category = planet_buildings
@@ -296,11 +267,10 @@ building_sentinel_posts = {
 	prerequisites = {
 		"tech_planetary_government"
 	}
-
-	triggered_desc = {
-		text = job_patrol_drone_effect_desc
+	inline_script = {
+		script = vanilla/government/berg_sentinel_jobs_script
+		tier = 1
 	}
-
 	show_tech_unlock_if = {
 		is_gestalt = yes
 	}
@@ -331,15 +301,10 @@ building_order_keep = {
 		}
 	}
 
-	planet_modifier = {
-		job_squire_add = 1
-		job_knight_add = 1
-		job_knight_per_pop = 0.05 # 1 for every 10 pop while quest active. 1 for 20 after quest.
-
-		planet_immigration_pull_add = 5
-		planet_resettlement_unemployed_destination_mult = 1
+	inline_script = {
+		script = vanilla/government/berg_order_jobs_script
+		building = "o1"
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			owner = { has_country_flag = toxoids_7060_A }
@@ -347,16 +312,24 @@ building_order_keep = {
 		modifier = { job_knight_add = 1 }
 	}
 
+	# 1 for every 10 pop while quest active. 1 for 20 after quest.
 	triggered_planet_modifier = {
 		potential = {
 			owner = { NOT = { has_country_flag = quest_over } }
 		}
 		modifier = {
 			job_knight_add = 1
+			job_knight_per_pop = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = {has_country_flag = quest_over }
+		}
+		modifier = {
 			job_knight_per_pop = 0.05
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			owner = { has_country_flag = toxoids_7090_a }
@@ -364,24 +337,11 @@ building_order_keep = {
 		planet_stability_add = 15
 	}
 
-
 	resources = {
 		cost = {
 			minerals = 1000
 		}
 		category = planet_buildings
-	}
-
-	triggered_desc = {
-		text = building_order_keep_effect
-	}
-
-	triggered_desc = {
-		text = job_knight_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_squire_effect_desc
 	}
 }
 
@@ -400,15 +360,10 @@ building_order_castle = {
 			NOT = { owner = { has_origin = origin_toxic_knights } }
 		}
 	}
-
-	planet_modifier = {
-		job_squire_add = 1
-		job_knight_add = 1
-
-		planet_immigration_pull_add = 1
-		planet_resettlement_unemployed_destination_mult = 0.2
+	inline_script = {
+		script = vanilla/government/berg_order_jobs_script
+		building = "c1"
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			owner = { NOT = { has_country_flag = quest_over } }
@@ -422,17 +377,6 @@ building_order_castle = {
 		category = planet_buildings
 	}
 
-	triggered_desc = {
-		text = building_order_keep_effect
-	}
-
-	triggered_desc = {
-		text = job_knight_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_squire_effect_desc
-	}
 }
 
 #############
@@ -478,10 +422,9 @@ building_psi_corps = {
 			owner = { has_tradition = tr_psionics_psi_corps }
 		}
 	}
-
-	planet_modifier = {
-		job_telepath_add = 2
-		planet_stability_add = 5
+	inline_script = {
+		script = vanilla/government/berg_psi_corps_script
+		tier = 1
 	}
 
 	resources = {
@@ -492,10 +435,6 @@ building_psi_corps = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
-	}
-
-	triggered_desc = {
-		text = job_telepath_effect_desc
 	}
 }
 
@@ -547,11 +486,10 @@ building_embassy = {
 			planet = { is_capital = no }
 		}
 	}
-
-	country_modifier = {
-		envoys_add = 1
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -616,10 +554,10 @@ building_grand_embassy = {
 		}
 	}
 
-	country_modifier = {
-		envoys_add = 2
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 2
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
