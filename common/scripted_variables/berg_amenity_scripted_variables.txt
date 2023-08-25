@@ -1,0 +1,30 @@
+#############
+# Amenities buildings
+#############
+@berg_amenity_r1_housing = 3
+@berg_amenity_r1_amenities = 5
+@berg_amenity_r1_housing = 6
+@berg_amenity_r1_amenities = 10
+@berg_amenity_c1_housing = 5
+@berg_amenity_c1_amenities = 3
+@berg_amenity_c1_housing = 10
+@berg_amenity_c1_amenities = 6
+@berg_amenity_m1_housing = 4
+@berg_amenity_m1_amenities = 3
+@berg_amenity_m2_housing = 8
+@berg_amenity_m2_amenities = 6
+@berg_amenity_h1_housing = 3
+@berg_amenity_h1_amenities = 5
+@berg_amenity_h2_housing = 6
+@berg_amenity_h2_amenities = 10
+@berg_amenity_t1_jobs = 2
+@berg_amenity_t2_jobs = 4
+@berg_amenity_l1_jobs = 2
+@berg_amenity_l2_jobs = 4
+@berg_amenity_d1_jobs = 5
+@berg_amenity_s1_housing = 8
+@berg_amenity_o1_housing = 2
+@berg_amenity_o1_job = 2
+@berg_amenity_a1_job = 2
+@berg_amenity_a1_unity_per_blocker = 2
+@berg_amenity_b1_job = 2

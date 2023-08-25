@@ -1,0 +1,6 @@
+planet_modifier = {
+	job_maintenance_drone_add = @berg_amenity_d$tier$_jobs
+}
+triggered_desc = {
+	text = job_maintenance_drone_effect_desc
+}

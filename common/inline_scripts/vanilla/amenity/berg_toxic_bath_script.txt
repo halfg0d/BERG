@@ -1,0 +1,10 @@
+planet_modifier = {
+	job_bath_attendant_add = @berg_amenity_b$tier$_job
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_megacorp = no }
+	}
+	text = job_toxic_baths_effect_desc
+}

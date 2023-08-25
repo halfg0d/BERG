@@ -1,0 +1,36 @@
+ai_resource_production = {
+	unity = 2
+	mult = value:natural_blocker_count
+}
+
+ai_resource_production = {
+	unity = 1
+	trigger = { owner_has_resolution = { RES = resolution_ecology_integrated_gardens } }
+	mult = value:natural_blocker_count
+}
+
+ai_resource_production = {
+	unity = 1
+	trigger = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
+	mult = value:natural_blocker_count
+}
+
+ai_resource_production = {
+	unity = 1
+	trigger = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
+	mult = value:natural_blocker_count
+}
+triggered_planet_modifier = {
+	potential = { owner_has_resolution = { RES = resolution_ecology_integrated_gardens } }
+	deposit_blockers_natural_unity_produces_add = 1
+}
+
+triggered_planet_modifier = {
+	potential = { owner_has_resolution = { RES = resolution_ecology_environmental_control_board } }
+	deposit_blockers_natural_unity_produces_add = 1
+}
+
+triggered_planet_modifier = {
+	potential = { owner_has_resolution = { RES = resolution_ecology_paradise_initiative } }
+	deposit_blockers_natural_unity_produces_add = 1
+}

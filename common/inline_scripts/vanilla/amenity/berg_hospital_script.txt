@@ -1,0 +1,6 @@
+planet_modifier = {
+	job_healthcare_add = @berg_amenity_l$tier$_jobs
+}
+triggered_desc = {
+	text = job_healthcare_effect_desc
+}
