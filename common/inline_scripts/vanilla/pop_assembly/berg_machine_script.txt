@@ -1,0 +1,6 @@
+planet_modifier = {
+	job_replicator_add = @berg_pop_assembly_m$tier$_job
+}
+triggered_desc = {
+	text = job_replicator_effect_desc
+}

@@ -1,0 +1,18 @@
+planet_modifier = {
+	job_reassigner_add = @berg_pop_assembly_h$tier$_job
+}
+triggered_desc = {
+	text = job_reassigner_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		OR = {
+			has_building = building_robot_assembly_plant
+			AND = {
+				exists = assembling_species
+				assembling_species = { is_robotic_species = yes }
+			}
+		}
+	}
+	text = tooltip_organic_and_artificial_assembly_warning
+}

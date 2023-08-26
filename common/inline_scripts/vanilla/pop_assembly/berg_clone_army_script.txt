@@ -1,0 +1,61 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_ai = yes }
+		can_assemble_clone_soldier_pop = yes
+	}
+	planet_pop_assembly_organic_add = @berg_pop_assembly_a$tier$_organic
+}
+
+# Add growth from 0 to 25 depending on 'clone_pops_missing_per_vat'.
+triggered_planet_modifier = {
+	potential = {
+		can_assemble_clone_soldier_pop = yes
+		check_variable = { which = clone_pops_missing_per_vat value > 0 }
+	}
+	modifier = { planet_pop_assembly_organic_add = 2 }
+}
+triggered_planet_modifier = {
+	potential = {
+		can_assemble_clone_soldier_pop = yes
+		check_variable = { which = clone_pops_missing_per_vat value > 1 }
+	}
+	modifier = { planet_pop_assembly_organic_add = 3 }
+}
+triggered_planet_modifier = {
+	potential = {
+		can_assemble_clone_soldier_pop = yes
+		check_variable = { which = clone_pops_missing_per_vat value > 4 }
+	}
+	modifier = { planet_pop_assembly_organic_add = 2 }
+}
+triggered_planet_modifier = {
+	potential = {
+		can_assemble_clone_soldier_pop = yes
+		check_variable = { which = clone_pops_missing_per_vat value > 8 }
+	}
+	modifier = { planet_pop_assembly_organic_add = 3 }
+}
+triggered_planet_modifier = {
+	potential = {
+		can_assemble_clone_soldier_pop = yes
+		years_passed > 10
+		check_variable = { which = clone_pops_missing_per_vat value > 12 }
+	}
+	modifier = { planet_pop_assembly_organic_add = 5 }
+}
+triggered_desc = {
+	text = building_clone_army_clone_vat_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		OR = {
+			has_building = building_robot_assembly_plant
+			AND = {
+				exists = assembling_species
+				assembling_species = { is_robotic_species = yes }
+			}
+		}
+	}
+	text = tooltip_organic_and_artificial_assembly_warning
+}

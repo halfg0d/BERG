@@ -1,0 +1,89 @@
+#Normal
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { NOT = { has_origin = origin_progenitor_hive } }
+	}
+	modifier = {
+		job_spawning_drone_add = @berg_pop_assembly_p$tier$_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { NOT = { has_origin = origin_progenitor_hive } }
+	}
+	text = spawning_pool_tooltip
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_origin = origin_necrophage }
+		exists = growing_species
+		growing_species = {
+			NOT = { has_trait = trait_hive_mind }
+		}
+	}
+	text = job_spawning_drone_necrophage_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		NAND = {
+			exists = owner
+			owner = { has_origin = origin_necrophage }
+			exists = growing_species
+			growing_species = {
+				NOT = { has_trait = trait_hive_mind }
+			}
+		}
+	}
+	text = job_spawning_drone_effect_desc
+}
+#Cyborgs
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_active_tradition = tr_cybernetics_modular_cybernetics_hive }
+	}
+	modifier = {
+		job_cyber_drone_add = 2
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_active_tradition = tr_cybernetics_modular_cybernetics_hive
+		}
+	}
+	text = job_cyber_drone_effect_desc
+}
+#Progenitor Hiive
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_origin = origin_progenitor_hive }
+	}
+	modifier = {
+		job_offspring_drone_add = @berg_pop_assembly_p$tier$_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_origin = origin_progenitor_hive }
+		exists = growing_species
+		growing_species = {
+			has_trait = trait_hive_mind
+		}
+	}
+	text = job_offspring_drone_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_origin = origin_progenitor_hive }
+	}
+	text = offspring_nest_tooltip
+}

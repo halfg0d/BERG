@@ -1,0 +1,49 @@
+
+#jobs desc
+triggered_desc = {
+	text = job_necro_apprentice_effect_desc
+	trigger = {
+		exists = owner
+		owner = {
+			is_lithoid_empire = no
+			is_hive_empire = no
+		}
+	}
+}
+triggered_desc = {
+	text = job_necro_apprentice_effect_lithoid_desc
+	trigger = {
+		exists = owner
+		owner = {
+			is_lithoid_empire = yes
+			is_hive_empire = no
+		}
+	}
+}
+triggered_desc = {
+	text = job_necro_apprentice_effect_hive_desc
+	trigger = {
+		exists = owner
+		owner = {
+			is_lithoid_empire = no
+			is_hive_empire = yes
+		}
+	}
+}
+triggered_desc = {
+	text = job_necro_apprentice_effect_hive_lithoid_desc
+	trigger = {
+		exists = owner
+		owner = {
+			is_lithoid_empire = yes
+			is_hive_empire = yes
+		}
+	}
+}
+
+triggered_desc = {
+	text = necrophage_elevation_timer_tooltip
+	trigger = {
+		has_planet_flag = necrophage_elevation_timer
+	}
+}

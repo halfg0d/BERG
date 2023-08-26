@@ -73,11 +73,10 @@ building_robot_assembly_plant = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		job_roboticist_add = 1
+	inline_script = {
+		script = vanilla/pop_assembly/berg_robot_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -86,51 +85,6 @@ building_robot_assembly_plant = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			OR = {
-				NOT = { exists = owner }
-				AND = {
-					exists = owner
-					owner = {
-						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-					}
-				}
-			}
-
-		}
-		text = job_roboticist_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_policy_flag = roboticist_output_build_cyborgs
-			}
-		}
-		text = job_roboticist_cyborg_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			OR = {
-				has_building = building_clone_vats
-				has_building = building_clone_army_clone_vat
-				has_building = building_posthumous_employment_center
-				AND = {
-					exists = assembling_species
-					assembling_species = { is_organic_species = yes }
-					exists = owner
-					owner = {
-						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-					}
-				}
-			}
-		}
-		text = tooltip_organic_and_artificial_assembly_warning
 	}
 
 	prerequisites = {
@@ -192,11 +146,10 @@ building_robot_assembly_complex = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		job_roboticist_add = 2
+	inline_script = {
+		script = vanilla/pop_assembly/berg_robot_script
+		tier = 2
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -211,51 +164,6 @@ building_robot_assembly_complex = {
 
 	prerequisites = {
 		tech_robot_assembly_complex
-	}
-
-	triggered_desc = {
-		trigger = {
-			OR = {
-				NOT = { exists = owner }
-				AND = {
-					exists = owner
-					owner = {
-						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-					}
-				}
-			}
-
-		}
-		text = job_roboticist_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_policy_flag = roboticist_output_build_cyborgs
-			}
-		}
-		text = job_roboticist_cyborg_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			OR = {
-				has_building = building_clone_vats
-				has_building = building_clone_army_clone_vat
-				has_building = building_posthumous_employment_center
-				AND = {
-					exists = assembling_species
-					assembling_species = { is_organic_species = yes }
-					exists = owner
-					owner = {
-						NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-					}
-				}
-			}
-		}
-		text = tooltip_organic_and_artificial_assembly_warning
 	}
 }
 
@@ -307,11 +215,10 @@ building_machine_assembly_plant = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		job_replicator_add = 1
+	inline_script = {
+		script = vanilla/pop_assembly/berg_machine_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -328,10 +235,6 @@ building_machine_assembly_plant = {
 
 	prerequisites = {
 
-	}
-
-	triggered_desc = {
-		text = job_replicator_effect_desc
 	}
 }
 
@@ -366,11 +269,10 @@ building_machine_assembly_complex = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		job_replicator_add = 3
+	inline_script = {
+		script = vanilla/pop_assembly/berg_machine_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -382,13 +284,8 @@ building_machine_assembly_complex = {
 			rare_crystals = @b3_rare_upkeep
 		}
 	}
-
 	prerequisites = {
 		tech_mega_assembly
-	}
-
-	triggered_desc = {
-		text = job_replicator_effect_desc
 	}
 }
 
@@ -423,19 +320,9 @@ building_spawning_pool = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		job_spawning_drone_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_modular_cybernetics_hive }
-		}
-		modifier = {
-			job_cyber_drone_add = 2
-		}
+	inline_script = {
+		script = vanilla/pop_assembly/berg_pool_script
+		tier = 1
 	}
 
 	resources = {
@@ -450,44 +337,6 @@ building_spawning_pool = {
 
 	convert_to = {
 		building_offspring_nest
-	}
-	triggered_desc = {
-		trigger = {
-			NAND = {
-				exists = owner
-				owner = { has_origin = origin_necrophage }
-				exists = growing_species
-				growing_species = {
-					NOT = { has_trait = trait_hive_mind }
-				}
-			}
-		}
-		text = job_spawning_drone_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_origin = origin_necrophage }
-			exists = growing_species
-			growing_species = {
-				NOT = { has_trait = trait_hive_mind }
-			}
-		}
-		text = job_spawning_drone_necrophage_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_cybernetics_modular_cybernetics_hive
-			}
-		}
-		text = job_cyber_drone_effect_desc
-	}
-
-	triggered_desc = {
-		text = spawning_pool_tooltip
 	}
 }
 
@@ -511,25 +360,13 @@ building_offspring_nest = {
 		owner = { NOT = { has_origin = origin_progenitor_hive } }
 	}
 
-	#ruined_trigger = {
-	#	has_planet_flag = offspring_defeated
-	#}
-
-	planet_modifier = {
-		job_offspring_drone_add = 1
+	inline_script = {
+		script = vanilla/pop_assembly/berg_pool_script
+		tier = 1
 	}
+	
 	convert_to = {
 		building_spawning_pool
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_modular_cybernetics_hive }
-		}
-		modifier = {
-			job_cyber_drone_add = 2
-		}
 	}
 
 	resources = {
@@ -540,31 +377,6 @@ building_offspring_nest = {
 		upkeep = {
 			energy = 2
 		}
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_origin = origin_progenitor_hive }
-			exists = growing_species
-			growing_species = {
-				has_trait = trait_hive_mind
-			}
-		}
-		text = job_offspring_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_cybernetics_modular_cybernetics_hive
-			}
-		}
-		text = job_cyber_drone_effect_desc
-	}
-
-	triggered_desc = {
-		text = offspring_nest_tooltip
 	}
 }
 
@@ -652,7 +464,6 @@ building_necrophage_elevation_chamber = {
 			}
 		}
 	}
-
 	planet_modifier = {
 		job_necro_apprentice_add = 1
 	}
@@ -670,7 +481,11 @@ building_necrophage_elevation_chamber = {
 		}
 		job_necro_apprentice_add = 1
 	}
+	inline_script = vanilla/pop_assembly/berg_necrophage_desc
 
+	triggered_desc = {
+		text = building_necrophage_elevation_chamber_scaling_tooltip
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -686,58 +501,6 @@ building_necrophage_elevation_chamber = {
 	}
 
 	prerequisites = {
-	}
-
-	triggered_desc = {
-		text = job_necro_apprentice_effect_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = no
-				is_hive_empire = no
-			}
-		}
-	}
-	triggered_desc = {
-		text = job_necro_apprentice_effect_lithoid_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = yes
-				is_hive_empire = no
-			}
-		}
-	}
-	triggered_desc = {
-		text = job_necro_apprentice_effect_hive_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = no
-				is_hive_empire = yes
-			}
-		}
-	}
-	triggered_desc = {
-		text = job_necro_apprentice_effect_hive_lithoid_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = yes
-				is_hive_empire = yes
-			}
-		}
-	}
-
-	triggered_desc = {
-		text = necrophage_elevation_timer_tooltip
-		trigger = {
-			has_planet_flag = necrophage_elevation_timer
-		}
-	}
-
-	triggered_desc = {
-		text = building_necrophage_elevation_chamber_scaling_tooltip
 	}
 
 	is_essential = yes
@@ -826,6 +589,7 @@ building_necrophage_house_of_apotheosis = {
 		}
 		job_necro_apprentice_add = 4
 	}
+	inline_script = vanilla/pop_assembly/berg_necrophage_desc
 
 	resources = {
 		category = planet_buildings
@@ -846,53 +610,6 @@ building_necrophage_house_of_apotheosis = {
 	show_tech_unlock_if = {
 		has_origin = origin_necrophage
 		has_trait = trait_necrophage
-	}
-
-	triggered_desc = {
-		text = job_necro_apprentice_effect_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = no
-				is_hive_empire = no
-			}
-		}
-	}
-	triggered_desc = {
-		text = job_necro_apprentice_effect_lithoid_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = yes
-				is_hive_empire = no
-			}
-		}
-	}
-	triggered_desc = {
-		text = job_necro_apprentice_effect_hive_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = no
-				is_hive_empire = yes
-			}
-		}
-	}
-	triggered_desc = {
-		text = job_necro_apprentice_effect_hive_lithoid_desc
-		trigger = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = yes
-				is_hive_empire = yes
-			}
-		}
-	}
-	triggered_desc = {
-		text = necrophage_elevation_timer_tooltip
-		trigger = {
-			has_planet_flag = necrophage_elevation_timer
-		}
 	}
 }
 
@@ -940,76 +657,9 @@ building_clone_vats = {
 			NOT = { owner = { has_tradition = tr_genetics_adopt } }
 		}
 	}
-
-	planet_modifier = {
-		planet_pop_assembly_organic_add = 3
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_genetics_efficient_cloning }
-		}
-		modifier = {
-			planet_pop_assembly_organic_add = 1.5
-		}
-	}
-	
-	resources = {
-		category = planet_buildings
-
-		# Base cost
-		cost = {
-			minerals = 500
-		}
-		# Org/Lith cost
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_empire = no }
-			}
-			food = 500
-		}
-		cost = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_empire = yes }
-			}
-			energy = 500
-		}
-
-		# Base upkeep
-		upkeep = {
-			energy = 2
-		}
-		# Org/Lith upkeep
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_empire = no }
-			}
-			food = 30
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { is_lithoid_empire = yes }
-			}
-			minerals = 30
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			OR = {
-				has_building = building_robot_assembly_plant
-				AND = {
-					exists = assembling_species
-					assembling_species = { is_robotic_species = yes }
-				}
-			}
-		}
-		text = tooltip_organic_and_artificial_assembly_warning
+	inline_script = {
+		script = vanilla/pop_assembly/berg_clone_vats_script
+		tier = 1
 	}
 }
 
@@ -1058,54 +708,10 @@ building_clone_army_clone_vat = {
 			}
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_ai = yes }
-			can_assemble_clone_soldier_pop = yes
-		}
-		planet_pop_assembly_organic_add = 2
+	inline_script = {
+		script = vanilla/pop_assembly/berg_clone_army_script
+		tier = 1
 	}
-
-	# Add growth from 0 to 25 depending on 'clone_pops_missing_per_vat'.
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_clone_soldier_pop = yes
-			check_variable = { which = clone_pops_missing_per_vat value > 0 }
-		}
-		modifier = { planet_pop_assembly_organic_add = 2 }
-	}
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_clone_soldier_pop = yes
-			check_variable = { which = clone_pops_missing_per_vat value > 1 }
-		}
-		modifier = { planet_pop_assembly_organic_add = 3 }
-	}
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_clone_soldier_pop = yes
-			check_variable = { which = clone_pops_missing_per_vat value > 4 }
-		}
-		modifier = { planet_pop_assembly_organic_add = 2 }
-	}
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_clone_soldier_pop = yes
-			check_variable = { which = clone_pops_missing_per_vat value > 8 }
-		}
-		modifier = { planet_pop_assembly_organic_add = 3 }
-	}
-	triggered_planet_modifier = {
-		potential = {
-			can_assemble_clone_soldier_pop = yes
-			years_passed > 10
-			check_variable = { which = clone_pops_missing_per_vat value > 12 }
-		}
-		modifier = { planet_pop_assembly_organic_add = 5 }
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1120,22 +726,6 @@ building_clone_army_clone_vat = {
 	}
 
 	prerequisites = {
-	}
-
-	triggered_desc = {
-		text = building_clone_army_clone_vat_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			OR = {
-				has_building = building_robot_assembly_plant
-				AND = {
-					exists = assembling_species
-					assembling_species = { is_robotic_species = yes }
-				}
-			}
-		}
-		text = tooltip_organic_and_artificial_assembly_warning
 	}
 
 	is_essential = yes
@@ -1193,11 +783,10 @@ building_posthumous_employment_center = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		job_reassigner_add = 1
+	inline_script = {
+		script = vanilla/pop_assembly/berg_posthumous_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1206,22 +795,6 @@ building_posthumous_employment_center = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
-
-	triggered_desc = {
-		text = job_reassigner_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			OR = {
-				has_building = building_robot_assembly_plant
-				AND = {
-					exists = assembling_species
-					assembling_species = { is_robotic_species = yes }
-				}
-			}
-		}
-		text = tooltip_organic_and_artificial_assembly_warning
 	}
 }
 
@@ -1262,15 +835,10 @@ building_toxic_bath_hive = {
 			}
 		}
 	}
-	planet_modifier = {
-		job_bath_attendant_hive_add = @b1_jobs
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-		}
-		text = job_toxic_baths_effect_hive_desc
+	inline_script = {
+		script = vanilla/pop_assembly/berg_toxic_bath_gestalt_script
+		gestalt = "hive"
+		tier = 1
 	}
 
 	resources = {
@@ -1305,15 +873,10 @@ building_toxic_bath_machine = {
 			}
 		}
 	}
-	planet_modifier = {
-		job_bath_attendant_machine_add = @b1_jobs
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-		}
-		text = job_toxic_baths_effect_machine_desc
+	inline_script = {
+		script = vanilla/pop_assembly/berg_toxic_bath_gestalt_script
+		gestalt = "machine"
+		tier = 1
 	}
 
 	resources = {

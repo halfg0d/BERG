@@ -1,0 +1,9 @@
+planet_modifier = {
+	job_bath_attendant_$gestalt$_add = @berg_pop_assembly_t$tier$_job
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+	}
+	text = job_toxic_baths_effect_$gestalt$_desc
+}

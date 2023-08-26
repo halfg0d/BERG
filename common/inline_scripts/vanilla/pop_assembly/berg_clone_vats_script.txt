@@ -1,0 +1,68 @@
+planet_modifier = {
+	planet_pop_assembly_organic_add = @berg_pop_assembly_c$tier$_organic
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_tradition = tr_genetics_efficient_cloning }
+	}
+	modifier = {
+		planet_pop_assembly_organic_add = @berg_pop_assembly_c$tier$_organic_bonus
+	}
+}
+resources = {
+	category = planet_buildings
+
+	# Base cost
+	cost = {
+		minerals = @berg_pop_assembly_c$tier$_cost
+	}
+	# Org/Lith cost
+	cost = {
+		trigger = {
+			exists = owner
+			owner = { is_lithoid_empire = no }
+		}
+		food = @berg_pop_assembly_c$tier$_cost
+	}
+	cost = {
+		trigger = {
+			exists = owner
+			owner = { is_lithoid_empire = yes }
+		}
+		energy = @berg_pop_assembly_c$tier$_cost
+	}
+
+	# Base upkeep
+	upkeep = {
+		energy = @berg_pop_assembly_c$tier$_upkeep_energy
+	}
+	# Org/Lith upkeep
+	upkeep = {
+		trigger = {
+			exists = owner
+			owner = { is_lithoid_empire = no }
+		}
+		food = @berg_pop_assembly_c$tier$_upkeep_resource
+	}
+	upkeep = {
+		trigger = {
+			exists = owner
+			owner = { is_lithoid_empire = yes }
+		}
+		minerals = @berg_pop_assembly_c$tier$_upkeep_resource
+	}
+}
+triggered_desc = {
+	trigger = {
+		OR = {
+			has_building = building_robot_assembly_plant
+			AND = {
+				exists = assembling_species
+				assembling_species = { is_robotic_species = yes }
+			}
+		}
+	}
+	text = tooltip_organic_and_artificial_assembly_warning
+}

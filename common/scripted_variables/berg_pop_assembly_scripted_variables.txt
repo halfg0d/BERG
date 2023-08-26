@@ -1,0 +1,18 @@
+#############
+# Robot buildings
+#############
+@berg_pop_assembly_r1_job = 1
+@berg_pop_assembly_r2_job = 2
+@berg_pop_assembly_m1_job = 1
+@berg_pop_assembly_m2_job = 3
+@berg_pop_assembly_p1_job = 1
+#clone vats
+@berg_pop_assembly_c1_organic = 3
+@berg_pop_assembly_c1_organic_bonus = 1.5
+@berg_pop_assembly_c1_cost = 500
+@berg_pop_assembly_c1_upkeep_energy = 2
+@berg_pop_assembly_c1_upkeep_resource = 30
+#
+@berg_pop_assembly_a1_organic = 2
+@berg_pop_assembly_h1_job = 1
+@berg_pop_assembly_t1_job = 2
