@@ -1,0 +1,35 @@
+#############
+# Resource buildings
+#############
+@berg_resource_h1_job = 2
+@berg_resource_p1_add = 1
+@berg_resource_p1_job = 1
+@berg_resource_p2_add = 2
+@berg_resource_p2_job = 2
+@berg_resource_b1_job = 2
+@berg_resource_b1_food = 1
+@berg_resource_b1_goods = 0.5
+@berg_resource_b1_goods_ap = 0.5
+@berg_resource_b1_energy = 1
+@berg_resource_b1_energy_ap = 1
+@berg_resource_m1_job = 1
+@berg_resource_m1_mineral = 1
+@berg_resource_m1_mineral_scrap = 1
+@berg_resource_m1_alloy = 0
+@berg_resource_m1_district = 2
+@berg_resource_m2_job = 2
+@berg_resource_m2_mineral = 2
+@berg_resource_m2_mineral_scrap = 1
+@berg_resource_m2_alloy = 0.5
+@berg_resource_m2_district = 4
+@berg_resource_e1_job = 1
+@berg_resource_e1_energy = 1
+@berg_resource_e1_district = 2
+@berg_resource_e2_job = 2
+@berg_resource_e2_energy = 2
+@berg_resource_e2_district = 4
+@berg_resource_s1_job = 1
+@berg_resource_s1_silo = 5000
+@berg_resource_r1_cost = 200
+@berg_resource_r1_upkeep = 25
+@berg_resource_r1_produce_1 = 20

@@ -1,0 +1,13 @@
+cost = {
+	minerals = @berg_resource_r$tier$_cost
+}
+upkeep = {
+	food = @berg_resource_r$tier$_upkeep
+}
+produces = {
+	trigger = {
+		exists = owner
+		owner = { NOT = { has_deficit = food } }
+	}
+	energy = @berg_resource_r$tier$_produce_1
+}
