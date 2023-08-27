@@ -1,0 +1,66 @@
+army_modifier = {
+	army_starting_experience_add = @berg_army_a$tier$_exp
+}
+#jobs
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_soldier_add = @berg_army_a$tier$_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_warrior_drone_add = @berg_army_a$tier$_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+			NOT = { has_valid_civic = civic_reanimated_armies }
+		}
+	}
+	modifier = {
+		job_necromancer_add = @berg_army_a$tier$_job
+	}
+}
+#Desc
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_warrior_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+			NOT = { has_valid_civic = civic_reanimated_armies }
+		}
+	}
+	text = job_soldier_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_valid_civic = civic_reanimated_armies }
+	}
+	text = job_necromancer_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_valid_civic = civic_reanimated_armies }
+	}
+	text = job_necromancer_effect_desc
+}

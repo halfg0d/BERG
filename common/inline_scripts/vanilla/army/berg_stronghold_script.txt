@@ -1,0 +1,32 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_soldier_add = @berg_army_s$tier$_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_warrior_drone_add = @berg_army_s$tier$_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_warrior_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_soldier_effect_desc
+}
