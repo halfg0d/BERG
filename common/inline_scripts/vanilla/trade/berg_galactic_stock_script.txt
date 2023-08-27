@@ -1,0 +1,7 @@
+planet_modifier = {
+	job_merchant_add = @berg_trade_s$tier$_job
+	trade_value_mult = @berg_trade_s$tier$_trade
+}
+triggered_desc = {
+	text = job_merchant_effect_desc
+}

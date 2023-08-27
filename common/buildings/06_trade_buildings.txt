@@ -31,35 +31,10 @@ building_commercial_zone = {
 			energy = @b1_upkeep
 		}
 	}
-
-	planet_modifier = {
-		job_clerk_add = 3
-	}
-
-	triggered_desc = {
-		text = job_clerk_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_mercantile_commercial_enterprise
-			}
-		}
-		modifier = {
-			job_merchant_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_mercantile_commercial_enterprise
-			}
-		}
-		text = job_merchant_effect_desc
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 1
+		canMerchant = "no"
 	}
 
 	prerequisites = {
@@ -107,30 +82,10 @@ building_commercial_megaplex = {
 			rare_crystals = @b2_rare_upkeep
 		}
 	}
-
-	planet_modifier = {
-		job_clerk_add = 6
-		job_merchant_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_mercantile_commercial_enterprise
-			}
-		}
-		modifier = {
-			job_merchant_add = 1
-		}
-	}
-
-	triggered_desc = {
-		text = job_clerk_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_merchant_effect_desc
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 1
+		canMerchant = "yes"
 	}
 
 	prerequisites = {
@@ -192,13 +147,10 @@ building_galactic_stock_exchange = {
 			has_modifier = resort_colony
 		}
 	}
-
-
-	planet_modifier = {
-		job_merchant_add = 2
-		trade_value_mult = 0.20
+	inline_script = {
+		script = vanilla/trade/berg_galactic_stock_script
+		tier = 1
 	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -214,11 +166,6 @@ building_galactic_stock_exchange = {
 	prerequisites = {
 		"tech_galactic_markets"
 	}
-
-	triggered_desc = {
-		text = job_merchant_effect_desc
-	}
-
 	ai_resource_production = {
 		energy = 5
 		trigger = {
