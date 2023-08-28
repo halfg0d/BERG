@@ -16,27 +16,10 @@ building_mote_harvesters = {
 			has_modifier = crucible_colony
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_mote_harvester_add = 1
-		}
+	inline_script = {
+		script = vanilla/deposit/berg_mote_harvesters_script
+		tier = 1
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_mote_harvesting_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -66,27 +49,10 @@ building_gas_extractors = {
 			has_modifier = crucible_colony
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_gas_extractor_add = 1
-		}
+	inline_script = {
+		script = vanilla/deposit/berg_gas_extractors_script
+		tier = 1
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_gas_extraction_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -115,27 +81,10 @@ building_crystal_mines = {
 			has_modifier = crucible_colony
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_crystal_miner_add = 1
-		}
+	inline_script = {
+		script = vanilla/deposit/berg_crystal_mines_script
+		tier = 1
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_crystal_mining_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -164,7 +113,10 @@ building_betharian_power_plant = {
 			has_modifier = crucible_colony
 		}
 	}
-
+	inline_script = {
+		script = vanilla/deposit/berg_betharian_script
+		tier = 1
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -174,42 +126,6 @@ building_betharian_power_plant = {
 			energy = 10
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_technician_add = 4
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_technician_drone_add = 4
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_technician_drone_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_technician_effect_desc
-	}
-
 	prerequisites = {
 		"tech_mine_betharian"
 	}
@@ -267,7 +183,10 @@ building_xeno_zoo = {
 			}			
 		}
 	}
-
+	inline_script = {
+		script = vanilla/deposit/berg_zoo_script
+		tier = 1
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -277,132 +196,7 @@ building_xeno_zoo = {
 			energy = @b1_upkeep
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
-		}
-		modifier = {
-			job_duelist_add = 1
-			job_entertainer_add = -1
-		}
-	}
-
-	planet_modifier = {
-		job_entertainer_add = 1
-		job_xeno_zoo_keeper_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				any_owned_pop = {
-					is_livestock = yes
-				}
-			}
-			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
-		}
-		modifier = {
-			job_livestock_zoo_animal_add = 3
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				any_owned_pop = {
-					is_livestock = no
-				}
-			}
-			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
-		}
-		modifier = {
-			job_livestock_zoo_beast_add = 3
-		}
-	}
-
 	prerequisites = {
 		"tech_alien_life_studies"
-	}
-
-	triggered_desc = {
-		text = job_xeno_zoo_keeper_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { NOT = { has_valid_civic = civic_warrior_culture } }
-		}
-		text = job_entertainer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_valid_civic = civic_warrior_culture }
-		}
-		text = job_duelist_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			planet = {
-				any_owned_pop = {
-					is_sapient = no
-				}
-			}
-			exists = owner
-			owner = { NOT = { has_valid_civic = civic_warrior_culture } }
-		}
-		text = job_xeno_zoo_animal_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			planet = {
-				any_owned_pop = {
-					is_livestock = yes
-				}
-			}
-			exists = owner
-			owner = { NOT = { has_valid_civic = civic_warrior_culture } }
-		}
-		text = job_livestock_zoo_animal_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			planet = {
-				any_owned_pop = {
-					is_sapient = no
-				}
-			}
-			exists = owner
-			owner = { has_valid_civic = civic_warrior_culture }
-		}
-		text = job_xeno_zoo_beast_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			planet = {
-				any_owned_pop = {
-					is_livestock = yes
-				}
-			}
-			exists = owner
-			owner = { has_valid_civic = civic_warrior_culture }
-		}
-		text = job_livestock_zoo_beast_effect_desc
 	}
 }

@@ -1,0 +1,19 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_crystal_miner_add = @berg_deposit_c$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_crystal_mining_drone_add = @berg_deposit_c$tier$_job
+	}
+}
