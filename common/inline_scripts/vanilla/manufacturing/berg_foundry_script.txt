@@ -1,0 +1,153 @@
+#Bonus
+triggered_planet_modifier = {
+	potential = {
+		always = $bonus$
+	}
+	modifier = {
+		planet_metallurgists_alloys_produces_add = @berg_manufacturing_a$tier$_alloy
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		always = $bonus$
+		exists = owner
+		owner = {
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		planet_metallurgists_minerals_upkeep_add = @berg_manufacturing_a$tier$_upkeep_m
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		always = $bonus$
+		exists = owner
+		owner = {
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		planet_metallurgists_food_upkeep_add = @berg_manufacturing_a$tier$_upkeep_f
+	}
+}
+#Job
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_alloy_drone_add = @berg_manufacturing_a$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_fabricator_add = @berg_manufacturing_a$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_catalytic_drone_add = @berg_manufacturing_a$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	modifier = {
+		job_foundry_add = @berg_manufacturing_a$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = yes
+		}
+	}
+	modifier = {
+		job_catalytic_technician_add = @berg_manufacturing_a$tier$_job
+	}
+}
+#desc
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	text = job_foundry_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = yes
+		}
+	}
+	text = job_catalytic_technician_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	text = job_alloy_drone_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	text = job_fabricator_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+	}
+	text = job_catalytic_drone_effect_desc
+}

@@ -34,72 +34,11 @@ building_foundry_1 = {
 			}
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_alloy_drone_add = @b1_jobs
-		}
+	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 1
+		bonus = no
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_fabricator_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_drone_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_foundry_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			job_catalytic_technician_add = @b1_jobs
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -118,60 +57,6 @@ building_foundry_1 = {
 		tech_basic_industry
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_foundry_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_technician_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
-	}
 }
 
 building_foundry_2 = {
@@ -219,142 +104,10 @@ building_foundry_2 = {
 		tech_alloys_1
 	}
 
-	planet_modifier = {
-		planet_metallurgists_alloys_produces_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			planet_metallurgists_minerals_upkeep_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_foundry_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			planet_metallurgists_food_upkeep_add = 3
-			job_catalytic_technician_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_alloy_drone_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_fabricator_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			planet_metallurgists_food_upkeep_add = 3
-			job_catalytic_drone_add = @b1_jobs
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_foundry_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_technician_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
+	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 2
+		bonus = yes
 	}
 }
 
@@ -417,23 +170,11 @@ building_foundry_3 = {
 	prerequisites = {
 		tech_alloys_2
 	}
-
-	planet_modifier = {
-		planet_metallurgists_alloys_produces_add = 2
+	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 3
+		bonus = yes
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			planet_metallurgists_minerals_upkeep_add = 4
-		}
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			has_ringworld_output_boost = yes
@@ -447,7 +188,6 @@ building_foundry_3 = {
 			planet_metallurgists_minerals_upkeep_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			has_ringworld_output_boost = yes
@@ -460,127 +200,6 @@ building_foundry_3 = {
 			planet_metallurgists_alloys_produces_add = 1
 			planet_metallurgists_food_upkeep_add = 3
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_foundry_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			planet_metallurgists_food_upkeep_add = 6
-			job_catalytic_technician_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_alloy_drone_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			job_fabricator_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			planet_metallurgists_food_upkeep_add = 6
-			job_catalytic_drone_add = @b1_jobs
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_foundry_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_technician_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
 	}
 }
 
@@ -646,41 +265,10 @@ building_factory_1 = {
 			}
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		modifier = {
-			job_artificer_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_artisan_drone_add = @b1_jobs
-		}
+	inline_script = {
+		script = vanilla/manufacturing/berg_factory_script
+		tier = 1
+		bonus = no
 	}
 
 	resources = {
@@ -699,36 +287,6 @@ building_factory_1 = {
 
 	upgrades = {
 		building_factory_2
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		text = job_artificer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_artisan_drone_effect_desc
 	}
 }
 
@@ -772,48 +330,6 @@ building_factory_2 = {
 			}
 		}
 	}
-
-	planet_modifier = {
-		planet_artisans_consumer_goods_produces_add = 1
-		planet_artisans_minerals_upkeep_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		modifier = {
-			job_artificer_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_artisan_drone_add = @b1_jobs
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -825,6 +341,11 @@ building_factory_2 = {
 			rare_crystals = @b3_rare_upkeep
 		}
 	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_factory_script
+		tier = 2
+		bonus = yes
+	}
 
 	prerequisites = {
 		tech_luxuries_1
@@ -832,36 +353,6 @@ building_factory_2 = {
 
 	upgrades = {
 		building_factory_3
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		text = job_artificer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_artisan_drone_effect_desc
 	}
 }
 
@@ -908,12 +399,6 @@ building_factory_3 = {
 		}
 	}
 
-
-	planet_modifier = {
-		planet_artisans_consumer_goods_produces_add = 2
-		planet_artisans_minerals_upkeep_add = 2
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			has_ringworld_output_boost = yes
@@ -921,42 +406,6 @@ building_factory_3 = {
 		modifier = {
 			planet_artisans_consumer_goods_produces_add = 1
 			planet_artisans_minerals_upkeep_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		modifier = {
-			job_artisan_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		modifier = {
-			job_artificer_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_artisan_drone_add = @b1_jobs
 		}
 	}
 
@@ -991,39 +440,14 @@ building_factory_3 = {
 			rare_crystals = 8
 		}
 	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_factory_script
+		tier = 3
+		bonus = yes
+	}
 
 	prerequisites = {
 		tech_luxuries_2
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		}
-		text = job_artisan_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		}
-		text = job_artificer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_artisan_drone_effect_desc
 	}
 }
 
@@ -1040,27 +464,6 @@ building_refinery = {
 			has_modifier = crucible_colony
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_gas_refiner_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_gas_refiner_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1070,25 +473,12 @@ building_refinery = {
 			energy = 3
 		}
 	}
-
+	inline_script = {
+		script = vanilla/manufacturing/berg_refinery_script
+		tier = 1
+	}
 	prerequisites = {
 		"tech_exotic_gases"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_gas_refiner_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_gas_refiner_drone_effect_desc
 	}
 }
 
@@ -1106,26 +496,6 @@ building_chemical_plant = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_chemist_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_chemist_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1135,25 +505,12 @@ building_chemical_plant = {
 			energy = 3
 		}
 	}
-
+	inline_script = {
+		script = vanilla/manufacturing/berg_chemical_script
+		tier = 1
+	}
 	prerequisites = {
 		"tech_volatile_motes"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_chemist_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_chemist_drone_effect_desc
 	}
 }
 
@@ -1171,26 +528,6 @@ building_crystal_plant = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_translucer_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_translucer_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1204,25 +541,51 @@ building_crystal_plant = {
 	prerequisites = {
 		"tech_rare_crystals"
 	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_translucer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_translucer_drone_effect_desc
+	inline_script = {
+		script = vanilla/manufacturing/berg_crystal_script
+		tier = 1
 	}
 
 	upgrades = {
 		"building_crystal_plant_2"
+	}
+}
+building_crystal_plant_2 = {
+	base_buildtime = 800
+	can_build = no
+
+	category = manufacturing
+
+	potential = {
+		owner = { has_country_flag = lithoid_crystal_plant }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_crystal_script
+		tier = 2
+	}
+	prerequisites = {
+		"tech_rare_crystals"
+	}
+
+	show_tech_unlock_if = {
+		owner = { has_country_flag = lithoid_crystal_plant }
 	}
 }
 
@@ -1261,24 +624,9 @@ building_nanite_transmuter = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 1000
-		}
-		produces = {
-			trigger = {
-				owner = {
-					NOT = {
-						has_deficit = nanites
-					}
-				}
-			}
-			rare_crystals = 2
-			volatile_motes = 2
-			exotic_gases = 2
-		}
-		upkeep = {
-			nanites = 1
-			energy = 5
+		inline_script = {
+			script = vanilla/manufacturing/berg_transmuter_script
+			tier = 1
 		}
 	}
 
@@ -1337,12 +685,6 @@ building_ministry_production = {
 		has_major_upgraded_capital = yes
 	}
 
-	planet_modifier = {
-		job_politician_add = 1
-		planet_metallurgists_produces_mult = 0.15
-		planet_artisans_produces_mult = 0.15
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1358,11 +700,10 @@ building_ministry_production = {
 	prerequisites = {
 		"tech_global_production_strategy"
 	}
-
-	triggered_desc = {
-		text = job_politician_effect_desc
+	inline_script = {
+		script = vanilla/manufacturing/berg_ministry_script
+		tier = 1
 	}
-
 	show_tech_unlock_if = {
 		is_regular_empire = yes
 	}
@@ -1421,10 +762,7 @@ building_production_center = {
 		has_major_upgraded_capital = yes
 	}
 
-	planet_modifier = {
-		planet_metallurgists_produces_mult = 0.15
-		planet_artisans_produces_mult = 0.15
-	}
+	
 
 	resources = {
 		category = planet_buildings
@@ -1437,87 +775,14 @@ building_production_center = {
 			volatile_motes = @b2_rare_upkeep
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		job_alloy_drone_add = 2
+	inline_script = {
+		script = vanilla/manufacturing/berg_production_center_script
+		tier = 1
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		job_catalytic_drone_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		job_fabricator_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = yes
-			}
-		}
-		job_catalytic_drone_add = 1
-	}
-
 	prerequisites = {
 		"tech_global_production_strategy"
 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_hive_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_alloy_drone_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_machine_empire = yes
-				is_catalytic_empire = no
-			}
-		}
-		text = job_fabricator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_gestalt = yes
-				is_catalytic_empire = yes
-			}
-		}
-		text = job_catalytic_drone_effect_desc
-	}
 
 	show_tech_unlock_if = {
 		is_gestalt = yes
@@ -1594,82 +859,6 @@ building_coordinated_fulfillment_center_1 = {
 		has_upgraded_capital = yes
 	}
 
-	triggered_desc = {
-		trigger = {
-			NOR = {
-				is_planet_class = pc_nuked
-				is_planet_class = pc_city
-				uses_district_set = habitat
-				uses_district_set = ring_world
-				uses_district_set = shattered_ring_world
-			}
-		}
-		text = building_coordinated_fulfillment_center_tooltip
-	}
-
-	planet_modifier = {
-		planet_metallurgists_produces_mult = 0.2
-		planet_artisans_produces_mult = 0.2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_policy_flag = relentless_industrialists_full_steam_ahead }
-		}
-		modifier = {
-			planet_metallurgists_produces_mult = 0.1
-			planet_artisans_produces_mult = 0.1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = { is_synthetic_empire = no }
-		}
-		modifier = {
-			pop_growth_speed_reduction = 0.15
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_synthetic_empire = no
-				NAND = {
-					has_policy_flag = relentless_industrialists_study
-					has_country_flag = relentless_industrialists_study_completed
-				}
-			}
-		}
-		modifier = {
-			pop_growth_speed_reduction = 0.05
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = { is_synthetic_empire = yes }
-		}
-		modifier = {
-			habitability_ceil_add = -0.075
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				owner = { is_synthetic_empire = yes }
-				NAND = {
-					has_policy_flag = relentless_industrialists_study
-					has_country_flag = relentless_industrialists_study_completed
-				}
-			}
-		}
-		modifier = {
-			habitability_ceil_add = -0.025
-		}
-	}
-
 	upgrades = {
 		building_coordinated_fulfillment_center_2
 	}
@@ -1689,7 +878,10 @@ building_coordinated_fulfillment_center_1 = {
 			}
 		}
 	}
-
+	inline_script = {
+		script = vanilla/manufacturing/berg_fulfillment_center_script
+		tier = 1
+	}
 	ai_resource_production = {
 		alloys = 6
 		trigger = {
@@ -1736,83 +928,6 @@ building_coordinated_fulfillment_center_2 = {
 	allow = {
 		has_major_upgraded_capital = yes
 	}
-
-	triggered_desc = {
-		trigger = {
-			NOR = {
-				is_planet_class = pc_nuked
-				is_planet_class = pc_city
-				uses_district_set = habitat
-				uses_district_set = ring_world
-				uses_district_set = shattered_ring_world
-			}
-		}
-		text = building_coordinated_fulfillment_center_tooltip
-	}
-
-	planet_modifier = {
-		planet_metallurgists_produces_mult = 0.4
-		planet_artisans_produces_mult = 0.4
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_policy_flag = relentless_industrialists_full_steam_ahead }
-		}
-		modifier = {
-			planet_metallurgists_produces_mult = 0.2
-			planet_artisans_produces_mult = 0.2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = { is_synthetic_empire = no }
-		}
-		modifier = {
-			pop_growth_speed_reduction = 0.25
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_synthetic_empire = no
-				NAND = {
-					has_policy_flag = relentless_industrialists_study
-					has_country_flag = relentless_industrialists_study_completed
-				}
-			}
-		}
-		modifier = {
-			pop_growth_speed_reduction = 0.15
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = { is_synthetic_empire = yes }
-		}
-		modifier = {
-			habitability_ceil_add = -0.1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				owner = { is_synthetic_empire = yes }
-				NAND = {
-					has_policy_flag = relentless_industrialists_study
-					has_country_flag = relentless_industrialists_study_completed
-				}
-			}
-		}
-		modifier = {
-			habitability_ceil_add = -0.05
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1829,6 +944,10 @@ building_coordinated_fulfillment_center_2 = {
 				owner = { has_policy_flag = relentless_industrialists_cleanup }
 			}
 		}
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_fulfillment_center_script
+		tier = 2
 	}
 
 	prerequisites = {
@@ -1875,48 +994,6 @@ building_archaeo_refinery = {
 		}
 		owner = { has_technology = tech_archaeo_refinery }
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_translucer_add = 1
-			job_gas_refiner_add = 1
-			job_chemist_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_translucer_drone_add = 1
-			job_gas_refiner_drone_add = 1
-			job_chemist_drone_add = 1
-		}
-	}
-
-	planet_modifier = {
-		planet_jobs_exotic_gases_produces_mult = 0.25
-		planet_jobs_rare_crystals_produces_mult = 0.25
-		planet_jobs_volatile_motes_produces_mult = 0.25
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				has_ascension_perk = ap_archaeoengineers
-			}
-		}
-		planet_jobs_exotic_gases_produces_mult = 0.15
-		planet_jobs_rare_crystals_produces_mult = 0.15
-		planet_jobs_volatile_motes_produces_mult = 0.15
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -1927,52 +1004,11 @@ building_archaeo_refinery = {
 			energy = @b2_upkeep
 		}
 	}
-
+	inline_script = {
+		script = vanilla/manufacturing/berg_archaeorefinery_script
+		tier = 1
+	}
 	prerequisites = {
 		"tech_archaeo_refinery"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_translucer_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_chemist_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_gas_refiner_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_translucer_drone_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_chemist_drone_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_gas_refiner_drone_effect_desc
 	}
 }

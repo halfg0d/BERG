@@ -1,0 +1,74 @@
+triggered_desc = {
+	trigger = {
+		NOR = {
+			is_planet_class = pc_nuked
+			is_planet_class = pc_city
+			uses_district_set = habitat
+			uses_district_set = ring_world
+			uses_district_set = shattered_ring_world
+		}
+	}
+	text = building_coordinated_fulfillment_center_tooltip
+}
+planet_modifier = {
+	planet_metallurgists_produces_mult = @berg_manufacturing_i$tier$_mult
+	planet_artisans_produces_mult = @berg_manufacturing_i$tier$_mult
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = { has_policy_flag = relentless_industrialists_full_steam_ahead }
+	}
+	modifier = {
+		planet_metallurgists_produces_mult = @berg_manufacturing_i$tier$_mult_policy
+		planet_artisans_produces_mult = @berg_manufacturing_i$tier$_mult_policy
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = { is_synthetic_empire = no }
+	}
+	modifier = {
+		pop_growth_speed_reduction = @berg_manufacturing_i$tier$_pop_growth_reduction
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			is_synthetic_empire = no
+			NAND = {
+				has_policy_flag = relentless_industrialists_study
+				has_country_flag = relentless_industrialists_study_completed
+			}
+		}
+	}
+	modifier = {
+		pop_growth_speed_reduction = @berg_manufacturing_i$tier$_pop_growth_reduction_policy
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = { is_synthetic_empire = yes }
+	}
+	modifier = {
+		habitability_ceil_add = @berg_manufacturing_i$tier$_habitability_ceil_synthethic
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			owner = { is_synthetic_empire = yes }
+			NAND = {
+				has_policy_flag = relentless_industrialists_study
+				has_country_flag = relentless_industrialists_study_completed
+			}
+		}
+	}
+	modifier = {
+		habitability_ceil_add = @berg_manufacturing_i$tier$_habitability_ceil
+	}
+}

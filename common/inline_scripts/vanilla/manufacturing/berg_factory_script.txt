@@ -1,0 +1,76 @@
+#Bonus
+triggered_planet_modifier = {
+	potential = {
+		always = $bonus$
+	}
+	modifier = {
+		planet_artisans_consumer_goods_produces_add = @berg_manufacturing_b$tier$_cgood
+		planet_artisans_minerals_upkeep_add = @berg_manufacturing_b$tier$_upkeep_m
+	}
+}
+#Jobs
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_crafter_empire = no
+		}
+	}
+	modifier = {
+		job_artisan_add = @berg_manufacturing_b$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_crafter_empire = yes
+		}
+	}
+	modifier = {
+		job_artificer_add = @berg_manufacturing_b$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_artisan_drone_add = @berg_manufacturing_b$tier$_job
+	}
+}
+#Desc
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_crafter_empire = no
+		}
+	}
+	text = job_artisan_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_crafter_empire = yes
+		}
+	}
+	text = job_artificer_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_artisan_drone_effect_desc
+}

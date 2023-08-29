@@ -1,0 +1,79 @@
+planet_modifier = {
+	planet_metallurgists_produces_mult = @berg_manufacturing_h$tier$_bonus
+	planet_artisans_produces_mult = @berg_manufacturing_h$tier$_bonus
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	job_alloy_drone_add = @berg_manufacturing_h$tier$_job_hive
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = yes
+		}
+	}
+	job_catalytic_drone_add = @berg_manufacturing_h$tier$_job_hive
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	job_fabricator_add = @berg_manufacturing_h$tier$_job_machine
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = yes
+		}
+	}
+	job_catalytic_drone_add = @berg_manufacturing_h$tier$_job_machine
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	text = job_alloy_drone_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+	}
+	text = job_fabricator_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+	}
+	text = job_catalytic_drone_effect_desc
+}

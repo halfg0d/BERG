@@ -1,0 +1,83 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_translucer_add = @berg_manufacturing_j$tier$_job
+		job_gas_refiner_add = @berg_manufacturing_j$tier$_job
+		job_chemist_add = @berg_manufacturing_j$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_translucer_drone_add = @berg_manufacturing_j$tier$_job
+		job_gas_refiner_drone_add = @berg_manufacturing_j$tier$_job
+		job_chemist_drone_add = @berg_manufacturing_j$tier$_job
+	}
+}
+
+planet_modifier = {
+	planet_jobs_exotic_gases_produces_mult = @berg_manufacturing_j$tier$_mult
+	planet_jobs_rare_crystals_produces_mult = @berg_manufacturing_j$tier$_mult
+	planet_jobs_volatile_motes_produces_mult = @berg_manufacturing_j$tier$_mult
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			has_ascension_perk = ap_archaeoengineers
+		}
+	}
+	planet_jobs_exotic_gases_produces_mult = @berg_manufacturing_j$tier$_mult_ap
+	planet_jobs_rare_crystals_produces_mult = @berg_manufacturing_j$tier$_mult_ap
+	planet_jobs_volatile_motes_produces_mult = @berg_manufacturing_j$tier$_mult_ap
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_translucer_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_chemist_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_gas_refiner_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_translucer_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_chemist_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_gas_refiner_drone_effect_desc
+}
