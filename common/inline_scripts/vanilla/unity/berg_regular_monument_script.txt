@@ -1,0 +1,7 @@
+planet_modifier = {
+	planet_jobs_unity_produces_mult = @berg_unity_a$tier$_unity_bonus
+	job_culture_worker_add = @berg_unity_a$tier$_job
+}
+triggered_desc = {
+	text = job_culture_worker_effect_desc
+}

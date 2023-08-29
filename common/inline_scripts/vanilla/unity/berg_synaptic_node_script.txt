@@ -1,0 +1,39 @@
+planet_modifier = {
+	job_synapse_drone_add = @berg_unity_e$tier$_job
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_active_tradition = tr_domination_synaptic_extensions
+		}
+	}
+	modifier = {
+		planet_housing_add = 2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_edict = synaptic_reinforcement
+		}
+	}
+	job_maintenance_drone_add = 1
+}
+
+triggered_desc = {
+	text = job_synapse_drone_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_edict = synaptic_reinforcement
+		}
+	}
+	text = job_maintenance_drone_effect_desc
+}

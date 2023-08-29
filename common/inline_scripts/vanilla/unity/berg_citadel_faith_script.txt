@@ -1,0 +1,17 @@
+planet_modifier = {
+	job_high_priest_add = @berg_unity_j$tier$_job
+	pop_ethic_spiritualist_attraction_mult = @berg_unity_j$tier$_attraction
+	planet_administrators_produces_mult = @berg_unity_j$tier$_unity_mult
+}
+triggered_planet_modifier = {
+	potential = {
+		has_ringworld_output_boost = yes
+	}
+	planet_administrators_unity_produces_add = @berg_unity_j$tier$_unity_add
+	planet_managers_unity_produces_add = @berg_unity_j$tier$_unity_add
+	planet_priests_unity_produces_add = @berg_unity_j$tier$_unity_add
+	planet_telepaths_unity_produces_add = @berg_unity_j$tier$_unity_add
+}
+triggered_desc = {
+	text = job_high_priest_effect_desc
+}

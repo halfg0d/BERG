@@ -1,0 +1,15 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner.federation
+		owner.federation = { has_federation_perk = all_the_priests_2 }
+	}
+	job_high_priest_add = 1
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner.federation
+		owner.federation = { has_federation_perk = all_the_priests_2 }
+	}
+	text = job_high_priest_effect_desc
+}

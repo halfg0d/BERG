@@ -1,0 +1,32 @@
+planet_modifier = {
+	job_priest_add = @berg_unity_c$tier$_priest
+	pop_ethic_spiritualist_attraction_mult = @berg_unity_c$tier$_attraction
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_megacorp = no }
+	}
+	modifier = {
+		job_priest_add = @berg_unity_c$tier$_priest
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_megacorp = yes }
+	}
+	modifier = {
+		job_manager_add = @berg_unity_c$tier$_manager
+	}
+}
+triggered_desc = {
+	text = job_priest_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_megacorp = yes }
+	}
+	text = job_manager_effect_desc
+}

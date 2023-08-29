@@ -1,0 +1,13 @@
+planet_modifier = {
+	planet_administrators_produces_mult = @berg_unity_i$tier$_unity_mult
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_ringworld_output_boost = yes
+	}
+	planet_administrators_unity_produces_add = @berg_unity_i$tier$_unity_add
+	planet_managers_unity_produces_add = @berg_unity_i$tier$_unity_add
+	planet_priests_unity_produces_add = @berg_unity_i$tier$_unity_add
+	planet_telepaths_unity_produces_add = @berg_unity_i$tier$_unity_add
+}

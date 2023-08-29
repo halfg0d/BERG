@@ -1,0 +1,10 @@
+planet_modifier = {
+	planet_administrators_produces_mult = @berg_unity_k$tier$_mult
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_ringworld_output_boost = yes
+	}
+	custom_tooltip = "sm_ring_maintenance_hub_effect"
+}
