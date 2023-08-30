@@ -2,7 +2,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_civic = civic_exalted_priesthood
+			berg_has_any_spiritualist_civic = yes
 		}
 		$trigger$
 	}
@@ -12,7 +12,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_civic = civic_aristocratic_elite
+			berg_has_any_noble_civic = yes
 		}
 		$trigger$
 	}
@@ -22,7 +22,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_civic = civic_technocracy
+			berg_has_any_technocracy_civic = yes
 		}
 		$trigger$
 	}
@@ -30,9 +30,10 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
+		berg_has_ethics_and_civic_classic_mod = no
 		exists = owner
 		owner = {
-			has_civic = civic_merchant_guilds
+			berg_has_any_merchant_civic = yes
 		}
 		$trigger$
 	}
@@ -115,4 +116,10 @@ triggered_desc = {
 		has_planet_flag = toxic_knights_habitat
 	}
 	text = job_knight_commander_research_effect_desc
+}
+inline_script = {
+	script = ECC/berg_ecc_capital_desc_script
+	trigger = $trigger$
+	transcend = $transcend$
+	healthcare = $healtcare$
 }

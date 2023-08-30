@@ -35,6 +35,7 @@ building_commercial_zone = {
 		script = vanilla/trade/berg_commercial_script
 		tier = 1
 		canMerchant = "no"
+		entrepreneur = no
 	}
 
 	prerequisites = {
@@ -81,11 +82,16 @@ building_commercial_megaplex = {
 			energy = @b2_upkeep
 			rare_crystals = @b2_rare_upkeep
 		}
+		inline_script = {
+			script = ECC/berg_ecc_commercial_unity
+			tier = 2
+		}
 	}
 	inline_script = {
 		script = vanilla/trade/berg_commercial_script
-		tier = 1
+		tier = 2
 		canMerchant = "yes"
+		entrepreneur = yes
 	}
 
 	prerequisites = {

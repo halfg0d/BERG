@@ -93,6 +93,10 @@ triggered_planet_modifier = {
 		district_mining_max = @berg_resource_m$tier$_district
 	}
 }
+inline_script = {
+	script = ECC/berg_ecc_mineral_purification_script
+	tier = $tier$
+}
 triggered_desc = {
 	trigger = {
 		NOT = { is_planet_class = pc_shattered_ring_habitable }

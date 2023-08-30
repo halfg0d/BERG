@@ -59,6 +59,13 @@ building_military_academy = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+		produces = {
+			trigger = {
+				berg_has_ethics_and_civic_classic_mod = yes
+				owner = { has_civic = civic_martial_brotherhood }
+			}
+			unity = @berg_ecc_l1_unity
+		}
 	}
 
 	prerequisites = {
@@ -133,6 +140,16 @@ building_stronghold = {
 		upkeep = {
 			energy = 1
 		}
+		produces = {
+			trigger = {
+				berg_has_ethics_and_civic_classic_mod = yes
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 3
+		}
 	}
 
 	prerequisites = {
@@ -168,6 +185,16 @@ building_fortress = {
 		upkeep = {
 			energy = 1
 			volatile_motes = @b2_rare_upkeep
+		}
+		produces = {
+			trigger = {
+				berg_has_ethics_and_civic_classic_mod = yes
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 3
 		}
 	}
 
@@ -217,6 +244,10 @@ building_planetary_shield_generator = {
 		}
 		upkeep = {
 			energy = @b2_upkeep
+		}
+		inline_script = {
+			script = ECC/berg_ecc_shield_script
+			tier = 1
 		}
 	}
 

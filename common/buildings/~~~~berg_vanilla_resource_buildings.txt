@@ -111,6 +111,10 @@ building_food_processing_facility = {
 		upkeep = {
 			energy = 2
 		}
+		inline_script = {
+			script = ECC/berg_ecc_food_processing_script
+			tier = 1
+		}
 	}
 
 	upgrades = {
@@ -187,6 +191,10 @@ building_food_processing_center = {
 			}
 			energy = 5
 			volatile_motes = 3
+		}
+		inline_script = {
+			script = ECC/berg_ecc_food_processing_script
+			tier = 2
 		}
 	}
 	prerequisites = {
@@ -449,6 +457,12 @@ building_energy_grid = {
 			}
 			has_any_generator_district_or_building = yes
 		}
+	}
+	triggered_desc = {
+		trigger = {
+			berg_has_ethics_and_civic_classic_mod = yes
+		}
+		text = building_energy_grid_effect_desc
 	}
 	inline_script = {
 		script = vanilla/resource/berg_energy_grid_script

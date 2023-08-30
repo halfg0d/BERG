@@ -645,6 +645,10 @@ building_sacred_nexus = {
 		script = vanilla/unity/berg_temple_script
 		tier = 3
 	}
+	inline_script = {
+		script = ECC/berg_ecc_sacred_nexus_script
+		tier = 3
+	}
 	inline_script = vanilla/unity/berg_priest_federation_script
 
 	prerequisites = {

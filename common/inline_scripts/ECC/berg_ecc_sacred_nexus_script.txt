@@ -1,0 +1,32 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_imperial_cult
+				has_civic = civic_divine_council
+				has_civic = civic_spiritual_democracy
+				has_civic = civic_exalted_priesthood
+			}
+		}
+	}
+	modifier = {
+		job_high_priest_add = @berg_ecc_j$tier$_high_priest
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_imperial_cult
+				has_civic = civic_divine_council
+				has_civic = civic_spiritual_democracy
+				has_civic = civic_exalted_priesthood
+			}
+		}
+	}
+	text = job_high_priest_effect_desc
+}

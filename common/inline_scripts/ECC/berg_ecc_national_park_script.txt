@@ -1,0 +1,105 @@
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_savage_wildlands }
+	}
+	unity = 4
+	society_research = 2
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_alien_pets_deposit }
+	}
+	unity = 4
+	society_research = 2
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_migrating_forests }
+	}
+	unity = 4
+	society_research = 2
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_migrating_forest_reserve }
+	}
+	unity = 4
+	society_research = 2
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_wandering_forests }
+	}
+	unity = 4
+	society_research = 2
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_titanic_life_blocker }
+	}
+	unity = 4
+	society_research = 2
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_dangerous_wildlife_blocker }
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_mountain_range	}
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_active_volcano	}
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_dense_jungle }
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_toxic_kelp }
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_deep_sinkhole }
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_quicksand_basin }
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_noxious_swamp }
+	}
+	unity = 2
+	society_research = 1
+}
+produces = {
+	trigger = {
+		fromfrom.planet = { has_deposit = d_massive_glacier }
+	}
+	unity = 2
+	society_research = 1
+}

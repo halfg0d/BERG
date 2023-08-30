@@ -30,6 +30,10 @@ triggered_planet_modifier = {
 		job_head_researcher_add = @berg_research_i$tier$_job
 	}
 }
+inline_script = {
+	script = ECC/berg_ecc_institute_script
+	tier = $tier$
+}
 #Descriptions
 triggered_desc = {
 	trigger = {

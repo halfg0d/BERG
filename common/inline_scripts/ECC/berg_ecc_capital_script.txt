@@ -1,0 +1,96 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			berg_ecc_military_dictatorship_civic = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_commandante_add = @berg_ecc_$tier$_commandate
+		job_politician_add = @berg_capital_$tier$_politician2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			berg_ecc_supervisor_civic = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_supervisor_add = @berg_ecc_$tier$_supervisor
+		job_politician_add = @berg_ecc_$tier$_politician_supervisor
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_enlightment
+		}
+		always = $healthcare$
+		$trigger$
+	}
+	modifier = {
+		job_healthcare_add = @berg_ecc_$tier$_healthcare
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_anarchy_ideals
+		}
+		$trigger$
+	}
+	modifier = {
+		job_enforcer_add = -1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_ethic = ethic_authoritarian
+		}
+		$trigger$
+	}
+	modifier = {
+		job_enforcer_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		$trigger$
+	}
+	modifier = {
+		job_enforcer_add = 2
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = { has_civic = civic_spiritual_seekers }
+		always = $transcend$
+		$trigger$
+	}
+	modifier = {
+		job_transcend_add = @berg_ecc_$tier$_transcend
+	}
+}

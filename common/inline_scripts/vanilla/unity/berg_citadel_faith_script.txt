@@ -12,6 +12,10 @@ triggered_planet_modifier = {
 	planet_priests_unity_produces_add = @berg_unity_j$tier$_unity_add
 	planet_telepaths_unity_produces_add = @berg_unity_j$tier$_unity_add
 }
+inline_script = {
+	script = ECC/berg_ecc_citadel_faith_script
+	tier = $tier$
+}
 triggered_desc = {
 	text = job_high_priest_effect_desc
 }

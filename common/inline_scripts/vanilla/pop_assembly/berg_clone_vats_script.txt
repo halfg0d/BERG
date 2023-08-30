@@ -11,6 +11,10 @@ triggered_planet_modifier = {
 		planet_pop_assembly_organic_add = @berg_pop_assembly_c$tier$_organic_bonus
 	}
 }
+inline_script = {
+	script = ECC/berg_ecc_clone_vats_script
+	tier = $tier$
+}
 resources = {
 	category = planet_buildings
 

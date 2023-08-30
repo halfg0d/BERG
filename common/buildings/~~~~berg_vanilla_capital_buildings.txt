@@ -188,6 +188,9 @@ building_capital = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
 		tier = r1
 		trigger = " "
+		#ECC
+		transcend = no
+		healthcare = yes
 	}
 
 	triggered_planet_modifier = {
@@ -317,6 +320,9 @@ building_major_capital = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
 		tier = r2
 		trigger = " "
+		#ECC
+		transcend = yes
+		healthcare = yes
 	}
 
 	triggered_planet_modifier = {
@@ -470,6 +476,9 @@ building_system_capital = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
 		tier = r3
 		trigger = " "
+		#ECC
+		transcend = yes
+		healthcare = yes
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1400,6 +1409,9 @@ building_hab_major_capital = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			NOT = { owner = { has_origin = origin_toxic_knights } }
 		}"
+		#ECC
+		transcend = no
+		healthcare = no
 	}
 	triggered_planet_modifier = {
 		modifier = { planet_stability_add = 1 }
@@ -1889,6 +1901,9 @@ building_imperial_capital = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
 		tier = imperial_regular
 		trigger = " "
+		#ECC
+		transcend = yes
+		healthcare = yes
 	}
 	triggered_planet_modifier = {
 		potential = {

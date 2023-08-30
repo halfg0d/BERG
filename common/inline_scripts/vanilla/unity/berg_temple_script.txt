@@ -30,3 +30,7 @@ triggered_desc = {
 	}
 	text = job_manager_effect_desc
 }
+inline_script = {
+	script = ECC/berg_ecc_temple_script
+	tier = $tier$
+}

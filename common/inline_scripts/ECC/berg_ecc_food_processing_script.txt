@@ -1,0 +1,7 @@
+produces = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		owner = { has_civic = civic_agrarian_idyll }
+	}
+	unity = @berg_ecc_f$tier$_unity
+}

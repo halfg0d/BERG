@@ -1,0 +1,14 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_innovative_economy
+		}
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = @berg_ecc_i$tier$_unity
+		planet_housing_add = @berg_ecc_i$tier$_housing
+	}
+}

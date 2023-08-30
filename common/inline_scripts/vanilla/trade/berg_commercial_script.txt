@@ -35,7 +35,16 @@ triggered_desc = {
 				has_active_tradition = tr_mercantile_commercial_enterprise
 			}
 			always = $canMerchant$
+			AND = {
+				has_valid_civic = civic_consumerism
+				berg_has_ethics_and_civic_classic_mod = yes
+			}
 		}
 	}
 	text = job_merchant_effect_desc
+}
+inline_script = {
+	script = ECC/berg_ecc_commercial_script
+	tier = $tier$
+	entrepreneur = $entrepreneur$
 }

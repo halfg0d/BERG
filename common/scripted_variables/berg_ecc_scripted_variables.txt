@@ -1,0 +1,106 @@
+###############
+# Ethics and Civics Classic Variables
+#############
+
+# Planetary Administration
+@berg_ecc_r1_mogul = 1
+@berg_ecc_r1_politician_mogul = 1
+@berg_ecc_r1_healthcare = 1
+@berg_ecc_r1_commandate = 1
+@berg_ecc_r1_supervisor = 1
+@berg_ecc_r1_politician_supervisor = 1
+@berg_ecc_r1_transcend = 0
+# Major Capital
+@berg_ecc_r2_mogul = 2
+@berg_ecc_r2_politician_mogul = 1
+@berg_ecc_r2_healthcare = 2
+@berg_ecc_r2_commandate = 1
+@berg_ecc_r2_supervisor = 2
+@berg_ecc_r2_politician_supervisor = 1
+@berg_ecc_r2_transcend = 1
+# System Capital
+@berg_ecc_r3_mogul = 2
+@berg_ecc_r3_politician_mogul = 2
+@berg_ecc_r3_healthcare = 3
+@berg_ecc_r3_commandate = 2
+@berg_ecc_r3_supervisor = 2
+@berg_ecc_r3_politician_supervisor = 2
+@berg_ecc_r3_transcend = 2
+# Imperial Capital
+@berg_ecc_imperial_regular_mogul = 3
+@berg_ecc_imperial_regular_politician_mogul = 3
+@berg_ecc_imperial_regular_healthcare = 4
+@berg_ecc_imperial_regular_commandate = 3
+@berg_ecc_imperial_regular_supervisor = 3
+@berg_ecc_imperial_regular_politician_supervisor = 3
+@berg_ecc_imperial_regular_transcend = 3
+# Habitat Central Complex
+@berg_ecc_h2_mogul = 1
+@berg_ecc_h2_politician_mogul = 1
+@berg_ecc_h2_healthcare = 0
+@berg_ecc_h2_commandate = 1
+@berg_ecc_h2_supervisor = 1
+@berg_ecc_h2_politician_supervisor = 1
+@berg_ecc_h2_transcend = 0
+# Clone vats
+@berg_ecc_c1_unity_mult = 0.1
+# Noble estates
+@berg_ecc_n1_per_pop = 0.03
+@berg_ecc_n1_housing = 2
+@berg_ecc_n1_attraction = 0.2
+@berg_ecc_n1_farmer = 1
+@berg_ecc_n1_housing_farmer = 1
+# Food Production Center
+@berg_ecc_f1_unity = 5
+@berg_ecc_f2_unity = 5
+# Mineral Purification
+@berg_ecc_m1_politician = 1
+@berg_ecc_m2_politician = 1
+# Energy Grid
+@berg_ecc_e1_energy_mult = 0.05
+@berg_ecc_e1_trade = 15
+@berg_ecc_e2_energy_mult = 0.1
+@berg_ecc_e2_trade = 25
+# Institute
+@berg_ecc_i1_housing = 3
+@berg_ecc_i1_unity = 0.1
+# Commercial
+@berg_ecc_a1_clerk = 1
+@berg_ecc_a1_merchant = 1
+@berg_ecc_a1_entrepreneur = 0
+@berg_ecc_a2_unity = 0
+@berg_ecc_a2_clerk = 1
+@berg_ecc_a2_merchant = 1
+@berg_ecc_a2_entrepreneur = 1
+@berg_ecc_a2_unity = 5
+# Galactic Stock
+@berg_ecc_b1_mogul = 1
+@berg_ecc_b1_trade = 0.05
+# Residence
+@berg_ecc_d2_unity = 0.1
+@berg_ecc_d2_housing = 2
+# Clinic
+@berg_ecc_g1_upkeep = 0.5
+@berg_ecc_g1_job = 1
+@berg_ecc_g2_upkeep = 1
+@berg_ecc_g2_job = 2
+# Temple
+@berg_ecc_j1_templar = 1
+@berg_ecc_j2_templar = 2
+@berg_ecc_j3_templar = 3
+@berg_ecc_j3_high_priest = 1
+# Citadel of Faith
+@berg_ecc_k1_transcend = 1
+@berg_ecc_k1_high_priest = 1
+@berg_ecc_k1_templar = 2
+@berg_ecc_k1_attraction = 0.2
+# Military Academy
+@berg_ecc_l1_unity = 5
+@berg_ecc_l1_housing = 2
+# Strongholds
+@berg_ecc_u1_soldier = 1
+@berg_ecc_u1_mercenary = 1
+@berg_ecc_u2_soldier = 2
+@berg_ecc_u2_mercenary = 2
+# Planetary Shield Generator
+@berg_ecc_p1_unity = 10

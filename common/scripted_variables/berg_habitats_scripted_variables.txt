@@ -8,7 +8,7 @@
 @berg_capital_h1_replicator = 1
 @berg_capital_h1_maintenance = 2
 @berg_capital_h1_politician = 1
-
+# Habitat Central Complex
 @berg_capital_h2_synapse_drone = 3
 @berg_capital_h2_coordinator = 2
 @berg_capital_h2_replicator = 1

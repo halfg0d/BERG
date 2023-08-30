@@ -4,10 +4,12 @@ triggered_planet_modifier = {
 		owner = {
 			NOR = {
 				has_authority = auth_corporate
-				has_civic = civic_exalted_priesthood
-				has_civic = civic_aristocratic_elite
-				has_civic = civic_merchant_guilds
-				has_civic = civic_technocracy
+				berg_has_any_spiritualist_civic = yes
+				berg_has_any_noble_civic = yes
+				berg_has_any_technocracy_civic = yes
+				berg_has_any_merchant_civic = yes
+				berg_ecc_military_dictatorship_civic = yes
+				berg_ecc_supervisor_civic = yes
 			}
 		}
 		$trigger$
@@ -31,7 +33,9 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_civic = civic_exalted_priesthood }
+		owner = {
+			berg_has_any_spiritualist_civic = yes
+		}
 		$trigger$
 	}
 	modifier = {
@@ -43,7 +47,9 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_civic = civic_aristocratic_elite }
+		owner = {
+			berg_has_any_noble_civic = yes
+		}
 		$trigger$
 	}
 	modifier = {
@@ -55,7 +61,9 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_civic = civic_technocracy }
+		owner = {
+			berg_has_any_technocracy_civic = yes
+		}
 		$trigger$
 	}
 	modifier = {
@@ -66,8 +74,11 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
+		berg_has_ethics_and_civic_classic_mod = no
 		exists = owner
-		owner = { has_civic = civic_merchant_guilds }
+		owner = { 
+			berg_has_any_merchant_civic = yes
+		}
 		$trigger$
 	}
 	modifier = {
@@ -75,6 +86,21 @@ triggered_planet_modifier = {
 		job_politician_add = @berg_capital_$tier$_politician2
 	}
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			berg_has_any_merchant_civic = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_mogul_add = @berg_ecc_$tier$_mogul
+		job_politician_add = @berg_ecc_$tier$_politician_mogul
+	}
+}
+
 triggered_planet_modifier = {
 	potential = {
 		has_planet_flag = toxic_knights_habitat
@@ -85,10 +111,20 @@ triggered_planet_modifier = {
 	}
 	modifier = {
 		job_knight_commander_add = @berg_capital_$tier$_knight_commander
-		job_knight_add =@berg_capital_$tier$_knight
+		job_knight_add = @berg_capital_$tier$_knight
 	}
 }
 inline_script = {
+	script = ECC/berg_ecc_capital_script
+	tier = $tier$
+	trigger = $trigger$
+	transcend = $transcend$
+	healthcare = $healtcare$
+}
+
+inline_script = {
 	script = "vanilla/capitals/regular/berg_scripts_jobs_desc"
 	trigger = $trigger$
+	transcend = $transcend$
+	healthcare = $healtcare$
 }

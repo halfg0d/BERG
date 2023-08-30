@@ -1,7 +1,10 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { is_gestalt = no }
+		owner = {
+			is_gestalt = no
+			berg_ecc_private_militaries_civic = no
+		}
 	}
 	modifier = {
 		job_soldier_add = @berg_army_s$tier$_job
@@ -29,4 +32,8 @@ triggered_desc = {
 		owner = { is_gestalt = no }
 	}
 	text = job_soldier_effect_desc
+}
+inline_script = {
+	script = ECC/berg_ecc_stronghold_script
+	tier = $tier$
 }

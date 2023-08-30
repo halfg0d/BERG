@@ -1,0 +1,10 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = { has_civic = civic_martial_brotherhood }
+	}
+	modifier = {
+		planet_housing_add = @berg_ecc_l$tier$_housing
+	}
+}

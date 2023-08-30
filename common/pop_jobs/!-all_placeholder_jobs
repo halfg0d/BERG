@@ -1,0 +1,14 @@
+# Irony this is a placeholder file please ignore it
+druid = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+naturalist = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+biotechnologist = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+tech_bioreactor = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+tech_thermal_borehole = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+deep miner = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+gladiator = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+techno priest = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+mercenary = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+entrepreneur = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+mogul = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+templar = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+transcend = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }

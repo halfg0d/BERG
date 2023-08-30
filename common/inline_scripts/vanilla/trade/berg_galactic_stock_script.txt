@@ -1,7 +1,21 @@
 planet_modifier = {
-	job_merchant_add = @berg_trade_s$tier$_job
 	trade_value_mult = @berg_trade_s$tier$_trade
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = no
+	}
+	modifier = {
+		job_merchant_add = @berg_trade_s$tier$_job
+	}
+}
 triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = no
+	}
 	text = job_merchant_effect_desc
+}
+inline_script = {
+	script = ECC/berg_ecc_galactic_stock_script
+	tier = $tier$
 }

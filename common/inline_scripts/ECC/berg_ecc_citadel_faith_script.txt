@@ -1,0 +1,79 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = { has_civic = civic_defenders_faith }
+	}
+	modifier = {
+	job_priest_add = -@berg_ecc_k$tier$_templar
+	job_templar_add = @berg_ecc_k$tier$_templar
+	pop_ethic_spiritualist_attraction_mult = @berg_ecc_k$tier$_attraction
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = { has_civic = civic_spiritual_seekers }
+	}
+	modifier = {
+		job_transcend_add = @berg_ecc_k$tier$_transcend
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_imperial_cult
+				has_civic = civic_divine_council
+				has_civic = civic_spiritual_democracy
+				has_civic = civic_exalted_priesthood
+			}
+		}
+	}
+	modifier = {
+		job_high_priest_add = @berg_ecc_k$tier$_high_priest
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_imperial_cult
+				has_civic = civic_divine_council
+				has_civic = civic_spiritual_democracy
+				has_civic = civic_exalted_priesthood
+			}
+		}
+	}
+	text = job_high_priest_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_spiritual_seekers
+		}
+	}
+	text = job_transcend_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_defenders_faith
+		}
+	}
+	text = job_templar_effect_desc
+}

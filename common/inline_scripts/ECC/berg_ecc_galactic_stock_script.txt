@@ -1,0 +1,30 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+	}
+	modifier = {
+		job_mogul_add = @berg_trade_s$tier$_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+	}
+	text = job_mogul_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_merchant_guilds
+				has_civic = civic_state_monopoly
+			}
+		}
+	}
+	modifier = {
+		job_mogul_add = @berg_ecc_b$tier$_mogul
+		trade_value_mult = @berg_ecc_b$tier$_trade
+	}
+}

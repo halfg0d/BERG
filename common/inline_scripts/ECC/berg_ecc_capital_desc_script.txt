@@ -1,0 +1,55 @@
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			berg_has_any_merchant_civic = yes
+		}
+		$trigger$
+	}
+	text = job_mogul_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			berg_ecc_military_dictatorship_civic = yes
+		}
+		$trigger$
+	}
+	text = job_commandante_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			berg_ecc_supervisor_civic = yes
+		}
+		$trigger$
+	}
+	text = job_supervisor_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_spiritual_seekers
+		}
+		always = $transcend$
+		$trigger$
+	}
+	text = job_transcend_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ethics_and_civic_classic_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_enlightment
+		}
+		always = $healtcare$
+		$trigger$
+	}
+	text = job_healthcare_effect_desc
+}

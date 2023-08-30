@@ -20,4 +20,4 @@ triggered_planet_modifier = {
 		job_replicator_add = 1
 	}
 }
-inline_script = "vanilla/capitals/habitat/ber_scripts_machine_jobs_desc"
+inline_script = "vanilla/capitals/habitat/berg_scripts_machine_jobs_desc"
