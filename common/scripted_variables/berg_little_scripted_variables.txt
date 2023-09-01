@@ -1,0 +1,2 @@
+#Guilli's Planet Modifiers and Features
+@berg_gpm_a1_archeostudies = 1.0

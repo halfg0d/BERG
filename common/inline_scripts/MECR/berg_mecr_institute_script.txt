@@ -1,0 +1,28 @@
+triggered_planet_modifier = {
+	potential = {
+		is_MECR_activated = yes
+		is_active_resolution = resolution_custodian_galactic_academy_of_sciences
+		owner = {
+			has_federation = yes
+			federation = {
+				has_federation_perk = galactic_confederation_passive
+				has_federation_perk = research_galconfed_specialization_bonus_1
+			}
+		}
+	}
+	planet_researchers_physics_research_produces_add = 0.4
+	planet_researchers_society_research_produces_add = 0.4
+	planet_researchers_engineering_research_produces_add = 0.4
+	mult = owner.value:building_institute_galactic_academy_of_sciences_galconfed_specialization
+}
+triggered_planet_modifier = {
+	potential = {
+		is_MECR_activated = yes
+		is_active_resolution = resolution_custodian_galactic_academy_of_sciences
+		has_modifier = assist_research
+	}
+	planet_researchers_physics_research_produces_add = 0.2
+	planet_researchers_society_research_produces_add = 0.2
+	planet_researchers_engineering_research_produces_add = 0.2
+	mult = value:building_institute_galactic_academy_of_sciences_assist_research
+}

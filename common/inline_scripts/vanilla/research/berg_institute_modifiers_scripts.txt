@@ -34,6 +34,7 @@ inline_script = {
 	script = ECC/berg_ecc_institute_script
 	tier = $tier$
 }
+inline_script = MECR/berg_mecr_institute_script
 #Descriptions
 triggered_desc = {
 	trigger = {

@@ -80,6 +80,10 @@ triggered_country_modifier = {
 	potential = { planet = { berg_archeostudies_faculty_planet = yes } }
 	category_archaeostudies_research_speed_mult = @berg_research_a$tier$_mult_relic
 }
+inline_script = {
+	script = GPM/berg_gpm_archeostudies_faculty_script
+	tier = $tier$
+}
 #Descriptions
 triggered_desc = {
 	trigger = {

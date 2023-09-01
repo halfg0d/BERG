@@ -1,0 +1,7 @@
+triggered_country_modifier = {
+	potential = {
+		gpm_mod_active = yes
+		planet = { is_planet_class = pc_gpm_precursor_tomb } 
+	}
+	category_archaeostudies_research_speed_mult = @berg_gpm_a$tier$_archeostudies
+}
