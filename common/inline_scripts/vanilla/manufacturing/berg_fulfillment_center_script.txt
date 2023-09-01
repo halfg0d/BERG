@@ -1,12 +1,6 @@
 triggered_desc = {
 	trigger = {
-		NOR = {
-			is_planet_class = pc_nuked
-			is_planet_class = pc_city
-			uses_district_set = habitat
-			uses_district_set = ring_world
-			uses_district_set = shattered_ring_world
-		}
+		berg_fulfillment_center_planet = no
 	}
 	text = building_coordinated_fulfillment_center_tooltip
 }

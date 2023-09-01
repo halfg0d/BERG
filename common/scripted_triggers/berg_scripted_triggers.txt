@@ -48,3 +48,57 @@ berg_has_any_shared_burden_civic = {
 		berg_ecc_functional_architecture_civic = yes
 	}
 }
+berg_archeostudies_faculty_planet = {
+	OR = {
+		is_planet_class = pc_relic
+		berg_pd_faculty_relic_planet = yes
+	}
+}
+berg_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		is_pd_habitat = yes
+	}
+}
+berg_fulfillment_center_planet = {
+	OR = {
+		is_planet_class = pc_nuked
+		is_planet_class = pc_city
+		uses_district_set = habitat
+		uses_district_set = ring_world
+		uses_district_set = shattered_ring_world
+		is_pd_nuked = yes
+	}
+}
+berg_can_gaiaseeders_planet = {
+	NOR = {
+		#Vanilla
+		is_planet_class = pc_gaia
+		is_planet_class = pc_city
+		is_planet_class = pc_hive
+		is_planet_class = pc_machine
+		is_planet_class = pc_relic
+		is_artificial = yes
+		berg_pd_gaiaseeders_planet = yes
+	}
+}
+berg_gaiaseeder_destroy = {
+	OR = {
+		berg_can_gaiaseeders_planet = no
+		is_planet_class = pc_gaia
+		berg_pd_gaiaseeders_destroy = yes
+	}
+}
+berg_is_hive_world = {
+	OR = {
+		is_planet_class = pc_hive
+		is_pd_hive_world = yes
+		is_pd_hive_arcology = yes
+	}
+}
+berg_is_resort_world = {
+	OR = {
+		has_modifier = resort_colony
+		berg_pd_resort_habitat = yes
+	}
+}

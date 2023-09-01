@@ -1,0 +1,2 @@
+is_pd_habitat = { always = no }
+is_pd_nuked = { always = no }

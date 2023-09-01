@@ -1524,7 +1524,7 @@ building_resort_capital = {
 	category = government
 
 	potential = {
-		has_modifier = resort_colony
+		berg_is_resort_world = yes
 	}
 
 	convert_to = {
@@ -1604,7 +1604,7 @@ building_resort_major_capital = {
 	category = government
 
 	potential = {
-		has_modifier = resort_colony
+		berg_is_resort_world = yes
 	}
 
 	convert_to = {

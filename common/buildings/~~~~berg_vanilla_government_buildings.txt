@@ -592,14 +592,7 @@ building_gaiaseeders_1 = {
 			is_country_type = default
 			is_idyllic_bloom_empire = yes
 		}
-		NOR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_relic
-		}
-		is_artificial = no
+		berg_can_gaiaseeders_planet = yes
 	}
 
 	allow = {
@@ -608,11 +601,7 @@ building_gaiaseeders_1 = {
 
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_gaia	# No double bonuses if player uses other tools to turn it into a Gaia world.
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_relic
+			berg_gaiaseeder_destroy = yes
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -659,10 +648,7 @@ building_gaiaseeders_2 = {
 
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_gaiaseeder_destroy = yes
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -702,10 +688,7 @@ building_gaiaseeders_3 = {
 
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_gaia
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_gaiaseeder_destroy = yes
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -730,9 +713,7 @@ building_gaiaseeders_4 = {
 
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_gaiaseeder_destroy = yes
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no

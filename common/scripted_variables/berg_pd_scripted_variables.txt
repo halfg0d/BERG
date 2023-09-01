@@ -1,0 +1,19 @@
+##############
+## Planetary Diversity Variables
+##############
+@berg_pd_a1_job = 2
+@berg_pd_a1_alloy = 0
+@berg_pd_a1_upkeep_m = 0
+@berg_pd_a1_upkeep_f = 0
+@berg_pd_a2_job = 2
+@berg_pd_a2_upkeep_e = 2
+@berg_pd_a3_job = 2
+@berg_pd_a3_upkeep_e = 4
+@berg_pd_b1_bio_politician = 4
+@berg_pd_b1_housing = 4
+@berg_pd_c1_naval_admin = 2
+@berg_pd_c2_naval_admin = 4
+@berg_pd_d1_housing = 6
+@berg_pd_d1_amenities = 2
+@berg_pd_d2_housing = 12
+@berg_pd_d2_amenities = 4

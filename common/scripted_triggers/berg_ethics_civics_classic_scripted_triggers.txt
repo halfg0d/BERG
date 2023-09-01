@@ -28,7 +28,8 @@ berg_ecc_military_dictatorship_civic = {
 	OR = {
 		has_civic = civic_military_dictatorship
 		has_civic = civic_military_junta
-		has_civic = civic_citizen_service has_civic = civic_stratocracy
+		has_civic = civic_citizen_service
+		has_civic = civic_stratocracy
 	}
 }
 berg_ecc_supervisor_civic = {

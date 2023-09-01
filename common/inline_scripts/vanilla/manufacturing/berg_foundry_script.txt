@@ -14,6 +14,7 @@ triggered_planet_modifier = {
 		owner = {
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		planet_metallurgists_minerals_upkeep_add = @berg_manufacturing_a$tier$_upkeep_m
@@ -26,6 +27,7 @@ triggered_planet_modifier = {
 		owner = {
 			is_catalytic_empire = yes
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		planet_metallurgists_food_upkeep_add = @berg_manufacturing_a$tier$_upkeep_f
@@ -39,6 +41,7 @@ triggered_planet_modifier = {
 			is_hive_empire = yes
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		job_alloy_drone_add = @berg_manufacturing_a$tier$_job
@@ -52,6 +55,7 @@ triggered_planet_modifier = {
 			is_machine_empire = yes
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		job_fabricator_add = @berg_manufacturing_a$tier$_job
@@ -65,6 +69,7 @@ triggered_planet_modifier = {
 			is_gestalt = yes
 			is_catalytic_empire = yes
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		job_catalytic_drone_add = @berg_manufacturing_a$tier$_job
@@ -78,6 +83,7 @@ triggered_planet_modifier = {
 			is_regular_empire = yes
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		job_foundry_add = @berg_manufacturing_a$tier$_job
@@ -91,6 +97,7 @@ triggered_planet_modifier = {
 			is_regular_empire = yes
 			is_catalytic_empire = yes
 		}
+		berg_pd_is_crucible = no
 	}
 	modifier = {
 		job_catalytic_technician_add = @berg_manufacturing_a$tier$_job
@@ -104,6 +111,7 @@ triggered_desc = {
 			is_regular_empire = yes
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	text = job_foundry_effect_desc
 }
@@ -115,6 +123,7 @@ triggered_desc = {
 			is_regular_empire = yes
 			is_catalytic_empire = yes
 		}
+		berg_pd_is_crucible = no
 	}
 	text = job_catalytic_technician_effect_desc
 }
@@ -126,6 +135,7 @@ triggered_desc = {
 			is_hive_empire = yes
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	text = job_alloy_drone_effect_desc
 }
@@ -137,6 +147,7 @@ triggered_desc = {
 			is_machine_empire = yes
 			is_catalytic_empire = no
 		}
+		berg_pd_is_crucible = no
 	}
 	text = job_fabricator_effect_desc
 }
@@ -148,6 +159,12 @@ triggered_desc = {
 			is_gestalt = yes
 			is_catalytic_empire = yes
 		}
+		berg_pd_is_crucible = no
 	}
 	text = job_catalytic_drone_effect_desc
+}
+inline_script = {
+	script = PD/berg_pd_foundry_script
+	tier = $tier$
+	bonus = $bonus$
 }

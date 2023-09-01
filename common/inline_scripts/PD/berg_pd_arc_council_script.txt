@@ -1,0 +1,7 @@
+planet_modifier = {
+	job_pd_capital_bio_politician_add = @berg_pd_b$tier$_bio_politician
+	planet_housing_add = @berg_pd_b$tier$_housing
+}
+triggered_desc = {
+	text = job_pd_capital_bio_effect_desc
+}

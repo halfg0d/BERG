@@ -77,7 +77,7 @@ triggered_country_modifier = {
 	country_resource_max_minor_artifacts_add = @berg_research_a$tier$_artifacts_ap
 }
 triggered_country_modifier = {
-	potential = { planet = { is_planet_class = pc_relic } }
+	potential = { planet = { berg_archeostudies_faculty_planet = yes } }
 	category_archaeostudies_research_speed_mult = @berg_research_a$tier$_mult_relic
 }
 #Descriptions
