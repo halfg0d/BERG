@@ -1,0 +1,3 @@
+berg_has_uap_mod = {
+	has_uap_mod = yes
+}

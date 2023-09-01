@@ -2,3 +2,4 @@ is_pd_habitat = { always = no }
 is_pd_nuked = { always = no }
 is_MECR_activated = { always = no }
 gpm_mod_active = { always = no }
+has_uap_mod = { always = no }

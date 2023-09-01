@@ -3,7 +3,7 @@ planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = no
+		berg_has_ecc_mod = no
 	}
 	modifier = {
 		job_merchant_add = @berg_trade_s$tier$_job
@@ -11,7 +11,7 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	trigger = {
-		berg_has_ethics_and_civic_classic_mod = no
+		berg_has_ecc_mod = no
 	}
 	text = job_merchant_effect_desc
 }

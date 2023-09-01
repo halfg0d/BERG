@@ -37,7 +37,7 @@ triggered_desc = {
 			always = $canMerchant$
 			AND = {
 				has_valid_civic = civic_consumerism
-				berg_has_ethics_and_civic_classic_mod = yes
+				berg_has_ecc_mod = yes
 			}
 		}
 	}

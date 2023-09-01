@@ -103,6 +103,12 @@ triggered_planet_modifier = {
 		job_catalytic_technician_add = @berg_manufacturing_a$tier$_job
 	}
 }
+inline_script = {
+	script = UAP/berg_uap_industrialist_jobs
+	buidling = a
+	tier = $tier$
+	industrialist = $industrialist$
+}
 #desc
 triggered_desc = {
 	trigger = {

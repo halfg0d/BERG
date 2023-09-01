@@ -1,4 +1,4 @@
-berg_has_ethics_and_civic_classic_mod = {
+berg_has_ecc_mod = {
 	has_global_flag = ethic_civic_classic_active
 }
 #ECC = Ethics and Civics Classic
@@ -24,7 +24,7 @@ berg_ecc_merchant_civic = {
 }
 
 berg_ecc_military_dictatorship_civic = {
-	berg_has_ethics_and_civic_classic_mod = yes
+	berg_has_ecc_mod = yes
 	OR = {
 		has_civic = civic_military_dictatorship
 		has_civic = civic_military_junta
@@ -33,7 +33,7 @@ berg_ecc_military_dictatorship_civic = {
 	}
 }
 berg_ecc_supervisor_civic = {
-	berg_has_ethics_and_civic_classic_mod = yes
+	berg_has_ecc_mod = yes
 	OR = {
 		has_civic = civic_executive_committee
 		has_civic = civic_philosopher_king
@@ -42,15 +42,15 @@ berg_ecc_supervisor_civic = {
 	}
 }
 berg_ecc_functional_architecture_civic = {
-	berg_has_ethics_and_civic_classic_mod = yes
+	berg_has_ecc_mod = yes
 	has_valid_civic = civic_functional_architecture
 }
 berg_ecc_private_militaries_civic = {
-	berg_has_ethics_and_civic_classic_mod = yes
+	berg_has_ecc_mod = yes
 	has_civic = civic_private_militaries
 }
 berg_ecc_naturalism_civic = {
-	berg_has_ethics_and_civic_classic_mod = yes
+	berg_has_ecc_mod = yes
 	has_valid_civic = civic_naturalism
 }
 berg_ecc_has_any_natural_blocker = {
@@ -73,6 +73,6 @@ berg_ecc_has_any_natural_blocker = {
 	}
 }
 berg_ecc_has_terraforming_civic = {
-	berg_has_ethics_and_civic_classic_mod = yes
+	berg_has_ecc_mod = yes
 	has_valid_civic = civic_terraforming
 }

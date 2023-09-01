@@ -61,7 +61,7 @@ building_military_academy = {
 		}
 		produces = {
 			trigger = {
-				berg_has_ethics_and_civic_classic_mod = yes
+				berg_has_ecc_mod = yes
 				owner = { has_civic = civic_martial_brotherhood }
 			}
 			unity = @berg_ecc_l1_unity
@@ -142,7 +142,7 @@ building_stronghold = {
 		}
 		produces = {
 			trigger = {
-				berg_has_ethics_and_civic_classic_mod = yes
+				berg_has_ecc_mod = yes
 				exists = owner
 				owner = {
 					has_active_tradition = tr_unyielding_resistance_is_frugal
@@ -188,7 +188,7 @@ building_fortress = {
 		}
 		produces = {
 			trigger = {
-				berg_has_ethics_and_civic_classic_mod = yes
+				berg_has_ecc_mod = yes
 				exists = owner
 				owner = {
 					has_active_tradition = tr_unyielding_resistance_is_frugal

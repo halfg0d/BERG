@@ -685,7 +685,7 @@ building_clinic = {
 		}
 		upkeep = {
 			trigger = {
-				berg_has_ethics_and_civic_classic_mod = yes
+				berg_has_ecc_mod = yes
 				owner = { has_policy_flag = public_healthcare }
 			}
 			energy = @berg_ecc_g1_upkeep
@@ -815,7 +815,7 @@ building_hospital = {
 		}
 		upkeep = {
 			trigger = {
-				berg_has_ethics_and_civic_classic_mod = yes
+				berg_has_ecc_mod = yes
 				owner = { has_policy_flag = public_healthcare }
 			}
 			energy = @berg_ecc_g2_upkeep

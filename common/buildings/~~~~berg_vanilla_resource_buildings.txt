@@ -460,7 +460,7 @@ building_energy_grid = {
 	}
 	triggered_desc = {
 		trigger = {
-			berg_has_ethics_and_civic_classic_mod = yes
+			berg_has_ecc_mod = yes
 		}
 		text = building_energy_grid_effect_desc
 	}

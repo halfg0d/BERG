@@ -1,0 +1,17 @@
+triggered_planet_modifier = {
+	potential = {
+		always = $industrialist$
+		berg_has_uap_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_ascension_perk = ap_pyramidal_society
+				has_country_flag = ap_pyramidal_society
+			}
+			is_common_empire = yes
+		}
+	}
+	modifier = {
+		job_industrialist_add = @berg_uap_$building$$tier$_job
+	}
+}

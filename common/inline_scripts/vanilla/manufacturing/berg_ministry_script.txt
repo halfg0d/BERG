@@ -3,6 +3,12 @@ planet_modifier = {
 	planet_metallurgists_produces_mult = @berg_manufacturing_g$tier$_bonus
 	planet_artisans_produces_mult = @berg_manufacturing_g$tier$_bonus
 }
+inline_script = {
+	script = UAP/berg_uap_industrialist_jobs
+	tier = $tier$
+	building = c
+	industrialist = yes
+}
 triggered_desc = {
 	text = job_politician_effect_desc
 }

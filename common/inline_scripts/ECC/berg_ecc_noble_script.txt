@@ -1,6 +1,6 @@
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = { has_civic = civic_harmonious_hierarchy }
 	}
@@ -13,7 +13,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			AND = {
@@ -30,7 +30,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			AND = {

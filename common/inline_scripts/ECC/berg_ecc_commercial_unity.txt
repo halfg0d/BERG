@@ -1,6 +1,6 @@
 produces = {
 	trigger = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		owner = { has_valid_civic = civic_consumerism }
 	}
 	unity = @berg_ecc_a$tier$_unity

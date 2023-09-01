@@ -44,6 +44,12 @@ triggered_planet_modifier = {
 		job_artisan_drone_add = @berg_manufacturing_b$tier$_job
 	}
 }
+inline_script = {
+	script = UAP/berg_uap_industrialist_jobs
+	buidling = b
+	tier = $tier$
+	industrialist = yes
+}
 #Desc
 triggered_desc = {
 	trigger = {

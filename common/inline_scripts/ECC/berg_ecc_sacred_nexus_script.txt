@@ -1,6 +1,6 @@
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -17,7 +17,7 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	trigger = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			OR = {

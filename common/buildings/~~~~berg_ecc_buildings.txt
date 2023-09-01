@@ -63,6 +63,79 @@ building_national_park = {
 	}
 }
 
+#Deep Space Scanner
+building_deep_space_scanner_ecc = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+	icon = building_deep_space_scanner
+	category = research
+
+	potential = {
+		berg_has_uap_mod = no
+		berg_has_ecc_mod = yes
+		NOT = { has_modifier = slave_colony }
+
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_exploration
+		}
+	}
+	convert_to = { building_deep_space_scanner }
+	destroy_trigger = {
+		OR = {
+			berg_has_uap_mod = yes
+			berg_has_ecc_mod = no
+			has_modifier = slave_colony
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_valid_civic = civic_exploration }
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_sensor_range_add = 5
+		planet_jobs_physics_research_produces_mult = 0.1
+		pop_ethic_materialist_attraction_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		produces = {
+			unity = 5
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_researcher_effect_desc
+	}
+}
+
 #Climate Control Hab
 building_climate_control = {
 	base_buildtime = @b4_time
@@ -286,7 +359,7 @@ building_tribal_palace = {
 	category = government
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = {has_modifier = slave_colony }
 		NOT = { owner = { any_owned_planet = { has_building = building_tribal_palace } } }
 
@@ -349,7 +422,7 @@ building_nature_sanctuary = {
 	category = unity
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = { has_modifier = slave_colony }
 
 		exists = owner
@@ -393,7 +466,7 @@ building_galactic_navy_academy = {
 	category = army
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = { has_modifier = slave_colony }
 		NOT = { owner = { any_owned_planet = { has_building = building_galactic_navy_academy } } }
 
@@ -469,7 +542,7 @@ building_galactic_temple = {
 	category = unity
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = { has_modifier = slave_colony }
 		NOT = { owner = { any_owned_planet = { has_building = building_galactic_temple } } }
 		exists = owner
@@ -544,7 +617,7 @@ building_galactic_trade_center = {
 	category = trade
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = { has_modifier = slave_colony }
 		NOT = { owner = { any_owned_planet = { has_building = building_galactic_trade_center } } }
 
@@ -620,7 +693,7 @@ building_pangalactic_forum = {
 	category = research
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = { has_modifier = slave_colony }
 		NOT = { owner = { any_owned_planet = { has_building = building_pangalactic_forum } } }
 
@@ -696,7 +769,7 @@ building_ecotourism_center = {
 	category = trade
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOT = { has_modifier = slave_colony }
 
 		exists = owner
@@ -739,7 +812,7 @@ building_symbol_harmony = {
 	category = unity
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -783,7 +856,7 @@ building_symbol_purity = {
 	category = unity
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -826,7 +899,7 @@ building_collosal_monument = {
 	category = unity
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -870,7 +943,7 @@ building_biofuel_plant = {
 	category = manufacturing
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -948,7 +1021,7 @@ building_thermal_borehole = {
 	category = resource
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		owner = { is_industrial = yes }
 		NOT = { has_modifier = resort_colony }
 
@@ -1040,7 +1113,7 @@ building_colliseum = {
 	category = amenity
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -1123,7 +1196,7 @@ building_mecha_monastery = {
 	category = pop_assembly
 
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		owner = { has_civic = civic_machine_cult }
 		NOT = { has_modifier = slave_colony }
 	}

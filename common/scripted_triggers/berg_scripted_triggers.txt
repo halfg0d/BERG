@@ -9,7 +9,7 @@ berg_has_any_spiritualist_civic = {
 	OR = {
 		has_civic = civic_exalted_priesthood
 		AND = {
-			berg_has_ethics_and_civic_classic_mod = yes
+			berg_has_ecc_mod = yes
 			berg_ecc_spiritualist_civic = yes
 		}
 	}
@@ -18,7 +18,7 @@ berg_has_any_noble_civic = {
 	OR = {
 		has_civic = civic_aristocratic_elite
 		AND = {
-			berg_has_ethics_and_civic_classic_mod = yes
+			berg_has_ecc_mod = yes
 			berg_ecc_noble_civic = yes
 		}
 	}
@@ -27,7 +27,7 @@ berg_has_any_technocracy_civic = {
 	OR = {
 		has_civic = civic_technocracy
 		AND = {
-			berg_has_ethics_and_civic_classic_mod = yes
+			berg_has_ecc_mod = yes
 			berg_ecc_technocracy_civic = yes
 		}
 	}
@@ -36,7 +36,7 @@ berg_has_any_merchant_civic = {
 	OR = {
 		has_civic = civic_merchant_guilds
 		AND = {
-			berg_has_ethics_and_civic_classic_mod = yes
+			berg_has_ecc_mod = yes
 			berg_ecc_merchant_civic = yes
 		}
 	}

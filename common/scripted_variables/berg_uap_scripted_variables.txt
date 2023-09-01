@@ -1,0 +1,10 @@
+#########################
+## Unique Ascension Perks Variables
+#########################
+@berg_uap_a1_job = 0
+@berg_uap_a2_job = 1
+@berg_uap_a3_job = 2
+@berg_uap_b1_job = 2
+@berg_uap_b2_job = 4
+@berg_uap_b3_job = 6
+@berg_uap_c1_job = 1

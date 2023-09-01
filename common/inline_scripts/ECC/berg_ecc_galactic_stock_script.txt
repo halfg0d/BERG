@@ -1,6 +1,6 @@
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 	}
 	modifier = {
 		job_mogul_add = @berg_trade_s$tier$_job
@@ -8,13 +8,13 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	trigger = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 	}
 	text = job_mogul_effect_desc
 }
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ethics_and_civic_classic_mod = yes
+		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
 			OR = {
