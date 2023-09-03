@@ -3,8 +3,8 @@
 #############
 @berg_amenity_r1_housing = 3
 @berg_amenity_r1_amenities = 5
-@berg_amenity_r1_housing = 6
-@berg_amenity_r1_amenities = 10
+@berg_amenity_r2_housing = 6
+@berg_amenity_r2_amenities = 10
 @berg_amenity_c1_housing = 5
 @berg_amenity_c1_amenities = 3
 @berg_amenity_c1_housing = 10

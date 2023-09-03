@@ -160,7 +160,7 @@ building_food_processing_center = {
 	}
 	inline_script = {
 		script = vanilla/resource/berg_food_processing_script
-		tier = 1
+		tier = 2
 	}
 	resources = {
 		category = planet_buildings

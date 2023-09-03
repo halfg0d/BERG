@@ -37,6 +37,9 @@ building_pd_rogue_council = {
 			}
 		}
 	}
+	show_tech_unlock_if = {
+		berg_pd_has_arcology_mod = yes
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -76,6 +79,9 @@ building_navel_base = {
 	prerequisites = {
 		"tech_planetary_defenses"
 	}
+	show_tech_unlock_if = {
+		berg_pd_has_arcology_mod = yes
+	}
 
 	upgrades = {
 		"building_navel_command"
@@ -101,6 +107,9 @@ building_navel_command = {
 
 	allow = {
 		has_upgraded_capital = yes
+	}
+	show_tech_unlock_if = {
+		berg_pd_has_arcology_mod = yes
 	}
 	resources = {
 		category = planet_buildings_strongholds

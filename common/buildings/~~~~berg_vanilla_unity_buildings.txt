@@ -209,7 +209,7 @@ building_hypercomms_forum = {
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
-		tier = 2
+		tier = 3
 	}
 	triggered_desc = {
 		text = building_hypercomms_forum_effect
