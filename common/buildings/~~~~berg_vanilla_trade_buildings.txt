@@ -34,7 +34,6 @@ building_commercial_zone = {
 	inline_script = {
 		script = vanilla/trade/berg_commercial_script
 		tier = 1
-		canMerchant = "no"
 		entrepreneur = no
 	}
 
@@ -90,7 +89,6 @@ building_commercial_megaplex = {
 	inline_script = {
 		script = vanilla/trade/berg_commercial_script
 		tier = 2
-		canMerchant = "yes"
 		entrepreneur = yes
 	}
 

@@ -1224,6 +1224,9 @@ building_hab_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
+		script = buildings/on_all_habitat_capital_buildings
+	}
+	inline_script = {
 		script = "vanilla/capitals/habitat/berg_scripts_machine_jobs"
 		tier = h1
 	}
@@ -1304,12 +1307,26 @@ building_hab_capital = {
 			exists = owner
 			owner = {
 				has_authority = auth_corporate
-				NOT = { has_origin = origin_void_dwellers }
+				is_worker_coop_empire = no
 			}
 		}
 		modifier = {
 			job_executive_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_authority = auth_corporate
+				is_worker_coop_empire = yes
+			}
+		}
+		modifier = {
+			job_steward_add = 2
+		}
+	
 	}
 	
 	triggered_planet_modifier = {
@@ -1393,7 +1410,9 @@ building_hab_major_capital = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-
+	inline_script = {
+		script = buildings/on_all_habitat_capital_buildings
+	}
 	inline_script = {
 		script = "vanilla/capitals/habitat/berg_scripts_hive_jobs"
 		tier = h2

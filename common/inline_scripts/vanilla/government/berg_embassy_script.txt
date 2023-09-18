@@ -1,3 +1,9 @@
 country_modifier = {
 	envoys_add = @berg_government_em$tier$_envoy
 }
+planet_modifier = {
+	job_politician_add = @berg_government_em$tier$_politician
+}
+triggered_desc = {
+	text = job_politician_effect_desc
+}

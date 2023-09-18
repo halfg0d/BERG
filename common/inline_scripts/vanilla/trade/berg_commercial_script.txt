@@ -1,18 +1,10 @@
 planet_modifier = {
 	job_clerk_add = @berg_trade_c$tier$_clerks
+	job_trader_add = @berg_trade_c$tier$_trader
 }
 
 triggered_desc = {
 	text = job_clerk_effect_desc
-}
-
-triggered_planet_modifier = {
-	potential = {
-		always = $canMerchant$
-	}
-	modifier = {
-		job_merchant_add = @berg_trade_c$tier$_merchant
-	}
 }
 
 triggered_planet_modifier = {
@@ -23,7 +15,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_merchant_add = 1
+		job_trader_add = @berg_trade_c$tier$_trader
 	}
 }
 
@@ -34,14 +26,13 @@ triggered_desc = {
 			owner = {
 				has_active_tradition = tr_mercantile_commercial_enterprise
 			}
-			always = $canMerchant$
 			AND = {
 				has_valid_civic = civic_consumerism
 				berg_has_ecc_mod = yes
 			}
 		}
 	}
-	text = job_merchant_effect_desc
+	text = job_trader_effect_desc
 }
 inline_script = {
 	script = ECC/berg_ecc_commercial_script

@@ -1,9 +1,9 @@
 #############
 # Trade buildings
 #############
-@berg_trade_c1_clerks = 3
-@berg_trade_c1_merchant = 0
-@berg_trade_c2_clerks = 6
-@berg_trade_c2_merchant = 1
-@berg_trade_s1_job = 2
+@berg_trade_c1_clerks = 2
+@berg_trade_c1_trader = 1
+@berg_trade_c2_clerks = 4
+@berg_trade_c2_trader = 2
+@berg_trade_s1_job = 1
 @berg_trade_s1_trade = 0.2

@@ -21,3 +21,5 @@
 @berg_government_p1_stability = 5
 @berg_government_em1_envoy = 1
 @berg_government_em2_envoy = 2
+@berg_government_em1_politician = 1
+@berg_government_em2_politician = 2

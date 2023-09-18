@@ -102,3 +102,16 @@ berg_is_resort_world = {
 		berg_pd_resort_habitat = yes
 	}
 }
+
+berg_has_giga_mod = {
+	has_global_flag = gigastructures_enabled
+}
+
+berg_void_dweller_housing = {
+	AND = {
+		exists = owner
+		owner = {
+			is_void_dweller_empire = yes
+		}
+	}
+}

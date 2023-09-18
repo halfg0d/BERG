@@ -10,7 +10,7 @@ building_luxury_residence = {
 		OR = {
 			berg_is_habitat = no
 			berg_pd_resort_habitat = yes
-			has_planet_flag = advanced_habitat
+			berg_void_dweller_housing = yes
 		}
 		NOT = { has_modifier = slave_colony }
 		exists = owner
@@ -78,13 +78,7 @@ building_paradise_dome = {
 		OR = {
 			berg_is_habitat = no
 			berg_pd_resort_habitat = yes
-			AND = {
-				has_planet_flag = advanced_habitat
-				exists = owner
-				owner = {
-					has_ascension_perk = ap_voidborn
-				}
-			}
+			berg_void_dweller_housing = yes
 		}
 	}
 
@@ -151,7 +145,7 @@ building_communal_housing = {
 		OR = {
 			berg_is_habitat = no
 			berg_pd_resort_habitat = yes
-			has_planet_flag = advanced_habitat
+			berg_void_dweller_housing = yes
 		}
 		NOT = { has_modifier = slave_colony }
 		exists = owner
@@ -227,13 +221,7 @@ building_communal_housing_large = {
 		OR = {
 			berg_is_habitat = no
 			berg_pd_resort_habitat = yes
-			AND = {
-				has_planet_flag = advanced_habitat
-				exists = owner
-				owner = {
-					has_ascension_perk = ap_voidborn
-				}
-			}
+			berg_void_dweller_housing = yes
 		}
 	}
 
@@ -1001,7 +989,12 @@ building_ranger_lodge = {
 		planet = {
 			if = {
 				limit = { has_deposit = d_big_nature_preserve_blocker }
-				remove_deposit = d_big_nature_preserve_blocker
+				every_deposit = {
+					limit = {
+						is_deposit_type = d_big_nature_preserve_blocker
+					}
+					remove_deposit = d_big_nature_preserve_blocker
+				}
 			}
 		}
 	}

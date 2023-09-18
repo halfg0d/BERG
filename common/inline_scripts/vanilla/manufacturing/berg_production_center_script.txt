@@ -2,6 +2,14 @@ planet_modifier = {
 	planet_metallurgists_produces_mult = @berg_manufacturing_h$tier$_bonus
 	planet_artisans_produces_mult = @berg_manufacturing_h$tier$_bonus
 }
+#Gigastructures
+triggered_planet_modifier = {
+	potential = {
+		berg_has_giga_mod = yes
+		planet_cultivators_produces_mult = @berg_manufacturing_g$tier$_bonus
+	}
+
+}
 triggered_planet_modifier = {
 	potential = {
 		exists = owner

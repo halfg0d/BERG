@@ -25,6 +25,8 @@
 @berg_amenity_s1_housing = 8
 @berg_amenity_o1_housing = 2
 @berg_amenity_o1_job = 2
-@berg_amenity_a1_job = 2
+@berg_amenity_a1_job = 1
 @berg_amenity_a1_unity_per_blocker = 2
+@berg_amenity_a1_job_mult1 = 1
+@berg_amenity_a1_job_mult2 = 1
 @berg_amenity_b1_job = 2

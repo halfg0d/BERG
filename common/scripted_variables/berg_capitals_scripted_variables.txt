@@ -6,6 +6,7 @@
 @berg_capital_r1_politician1 = 2
 @berg_capital_r1_politician2 = 1
 @berg_capital_r1_executive = 2
+@berg_capital_r1_steward = 3
 @berg_capital_r1_high_priest = 1
 @berg_capital_r1_noble = 1
 @berg_capital_r1_head_researcher = 1
@@ -14,6 +15,7 @@
 @berg_capital_r2_politician1 = 3
 @berg_capital_r2_politician2 = 2
 @berg_capital_r2_executive = 3
+@berg_capital_r2_steward = 4
 @berg_capital_r2_high_priest = 1
 @berg_capital_r2_noble = 1
 @berg_capital_r2_head_researcher = 1
@@ -22,6 +24,7 @@
 @berg_capital_r3_politician1 = 4
 @berg_capital_r3_politician2 = 2
 @berg_capital_r3_executive = 4
+@berg_capital_r3_steward = 6
 @berg_capital_r3_high_priest = 2
 @berg_capital_r3_noble = 2
 @berg_capital_r3_head_researcher = 2
@@ -30,6 +33,7 @@
 @berg_capital_imperial_regular_politician1 = 6
 @berg_capital_imperial_regular_politician2 = 3
 @berg_capital_imperial_regular_executive = 3
+@berg_capital_imperial_regular_steward = 9
 @berg_capital_imperial_regular_high_priest = 3 
 @berg_capital_imperial_regular_noble = 3
 @berg_capital_imperial_regular_head_researcher = 3
@@ -44,11 +48,15 @@
 ##############
 @berg_capitals_resort1_entertainer = 1
 @berg_capitals_resort1_politician = 1
+@berg_capitals_resort1_steward = 2
 
 @berg_capitals_resort2_entertainer = 2
 @berg_capitals_resort2_politician = 1
+@berg_capitals_resort2_steward = 2
 
 @berg_capitals_thrall1_politician = 2
 @berg_capitals_thrall1_overseer = 2
+@berg_capitals_thrall1_steward = 3
 @berg_capitals_thrall2_politician = 2
 @berg_capitals_thrall2_overseer = 4
+@berg_capitals_thrall2_steward = 3
