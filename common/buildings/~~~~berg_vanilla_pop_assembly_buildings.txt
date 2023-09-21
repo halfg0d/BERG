@@ -287,6 +287,9 @@ building_machine_assembly_complex = {
 	prerequisites = {
 		tech_mega_assembly
 	}
+	upgrades = {
+		building_eutab_automation_sector #EUTAB
+	}
 }
 
 #############
@@ -337,6 +340,9 @@ building_spawning_pool = {
 
 	convert_to = {
 		building_offspring_nest
+	}
+	upgrades = {
+		building_eutab_spawning_garden # EUTAB
 	}
 }
 
@@ -660,6 +666,9 @@ building_clone_vats = {
 	inline_script = {
 		script = vanilla/pop_assembly/berg_clone_vats_script
 		tier = 1
+	}
+	upgrades = {
+		building_eutab_adv_clone_vats # EUTAB
 	}
 }
 

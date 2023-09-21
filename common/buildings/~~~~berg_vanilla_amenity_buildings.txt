@@ -133,6 +133,9 @@ building_paradise_dome = {
 			berg_has_any_shared_burden_civic = no
 		}
 	}
+	upgrades = {
+		building_eutab_gaia_district # EUTAB
+	}
 }
 
 building_communal_housing = {
@@ -852,6 +855,9 @@ building_maintenance_depot = {
 		upkeep = {
 			energy = 2
 		}
+	}
+	upgrades = {
+		building_eutab_preservation_nexus # EUTAB
 	}
 }
 

@@ -214,6 +214,11 @@ building_institute = {
 		society_research = 5
 		engineering_research = 5
 	}
+	upgrades = {
+		building_eutab_genetic_data_vault # EUTAB
+		building_eutab_afterlife_vault # EUTAB
+		building_eutab_foundation_institute_1 # EUTAB
+	}
 }
 
 building_supercomputer = {
@@ -271,6 +276,9 @@ building_supercomputer = {
 
 	show_tech_unlock_if = {
 		is_gestalt = yes
+	}
+	upgrades = {
+		building_eutab_hypercomputing_complex # EUTAB
 	}
 
 	ai_resource_production = {

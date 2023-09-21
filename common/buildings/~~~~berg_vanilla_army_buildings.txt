@@ -75,6 +75,9 @@ building_military_academy = {
 	show_tech_unlock_if = {
 		NOT = { has_valid_civic = civic_reanimated_armies }
 	}
+	upgrades = {
+		building_eutab_battle_praxeum # EUTAB
+	}
 }
 
 building_dread_encampment = {
