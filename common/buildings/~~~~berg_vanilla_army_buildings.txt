@@ -9,7 +9,7 @@ building_military_academy = {
 
 	potential = {
 		exists = owner
-		owner = { NOT = { has_valid_civic = civic_reanimated_armies } }
+		owner = { berg_reanimator_civic = no }
 	}
 
 	allow = {
@@ -30,7 +30,7 @@ building_military_academy = {
 		exists = owner
 		owner = {
 			OR = {
-				has_valid_civic = civic_reanimated_armies
+				berg_reanimator_civic = yes
 				AND = {
 					is_ai = yes
 					prev = {
@@ -73,7 +73,7 @@ building_military_academy = {
 	}
 
 	show_tech_unlock_if = {
-		NOT = { has_valid_civic = civic_reanimated_armies }
+		berg_reanimator_civic = no
 	}
 	upgrades = {
 		building_eutab_battle_praxeum # EUTAB
@@ -88,7 +88,7 @@ building_dread_encampment = {
 
 	potential = {
 		exists = owner
-		owner = { has_valid_civic = civic_reanimated_armies }
+		owner = { berg_reanimator_civic = yes }
 	}
 
 	convert_to = {

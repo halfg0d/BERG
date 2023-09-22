@@ -1,0 +1,3 @@
+has_bugged_mod = {
+	has_global_flag = bug_branch_active
+}

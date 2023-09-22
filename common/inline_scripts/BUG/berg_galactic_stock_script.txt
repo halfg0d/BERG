@@ -1,0 +1,23 @@
+planet_modifier = {
+	job_merchant_add = @berg_bug_a$tier$_jobs
+	trade_value_mult = @berg_bug_a$tier$_mod
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_merchant_guilds
+				has_civic = civic_bugged_state_monopoly
+			}
+		}
+	}
+	modifier = {
+		job_merchant_add = @berg_bug_a$tier$_jobs
+		trade_value_mult = @berg_bug_a$tier$_mod
+	}
+}
+triggered_desc = {
+	text = job_merchant_effect_desc
+}

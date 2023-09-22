@@ -212,9 +212,9 @@ building_capital = {
 			planet_housing_add = 1
 		}
 	}
-
+	inline_script = "BUG/berg_distributism_effect"
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = no
 		prod3 = no
@@ -346,7 +346,7 @@ building_major_capital = {
 	}
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = no
@@ -501,7 +501,7 @@ building_system_capital = {
 	}
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = yes
@@ -753,7 +753,10 @@ building_machine_capital = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-	inline_script = "vanilla/capitals/machine/berg_scripts_jobs"
+	inline_script = {
+		script = vanilla/capitals/machine/berg_scripts_jobs
+		tier = 1
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -766,7 +769,7 @@ building_machine_capital = {
 	}
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = no
 		prod3 = no
@@ -842,8 +845,11 @@ building_machine_major_capital = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-	inline_script = "vanilla/capitals/machine/berg_scripts_jobs"
-
+	
+	inline_script = {
+		script = vanilla/capitals/machine/berg_scripts_jobs
+		tier = 2
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -856,7 +862,7 @@ building_machine_major_capital = {
 
 	
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = no
@@ -933,8 +939,11 @@ building_machine_system_capital = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-	inline_script = "vanilla/capitals/machine/berg_scripts_jobs"
-
+	
+	inline_script = {
+		script = vanilla/capitals/machine/berg_scripts_jobs
+		tier = 3
+	}
 	triggered_planet_modifier = {
 		potential = {
 			num_pops >= 10
@@ -964,7 +973,7 @@ building_machine_system_capital = {
 
 	
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = yes
@@ -1145,7 +1154,7 @@ building_hive_major_capital = {
 
 	inline_script = "vanilla/capitals/hive/berg_scripts_jobs"
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = yes
@@ -1235,6 +1244,8 @@ building_hab_capital = {
 		tier = h1
 	}
 
+	inline_script = "BUG/berg_distributism_effect"
+	inline_script = "BUG/berg_capital_jobs_desc"
 	triggered_planet_modifier = {
 		modifier = { planet_stability_add = 1 }
 		mult = modifier:habitat_stability_add
@@ -1432,6 +1443,8 @@ building_hab_major_capital = {
 		transcend = no
 		healthcare = no
 	}
+	inline_script = "BUG/berg_distributism_effect"
+	inline_script = "BUG/berg_capital_jobs_desc"
 	triggered_planet_modifier = {
 		modifier = { planet_stability_add = 1 }
 		mult = modifier:habitat_stability_add
@@ -1486,7 +1499,7 @@ building_hab_major_capital = {
 	}
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = no
 		prod3 = no
@@ -1672,7 +1685,7 @@ building_resort_major_capital = {
 	}
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = no
 		prod3 = no
@@ -1842,7 +1855,7 @@ building_slave_major_capital = {
 	}
 	
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = no
 		prod3 = no
@@ -1911,7 +1924,7 @@ building_imperial_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = yes
@@ -2068,7 +2081,7 @@ building_imperial_machine_capital = {
 	}
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = yes
@@ -2143,7 +2156,7 @@ building_imperial_hive_capital = {
 	inline_script = "vanilla/capitals/hive/berg_scripts_jobs"
 
 	inline_script = {
-		script = "vanilla/capitals/berg_productivity_script"
+		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = yes

@@ -1,0 +1,18 @@
+triggered_planet_modifier = {
+	potential = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_functional_architecture = yes
+		}
+		NOR = {
+			is_planet_class = pc_habitat
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+			is_planet_class = pc_city
+		}
+	}
+	modifier = {
+		district_$district$_max = @berg_bug_d$tier$_district
+	}
+}

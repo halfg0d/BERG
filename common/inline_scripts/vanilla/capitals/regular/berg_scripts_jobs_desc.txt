@@ -135,3 +135,7 @@ inline_script = {
 	transcend = $transcend$
 	healthcare = $healtcare$
 }
+inline_script = {
+	script = BUG/berg_capital_jobs_desc
+	trigger = $trigger$
+}

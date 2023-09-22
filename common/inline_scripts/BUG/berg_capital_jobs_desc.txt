@@ -1,0 +1,76 @@
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_militarist = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_commander_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_pacifist = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_thinker_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_pluralist = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_advisor_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_competitive = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_financier_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_cooperative = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_union_representative_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_anthropocentric = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_industry_captain_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_ecocentric = yes
+		}
+		$trigger$
+	}
+	text = job_bugged_eco_logistician_effect_desc
+}

@@ -1073,14 +1073,14 @@ holding_dread_outpost = {
 
 	potential = {
 		owner.overlord = {
-			has_valid_civic = civic_reanimated_armies
+			berg_reanimator_civic = yes
 		}
 	}
 
 	allow = {
 		owner = {
 			NOR = {
-				has_valid_civic = civic_reanimated_armies
+				berg_reanimator_civic = yes
 				is_machine_empire = yes
 			}
 		}

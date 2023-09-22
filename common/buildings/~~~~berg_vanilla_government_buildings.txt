@@ -16,7 +16,7 @@ building_noble_estates = {
 				owner = { is_ai = no }
 			}
 		}
-		owner = { has_valid_civic = civic_aristocratic_elite }
+		owner = { berg_has_any_noble_civic = yes }
 		NOT = { has_modifier = slave_colony }
 	}
 
@@ -41,7 +41,7 @@ building_noble_estates = {
 	destroy_trigger = {
 		exists = owner
 		NOT = {
-			owner = { has_civic = civic_aristocratic_elite }
+			owner = { berg_has_any_noble_civic = yes }
 		}
 	}
 	inline_script = {

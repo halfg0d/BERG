@@ -6,6 +6,19 @@ inline_script = {
 	script = ECC/berg_ecc_noble_script
 	tier = $tier$
 }
+#BugBranch
+triggered_planet_modifier = {
+	potential = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_bugged_peerage_assembly
+		}
+	}
+	job_noble_add = 1
+	planet_housing_add = 1
+}
+#
 triggered_desc = {
 	text = job_noble_effect_desc
 }

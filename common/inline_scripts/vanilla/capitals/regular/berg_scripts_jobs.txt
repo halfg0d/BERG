@@ -10,6 +10,7 @@ triggered_planet_modifier = {
 				berg_has_any_merchant_civic = yes
 				berg_ecc_military_dictatorship_civic = yes
 				berg_ecc_supervisor_civic = yes
+				is_bugged_governmental_spiritualist = yes
 			}
 		}
 		$trigger$
@@ -137,7 +138,11 @@ inline_script = {
 	transcend = $transcend$
 	healthcare = $healtcare$
 }
-
+inline_script = {
+	script = BUG/berg_capital_jobs
+	tier = $tier$
+	trigger = $trigger$
+}
 inline_script = {
 	script = vanilla/capitals/regular/berg_scripts_jobs_desc
 	trigger = $trigger$

@@ -59,6 +59,10 @@ triggered_desc = {
 	text = job_steward_effect_desc
 }
 inline_script = {
+	script = BUG/berg_templar_jobs
+	tier = $tier$
+}
+inline_script = {
 	script = ECC/berg_ecc_temple_script
 	tier = $tier$
 }

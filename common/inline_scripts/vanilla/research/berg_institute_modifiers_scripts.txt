@@ -35,6 +35,21 @@ inline_script = {
 	tier = $tier$
 }
 inline_script = MECR/berg_mecr_institute_script
+#BugBranch
+triggered_planet_modifier = {
+	potential = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_bugged_research_cooperatives
+		}
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+
+	}
+}
+#
 #Descriptions
 triggered_desc = {
 	trigger = {

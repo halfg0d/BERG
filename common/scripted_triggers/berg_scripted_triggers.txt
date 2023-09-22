@@ -12,6 +12,7 @@ berg_has_any_spiritualist_civic = {
 			berg_has_ecc_mod = yes
 			berg_ecc_spiritualist_civic = yes
 		}
+		is_bugged_governmental_spiritualist = yes
 	}
 }
 berg_has_any_noble_civic = {
@@ -21,6 +22,7 @@ berg_has_any_noble_civic = {
 			berg_has_ecc_mod = yes
 			berg_ecc_noble_civic = yes
 		}
+		is_bugged_governmental_elitist = yes
 	}
 }
 berg_has_any_technocracy_civic = {
@@ -30,6 +32,7 @@ berg_has_any_technocracy_civic = {
 			berg_has_ecc_mod = yes
 			berg_ecc_technocracy_civic = yes
 		}
+		is_bugged_governmental_materialist = yes
 	}
 }
 berg_has_any_merchant_civic = {
@@ -112,6 +115,16 @@ berg_void_dweller_housing = {
 		exists = owner
 		owner = {
 			is_void_dweller_empire = yes
+		}
+	}
+}
+
+berg_reanimator_civic = {
+	OR = {
+		has_valid_civic = civic_reanimated_armies
+		AND = {
+			has_bugged_mod = yes
+			has_valid_civic = civic_bugged_graveyard_shift
 		}
 	}
 }

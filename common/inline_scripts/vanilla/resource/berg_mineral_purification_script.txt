@@ -97,6 +97,11 @@ inline_script = {
 	script = ECC/berg_ecc_mineral_purification_script
 	tier = $tier$
 }
+inline_script = {
+	script = BUG/berg_district_script
+	tier = $tier$
+	district = "mining"
+}
 triggered_desc = {
 	trigger = {
 		NOT = { is_planet_class = pc_shattered_ring_habitable }

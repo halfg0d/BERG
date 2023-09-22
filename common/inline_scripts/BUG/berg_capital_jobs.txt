@@ -1,0 +1,80 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_militarist = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_politician_add = @berg_capital_$tier$_politician2
+		job_bugged_commander_add = @berg_bug_r$tier$_commander
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_pacifist = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_politician_add = @berg_capital_$tier$_politician2
+		job_bugged_thinker_add = @berg_bug_r$tier$_thinker
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_pluralist = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_politician_add = @berg_capital_$tier$_politician2
+		job_bugged_advisor_add = @berg_bug_r$tier$_advisor
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_competitive = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_executive_add = @berg_capital_$tier$_politician2
+		job_bugged_financier_add = @berg_bug_r$tier$_financier
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_anthropocentric = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_executive_add = @berg_capital_$tier$_politician2
+		job_bugged_industry_captain_add = berg_bug_r$tier$_industry_captain
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_bugged_governmental_ecocentric = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_executive_add = @berg_capital_$tier$_politician2
+		job_bugged_eco_logistician_add = berg_bug_r$tier$_eco_logistician
+	}
+}

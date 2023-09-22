@@ -1,0 +1,18 @@
+triggered_planet_modifier = {
+	potential = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = { has_civic = civic_bugged_machine_researcher }
+	}
+	modifier = {
+		job_bugged_examinatron_add = @berg_bug_c$tier$_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = { has_civic = civic_bugged_machine_researcher }
+	}
+	text = job_bugged_examinatron_effect_desc
+}

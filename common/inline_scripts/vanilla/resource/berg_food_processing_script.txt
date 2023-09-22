@@ -56,6 +56,11 @@ triggered_planet_modifier = {
 		job_angler_add = @berg_resource_p$tier$_job
 	}
 }
+inline_script = {
+	script = BUG/berg_districts_script
+	tier = $tier$
+	district = "farming"
+}
 triggered_desc = {
 	trigger = {
 		exists = owner

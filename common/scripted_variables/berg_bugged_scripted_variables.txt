@@ -1,0 +1,44 @@
+###############
+# Ethics and Civics Bug Branch Variables
+#############
+#galactic stock exchange
+@berg_bug_a1_jobs = 1
+@berg_bug_a1_mod = 0.05
+@berg_bug_a2_jobs = 2
+@berg_bug_a2_mod = 0.1
+#stronghold
+@berg_bug_b1_job = 1
+@berg_bug_b2_job = 2
+#capital
+@berg_bug_r1_commander = 1
+@berg_bug_r1_thinker = 1
+@berg_bug_r1_advisor = 1
+@berg_bug_r1_financier = 1
+@berg_bug_r1_industry_captain = 1
+@berg_bug_r1_eco_logistician = 1
+@berg_bug_r2_commander = 2
+@berg_bug_r2_thinker = 2
+@berg_bug_r2_advisor = 2
+@berg_bug_r2_financier = 2
+@berg_bug_r2_industry_captain = 2
+@berg_bug_r2_eco_logistician = 2
+@berg_bug_r3_commander = 3
+@berg_bug_r3_thinker = 3
+@berg_bug_r3_advisor = 3
+@berg_bug_r3_financier = 3
+@berg_bug_r3_industry_captain = 3
+@berg_bug_r3_eco_logistician = 3
+#machine cap
+@berg_bug_c1_job = 1
+@berg_bug_c2_job = 2
+@berg_bug_c3_job = 3
+#resources district
+@berg_bug_d1_district = 1
+@berg_bug_d2_district = 2
+#temple templars
+@berg_bug_e1_templar = 1
+@berg_bug_e1_high_priest = 0
+@berg_bug_e2_templar = 2
+@berg_bug_e2_high_priest = 0
+@berg_bug_e3_templar = 3
+@berg_bug_e3_high_priest = 1

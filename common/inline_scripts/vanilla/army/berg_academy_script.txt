@@ -25,7 +25,7 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = {
 			is_gestalt = no
-			NOT = { has_valid_civic = civic_reanimated_armies }
+			berg_reanimator_civic = no
 		}
 	}
 	modifier = {
@@ -45,7 +45,7 @@ triggered_desc = {
 		exists = owner
 		owner = {
 			is_gestalt = no
-			NOT = { has_valid_civic = civic_reanimated_armies }
+			berg_reanimator_civic = no
 		}
 	}
 	text = job_soldier_effect_desc
@@ -53,14 +53,14 @@ triggered_desc = {
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_valid_civic = civic_reanimated_armies }
+		owner = { berg_reanimator_civic = yes }
 	}
 	text = job_necromancer_effect_desc
 }
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_valid_civic = civic_reanimated_armies }
+		owner = { berg_reanimator_civic = yes }
 	}
 	text = job_necromancer_effect_desc
 }

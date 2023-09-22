@@ -121,6 +121,7 @@ building_galactic_stock_exchange = {
 	category = trade
 
 	potential = {
+		has_bugged_mod = no
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
 	}
@@ -142,13 +143,16 @@ building_galactic_stock_exchange = {
 			}
 		}
 	}
-
+	convert_to = {
+		building_bugged_planetary_stock_exchange
+	}
 	destroy_trigger = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
+			has_bugged_mod = yes
 		}
 	}
 	inline_script = {

@@ -3,3 +3,15 @@ is_pd_nuked = { always = no }
 is_MECR_activated = { always = no }
 gpm_mod_active = { always = no }
 has_uap_mod = { always = no }
+is_bugged_private_militaries = { always = no }
+is_bugged_governmental_spiritualist = { always = no}
+is_bugged_governmental_materialist = { always = no }
+is_bugged_governmental_militarist = { always = no }
+is_bugged_governmental_pacifist = { always = no }
+is_bugged_governmental_elitist = { always = no }
+is_bugged_governmental_pluralist = { always = no }
+is_bugged_governmental_competetive = { always = no }
+is_bugged_governmental_anthropocentric = { always = no }
+is_bugged_governmental_ecocentric = { always = no }
+is_bugged_evolutionary_architects = { always = no }
+is_bugged_militant_zealots = { always = no }

@@ -649,6 +649,21 @@ building_clone_vats = {
 			}
 		}
 	}
+	#BugBranch
+	triggered_planet_modifier = {
+		potential = {
+			has_bugged_mod = yes
+			exists = owner
+			owner = {
+				is_bugged_evolutionary_architects = yes
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+
+		}
+	}
+	#
 
 	destroy_trigger = {
 		exists = owner
@@ -721,6 +736,21 @@ building_clone_army_clone_vat = {
 		script = vanilla/pop_assembly/berg_clone_army_script
 		tier = 1
 	}
+	#BugBranch
+	triggered_planet_modifier = {
+		potential = {
+			has_bugged_mod = yes
+			exists = owner
+			owner = {
+				is_bugged_evolutionary_architects = yes
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+
+		}
+	}
+	#
 	resources = {
 		category = planet_buildings
 		cost = {

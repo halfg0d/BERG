@@ -62,6 +62,10 @@ triggered_desc = {
 	}
 	text = job_steward_effect_desc
 }
+inline_script = {
+	script = BUG/berg_templar_jobs
+	tier = $tier$
+}
 triggered_desc = {
 	text = job_death_priest_effect_desc
 }
