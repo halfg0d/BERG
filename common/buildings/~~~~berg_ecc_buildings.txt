@@ -1030,7 +1030,7 @@ building_thermal_borehole = {
 			is_planet_class = pc_cybrex
 		}
 		OR = { # Habitats only have mines if they're built on an appropriate deposit
-			NOT = { is_planet_class = pc_habitat }
+			berg_is_habitat = no
 			has_planet_flag = mining_habitat
 		}
 	}

@@ -66,30 +66,32 @@ berg_is_habitat = {
 berg_fulfillment_center_planet = {
 	OR = {
 		is_planet_class = pc_nuked
-		is_planet_class = pc_city
+		berg_is_city_world = yes
 		uses_district_set = habitat
 		uses_district_set = ring_world
 		uses_district_set = shattered_ring_world
 		is_pd_nuked = yes
+		is_nuked_world = yes
+		is_city_world = yes
+		
 	}
 }
 berg_can_gaiaseeders_planet = {
 	NOR = {
 		#Vanilla
-		is_planet_class = pc_gaia
-		is_planet_class = pc_city
-		is_planet_class = pc_hive
-		is_planet_class = pc_machine
-		is_planet_class = pc_relic
+		berg_is_city_world = yes
+		berg_is_hive_world = yes
+		berg_is_machine_world = yes
 		is_artificial = yes
-		berg_pd_gaiaseeders_planet = yes
+		berg_is_gaia_world = yes
+		berg_is_relic_world = yes
 	}
 }
-berg_gaiaseeder_destroy = {
+berg_is_gaia_world = {
 	OR = {
-		berg_can_gaiaseeders_planet = no
 		is_planet_class = pc_gaia
-		berg_pd_gaiaseeders_destroy = yes
+		berg_pd_gaiaseeders_planet = yes
+		is_gaia_world = yes
 	}
 }
 berg_is_hive_world = {
@@ -97,6 +99,18 @@ berg_is_hive_world = {
 		is_planet_class = pc_hive
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
+	}
+}
+berg_is_relic_world = {
+	OR = {
+		is_planet_class = pc_relic
+		is_relic_world = yes
+	}
+}
+berg_is_city_world = {
+	OR = {
+		is_planet_class = pc_city
+		is_city_world = yes
 	}
 }
 berg_is_resort_world = {
@@ -126,5 +140,68 @@ berg_reanimator_civic = {
 			has_bugged_mod = yes
 			has_valid_civic = civic_bugged_graveyard_shift
 		}
+		has_reanimated_armies = yes
 	}
+}
+
+berg_is_machine_world = {
+	OR = {
+		is_machine_world = yes
+		is_planet_class = pc_machine
+	}
+}
+
+berg_is_fear_of_the_dark_empire = {
+	OR = {
+		has_origin = origin_fear_of_the_dark
+		is_fear_of_the_dark_empire = yes
+	}
+}
+
+berg_is_private_healthcare_empire = {
+	OR = {
+		is_private_healthcare_empire = yes
+		has_valid_civic = civic_private_healthcare_corporate
+	}
+}
+
+berg_is_clone_army_empire = {
+	OR = {
+		has_origin = origin_clone_army
+		is_clone_army_empire = yes
+	}
+}
+berg_is_robotic = {
+	OR = {
+		is_robotic = yes
+		is_robotic_species = yes
+	}
+}
+berg_is_dystopian_society = {
+	has_valid_civic = civic_dystopian_society
+}
+berg_is_progenitor_empire = {
+	has_origin = origin_progenitor_hive
+}
+berg_is_assimilator_empire = {
+	has_civic = civic_machine_assimilator
+}
+berg_is_toxic_knight_empire = {
+	has_origin = origin_toxic_knights
+}
+berg_is_shattered_ring = {
+	is_planet_class = pc_shattered_ring_habitable
+}
+berg_is_necrophage_empire = {
+	has_origin = origin_necrophage
+	has_trait = trait_necrophage
+}
+berg_is_servitor_empire = {
+	has_valid_civic = civic_machine_servitor
+}
+berg_is_permanent_employment = {
+	has_civic = civic_permanent_employment
+}
+berg_is_environmental = {
+	has_valid_civic = civic_environmentalist
 }

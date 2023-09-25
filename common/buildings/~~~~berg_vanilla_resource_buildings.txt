@@ -15,7 +15,7 @@ building_hydroponics_farm = {
 				is_ai = no
 			}
 		}
-		NOT = { is_planet_class = pc_machine }
+		berg_is_machine_world = no
 		NOT = { has_modifier = resort_colony }
 	}
 
@@ -30,7 +30,7 @@ building_hydroponics_farm = {
 				country_uses_food = no
 			}
 			planet = {
-				NOT = { is_planet_class = pc_habitat }
+				berg_is_habitat = no
 				free_building_slots = 0
 				owner = {
 					is_ai = yes
@@ -71,7 +71,7 @@ building_food_processing_facility = {
 	potential = {
 		exists = owner
 		NOR = {
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 		}
@@ -91,7 +91,7 @@ building_food_processing_facility = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -156,7 +156,7 @@ building_food_processing_center = {
 					}
 				}
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 		}
@@ -213,7 +213,7 @@ building_baol_organic_plant = {
 	potential = {
 		exists = owner
 		NOR = {
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 		}
@@ -226,7 +226,7 @@ building_baol_organic_plant = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 		}
@@ -253,12 +253,12 @@ building_baol_organic_plant = {
 building_mineral_purification_plant = {
 
 	desc = {
-		trigger = { NOT = { is_planet_class = pc_shattered_ring_habitable } }
+		trigger = { berg_is_shattered_ring = no }
 		text = building_mineral_purification_plant_desc
 	}
 
 	desc = {
-		trigger = { is_planet_class = pc_shattered_ring_habitable }
+		trigger = { berg_is_shattered_ring = yes }
 		text = building_scrap_processing_plant_desc
 	}
 
@@ -291,7 +291,7 @@ building_mineral_purification_plant = {
 			is_planet_class = pc_cybrex
 		}
 		OR = { # Habitats only have mines if they're built on an appropriate deposit
-			NOT = { is_planet_class = pc_habitat }
+			berg_is_habitat = no
 			has_planet_flag = mining_habitat
 		}
 		OR = {
@@ -336,12 +336,12 @@ building_mineral_purification_plant = {
 building_mineral_purification_hub = {
 
 	desc = {
-		trigger = { NOT = { is_planet_class = pc_shattered_ring_habitable } }
+		trigger = { berg_is_shattered_ring = no }
 		text = building_mineral_purification_hub_desc
 	}
 
 	desc = {
-		trigger = { is_planet_class = pc_shattered_ring_habitable }
+		trigger = { berg_is_shattered_ring = yes }
 		text = building_scrap_processing_hub_desc
 	}
 
@@ -447,12 +447,18 @@ building_energy_grid = {
 			has_modifier = crucible_colony
 		}
 		OR = {
-			NOT = { is_planet_class = pc_habitat }
+			berg_is_habitat = no
 			AND = {
 				exists = owner
 				owner = { is_gestalt = yes }
 			}
-			has_planet_flag = energy_habitat
+			AND = {
+				berg_is_habitat = yes
+				check_modifier_value = {
+					modifier = district_hab_energy_max
+					value > 0
+				}
+			}
 		}
 		OR = {
 			owner = {

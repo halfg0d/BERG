@@ -1,7 +1,7 @@
 #Modifier
 triggered_planet_modifier = {
 	potential = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 	}
 	modifier = {
 		planet_miners_minerals_produces_add = @berg_resource_m$tier$_mineral
@@ -10,7 +10,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		is_planet_class = pc_shattered_ring_habitable
+		berg_is_shattered_ring = yes
 	}
 	modifier = {
 		planet_miners_minerals_produces_add = @berg_resource_m$tier$_mineral_scrap
@@ -20,7 +20,7 @@ triggered_planet_modifier = {
 #Job
 triggered_planet_modifier = {
 	potential = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -34,7 +34,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
@@ -45,7 +45,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
@@ -56,7 +56,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		is_planet_class = pc_shattered_ring_habitable
+		berg_is_shattered_ring = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
@@ -67,7 +67,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		is_planet_class = pc_shattered_ring_habitable
+		berg_is_shattered_ring = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
@@ -83,10 +83,10 @@ triggered_planet_modifier = {
 		}
 		NOR = {
 			is_planet_class = pc_habitat
-			is_planet_class = pc_machine
-			is_planet_class = pc_hive
-			is_planet_class = pc_city
-			is_planet_class = pc_shattered_ring_habitable
+			berg_is_machine_world = yes
+			berg_is_hive_world = yes
+			berg_is_city_world = yes
+			berg_is_shattered_ring = yes
 		}
 	}
 	modifier = {
@@ -104,7 +104,7 @@ inline_script = {
 }
 triggered_desc = {
 	trigger = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
@@ -112,7 +112,7 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = {
 			is_gestalt = no
@@ -123,7 +123,7 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
@@ -132,7 +132,7 @@ triggered_desc = {
 
 triggered_desc = {
 	trigger = {
-		is_planet_class = pc_shattered_ring_habitable
+		berg_is_shattered_ring = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
@@ -140,7 +140,7 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		is_planet_class = pc_shattered_ring_habitable
+		berg_is_shattered_ring = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}

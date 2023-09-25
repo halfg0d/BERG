@@ -13,7 +13,7 @@ building_robot_assembly_plant = {
 		OR = {
 			owner = { is_ai = no }
 			NOT = { exists = assembling_species }
-			assembling_species = { is_robotic_species = yes }
+			assembling_species = { berg_is_robotic = yes }
 		}
 		owner = {
 			is_regular_empire = yes
@@ -104,7 +104,7 @@ building_robot_assembly_complex = {
 		OR = {
 			owner = { is_ai = no }
 			NOT = { exists = assembling_species }
-			assembling_species = { is_robotic_species = yes }
+			assembling_species = { berg_is_robotic = yes }
 		}
 		owner = {
 			is_regular_empire = yes
@@ -306,7 +306,7 @@ building_spawning_pool = {
 		exists = owner
 		owner = {
 			is_hive_empire = yes
-			NOT = { has_origin = origin_progenitor_hive }
+			berg_is_progenitor_empire = no
 		}
 		or = {
 			num_buildings = { type = any value < 15 }
@@ -319,7 +319,7 @@ building_spawning_pool = {
 		owner = {
 			OR = {
 				is_hive_empire = no
-				has_origin = origin_progenitor_hive
+				berg_is_progenitor_empire = yes
 			}
 		}
 	}
@@ -354,7 +354,7 @@ building_offspring_nest = {
 
 	potential = {
 		exists = owner
-		owner = { has_origin = origin_progenitor_hive }
+		owner = { berg_is_progenitor_empire = yes }
 		or = {
 			num_buildings = { type = any value < 15 }
 			owner = { is_ai = no }
@@ -363,7 +363,7 @@ building_offspring_nest = {
 
 	destroy_trigger = {
 		exists = owner
-		owner = { NOT = { has_origin = origin_progenitor_hive } }
+		owner = { berg_is_progenitor_empire = no }
 	}
 
 	inline_script = {
@@ -419,7 +419,7 @@ building_necrophage_elevation_chamber = {
 	potential = {
 		exists = owner
 		owner = {
-			has_origin = origin_necrophage
+			berg_is_necrophage_empire = yes
 			has_trait = trait_necrophage
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -435,9 +435,9 @@ building_necrophage_elevation_chamber = {
 		}
 		if = {
 			limit = { owner = { is_hive_empire = no } }
-			NOT = { is_planet_class = pc_hive }
+			berg_is_hive_world = no
 		}
-		NOT = { is_planet_class = pc_machine }
+		berg_is_machine_world = no
 		hidden_trigger = {
 			if = {
 				limit = {
@@ -456,7 +456,7 @@ building_necrophage_elevation_chamber = {
 		OR = {
 			owner = {
 				OR = {
-					NOT = { has_origin = origin_necrophage }
+					berg_is_necrophage_empire = no
 					NOT = { has_trait = trait_necrophage }
 				}
 			}
@@ -540,7 +540,7 @@ building_necrophage_house_of_apotheosis = {
 	potential = {
 		exists = owner
 		owner = {
-			has_origin = origin_necrophage
+			berg_is_necrophage_empire = yes
 			has_trait = trait_necrophage
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
@@ -568,7 +568,7 @@ building_necrophage_house_of_apotheosis = {
 		OR = {
 			owner = {
 				OR = {
-					NOT = { has_origin = origin_necrophage }
+					berg_is_necrophage_empire = no
 					NOT = { has_trait = trait_necrophage }
 				}
 			}
@@ -589,7 +589,7 @@ building_necrophage_house_of_apotheosis = {
 
 	triggered_planet_modifier = {
 		potential = {
-			is_planet_class = pc_hive
+			berg_is_hive_world = yes
 			exists = owner
 			owner = { is_hive_empire = yes }
 		}
@@ -614,7 +614,7 @@ building_necrophage_house_of_apotheosis = {
 	}
 
 	show_tech_unlock_if = {
-		has_origin = origin_necrophage
+		berg_is_necrophage_empire = yes
 		has_trait = trait_necrophage
 	}
 }
@@ -701,7 +701,7 @@ building_clone_army_clone_vat = {
 	potential = {
 		exists = owner
 		owner = {
-			has_origin = origin_clone_army
+			berg_is_clone_army_empire = yes
 			NOT = {
 				has_country_flag = clone_army_fertility_unlocked
 			}
@@ -714,7 +714,7 @@ building_clone_army_clone_vat = {
 				has_building = building_clone_army_clone_vat
 				AND = {
 					exists = assembling_species
-					assembling_species = { is_robotic_species = yes }
+					assembling_species = { berg_is_robotic = yes }
 				}
 			}
 		}
@@ -725,7 +725,7 @@ building_clone_army_clone_vat = {
 		OR = {
 			owner = {
 				OR = {
-					NOT = { has_origin = origin_clone_army }
+					berg_is_clone_army_empire = no
 					is_synthetic_empire = yes
 					has_country_flag = clone_army_fertility_unlocked
 				}
@@ -799,7 +799,7 @@ building_posthumous_employment_center = {
 		}
 		owner = {
 			is_regular_empire = yes
-			has_valid_civic = civic_permanent_employment
+			berg_is_permanent_employment = yes
 		}
 	}
 
@@ -811,7 +811,7 @@ building_posthumous_employment_center = {
 		exists = owner
 		OR = {
 			owner = {
-				NOT = { has_valid_civic = civic_permanent_employment }
+				berg_is_permanent_employment = no
 			}
 			AND = {
 				owner = { is_ai = yes }

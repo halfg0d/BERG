@@ -280,7 +280,7 @@ building_necroseeders_1 = {
 		owner = {
 			has_ascension_perk = ap_pd_necro_worlds
 		}
-		NOT = { is_planet_class = pc_city }
+		berg_is_city_world = no
 		is_pd_necro_world = no
 		is_pd_arcology = no
 		is_pd_robot_arcology = no
@@ -299,7 +299,7 @@ building_necroseeders_1 = {
 				has_civic = civic_death_cult_corporate
 				has_civic = civic_permanent_employment
 				has_civic = civic_reanimated_armies
-				has_origin = origin_necrophage
+				berg_is_necrophage_empire = yes
 			}
 		}
 	}
@@ -307,7 +307,7 @@ building_necroseeders_1 = {
 	destroy_trigger = {
 		OR = {
 			is_pd_necro_world = yes
-			is_planet_class = pc_city
+			berg_is_city_world = yes
 			is_pd_arcology = yes
 			is_pd_robot_arcology = yes
 			is_pd_hive_arcology = yes
@@ -359,7 +359,7 @@ building_necroseeders_2 = {
 
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_city
+			berg_is_city_world = yes
 			is_pd_necro_world = yes
 			is_pd_arcology = yes
 			is_pd_robot_arcology = yes
@@ -383,7 +383,7 @@ building_necroseeders_2 = {
 				has_civic = civic_death_cult_corporate
 				has_civic = civic_permanent_employment
 				has_civic = civic_reanimated_armies
-				has_origin = origin_necrophage
+				berg_is_necrophage_empire = yes
 			}
 		}
 	}
@@ -402,7 +402,7 @@ building_necroseeders_3 = {
 	destroy_trigger = {
 		OR = {
 			is_pd_necro_world = yes
-			is_planet_class = pc_city
+			berg_is_city_world = yes
 			is_pd_arcology = yes
 			is_pd_robot_arcology = yes
 			is_pd_hive_arcology = yes
@@ -433,7 +433,7 @@ building_necroseeders_3 = {
 				has_civic = civic_death_cult_corporate
 				has_civic = civic_permanent_employment
 				has_civic = civic_reanimated_armies
-				has_origin = origin_necrophage
+				berg_is_necrophage_empire = yes
 			}
 		}
 	}
@@ -657,7 +657,7 @@ building_lichen_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -841,7 +841,7 @@ building_wet_td_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -2031,7 +2031,7 @@ building_archipelago_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -2254,7 +2254,7 @@ building_aquifer_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -2720,7 +2720,7 @@ building_biolumen_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -3450,7 +3450,7 @@ building_iceberg_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -3524,7 +3524,7 @@ building_supercon_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {
@@ -3966,7 +3966,7 @@ building_superhab_farm = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 			AND = {

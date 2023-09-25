@@ -659,14 +659,14 @@ holding_offspring_nest = {
 	potential = {
 		owner.overlord = {
 			is_hive_empire = yes
-			has_origin = origin_progenitor_hive
+			berg_is_progenitor_empire = yes
 		}
 		has_overlord_dlc = yes
 	}
 
 	allow = {
 		owner = {
-			NOT = { has_origin = origin_progenitor_hive }
+			berg_is_progenitor_empire = no
 		}
 	}
 	triggered_planet_modifier = {
@@ -1200,14 +1200,14 @@ holding_idyllic_bloom = {
 	potential = {
 		exists = owner
 		owner.overlord = {
-			is_country_type = default
+			is_playable = yes
 			is_idyllic_bloom_empire = yes
 		}
 		NOR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 		is_artificial = no
@@ -1303,9 +1303,9 @@ holding_reemployment_center = {
 	}
 
 	potential = {
-		owner.overlord = { has_valid_civic = civic_permanent_employment }
+		owner.overlord = { berg_is_permanent_employment = yes }
 		NOT = {
-			owner = { has_valid_civic = civic_permanent_employment }
+			owner = { berg_is_permanent_employment = yes }
 		}
 		owner = {
 			is_machine_empire = no
@@ -1423,14 +1423,14 @@ holding_park_ranger_lodge = {
 	}
 
 	potential = {
-		owner.overlord = { has_valid_civic = civic_environmentalist }
+		owner.overlord = { berg_is_environmental = yesist }
 		NOT = {
-			owner = { has_valid_civic = civic_environmentalist }
+			owner = { berg_is_environmental = yesist }
 		}
 		NOR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 		is_artificial = no
@@ -1438,9 +1438,9 @@ holding_park_ranger_lodge = {
 
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 	}
@@ -1516,16 +1516,16 @@ holding_tree_of_life_sapling = {
 			}
 		}
 		NOR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_machine
+			berg_is_city_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 		is_artificial = no
 	}
 	destroy_trigger = {
 		OR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_machine
+			berg_is_city_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 	}
@@ -1618,7 +1618,7 @@ holding_organic_sanctuary = {
 	}
 
 	potential = {
-		owner.overlord = { has_valid_civic = civic_machine_servitor }
+		owner.overlord = { berg_is_servitor_empire = yes }
 		owner = { is_machine_empire = no }
 	}
 
@@ -1857,7 +1857,7 @@ holding_toxic_bath = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { has_valid_civic = civic_environmentalist }
+			planet.owner = { berg_is_environmental = yesist }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -1909,7 +1909,7 @@ holding_toxic_bath_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { has_valid_civic = civic_environmentalist }
+			planet.owner = { berg_is_environmental = yesist }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -1961,7 +1961,7 @@ holding_toxic_bath_machine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { has_valid_civic = civic_environmentalist }
+			planet.owner = { berg_is_environmental = yesist }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -2003,7 +2003,7 @@ holding_knight_commandery = {
 
 	potential = {
 		owner.overlord = {
-			has_origin = origin_toxic_knights
+			berg_is_toxic_knight_empire = yes
 			NOT = { has_country_flag = quest_abandoned }
 		}
 	}
@@ -2019,7 +2019,7 @@ holding_knight_commandery = {
 	destroy_trigger = {
 		OR = {
 			NOT = { exists = owner.overlord }
-			owner.overlord = { NOT = { has_origin = origin_toxic_knights } }
+			owner.overlord = { berg_is_toxic_knight_empire = no }
 		}
 	}
 

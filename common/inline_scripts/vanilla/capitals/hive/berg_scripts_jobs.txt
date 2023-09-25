@@ -1,7 +1,7 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_origin = origin_progenitor_hive }
+		owner = { berg_is_progenitor_empire = yes }
 		berg_is_hive_world = yes
 	}
 	job_spawning_drone_add = -1

@@ -20,9 +20,9 @@ building_private_mining_consortium = {
 		}
 		is_artificial = no
 		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_city_world = yes
 		}
 	}
 
@@ -62,8 +62,8 @@ building_food_conglomerate = {
 			is_criminal_syndicate = no
 		}
 		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 	}
@@ -331,7 +331,7 @@ building_amusement_megaplex = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
-		branch_office_owner = { NOT = { has_origin = origin_toxic_knights } }
+		branch_office_owner = { berg_is_toxic_knight_empire = no }
 	}
 
 	planet_modifier = {
@@ -474,9 +474,9 @@ building_wildcat_miners = {
 		}
 		is_artificial = no
 		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_city
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_city_world = yes
 		}
 	}
 
@@ -517,8 +517,8 @@ building_bio_reprocessing_facilities = {
 			is_criminal_syndicate = yes
 		}
 		NOR = {
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 	}
@@ -1140,7 +1140,7 @@ building_knightly_theme_park = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			has_origin = origin_toxic_knights
+			berg_is_toxic_knight_empire = yes
 			NOT = { has_country_flag = quest_abandoned }
 		}
 	}
@@ -1187,7 +1187,7 @@ building_corporate_clinics = {
 
 	potential = {
 		has_branch_office = yes
-		branch_office_owner = { has_valid_civic = civic_private_healthcare_corporate }
+		branch_office_owner = { berg_is_private_healthcare_empire = yes }
 	}
 
 	on_built = {

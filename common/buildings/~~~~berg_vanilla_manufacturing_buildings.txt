@@ -216,7 +216,7 @@ building_factory_1 = {
 		owner = {
 			OR = {
 				country_uses_consumer_goods = yes
-				has_origin = origin_fear_of_the_dark
+				berg_is_fear_of_the_dark_empire = yes
 			}
 		}
 		NOR = {
@@ -249,7 +249,7 @@ building_factory_1 = {
 					owner = { 
 						AND = {
 							country_uses_consumer_goods = no
-							NOT = { has_origin = origin_fear_of_the_dark }
+							berg_is_fear_of_the_dark_empire = no
 						}
 					}
 					AND = {

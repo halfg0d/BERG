@@ -627,7 +627,7 @@ building_deployment_post = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_machine_assimilator }
+			owner = { berg_is_assimilator_empire = yes }
 		}
 		modifier = {
 			job_replicator_add = -1
@@ -1356,7 +1356,7 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_dystopian_society }
+			owner = { berg_is_dystopian_society = yes }
 		}
 		modifier = {
 			job_enforcer_add = 1
@@ -1437,7 +1437,7 @@ building_hab_major_capital = {
 		tier = h2
 		trigger = "OR = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
-			NOT = { owner = { has_origin = origin_toxic_knights } }
+			NOT = { owner = { berg_is_toxic_knight_empire = yes } }
 		}"
 		#ECC
 		transcend = no

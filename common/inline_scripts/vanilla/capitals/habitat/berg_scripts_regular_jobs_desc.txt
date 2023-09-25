@@ -3,7 +3,7 @@ triggered_desc = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
-			has_valid_civic = civic_dystopian_society
+			berg_is_dystopian_society = yes
 		}
 	}
 	text = job_enforcer_effect_desc

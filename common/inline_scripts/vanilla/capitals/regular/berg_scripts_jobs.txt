@@ -123,7 +123,7 @@ triggered_planet_modifier = {
 		has_planet_flag = toxic_knights_habitat
 		exists = owner
 		owner = {
-			has_origin = origin_toxic_knights
+			berg_is_toxic_knight_empire = yes
 		}
 	}
 	modifier = {

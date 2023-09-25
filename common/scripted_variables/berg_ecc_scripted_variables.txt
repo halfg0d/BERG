@@ -68,7 +68,7 @@
 @berg_ecc_a1_clerk = 1
 @berg_ecc_a1_merchant = 1
 @berg_ecc_a1_entrepreneur = 0
-@berg_ecc_a2_unity = 0
+@berg_ecc_a1_unity = 0
 @berg_ecc_a2_clerk = 1
 @berg_ecc_a2_merchant = 1
 @berg_ecc_a2_entrepreneur = 1

@@ -683,7 +683,7 @@ building_uplink_node = {
 		owner = {
 			is_machine_empire = yes
 			NOT = {
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}
@@ -693,7 +693,7 @@ building_uplink_node = {
 		owner = {
 			OR = {
 				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}
@@ -728,7 +728,7 @@ building_uplink_node = {
 	show_tech_unlock_if = {
 		is_machine_empire = yes
 		NOT = {
-			has_valid_civic = civic_machine_servitor
+			berg_is_servitor_empire = yes
 		}
 	}
 }
@@ -745,7 +745,7 @@ building_network_junction = {
 		owner = {
 			is_machine_empire = yes
 			NOT = {
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}
@@ -759,7 +759,7 @@ building_network_junction = {
 		owner = {
 			OR = {
 				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}
@@ -796,7 +796,7 @@ building_network_junction = {
 	show_tech_unlock_if = {
 		is_machine_empire = yes
 		NOT = {
-			has_valid_civic = civic_machine_servitor
+			berg_is_servitor_empire = yes
 		}
 	}
 }
@@ -813,7 +813,7 @@ building_system_conflux = {
 		owner = {
 			is_machine_empire = yes
 			NOT = {
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}
@@ -827,7 +827,7 @@ building_system_conflux = {
 		owner = {
 			OR = {
 				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}
@@ -861,7 +861,7 @@ building_system_conflux = {
 	show_tech_unlock_if = {
 		is_machine_empire = yes
 		NOT = {
-			has_valid_civic = civic_machine_servitor
+			berg_is_servitor_empire = yes
 		}
 	}
 }
@@ -1684,8 +1684,10 @@ building_corporate_monument = {
 		OR = {
 			has_modifier = slave_colony
 			owner = {
-				is_megacorp = no
-				is_memorialist_empire = yes
+				OR = {
+					is_megacorp = no
+					is_memorialist_empire = yes
+				}
 			}
 		}
 	}
@@ -2452,7 +2454,7 @@ building_organic_sanctuary = {
 
 	potential = {
 		exists = owner
-		owner = { has_valid_civic = civic_machine_servitor }
+		owner = { berg_is_servitor_empire = yes }
 
 		OR = {
 			owner = { is_ai = no }
@@ -2464,7 +2466,7 @@ building_organic_sanctuary = {
 		exists = owner
 		OR = {
 			owner = {
-				NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+				NOT = { owner = { berg_is_servitor_empire = yes } }
 			}
 			AND = {
 				owner = { is_ai = yes }
@@ -2573,12 +2575,12 @@ building_organic_paradise = {
 
 	potential = {
 		exists = owner
-		owner = { has_valid_civic = civic_machine_servitor }
+		owner = { berg_is_servitor_empire = yes }
 	}
 
 	destroy_trigger = {
 		exists = owner
-		NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+		NOT = { owner = { berg_is_servitor_empire = yes } }
 	}
 
 	convert_to = {
@@ -2606,7 +2608,7 @@ building_organic_paradise = {
 	prerequisites = { "tech_paradise_dome" }
 
 	show_tech_unlock_if = {
-		owner = { has_valid_civic = civic_machine_servitor }
+		owner = { berg_is_servitor_empire = yes }
 	}
 
 	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies

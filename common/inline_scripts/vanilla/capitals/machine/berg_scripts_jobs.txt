@@ -1,7 +1,7 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_civic = civic_machine_assimilator }
+		owner = { berg_is_assimilator_empire = yes }
 	}
 	modifier = {
 		job_replicator_add = -1

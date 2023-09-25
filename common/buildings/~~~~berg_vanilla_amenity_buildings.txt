@@ -497,7 +497,7 @@ building_holo_theatres = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
-			NOT = { has_valid_civic = civic_dystopian_society }
+			berg_is_dystopian_society = no
 		}
 		OR = {
 			owner = {
@@ -515,7 +515,7 @@ building_holo_theatres = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { has_valid_civic = civic_dystopian_society }
+			owner = { berg_is_dystopian_society = yes }
 			has_modifier = slave_colony
 		}
 	}
@@ -557,7 +557,7 @@ building_hyper_entertainment_forum = {
 	allow = {
 		has_upgraded_capital = yes
 		owner = {
-			NOT = { has_valid_civic = civic_dystopian_society }
+			berg_is_dystopian_society = no
 		}
 		OR = {
 			owner = {
@@ -572,7 +572,7 @@ building_hyper_entertainment_forum = {
 
 	destroy_trigger = {
 		exists = owner
-		owner = { has_valid_civic = civic_dystopian_society }
+		owner = { berg_is_dystopian_society = yes }
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
@@ -610,7 +610,7 @@ building_clinic = {
 			OR = {
 				is_regular_empire = yes
 				AND = {
-					has_origin = origin_fear_of_the_dark
+					berg_is_fear_of_the_dark_empire = yes
 					is_country_type = primitive
 				}
 			}
@@ -621,11 +621,11 @@ building_clinic = {
 			owner = {
 				OR = {
 					is_ai = no
-					has_valid_civic = civic_private_healthcare_corporate
+					berg_is_private_healthcare_empire = yes
 					prev = {
 						has_branch_office = yes
 						branch_office_owner = {
-							has_valid_civic = civic_private_healthcare_corporate
+							berg_is_private_healthcare_empire = yes
 						}
 					}
 				}
@@ -646,7 +646,7 @@ building_clinic = {
 				NOR = {
 					is_regular_empire = yes
 					AND = {
-						has_origin = origin_fear_of_the_dark
+						berg_is_fear_of_the_dark_empire = no
 						is_country_type = primitive
 					}
 				}
@@ -655,7 +655,7 @@ building_clinic = {
 			AND = {
 				owner = {
 					is_ai = yes
-					NOT = { has_valid_civic = civic_private_healthcare_corporate }
+					berg_is_private_healthcare_empire = no
 				}
 				planet_stability > 70
 				free_amenities > 20
@@ -761,7 +761,7 @@ building_hospital = {
 		OR = {
 			owner = {
 				OR = {
-					has_valid_civic = civic_private_healthcare_corporate
+					berg_is_private_healthcare_empire = yes
 					is_ai = no
 				}
 			}
@@ -774,7 +774,7 @@ building_hospital = {
 			AND = {
 				has_branch_office = yes
 				branch_office_owner = {
-					has_valid_civic = civic_private_healthcare_corporate
+					berg_is_private_healthcare_empire = yes
 				}
 			}
 		}
@@ -936,12 +936,12 @@ building_ranger_lodge = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
-			has_valid_civic = civic_environmentalist
+			berg_is_environmental = yesist
 		}
 		NOR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 		is_artificial = no
@@ -964,10 +964,10 @@ building_ranger_lodge = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
-			owner = { NOT = { has_valid_civic = civic_environmentalist } }
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
+			owner = { berg_is_environmental = no }
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
 			is_planet_class = pc_relic
 		}
 	}

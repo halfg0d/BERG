@@ -1,7 +1,7 @@
 triggered_planet_modifier = {
 	potential = {
 		berg_has_ecc_mod = yes
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = { has_valid_civic = civic_mining_guilds }
 	}
@@ -12,7 +12,7 @@ triggered_planet_modifier = {
 triggered_desc = {
 	trigger = {
 		berg_has_ecc_mod = yes
-		NOT = { is_planet_class = pc_shattered_ring_habitable }
+		berg_is_shattered_ring = no
 		exists = owner
 		owner = { has_valid_civic = civic_mining_guilds }
 	}

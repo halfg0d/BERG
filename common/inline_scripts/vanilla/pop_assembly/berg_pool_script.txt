@@ -2,7 +2,7 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { NOT = { has_origin = origin_progenitor_hive } }
+		owner = { berg_is_progenitor_empire = no }
 	}
 	modifier = {
 		job_spawning_drone_add = @berg_pop_assembly_p$tier$_job
@@ -11,14 +11,14 @@ triggered_planet_modifier = {
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { NOT = { has_origin = origin_progenitor_hive } }
+		owner = { berg_is_progenitor_empire = no }
 	}
 	text = spawning_pool_tooltip
 }
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_origin = origin_necrophage }
+		owner = { berg_is_necrophage_empire = yes }
 		exists = growing_species
 		growing_species = {
 			NOT = { has_trait = trait_hive_mind }
@@ -30,7 +30,7 @@ triggered_desc = {
 	trigger = {
 		NAND = {
 			exists = owner
-			owner = { has_origin = origin_necrophage }
+			owner = { berg_is_necrophage_empire = yes }
 			exists = growing_species
 			growing_species = {
 				NOT = { has_trait = trait_hive_mind }
@@ -62,7 +62,7 @@ triggered_desc = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_origin = origin_progenitor_hive }
+		owner = { berg_is_progenitor_empire = yes }
 	}
 	modifier = {
 		job_offspring_drone_add = @berg_pop_assembly_p$tier$_job
@@ -71,7 +71,7 @@ triggered_planet_modifier = {
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_origin = origin_progenitor_hive }
+		owner = { berg_is_progenitor_empire = yes }
 		exists = growing_species
 		growing_species = {
 			has_trait = trait_hive_mind
@@ -83,7 +83,7 @@ triggered_desc = {
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_origin = origin_progenitor_hive }
+		owner = { berg_is_progenitor_empire = yes }
 	}
 	text = offspring_nest_tooltip
 }

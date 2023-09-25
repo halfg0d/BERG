@@ -93,7 +93,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_origin = origin_toxic_knights
+			berg_is_toxic_knight_empire = yes
 		}
 		has_planet_flag = toxic_knights_habitat
 	}
@@ -103,7 +103,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_origin = origin_toxic_knights
+			berg_is_toxic_knight_empire = yes
 			NOR = {
 				has_country_flag = toxoids_7011_b
 				has_country_flag = toxoids_7040_b
@@ -118,7 +118,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_origin = origin_toxic_knights
+			berg_is_toxic_knight_empire = yes
 			OR = {
 				has_country_flag = toxoids_7011_b
 				has_country_flag = toxoids_7040_b

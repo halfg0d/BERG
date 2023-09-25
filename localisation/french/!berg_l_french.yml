@@ -1,4 +1,6 @@
-﻿l_english:
+﻿l_french:
+ building_deep_space_scanner_ecc:0 "$building_deep_space_scanner$"
+ building_deep_space_scanner_ecc_desc:0 "$building_deep_space_scanner_desc$"
  building_bugged_planetary_stock_exchange:0 "Polska Gurom"
  building_bugged_planetary_stock_exchange_desc:0 "Polska Gurom"
  building_bugged_planetary_stock_exchange_effect_desc:0 "Polska Gurom"

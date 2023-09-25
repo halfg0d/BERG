@@ -289,7 +289,7 @@ building_order_keep = {
 	category = government
 
 	potential = {
-		owner = { has_origin = origin_toxic_knights }
+		owner = { berg_is_toxic_knight_empire = yes }
 		has_planet_flag = toxic_knights_habitat
 		owner = { NOT = { has_country_flag = quest_abandoned } }
 	}
@@ -297,7 +297,7 @@ building_order_keep = {
 	destroy_trigger = {
 		OR = {
 			NOT = { exists = owner }
-			NOT = { owner = { has_origin = origin_toxic_knights } }
+			NOT = { owner = { berg_is_toxic_knight_empire = yes } }
 		}
 	}
 
@@ -357,7 +357,7 @@ building_order_castle = {
 	destroy_trigger = {
 		OR = {
 			NOT = { exists = owner }
-			NOT = { owner = { has_origin = origin_toxic_knights } }
+			NOT = { owner = { berg_is_toxic_knight_empire = yes } }
 		}
 	}
 	inline_script = {
@@ -589,7 +589,7 @@ building_gaiaseeders_1 = {
 	potential = {
 		exists = owner
 		owner = {
-			is_country_type = default
+			is_playable = yes
 			is_idyllic_bloom_empire = yes
 		}
 		berg_can_gaiaseeders_planet = yes
@@ -601,7 +601,7 @@ building_gaiaseeders_1 = {
 
 	destroy_trigger = {
 		OR = {
-			berg_gaiaseeder_destroy = yes
+			berg_can_gaiaseeders_planet = no
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -648,7 +648,7 @@ building_gaiaseeders_2 = {
 
 	destroy_trigger = {
 		OR = {
-			berg_gaiaseeder_destroy = yes
+			berg_can_gaiaseeders_planet = no
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -688,7 +688,7 @@ building_gaiaseeders_3 = {
 
 	destroy_trigger = {
 		OR = {
-			berg_gaiaseeder_destroy = yes
+			berg_can_gaiaseeders_planet = no
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -713,7 +713,7 @@ building_gaiaseeders_4 = {
 
 	destroy_trigger = {
 		OR = {
-			berg_gaiaseeder_destroy = yes
+			berg_is_gaia_world = yes
 			NOT = { exists = owner }
 			owner = {
 				is_idyllic_bloom_empire = no
@@ -727,13 +727,43 @@ building_gaiaseeders_4 = {
 			energy = 1500
 			exotic_gases = @b4_rare_cost
 		}
+		upkeep = {
+			energy = @b4_upkeep
+			exotic_gases = @b3_rare_upkeep
+			multiplier = value:gaiaseeder_cost_mult
+		}
 	}
 
+	potential = {
+		OR = {
+			berg_is_gaia_world = yes
+			has_building = building_gaiaseeders_3
+		}
+	}
 	allow = {
 		can_build_gaiaseeder = yes
 	}
 
 	triggered_desc = {
 		text = building_gaiaseeders_4_effect_desc
+		trigger = {
+			exists = planet
+			planet = {
+				NOT = {
+					berg_is_gaia_world = yes
+				}
+			}
+		}
+	}
+
+	triggered_desc = {
+		text = gaia_seeder_bloomed_pops_effect
+	}
+
+	triggered_desc = {
+		text = gaia_seeder_bloom_timer_tooltip
+		trigger = {
+			has_planet_flag = gaia_seeder_bloom_timer
+		}
 	}
 }

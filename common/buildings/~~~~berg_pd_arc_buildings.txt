@@ -19,7 +19,7 @@ building_pd_rogue_council = {
 		}
 		owner = {
 			is_machine_empire = yes
-			has_valid_civic = civic_machine_servitor
+			berg_is_servitor_empire = yes
 		}
 		NOT = { has_modifier = slave_colony }
 	}
@@ -33,7 +33,7 @@ building_pd_rogue_council = {
 		NOT = {
 			owner = {
 				is_machine_empire = yes
-				has_valid_civic = civic_machine_servitor
+				berg_is_servitor_empire = yes
 			}
 		}
 	}

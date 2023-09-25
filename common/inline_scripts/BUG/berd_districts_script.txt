@@ -7,9 +7,9 @@ triggered_planet_modifier = {
 		}
 		NOR = {
 			is_planet_class = pc_habitat
-			is_planet_class = pc_machine
+			berg_is_machine_world = yes
 			is_planet_class = pc_hive
-			is_planet_class = pc_city
+			berg_is_city_world = yes
 		}
 	}
 	modifier = {
