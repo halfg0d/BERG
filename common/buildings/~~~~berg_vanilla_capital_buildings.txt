@@ -53,6 +53,14 @@ building_colony_shelter = {
 		script = buildings/on_all_capital_buildings
 	}
 
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 0 
+		osa_branch_add = 1
+	}
+	inline_script = {
+		script = OSA/berg_osa_colony_jobs
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -95,6 +103,10 @@ building_colony_shelter = {
 		category = planet_buildings
 		upkeep = {
 			energy = 1
+		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.05
 		}
 	}
 
@@ -177,10 +189,13 @@ building_capital = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
 		planet_max_buildings_add = @buildings_t2
-		planet_max_branch_office_buildings_add = 1
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
-
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 1 
+		osa_branch_add = 1
+	}
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
@@ -249,6 +264,10 @@ building_capital = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.1
+		}
 	}
 	triggered_desc = {
 		trigger = {
@@ -308,8 +327,13 @@ building_major_capital = {
 		planet_housing_add = 8
 		planet_amenities_add = 8
 		planet_max_buildings_add = @buildings_t3
-		planet_max_branch_office_buildings_add = 2
 		defense_armies_add = @tier_3_capital_defense_armies
+	}
+
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 2 
+		osa_branch_add = 2
 	}
 
 	inline_script = {
@@ -389,6 +413,10 @@ building_major_capital = {
 		upkeep = {
 			energy = @b3_upkeep
 		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.15
+		}
 	}
 
 	triggered_desc = {
@@ -465,8 +493,13 @@ building_system_capital = {
 		planet_housing_add = 12
 		planet_amenities_add = 12
 		planet_max_buildings_add = @buildings_t4
-		planet_max_branch_office_buildings_add = 4
 		defense_armies_add = @tier_4_capital_defense_armies
+	}
+
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 4 
+		osa_branch_add = 2
 	}
 
 	inline_script = {
@@ -543,6 +576,10 @@ building_system_capital = {
 		}
 		upkeep = {
 			energy = @b4_upkeep
+		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.2
 		}
 	}
 
@@ -623,7 +660,10 @@ building_deployment_post = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-
+	inline_script = {
+		script = OSA/berg_osa_capital_job
+		tier = d0
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -658,6 +698,10 @@ building_deployment_post = {
 		category = planet_buildings
 		upkeep = {
 			energy = 1
+		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.05
 		}
 	}
 
@@ -783,6 +827,10 @@ building_machine_capital = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.1
+		}
 	}
 
 	upgrades = {
@@ -875,6 +923,10 @@ building_machine_major_capital = {
 		}
 		upkeep = {
 			energy = @b3_upkeep
+		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.15
 		}
 	}
 
@@ -987,6 +1039,10 @@ building_machine_system_capital = {
 		upkeep = {
 			energy = @b4_upkeep
 		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.2
+		}
 	}
 
 	upgrades = {
@@ -1059,7 +1115,10 @@ building_hive_capital = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-	inline_script = "vanilla/capitals/hive/berg_scripts_jobs"
+	inline_script = {
+		script = vanilla/capitals/hive/berg_scripts_jobs
+		tier = h1
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -1088,6 +1147,10 @@ building_hive_capital = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.1
 		}
 	}
 }
@@ -1151,8 +1214,11 @@ building_hive_major_capital = {
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
-
-	inline_script = "vanilla/capitals/hive/berg_scripts_jobs"
+	
+	inline_script = {
+		script = vanilla/capitals/hive/berg_scripts_jobs
+		tier = h2
+	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
@@ -1178,6 +1244,10 @@ building_hive_major_capital = {
 		}
 		upkeep = {
 			energy = @b2_upkeep
+		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.2
 		}
 	}
 }
@@ -1221,6 +1291,10 @@ building_hab_capital = {
 			trigger = { owner = { has_active_tradition = tr_domination_adopt_void } }
 			alloys = -1
 		}
+		inline_script = {
+			script = OSA/berg_osa_influence
+			influence = 0.05
+		}
 	}
 
 	planet_modifier = {
@@ -1243,7 +1317,9 @@ building_hab_capital = {
 		script = "vanilla/capitals/habitat/berg_scripts_hive_jobs"
 		tier = h1
 	}
-
+	inline_script = {
+		script = OSA/berg_osa_colony_jobs
+	}
 	inline_script = "BUG/berg_distributism_effect"
 	inline_script = "BUG/berg_capital_jobs_desc"
 	triggered_planet_modifier = {

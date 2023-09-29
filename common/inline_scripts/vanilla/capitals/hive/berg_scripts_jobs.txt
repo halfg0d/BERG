@@ -7,4 +7,8 @@ triggered_planet_modifier = {
 	job_spawning_drone_add = -1
 	job_offspring_drone_add = 1
 }
+inline_script = {
+	script = OSA/berg_osa_capital_job
+	tier = $tier$
+}
 inline_script = "vanilla/capitals/hive/berg_scripts_jobs_desc"

@@ -139,3 +139,6 @@ inline_script = {
 	script = BUG/berg_capital_jobs_desc
 	trigger = $trigger$
 }
+inline_script = {
+	script = OSA/berg_osa_capital_jobs_desc
+}

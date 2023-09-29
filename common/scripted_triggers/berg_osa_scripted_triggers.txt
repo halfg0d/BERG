@@ -1,0 +1,3 @@
+berg_has_osa_mod = {
+	has_global_flag = osa_active
+}

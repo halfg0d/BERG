@@ -1,0 +1,64 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		trigger = {
+			has_ringworld_output_boost = no
+		}
+		minerals = @b2_minerals
+		rare_crystals = @b2_rare_cost
+	}
+	cost = {
+		trigger = {
+			has_ringworld_output_boost = yes
+		}
+		minerals = 1200
+		rare_crystals = 375
+	}
+	#Vanilla
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = nos
+			has_ringworld_output_boost = no
+		}
+		energy = @b2_upkeep
+		rare_crystals = @b2_rare_upkeep
+	}
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = no
+			has_ringworld_output_boost = yes
+		}
+		energy = 8
+		rare_crystals = 3
+	}
+	produces = {
+		trigger = {
+			berg_has_osa_mod = no
+		}
+		unity = 10
+	}
+	#OSA
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			has_ringworld_output_boost = no
+		}
+		energy = 20
+		minerals = 15
+		rare_crystals = @b2_rare_upkeep
+	}
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			has_ringworld_output_boost = yes
+		}
+		energy = @ost_b4_upkeep
+		rare_crystals = @b3_rare_upkeep
+	}
+	produces = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		unity = @ost_b3_produces
+	}
+}

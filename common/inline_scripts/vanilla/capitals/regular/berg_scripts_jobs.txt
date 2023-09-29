@@ -131,6 +131,7 @@ triggered_planet_modifier = {
 		job_knight_add = @berg_capital_$tier$_knight
 	}
 }
+#Ethic Civic Classic
 inline_script = {
 	script = ECC/berg_ecc_capital_script
 	tier = $tier$
@@ -138,11 +139,18 @@ inline_script = {
 	transcend = $transcend$
 	healthcare = $healtcare$
 }
+#Ethic Civic Bug Branch
 inline_script = {
 	script = BUG/berg_capital_jobs
 	tier = $tier$
 	trigger = $trigger$
 }
+#Omega Stellaris Tradition
+inline_script = {
+	script = OSA/berg_osa_capital_jobs
+	tier = $tier$
+}
+#Description
 inline_script = {
 	script = vanilla/capitals/regular/berg_scripts_jobs_desc
 	trigger = $trigger$

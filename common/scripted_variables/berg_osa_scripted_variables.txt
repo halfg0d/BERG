@@ -1,0 +1,32 @@
+###############
+# Omega's Stellaris Addition Variables
+#############
+#Alpha Hub
+@berg_osa_a1_mult = 0.1
+@berg_osa_a1_job = 5
+#Archeorefinery
+@berg_osa_b1_mult = 0.1
+#Archaeostudies faculty
+@berg_osa_c1_mult = 0.25
+@berg_osa_c1_mult_ap = 0.25
+#Capital Regular
+@berg_osa_r1_job1 = 1
+@berg_osa_r1_job2 = 2
+@berg_osa_r2_job1 = 1
+@berg_osa_r2_job2 = 2
+@berg_osa_r3_job1 = 2
+@berg_osa_r3_job2 = 3
+#Machine cap
+@berg_osa_d0_job1 = 1
+@berg_osa_d0_job2 = 1
+@berg_osa_d1_job1 = 1
+@berg_osa_d1_job2 = 1
+@berg_osa_d2_job1 = 1
+@berg_osa_d2_job2 = 2
+@berg_osa_d3_job1 = 2
+@berg_osa_d3_job2 = 3
+#Machine cap
+@berg_osa_h1_job1 = 1
+@berg_osa_h1_job2 = 2
+@berg_osa_h2_job1 = 1
+@berg_osa_h2_job2 = 4

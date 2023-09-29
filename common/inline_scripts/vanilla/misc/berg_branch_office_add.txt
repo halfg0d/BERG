@@ -1,0 +1,10 @@
+planet_modifier = {
+	planet_max_branch_office_buildings_add = $branch_add$
+}
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_max_branch_office_buildings_add = $osa_branch_add$
+}

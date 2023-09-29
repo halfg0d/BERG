@@ -1,0 +1,37 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @b2_minerals
+		minor_artifacts = @b2_rare_cost
+	}
+	#Vanilla
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = no
+		}
+		energy = @b4_upkeep
+	}
+	#OSA
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		energy = @ost_b4_upkeep
+	}
+	produces = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		physics_research = @ost_b3_produces
+		society_research = @ost_b3_produces
+		engineering_research = @ost_b3_produces
+	}
+	produces = {
+		trigger = {
+			owner = {
+				has_active_tradition = tr_insight_3
+			}
+		}
+		physics_research = 20
+	}
+}

@@ -84,6 +84,21 @@ inline_script = {
 	script = GPM/berg_gpm_archeostudies_faculty_script
 	tier = $tier$
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_researchers_produces_mult = @berg_osa_c$tier$_mult
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_archaeoengineers }
+	}
+	planet_researchers_produces_mult = @berg_osa_c$tier$_mult_ap
+}
 #Descriptions
 triggered_desc = {
 	trigger = {

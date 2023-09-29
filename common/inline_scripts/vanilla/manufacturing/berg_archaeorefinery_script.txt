@@ -81,3 +81,15 @@ triggered_desc = {
 	}
 	text = job_gas_refiner_drone_effect_desc
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			berg_has_osa_mod = yes
+			has_ascension_perk = ap_archaeoengineers
+		}
+	}
+	planet_jobs_exotic_gases_produces_mult = @berg_osa_b$tier$_mult
+	planet_jobs_rare_crystals_produces_mult = @berg_osa_b$tier$_mult
+	planet_jobs_volatile_motes_produces_mult = @berg_osa_b$tier$_mult
+}

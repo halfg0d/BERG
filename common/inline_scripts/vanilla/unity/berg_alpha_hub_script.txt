@@ -8,3 +8,22 @@ triggered_planet_modifier = {
 	}
 	custom_tooltip = "sm_ring_maintenance_hub_effect"
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	modifier = {
+		planet_administrators_produces_mult = @berg_osa_a$tier$_mult
+		job_evaluator_add = @berg_osa_a$tier$_job
+	}
+}
+#EOC
+triggered_planet_modifier = {
+	potential = {
+		planet_has_ecocontinuity = yes
+	}
+	modifier = {
+		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
+	}
+}

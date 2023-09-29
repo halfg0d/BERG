@@ -18,8 +18,12 @@ triggered_planet_modifier = {
 		job_crucible_drone_add = 2
 	}
 }
-inline_script = "vanilla/capitals/machine/berg_scripts_jobs_desc"
+inline_script = {
+	script = OSA/berg_osa_capital_job
+	tier = d$tier$
+}
 inline_script = {
 	script = BUG/berg_examinatron_job
 	tier = $tier$
 }
+inline_script = "vanilla/capitals/machine/berg_scripts_jobs_desc"

@@ -335,16 +335,8 @@ building_archaeostudies_faculty = {
 	allow = {
 		has_upgraded_capital = yes
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			minor_artifacts = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b4_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_archaeostudies_faculty
 	}
 	inline_script = {
 		script = vanilla/research/berg_archeostudies_scripts

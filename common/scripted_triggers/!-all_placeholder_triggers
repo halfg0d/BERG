@@ -15,3 +15,4 @@ is_bugged_governmental_anthropocentric = { always = no }
 is_bugged_governmental_ecocentric = { always = no }
 is_bugged_evolutionary_architects = { always = no }
 is_bugged_militant_zealots = { always = no }
+planet_has_ecocontinuity = { always = no }
