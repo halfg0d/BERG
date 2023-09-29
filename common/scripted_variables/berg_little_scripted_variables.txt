@@ -1,2 +1,13 @@
 #Guilli's Planet Modifiers and Features
 @berg_gpm_a1_archeostudies = 1.0
+#Venture Politics
+@berg_vp_r1_executive = 1
+@berg_vp_r1_second_job = 1
+@berg_vp_r2_executive = 2
+@berg_vp_r2_second_job = 1
+@berg_vp_r3_executive = 2
+@berg_vp_r3_second_job = 2
+@berg_vp_h2_executive = 2
+@berg_vp_h2_second_job = 2
+@berg_vp_imperial_regular_executive = 3
+@berg_vp_imperial_regular_second_job = 3

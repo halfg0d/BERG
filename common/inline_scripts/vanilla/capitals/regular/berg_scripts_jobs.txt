@@ -150,6 +150,11 @@ inline_script = {
 	script = OSA/berg_osa_capital_jobs
 	tier = $tier$
 }
+#Venture Politics
+inline_script = {
+	script = VP/berg_bp_capital_job
+	tier = $tier$
+}
 #Description
 inline_script = {
 	script = vanilla/capitals/regular/berg_scripts_jobs_desc

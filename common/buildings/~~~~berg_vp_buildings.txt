@@ -1,0 +1,103 @@
+#############
+# Buildings Megacorp Mod
+#############
+
+#######################################################################
+# Define New building for civic_bancorp
+#######################################################################
+
+building_bank_office = {
+	base_buildtime = @b2_time
+	icon = building_bank_office
+	base_cap_amount = 1
+
+	category = trade
+
+	potential = {
+		exists = owner
+		berg_vp_is_bancorp = yes
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		#has_major_upgraded_capital = yes
+		#buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		berg_vp_is_bancorp = no
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_ecc_mod = no
+		}
+		modifier = {
+			job_merchant_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_ecc_mod = yes
+		}
+		modifier = {
+			job_mogul_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_mercantile_commercial_enterprise
+			}
+		}
+		modifier = {
+			job_trader_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+			#rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 2
+			#rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			berg_has_ecc_mod = no
+		}
+		text = job_merchant_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			berg_has_ecc_mod = yes
+		}
+		text = job_mogul_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_mercantile_commercial_enterprise }
+		}
+		text = job_trader_effect_desc
+		
+	}
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+	}
+}

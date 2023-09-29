@@ -3,7 +3,10 @@ triggered_desc = {
 		berg_has_ecc_mod = yes
 		exists = owner
 		owner = {
-			berg_has_any_merchant_civic = yes
+			OR = {
+				berg_has_any_merchant_civic = yes
+				berg_vp_is_bancorp = yes
+			}
 		}
 		$trigger$
 	}

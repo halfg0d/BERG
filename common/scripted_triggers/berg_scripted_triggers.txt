@@ -205,3 +205,13 @@ berg_is_permanent_employment = {
 berg_is_environmental = {
 	has_valid_civic = civic_environmentalist
 }
+berg_vp_is_bancorp = {
+	has_megacorp_mod_active = yes
+	is_megacorp = yes
+	has_civic = civic_bancorp
+}
+berg_vp_is_science_syndicate = {
+	has_megacorp_mod_active = yes
+	is_megacorp = yes
+	has_civic = civic_science_syndicate
+}

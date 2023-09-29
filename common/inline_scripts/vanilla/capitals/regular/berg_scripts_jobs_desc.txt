@@ -22,7 +22,10 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			berg_has_any_technocracy_civic = yes
+			OR = {
+				berg_has_any_technocracy_civic = yes
+				berg_vp_is_science_syndicate = yes
+			}
 		}
 		$trigger$
 	}
@@ -33,7 +36,10 @@ triggered_desc = {
 		berg_has_ecc_mod = no
 		exists = owner
 		owner = {
-			berg_has_any_merchant_civic = yes
+			OR = {
+				berg_has_any_merchant_civic = yes
+				berg_vp_is_bancorp = yes
+			}
 		}
 		$trigger$
 	}
@@ -65,7 +71,11 @@ triggered_desc = {
 		exists = owner
 		owner = {
 			is_megacorp = yes
-			is_worker_coop_empire = no
+			OR = {
+				is_worker_coop_empire = no
+				berg_vp_is_science_syndicate = yes
+				berg_vp_is_bancorp = yes
+			}
 		}
 		$trigger$
 	}

@@ -1,0 +1,39 @@
+triggered_planet_modifier = { #megacorp_mod
+	potential = {
+		berg_has_ecc_mod = no
+		exists = owner
+		owner = {
+			berg_vp_is_bancorp = yes
+		}
+	}
+	modifier = {
+		job_merchant_add = @berg_vp_$tier$_second_job
+		job_executive_add = @berg_vp_$tier$_executive
+	}
+}
+
+triggered_planet_modifier = { #megacorp_mod
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			berg_vp_is_bancorp = yes
+		}
+	}
+	modifier = {
+		job_mogul_add = @berg_vp_$tier$_second_job
+		job_executive_add = @berg_vp_$tier$_executive
+	}
+}
+triggered_planet_modifier = { #megacorp_mod
+	potential = {
+		exists = owner
+		owner = {
+			berg_vp_is_science_syndicate = yes
+		}
+	}
+	modifier = {
+		job_head_researcher_add = @berg_vp_$tier$_second_job
+		job_executive_add = @berg_vp_$tier$_executive
+	}
+}
