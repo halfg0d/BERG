@@ -30,3 +30,11 @@
 @berg_osa_h1_job2 = 2
 @berg_osa_h2_job1 = 1
 @berg_osa_h2_job2 = 4
+#Resort capital
+@berg_osa_resort1_healtcare = 1
+@berg_osa_resort2_healtcare = 3
+#Sentinel Hub
+@berg_government_g2_job = 5
+#Embassy
+@berg_osa_em1_fund = 50
+@berg_osa_em2_fund = 100

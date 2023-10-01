@@ -1490,8 +1490,12 @@ building_hab_major_capital = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
 		planet_max_buildings_add = @buildings_t2
-		planet_max_branch_office_buildings_add = 1
 		defense_armies_add = @tier_2_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 1 
+		osa_branch_add = 3
 	}
 
 	inline_script = {
@@ -1654,7 +1658,20 @@ building_resort_capital = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
 		planet_max_buildings_add = 5
-		planet_max_branch_office_buildings_add = 1
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 5
+		}
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 1 
+		osa_branch_add = 5
 	}
 
 	inline_script = {
@@ -1751,7 +1768,20 @@ building_resort_major_capital = {
 		script = "vanilla/capitals/special/berg_script_resort_jobs"
 		tier = resort2
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 9
+		}
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 1 
+		osa_branch_add = 5
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -1823,9 +1853,13 @@ building_slave_capital = {
 		planet_amenities_add = 5
 		planet_stability_add = 5
 		planet_max_buildings_add = 5
-		planet_max_branch_office_buildings_add = 1
 	}
-
+	#OSA
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 1 
+		osa_branch_add = 1
+	}
 	inline_script = {
 		script = buildings/on_all_capital_buildings
 	}
@@ -1919,7 +1953,12 @@ building_slave_major_capital = {
 		planet_amenities_add = 10
 		planet_stability_add = 10
 		planet_max_buildings_add = 11
-		planet_max_branch_office_buildings_add = 2
+	}
+	#OSA
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch = 2 
+		osa_branch_add = 2
 	}
 
 	inline_script = {

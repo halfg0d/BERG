@@ -1,0 +1,63 @@
+building_sentinel_hubs = {
+	base_buildtime = @b2_time
+	position_priority = 28
+	icon = building_sentinel_hubs
+	category = government
+	can_build = no
+
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = no }
+			berg_has_osa_mod = no
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_crime_add = -25
+	}
+
+	inline_script = {
+		script = vanilla/government/berg_sentinel_jobs_script
+		tier = 2
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 5
+			minerals = 5
+			exotic_gases = 1
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_active_tradition = tr_order_4
+				}
+			}
+			unity = 10
+		}
+	}
+		
+	prerequisites = {
+		"tech_colonial_centralization"
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = yes
+		berg_has_osa_mod = yes
+	}
+	
+}

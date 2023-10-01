@@ -1,6 +1,16 @@
 planet_modifier = {
 	job_replicator_add = @berg_pop_assembly_m$tier$_job
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { has_active_tradition = tr_synthetics_finish_machine }
+	}
+	modifier = {
+		job_replicator_add = 1
+	}
+}
 triggered_desc = {
 	text = job_replicator_effect_desc
 }
