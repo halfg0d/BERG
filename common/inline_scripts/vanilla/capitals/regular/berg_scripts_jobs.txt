@@ -131,6 +131,14 @@ triggered_planet_modifier = {
 		job_knight_add = @berg_capital_$tier$_knight
 	}
 }
+#Vanilla
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { berg_is_private_healthcare_empire = yes }
+	}
+	job_healthcare_add = 1
+}
 #Ethic Civic Classic
 inline_script = {
 	script = ECC/berg_ecc_capital_script
