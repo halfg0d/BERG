@@ -15,6 +15,10 @@ triggered_planet_modifier = {
 					NOT = { PREV = { planet = { is_wet = yes } } }
 				}
 			}
+			NAND = {
+				berg_has_osa_mod = yes
+				NOT = { has_active_tradition = tr_perseverance_2 }
+			}
 		}
 	}
 	modifier = {
@@ -50,6 +54,10 @@ triggered_planet_modifier = {
 			is_fallen_empire_spiritualist = no
 			is_anglers_empire = yes
 			PREV = { planet = { is_wet = yes } }
+			NAND = {
+				berg_has_osa_mod = yes
+				NOT = { has_active_tradition = tr_perseverance_2 }
+			}
 		}
 	}
 	modifier = {
@@ -60,6 +68,10 @@ inline_script = {
 	script = BUG/berg_districts_script
 	tier = $tier$
 	district = "farming"
+}
+inline_script = {
+	script = OSA/berg_osa_food_processing
+	tier = $tier$
 }
 triggered_desc = {
 	trigger = {

@@ -15,7 +15,69 @@ triggered_desc = {
 	}
 	text = job_merchant_effect_desc
 }
-inline_script = {
-	script = ECC/berg_ecc_galactic_stock_script
-	tier = $tier$
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	job_clerk_add = @berg_osa_m$tier$_clerk
+	trade_value_mult = @berg_osa_m$tier$_trade
+}
+triggered_desc = {
+	trigger = { berg_has_osa_mod = yes }
+	text = job_clerk_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		berg_has_ecc_mod = no
+	}
+	job_merchant_add = @berg_osa_m$tier$_merchant
+}
+triggered_planet_modifier = {
+	potential = {
+		planet_has_ecocontinuity = yes
+	}
+	modifier = {
+		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
+	}
+}
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+	}
+	modifier = {
+		job_mogul_add = @berg_trade_s$tier$_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+	}
+	text = job_mogul_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_merchant_guilds
+				has_civic = civic_state_monopoly
+			}
+		}
+	}
+	modifier = {
+		job_mogul_add = @berg_ecc_b$tier$_mogul
+		trade_value_mult = @berg_ecc_b$tier$_trade
+	}
+}
+#OSA+ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		berg_has_ecc_mod = yes
+	}
+	job_mogul_add = @berg_osa_m$tier$_merchant
 }

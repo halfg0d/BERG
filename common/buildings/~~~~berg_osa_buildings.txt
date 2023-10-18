@@ -59,5 +59,90 @@ building_sentinel_hubs = {
 		is_gestalt = yes
 		berg_has_osa_mod = yes
 	}
+}
+building_commercial_trading_terminal = {
+	base_buildtime = @b2_time
+	position_priority = 32
+	can_build = no
+
+	category = trade
 	
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		exists = owner
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			berg_has_osa_mod = no
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 7.5
+			minerals = 7.5
+			rare_crystals = @b2_rare_upkeep
+		}
+		produces = {
+			trigger = {
+				owner = {
+					has_active_tradition = tr_commerce_3
+				}
+			}
+			unity = 20
+		}
+	}
+
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 3
+		entrepreneur = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet_has_ecocontinuity = yes
+		}
+		modifier = {
+			planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
+		}
+	}
+
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_trader_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 18
+		trigger = {
+			exists = owner
+			owner = {
+				has_authority = auth_corporate
+			}
+		}
+	}
 }

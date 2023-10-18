@@ -59,9 +59,79 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_angler_add = 1
+		job_angler_add = @berg_resource_h$tier$_job
 	}
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			is_gestalt = no
+			is_fallen_empire_spiritualist = no
+			OR = {
+				is_anglers_empire = no
+				AND = {
+					is_anglers_empire = yes
+					NOT = { PREV = { planet = { is_wet = yes } } }
+				}
+			}
+		}
+		berg_has_food_processing = yes
+	}
+	modifier = {
+		job_farmer_add = @berg_resource_h$tier$_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_fallen_empire_spiritualist = yes }
+		berg_has_food_processing = yes
+	}
+	modifier = {
+		job_fe_acolyte_farm_add = @berg_resource_h$tier$_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+		berg_has_food_processing = yes
+	}
+	modifier = {
+		job_agri_drone_add = @berg_resource_h$tier$_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_fallen_empire_spiritualist = no
+			is_anglers_empire = yes
+			PREV = { planet = { is_wet = yes } }
+		}
+		berg_has_food_processing = yes
+	}
+	modifier = {
+		job_pearl_diver_add = @berg_resource_h$tier$_job
+	}
+}
+#Ecocontuinty
+triggered_planet_modifier = {
+	potential = {
+		planet_has_ecocontinuity = yes
+	}
+	modifier = {
+		planet_districts_farming_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t1
+	}
+}
+
 triggered_desc = {
 	trigger = {
 		exists = owner
@@ -103,4 +173,16 @@ triggered_desc = {
 		}
 	}
 	text = job_aqu_angler_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			is_fallen_empire_spiritualist = no
+			is_anglers_empire = yes
+			PREV = { planet = { is_wet = yes } }
+		}
+	}
+	text = job_pearl_diver_effect_desc
 }

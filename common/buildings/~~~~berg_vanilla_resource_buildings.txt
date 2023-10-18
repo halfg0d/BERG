@@ -54,12 +54,25 @@ building_hydroponics_farm = {
 		upkeep = {
 			energy = 2
 		}
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			food = 5
+		}
 	}
 	prerequisites = {
 		"tech_hydroponics"
 	}
 	upgrades = {
-		building_eutab_hydroponics_tower # EUTAB
+		"building_eutab_hydroponics_tower" # EUTAB
+		"building_hydroponics_station" #OSA?
 	}
 }
 
@@ -117,6 +130,18 @@ building_food_processing_facility = {
 		inline_script = {
 			script = ECC/berg_ecc_food_processing_script
 			tier = 1
+		}
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			food = 5
 		}
 	}
 
@@ -199,6 +224,26 @@ building_food_processing_center = {
 			script = ECC/berg_ecc_food_processing_script
 			tier = 2
 		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				berg_has_osa_mod = yes
+			}
+			energy = 2.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			food = 10
+		}
 	}
 	prerequisites = {
 		"tech_food_processing_2"
@@ -243,6 +288,15 @@ building_baol_organic_plant = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		upkeep = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 5.5
+		}
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			food = 150
+			unity = 150
 		}
 	}
 	prerequisites = {
@@ -321,6 +375,18 @@ building_mineral_purification_plant = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			minerals = 5
 		}
 	}
 
@@ -413,6 +479,26 @@ building_mineral_purification_hub = {
 			energy = 5
 			volatile_motes = 3
 		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				berg_has_osa_mod = yes
+			}
+			energy = 2.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			minerals = 10
+		}
 	}
 
 	prerequisites = {
@@ -494,6 +580,18 @@ building_energy_grid = {
 		upkeep = {
 			energy = 2
 		}
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			energy = 5
+		}
 	}
 
 	prerequisites = {
@@ -560,6 +658,26 @@ building_energy_nexus = {
 			}
 			energy = 5
 			exotic_gases = 3
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				berg_has_osa_mod = yes
+			}
+			energy = 0.5
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				berg_has_osa_mod = yes
+			}
+			energy = 2.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			energy = 10
 		}
 	}
 

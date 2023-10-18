@@ -109,6 +109,10 @@ inline_script = {
 	tier = $tier$
 	industrialist = $industrialist$
 }
+inline_script = {
+	script = OSA/berg_osa_foundry_jobs
+	tier = $tier$
+}
 #desc
 triggered_desc = {
 	trigger = {

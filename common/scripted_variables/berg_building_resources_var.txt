@@ -1,0 +1,135 @@
+#############
+# Building Resources
+#############
+#Foundry T1
+@berg_res_foundry_t1_cost_mineral = 400
+@berg_res_foundry_t1_upkeep_energy = 2
+@berg_res_foundry_t1_cost_motes = 0
+@berg_res_foundry_t1_upkeep_motes = 0
+@berg_res_foundry_t1_RW_cost_mineral = 0
+@berg_res_foundry_t1_RW_upkeep_energy = 0
+@berg_res_foundry_t1_RW_cost_motes = 0
+@berg_res_foundry_t1_RW_upkeep_motes = 0
+@berg_res_foundry_t1_osa_upkeep_mineral = 5
+@berg_res_foundry_t1_osa_upkeep_energy_add = 3 #5
+@berg_res_foundry_t1_osa_RW_upkeep_mineral = 0
+@berg_res_foundry_t1_osa_RW_upkeep_energy_add = 0
+@berg_res_foundry_t1_osa_produce_alloy = 5
+@berg_res_foundry_t1_osa_produce_alloy_tradition = 5
+@berg_res_foundry_t1_osa_upkeep_mineral_tradition = 10
+#Foundry T2
+@berg_res_foundry_t2_cost_mineral = 600
+@berg_res_foundry_t2_upkeep_energy = 5
+@berg_res_foundry_t2_cost_motes = 50
+@berg_res_foundry_t2_upkeep_motes = 1
+@berg_res_foundry_t2_RW_cost_mineral = 0
+@berg_res_foundry_t2_RW_upkeep_energy = 0
+@berg_res_foundry_t2_RW_cost_motes = 0
+@berg_res_foundry_t2_RW_upkeep_motes = 0
+@berg_res_foundry_t2_osa_upkeep_mineral = 7.5
+@berg_res_foundry_t2_osa_upkeep_energy_add = 2.5 #7.5
+@berg_res_foundry_t2_osa_RW_upkeep_mineral = 0
+@berg_res_foundry_t2_osa_RW_upkeep_energy_add = 0
+@berg_res_foundry_t2_osa_produce_alloy = 10
+@berg_res_foundry_t2_osa_produce_alloy_tradition = 10
+@berg_res_foundry_t2_osa_upkeep_mineral_tradition = 20
+#Foundry T3
+@berg_res_foundry_t3_cost_mineral = 800
+@berg_res_foundry_t3_upkeep_energy = 8
+@berg_res_foundry_t3_cost_motes = 100
+@berg_res_foundry_t3_upkeep_motes = 2
+@berg_res_foundry_t3_RW_cost_mineral = 700 
+@berg_res_foundry_t3_RW_upkeep_energy = 7
+@berg_res_foundry_t3_RW_cost_motes = 500
+@berg_res_foundry_t3_RW_upkeep_motes = 6
+@berg_res_foundry_t3_osa_upkeep_mineral = 10
+@berg_res_foundry_t3_osa_upkeep_energy_add = 2 #7.5
+@berg_res_foundry_t3_osa_RW_upkeep_mineral = 5
+@berg_res_foundry_t3_osa_RW_upkeep_energy_add = 5
+@berg_res_foundry_t3_osa_produce_alloy = 20
+@berg_res_foundry_t3_osa_produce_alloy_tradition = 20
+@berg_res_foundry_t3_osa_upkeep_mineral_tradition = 40
+#Factory T1
+@berg_res_factory_t1_cost_mineral = 400
+@berg_res_factory_t1_RW_cost_mineral = 0
+@berg_res_factory_t1_cost_crystals = 0
+@berg_res_factory_t1_RW_cost_crystal = 0
+@berg_res_factory_t1_upkeep_energy = 2
+@berg_res_factory_t1_RW_upkeep_energy = 0
+@berg_res_factory_t1_upkeep_crystals = 0
+@berg_res_factory_t1_RW_upkeep_crystals = 0
+@berg_res_factory_t1_osa_upkeep_energy = 0.5
+@berg_res_factory_t1_osa_RW_upkeep_energy = 0
+@berg_res_factory_t1_osa_upkeep_mineral = 2.5
+@berg_res_factory_t1_osa_RW_upkeep_mineral = 0
+@berg_res_factory_t1_osa_produce = 5
+@berg_res_factory_t1_osa_upkeep_mineral_tradition = 10
+@berg_res_factory_t1_osa_produce_tradition = 5
+#Factory T2
+@berg_res_factory_t2_cost_mineral = 600
+@berg_res_factory_t2_RW_cost_mineral = 0
+@berg_res_factory_t2_cost_crystals = 100
+@berg_res_factory_t2_RW_cost_crystal = 0
+@berg_res_factory_t2_upkeep_energy = 5
+@berg_res_factory_t2_RW_upkeep_energy = 0
+@berg_res_factory_t2_upkeep_crystals = 2
+@berg_res_factory_t2_RW_upkeep_crystals = 0
+@berg_res_factory_t2_osa_upkeep_energy = 2.5
+@berg_res_factory_t2_osa_RW_upkeep_energy = 0
+@berg_res_factory_t2_osa_upkeep_mineral = 7.5
+@berg_res_factory_t2_osa_RW_upkeep_mineral = 0
+@berg_res_factory_t2_osa_produce = 10
+@berg_res_factory_t2_osa_upkeep_mineral_tradition = 20
+@berg_res_factory_t2_osa_produce_tradition = 10
+#Factory T3
+@berg_res_factory_t3_cost_mineral = 800
+@berg_res_factory_t3_RW_cost_mineral = 700
+@berg_res_factory_t3_cost_crystals = 200
+@berg_res_factory_t3_RW_cost_crystal = 400
+@berg_res_factory_t3_upkeep_energy = 8
+@berg_res_factory_t3_RW_upkeep_energy = 7
+@berg_res_factory_t3_upkeep_crystals = 4
+@berg_res_factory_t3_RW_upkeep_crystals = 4
+@berg_res_factory_t3_osa_upkeep_energy = 2
+@berg_res_factory_t3_osa_RW_upkeep_energy = 5
+@berg_res_factory_t3_osa_upkeep_mineral = 10
+@berg_res_factory_t3_osa_RW_upkeep_mineral = 5
+@berg_res_factory_t3_osa_produce = 20
+@berg_res_factory_t3_osa_upkeep_mineral_tradition = 40
+@berg_res_factory_t3_osa_produce_tradition = 20
+#Residence T1
+@berg_res_residence_t1_cost_minerals = 400
+@berg_res_residence_t1_cost_crystals = 0
+@berg_res_residence_t1_upkeep_energy = 2
+@berg_res_residence_t1_upkeep_crystals = 0
+@berg_res_residence_t1_osa_upkeep_energy_bio = 3
+@berg_res_residence_t1_osa_upkeep_minerals_bio = 5
+@berg_res_residence_t1_osa_upkeep_food_bio = 5
+@berg_res_residence_t1_osa_upkeep_energy_nonbio = 5.5
+@berg_res_residence_t1_osa_upkeep_minerals_nonbio = 7.5
+#Residence T2
+@berg_res_residence_t2_cost_minerals = 600
+@berg_res_residence_t2_cost_crystals = 50
+@berg_res_residence_t2_upkeep_energy = 3
+@berg_res_residence_t2_upkeep_crystals = 1
+@berg_res_residence_t2_osa_upkeep_energy_bio = 7 
+@berg_res_residence_t2_osa_upkeep_minerals_bio = 10
+@berg_res_residence_t2_osa_upkeep_food_bio = 10
+@berg_res_residence_t2_osa_upkeep_energy_nonbio = 12
+@berg_res_residence_t2_osa_upkeep_minerals_nonbio = 15
+#Clinic T1
+@berg_res_clinic_t1_cost_minerals = 400
+@berg_res_clinic_t1_cost_gas = 0
+@berg_res_clinic_t1_upkeep_energy = 2
+@berg_res_clinic_t1_upkeep_gas = 0
+@berg_res_clinic_t1_ecc_upkeep_energy = 0.5
+@berg_res_clinic_t1_osa_upkeep_energy = 0.5
+@berg_res_clinic_t1_osa_upkeep_minerals_or_food = 2.5
+#Clinic T2
+@berg_res_clinic_t2_cost_minerals = 600
+@berg_res_clinic_t2_cost_gas = 100
+@berg_res_clinic_t2_upkeep_energy = 5
+@berg_res_clinic_t2_upkeep_gas = 2
+@berg_res_clinic_t2_ecc_upkeep_energy = 1
+@berg_res_clinic_t2_osa_upkeep_energy = 0
+@berg_res_clinic_t2_osa_upkeep_minerals_or_food = 5

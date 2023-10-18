@@ -1,0 +1,38 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_politician_add = @berg_osa_i$tier$_job1
+		job_clerk_add = @berg_osa_i$tier$_job2
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_patrol_drone_add = @berg_osa_i$tier$_job1
+		job_maintenance_drone_add = @berg_osa_i$tier$_job2
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_patrol_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_politician_effect_desc
+}

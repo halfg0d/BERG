@@ -28,6 +28,10 @@ triggered_country_modifier = {
 	}
 	country_resource_max_add = 5000
 }
+inline_script = {
+	script = OSA/berg_osa_silo
+	tier = $tier$
+}
 triggered_desc = {
 	trigger = {
 		exists = owner

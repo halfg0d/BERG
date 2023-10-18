@@ -11,3 +11,18 @@ produces = {
 	}
 	energy = @berg_resource_r$tier$_produce_1
 }
+#OSA
+produces = {
+	trigger = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { NOT = { has_deficit = food } }
+	}
+	energy = 10
+}
+upkeep = {
+	trigger = {
+		berg_has_osa_mod = yes
+	}
+	food = 10
+}

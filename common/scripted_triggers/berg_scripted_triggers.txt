@@ -215,3 +215,10 @@ berg_vp_is_science_syndicate = {
 	is_megacorp = yes
 	has_civic = civic_science_syndicate
 }
+berg_has_food_processing = {
+	OR = {
+		has_active_building = building_food_processing_facility
+		has_active_building = building_food_processing_center
+		has_active_building = building_food_processing_complex
+	}
+}

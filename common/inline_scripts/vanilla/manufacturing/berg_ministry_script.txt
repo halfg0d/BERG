@@ -3,20 +3,41 @@ planet_modifier = {
 	planet_metallurgists_produces_mult = @berg_manufacturing_g$tier$_bonus
 	planet_artisans_produces_mult = @berg_manufacturing_g$tier$_bonus
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = no
+	}
+	job_politician_add = @berg_manufacturing_g$tier$_job
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = no
+	}
+	text = job_politician_effect_desc
+}
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	job_osa_chief_engineer_add = @berg_manufacturing_g$tier$_job
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = yes
+	}
+	text = job_osa_chief_engineer_effect_desc
+}
 #Gigastructures
 triggered_planet_modifier = {
 	potential = {
 		berg_has_giga_mod = yes
-		planet_cultivators_produces_mult = @berg_manufacturing_g$tier$_bonus
 	}
-
+	planet_cultivators_produces_mult = @berg_manufacturing_g$tier$_bonus
 }
 inline_script = {
 	script = UAP/berg_uap_industrialist_jobs
 	tier = $tier$
 	building = c
 	industrialist = yes
-}
-triggered_desc = {
-	text = job_politician_effect_desc
 }

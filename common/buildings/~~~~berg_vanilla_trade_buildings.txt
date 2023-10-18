@@ -30,13 +30,37 @@ building_commercial_zone = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+		#OSA
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			minerals = 2.5
+			energy = 0.5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+				owner = {
+					has_active_tradition = tr_commerce_3
+				}
+			}
+			unity = 5
+		}
 	}
 	inline_script = {
 		script = vanilla/trade/berg_commercial_script
 		tier = 1
 		entrepreneur = no
 	}
-
+	triggered_planet_modifier = {
+		potential = {
+			planet_has_ecocontinuity = yes
+		}
+		modifier = {
+			planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t1
+		}
+	}
 	prerequisites = {
 		"tech_interplanetary_commerce"
 	}
@@ -60,7 +84,6 @@ building_commercial_megaplex = {
 		exists = owner
 		owner = { is_regular_empire = yes }
 		NOT = { has_modifier = slave_colony }
-		has_building = building_commercial_zone
 	}
 
 	destroy_trigger = {
@@ -85,6 +108,22 @@ building_commercial_megaplex = {
 			script = ECC/berg_ecc_commercial_unity
 			tier = 2
 		}
+		#OSA
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			minerals = 5
+		}
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+				owner = {
+					has_active_tradition = tr_commerce_3
+				}
+			}
+			unity = 10
+		}
 	}
 	inline_script = {
 		script = vanilla/trade/berg_commercial_script
@@ -92,10 +131,21 @@ building_commercial_megaplex = {
 		entrepreneur = yes
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			planet_has_ecocontinuity = yes
+		}
+		modifier = {
+			planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t2
+		}
+	}
 	prerequisites = {
 		"tech_interstellar_economics"
 	}
 
+	upgrades = {
+		"building_commercial_trading_terminal"
+	}
 	show_tech_unlock_if = {
 		is_regular_empire = yes
 	}

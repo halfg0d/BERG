@@ -8,3 +8,11 @@ inline_script = {
 triggered_desc = {
 	text = job_healthcare_effect_desc
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_housing_add = @berg_osa_n$tier$_housing
+	planet_pop_assembly_organic_add = @berg_osa_n$tier$_assembly
+}

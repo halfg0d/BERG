@@ -1,3 +1,10 @@
 planet_modifier = {
 	planet_housing_add = @berg_amenity_s$tier$_housing
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_housing_add = @berg_osa_p$tier$_housing
+}

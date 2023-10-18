@@ -15,3 +15,10 @@ triggered_planet_modifier = {
 		planet_housing_add = 1
 	}
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_housing_add = @berg_osa_housing_$building$
+	planet_amenities_add  =@berg_osa_amenity_$building$
+}

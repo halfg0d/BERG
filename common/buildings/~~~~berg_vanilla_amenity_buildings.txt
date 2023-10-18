@@ -51,15 +51,9 @@ building_luxury_residence = {
 		building = "r1"
 		tradition = "yes"
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 1
 	}
 
 	upgrades = {
@@ -111,18 +105,10 @@ building_paradise_dome = {
 		script = ECC/berg_ecc_residence_script
 		tier = 2
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = 3
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 2
 	}
-
 	prerequisites = {
 		"tech_paradise_dome"
 	}
@@ -192,15 +178,9 @@ building_communal_housing = {
 		building = "c1"
 		tradition = "yes"
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 1
 	}
 
 	upgrades = {
@@ -268,16 +248,9 @@ building_communal_housing_large = {
 		building = "c2"
 		tradition = "yes"
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = 3
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 2
 	}
 
 	prerequisites = {
@@ -323,20 +296,9 @@ building_drone_storage = {
 		building_communal_housing
 		building_hive_warren
 	}
-
-	planet_modifier = {
-		planet_housing_add = 4
-		planet_amenities_add = 3
-	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 1
 	}
 
 	upgrades = {
@@ -372,20 +334,9 @@ building_drone_megastorage = {
 		building = "m2"
 		tradition = "yes"
 	}
-	planet_modifier = {
-		planet_housing_add = 8
-		planet_amenities_add = 6
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = 3
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 2
 	}
 
 
@@ -420,15 +371,9 @@ building_hive_warren = {
 		building = "m2"
 		tradition = "no"
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 1
 	}
 
 	upgrades = {
@@ -470,16 +415,9 @@ building_expanded_warren = {
 		tradition = "no"
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = 3
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_housing
+		tier = 2
 	}
 
 
@@ -530,6 +468,12 @@ building_holo_theatres = {
 		}
 		upkeep = {
 			energy = @b1_upkeep
+		}
+		#OSA
+		upkeep = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 0.5
+			minerals = 2.5
 		}
 	}
 
@@ -591,6 +535,11 @@ building_hyper_entertainment_forum = {
 		upkeep = {
 			energy = @b2_upkeep
 			exotic_gases = @b2_rare_upkeep
+		}
+		#OSA
+		upkeep = {
+			trigger = { berg_has_osa_mod = yes }
+			minerals = 5
 		}
 	}
 
@@ -666,21 +615,9 @@ building_clinic = {
 		script = vanilla/amenity/berg_hospital_script
 		tier = 1
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
-		upkeep = {
-			trigger = {
-				berg_has_ecc_mod = yes
-				owner = { has_policy_flag = public_healthcare }
-			}
-			energy = @berg_ecc_g1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_clinic
+		tier = 1
 	}
 
 	prerequisites = {
@@ -794,23 +731,9 @@ building_hospital = {
 		script = vanilla/amenity/berg_hospital_script
 		tier = 2
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				berg_has_ecc_mod = yes
-				owner = { has_policy_flag = public_healthcare }
-			}
-			energy = @berg_ecc_g2_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_clinic
+		tier = 2
 	}
 	prerequisites = {
 		"tech_frontier_hospital"
@@ -855,6 +778,12 @@ building_maintenance_depot = {
 		upkeep = {
 			energy = 2
 		}
+		#OSA
+		upkeep = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 0.5
+			minerals = 2.5
+		}
 	}
 	upgrades = {
 		building_eutab_preservation_nexus # EUTAB
@@ -890,6 +819,13 @@ building_slave_huts = {
 		upkeep = {
 			energy = 1
 		}
+		#OSA
+		upkeep = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 14
+			minerals = 15
+			food = 15
+		}
 	}
 }
 
@@ -923,6 +859,13 @@ building_overseer_homes = {
 		}
 		upkeep = {
 			energy = 1
+		}
+		#OSA
+		upkeep = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 9
+			minerals = 10
+			food = 10
 		}
 	}
 }
