@@ -193,7 +193,7 @@ building_capital = {
 	}
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
-		branch = 1 
+		branch_add = 1 
 		osa_branch_add = 1
 	}
 	inline_script = {
