@@ -31,12 +31,6 @@ resources = {
 		energy = 8
 		rare_crystals = 3
 	}
-	produces = {
-		trigger = {
-			berg_has_osa_mod = no
-		}
-		unity = 10
-	}
 	#OSA
 	upkeep = {
 		trigger = {
