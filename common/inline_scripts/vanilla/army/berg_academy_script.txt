@@ -1,5 +1,6 @@
-army_modifier = {
-	army_starting_experience_add = @berg_army_a$tier$_exp
+country_modifier = {
+	country_commander_cap_add = @berg_army_a$tier$_official_cap
+	country_naval_cap_mult = @berg_army_a$tier$_mult
 }
 #jobs
 triggered_planet_modifier = {
@@ -8,7 +9,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = no }
 	}
 	modifier = {
-		job_soldier_add = @berg_army_a$tier$_job
+		job_politician_add = @berg_army_a$tier$_job
 	}
 }
 triggered_planet_modifier = {
@@ -17,52 +18,24 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_warrior_drone_add = @berg_army_a$tier$_job
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_gestalt = no
-			berg_reanimator_civic = no
-		}
-	}
-	modifier = {
-		job_necromancer_add = @berg_army_a$tier$_job
+		job_evaluator_add = @berg_army_a$tier$_job_gestalt
 	}
 }
 #Desc
 triggered_desc = {
 	trigger = {
 		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_politician_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
 		owner = { is_gestalt = yes }
 	}
-	text = job_warrior_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_gestalt = no
-			berg_reanimator_civic = no
-		}
-	}
-	text = job_soldier_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { berg_reanimator_civic = yes }
-	}
-	text = job_necromancer_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { berg_reanimator_civic = yes }
-	}
-	text = job_necromancer_effect_desc
+	text = job_evaluator_effect_desc
 }
 inline_script = {
 	script = ECC/berg_ecc_academy_script

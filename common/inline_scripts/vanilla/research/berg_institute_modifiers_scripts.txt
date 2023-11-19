@@ -1,5 +1,6 @@
-planet_modifier = {
-	planet_researchers_produces_mult = @berg_research_i$tier$_mult
+country_modifier = {
+	country_scientist_cap_add = @berg_research_i$tier$_official_cap
+	all_technology_research_speed = @berg_research_i$tier$_mult
 }
 #Jobs
 triggered_planet_modifier = {
@@ -8,7 +9,7 @@ triggered_planet_modifier = {
 		owner = { is_hive_empire = yes }
 	}
 	modifier = {
-		job_brain_drone_add = @berg_research_i$tier$_job
+		job_brain_drone_add = @berg_research_i$tier$_job_gestalt
 	}
 }
 
@@ -18,7 +19,7 @@ triggered_planet_modifier = {
 		owner = { is_machine_empire = yes }
 	}
 	modifier = {
-		job_calculator_add = @berg_research_i$tier$_job
+		job_calculator_add = @berg_research_i$tier$_job_gestalt
 	}
 }
 triggered_planet_modifier = {

@@ -1,7 +1,40 @@
-planet_modifier = {
-	planet_administrators_produces_mult = @berg_unity_k$tier$_mult
+country_modifier = {
+	country_official_cap_add = @berg_unity_n$tier$_official_cap
+	country_unity_produces_mult = @berg_unity_n$tier$_unity_mult
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_politician_add = @berg_unity_n$tier$_job_regular
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_evaluator_add = @berg_unity_n$tier$_job_gestalt
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_politician_effect_desc
 }
 
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_evaluator_effect_desc
+}
 triggered_planet_modifier = {
 	potential = {
 		has_ringworld_output_boost = yes

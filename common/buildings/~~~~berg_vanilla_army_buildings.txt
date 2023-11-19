@@ -4,48 +4,11 @@
 building_military_academy = {
 	base_buildtime = @b2_time
 	base_cap_amount = 1
-	can_be_ruined = no
+		can_be_ruined = no
 	category = army
 
-	potential = {
-		exists = owner
-		owner = { berg_reanimator_civic = no }
-	}
-
 	allow = {
-		has_upgraded_capital = yes
-		if = {
-			limit = {
-				exists = owner
-				owner = { is_ai = yes }
-			}
-			OR = {
-				has_building = building_stronghold
-				has_building = building_fortress
-			}
-		}
-	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = {
-			OR = {
-				berg_reanimator_civic = yes
-				AND = {
-					is_ai = yes
-					prev = {
-						NOR = {
-							has_building = building_stronghold
-							has_building = building_fortress
-						}
-					}
-				}
-			}
-		}
-	}
-
-	convert_to = {
-		building_dread_encampment
+		has_major_upgraded_capital = yes
 	}
 	inline_script = {
 		script = vanilla/army/berg_academy_script
@@ -54,10 +17,12 @@ building_military_academy = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b1_minerals
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
 		}
 		upkeep = {
-			energy = @b1_upkeep
+			energy = @b2_upkeep
+			volatile_motes = @b2_rare_upkeep
 		}
 		produces = {
 			trigger = {
@@ -91,16 +56,12 @@ building_dread_encampment = {
 		owner = { berg_reanimator_civic = yes }
 	}
 
-	convert_to = {
-		building_military_academy
-	}
-
 	allow = {
 		has_upgraded_capital = yes
 	}
 
 	inline_script = {
-		script = vanilla/army/berg_academy_script
+		script = vanilla/army/berg_encampment_script
 		tier = 1
 	}
 
@@ -112,13 +73,6 @@ building_dread_encampment = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = job_necromancer_effect_desc
 	}
 }
 

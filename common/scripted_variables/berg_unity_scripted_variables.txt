@@ -46,12 +46,16 @@
 @berg_unity_h2_unity_bonus = 0.10
 @berg_unity_h3_job = 6
 @berg_unity_h3_unity_bonus = 0.15
-@berg_unity_i1_unity_mult = 0.15
+@berg_unity_i1_unity_mult = 0.05
 @berg_unity_i1_unity_add = 1
+@berg_unity_i1_official_cap = 1
+@berg_unity_i1_job1 = 1
+@berg_unity_i1_job2 = 2
 @berg_unity_j1_unity_add = 1
-@berg_unity_j1_unity_mult = 0.15
+@berg_unity_j1_unity_mult = 0.05
 @berg_unity_j1_attraction = 0.20
 @berg_unity_j1_job = 1
+@berg_unity_j1_official_cap = 1
 @berg_unity_k1_mult = 0.15
 @berg_unity_l1_artisan = 1
 @berg_unity_l1_biotrophy = 10
@@ -64,3 +68,7 @@
 @berg_unity_m1_unity_add = 1
 @berg_unity_m1_job = 2
 @berg_unity_m1_megacorp_spiritualist = 1
+@berg_unity_n1_job_regular = 1
+@berg_unity_n1_job_gestalt = 2
+@berg_unity_n1_unity_mult = 0.05
+@berg_unity_n1_official_cap = 1

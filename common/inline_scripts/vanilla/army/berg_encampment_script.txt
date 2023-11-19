@@ -1,0 +1,9 @@
+planet_modifier = {
+	job_necromancer_add = @berg_army_b$tier$_job
+}
+triggered_desc = {
+	trigger = {
+		always = yes
+	}
+	text = job_necromancer_effect_desc
+}

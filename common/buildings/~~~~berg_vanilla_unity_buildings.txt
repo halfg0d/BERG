@@ -18,9 +18,6 @@ building_autochthon_monument = {
 				is_memorialist_empire = yes
 			}
 		}
-		owner = {
-			is_ai = no
-		}
 	}
 
 	destroy_trigger = {
@@ -119,7 +116,7 @@ building_heritage_site = {
 		building_galactic_memorial_2
 		building_sensorium_2
 	}
-
+	
 	resources = {
 		category = planet_buildings
 		produces = {
@@ -195,7 +192,7 @@ building_hypercomms_forum = {
 		building_galactic_memorial_3
 		building_sensorium_3
 	}
-
+	
 	resources = {
 		category = planet_buildings
 		produces = {
@@ -2095,7 +2092,9 @@ building_sensorium_3 = {
 ##################
 building_autocurating_vault = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 
 	category = unity
 
@@ -2167,9 +2166,6 @@ building_autocurating_vault = {
 			energy = 8
 			rare_crystals = 3
 		}
-		produces = {
-			unity = 10
-		}
 	}
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
@@ -2193,7 +2189,9 @@ building_autocurating_vault = {
 
 building_citadel_of_faith = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 
 	category = unity
 
@@ -2267,9 +2265,6 @@ building_citadel_of_faith = {
 			energy = 8
 			rare_crystals = 3
 		}
-		produces = {
-			unity = 10
-		}
 	}
 	inline_script = {
 		script = vanilla/unity/berg_citadel_faith_script
@@ -2282,7 +2277,9 @@ building_citadel_of_faith = {
 
 building_corporate_vault = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 	icon = building_autocurating_vault
 
 	category = unity
@@ -2351,9 +2348,6 @@ building_corporate_vault = {
 			energy = 8
 			rare_crystals = 3
 		}
-		produces = {
-			unity = 10
-		}
 	}
 
 	inline_script = {
@@ -2374,7 +2368,9 @@ building_corporate_vault = {
 
 building_alpha_hub = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 	icon = building_autocurating_vault
 
 	category = unity

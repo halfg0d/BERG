@@ -36,7 +36,7 @@ building_research_lab_1 = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
+			}
 
 	upgrades = {
 		"building_research_lab_2"
@@ -79,7 +79,7 @@ building_research_lab_2 = {
 			energy = @b2_upkeep
 			exotic_gases = @b2_rare_upkeep
 		}
-	}
+			}
 
 	upgrades = {
 		"building_research_lab_3"
@@ -138,7 +138,7 @@ building_research_lab_3 = {
 			}
 			sr_zro = 1
 		}
-	}
+			}
 
 	prerequisites = {
 		"tech_basic_science_lab_3"
@@ -148,7 +148,7 @@ building_research_lab_3 = {
 building_institute = {
 	base_buildtime = @b2_time
 	base_cap_amount = 1
-
+	
 	category = research
 
 	potential = {
@@ -189,7 +189,7 @@ building_institute = {
 			energy = @b2_upkeep
 			exotic_gases = @b2_rare_upkeep
 		}
-	}
+			}
 
 	inline_script = {
 		script = vanilla/research/berg_institute_modifiers_scripts
@@ -264,7 +264,7 @@ building_supercomputer = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
-	}
+			}
 
 	inline_script = {
 		script = vanilla/research/berg_institute_modifiers_scripts
@@ -387,7 +387,7 @@ building_vultaum_reality_computer = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
-	}
+			}
 	inline_script = {
 		script = vanilla/research/berg_vultaum_scripts
 		tier = 1

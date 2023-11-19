@@ -1,8 +1,11 @@
 #############
 # Army buildings
 #############
-@berg_army_a1_job = 2
-@berg_army_a1_exp = 100
+@berg_army_a1_job = 1
+@berg_army_a1_job_gestalt = 2
+@berg_army_a1_mult = 0.05
+@berg_army_a1_official_cap = 1
 @berg_army_s1_job = 2
 @berg_army_s2_job = 4
 @berg_army_p1_bombardment = -0.5
+@berg_army_b1_job = 2

@@ -6,7 +6,9 @@
 @berg_research_r3_jobs = 6
 @berg_research_r3_dimensional_jobs = 1
 @berg_research_i1_mult = 0.15
+@berg_research_i1_official_cap = 1
 @berg_research_i1_job = 1
+@berg_research_i1_job_gestalt = 2
 @berg_research_a1_jobs = 3
 @berg_research_a1_jobs_ap = 2
 @berg_research_a1_mult = 1.0
