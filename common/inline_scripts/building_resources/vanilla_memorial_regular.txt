@@ -1,0 +1,46 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	produces = {
+		trigger = { exists = owner }
+		unity = @berg_res_memorial_t$tier$_produces
+		multiplier = owner.trigger:num_ascension_perks
+	}
+	cost = {
+		minerals = @berg_res_memorial_t$tier$_cost
+		exotic_gases = @berg_res_memorial_t$tier$_cost_gases
+	}
+	upkeep = {
+		energy = @berg_res_memorial_t$tier$_upkeep
+		exotic_gases = @berg_res_memorial_t$tier$_upkeep_gases
+	}
+	upkeep = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_edict = synaptic_reinforcement
+			}
+		}
+		energy = 2
+	}
+	#Osa
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_res_memorial_t$tier$_osa_upkeep
+		minerals = @berg_res_memorial_t$tier$_osa_upkeep_minerals
+	}
+	produces = {
+		trigger = { berg_has_osa_mod = yes }
+		unity = @berg_res_memorial_t$tier$_osa_produces
+	}
+	produces = {
+		trigger = {
+			berg_has_osa_mod = yes 
+			exists = owner
+			owner = {
+				has_active_tradition = tr_benevolence_1
+			}
+		}
+		unity = @berg_res_memorial_t$tier$_osa_produces_tradition
+	}
+}

@@ -11,14 +11,17 @@ resources = {
 	}
 	#Osa
 	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
 		energy = @berg_res_bureacracy_t$tier$_osa_upkeep
 		minerals = @berg_res_bureacracy_t$tier$_osa_upkeep_minerals
 	}
 	produces = {
+		trigger = { berg_has_osa_mod = yes }
 		unity = @berg_res_bureacracy_t$tier$_osa_produces
 	}
 	produces = {
 		trigger = {
+			berg_has_osa_mod = yes 
 			exists = owner
 			owner = {
 				has_active_tradition = tr_benevolence_1
