@@ -5,3 +5,25 @@ planet_modifier = {
 triggered_desc = {
 	text = job_evaluator_effect_desc
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_active_tradition = tr_solidarity_5
+		}
+	}
+	modifier = {
+		planet_crime_no_happiness_add = -10
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		planet_has_ecocontinuity = yes
+	}
+	modifier = {
+		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t$tier$
+	}
+}

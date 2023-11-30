@@ -2,9 +2,16 @@
 ## Limited by deposits ##
 #########################
 @berg_deposit_m1_job = 1
+@berg_deposit_m1_osa_job = 1
+@berg_deposit_m1_osa_job_tradition = 3
 @berg_deposit_g1_job = 1
+@berg_deposit_g1_osa_job = 1
+@berg_deposit_g1_osa_job_tradition = 3
 @berg_deposit_c1_job = 1
+@berg_deposit_c1_osa_job = 1
+@berg_deposit_c1_osa_job_tradition = 3
 @berg_deposit_b1_job = 4
+@berg_deposit_b1_osa_job= 1
 @berg_deposit_z1_keeper = 1
 @berg_deposit_z1_entertainer = 1
 @berg_deposit_z1_animal = 3

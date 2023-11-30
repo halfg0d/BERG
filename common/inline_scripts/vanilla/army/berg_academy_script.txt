@@ -68,3 +68,112 @@ inline_script = {
 	script = ECC/berg_ecc_academy_script
 	tier = $tier$
 }
+#OSA
+triggered_army_modifier = {
+	potential = { has_osa_mod = yes }
+	army_starting_experience_add = 50
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+	}
+	modifier = {
+		planet_army_build_speed_mult = 0.50
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	modifier = {
+		job_osa_commander_add = 1
+		job_osa_commando_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			NOT = {
+				has_active_tradition = tr_defense_4
+			}
+		}
+	}
+	modifier = {
+		job_soldier_add = 2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			has_active_tradition = tr_defense_4
+		}
+	}
+	modifier = {
+		job_osa_commando_drone_add = 2
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			NOT = {
+				has_active_tradition = tr_defense_4
+			}
+		}
+	}
+	modifier = {
+		job_warrior_drone_add = 2
+	}
+}
+triggered_desc = {
+	trigger = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			has_active_tradition = tr_defense_4
+		}
+	}
+	text = job_osa_commando_drone_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	text = job_osa_commander_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	text = job_osa_commando_effect_desc
+}

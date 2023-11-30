@@ -15,7 +15,6 @@ building_private_mining_consortium = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = no
 		}
 		is_artificial = no
@@ -29,7 +28,14 @@ building_private_mining_consortium = {
 	planet_modifier = {
 		job_miner_add = 1
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		job_miner_add = 1
+		job_osa_mining_director_add = 1
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -40,6 +46,11 @@ building_private_mining_consortium = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { has_osa_mod = yes }
+			minerals = 20
 		}
 	}
 
@@ -58,7 +69,6 @@ building_food_conglomerate = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = no
 		}
 		NOR = {
@@ -67,7 +77,6 @@ building_food_conglomerate = {
 			is_planet_class = pc_relic
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -98,6 +107,47 @@ building_food_conglomerate = {
 			job_angler_add = 1
 		}
 	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_osa_agri_director_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+			exists = owner
+			owner = {
+				OR = {
+					is_anglers_empire = no
+					AND = {
+						is_anglers_empire = yes
+						PREV = { planet = { is_wet = no } }
+					}
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+			exists = owner
+			owner = {
+				is_anglers_empire = yes
+				PREV = { planet = { is_wet = yes } }
+			}
+		}
+		modifier = {
+			job_angler_add = 1
+		}
+	}
 
 	resources = {
 		category = planet_branch_office_buildings
@@ -109,6 +159,11 @@ building_food_conglomerate = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { has_osa_mod = yes }
+			food = 20
 		}
 	}
 
@@ -132,7 +187,15 @@ building_virtual_entertainment_studios = {
 	planet_modifier = {
 		job_clerk_add = 2
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -143,6 +206,11 @@ building_virtual_entertainment_studios = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { has_osa_mod = yes }
+			consumer_goods = 9
 		}
 	}
 
@@ -179,7 +247,6 @@ building_private_shipyards = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = no
 		}
 	}
@@ -187,7 +254,15 @@ building_private_shipyards = {
 	planet_modifier = {
 		job_clerk_add = 2
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_foundry_add = 1
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -198,6 +273,11 @@ building_private_shipyards = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			alloys = 12
 		}
 	}
 
@@ -216,7 +296,6 @@ building_military_contractors = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = no
 		}
 	}
@@ -231,6 +310,24 @@ building_military_contractors = {
 
 	planet_modifier = {
 		job_soldier_add = 1
+	}
+	#OSA
+	triggered_country_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			country_naval_cap_add = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_soldier_add = 1
+			job_healthcare_add = 1
+		}
 	}
 
 	resources = {
@@ -264,7 +361,15 @@ building_public_relations_office = {
 	planet_modifier = {
 		job_clerk_add = 2
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -275,6 +380,13 @@ building_public_relations_office = {
 		}
 		upkeep = {
 			energy = 3
+		}
+		#OSA
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			unity = 14
 		}
 	}
 
@@ -295,11 +407,23 @@ building_private_research_initiative = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
 	}
-
-	planet_modifier = {
-		job_clerk_add = 2
+	#Vanilla
+	triggered_planet_modifier = {
+		potential = { berg_has_osa_mod = yes }
+		modifier = {
+			job_clerk_add = 2
+		}
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_research_add = 2
+			job_head_researcher_add = 1
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -312,6 +436,13 @@ building_private_research_initiative = {
 		}
 		upkeep = {
 			energy = 3
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			physics_research = 9
+			engineering_research = 9
+			society_research = 9
 		}
 	}
 
@@ -337,7 +468,14 @@ building_amusement_megaplex = {
 	planet_modifier = {
 		planet_amenities_add = 10
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = { berg_has_osa_mod = yes }
+		modifier = {
+			job_clerk_add = 1
+			job_culture_worker_add = 2
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -345,6 +483,11 @@ building_amusement_megaplex = {
 		}
 		produces = {
 			energy = 10
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 20
 		}
 	}
 
@@ -375,12 +518,25 @@ building_commercial_forum = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
 	}
-
+	#Vanilla
 	planet_modifier = {
-		branch_office_value_mult = 0.25
+		branch_office_value_mult = 0.15
 		job_merchant_add = 1
 	}
-
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = no
+		}
+		branch_office_value_mult = 0.10
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		job_merchant_add = 2
+		job_clerk_add = 1
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -410,14 +566,8 @@ building_corporate_embassy = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = "requires_building_major_capital"
-			OR = {
-				has_building = building_major_capital
-				has_building = building_system_capital
-				has_building = building_imperial_capital
-			}
-		}
+		has_major_upgraded_capital = yes
+		owner = { is_gestalt = no }
 	}
 
 	prerequisites = {
@@ -436,7 +586,15 @@ building_corporate_embassy = {
 	planet_modifier = {
 		job_clerk_add = 2
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -469,7 +627,6 @@ building_wildcat_miners = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = yes
 		}
 		is_artificial = no
@@ -484,7 +641,15 @@ building_wildcat_miners = {
 		planet_crime_add = 25
 		trade_value_add = 5
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = -0.15
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -495,6 +660,11 @@ building_wildcat_miners = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			minerals = 20
 		}
 	}
 
@@ -513,13 +683,12 @@ building_bio_reprocessing_facilities = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = yes
 		}
 		NOR = {
 			berg_is_hive_world = yes
 			berg_is_machine_world = yes
-			is_planet_class = pc_relic
+			berg_is_relic_world = yes
 		}
 	}
 
@@ -527,7 +696,15 @@ building_bio_reprocessing_facilities = {
 		planet_crime_add = 25
 		trade_value_add = 5
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_farmers_food_produces_mult = -0.15
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -538,6 +715,11 @@ building_bio_reprocessing_facilities = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			food = 20
 		}
 	}
 
@@ -562,7 +744,15 @@ building_underground_chemists = {
 		planet_crime_add = 25
 		trade_value_add = 5
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_jobs_consumer_goods_produces_mult = -0.15
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -573,6 +763,11 @@ building_underground_chemists = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			consumer_goods = 9
 		}
 	}
 
@@ -609,7 +804,6 @@ building_wrecking_yards = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = yes
 		}
 	}
@@ -617,6 +811,15 @@ building_wrecking_yards = {
 	planet_modifier = {
 		planet_crime_add = 25
 		trade_value_add = 5
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_jobs_alloys_produces_mult = -0.15
+		}
 	}
 
 	resources = {
@@ -629,6 +832,11 @@ building_wrecking_yards = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			alloys = 12
 		}
 	}
 
@@ -647,7 +855,6 @@ building_pirate_haven = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 			is_criminal_syndicate = yes
 		}
 	}
@@ -697,6 +904,15 @@ building_underground_clubs = {
 		planet_crime_add = 40
 		planet_amenities_add = 10
 	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_technician_energy_produces_mult = -0.15
+		}
+	}
 
 	resources = {
 		category = planet_branch_office_buildings
@@ -705,6 +921,11 @@ building_underground_clubs = {
 		}
 		produces = {
 			energy = 10
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			energy = 20
 		}
 	}
 
@@ -761,6 +982,11 @@ building_syndicate_outreach_office = {
 		upkeep = {
 			energy = 2
 		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			unity = 19
+		}
 	}
 
 	ai_weight = {
@@ -783,9 +1009,24 @@ building_illicit_research_labs = {
 
 	planet_modifier = {
 		planet_crime_add = 40
-		job_clerk_add = 2
 	}
-
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = no
+		}
+		modifier = {
+			job_clerk_add = 2
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_research_add = 2
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -798,6 +1039,13 @@ building_illicit_research_labs = {
 		}
 		upkeep = {
 			energy = 3
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_mod = yes }
+			physics_research = 4
+			engineering_research = 4
+			society_research = 4
 		}
 	}
 
@@ -822,10 +1070,15 @@ building_smuggling_rings = {
 
 	planet_modifier = {
 		planet_crime_add = 50
-		branch_office_value_mult = 0.25
+		branch_office_value_mult = 0.15
 		job_merchant_add = 1
 	}
-
+	triggered_planet_modifier = {
+		potential = { berg_has_osa_mod = no }
+		modifier = {
+			branch_office_value_mult = 0.10
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -855,14 +1108,7 @@ building_disinformation_center = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = "requires_building_major_capital"
-			OR = {
-				has_building = building_major_capital
-				has_building = building_system_capital
-				has_building = building_imperial_capital
-			}
-		}
+		has_major_upgraded_capital = yes
 	}
 
 	prerequisites = {
@@ -883,7 +1129,15 @@ building_disinformation_center = {
 		pop_government_ethic_attraction = -0.25
 		job_clerk_add = 2
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			pop_government_ethic_attraction = -0.25
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -918,7 +1172,15 @@ building_subversive_shrine = {
 		pop_ethic_spiritualist_attraction_mult = 0.25
 		planet_crime_add = 25
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.25
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			branch_office_owner = {
@@ -965,7 +1227,15 @@ building_temple_of_prosperity = {
 		job_preacher_add = 2
 		pop_ethic_spiritualist_attraction_mult = 0.5
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_high_priest_add = 1
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			branch_office_owner = {
@@ -983,6 +1253,12 @@ building_temple_of_prosperity = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			unity = 10
+			society_research = 10
 		}
 	}
 
@@ -1006,7 +1282,6 @@ building_executive_retreat = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 		}
 	}
 
@@ -1052,7 +1327,6 @@ building_xeno_tourism_agency = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
-			is_ai = no
 		}
 	}
 
@@ -1110,7 +1384,16 @@ building_imperial_concession_port = {
 	planet_modifier = {
 		branch_office_value_mult = 0.25
 	}
-
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_politician_add = 2
+			job_merchant_add = 2
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -1118,6 +1401,12 @@ building_imperial_concession_port = {
 		}
 		produces = {
 			energy = 8
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 42
+			alloys = 50
 		}
 	}
 
@@ -1223,6 +1512,12 @@ building_corporate_clinics = {
 		}
 		upkeep = {
 			consumer_goods = 1
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 2
+			unity = 3
 		}
 	}
 

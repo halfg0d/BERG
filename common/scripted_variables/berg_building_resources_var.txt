@@ -394,3 +394,68 @@
 @berg_res_memorial_hive_t3_osa_upkeep_gases = 2
 @berg_res_memorial_hive_t3_osa_produces = 20
 @berg_res_memorial_hive_t3_osa_produces_tradition = 20
+#Vaults T1
+@berg_res_vault_t1_cost = 600
+@berg_res_vault_t1_cost_crystals = 50
+@berg_res_vault_t1_ring_cost = 600
+@berg_res_vault_t1_ring_cost_crystals = 325
+@berg_res_vault_t1_upkeep = 5
+@berg_res_vault_t1_upkeep_crystals = 1
+@berg_res_vault_t1_ring_upkeep = 3
+@berg_res_vault_t1_ring_upkeep_crystals = 2
+@berg_res_vault_t1_osa_upkeep = 2.5
+@berg_res_vault_t1_osa_upkeep_minerals = 7.5
+@berg_res_vault_t1_osa_ring_upkeep = 2.5
+@berg_res_vault_t1_osa_ring_upkeep_minerals = 10
+@berg_res_vault_t1_osa_produces = 20
+#Organic Paradise T1
+@berg_res_organic_paradise_t1_cost = 400
+@berg_res_organic_paradise_t1_cost_gases = 0
+@berg_res_organic_paradise_t1_upkeep = 2
+@berg_res_organic_paradise_t1_upkeep_gases = 0
+@berg_res_organic_paradise_t1_osa_upkeep = 0.5
+@berg_res_organic_paradise_t1_osa_upkeep_minerals = 2.5
+@berg_res_organic_paradise_t1_osa_produces = 10
+@berg_res_organic_paradise_t1_osa_produces_tradition = 20
+#Organic Paradise T2
+@berg_res_organic_paradise_t2_cost = 600
+@berg_res_organic_paradise_t2_cost_gases = 50
+@berg_res_organic_paradise_t2_upkeep = 5
+@berg_res_organic_paradise_t2_upkeep_gases = 1
+@berg_res_organic_paradise_t2_osa_upkeep = 2.5
+@berg_res_organic_paradise_t2_osa_upkeep_minerals = 2.5
+@berg_res_organic_paradise_t2_osa_produces = 5
+@berg_res_organic_paradise_t2_osa_produces_tradition = 10
+#League Offices T1
+@berg_res_league_offices_t1_cost = 400
+@berg_res_league_offices_t1_cost_crystals = 50
+@berg_res_league_offices_t1_cost_artifacts = 30
+@berg_res_league_offices_t1_upkeep = 5
+@berg_res_league_offices_t1_upkeep_crystals = 1
+#Stronghold T1
+@berg_res_stronghold_t1_cost = 400
+@berg_res_stronghold_t1_cost_motes = 0
+@berg_res_stronghold_t1_upkeep = 1
+@berg_res_stronghold_t1_upkeep_motes = 0
+@berg_res_stronghold_t1_ecc_production = 3
+@berg_res_stronghold_t1_osa_production = 2
+@berg_res_stronghold_t1_osa_upkeep = 1.5
+@berg_res_stronghold_t1_osa_upkeep_special = 2.5
+#Stronghold T2
+@berg_res_stronghold_t2_cost = 600
+@berg_res_stronghold_t2_cost_motes = 50
+@berg_res_stronghold_t2_upkeep = 1
+@berg_res_stronghold_t2_upkeep_motes = 1
+@berg_res_stronghold_t2_tradition_production = 3 #ECC 
+@berg_res_stronghold_t2_osa_production = 2
+@berg_res_stronghold_t2_osa_upkeep = 4
+@berg_res_stronghold_t2_osa_upkeep_special = 5
+#Stronghold T3 <- OSA Zitadom
+@berg_res_stronghold_t3_cost = 600
+@berg_res_stronghold_t3_cost_motes = 75
+@berg_res_stronghold_t3_upkeep = 0
+@berg_res_stronghold_t3_upkeep_motes = 4
+@berg_res_stronghold_t3_tradition_production = 0 #ECC 
+@berg_res_stronghold_t3_osa_production = 5
+@berg_res_stronghold_t3_osa_upkeep = 10
+@berg_res_stronghold_t3_osa_upkeep_special = 10

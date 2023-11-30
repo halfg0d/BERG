@@ -48,6 +48,10 @@
 @berg_unity_h3_unity_bonus = 0.15
 @berg_unity_i1_unity_mult = 0.15
 @berg_unity_i1_unity_add = 1
+@berg_unity_i1_osa_job = 5
+@berg_unity_i1_osa_mult1 = 0.25
+@berg_unity_i1_osa_mult2 = 0.15
+@berg_unity_i1_osa_eco_upkeep = 0 #@ecocontinuity_upkeep_t3
 @berg_unity_j1_unity_add = 1
 @berg_unity_j1_unity_mult = 0.15
 @berg_unity_j1_attraction = 0.20

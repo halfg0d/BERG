@@ -146,3 +146,49 @@ building_commercial_trading_terminal = {
 		}
 	}
 }
+building_zitadom = {
+	base_buildtime = 360
+	position_priority = 36
+	can_build = no
+	planetary_ftl_inhibitor = yes
+
+
+	category = army
+
+	potential = {
+		has_osa_mod = yes
+		owner = {
+			has_tradition = tr_defense_5
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		OR = {
+			AND = {
+				num_buildings = { type = building_zitadom value > 3 }
+				free_building_slots = 0
+				owner = { used_naval_capacity_percent < 0.4	}
+			}
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	inline_script = {
+		script = vanilla/army/berg_stronghold_script
+		tier = 3
+		canCommander = "yes"
+	}
+
+	inline_script = {
+		script = building_resources/vanilla_strongholds
+		tier = 3
+	}
+
+	prerequisites = {
+		"tech_global_defense_grid"
+	}
+}

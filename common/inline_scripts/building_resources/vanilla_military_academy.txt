@@ -1,0 +1,46 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @b1_minerals
+	}
+	upkeep = {
+		energy = @b1_upkeep
+	}
+	#ECC
+	produces = {
+		trigger = {
+			berg_has_ecc_mod = yes
+			owner = { has_civic = civic_martial_brotherhood }
+		}
+		unity = @berg_ecc_l1_unity
+	}
+	#OSA
+	upkeep = {
+		trigger = {
+			has_osa_mod = yes
+			exists = owner
+			owner = { 
+				AND = {
+					is_machine_empire = no
+					is_lithoid_empire = no
+				}
+			}
+		}
+		energy = 0.5
+		food = 2.5
+	}
+	upkeep = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					is_machine_empire = yes
+					is_lithoid_empire = yes
+				}
+			}
+		}
+		energy = 0.5
+		minerals = 2.5
+	}
+}

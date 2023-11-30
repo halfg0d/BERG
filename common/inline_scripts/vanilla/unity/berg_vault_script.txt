@@ -11,3 +11,31 @@ triggered_planet_modifier = {
 	planet_priests_unity_produces_add = @berg_unity_i$tier$_unity_add
 	planet_telepaths_unity_produces_add = @berg_unity_i$tier$_unity_add
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	planet_culture_workers_produces_mult = @berg_unity_i$tier$_osa_mult1
+	job_culture_worker_add = @berg_unity_i$tier$_osa_job
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	planet_synapse_drones_unity_produces_mult = @berg_unity_i$tier$_osa_mult2
+	job_synapse_drone_add = @berg_unity_i$tier$_osa_job
+}
+
+triggered_planet_modifier = {
+	potential = {
+		planet_has_ecocontinuity = yes
+	}
+	modifier = {
+		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
+		#planet_districts_cities_ecocontinuity_upkeep_add = @berg_unity_i1_osa_eco_upkeep
+	}
+}

@@ -17,3 +17,54 @@ triggered_planet_modifier = {
 		job_gas_extraction_drone_add = @berg_deposit_g$tier$_job
 	}
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_gas_extraction_add = @berg_deposit_g$tier$_osa_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_gas_extraction_drone_add = @berg_deposit_g$tier$_osa_job
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = { 
+			AND = {
+				is_regular_empire = yes
+				has_active_tradition = tr_renewal_3
+			}
+		}
+	}
+	modifier = {
+		job_gas_extraction_add = @berg_deposit_g$tier$_osa_job_tradition
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		has_osa_mod = yes
+		exists = owner
+		owner = {
+			AND = {
+				is_gestalt = yes
+				has_active_tradition = tr_renewal_3
+			}
+		}
+	}
+	modifier = {
+		job_gas_extraction_drone_add = @berg_deposit_g$tier$_osa_job_tradition
+	}
+}
