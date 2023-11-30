@@ -1,3 +1,31 @@
 planet_modifier = {
 	planet_orbital_bombardment_damage = @berg_army_p$tier$_bombardment
 }
+#OSA
+triggered_panet_modifier = {
+	potential = {
+		has_osa_mod = yes
+	}
+	modifier = {
+		planet_housing_add = @berg_army_p$tier$_housing
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_soldier_add = @berg_army_p$tier$_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_warrior_drone_add = @berg_army_p$tier$_job
+	}
+}

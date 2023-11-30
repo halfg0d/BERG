@@ -1,0 +1,32 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_res_uplink_node_t$tier$_cost
+		rare_crystals = @berg_res_uplink_node_t$tier$_cost_crystals
+	}
+	upkeep = {
+		energy = @berg_res_uplink_node_t$tier$_upkeep
+		rare_crystals = @berg_res_uplink_node_t$tier$_upkeep_crystals
+	}
+	#Osa
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_res_uplink_node_t$tier$_osa_upkeep
+		minerals = @berg_res_uplink_node_t$tier$_osa_upkeep_minerals
+	}
+	produces = {
+		trigger = { berg_has_osa_mod = yes }
+		unity = @berg_res_uplink_node_t$tier$_osa_produces
+	}
+	produces = {
+		trigger = {
+			berg_has_osa_mod = yes 
+			exists = owner
+			owner = {
+				has_active_tradition = tr_benevolence_1
+			}
+		}
+		unity = @berg_res_uplink_node_t$tier$_osa_produces_tradition
+	}
+}

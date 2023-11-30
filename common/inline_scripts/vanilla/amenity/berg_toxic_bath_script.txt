@@ -8,3 +8,10 @@ triggered_desc = {
 	}
 	text = job_toxic_baths_effect_desc
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	job_bath_attendant_add = @berg_osa_s$tier$_jobs
+}

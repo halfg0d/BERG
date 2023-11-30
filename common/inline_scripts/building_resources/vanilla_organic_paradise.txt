@@ -1,0 +1,29 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_res_organic_paradise_t$tier$_cost
+		exotic_gases = @berg_res_organic_paradise_t$tier$_cost_gases
+	}
+	upkeep = {
+		energy = @berg_res_organic_paradise_t$tier$_upkeep
+		exotic_gases = @berg_res_organic_paradise_t$tier$_upkeep_gases
+	}
+	#OSA
+	upkeep = {
+		energy = @berg_res_organic_paradise_t$tier$_osa_upkeep
+		minerals = @berg_res_organic_paradise_t$tier$_osa_upkeep_minerals
+	}
+	produces = {
+		unity = @berg_res_organic_paradise_t$tier$_osa_produces
+	}
+	produces = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_benevolence_1
+			}
+		}
+		unity = @berg_res_organic_paradise_t$tier$_osa_produces_tradition
+	}
+}

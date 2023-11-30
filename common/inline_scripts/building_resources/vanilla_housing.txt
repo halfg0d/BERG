@@ -1,0 +1,37 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_res_residence_t$tier$_cost_minerals
+		rare_crystals = @berg_res_residence_t$tier$_cost_crystals
+	}
+	upkeep = {
+		energy = @berg_res_residence_t$tier$_upkeep_energy
+		rare_crystals = @berg_res_residence_t$tier$_upkeep_crystals
+	}
+	#Osa
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			OR = {
+				is_regular_empire = yes
+				is_hive_empire = yes
+			}
+		}
+		energy = @berg_res_residence_t$tier$_osa_upkeep_energy_bio
+		food = @berg_res_residence_t$tier$_osa_upkeep_food_bio
+		minerals = @berg_res_residence_t$tier$_osa_upkeep_minerals_bio
+	}
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			OR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+		energy = @berg_res_residence_t$tier$_osa_upkeep_energy_nonbio
+		minerals = @berg_res_residence_t$tier$_osa_upkeep_minerals_nonbio
+	}
+}

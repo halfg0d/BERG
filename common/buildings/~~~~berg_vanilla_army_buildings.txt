@@ -14,23 +14,8 @@ building_military_academy = {
 		script = vanilla/army/berg_academy_script
 		tier = 1
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			volatile_motes = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			volatile_motes = @b2_rare_upkeep
-		}
-		produces = {
-			trigger = {
-				berg_has_ecc_mod = yes
-				owner = { has_civic = civic_martial_brotherhood }
-			}
-			unity = @berg_ecc_l1_unity
-		}
+	inline_script = {
+		script = building/resources/vanilla_military_academy
 	}
 
 	prerequisites = {
@@ -42,6 +27,7 @@ building_military_academy = {
 	}
 	upgrades = {
 		building_eutab_battle_praxeum # EUTAB
+		"building_mechanicum_academy" #OSA
 	}
 }
 
@@ -88,25 +74,11 @@ building_stronghold = {
 	inline_script = {
 		script = vanilla/army/berg_stronghold_script
 		tier = 1
+		canCommander = "no"
 	}
-	resources = {
-		category = planet_buildings_strongholds
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 1
-		}
-		produces = {
-			trigger = {
-				berg_has_ecc_mod = yes
-				exists = owner
-				owner = {
-					has_active_tradition = tr_unyielding_resistance_is_frugal
-				}
-			}
-			unity = 3
-		}
+	inline_script = {
+		script = building_resources/vanilla_strongholds
+		tier = 1
 	}
 
 	prerequisites = {
@@ -132,31 +104,18 @@ building_fortress = {
 	inline_script = {
 		script = vanilla/army/berg_stronghold_script
 		tier = 2
+		canCommander = "yes"
 	}
-	resources = {
-		category = planet_buildings_strongholds
-		cost = {
-			minerals = @b2_minerals
-			volatile_motes = @b2_rare_cost
-		}
-		upkeep = {
-			energy = 1
-			volatile_motes = @b2_rare_upkeep
-		}
-		produces = {
-			trigger = {
-				berg_has_ecc_mod = yes
-				exists = owner
-				owner = {
-					has_active_tradition = tr_unyielding_resistance_is_frugal
-				}
-			}
-			unity = 3
-		}
+	inline_script = {
+		script = building_resources/vanilla_strongholds
+		tier = 2
 	}
 
 	prerequisites = {
 		"tech_global_defense_grid"
+	}
+	upgrades = {
+		"building_zitadom" #OSA
 	}
 }
 
@@ -185,7 +144,28 @@ building_planetary_shield_generator = {
 			}
 		}
 	}
-
+	upgrades = {
+		"building_mem_planetary_shield_generator"
+	}
+	potential = {
+		OR = {
+			has_osa_mod = no
+			AND = {
+				has_osa_mod = yes
+				NOR = {
+					has_building = "building_mem_planetary_shield_generator"
+					has_building = "building_mem_planetary_shield_generator_heavy"
+					has_building = "building_mem_planetary_shield_generator_orila"
+				}
+				planet = {
+					NOR = {
+						uses_habitat_capitals = yes
+						is_planet_class = pc_habitat
+					}	
+				}
+			}
+		}
+	}
 	destroy_trigger = {
 		exists = owner
 		owner = { is_ai = yes }
@@ -205,6 +185,14 @@ building_planetary_shield_generator = {
 		inline_script = {
 			script = ECC/berg_ecc_shield_script
 			tier = 1
+		}
+		#OSA
+		upkeep = {
+			trigger = {
+				has_osa_mod = yes
+			}
+			energy = 3
+			minerals = 10
 		}
 	}
 

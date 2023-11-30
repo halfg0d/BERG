@@ -73,6 +73,10 @@
 @berg_ecc_a2_merchant = 1
 @berg_ecc_a2_entrepreneur = 1
 @berg_ecc_a2_unity = 5
+@berg_ecc_a3_clerk = 1
+@berg_ecc_a3_merchant = 1
+@berg_ecc_a3_entrepreneur = 2
+@berg_ecc_a3_unity = 10
 # Galactic Stock
 @berg_ecc_b1_mogul = 1
 @berg_ecc_b1_trade = 0.05
@@ -80,9 +84,7 @@
 @berg_ecc_d2_unity = 0.1
 @berg_ecc_d2_housing = 2
 # Clinic
-@berg_ecc_g1_upkeep = 0.5
 @berg_ecc_g1_job = 1
-@berg_ecc_g2_upkeep = 1
 @berg_ecc_g2_job = 2
 # Temple
 @berg_ecc_j1_templar = 1

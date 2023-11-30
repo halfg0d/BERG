@@ -30,3 +30,99 @@
 @berg_osa_h1_job2 = 2
 @berg_osa_h2_job1 = 1
 @berg_osa_h2_job2 = 4
+#Resort capital
+@berg_osa_resort1_healtcare = 1
+@berg_osa_resort2_healtcare = 3
+#Sentinel Hub
+@berg_government_g2_job = 5
+#Embassy
+@berg_osa_em1_fund = 50
+@berg_osa_em2_fund = 100
+#Food processing
+@berg_osa_f1_job = 1
+@berg_osa_f2_job = 2
+#Mineral Purification
+@berg_osa_g1_job = 1
+@berg_osa_g2_job = 2
+#Energy Nexus
+@berg_osa_h1_job = 1
+@berg_osa_h2_job = 2
+#Silo
+@berg_osa_i1_job1 = 1
+@berg_osa_i1_job2 = 1
+#Research lab resources
+@berg_osa_j1_upkeep_energy = 0.5
+@berg_osa_j1_upkeep_mineral = 2.5
+@berg_osa_j1_produce = 5
+@berg_osa_j1_produce_tradition = 5
+@berg_osa_j2_upkeep_energy = 0
+@berg_osa_j2_upkeep_mineral = 5
+@berg_osa_j2_produce = 10
+@berg_osa_j2_produce_tradition = 10
+@berg_osa_j3_upkeep_energy = -0.5
+@berg_osa_j3_upkeep_mineral = 7.5
+@berg_osa_j3_produce = 20
+@berg_osa_j3_produce_tradition = 20
+#Institute Research
+@berg_osa_j11_upkeep_energy = 0
+@berg_osa_j11_upkeep_mineral = 5
+@berg_osa_j11_produce = 20
+@berg_osa_j11_produce_tradition = 20
+#Foundry
+@berg_osa_k1_oecl_upkeep = 2
+@berg_osa_k1_oecl_upkeep_food = 1
+@berg_osa_k1_chief_engineer = 1
+@berg_osa_k1_omni_drone = 1
+@berg_osa_k2_oecl_upkeep = 4
+@berg_osa_k2_oecl_upkeep_food = 2
+@berg_osa_k2_chief_engineer = 1
+@berg_osa_k2_omni_drone = 1
+@berg_osa_k3_oecl_upkeep = 6
+@berg_osa_k3_oecl_upkeep_food = 3
+@berg_osa_k3_chief_engineer = 2
+@berg_osa_k3_omni_drone = 2
+#Factory
+@berg_osa_l1_oecl_upkeep = 2
+@berg_osa_l1_chief_engineer = 1
+@berg_osa_l1_omni_drone = 1
+@berg_osa_l2_oecl_upkeep = 4
+@berg_osa_l2_chief_engineer = 1
+@berg_osa_l2_omni_drone = 1
+@berg_osa_l3_oecl_upkeep = 6
+@berg_osa_l3_chief_engineer = 2
+@berg_osa_l3_omni_drone = 2
+#Galactic Stock Exchange
+@berg_osa_m1_clerk = 2
+@berg_osa_m1_merchant = 3
+@berg_osa_m1_trade = 0.3
+@berg_osa_m2_clerk = 4
+@berg_osa_m2_merchant = 4
+@berg_osa_m2_trade = 0.45
+#Housing buildings
+@berg_osa_housing_r1 = 12
+@berg_osa_housing_r2 = 24
+@berg_osa_housing_c1 = 20
+@berg_osa_housing_c2 = 40
+@berg_osa_housing_m1 = 16
+@berg_osa_housing_m2 = 32
+@berg_osa_amenity_r1 = 20
+@berg_osa_amenity_r2 = 40
+@berg_osa_amenity_c1 = 12
+@berg_osa_amenity_c2 = 24
+@berg_osa_amenity_m1 = 17
+@berg_osa_amenity_m2 = 34
+#Clinic
+@berg_osa_n1_housing = 5
+@berg_osa_n1_assembly = 2
+@berg_osa_n2_housing = 5
+@berg_osa_n2_assembly = 1
+#Depot
+@berg_osa_o1_mult = 0.1
+@berg_osa_o1_jobs = 5
+#Slave huts
+@berg_osa_p1_housing = 17
+#Overseer homers
+@berg_osa_r1_housing = 3
+@berg_osa_r1_jobs = 3
+#Toxic Bath
+@berg_osa_s1_jobs = 2

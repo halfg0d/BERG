@@ -1,0 +1,12 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_res_league_offices_t$tier$_cost
+		rare_crystals = @berg_res_league_offices_t$tier$_cost_crystals
+		minor_artifacts = @berg_res_league_offices_t$tier$_cost_artifacts
+	}
+	upkeep = {
+		energy = @berg_res_league_offices_t$tier$_upkeep
+		rare_crystals = @berg_res_league_offices_t$tier$_upkeep_crystals
+	}
+}

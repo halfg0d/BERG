@@ -1,0 +1,43 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_res_clinic_t$tier$_cost_minerals
+		exotic_gases = @berg_res_clinic_t$tier$_cost_gas
+	}
+	upkeep = {
+		energy = @berg_res_clinic_t$tier$_upkeep_energy
+		exotic_gases = @berg_res_clinic_t$tier$_upkeep_gas
+	}
+	#ECC
+	upkeep = {
+		trigger = {
+			berg_has_ecc_mod = yes
+			owner = { has_policy_flag = public_healthcare }
+		}
+		energy = @berg_res_clinic_t$tier$_ecc_upkeep_energy
+	}
+	#OSA
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			OR = {
+				is_regular_empire = yes
+				is_hive_empire = yes
+			}
+		}
+		energy = @berg_res_clinic_t$tier$_osa_upkeep_energy
+		food = @berg_res_clinic_t$tier$_osa_upkeep_minerals_or_food
+	}
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			OR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+		energy = @berg_res_clinic_t$tier$_osa_upkeep_energy
+		minerals = @berg_res_clinic_t$tier$_osa_upkeep_minerals_or_food
+	}
+}

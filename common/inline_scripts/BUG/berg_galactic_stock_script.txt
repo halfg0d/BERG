@@ -1,10 +1,16 @@
+#BUG
 planet_modifier = {
-	job_merchant_add = @berg_bug_a$tier$_jobs
 	trade_value_mult = @berg_bug_a$tier$_mod
 }
-
 triggered_planet_modifier = {
 	potential = {
+		berg_has_ecc_mod = no
+	}
+	job_merchant_add = @berg_bug_a$tier$_jobs
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = no
 		exists = owner
 		owner = {
 			OR = {
@@ -19,5 +25,51 @@ triggered_planet_modifier = {
 	}
 }
 triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = no
+	}
 	text = job_merchant_effect_desc
+}
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+	}
+	modifier = {
+		job_mogul_add = @berg_bug_a$tier$_jobs
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+	}
+	text = job_mogul_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_merchant_guilds
+				has_civic = civic_state_monopoly
+			}
+		}
+	}
+	modifier = {
+		job_mogul_add = @berg_bug_a$tier$_jobs
+		trade_value_mult = @berg_bug_a$tier$_mod
+	}
+}
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	job_clerk_add = @berg_osa_m$tier$_clerk
+	trade_value_mult = @berg_osa_m$tier$_trade
+}
+triggered_desc = {
+	trigger = { berg_has_osa_mod = yes }
+	text = job_clerk_effect_desc
 }

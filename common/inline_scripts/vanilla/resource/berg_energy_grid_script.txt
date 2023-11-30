@@ -8,6 +8,10 @@ triggered_planet_modifier = {
 		owner = {
 			is_regular_empire = yes
 			is_fallen_empire_spiritualist = no
+			NAND = {
+				berg_has_osa_mod = yes
+				NOT = { has_active_tradition = tr_radiance_2 }
+			}
 		}
 	}
 	modifier = {
@@ -28,7 +32,16 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { is_gestalt = yes }
+		owner = {
+			is_gestalt = yes
+			NAND = {
+				berg_has_osa_mod = yes
+				NOR = {
+					has_active_tradition = tr_radiance_2_hive
+					has_active_tradition = tr_radiance_2_machine
+				}
+			}
+		}
 	}
 	modifier = {
 		job_technician_drone_add = @berg_resource_e$tier$_job
@@ -60,6 +73,10 @@ inline_script = {
 	script = BUG/berg_district_script
 	tier = $tier$
 	district = "generator"
+}
+inline_script = {
+	script = OSA/berg_osa_energy_nexus
+	tier = $tier$
 }
 triggered_desc = {
 	trigger = {

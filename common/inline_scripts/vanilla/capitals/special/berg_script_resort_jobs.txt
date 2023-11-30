@@ -54,4 +54,17 @@ triggered_planet_modifier = {
 		job_entertainer_add = @berg_capitals_$tier$_entertainer
 	}
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			has_active_tradition = tr_solidarity_3
+		}
+	}
+	modifier = {
+		job_healthcare_add = @berg_osa_$tier$_healtcare
+	}
+}
 inline_script = "vanilla/capitals/special/berg_script_resort_jobs_desc"

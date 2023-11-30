@@ -7,3 +7,11 @@ planet_modifier = {
 triggered_desc = {
 	text = job_politician_effect_desc
 }
+triggered_country_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	modifier = {
+		country_edict_fund_add = @berg_osa_em$tier$_fund
+	}
+}

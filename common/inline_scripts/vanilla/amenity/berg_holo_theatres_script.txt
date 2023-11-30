@@ -2,7 +2,10 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			NOT = { has_valid_civic = civic_warrior_culture }
+			NOR = {
+				has_valid_civic = civic_warrior_culture
+				has_valid_civic = civic_corporate_mercenary_contractors
+			}
 		}
 	}
 	modifier = {
@@ -14,7 +17,10 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			has_valid_civic = civic_warrior_culture
+			OR = {
+				has_valid_civic = civic_warrior_culture
+				has_valid_civic = civic_corporate_mercenary_contractors
+			}
 		}
 	}
 	modifier = {
@@ -26,7 +32,10 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			NOT = { has_valid_civic = civic_warrior_culture }
+			NOR = {
+				has_valid_civic = civic_warrior_culture
+				has_valid_civic = civic_corporate_mercenary_contractors
+			}
 		}
 	}
 	text = job_entertainer_effect_desc
@@ -35,7 +44,10 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			has_valid_civic = civic_warrior_culture
+			OR = {
+				has_valid_civic = civic_warrior_culture
+				has_valid_civic = civic_corporate_mercenary_contractors
+			}
 		}
 	}
 	text = job_duelist_effect_desc

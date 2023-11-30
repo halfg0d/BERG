@@ -2,3 +2,11 @@ planet_modifier = {
 	planet_housing_add = @berg_amenity_o$tier$_housing
 	job_slave_overseer_add = @berg_amenity_o$tier$_job
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_housing_add = @berg_osa_r$tier$_housing
+	job_slave_overseer_add = @berg_osa_r$tier$_jobs
+}

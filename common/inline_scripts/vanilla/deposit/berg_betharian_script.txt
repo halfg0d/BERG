@@ -32,3 +32,55 @@ triggered_desc = {
 	}
 	text = job_technician_effect_desc
 }
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_energy_consortiums
+				has_civic = civic_corporate_energy_consortiums
+			}
+		}
+	}
+	modifier = {
+		job_osa_energy_director_add = @berg_deposit_b$tier$_osa_job
+		job_technician_add = -@berg_deposit_b$tier$_osa_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	modifier = {
+		job_technician_add = @berg_deposit_b$tier$_osa_job
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_technician_drone_add = @berg_deposit_b$tier$_osa_job
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_energy_consortiums
+				has_civic = civic_corporate_energy_consortiums
+			}
+		}
+	}
+	text = job_osa_energy_director_effect_desc
+}

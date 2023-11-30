@@ -34,16 +34,9 @@ building_autochthon_monument = {
 		}
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 1
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b1_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_monument_regular
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -116,17 +109,9 @@ building_heritage_site = {
 		building_galactic_memorial_2
 		building_sensorium_2
 	}
-	
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 2
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b2_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_monument_regular
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -192,17 +177,9 @@ building_hypercomms_forum = {
 		building_galactic_memorial_3
 		building_sensorium_3
 	}
-	
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 3
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b3_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_monument_regular
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -261,14 +238,9 @@ building_bureaucratic_1 = {
 		building_uplink_node
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_bureacracy
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_bureaucracy_script
@@ -326,16 +298,9 @@ building_bureaucratic_2 = {
 		building_network_junction
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_bureacracy
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_bureaucracy_script
@@ -394,16 +359,9 @@ building_bureaucratic_3 = {
 		building_system_conflux
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_bureacracy
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_bureaucracy_script
@@ -468,14 +426,9 @@ building_temple = {
 		building_uplink_node
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_temple
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -546,16 +499,9 @@ building_holotemple = {
 		building_network_junction
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_temple
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -627,16 +573,10 @@ building_sacred_nexus = {
 		building_system_conflux
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
-		}
+
+	inline_script = {
+		script = building_resources/vanilla_temple
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -701,14 +641,9 @@ building_uplink_node = {
 		building_hive_node
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_uplink_node
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -767,16 +702,9 @@ building_network_junction = {
 		building_hive_cluster
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_uplink_node
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -835,16 +763,9 @@ building_system_conflux = {
 		building_hive_confluence
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_uplink_node
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -888,24 +809,9 @@ building_hive_node = {
 		building_temple
 		building_uplink_node
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = synaptic_reinforcement
-				}
-			}
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_hive_node
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_synaptic_node_script
@@ -948,25 +854,9 @@ building_hive_cluster = {
 		building_network_junction
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = synaptic_reinforcement
-				}
-			}
-			energy = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_hive_node
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_synaptic_node_script
@@ -1010,25 +900,10 @@ building_hive_confluence = {
 		building_system_conflux
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = synaptic_reinforcement
-				}
-			}
-			energy = 2
-		}
+	
+	inline_script = {
+		script = building_resources/vanilla_hive_node
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_synaptic_node_script
@@ -1075,14 +950,9 @@ building_sacrificial_temple_1 = {
 		building_uplink_node
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_sacrificial_temple
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -1142,16 +1012,9 @@ building_sacrificial_temple_2 = {
 		building_network_junction
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b3_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_sacrificial_temple
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -1206,17 +1069,9 @@ building_sacrificial_temple_3 = {
 		building_hive_confluence
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
-			volatile_motes = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_sacrificial_temple
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -1267,20 +1122,9 @@ building_galactic_memorial_1 = {
 		building_simulation_1
 		building_sensorium_1
 	}
-
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 1
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			minerals = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_regular
+		tier = 1
 	}
 	prerequisites = {
 		"tech_cultural_heritage"
@@ -1337,21 +1181,9 @@ building_galactic_memorial_2 = {
 		building_sensorium_2
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 2
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			minerals = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_regular
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -1407,21 +1239,10 @@ building_galactic_memorial_3 = {
 		building_sensorium_3
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 3
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
-		}
-		upkeep = {
-			minerals = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
-		}
+	
+	inline_script = {
+		script = building_resources/vanilla_memorial_regular
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -1473,16 +1294,9 @@ building_simulation_1 = {
 		}
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 1
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b1_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_machine
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -1552,16 +1366,9 @@ building_simulation_2 = {
 		building_sensorium_2
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 2
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b2_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_machine
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -1626,16 +1433,9 @@ building_simulation_3 = {
 		building_sensorium_3
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 3
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b3_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_machine
+		tier = 3
 	}
 
 	inline_script = {
@@ -1696,16 +1496,9 @@ building_corporate_monument = {
 		building_sensorium_1
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 1
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b1_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_megacorp
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -1767,18 +1560,10 @@ building_corporate_site = {
 		building_sensorium_2
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 2
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b2_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_megacorp
+		tier = 2
 	}
-
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
 		tier = 2
@@ -1839,18 +1624,10 @@ building_corporate_forum = {
 		building_sensorium_3
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 3
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b3_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_megacorp
+		tier = 3
 	}
-
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
 		tier = 3
@@ -1901,16 +1678,9 @@ building_sensorium_1 = {
 		}
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 1
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b1_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_hive
+		tier = 1
 	}
 
 	inline_script = {
@@ -1982,16 +1752,9 @@ building_sensorium_2 = {
 		building_simulation_2
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 2
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b2_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_hive
+		tier = 2
 	}
 
 	inline_script = {
@@ -2056,16 +1819,9 @@ building_sensorium_3 = {
 		building_simulation_3
 	}
 
-	resources = {
-		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 3
-			multiplier = owner.trigger:num_ascension_perks
-		}
-		cost = {
-			minerals = @b3_minerals
-		}
+	inline_script = {
+		script = building_resources/vanilla_memorial_hive
+		tier = 3
 	}
 
 	inline_script = {
@@ -2166,6 +1922,9 @@ building_autocurating_vault = {
 			energy = 8
 			rare_crystals = 3
 		}
+		produces = {
+			unity = 10
+		}
 	}
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
@@ -2235,36 +1994,9 @@ building_citadel_of_faith = {
 		building_corporate_vault
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			trigger = {
-				has_ringworld_output_boost = no
-			}
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		cost = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			minerals = 1200
-			rare_crystals = 375
-		}
-		upkeep = {
-			trigger = {
-				has_ringworld_output_boost = no
-			}
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			energy = 8
-			rare_crystals = 3
-		}
+	inline_script = {
+		script = building_resources/vanilla_unity_vault
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_citadel_faith_script
@@ -2318,38 +2050,10 @@ building_corporate_vault = {
 		building_alpha_hub
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			trigger = {
-				has_ringworld_output_boost = no
-			}
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-		}
-		cost = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			minerals = 1200
-			rare_crystals = 375
-		}
-		upkeep = {
-			trigger = {
-				has_ringworld_output_boost = no
-			}
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				has_ringworld_output_boost = yes
-			}
-			energy = 8
-			rare_crystals = 3
-		}
+	inline_script = {
+		script = building_resources/vanilla_unity_vault
+		tier = 1
 	}
-
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
 		tier = 1
@@ -2395,7 +2099,8 @@ building_alpha_hub = {
 		building_corporate_vault
 	}
 	inline_script = {
-		script = building_resources/vanilla_alpha_hub
+		script = building_resources/vanilla_unity_vault
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_alpha_hub_script
@@ -2454,14 +2159,9 @@ building_organic_sanctuary = {
 		tier = 1
 		maintenance = no
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_organic_paradise
+		tier = 1
 	}
 
 	upgrades = {
@@ -2557,16 +2257,9 @@ building_organic_paradise = {
 		tier = 2
 		maintenance = yes
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_organic_paradise
+		tier = 2
 	}
 
 	prerequisites = { "tech_paradise_dome" }
@@ -2648,18 +2341,9 @@ building_league_offices = {
 	destroy_trigger = {
 		has_modifier = slave_colony
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
-			minor_artifacts = 30
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_league_offices
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/unity/berg_league_script

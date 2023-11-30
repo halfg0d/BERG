@@ -1,0 +1,63 @@
+resources = {
+	category = planet_buildings
+	#vanilla
+	cost = {
+		minerals = @berg_res_foundry_t$tier$_cost_mineral
+		volatile_motes = @berg_res_foundry_$tier$_cost_motes
+	}
+	upkeep = {
+		energy = @berg_res_foundry_t$tier$_upkeep_energy
+		volatile_motes = @berg_res_foundry_t$tier$_upkeep_motes
+	}
+	#vanilla Ringworld Boost
+	cost = {
+		trigger = {
+			always = $RW_boost$
+			has_ringworld_output_boost = yes
+		}
+		minerals = @berg_res_foundry_t$tier$_RW_cost_mineral
+		volatile_motes = @berg_res_foundry_t$tier$_RW_cost_motes
+	}
+	upkeep = {
+		trigger = {
+			always = $RW_boost$
+			has_ringworld_output_boost = yes
+		}
+		energy = @berg_res_foundry_t$tier$_RW_upkeep_energy
+		volatile_motes = @berg_res_foundry_t$tier$_RW_upkeep_motes
+	}
+	#Osa
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_res_foundry_t$tier$_osa_upkeep_energy_add
+		minerals = @berg_res_foundry_t$tier$_osa_upkeep_mineral
+	}
+	produces = {
+		trigger = { berg_has_osa_mod = yes }
+		alloys = @berg_res_foundry_t$tier$_osa_produce_alloy
+	}
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+			has_active_tradition = tr_nanobiotics_2
+		}
+		minerals = @berg_res_foundry_t$tier$_osa_upkeep_mineral_tradition
+	}
+	produce = {
+		trigger = {
+			berg_has_osa_mod = yes
+			has_active_tradition = tr_nanobiotics_2
+		}
+		alloys = @berg_res_foundry_t$tier$_osa_produce_alloy_tradition
+	}
+	#Osa Ringworld Boost
+	upkeep = {
+		trigger = {
+			always = $RW_boost$
+			berg_has_osa_mod = yes
+			has_ringworld_output_boost = yes
+		}
+		energy = @berg_res_foundry_t$tier$_osa_RW_upkeep_energy_add
+		minerals = @berg_res_foundry_t$tier$_osa_RW_upkeep_mineral
+	}
+}
