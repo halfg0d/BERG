@@ -144,7 +144,8 @@ building_commercial_megaplex = {
 	}
 
 	upgrades = {
-		"building_commercial_trading_terminal"
+		"building_commercial_trading_terminal" #OSA
+		"building_avb_commercial_3" #AVB
 	}
 	show_tech_unlock_if = {
 		is_regular_empire = yes
@@ -223,6 +224,9 @@ building_galactic_stock_exchange = {
 
 	prerequisites = {
 		"tech_galactic_markets"
+	}
+	upgrades = {
+		"building_avb_galactic_stock_exchange_2" #AVB
 	}
 	ai_resource_production = {
 		energy = 5

@@ -63,8 +63,9 @@ building_military_academy = {
 		berg_reanimator_civic = no
 	}
 	upgrades = {
-		building_eutab_battle_praxeum # EUTAB
+		"building_eutab_battle_praxeum" # EUTAB
 		"building_mechanicum_academy" #OSA
+		"building_avb_military_academy_2" #AVB
 	}
 }
 
@@ -101,7 +102,9 @@ building_dread_encampment = {
 			energy = @b1_upkeep
 		}
 	}
-
+	upgrades = {
+		"building_avb_dread_encampment_2" #AVB
+	}
 	triggered_desc = {
 		trigger = {
 			always = yes
@@ -164,6 +167,7 @@ building_fortress = {
 	}
 	upgrades = {
 		"building_zitadom" #OSA
+		"building_avb_stronghold_3" #AVB
 	}
 }
 
@@ -193,7 +197,8 @@ building_planetary_shield_generator = {
 		}
 	}
 	upgrades = {
-		"building_mem_planetary_shield_generator"
+		"building_mem_planetary_shield_generator" #OSA
+		"building_avb_planetary_shield_generator_2" #AVB
 	}
 	potential = {
 		OR = {

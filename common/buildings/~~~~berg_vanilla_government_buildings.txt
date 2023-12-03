@@ -72,6 +72,9 @@ building_noble_estates = {
 			unity = 20
 		}
 	}
+	upgrades = {
+		"building_avb_noble_estates_2" #AVB
+	}
 }
 
 building_slave_processing = {
@@ -133,6 +136,9 @@ building_slave_processing = {
 	}
 	prerequisites = {
 		"tech_neural_implants"
+	}
+	upgrades = {
+		"building_avb_slave_processing_2" #AVB
 	}
 }
 
@@ -270,6 +276,9 @@ building_hall_judgment = {
 	prerequisites = {
 		"tech_colonial_centralization"
 	}
+	upgrades = {
+		"building_avb_enforcement_3"
+	}
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
@@ -343,7 +352,8 @@ building_sentinel_posts = {
 		is_gestalt = yes
 	}
 	upgrades = {
-		building_sentinel_hubs
+		"building_sentinel_hubs"
+		"building_avb_sentinel_posts_2" #AVB
 	}
 }
 
@@ -522,6 +532,9 @@ building_psi_corps = {
 			unity = 20
 		}
 	}
+	upgrades = {
+		"building_avb_psi_corps_2"
+	}
 }
 
 building_embassy = {
@@ -692,6 +705,9 @@ building_grand_embassy = {
 
 	prerequisites = {
 		"tech_xeno_relations"
+	}
+	upgrades = {
+		"building_avb_grand_embassy_2"
 	}
 
 	show_tech_unlock_if = {

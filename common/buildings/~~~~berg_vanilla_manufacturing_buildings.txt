@@ -136,6 +136,9 @@ building_foundry_3 = {
 	prerequisites = {
 		tech_alloys_2
 	}
+	upgrades = {
+		"building_avb_foundry_4"
+	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_foundry_script
 		tier = 3
@@ -378,6 +381,9 @@ building_factory_3 = {
 
 	prerequisites = {
 		tech_luxuries_2
+	}	
+	upgrades = {
+		"building_avb_factory_4"
 	}
 }
 
@@ -422,6 +428,9 @@ building_refinery = {
 	prerequisites = {
 		"tech_exotic_gases"
 	}
+	upgrades = {
+		"building_avb_refinery_2"
+	}
 }
 
 building_chemical_plant = {
@@ -465,6 +474,9 @@ building_chemical_plant = {
 	}
 	prerequisites = {
 		"tech_volatile_motes"
+	}
+	upgrades = {
+		"building_avb_chemical_plant_2"
 	}
 }
 
@@ -514,6 +526,7 @@ building_crystal_plant = {
 
 	upgrades = {
 		"building_crystal_plant_2"
+		"building_avb_crystal_plant_2"
 	}
 }
 building_crystal_plant_2 = {
@@ -596,6 +609,9 @@ building_nanite_transmuter = {
 	prerequisites = {
 		"tech_nanite_transmutation"
 	}
+	upgrades = {
+		"building_avb_nanite_transmuter_2"
+	}
 
 	ai_resource_production = {
 		rare_crystals = 2
@@ -668,6 +684,9 @@ building_ministry_production = {
 	prerequisites = {
 		"tech_global_production_strategy"
 	}
+	upgrades = {
+		"building_avb_ministry_production_2"
+	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_ministry_script
 		tier = 1
@@ -730,7 +749,9 @@ building_production_center = {
 		has_major_upgraded_capital = yes
 	}
 
-	
+	upgrades = {
+		"building_avb_production_center_2"
+	}
 
 	resources = {
 		category = planet_buildings
@@ -983,5 +1004,8 @@ building_archaeo_refinery = {
 	}
 	prerequisites = {
 		"tech_archaeo_refinery"
+	}
+	upgrades = {
+		"building_avb_archaeo_refinery_2"
 	}
 }

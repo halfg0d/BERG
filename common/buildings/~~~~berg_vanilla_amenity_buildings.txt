@@ -121,6 +121,7 @@ building_paradise_dome = {
 	}
 	upgrades = {
 		building_eutab_gaia_district # EUTAB
+		"building_avb_residence_3" #AVB
 	}
 }
 
@@ -253,6 +254,9 @@ building_communal_housing_large = {
 		tier = 2
 	}
 
+	upgrades = {
+		"building_avb_communal_housing_3" #AVB
+	}
 	prerequisites = {
 		"tech_paradise_dome"
 	}
@@ -339,7 +343,9 @@ building_drone_megastorage = {
 		tier = 2
 	}
 
-
+	upgrades = {
+		"building_avb_drone_storage_3" #AVB
+	}
 	prerequisites = {
 		"tech_micro_replicators"
 	}
@@ -423,6 +429,9 @@ building_expanded_warren = {
 
 	prerequisites = {
 		"tech_housing_2"
+	}
+	upgrades = {
+		"building_avb_warren_3" #AVB
 	}
 }
 
@@ -543,6 +552,9 @@ building_hyper_entertainment_forum = {
 		}
 	}
 
+	upgrades = {
+		"building_avb_holo_theatre_3" #AVB
+	}
 	prerequisites = {
 		"tech_hyper_entertainment_forum"
 	}
@@ -741,6 +753,9 @@ building_hospital = {
 	show_tech_unlock_if = {
 		is_regular_empire = yes
 	}
+	upgrades = {
+		"building_avb_clinic_3" #AVB
+	}
 }
 
 building_maintenance_depot = {
@@ -787,6 +802,7 @@ building_maintenance_depot = {
 	}
 	upgrades = {
 		building_eutab_preservation_nexus # EUTAB
+		"building_avb_maintenance_depot_2" #AVB
 	}
 }
 
@@ -826,6 +842,9 @@ building_slave_huts = {
 			minerals = 15
 			food = 15
 		}
+	}
+	upgrades = {
+		"building_avb_slave_huts_2" #AVB
 	}
 }
 
@@ -867,6 +886,9 @@ building_overseer_homes = {
 			minerals = 10
 			food = 10
 		}
+	}
+	upgrades = {
+		"building_avb_overseer_homes_2" #AVB
 	}
 }
 
@@ -928,6 +950,9 @@ building_ranger_lodge = {
 		}
 	}
 
+	upgrades = {
+		"building_avb_ranger_lodge_2" #AVB
+	}
 	on_built = {
 		planet = {
 			add_blocker = { type = d_big_nature_preserve_blocker }
@@ -994,5 +1019,8 @@ building_toxic_bath = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+	}
+	upgrades = {
+		"building_avb_toxic_bath_2" #AVB
 	}
 }

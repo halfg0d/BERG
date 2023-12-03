@@ -1,0 +1,94 @@
+# Irony this is a placeholder file please ignore it
+#AVB-Amenity
+building_avb_residence_3 = { potential = { always = no } allow = { always = no } }
+building_avb_communal_housing_3 = { potential = { always = no } allow = { always = no } }
+building_avb_drone_storage_3 = { potential = { always = no } allow = { always = no } }
+building_avb_warren_3 = { potential = { always = no } allow = { always = no } }
+building_avb_holo_theatre_3 = { potential = { always = no } allow = { always = no } }
+building_avb_clinic_3 = { potential = { always = no } allow = { always = no } }
+building_avb_maintenance_depot_2 = { potential = { always = no } allow = { always = no } }
+building_avb_overseer_homes_2 = { potential = { always = no } allow = { always = no } }
+building_avb_ranger_lodge_2 = { potential = { always = no } allow = { always = no } }
+building_avb_toxic_bath_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Army
+building_avb_military_academy_2 = { potential = { always = no } allow = { always = no } }
+building_avb_dread_encampment_2 = { potential = { always = no } allow = { always = no } }
+building_avb_stronghold_3 = { potential = { always = no } allow = { always = no } }
+building_avb_planetary_shield_generator_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Capital
+building_avb_capital_4 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_capital_4 = { potential = { always = no } allow = { always = no } }
+building_avb_hive_capital_3 = { potential = { always = no } allow = { always = no } }
+building_avb_hab_capital_3 = { potential = { always = no } allow = { always = no } }
+building_avb_resort_capital_3 = { potential = { always = no } allow = { always = no } }
+building_avb_slave_capital_3 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_capital_6 = { potential = { always = no } allow = { always = no } }
+building_avb_hive_capital_4 = { potential = { always = no } allow = { always = no } }
+building_avb_capital_6 = { potential = { always = no } allow = { always = no } }
+#AVB-Deposit
+building_avb_gas_extractors_2 = { potential = { always = no } allow = { always = no } }
+building_avb_crystal_mines_2 = { potential = { always = no } allow = { always = no } }
+building_avb_mote_harvesters_2 = { potential = { always = no } allow = { always = no } }
+building_avb_betharian_power_plant_2 = { potential = { always = no } allow = { always = no } }
+building_avb_xeno_zoo_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Government
+building_avb_noble_estates_2 = { potential = { always = no } allow = { always = no } }
+building_avb_slave_processing_2 = { potential = { always = no } allow = { always = no } }
+building_avb_enforcement_3 = { potential = { always = no } allow = { always = no } }
+building_avb_sentinel_posts_2 = { potential = { always = no } allow = { always = no } }
+building_avb_psi_corps_2 = { potential = { always = no } allow = { always = no } }
+building_avb_grand_embassy_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Manufacturing
+building_avb_archaeo_refinery_2 = { potential = { always = no } allow = { always = no } }
+building_avb_foundry_4 = { potential = { always = no } allow = { always = no } }
+building_avb_factory_4 = { potential = { always = no } allow = { always = no } }
+building_avb_refinery_2 = { potential = { always = no } allow = { always = no } }
+building_avb_chemical_plant_2 = { potential = { always = no } allow = { always = no } }
+building_avb_crystal_plant_2 = { potential = { always = no } allow = { always = no } }
+building_avb_nanite_transmuter_2 = { potential = { always = no } allow = { always = no } }
+building_avb_ministry_production_2 = { potential = { always = no } allow = { always = no } }
+building_avb_production_center_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Paragon
+building_avb_paragon_memory_vaults_2 = { potential = { always = no } allow = { always = no } }
+#AVB-PopAssembly
+building_avb_robot_assembly_plant_2 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_assembly_plant_2 = { potential = { always = no } allow = { always = no } }
+building_avb_spawning_pool_2 = { potential = { always = no } allow = { always = no } }
+building_avb_offspring_nest_2 = { potential = { always = no } allow = { always = no } }
+building_avb_clone_vats_2 = { potential = { always = no } allow = { always = no } }
+building_avb_posthumous_employment_center_2 = { potential = { always = no } allow = { always = no } }
+building_avb_toxic_bath_hive_2 = { potential = { always = no } allow = { always = no } }
+building_avb_toxic_bath_machine_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Research
+building_avb_archaeostudies_faculty_2 = { potential = { always = no } allow = { always = no } }
+building_avb_vultaum_reality_computer_2 = { potential = { always = no } allow = { always = no } }
+building_avb_league_offices_2 = { potential = { always = no } allow = { always = no } }
+building_avb_research_lab_4 = { potential = { always = no } allow = { always = no } }
+building_avb_institute_2 = { potential = { always = no } allow = { always = no } }
+building_avb_supercomputer_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Resource
+building_avb_baol_organic_plant_2 = { potential = { always = no } allow = { always = no } }
+building_avb_hydroponics_farm_2 = { potential = { always = no } allow = { always = no } }
+building_avb_food_processing_3 = { potential = { always = no } allow = { always = no } }
+building_avb_mineral_purification_3 = { potential = { always = no } allow = { always = no } }
+building_avb_energy_grid_3 = { potential = { always = no } allow = { always = no } }
+building_avb_resource_silo_2 = { potential = { always = no } allow = { always = no } }
+building_avb_bio_reactor_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Trade
+building_avb_commercial_3 = { potential = { always = no } allow = { always = no } }
+building_avb_galactic_stock_exchange_2 = { potential = { always = no } allow = { always = no } }
+#AVB-Unity
+building_avb_bureaucratic_4 = { potential = { always = no } allow = { always = no } }
+building_avb_temple_4 = { potential = { always = no } allow = { always = no } }
+building_avb_machine_unity_4 = { potential = { always = no } allow = { always = no } }
+building_avb_hive_unity_4 = { potential = { always = no } allow = { always = no } }
+building_avb_death_temple_4 = { potential = { always = no } allow = { always = no } }
+building_avb_monument_4 = { potential = { always = no } allow = { always = no } }
+building_avb_monument_corp_4 = { potential = { always = no } allow = { always = no } }
+building_avb_monument_hive_4 = { potential = { always = no } allow = { always = no } }
+building_avb_monument_machine_4 = { potential = { always = no } allow = { always = no } }
+building_avb_autocurating_vault_2 = { potential = { always = no } allow = { always = no } }
+building_avb_citadel_of_faith_2 = { potential = { always = no } allow = { always = no } }
+building_avb_corporate_vault_2 = { potential = { always = no } allow = { always = no } }
+building_avb_alpha_hub_2 = { potential = { always = no } allow = { always = no } }
+building_avb_organic_sanctuary_3 = { potential = { always = no } allow = { always = no } }
