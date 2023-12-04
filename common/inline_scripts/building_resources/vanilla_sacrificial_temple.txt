@@ -8,7 +8,7 @@ resources = {
 	upkeep = {
 		energy = @berg_res_sacrificial_temple_t$tier$_upkeep
 		exotic_gases = @berg_res_sacrificial_temple_t$tier$_upkeep_gases
-	}\
+	}
 	#Osa
 	upkeep = {
 		trigger = { berg_has_osa_mod = yes }

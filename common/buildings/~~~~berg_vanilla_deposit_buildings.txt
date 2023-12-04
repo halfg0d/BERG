@@ -33,6 +33,9 @@ building_mote_harvesters = {
 	prerequisites = {
 		"tech_mine_volatile_motes"
 	}
+	upgrades = {
+		"building_avb_gas_extractors_2" #AVB
+	}
 }
 
 building_gas_extractors = {
@@ -66,6 +69,9 @@ building_gas_extractors = {
 	prerequisites = {
 		"tech_mine_exotic_gases"
 	}
+	upgrades = {
+		"building_avb_crystal_mines_2" #AVB
+	}
 }
 
 building_crystal_mines = {
@@ -98,6 +104,9 @@ building_crystal_mines = {
 	prerequisites = {
 		"tech_mine_rare_crystals"
 	}
+	upgrades = {
+		"building_avb_mote_harvesters_2" #AVB
+	}
 }
 
 building_betharian_power_plant = {
@@ -128,6 +137,9 @@ building_betharian_power_plant = {
 	}
 	prerequisites = {
 		"tech_mine_betharian"
+	}
+	upgrades = {
+		"building_avb_betharian_power_plant_2" #AVB
 	}
 }
 
@@ -198,5 +210,8 @@ building_xeno_zoo = {
 	}
 	prerequisites = {
 		"tech_alien_life_studies"
+	}
+	upgrades = {
+		"building_avb_xeno_zoo_2" #AVB
 	}
 }

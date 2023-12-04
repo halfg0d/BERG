@@ -192,6 +192,9 @@ building_hypercomms_forum = {
 	prerequisites = {
 		"tech_hypercomms_forum"
 	}
+	upgrades = {
+		"building_avb_monument_4" #AVB
+	}
 
 	show_tech_unlock_if = {
 		is_gestalt = no
@@ -371,6 +374,9 @@ building_bureaucratic_3 = {
 
 	prerequisites = {
 		"tech_galactic_bureaucracy"
+	}
+	upgrades = {
+		"building_avb_bureaucratic_4" #AVB
 	}
 
 	show_tech_unlock_if = {
@@ -591,6 +597,9 @@ building_sacred_nexus = {
 	prerequisites = {
 		"tech_consecration_fields"
 	}
+	upgrades = {
+		"building_avb_temple_4" #AVB
+	}
 
 	show_tech_unlock_if = {
 		OR = {
@@ -775,6 +784,9 @@ building_system_conflux = {
 	prerequisites = {
 		"tech_galactic_bureaucracy"
 	}
+	upgrades = {
+		"building_avb_machine_unity_4" #AVB
+	}
 
 	show_tech_unlock_if = {
 		is_machine_empire = yes
@@ -911,6 +923,9 @@ building_hive_confluence = {
 	}
 	prerequisites = {
 		"tech_hive_confluence"
+	}
+	upgrades = {
+		"building_avb_hive_unity_4" #AVB
 	}
 }
 
@@ -1081,6 +1096,9 @@ building_sacrificial_temple_3 = {
 	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_consecration_fields"
+	}
+	upgrades = {
+		"building_avb_death_temple_4" #AVB
 	}
 
 	show_tech_unlock_if = {
@@ -1254,6 +1272,9 @@ building_galactic_memorial_3 = {
 
 	prerequisites = {
 		"tech_hypercomms_forum"
+	}
+	upgrades = {
+		"building_avb_monument_memorial_4" #AVB
 	}
 
 	show_tech_unlock_if = {
@@ -1450,6 +1471,9 @@ building_simulation_3 = {
 	prerequisites = {
 		"tech_hypercomms_forum"
 	}
+	upgrades = {
+		"building_avb_monument_machine_4" #AVB
+	}
 
 	show_tech_unlock_if = {
 		is_machine_empire = yes
@@ -1639,6 +1663,9 @@ building_corporate_forum = {
 
 	prerequisites = {
 		"tech_hypercomms_forum"
+	}
+	upgrades = {
+		"building_avb_monument_corp_4" #AVB
 	}
 
 	show_tech_unlock_if = {
@@ -1836,6 +1863,9 @@ building_sensorium_3 = {
 	prerequisites = {
 		"tech_hive_confluence"
 	}
+	upgrades = {
+		"building_avb_monument_hive_4" #AVB
+	}
 
 	show_tech_unlock_if = {
 		is_hive_empire = yes
@@ -1934,6 +1964,9 @@ building_autocurating_vault = {
 	prerequisites = {
 		"tech_autocurating_vault"
 	}
+	upgrades = {
+		"building_avb_autocurating_vault_2" #AVB
+	}
 
 	show_tech_unlock_if = {
 		is_machine_empire = no
@@ -2005,6 +2038,9 @@ building_citadel_of_faith = {
 	prerequisites = {
 		"tech_transcendent_faith"
 	}
+	upgrades = {
+		"building_avb_citadel_of_faith_2" #AVB
+	}
 }
 
 building_corporate_vault = {
@@ -2062,6 +2098,9 @@ building_corporate_vault = {
 	prerequisites = {
 		"tech_autocurating_vault"
 	}
+	upgrades = {
+		"building_avb_corporate_vault_2" #AVB
+	}
 
 	show_tech_unlock_if = {
 		is_megacorp = yes
@@ -2108,6 +2147,9 @@ building_alpha_hub = {
 	}
 	prerequisites = {
 		"tech_autocurating_vault"
+	}
+	upgrades = {
+		"building_avb_alpha_hub_2" #AVB
 	}
 
 	show_tech_unlock_if = {
@@ -2263,6 +2305,9 @@ building_organic_paradise = {
 	}
 
 	prerequisites = { "tech_paradise_dome" }
+	upgrades = {
+		"building_avb_organic_sanctuary_3" #AVB
+	}
 
 	show_tech_unlock_if = {
 		owner = { berg_is_servitor_empire = yes }
@@ -2351,5 +2396,8 @@ building_league_offices = {
 	}
 	prerequisites = {
 		"tech_secrets_league"
+	}
+	upgrades = {
+		"building_avb_league_offices_2" #AVB
 	}
 }

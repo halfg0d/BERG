@@ -72,7 +72,8 @@ building_hydroponics_farm = {
 	}
 	upgrades = {
 		"building_eutab_hydroponics_tower" # EUTAB
-		"building_hydroponics_station" #OSA?
+		"building_hydroponics_station" #OSA
+		"building_avb_hydroponics_farm_2" #AVB
 	}
 }
 
@@ -248,6 +249,9 @@ building_food_processing_center = {
 	prerequisites = {
 		"tech_food_processing_2"
 	}
+	upgrades = {
+		"building_avb_food_processing_3" #AVB
+	}
 }
 
 building_baol_organic_plant = {
@@ -301,6 +305,9 @@ building_baol_organic_plant = {
 	}
 	prerequisites = {
 		"tech_secrets_baol"
+	}
+	upgrades = {
+		"building_avb_baol_organic_plant_2"
 	}
 }
 
@@ -504,6 +511,9 @@ building_mineral_purification_hub = {
 	prerequisites = {
 		tech_mineral_purification_2
 	}
+	upgrades = {
+		"building_avb_mineral_purification_3" #AVB
+	}
 }
 
 building_energy_grid = {
@@ -684,6 +694,10 @@ building_energy_nexus = {
 	prerequisites = {
 		tech_power_hub_2
 	}
+	upgrades = {
+		"building_avb_energy_grid_3" #AVB
+		"building_eludium_plant"  #PD?
+	}
 }
 
 building_resource_silo = {
@@ -738,6 +752,9 @@ building_resource_silo = {
 	prerequisites = {
 		"tech_basic_industry"
 	}
+	upgrades = {
+		"building_avb_resource_silo_2" #AVB
+	}
 }
 
 building_bio_reactor = {
@@ -770,5 +787,8 @@ building_bio_reactor = {
 
 	prerequisites = {
 		"tech_bio_reactor"
+	}
+	upgrades = {
+		"building_avb_bio_reactor_2" #AVB
 	}
 }

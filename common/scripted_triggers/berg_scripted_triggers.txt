@@ -231,3 +231,19 @@ berg_can_duelist_be_changed = {
 		}
 	}
 }
+berg_has_avb_mod = {
+	has_global_flag = avb_mod_flag
+}
+berg_avb_build_imperial_capital = {
+	OR = {
+		berg_has_avb_mod = no
+		AND = {
+			berg_has_avb_mod = yes
+			OR = {
+				has_building = building_avb_machine_capital_6
+		    	has_building = building_avb_hive_capital_4
+			    has_building = building_avb_capital_6
+			}
+		}
+	}
+}

@@ -122,6 +122,9 @@ building_paragon_memory_vaults = {
 			}
 		}
 	}
+	upgrades = {
+		"building_avb_paragon_memory_vaults_2"
+	}
 
 	potential = {
 		custom_tooltip = {

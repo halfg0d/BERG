@@ -635,7 +635,8 @@ building_system_capital = {
 	}
 
 	upgrades = {
-		building_imperial_capital
+		"building_imperial_capital" #Vanilla
+		"building_avb_capital_4" #AVB
 	}
 }
 
@@ -1071,7 +1072,8 @@ building_machine_system_capital = {
 	}
 
 	upgrades = {
-		"building_imperial_machine_capital"
+		"building_imperial_machine_capital" #Vanilla
+		"building_avb_machine_capital_4" #AVB
 	}
 }
 
@@ -1211,7 +1213,8 @@ building_hive_major_capital = {
 	}
 
 	upgrades = {
-		"building_imperial_hive_capital"
+		"building_imperial_hive_capital" #Vanilla
+		"building_avb_hive_capital_3" #AVB
 	}
 
 	allow = {
@@ -1517,6 +1520,9 @@ building_hab_major_capital = {
 		planet_max_buildings_add = @buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
+	upgrades = {
+		"building_avb_hab_capital_3" #AVB
+	}
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
 		branch = 1 
@@ -1789,7 +1795,9 @@ building_resort_major_capital = {
 			energy = @b2_upkeep
 		}
 	}
-
+	upgrades = {
+		"building_avb_resort_capital_3" #AVB
+	}
 	planet_modifier = {
 		planet_housing_add = 10
 		planet_amenities_add = 10
@@ -1883,7 +1891,6 @@ building_slave_capital = {
 			energy = 2
 		}
 	}
-
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
@@ -1983,6 +1990,9 @@ building_slave_major_capital = {
 			energy = @b1_upkeep
 		}
 	}
+	upgrades = {
+		"building_avb_slave_capital_3"
+	}
 
 	planet_modifier = {
 		planet_housing_add = 10
@@ -2038,6 +2048,7 @@ building_imperial_capital = {
 	category = government
 
 	potential = {
+		berg_avb_build_imperial_capital = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -2169,6 +2180,7 @@ building_imperial_machine_capital = {
 	category = government
 
 	potential = {
+		berg_avb_build_imperial_capital = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -2270,6 +2282,7 @@ building_imperial_hive_capital = {
 	category = government
 
 	potential = {
+		berg_avb_build_imperial_capital = yes
 		exists = owner
 		owner = {
 			OR = {

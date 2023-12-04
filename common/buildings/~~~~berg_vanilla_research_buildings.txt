@@ -155,6 +155,9 @@ building_research_lab_3 = {
 	prerequisites = {
 		"tech_basic_science_lab_3"
 	}
+	upgrades = {
+		"building_avb_research_lab_4"
+	}
 }
 
 building_institute = {
@@ -235,6 +238,7 @@ building_institute = {
 		building_eutab_genetic_data_vault # EUTAB
 		building_eutab_afterlife_vault # EUTAB
 		building_eutab_foundation_institute_1 # EUTAB
+		"building_avb_institute_2" #AVB
 	}
 }
 
@@ -301,6 +305,7 @@ building_supercomputer = {
 	}
 	upgrades = {
 		building_eutab_hypercomputing_complex # EUTAB
+		"building_avb_supercomputer_2" #AVB
 	}
 
 	ai_resource_production = {
@@ -369,6 +374,9 @@ building_archaeostudies_faculty = {
 		"tech_archaeostudies"
 	}
 
+	upgrades = {
+		"building_avb_archaeostudies_faculty_2" #AVB
+	}
 	
 }
 
@@ -437,5 +445,8 @@ building_vultaum_reality_computer = {
 	}
 	prerequisites = {
 		"tech_secrets_vultaum"
+	}
+	upgrades = {
+		"building_avb_vultaum_reality_computer_2" #AVB
 	}
 }
