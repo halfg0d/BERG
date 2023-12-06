@@ -17,3 +17,4 @@ is_bugged_evolutionary_architects = { always = no }
 is_bugged_militant_zealots = { always = no }
 planet_has_ecocontinuity = { always = no }
 has_megacorp_mod_active = { always = no }
+has_acot = { always = no }

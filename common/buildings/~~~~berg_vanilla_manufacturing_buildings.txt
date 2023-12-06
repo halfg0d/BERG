@@ -241,7 +241,7 @@ building_factory_1 = {
 		bonus = no
 	}
 	inline_script = {
-		script = buildings_resources/vanilla_factory
+		script = building_resources/vanilla_factory
 		tier = 1
 		RW_boost = "no"
 	}
@@ -296,7 +296,7 @@ building_factory_2 = {
 		}
 	}
 	inline_script = {
-		script = buildings_resources/vanilla_factory
+		script = building_resources/vanilla_factory
 		tier = 2
 		RW_boost = "no"
 	}
@@ -369,7 +369,7 @@ building_factory_3 = {
 	}
 
 	inline_script = {
-		script = buildings_resources/vanilla_factory
+		script = building_resources/vanilla_factory
 		tier = 3
 		RW_boost = "yes"
 	}

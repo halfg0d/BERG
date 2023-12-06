@@ -409,7 +409,7 @@ building_private_research_initiative = {
 	}
 	#Vanilla
 	triggered_planet_modifier = {
-		potential = { berg_has_osa_mod = yes }
+		potential = { berg_has_osa_mod = no }
 		modifier = {
 			job_clerk_add = 2
 		}
