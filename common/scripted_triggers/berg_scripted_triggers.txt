@@ -247,3 +247,6 @@ berg_avb_build_imperial_capital = {
 		}
 	}
 }
+berg_has_acot_mod = {
+	has_acot = yes
+}

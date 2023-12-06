@@ -24,27 +24,82 @@ building_ancient_control_center = {
 		building_major_capital
 		building_ancient_palace
 	}
-
-	planet_modifier = {
-		planet_housing_add = 12
-		planet_amenities_add = 12
-		job_fe_maintenance_bot_add = 4
-		job_fe_guardian_bot_add = 5
-		planet_max_buildings_add = 11
+	#Vanilla
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = no
+		}
+		modifier = {
+			planet_housing_add = 12
+			planet_amenities_add = 12
+			job_fe_maintenance_bot_add = 4
+			job_fe_guardian_bot_add = 5
+			planet_max_buildings_add = 11
+		}
+	}
+	#ACOT \/
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+		}
+		modifier = {
+			planet_housing_add = 15
+			planet_amenities_add = 15
+			planet_max_buildings_add = 15
+		}
+	}
+	#DEFEARTH
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+			exists = owner
+			owner = { 
+				is_fallen_machine_empire = no
+			}
+		}
+		modifier = {
+			job_coordinator_add = 5
+			job_replicator_add = 6
+			job_patrol_drone_add = 3
+			job_maintenance_drone_add = 4
+		}
+	}
+	#FE
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+			exists = owner
+			owner = { 
+				is_fallen_machine_empire = yes
+			}
+		}
+		modifier = {
+			job_fe_maintenance_bot_add = 4
+			job_fe_guardian_bot_add = 5
+		}
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b2_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 10
 		}
 	}
 
 	upgrades = {
 	}
+	ai_weight = {
+		weight = 100
+	}	
 }
 
 building_ancient_palace = {
@@ -69,15 +124,20 @@ building_ancient_palace = {
 		building_major_capital
 		building_ancient_control_center
 	}
-
-	planet_modifier = {
-		planet_housing_add = 12
-		planet_amenities_add = 12
-		planet_max_buildings_add = 11
-	}
-
+	#Vanilla
 	triggered_planet_modifier = {
 		potential = {
+			berg_has_acot_mod = no
+		}
+		modifier = {
+			planet_housing_add = 12
+			planet_amenities_add = 12
+			planet_max_buildings_add = 11
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = no
 			exists = owner
 			owner = { is_fallen_empire_spiritualist = no }
 		}
@@ -86,9 +146,9 @@ building_ancient_palace = {
 			job_fe_protector_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
+			berg_has_acot_mod = no
 			exists = owner
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
@@ -97,19 +157,32 @@ building_ancient_palace = {
 			job_fe_protector_add = 2
 		}
 	}
+	#ACOT
+	inline_script = {
+		script = ACOT/berg_ancient_palace
+	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b2_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 10
 		}
 	}
 
 	upgrades = {
 	}
+	ai_weight = {
+		weight = 100
+	}	
 }
 
 # Habitat Administration
@@ -125,7 +198,7 @@ building_hab_fe_capital = {
 	category = government
 
 	potential = {
-		is_planet_class = pc_habitat
+		berg_is_habitat = yes
 		exists = owner
 		owner = { is_fallen_empire = yes }
 	}
@@ -218,15 +291,25 @@ building_affluence_center = {
 
 	resources = {
 		category = planet_buildings
+		#Vanilla
 		produces = {
 			consumer_goods = 50
 		}
 		cost = {
+			trigger = { berg_has_acot_mod = no }
 			minerals = @b3_minerals
 		}
 		upkeep = {
+			trigger = { berg_has_acot_mod = no }
 			minerals = 25
 			energy = 10
+		}
+		#ACOT
+		produces = {
+			trigger = { berg_has_acot_mod = yes }
+			consumer_goods = 150
+			unity = 100
+			society_research = 100
 		}
 	}
 
@@ -243,6 +326,7 @@ building_affluence_center = {
 	}
 
 	upgrades = {
+		building_ae_affluence_center #ACOT
 	}
 }
 
@@ -275,8 +359,17 @@ building_nourishment_center = {
 			}
 		}
 	}
-
 	planet_modifier = {
+	}
+	#ACOT
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+		}
+		modifier = {
+			biological_pop_happiness = 0.20
+			BIOLOGICAL_pop_growth_speed = 0.10
+		}
 	}
 
 	resources = {
@@ -285,10 +378,23 @@ building_nourishment_center = {
 			food = 100
 		}
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b3_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 20
+		}
+		#ACOT
+		produces = {
+			trigger = {
+				berg_has_acot_mod = yes
+			}
+			food = 100
 		}
 	}
 
@@ -305,6 +411,7 @@ building_nourishment_center = {
 	}
 
 	upgrades = {
+		building_ae_nourishment_center #ACOT
 	}
 }
 
@@ -344,6 +451,9 @@ building_dimensional_fabricator = {
 	resources = {
 		category = planet_buildings
 		produces = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = 100
 			rare_crystals = @b3_rare_upkeep
 			exotic_gases = @b3_rare_upkeep
@@ -351,6 +461,7 @@ building_dimensional_fabricator = {
 		}
 		produces = {
 			trigger = {
+				berg_has_acot_mod = no
 				exists = owner
 				owner = { is_fallen_empire = yes }
 			}
@@ -359,10 +470,31 @@ building_dimensional_fabricator = {
 			sr_living_metal = 2
 		}	# Fixed Fallen Empire being unable to build new ships.
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b3_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 20
+		}
+		#ACOT
+		produces = {
+			trigger = {
+				berg_has_acot_mod = yes
+			}
+			minerals = 200
+			rare_crystals = 20
+			exotic_gases = 20
+			volatile_motes = 20		
+			sr_zro = 10
+			nanites = 10
+			sr_dark_matter = 10
+			acot_sr_dark_energy = 10
+			sr_living_metal = 10	
 		}
 	}
 
@@ -379,6 +511,7 @@ building_dimensional_fabricator = {
 	}
 
 	upgrades = {
+		building_ae_dimensional_fabricator #ACOT
 	}
 }
 
@@ -417,15 +550,29 @@ building_class_4_singularity = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b3_minerals
 		}
 		produces = {
 			energy = 250
 		}
+		#ACOT
+		produces = {
+			trigger = {
+				berg_has_acot_mod = yes
+			}
+			energy = 50
+			acot_sr_dark_energy = 30
+			sr_dark_matter = 30
+			physics_research = 30
+		}
 	}
 
 	upgrades = {
-	}
+		building_ae_class_4_singularity #ACOT
+	} 
 
 	on_queued = {
 		owner = {
@@ -471,22 +618,45 @@ building_nano_forge = {
 
 	planet_modifier = {
 	}
-
+	#ACOT
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+		}
+		modifier = {
+			planet_building_build_speed_mult = 0.10
+		}
+	}
 	resources = {
 		category = planet_buildings
 		produces = {
 			alloys = 25
 		}
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b3_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = 50
 			energy = 10
+		}
+		#ACOT
+		produces = {
+			trigger = {
+				berg_has_acot_mod = yes
+			}
+			alloys = 125
+			engineering_research = 20
 		}
 	}
 
 	upgrades = {
+		building_ae_nano_forge #ACOT
 	}
 
 	on_queued = {
@@ -528,14 +698,28 @@ building_master_archive = {
 			engineering_research = 100
 		}
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b2_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 20
+		}
+		#ACOT
+		produces = {
+			trigger = {
+				berg_has_acot_mod = yes
+			}
+			minor_artifacts = 5
 		}
 	}
 
 	upgrades = {
+		building_ae_master_archive #ACOT
 	}
 }
 
@@ -556,21 +740,72 @@ building_empyrean_shrine = {
 		building_citadel_of_faith
 	}
 
-	planet_modifier = {
-		job_fe_augur_add = 3
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				berg_has_acot_mod = no
+				AND = {
+					berg_has_acot_mod = yes
+					exists = owner
+					owner = { is_fallen_empire = yes }
+				}
+			}
+		}
+		modifier = {
+			job_fe_augur_add = 3
+		}
+	}
+	#ACOT
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+			exists = owner
+			owner = { 
+				is_fallen_empire = no 
+				is_spiritualist = yes
+			}
+		}
+		job_priest_add = 10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+			exists = owner
+			owner = { 
+				is_fallen_empire = no 
+				is_spiritualist = no
+			}
+		}
+		job_culture_worker_add = 10
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b3_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 10
+		}
+		#ACOT
+		produces = {
+			trigger = {
+				berg_has_acot_mod = yes
+			}
+			society_research = 100
+			sr_zro = 50
+			unity = 50
 		}
 	}
 
 	upgrades = {
+		building_ae_empyrean_shrine #ACOT
 	}
 }
 
@@ -592,18 +827,26 @@ building_ancient_cryo_chamber = {
 	resources = {
 		category = planet_buildings
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b2_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 20
 		}
 	}
 
 	upgrades = {
+		building_ae_ancient_cryo_chamber #ACOT
 	}
 }
 
-building_fe_xeno_zoo = {
+#Vanilla version
+building_fe_xeno_zoo_vanilla = {
 	base_buildtime = @b2_time
 	capital = yes
 	can_build = no
@@ -611,8 +854,10 @@ building_fe_xeno_zoo = {
 	position_priority = 0
 
 	category = amenity
+	icon = building_fe_xeno_zoo
 
 	potential = {
+		berg_has_acot_mod = no
 		exists = owner
 		owner = {
 			is_fallen_empire = yes
@@ -643,6 +888,45 @@ building_fe_xeno_zoo = {
 		}
 	}
 
+	upgrades = {
+	}
+}
+#ACOT version
+building_fe_xeno_zoo = {
+	base_buildtime = 480
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	position_priority = 0
+	
+	potential = {
+		berg_has_acot_mod = yes
+		exists = owner
+		owner = { 
+			is_fallen_empire = yes 
+			is_xenophile = yes
+		}
+	}	
+	
+	convert_to = {
+		building_ae_ancient_palace
+		building_ae_ancient_hive_cluster
+		building_ae_ancient_control_center
+	}
+	
+	planet_modifier = {
+		planet_amenities_add = 15
+		job_fe_xeno_keeper_add = 2
+		planet_housing_add = 30
+		planet_max_buildings_add = 15
+	}
+
+	resources = {
+		category = planet_buildings	
+		upkeep = {
+		}
+	}
+		
 	upgrades = {
 	}
 }
@@ -680,13 +964,31 @@ building_fe_dome = {
 		planet_housing_add = 20
 		planet_amenities_add = 20
 	}
+	#ACOT
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+		}
+		modifier = {
+			planet_max_buildings_add = 2
+			planet_max_districts_add = 2
+			planet_housing_add = 30
+			planet_amenities_add = 30
+		}
+	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			minerals = @b2_minerals
 		}
 		upkeep = {
+			trigger = {
+				berg_has_acot_mod = no
+			}
 			energy = 10
 		}
 	}
@@ -702,8 +1004,11 @@ building_fe_dome = {
 			change_variable = { which = skydome_build_count value = 1 }
 		}
 	}
+	upgrades = {
+		building_ae_sky_dome #ACOT
+	}
 }
-
+#Vanilla
 building_fe_stronghold = {
 	base_buildtime = @b2_time
 	can_build = no
@@ -712,6 +1017,7 @@ building_fe_stronghold = {
 	category = army
 
 	potential = {
+		berg_has_acot_mod = no
 		exists = owner
 		owner = { is_fallen_empire = yes }
 	}
@@ -732,5 +1038,69 @@ building_fe_stronghold = {
 		upkeep = {
 			energy = 10
 		}
+	}
+}
+#ACOT
+building_fe_stronghold = {
+	can_build = no
+	
+	potential = {
+		berg_has_acot_mod = yes
+	}
+	
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { 
+				is_fallen_empire = no
+				is_gestalt = no 
+			}
+		}
+		modifier = {
+			job_acot_enforcer_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { 
+				is_fallen_empire = no
+				is_gestalt = yes 
+			}
+		}
+		modifier = {
+			job_acot_enforcer_drone_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			owner = { 
+				is_fallen_empire = yes
+			}
+		}
+		modifier = {
+			job_fe_protector_add = 5
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 50
+			owner = { used_naval_capacity_percent > 1.1 }
+		}
+		modifier = {
+			factor = 0.05
+			owner = { used_naval_capacity_percent < 0.9 }
+		}
+	}
+
+	resources = {
+		category = planet_buildings	
+		upkeep = {
+		}
+	}
+
+	upgrades = {
+		building_ae_stronghold #ACOT
 	}
 }

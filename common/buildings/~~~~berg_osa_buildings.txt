@@ -156,7 +156,7 @@ building_zitadom = {
 	category = army
 
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		owner = {
 			has_tradition = tr_defense_5
 		}

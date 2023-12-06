@@ -1,10 +1,6 @@
 #############
 # Capital buildings
 #############
-@buildings_t1 = 1
-@buildings_t2 = 2
-@buildings_t3 = 3
-@buildings_t4 = 4
 
 @tier_2_capital_defense_armies = 4
 @tier_3_capital_defense_armies = 8
@@ -46,7 +42,7 @@ building_colony_shelter = {
 	planet_modifier = {
 		planet_housing_add = 3
 		planet_amenities_add = 7
-		planet_max_buildings_add = @buildings_t1
+		planet_max_buildings_add = @berg_buildings_t1
 	}
 
 	inline_script = {
@@ -55,6 +51,7 @@ building_colony_shelter = {
 
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
+		branch_add = 0 
 		branch_add = 0 
 		osa_branch_add = 1
 	}
@@ -189,7 +186,7 @@ building_capital = {
 		job_enforcer_add = 1
 		planet_housing_add = 5
 		planet_amenities_add = 5
-		planet_max_buildings_add = @buildings_t2
+		planet_max_buildings_add = @berg_buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
 	inline_script = {
@@ -335,7 +332,7 @@ building_major_capital = {
 		job_enforcer_add = 2
 		planet_housing_add = 8
 		planet_amenities_add = 8
-		planet_max_buildings_add = @buildings_t3
+		planet_max_buildings_add = @berg_buildings_t3
 		defense_armies_add = @tier_3_capital_defense_armies
 	}
 
@@ -437,10 +434,6 @@ building_major_capital = {
 	}
 
 	triggered_desc = {
-		text = job_enforcer_effect_desc
-	}
-
-	triggered_desc = {
 		trigger = {
 			exists = owner.federation
 			owner.federation = { has_federation_perk = culture_workers_1 }
@@ -509,7 +502,7 @@ building_system_capital = {
 		job_enforcer_add = 3
 		planet_housing_add = 12
 		planet_amenities_add = 12
-		planet_max_buildings_add = @buildings_t4
+		planet_max_buildings_add = @berg_buildings_t4
 		defense_armies_add = @tier_4_capital_defense_armies
 	}
 
@@ -680,7 +673,7 @@ building_deployment_post = {
 		job_replicator_add = 2
 		job_patrol_drone_add = 1
 		job_maintenance_drone_add = 2
-		planet_max_buildings_add = @buildings_t1
+		planet_max_buildings_add = @berg_buildings_t1
 	}
 
 	inline_script = {
@@ -816,7 +809,7 @@ building_machine_capital = {
 		job_replicator_add = 2
 		job_patrol_drone_add = 1
 		job_maintenance_drone_add = 3
-		planet_max_buildings_add = @buildings_t2
+		planet_max_buildings_add = @berg_buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
 
@@ -912,7 +905,7 @@ building_machine_major_capital = {
 		job_replicator_add = 2
 		job_patrol_drone_add = 2
 		job_maintenance_drone_add = 4
-		planet_max_buildings_add = @buildings_t3
+		planet_max_buildings_add = @berg_buildings_t3
 		defense_armies_add = @tier_3_capital_defense_armies
 	}
 
@@ -1010,7 +1003,7 @@ building_machine_system_capital = {
 		job_replicator_add = 2
 		job_patrol_drone_add = 3
 		job_maintenance_drone_add = 5
-		planet_max_buildings_add = @buildings_t4
+		planet_max_buildings_add = @berg_buildings_t4
 		defense_armies_add = @tier_4_capital_defense_armies
 	}
 
@@ -1135,7 +1128,7 @@ building_hive_capital = {
 		job_synapse_drone_add = 2
 		job_maintenance_drone_add = 2
 		job_patrol_drone_add = 1
-		planet_max_buildings_add = @buildings_t2
+		planet_max_buildings_add = @berg_buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
 
@@ -1235,7 +1228,7 @@ building_hive_major_capital = {
 		job_synapse_drone_add = 3
 		job_maintenance_drone_add = 5
 		job_patrol_drone_add = 2
-		planet_max_buildings_add = @buildings_t4
+		planet_max_buildings_add = @berg_buildings_t4
 		defense_armies_add = @tier_3_capital_defense_armies
 	}
 
@@ -1328,7 +1321,7 @@ building_hab_capital = {
 	planet_modifier = {
 		planet_housing_add = 3
 		planet_amenities_add = 3
-		planet_max_buildings_add = @buildings_t1
+		planet_max_buildings_add = @berg_buildings_t1
 	}
 
 	inline_script = {
@@ -1517,7 +1510,7 @@ building_hab_major_capital = {
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
-		planet_max_buildings_add = @buildings_t2
+		planet_max_buildings_add = @berg_buildings_t2
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
 	upgrades = {
@@ -1525,7 +1518,7 @@ building_hab_major_capital = {
 	}
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
-		branch = 1 
+		branch_add = 1 
 		osa_branch_add = 3
 	}
 
@@ -1712,7 +1705,7 @@ building_resort_capital = {
 	}
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
-		branch = 1 
+		branch_add = 1 
 		osa_branch_add = 5
 	}
 
@@ -1823,7 +1816,7 @@ building_resort_major_capital = {
 	}
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
-		branch = 1 
+		branch_add = 1 
 		osa_branch_add = 5
 	}
 	triggered_planet_modifier = {
@@ -1900,7 +1893,7 @@ building_slave_capital = {
 	#OSA
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
-		branch = 1 
+		branch_add = 1 
 		osa_branch_add = 1
 	}
 	inline_script = {
@@ -2003,7 +1996,7 @@ building_slave_major_capital = {
 	#OSA
 	inline_script = {
 		script = vanilla/misc/berg_branch_office_add
-		branch = 2 
+		branch_add = 2 
 		osa_branch_add = 2
 	}
 

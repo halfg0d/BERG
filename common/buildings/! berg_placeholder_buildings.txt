@@ -1,0 +1,12 @@
+# Irony this is a placeholder file please ignore it
+#ACOT
+building_ae_affluence_center = { potential = { always = no } allow = { always = no } }
+building_ae_nourishment_center = { potential = { always = no } allow = { always = no } }
+building_ae_dimensional_fabricator = { potential = { always = no } allow = { always = no } }
+building_ae_class_4_singularity = { potential = { always = no } allow = { always = no } }
+building_ae_nano_forge = { potential = { always = no } allow = { always = no } }
+building_ae_master_archive = { potential = { always = no } allow = { always = no } }
+building_ae_empyrean_shrine = { potential = { always = no } allow = { always = no } }
+building_ae_ancient_cryo_chamber = { potential = { always = no } allow = { always = no } }
+building_ae_sky_dome = { potential = { always = no } allow = { always = no } }
+building_ae_stronghold = { potential = { always = no } allow = { always = no } }
