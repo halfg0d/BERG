@@ -6,6 +6,7 @@
 @berg_resource_p1_job = 1
 @berg_resource_p2_add = 2
 @berg_resource_p2_job = 2
+#Baol Organic Plant
 @berg_resource_b1_job = 2
 @berg_resource_b1_food = 1
 @berg_resource_b1_goods = 0.5

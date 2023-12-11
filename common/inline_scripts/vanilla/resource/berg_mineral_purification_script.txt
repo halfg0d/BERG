@@ -115,9 +115,36 @@ inline_script = {
 	tier = $tier$
 	district = "mining"
 }
+#OST
 inline_script = {
-	script = OSA/berg_osa_mineral_purification
-	tier = $tier$
+	script = tradition_script/ost_mettle
+	osa_job = 1
+	job_subtract = 1
+	miner = miner
+	trigger = "berg_is_shattered_ring = no"
+}
+inline_script = {
+	script = tradition_script/ost_mettle
+	osa_job = 1
+	job_subtract = 1
+	miner = scrap_miner
+	trigger = "berg_is_shattered_ring = yes"
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = mettle
+	job_add = 1
+	job_subtract = 1
+	drone = mining_drone
+	trigger = "berg_is_shattered_ring = no"
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = mettle
+	job_add = 1
+	job_subtract = 1
+	drone = scrap_miner_drone
+	trigger = "berg_is_shattered_ring = yes"
 }
 triggered_desc = {
 	trigger = {

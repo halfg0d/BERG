@@ -1,0 +1,10 @@
+#In every trade buildings category
+produces = {
+	trigger = {
+		berg_has_ost_mod = yes
+		owner = {
+			has_active_tradition = tr_commerce_3
+		}
+	}
+	unity = @berg_ost_commerce_unity_t$tier$
+}

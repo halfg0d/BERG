@@ -55,7 +55,7 @@ building_pd_hab_barrack_large = {
 
 	inline_script = {
 		script = PD/berg_pd_hab_barracks_script
-		tier = 1
+		tier = 2
 	}
 	resources = {
 		category = planet_buildings

@@ -52,6 +52,10 @@ building_national_park = {
 			energy = @b3_upkeep
 		}
 		inline_script = ECC/berg_ecc_national_park_script
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 2
+		}
 	}
 
 	triggered_desc = {
@@ -125,6 +129,10 @@ building_deep_space_scanner_ecc = {
 		produces = {
 			unity = 5
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 2
+		}
 	}
 
 	triggered_desc = {
@@ -182,6 +190,10 @@ building_climate_control = {
 		produces = {
 			physics_research = 2
 			society_research = 3
+		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 2
 		}
 	}
 }
@@ -348,6 +360,10 @@ building_tribal_council = {
 			}
 			energy = 3
 		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
+		}
 	}
 }
 
@@ -411,6 +427,10 @@ building_tribal_palace = {
 		upkeep = {
 			energy = @b3_upkeep
 		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
+		}
 	}
 }
 
@@ -454,7 +474,12 @@ building_nature_sanctuary = {
 		upkeep = {
 			food = 12
 		}
+		inline_script = {
+			script = tradition_script/ost_benevolence
+			tier = 2
+		}
 	}
+	inline_script = tradition_script/ost_solidarity_effect
 	inline_script = ECC/berg_ecc_nature_sanctuary_script
 }
 
@@ -521,6 +546,18 @@ building_galactic_navy_academy = {
 			job_head_commander_add = 1
 			planet_orbital_bombardment_damage = -0.15
 		}
+	}
+	
+	#OST
+	inline_script = {
+		script = tradition_script/ost_defense
+		tier = $tier$
+		commander_add = 1
+		soldier1_subtract = 0
+		commando_add = 1
+		soldier2_subtract = 0
+		commando_drone_add = 2
+		warrior_drone_subtract = 0
 	}
 
 	resources = {
@@ -606,7 +643,12 @@ building_galactic_temple = {
 		upkeep = {
 			energy = @b3_upkeep
 		}
+		inline_script = {
+			script = tradition_script/ost_benevolence
+			tier = 2
+		}
 	}
+	inline_script = tradition_script/ost_solidarity_effect
 }
 
 #Interstellar Trade Center
@@ -681,6 +723,10 @@ building_galactic_trade_center = {
 		}
 		upkeep = {
 			energy = @b3_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 2
 		}
 	}
 }
@@ -758,6 +804,10 @@ building_pangalactic_forum = {
 		upkeep = {
 			energy = @b3_upkeep
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 2
+		}
 	}
 }
 
@@ -800,6 +850,10 @@ building_ecotourism_center = {
 		}
 		upkeep = {
 			energy = @b2_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 2
 		}
 	}
 	inline_script = ECC/berg_ecc_ecotourism_script
@@ -846,7 +900,12 @@ building_symbol_harmony = {
 		upkeep = {
 			energy = 3
 		}
+		inline_script = {
+			script = tradition_script/ost_benevolence
+			tier = 2
+		}
 	}
+	inline_script = tradition_script/ost_solidarity_effect
 }
 
 building_symbol_purity = {
@@ -889,7 +948,12 @@ building_symbol_purity = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_benevolence
+			tier = 2
+		}
 	}
+	inline_script = tradition_script/ost_solidarity_effect
 }
 
 building_collosal_monument = {
@@ -934,7 +998,12 @@ building_collosal_monument = {
 		upkeep = {
 			energy = 7
 		}
+		inline_script = {
+			script = tradition_script/ost_benevolence
+			tier = 2
+		}
 	}
+	inline_script = tradition_script/ost_solidarity_effect
 }
 
 building_biofuel_plant = {
@@ -951,7 +1020,7 @@ building_biofuel_plant = {
 	}
 
 	planet_modifier = {
-			job_biotechnologist_add = 2
+		job_biotechnologist_add = 2
 	}
 
 	resources = {
@@ -1053,7 +1122,13 @@ building_thermal_borehole = {
 			alloys = 200
 		}
 	}
-
+	inline_script = {
+		script = tradition_script/ost_mettle
+		osa_job = 1
+		job_subtract = 1
+		miner = deep_miner
+		trigger = ""
+	}
 	prerequisites = {
 		"tech_thermal_borehole"
 	}

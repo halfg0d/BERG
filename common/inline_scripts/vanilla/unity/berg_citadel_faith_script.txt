@@ -19,3 +19,5 @@ inline_script = {
 triggered_desc = {
 	text = job_high_priest_effect_desc
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

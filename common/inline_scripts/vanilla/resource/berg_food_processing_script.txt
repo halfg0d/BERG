@@ -15,10 +15,6 @@ triggered_planet_modifier = {
 					NOT = { PREV = { planet = { is_wet = yes } } }
 				}
 			}
-			NAND = {
-				berg_has_osa_mod = yes
-				NOT = { has_active_tradition = tr_perseverance_2 }
-			}
 		}
 	}
 	modifier = {
@@ -54,10 +50,6 @@ triggered_planet_modifier = {
 			is_fallen_empire_spiritualist = no
 			is_anglers_empire = yes
 			PREV = { planet = { is_wet = yes } }
-			NAND = {
-				berg_has_osa_mod = yes
-				NOT = { has_active_tradition = tr_perseverance_2 }
-			}
 		}
 	}
 	modifier = {
@@ -69,9 +61,27 @@ inline_script = {
 	tier = $tier$
 	district = "farming"
 }
+#OSA
 inline_script = {
 	script = OSA/berg_osa_food_processing
 	tier = $tier$
+}
+#OST
+inline_script = {
+	script = tradition_script/ost_perseverance
+	osa_job = @berg_osa_f$tier$_job
+	farmer_subtract = @berg_osa_f$tier$_job
+	canAngler = yes
+	angler_subtract = @berg_osa_f$tier$_jobA
+	pearl_subtract = @berg_osa_f$tier$_jobB
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = perseverance
+	job_add = @berg_osa_f$tier$_job
+	job_subtract = @berg_osa_f$tier$_job
+	drone = agri_drone
+	trigger = ""
 }
 triggered_desc = {
 	trigger = {

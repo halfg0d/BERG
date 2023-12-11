@@ -17,13 +17,9 @@ resources = {
 	produces = {
 		unity = @berg_res_organic_paradise_t$tier$_osa_produces
 	}
-	produces = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_benevolence_1
-			}
-		}
-		unity = @berg_res_organic_paradise_t$tier$_osa_produces_tradition
+	#OST
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
 	}
 }

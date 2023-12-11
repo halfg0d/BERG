@@ -40,6 +40,11 @@ building_research_lab_1 = {
 			script = OSA/berg_osa_research_lab_resource
 			tier = 1
 		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}
 
 	upgrades = {
@@ -85,6 +90,11 @@ building_research_lab_2 = {
 		}
 		inline_script = {
 			script = OSA/berg_osa_research_lab_resource
+			tier = 2
+		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_insight
 			tier = 2
 		}
 	}
@@ -150,6 +160,11 @@ building_research_lab_3 = {
 			script = OSA/berg_osa_research_lab_resource
 			tier = 3
 		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 3
+		}
 	}
 
 	prerequisites = {
@@ -208,6 +223,11 @@ building_institute = {
 		inline_script = {
 			script = OSA/berg_osa_research_lab_resource
 			tier = 11
+		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 3
 		}
 	}
 
@@ -289,6 +309,11 @@ building_supercomputer = {
 		inline_script = {
 			script = OSA/berg_osa_research_lab_resource
 			tier = 11
+		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 3
 		}
 	}
 
@@ -429,14 +454,10 @@ building_vultaum_reality_computer = {
 			society_research = 150
 			engineering_research = 150
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_insight_3
-				}
-			}
-			physics_research = 50
+		#OST
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 3
 		}
 	}
 	inline_script = {

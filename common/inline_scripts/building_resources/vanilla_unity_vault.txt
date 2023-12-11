@@ -46,4 +46,9 @@ resources = {
 		}
 		unity = @berg_res_vault_t$tier$_osa_produces
 	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = 3
+	}
 }

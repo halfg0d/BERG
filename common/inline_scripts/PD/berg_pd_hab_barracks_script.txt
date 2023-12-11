@@ -14,3 +14,14 @@ triggered_planet_modifier = {
 		planet_housing_add = 1
 	}
 }
+#OST
+inline_script = {
+	script = tradition_script/ost_defense
+	tier = $tier$
+	commander_add = 1
+	soldier1_subtract = 0
+	commando_add = 0
+	soldier2_subtract = 0
+	commando_drone_add = 1
+	warrior_drone_subtract = 0
+}

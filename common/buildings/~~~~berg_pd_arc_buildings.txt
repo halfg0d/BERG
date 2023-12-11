@@ -48,6 +48,11 @@ building_pd_rogue_council = {
 		upkeep = {
 			energy = 2
 		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
+		}
 	}
 	inline_script = {
 		script = PD/berg_pd_arc_council_script
@@ -90,6 +95,17 @@ building_navel_base = {
 		script = PD/berg_pd_naval_base_script
 		tier = 1
 	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_defense
+		tier = $tier$
+		commander_add = 1
+		soldier1_subtract = 0
+		commando_add = 0
+		soldier2_subtract = 0
+		commando_drone_add = 1
+		warrior_drone_subtract = 0
+	}
 }
 
 building_navel_command = {
@@ -130,5 +146,16 @@ building_navel_command = {
 	inline_script = {
 		script = PD/berg_pd_naval_base_script
 		tier = 2
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_defense
+		tier = $tier$
+		commander_add = 1
+		soldier1_subtract = 0
+		commando_add = 1
+		soldier2_subtract = 0
+		commando_drone_add = 2
+		warrior_drone_subtract = 0
 	}
 }

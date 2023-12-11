@@ -14,45 +14,13 @@ building_military_academy = {
 
 	allow = {
 		has_upgraded_capital = yes
-		if = {
-			limit = {
-				exists = owner
-				owner = { is_ai = yes }
-			}
-			OR = {
-				has_building = building_stronghold
-				has_building = building_fortress
-			}
-		}
-	}
-
-	destroy_trigger = {
-		exists = owner
-		owner = {
-			OR = {
-				berg_reanimator_civic = yes
-				AND = {
-					is_ai = yes
-					prev = {
-						NOR = {
-							has_building = building_stronghold
-							has_building = building_fortress
-						}
-					}
-				}
-			}
-		}
-	}
-
-	convert_to = {
-		building_dread_encampment
 	}
 	inline_script = {
 		script = vanilla/army/berg_academy_script
 		tier = 1
 	}
 	inline_script = {
-		script = building/resources/vanilla_military_academy
+		script = building_resources/vanilla_military_academy
 	}
 
 	prerequisites = {
@@ -79,17 +47,12 @@ building_dread_encampment = {
 		exists = owner
 		owner = { berg_reanimator_civic = yes }
 	}
-
-	convert_to = {
-		building_military_academy
-	}
-
 	allow = {
 		has_upgraded_capital = yes
 	}
 
 	inline_script = {
-		script = vanilla/army/berg_academy_script
+		script = vanilla/army/berg_dread_encampment
 		tier = 1
 	}
 
@@ -104,12 +67,6 @@ building_dread_encampment = {
 	}
 	upgrades = {
 		"building_avb_dread_encampment_2" #AVB
-	}
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = job_necromancer_effect_desc
 	}
 }
 

@@ -62,14 +62,9 @@ building_noble_estates = {
 			energy = 2.5
 			minerals = 2.5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 20
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
 		}
 	}
 	upgrades = {
@@ -133,6 +128,10 @@ building_slave_processing = {
 			energy = 2.5
 			minerals = 2.5
 		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
+		}
 	}
 	prerequisites = {
 		"tech_neural_implants"
@@ -193,14 +192,9 @@ building_precinct_house = {
 			energy = 2.5
 			minerals = 2.5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 5
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
 		}
 	}
 
@@ -262,14 +256,9 @@ building_hall_judgment = {
 			energy = 5
 			minerals = 5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 10
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
 		}
 	}
 
@@ -330,14 +319,9 @@ building_sentinel_posts = {
 			energy = 2.5
 			minerals = 2.5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 5
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
 		}
 	}
 
@@ -423,6 +407,10 @@ building_order_keep = {
 			minerals = 1000
 		}
 		category = planet_buildings
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 31
+		}
 	}
 }
 
@@ -456,6 +444,10 @@ building_order_castle = {
 
 	resources = {
 		category = planet_buildings
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
+		}
 	}
 
 }
@@ -522,14 +514,9 @@ building_psi_corps = {
 			energy = 5
 			minerals = 5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 20
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
 		}
 	}
 	upgrades = {
@@ -607,14 +594,9 @@ building_embassy = {
 			energy = 5
 			minerals = 5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 10
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
 		}
 	}
 
@@ -692,14 +674,9 @@ building_grand_embassy = {
 			energy = 10
 			minerals = 10
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes 
-				owner = {
-					has_active_tradition = tr_order_4
-				}
-			}
-			unity = 20
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
 		}
 	}
 
@@ -755,6 +732,10 @@ building_gaiaseeders_1 = {
 			energy = 20
 			multiplier = value:gaiaseeder_upkeep
 		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
+		}
 	}
 
 	planet_modifier = {
@@ -779,6 +760,10 @@ building_gaiaseeders_2 = {
 			energy = 20
 			exotic_gases = @b2_rare_upkeep
 			multiplier = value:gaiaseeder_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
 		}
 	}
 
@@ -828,6 +813,10 @@ building_gaiaseeders_3 = {
 			energy = 20
 			exotic_gases = @b3_rare_upkeep
 			multiplier = value:gaiaseeder_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
 		}
 	}
 
@@ -885,6 +874,10 @@ building_gaiaseeders_4 = {
 			energy = @b4_upkeep
 			exotic_gases = @b3_rare_upkeep
 			multiplier = value:gaiaseeder_cost_mult
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
 		}
 	}
 

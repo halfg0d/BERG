@@ -58,82 +58,14 @@ triggered_country_modifier = {
 		country_resource_max_add = 5000
 	}
 }
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	modifier = {
-		job_osa_commando_add = @berg_army_s$tie$_osa_commando
-		job_soldier_add = -@berg_army_s$tie$_osa_commando
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		always = $canCommander$
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	modifier = {
-		job_osa_commander_add = @berg_army_s$tie$_osa_commander
-		job_soldier_add = -@berg_army_s$tie$_osa_commander
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = yes
-			has_active_tradition = tr_defense_4
-		}
-	}
-	modifier = {
-		job_osa_commando_drone_add = @berg_army_s$tie$_osa_job_gestalt
-		job_warrior_drone_add = -@berg_army_s$tie$_osa_job_gestalt
-	}
-}
-triggered_desc = {
-	trigger = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = yes
-			has_active_tradition = tr_defense_4
-		}
-	}
-	text = job_osa_commando_drone_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		has_osa_mod = yes
-		exists = owner
-		always = $canCommander$
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	text = job_osa_commander_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	text = job_osa_commando_effect_desc
+#OST
+inline_script = {
+	script = tradition_script/ost_defense
+	tier = $tier$
+	commander_add = @berg_army_s$tie$_osa_commander
+	soldier1_subtract = @berg_army_s$tie$_osa_commander
+	commando_add = @berg_army_s$tie$_osa_commando
+	soldier2_subtract = @berg_army_s$tie$_osa_commando
+	commando_drone_add = @berg_army_s$tie$_osa_job_gestalt
+	warrior_drone_subtract = @berg_army_s$tie$_osa_job_gestalt
 }

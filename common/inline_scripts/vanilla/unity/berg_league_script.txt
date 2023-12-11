@@ -187,3 +187,5 @@ triggered_desc = {
 	}
 	text = job_steward_effect_desc
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

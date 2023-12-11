@@ -10,12 +10,3 @@ produces = {
 	society_research = @berg_osa_j$tier$_produce
 	engineering_research = @berg_osa_j$tier$_produce
 }
-produces = {
-	trigger = {
-		berg_has_osa_mod = yes
-		owner = {
-			has_active_tradition = tr_insight_3
-		}
-	}
-	physics_research = @berg_osa_j$tier$_produce_tradition
-}

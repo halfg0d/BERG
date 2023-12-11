@@ -55,6 +55,10 @@ building_bugged_planetary_stock_exchange = {
 			energy = 5
 			rare_crystals = 2
 		}
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 1
+		}
 	}
 
 	prerequisites = {
@@ -154,6 +158,10 @@ building_bug_galactic_stock_exchange = {
 		upkeep = {
 			energy = @b2_upkeep
 			rare_crystals = @b2_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 1
 		}
 	}
 

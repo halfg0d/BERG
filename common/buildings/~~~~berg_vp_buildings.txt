@@ -70,6 +70,10 @@ building_bank_office = {
 			energy = 2
 			#rare_crystals = @b2_rare_upkeep
 		}
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 1
+		}
 	}
 
 	triggered_desc = {

@@ -1,0 +1,14 @@
+#In every unity building
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_active_tradition = tr_solidarity_5
+		}
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.1
+	}
+}

@@ -1,0 +1,18 @@
+﻿# Irony this is a placeholder file please ignore it
+l_english:
+#MOD text
+ mod_prefix_title_pd: "§M(PD)§!"
+ mod_prefix_desc_pd: "\n§M> Planetary Diversity <§!"
+ mod_prefix_title_pd_arc: "§M(PD)§!"
+ mod_prefix_desc_pd_arc: "\n§M> Planetary Diversity - More Arcologies <§!"
+ mod_prefix_title_pd_hab: "§M(PD)§!"
+ mod_prefix_desc_pd_hab: "\n§M> Planetary Diversity - Planetary Habitats <§!"
+ mod_prefix_title_pd_uq: "§M(PD)§!"
+ mod_prefix_desc_pd_uq: "\n§M> Planetary Diversity - Unique Worlds <§!"
+ mod_prefix_title_avb: "\n§M(AVB)§!"
+ mod_prefix_desc_avb: "\n§M> Additional Vanilla buildings - Unofficial <§!"
+#Buildings cloned
+ building_deep_space_scanner_ecc:0 "$building_deep_space_scanner$"
+ building_deep_space_scanner_ecc_desc:0 "$building_deep_space_scanner_desc$"
+ building_fe_xeno_zoo_vanilla:0 "$building_fe_xeno_zoo$"
+ building_fe_xeno_zoo_vanilla:0 "$building_fe_xeno_zoo_desc$"

@@ -74,9 +74,21 @@ inline_script = {
 	tier = $tier$
 	district = "generator"
 }
+#OST
 inline_script = {
-	script = OSA/berg_osa_energy_nexus
-	tier = $tier$
+	script = tradition_script/ost_radiance
+	osa_job = 1
+	job_subtract = 1
+	miner = technician
+	trigger = ""
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = radiance
+	job_add = 1
+	job_subtract = 1
+	drone = technician_drone
+	trigger = ""
 }
 triggered_desc = {
 	trigger = {

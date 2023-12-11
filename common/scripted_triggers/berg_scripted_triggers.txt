@@ -250,3 +250,12 @@ berg_avb_build_imperial_capital = {
 berg_has_acot_mod = {
 	has_acot = yes
 }
+berg_has_osa_mod = {
+	has_global_flag = osa_active
+}
+berg_has_ost_mod = {
+	OR = {
+		berg_has_osa_mod = yes
+		has_global_flag = ost_active
+	}
+}

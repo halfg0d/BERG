@@ -54,6 +54,12 @@ inline_script = {
 	script = OSA/berg_osa_factory_jobs
 	tier = $tier$
 }
+#OST
+inline_script = {
+	scrript = tradition_script/ost_metallurgy
+	isForge = no
+	job_add = @berg_osa_l$tier$_job
+}
 #Desc
 triggered_desc = {
 	trigger = {

@@ -75,20 +75,11 @@ triggered_desc = {
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		exists = owner
-		owner = {
-			has_active_tradition = tr_solidarity_5
-		}
-	}
-	modifier = {
-		pop_government_ethic_attraction = 0.1
-	}
-}
-triggered_planet_modifier = {
-	potential = {
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t$tier$
 	}
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

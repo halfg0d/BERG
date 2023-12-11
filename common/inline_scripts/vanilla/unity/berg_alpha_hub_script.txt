@@ -27,3 +27,5 @@ triggered_planet_modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
 	}
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

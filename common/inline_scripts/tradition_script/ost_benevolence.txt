@@ -1,0 +1,11 @@
+#In every unity buildings category
+produces = {
+	trigger = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			has_active_tradition = tr_benevolence_1
+		}
+	}
+	unity = @berg_ost_benelovence_unity_t$tier$
+}

@@ -1,0 +1,37 @@
+#In every strategic resource mine building
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_active_tradition = tr_renewal_3
+		}
+	}
+	modifier = {
+		switch = {
+			trigger = $resource$
+			mote = { job_mote_harvester_add = 3 }
+			gases = { job_gas_extractor_add = 3 }
+			crystals = { job_crystal_miner_add = 3 }
+		}
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			has_active_tradition = tr_renewal_3
+		}
+	}
+	modifier = {
+		switch = {
+			trigger = $resource$
+			mote = { job_mote_harvesting_drone_add = 3 }
+			gases = { job_gas_extraction_drone_add = 3 }
+			crystals = { job_crystal_mining_drone_add = 3 }
+		}
+	}
+}

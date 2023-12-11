@@ -242,7 +242,7 @@ building_bureaucratic_1 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_bureacracy
+		script = building_resources/vanilla_bureaucracy
 		tier = 1
 	}
 	inline_script = {
@@ -302,7 +302,7 @@ building_bureaucratic_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_bureacracy
+		script = building_resources/vanilla_bureaucracy
 		tier = 2
 	}
 	inline_script = {
@@ -363,7 +363,7 @@ building_bureaucratic_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_bureacracy
+		script = building_resources/vanilla_bureaucracy
 		tier = 3
 	}
 	inline_script = {
@@ -1316,7 +1316,7 @@ building_simulation_1 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_memorial_machine
+		script = building_resources/vanilla_memorial_machines
 		tier = 1
 	}
 	inline_script = {
@@ -1388,7 +1388,7 @@ building_simulation_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_memorial_machine
+		script = building_resources/vanilla_memorial_machines
 		tier = 2
 	}
 	inline_script = {
@@ -1455,7 +1455,7 @@ building_simulation_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_memorial_machine
+		script = building_resources/vanilla_memorial_machines
 		tier = 3
 	}
 

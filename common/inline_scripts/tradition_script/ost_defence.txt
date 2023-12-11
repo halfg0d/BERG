@@ -1,0 +1,97 @@
+#In every army building
+#Regular
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	modifier = {
+		job_osa_commander_add = $commander_add$
+		job_soldier_add = $soldier1_subtract$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	modifier = {
+		job_osa_commando_add = $commando_add$
+		job_soldier_add = $soldier2_subtract$
+	}
+}
+#Gestalt
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			has_active_tradition = tr_defense_4
+		}
+	}
+	modifier = {
+		job_osa_commando_drone_add = $commando_drone_add$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			NOT = {
+				has_active_tradition = tr_defense_4
+			}
+		}
+	}
+	modifier = {
+		job_warrior_drone_add = $warrior_drone_subtract$
+	}
+}
+#Desc
+triggered_desc = {
+	trigger = {
+		berg_has_ost_mod = yes
+		$commando_drone_add$ > 0
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			has_active_tradition = tr_defense_4
+		}
+	}
+	text = job_osa_commando_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ost_mod = yes
+		$commander_add$ > 0
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	text = job_osa_commander_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ost_mod = yes
+		$commando_add$ > 0
+		exists = owner
+		owner = { 
+			is_gestalt = no
+			has_active_tradition = tr_defense_4
+		}
+	}
+	text = job_osa_commando_effect_desc
+}

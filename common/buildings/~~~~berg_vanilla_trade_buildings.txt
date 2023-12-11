@@ -38,14 +38,10 @@ building_commercial_zone = {
 			minerals = 2.5
 			energy = 0.5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_commerce_3
-				}
-			}
-			unity = 5
+		#OST
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 1
 		}
 	}
 	inline_script = {
@@ -115,14 +111,10 @@ building_commercial_megaplex = {
 			}
 			minerals = 5
 		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_commerce_3
-				}
-			}
-			unity = 10
+		#OST
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 2
 		}
 	}
 	inline_script = {
@@ -219,6 +211,11 @@ building_galactic_stock_exchange = {
 		upkeep = {
 			energy = @b2_upkeep
 			rare_crystals = @b2_rare_upkeep
+		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 3
 		}
 	}
 

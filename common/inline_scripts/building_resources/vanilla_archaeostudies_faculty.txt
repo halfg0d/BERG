@@ -26,12 +26,9 @@ resources = {
 		society_research = @ost_b3_produces
 		engineering_research = @ost_b3_produces
 	}
-	produces = {
-		trigger = {
-			owner = {
-				has_active_tradition = tr_insight_3
-			}
-		}
-		physics_research = 20
+	#OST
+	inline_script = {
+		script = tradition_script/ost_insight
+		tier = 3
 	}
 }

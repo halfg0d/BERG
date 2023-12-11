@@ -1,0 +1,21 @@
+#In every foundry	
+upkeep = {
+	trigger = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			has_active_tradition = tr_nanobiotics_2
+		}
+	}
+	minerals = @berg_ost_nanobiotics_minerals_t$tier$
+}
+produces = {
+	trigger = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			has_active_tradition = tr_nanobiotics_2
+		}
+	}
+	$material$ = @berg_ost_nanobiotics_material_t$tier$
+}

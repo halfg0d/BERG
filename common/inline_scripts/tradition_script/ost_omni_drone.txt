@@ -1,0 +1,33 @@
+#For gestalts
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			OR = {
+				has_active_tradition = tr_$tradition$_2_hive
+				has_active_tradition = tr_$tradition$_2_machine
+			}
+		}
+	}
+	modifier = {
+		planet_housing_add = 5
+		job_osa_omni_drone_add = $job_add$
+		job_$drone$_add = -$job_subtract$
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ost_mod = yes
+		exists = owner
+		owner = { 
+			is_gestalt = yes
+			OR = {
+				has_active_tradition = tr_$tradition$_hive
+				has_active_tradition = tr_$tradition$_machine
+			}
+		}
+	}
+	text = job_osa_omni_drone_effect_desc
+}

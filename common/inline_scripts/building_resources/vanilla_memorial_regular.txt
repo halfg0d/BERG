@@ -33,14 +33,9 @@ resources = {
 		trigger = { berg_has_osa_mod = yes }
 		unity = @berg_res_memorial_t$tier$_osa_produces
 	}
-	produces = {
-		trigger = {
-			berg_has_osa_mod = yes 
-			exists = owner
-			owner = {
-				has_active_tradition = tr_benevolence_1
-			}
-		}
-		unity = @berg_res_memorial_t$tier$_osa_produces_tradition
+	#OST
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
 	}
 }

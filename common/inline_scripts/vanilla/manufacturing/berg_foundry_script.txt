@@ -109,6 +109,12 @@ inline_script = {
 	tier = $tier$
 	industrialist = $industrialist$
 }
+#OST
+inline_script = {
+	scrript = tradition_script/ost_metallurgy
+	isForge = no
+	job_add = @berg_osa_k$tier$_job
+}
 inline_script = {
 	script = OSA/berg_osa_foundry_jobs
 	tier = $tier$
