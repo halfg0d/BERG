@@ -1,0 +1,43 @@
+planet_modifier = {
+	planet_housing_add = @berg_amenity_residence_housing_t$tier$
+	planet_amenities_add = @berg_amenity_residence_amenities_t$tier$
+}
+
+triggered_planet_modifier = {
+	potential = {
+		always = $tradition$
+		exists = owner
+		owner = {
+			has_active_tradition = tr_domination_imperious_architecture
+		}
+	}
+	modifier = {
+		planet_housing_add = 1
+	}
+}
+#Omega's Stellaris Addition
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_housing_add = @berg_amenity_residence_osa_housing_t$tier$
+	planet_amenities_add = @berg_amenity_residence_osa_amenities_t$tier$
+}
+#Ethics and Civics Classic
+triggered_planet_modifier = {
+	potential = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_keepers_harmony
+		}
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = @berg_amenity_residence_ecc_unity_t$tier$
+		planet_housing_add = @berg_amenity_residence_ecc_housing_t$tier$
+	}
+}

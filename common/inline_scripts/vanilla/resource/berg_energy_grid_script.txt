@@ -1,5 +1,5 @@
 planet_modifier = {
-	planet_technician_energy_produces_add = @berg_resource_e$tier$_energy
+	planet_technician_energy_produces_add = @berg_resource_energy_grid_energy_add_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -15,7 +15,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_technician_add = @berg_resource_e$tier$_job
+		job_technician_add = @berg_resource_energy_grid_job_t$tier$
 	}
 }
 
@@ -25,7 +25,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_generator_add = @berg_resource_e$tier$_job
+		job_fe_acolyte_generator_add = @berg_resource_energy_grid_job_t$tier$
 	}
 }
 
@@ -44,7 +44,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_technician_drone_add = @berg_resource_e$tier$_job
+		job_technician_drone_add = @berg_resource_energy_grid_job_t$tier$
 	}
 }
 
@@ -62,7 +62,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		district_generator_max = @berg_resource_e$tier$_district
+		district_generator_max = @berg_resource_energy_grid_district_add_t$tier$
 	}
 }
 inline_script = {

@@ -215,6 +215,12 @@ berg_vp_is_science_syndicate = {
 	is_megacorp = yes
 	has_civic = civic_science_syndicate
 }
+berg_can_toxic_knight = {
+	OR = {
+		NOT = { has_planet_flag = toxic_knights_habitat }
+		NOT = { owner = { berg_is_toxic_knight_empire = yes } }
+	}
+}
 berg_has_food_processing = {
 	OR = {
 		has_active_building = building_food_processing_facility

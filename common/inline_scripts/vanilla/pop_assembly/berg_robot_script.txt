@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_roboticist_add = @berg_pop_assembly_r$tier$_job
+	job_roboticist_add = @berg_pop_assembly_robot_plant_job_t$tier$
 }
 triggered_desc = {
 	trigger = {

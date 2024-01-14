@@ -1,0 +1,12 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_amenity_drone_storage_cost_t$tier$
+		rare_crystals = @berg_amenity_drone_storage_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_amenity_drone_storage_upkeep_t$tier$
+		rare_crystals = @berg_amenity_drone_storage_rare_upkeep_t$tier$
+	}
+}

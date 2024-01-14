@@ -1,10 +1,6 @@
 planet_modifier = {
-	job_clerk_add = @berg_trade_c$tier$_clerks
-	job_trader_add = @berg_trade_c$tier$_trader
-}
-
-triggered_desc = {
-	text = job_clerk_effect_desc
+	job_clerk_add = @berg_trade_commercial_clerk_t$tier$
+	job_trader_add = @berg_trade_commercial_trader_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -15,21 +11,74 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_trader_add = @berg_trade_c$tier$_trader
+		job_trader_add = 1
 	}
 }
 
-triggered_desc = {
-	text = job_trader_effect_desc
-}
 #OSA
 triggered_planet_modifier = {
 	potential = { berg_has_osa_mod = yes }
 	trade_value_mult = 0.05
 	multiplier = $tier$
 }
-inline_script = {
-	script = ECC/berg_ecc_commercial_script
-	tier = $tier$
-	entrepreneur = $entrepreneur$
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_corporate_dominion
+		}
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
+		}
+	}
+	modifier = {
+		job_entrepreneur_add = @berg_trade_commercial_ecc_job_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_consumerism
+		}
+	}
+	modifier = {
+		job_clerk_add = 1
+		job_merchant_add = 1
+	}
+}
+
+triggered_desc = {
+	text = job_clerk_effect_desc
+}
+triggered_desc = {
+	text = job_trader_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_consumerism
+		}
+	}
+	text = job_merchant_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_corporate_dominion
+		}
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
+		}
+	}
+	text = job_entrepreneur_effect_desc
 }

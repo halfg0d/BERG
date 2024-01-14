@@ -1,15 +1,15 @@
 planet_modifier = {
-	job_priest_add = @berg_unity_c$tier$_priest
-	pop_ethic_spiritualist_attraction_mult = @berg_unity_c$tier$_attraction
+	pop_ethic_spiritualist_attraction_mult = @berg_unity_temple_attraction_t$tier$
 }
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_megacorp = no }
-	}
-	modifier = {
-		job_priest_add = @berg_unity_c$tier$_priest
-	}
+inline_script = {
+	script = jobs/priest_desc
+	AMOUNT = @berg_unity_temple_job_priest_t$tier$
+	trigger = ""
+}
+inline_script = {
+	script = jobs/priest_desc
+	AMOUNT = @berg_unity_temple_job_corpo_t$tier$
+	trigger = "owner = { is_megacorp = no }"
 }
 triggered_planet_modifier = {
 	potential = {
@@ -20,7 +20,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_manager_add = @berg_unity_c$tier$_manager
+		job_manager_add = @berg_unity_temple_job_corpo_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -32,11 +32,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_steward_add = @berg_unity_c$tier$_manager
+		job_steward_add = @berg_unity_temple_job_corpo_t$tier$
 	}
-}
-triggered_desc = {
-	text = job_priest_effect_desc
 }
 triggered_desc = {
 	trigger = {
@@ -58,18 +55,55 @@ triggered_desc = {
 	}
 	text = job_steward_effect_desc
 }
-inline_script = {
-	script = BUG/berg_templar_jobs
-	tier = $tier$
+triggered_planet_modifier = {
+	potential = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = { is_bugged_militant_zealots = yes }
+	}
+	modifier = {
+		job_bugged_templar_add = @berg_unity_temple_bug_templar_t$tier$
+	}
 }
-inline_script = {
-	script = ECC/berg_ecc_temple_script
-	tier = $tier$
+triggered_planet_modifier = {
+	potential = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_governmental_spiritualist = yes
+		}
+	}
+	modifier = {
+		job_high_priest_add = @berg_unity_temple_bug_high_priest_t$tier$
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_militant_zealots = yes
+		}
+	}
+	text = job_bugged_templar_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		has_bugged_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_governmental_spiritualist = yes
+		}
+		check_variable = { which = @berg_unity_temple_bug_high_priest_t$tier$ value > 0}
+	}
+	text = job_high_priest_effect_desc
 }
 #OSA
 
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {

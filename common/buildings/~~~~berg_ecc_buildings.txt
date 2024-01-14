@@ -396,7 +396,7 @@ building_tribal_palace = {
 	}
 
 	allow = {
-		has_building = building_system_capital
+		has_fully_upgraded_capital = yes
 		exists = owner
 		NOT = { owner = { any_owned_planet = { has_building = building_tribal_palace } } }
 		owner = {

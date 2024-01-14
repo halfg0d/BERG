@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_clerk_add = @berg_resource_s$tier$_job
+		job_clerk_add = @berg_resource_silo_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -13,11 +13,11 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_maintenance_drone_add = @berg_resource_s$tier$_job
+		job_maintenance_drone_add = @berg_resource_silo_job_t$tier$
 	}
 }
 country_modifier = {
-	country_resource_max_add = @berg_resource_s$tier$_silo
+	country_resource_max_add = @berg_resource_silo_silo_t$tier$
 }
 triggered_country_modifier = {
 	potential = {

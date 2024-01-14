@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_mote_harvester_add = @berg_deposit_m$tier$_job
+		job_mote_harvester_add = @berg_deposit_mote_harvesters_job_t$tier$
 	}
 }
 
@@ -14,28 +14,28 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_mote_harvesting_drone_add = @berg_deposit_m$tier$_job
+		job_mote_harvesting_drone_add = @berg_deposit_mote_harvesters_job_t$tier$
 	}
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_mote_harvester_add = @berg_deposit_m$tier$_osa_job
+		job_mote_harvester_add = @berg_deposit_mote_harvesters_osa_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_mote_harvesting_drone_add = @berg_deposit_m$tier$_osa_job
+		job_mote_harvesting_drone_add = @berg_deposit_mote_harvesters_osa_job_t$tier$
 	}
 }
 #OST

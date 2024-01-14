@@ -1,0 +1,25 @@
+planet_modifier = {
+	planet_housing_add = @berg_amenity_warren_housing_t$tier$
+	planet_amenities_add = @berg_amenity_warren_amenities_t$tier$
+}
+
+triggered_planet_modifier = {
+	potential = {
+		always = $tradition$
+		exists = owner
+		owner = {
+			has_active_tradition = tr_domination_imperious_architecture
+		}
+	}
+	modifier = {
+		planet_housing_add = 1
+	}
+}
+#Omega's Stellaris Addition
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+	}
+	planet_housing_add = @berg_amenity_warren_osa_housing_t$tier$
+	planet_amenities_add = @berg_amenity_warren_osa_amenities_t$tier$
+}

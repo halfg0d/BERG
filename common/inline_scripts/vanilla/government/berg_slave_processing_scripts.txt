@@ -1,7 +1,7 @@
 planet_modifier = {
-	planet_jobs_slave_produces_mult = @berg_government_s$tier$_mult
-	pop_cat_slave_political_power = @berg_government_s$tier$_political_power
-	planet_resettlement_unemployed_mult = @berg_government_s$tier$_resettlement
+	planet_jobs_slave_produces_mult = @berg_government_slave_processing_mult_t$tier$
+	pop_cat_slave_political_power = @berg_government_slave_processing_political_power_t$tier$
+	planet_resettlement_unemployed_mult = @berg_government_slave_processing_resettlment_t$tier$
 }
 triggered_desc = {
 	text = building_slave_processing_slave_army_effect_desc

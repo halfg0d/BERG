@@ -2,49 +2,58 @@ resources = {
 	category = planet_buildings
 	#Vanilla
 	cost = {
-		minerals = @berg_res_factory_t$tier$_cost_mineral
-		rare_crystals = @berg_res_factory_t$tier$_cost_crystals
+		minerals = @berg_manufactury_factory_cost_t$tier$
+		rare_crystals = @berg_manufactury_factory_rare_cost_t$tier$
 	}
 	upkeep = {
-		energy = @berg_res_factory_t$tier$_upkeep_energy
-		rare_crystals = @berg_res_factory_t$tier$_upkeep_crystals
+		energy = @berg_manufactury_factory_upkeep_t$tier$
+		rare_crystals = @berg_manufactury_factory_rare_upkeep_t$tier$
 	}
 	#Vanilla Ringworld Boost
 	cost = {
 		trigger = {
-			always = $RW_boost$
+			check_variable_arithmetic = {
+				which = $tier$
+				value >= 3
+			}
 			has_ringworld_output_boost = yes
 		}
-		minerals = @berg_res_factory_t$tier$_RW_cost_mineral
-		rare_crystals = @berg_res_factory_t$tier$_RW_cost_crystal
+		minerals = 700
+		rare_crystals = 500
 	}
 	upkeep = {
 		trigger = {
-			always = $RW_boost$
+			check_variable_arithmetic = {
+				which = $tier$
+				value >= 3
+			}
 			has_ringworld_output_boost = yes
 		}
-		energy = @berg_res_factory_t$tier$_RW_upkeep_energy
-		rare_crystals = @berg_res_factory_t$tier$_RW_upkeep_crystals
+		energy = 7
+		rare_crystals = 4
 	}
 	#Osa
 	upkeep = {
 		trigger = { berg_has_osa_mod = yes }
-		energy = @berg_res_factory_t$tier$_osa_upkeep_energy
-		minerals = @berg_res_factory_t$tier$_osa_upkeep_mineral
+		energy = @berg_manufactury_factory_osa_upkeep_energy_t$tier$
+		minerals = @berg_manufactury_factory_osa_upkeep_minerals_t$tier$
 	}
 	produces = {
 		trigger = { berg_has_osa_mod = yes }
-		consumer_goods = @berg_res_factory_t$tier$_osa_produce
+		consumer_goods = @berg_manufactury_factory_osa_produce_t$tier$
 	}
 	#Osa Ringworld Boost
 	upkeep = {
 		trigger = {
 			berg_has_osa_mod = yes
-			always = $RW_boost$
+			check_variable_arithmetic = {
+				which = $tier$
+				value >= 3
+			}
 			has_ringworld_output_boost = yes
 		}
-		energy = @berg_res_factory_t$tier$_osa_RW_upkeep_energy
-		minerals = @berg_res_factory_t$tier$_osa_RW_upkeep_mineral
+		energy = 5
+		minerals = 5
 	}
 	#OST
 	inline_script = {

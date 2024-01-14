@@ -1,62 +1,29 @@
 planet_modifier = {
-	trade_value_mult = @berg_trade_s$tier$_trade
+	trade_value_mult = @berg_trade_galactic_stock_mult_t$tier$
 }
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = no
-	}
-	modifier = {
-		job_merchant_add = @berg_trade_s$tier$_job
-	}
-}
-triggered_desc = {
-	trigger = {
-		berg_has_ecc_mod = no
-	}
-	text = job_merchant_effect_desc
+inline_script = {
+	script = berg_jobs/merchant_desc
+	AMOUNT = @berg_trade_galactic_stock_job_t$tier$
+	trigger = " "
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = yes
 	}
-	job_clerk_add = @berg_osa_m$tier$_clerk
-	trade_value_mult = @berg_osa_m$tier$_trade
+	job_clerk_add = @berg_trade_galactic_stock_osa_job_t$tier$
+	trade_value_mult = @berg_trade_galactic_stock_osa_mult_t$tier$
 }
 triggered_desc = {
 	trigger = { berg_has_osa_mod = yes }
 	text = job_clerk_effect_desc
 }
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
-		berg_has_ecc_mod = no
-	}
-	job_merchant_add = @berg_osa_m$tier$_merchant
-}
-triggered_planet_modifier = {
-	potential = {
-		planet_has_ecocontinuity = yes
-	}
-	modifier = {
-		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
-	}
+inline_script = {
+	script = berg_jobs/merchant_without_desc
+	AMOUNT = @berg_trade_galactic_stock_osa_merchant_t$tier$
+	trigger = "berg_has_osa_mod = yes"
 }
 #ECC
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = yes
-	}
-	modifier = {
-		job_mogul_add = @berg_trade_s$tier$_job
-	}
-}
-triggered_desc = {
-	trigger = {
-		berg_has_ecc_mod = yes
-	}
-	text = job_mogul_effect_desc
-}
 triggered_planet_modifier = {
 	potential = {
 		berg_has_ecc_mod = yes
@@ -69,15 +36,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_mogul_add = @berg_ecc_b$tier$_mogul
-		trade_value_mult = @berg_ecc_b$tier$_trade
+		job_mogul_add = @berg_trade_galactic_stock_ecc_job_t$tier$
+		trade_value_mult = @berg_trade_galactic_stock_ecc_mult_t$tier$
 	}
-}
-#OSA+ECC
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
-		berg_has_ecc_mod = yes
-	}
-	job_mogul_add = @berg_osa_m$tier$_merchant
 }

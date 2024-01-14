@@ -1,0 +1,25 @@
+planet_modifier = {
+	job_squire_add = @berg_government_order_castle_squire_t$tier$
+	job_knight_add = @berg_government_order_castle_knight_t$tier$
+
+	planet_immigration_pull_add = @berg_government_order_castle_immigration_t$tier$
+	planet_resettlement_unemployed_destination_mult = @berg_government_order_castle_resettlement_t$tier$
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = { NOT = { has_country_flag = quest_over } }
+	}
+	modifier = {
+		job_knight_add = 1
+	}
+}
+triggered_desc = {
+	text = building_order_keep_effect
+}
+triggered_desc = {
+	text = job_knight_effect_desc
+}
+triggered_desc = {
+	text = job_squire_effect_desc
+}

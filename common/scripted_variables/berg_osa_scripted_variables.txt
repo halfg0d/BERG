@@ -97,14 +97,10 @@
 @berg_osa_m2_merchant = 4
 @berg_osa_m2_trade = 0.45
 #Housing buildings
-@berg_osa_housing_r1 = 12
-@berg_osa_housing_r2 = 24
 @berg_osa_housing_c1 = 20
 @berg_osa_housing_c2 = 40
 @berg_osa_housing_m1 = 16
 @berg_osa_housing_m2 = 32
-@berg_osa_amenity_r1 = 20
-@berg_osa_amenity_r2 = 40
 @berg_osa_amenity_c1 = 12
 @berg_osa_amenity_c2 = 24
 @berg_osa_amenity_m1 = 17

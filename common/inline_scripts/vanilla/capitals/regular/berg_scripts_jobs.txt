@@ -153,13 +153,13 @@ inline_script = {
 }
 #Venture Politics
 inline_script = {
-	script = VP/berg_bp_capital_job
+	script = VP/berg_vp_capital_job
 	tier = $tier$
 }
 #Description
 inline_script = {
 	script = vanilla/capitals/regular/berg_scripts_jobs_desc
-	trigger = $trigger$
+	condition = $trigger$
 	transcend = $transcend$
 	healthcare = $healtcare$
 }

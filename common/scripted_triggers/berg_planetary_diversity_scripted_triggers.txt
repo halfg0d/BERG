@@ -23,11 +23,7 @@ berg_has_pd_unique_worlds_mod = {
 }
 berg_pd_is_crucible = {
 	berg_has_pd_unique_worlds_mod = yes
-	OR = {
-		is_planet_class = pc_crucible 
-		is_planet_class = pc_shroud_crucible 
-		is_planet_class = pc_clean_crucible
-	}
+	is_pd_crucible = yes
 }
 berg_pd_gaiaseeders_planet = {
 	berg_has_planetary_diversity_mod = yes

@@ -1,3 +1,4 @@
+# Irony this is a placeholder file please ignore it
 is_pd_habitat = { always = no }
 is_pd_nuked = { always = no }
 is_MECR_activated = { always = no }
@@ -18,3 +19,15 @@ is_bugged_militant_zealots = { always = no }
 planet_has_ecocontinuity = { always = no }
 has_megacorp_mod_active = { always = no }
 has_acot = { always = no }
+is_common_empire = { always = no }
+is_pd_crucible = { always = no }
+is_pd_gaia = { always = no }
+is_pd_hive_world = { always = no }
+is_pd_machine = { always = no }
+is_pd_gaia = { always = no }
+is_pd_aquatics = { always = no }
+is_pd_unique = { always = no }
+is_pd_arcology = { always = no }
+is_pd_shroud_world = { always = no }
+is_nuked_world = { always = no }
+is_city_world = { always = no }

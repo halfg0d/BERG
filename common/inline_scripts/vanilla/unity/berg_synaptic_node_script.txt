@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_synapse_drone_add = @berg_unity_e$tier$_job
+	job_synapse_drone_add = @berg_unity_hive_node_job_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -40,6 +40,7 @@ triggered_desc = {
 #OSA
 triggered_planet_modifier = {
 	potential = {
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = {
 			has_active_tradition = tr_solidarity_5
@@ -51,6 +52,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {

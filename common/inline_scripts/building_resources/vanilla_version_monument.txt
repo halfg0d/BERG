@@ -1,0 +1,31 @@
+resources = {
+	category = planet_buildings
+	produces = {
+		trigger = { exists = owner }
+		unity = $tier$
+		multiplier = owner.trigger:num_ascension_perks
+	}
+	cost = {
+		minerals = @berg_unity_$type$_cost_t$tier$
+	}
+	#OSA
+	cost = {
+		trigger = { berg_has_osa_mod = yes }
+		$rare_material$ = @berg_unity_$type$_rare_cost_t$tier$
+	}
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_unity_$type$_osa_upkeep_energy_t$tier$
+		minerals = @berg_unity_$type$_osa_upkeep_minerals_t$tier$
+		$rare_material$ = @berg_unity_$type$_rare_upkeep_t$tier$
+	}
+	produces = {
+		trigger = { berg_has_osa_mod = yes }
+		unity = @berg_unity_$type$_osa_produce_t$tier$
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
+	}
+}

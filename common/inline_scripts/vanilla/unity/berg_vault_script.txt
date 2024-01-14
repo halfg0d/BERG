@@ -1,24 +1,16 @@
-planet_modifier = {
-	planet_administrators_produces_mult = @berg_unity_i$tier$_unity_mult
+country_modifier = {
+	country_official_cap_add = @berg_unity_vault_leader_t$tier$
+	country_unity_produces_mult = @berg_unity_vault_unity_mult_t$tier$
 }
 
 triggered_planet_modifier = {
 	potential = {
 		has_ringworld_output_boost = yes
 	}
-	planet_administrators_unity_produces_add = @berg_unity_i$tier$_unity_add
-	planet_managers_unity_produces_add = @berg_unity_i$tier$_unity_add
-	planet_priests_unity_produces_add = @berg_unity_i$tier$_unity_add
-	planet_telepaths_unity_produces_add = @berg_unity_i$tier$_unity_add
-}
-#OSA
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	planet_culture_workers_produces_mult = @berg_unity_i$tier$_osa_mult1
-	job_culture_worker_add = @berg_unity_i$tier$_osa_job
+	planet_administrators_unity_produces_add = 1
+	planet_managers_unity_produces_add = 1
+	planet_priests_unity_produces_add = 1
+	planet_telepaths_unity_produces_add = 1
 }
 
 triggered_planet_modifier = {
@@ -26,18 +18,52 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
-	planet_synapse_drones_unity_produces_mult = @berg_unity_i$tier$_osa_mult2
-	job_synapse_drone_add = @berg_unity_i$tier$_osa_job
+	planet_synapse_drones_unity_produces_mult = @berg_unity_vault_osa_unity_mult_t$tier$
+	job_synapse_drone_add = @berg_unity_vault_osa_job_t$tier$
 }
 
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
-		#planet_districts_cities_ecocontinuity_upkeep_add = @berg_unity_i1_osa_eco_upkeep
+		#planet_districts_cities_ecocontinuity_upkeep_add = @berg_unity_i$tier$_osa_eco_upkeep
 	}
 }
 #OST
 inline_script = tradition_script/ost_solidarity_effect
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	modifier = {
+		job_politician_add = @berg_unity_vault_job_regular_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	modifier = {
+		job_evaluator_add = @berg_unity_vault_job_gestalt_t$tier$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_politician_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_evaluator_effect_desc
+}

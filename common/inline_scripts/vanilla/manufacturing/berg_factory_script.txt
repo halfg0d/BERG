@@ -1,92 +1,45 @@
 #Bonus
 triggered_planet_modifier = {
 	potential = {
-		always = $bonus$
-	}
-	modifier = {
-		planet_artisans_consumer_goods_produces_add = @berg_manufacturing_b$tier$_cgood
-		planet_artisans_minerals_upkeep_add = @berg_manufacturing_b$tier$_upkeep_m
-	}
-}
-#Jobs
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_crafter_empire = no
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
 		}
 	}
 	modifier = {
-		job_artisan_add = @berg_manufacturing_b$tier$_job
+		planet_artisans_consumer_goods_produces_add = @berg_manufactury_factory_produce_t$tier$
+		planet_artisans_minerals_upkeep_add = @berg_manufactury_factory_produce_upkeep_t$tier$
 	}
 }
-
 triggered_planet_modifier = {
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_crafter_empire = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
 		}
+		has_ringworld_output_boost = yes
 	}
 	modifier = {
-		job_artificer_add = @berg_manufacturing_b$tier$_job
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	modifier = {
-		job_artisan_drone_add = @berg_manufacturing_b$tier$_job
+		planet_artisans_consumer_goods_produces_add = 1
+		planet_artisans_minerals_upkeep_add = 2
 	}
 }
 inline_script = {
-	script = UAP/berg_uap_industrialist_jobs
-	buidling = b
-	tier = $tier$
-	industrialist = yes
+	script = berg_jobs/factory
+	AMOUNT = @berg_manufactury_factory_job_t$tier$
 }
 inline_script = {
-	script = OSA/berg_osa_factory_jobs
-	tier = $tier$
+	script = UAP/berg_uap_industrialist
+	AMOUNT = @berg_manufactury_factory_uap_industrialist_t$tier$
 }
+#inline_script = {
+#	script = OSA/berg_osa_factory_jobs
+#	tier = $tier$
+#}
 #OST
 inline_script = {
 	scrript = tradition_script/ost_metallurgy
 	isForge = no
-	job_add = @berg_osa_l$tier$_job
+	job_add = @berg_manufactury_factory_ost_job_t$tier$
 }
 #Desc
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_crafter_empire = no
-		}
-	}
-	text = job_artisan_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_crafter_empire = yes
-		}
-	}
-	text = job_artificer_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_artisan_drone_effect_desc
-}

@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_gas_extractor_add = @berg_deposit_g$tier$_job
+		job_gas_extractor_add = @berg_deposit_gas_extractors_job_t$tier$
 	}
 }
 
@@ -14,28 +14,28 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_gas_extraction_drone_add = @berg_deposit_g$tier$_job
+		job_gas_extraction_drone_add = @berg_deposit_gas_extractors_job_t$tier$
 	}
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_gas_extraction_add = @berg_deposit_g$tier$_osa_job
+		job_gas_extractor_add = @berg_deposit_gas_extractors_osa_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_gas_extraction_drone_add = @berg_deposit_g$tier$_osa_job
+		job_gas_extraction_drone_add = @berg_deposit_gas_extractors_osa_job_t$tier$
 	}
 }
 #OST

@@ -1,18 +1,24 @@
 planet_modifier = {
-	job_healthcare_add = @berg_amenity_l$tier$_jobs
+	job_healthcare_add = @berg_amenity_clinic_job_t$tier$
 }
-inline_script = {
-	script = ECC/berg_ecc_clinic_script
-	tier = $tier$
-}
-triggered_desc = {
-	text = job_healthcare_effect_desc
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_policy_flag = public_healthcare }
+	}
+	modifier = {
+		job_healthcare_add = @berg_amenity_clinic_ecc_job_t$tier$
+	}
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = yes
 	}
-	planet_housing_add = @berg_osa_n$tier$_housing
-	planet_pop_assembly_organic_add = @berg_osa_n$tier$_assembly
+	planet_housing_add = @berg_amenity_clinic_osa_housing_t$tier$
+	planet_pop_assembly_organic_add = @berg_amenity_clinic_osa_assembly_t$tier$
+}
+triggered_desc = {
+	text = job_healthcare_effect_desc
 }

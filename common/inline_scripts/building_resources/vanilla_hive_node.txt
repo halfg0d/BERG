@@ -2,12 +2,12 @@ resources = {
 	category = planet_buildings
 	#Vanilla
 	cost = {
-		minerals = @berg_res_hive_node_t$tier$_cost
-		exotic_gases = @berg_res_hive_node_t$tier$_cost_gases
+		minerals = @berg_unity_hive_node_cost_t$tier$
+		exotic_gases = @berg_unity_hive_node_rare_cost_t$tier$
 	}
 	upkeep = {
-		energy = @berg_res_hive_node_t$tier$_upkeep
-		exotic_gases = @berg_res_hive_node_t$tier$_upkeep_gases
+		energy = @berg_unity_hive_node_upkeep_t$tier$
+		exotic_gases = @berg_unity_hive_node_rare_upkeep_t$tier$
 	}
 	upkeep = {
 		trigger = {
@@ -21,12 +21,12 @@ resources = {
 	#Osa
 	upkeep = {
 		trigger = { berg_has_osa_mod = yes }
-		energy = @berg_res_hive_node_t$tier$_osa_upkeep
-		minerals = @berg_res_hive_node_t$tier$_osa_upkeep_minerals
+		energy = @berg_unity_hive_node_osa_upkeep_energy_t$tier$
+		minerals = @berg_unity_hive_node_osa_upkeep_minerals_t$tier$
 	}
 	produces = {
 		trigger = { berg_has_osa_mod = yes }
-		unity = @berg_res_hive_node_t$tier$_osa_produces
+		unity = @berg_unity_hive_node_osa_produce_t$tier$
 	}
 	#OST
 	inline_script = {

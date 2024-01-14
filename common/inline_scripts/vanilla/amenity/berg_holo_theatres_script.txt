@@ -9,7 +9,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_entertainer_add = @berg_amenity_t$tier$_jobs
+		job_entertainer_add = @berg_amenity_holo_theatres_job_t$tier$
 	}
 }
 
@@ -24,7 +24,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_duelist_add = @berg_amenity_t$tier$_jobs
+		job_duelist_add = @berg_amenity_holo_theatres_job_t$tier$
 	}
 }
 #Descriptions

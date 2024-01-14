@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_necromancer_add = @berg_army_b$tier$_job
+	job_necromancer_add = @berg_army_dread_encampment_job_t$tier$
 }
 triggered_desc = {
 	trigger = {

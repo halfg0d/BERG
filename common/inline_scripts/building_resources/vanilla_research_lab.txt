@@ -1,0 +1,40 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_research_research_lab_cost_t$tier$
+		exotic_gases = @berg_research_research_lab_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_research_research_lab_upkeep_t$tier$
+		exotic_gases = @berg_research_research_lab_rare_upkeep_t$tier$
+	}
+	upkeep = {
+		trigger = {
+			owner = {
+				is_galactic_community_member = yes
+			}
+			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			planet = {
+				has_modifier = pm_extradimensional_experimentation
+			}
+		}
+		sr_zro = 1
+	}
+	#OSA
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_research_research_lab_osa_upkeep_energy_t$tier$
+		minerals = @berg_research_research_lab_osa_upkeep_minerals_t$tier$
+	}
+	produces = {
+		trigger = { berg_has_osa_mod = yes }
+		physics_research = @berg_research_research_lab_osa_produce_t$tier$
+		society_research = @berg_research_research_lab_osa_produce_t$tier$
+		engineering_research = @berg_research_research_lab_osa_produce_t$tier$
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_insight
+		tier = $tier$
+	}
+}

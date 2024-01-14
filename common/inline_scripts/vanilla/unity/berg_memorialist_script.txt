@@ -1,5 +1,5 @@
 planet_modifier = {
-	planet_jobs_unity_produces_mult = @berg_unity_g$tier$_unity_bonus
+	planet_jobs_unity_produces_mult = @berg_unity_memorial_regular_unity_mult_t$tier$
 }
 
 #Jobs
@@ -8,28 +8,28 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_gestalt = no }
 	}
-	job_death_chronicler_add = @berg_unity_g$tier$_job
+	job_death_chronicler_add = @berg_unity_memorial_regular_job_t$tier$
 }
 triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = { is_gestalt = no }
 	}
-	text = "job_death_chronicler_effect_desc"
+	text = job_death_chronicler_effect_desc
 }
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
-	job_chronicle_drone_add = @berg_unity_g$tier$_job
+	job_chronicle_drone_add = @berg_unity_memorial_regular_job_t$tier$
 }
 triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
-	text = "job_chronicle_drone_effect_desc"
+	text = job_chronicle_drone_effect_desc
 }
 #Tomb/Relic worlds
 triggered_planet_modifier = {
@@ -57,6 +57,7 @@ triggered_planet_modifier = {
 #OSA
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {

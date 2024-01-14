@@ -1,0 +1,46 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { NOT = { has_civic = civic_defenders_faith } }
+		$trigger$
+	}
+	modifier = {
+		job_priest_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { NOT = { has_civic = civic_defenders_faith } }
+		check_variable_arithmetic = {
+			which = $AMOUNT$
+			value > 0
+		}
+	}
+	text = job_priest_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_civic = civic_defenders_faith }
+		$trigger$
+	}
+	modifier = {
+		job_templar_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_defenders_faith
+		}
+		check_variable_arithmetic = {
+			which = $AMOUNT$
+			value > 0
+		}
+	}
+	text = job_templar_effect_desc
+}

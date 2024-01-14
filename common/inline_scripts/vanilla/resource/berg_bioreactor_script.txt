@@ -1,15 +1,15 @@
 cost = {
-	minerals = @berg_resource_r$tier$_cost
+	minerals = @berg_resource_bioreactor_cost_t$tier$
 }
 upkeep = {
-	food = @berg_resource_r$tier$_upkeep
+	food = @berg_resource_bioreactor_upkeep_t$tier$
 }
 produces = {
 	trigger = {
 		exists = owner
 		owner = { NOT = { has_deficit = food } }
 	}
-	energy = @berg_resource_r$tier$_produce_1
+	energy = @berg_resource_bioreactor_produce_t$tier$
 }
 #OSA
 produces = {
@@ -18,11 +18,11 @@ produces = {
 		exists = owner
 		owner = { NOT = { has_deficit = food } }
 	}
-	energy = 10
+	energy = @berg_resource_bioreactor_osa_produce_t$tier$
 }
 upkeep = {
 	trigger = {
 		berg_has_osa_mod = yes
 	}
-	food = 10
+	food = @berg_resource_bioreactor_osa_upkeep_t$tier$
 }

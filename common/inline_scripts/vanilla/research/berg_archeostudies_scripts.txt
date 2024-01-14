@@ -1,71 +1,13 @@
 #Jobs
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	modifier = {
-		job_archaeoengineers_add = @berg_research_a$tier$_jobs
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
-	}
-	modifier = {
-		job_archaeo_drone_add = @berg_research_a$tier$_jobs
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-	}
-	modifier = {
-		job_archaeo_unit_add = @berg_research_a$tier$_jobs
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { 
-			is_gestalt = no
-			has_ascension_perk = ap_archaeoengineers
-		}
-	}
-	modifier = {
-		job_archaeoengineers_add = @berg_research_a$tier$_jobs_ap
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-			has_ascension_perk = ap_archaeoengineers
-		}
-	}
-	modifier = {
-		job_archaeo_drone_add = @berg_research_a$tier$_jobs_ap
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			has_ascension_perk = ap_archaeoengineers
-		}
-	}
-	modifier = {
-		job_archaeo_unit_add = @berg_research_a$tier$_jobs_ap
-	}
+inline_script = {
+	script = jobs/archaeoengineers_add
+	BASE_AMOUNT = @berg_research_archaeostudies_job_t$tier$
+	AP_AMOUNT = 2
 }
 #Country
 country_modifier = {
-	category_archaeostudies_research_speed_mult = @berg_research_a$tier$_mult
-	country_resource_max_minor_artifacts_add = @berg_research_a$tier$_artifacts
+	category_archaeostudies_research_speed_mult = @berg_research_archaeostudies_research_t$tier$
+	country_resource_max_minor_artifacts_add = @berg_research_archaeostudies_silo_t$tier$
 }
 triggered_country_modifier = {
 	potential = {
@@ -74,22 +16,25 @@ triggered_country_modifier = {
 			has_ascension_perk = ap_archaeoengineers
 		}
 	}
-	country_resource_max_minor_artifacts_add = @berg_research_a$tier$_artifacts_ap
+	country_resource_max_minor_artifacts_add = 2000
 }
 triggered_country_modifier = {
 	potential = { planet = { berg_archeostudies_faculty_planet = yes } }
-	category_archaeostudies_research_speed_mult = @berg_research_a$tier$_mult_relic
+	category_archaeostudies_research_speed_mult = 0.5
 }
-inline_script = {
-	script = GPM/berg_gpm_archeostudies_faculty_script
-	tier = $tier$
+triggered_country_modifier = {
+	potential = {
+		gpm_mod_active = yes
+		planet = { is_planet_class = pc_gpm_precursor_tomb } 
+	}
+	category_archaeostudies_research_speed_mult = @berg_research_archaeostudies_gpm_research_t$tier$
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = yes
 	}
-	planet_researchers_produces_mult = @berg_osa_c$tier$_mult
+	planet_researchers_produces_mult = @berg_research_archaeostudies_osa_research_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -97,29 +42,7 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { has_ascension_perk = ap_archaeoengineers }
 	}
-	planet_researchers_produces_mult = @berg_osa_c$tier$_mult_ap
-}
-#Descriptions
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	text = job_archaeoengineers_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_hive_empire = yes }
-	}
-	text = job_archaeo_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-	}
-	text = job_archaeo_unit_effect_desc
+	planet_researchers_produces_mult = @berg_research_archaeostudies_osa_research_t$tier$
 }
 triggered_desc = {
 	text = building_archaeostudies_faculty_relic_effect

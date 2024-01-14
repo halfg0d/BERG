@@ -1,6 +1,6 @@
 ﻿# Irony this is a placeholder file please ignore it
 l_english:
-#MOD text
+#MOD text - in future will be applied, maybe
  mod_prefix_title_pd: "§M(PD)§!"
  mod_prefix_desc_pd: "\n§M> Planetary Diversity <§!"
  mod_prefix_title_pd_arc: "§M(PD)§!"
@@ -16,3 +16,5 @@ l_english:
  building_deep_space_scanner_ecc_desc:0 "$building_deep_space_scanner_desc$"
  building_fe_xeno_zoo_vanilla:0 "$building_fe_xeno_zoo$"
  building_fe_xeno_zoo_vanilla:0 "$building_fe_xeno_zoo_desc$"
+ building_bug_galactic_stock_exchange:0 "$building_galactic_stock_exchange$"
+ building_bug_galactic_stock_exchange_desc:0 "$building_galactic_stock_exchange_desc$"

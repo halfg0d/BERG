@@ -1,5 +1,5 @@
 planet_modifier = {
-	planet_farmers_food_produces_add = @berg_resource_p$tier$_add
+	planet_farmers_food_produces_add = @berg_resource_food_processing_add_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -18,7 +18,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_farmer_add = @berg_resource_p$tier$_job
+		job_farmer_add = @berg_resource_food_processing_job_t$tier$
 	}
 }
 
@@ -28,7 +28,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_farm_add = @berg_resource_p$tier$_job
+		job_fe_acolyte_farm_add = @berg_resource_food_processing_job_t$tier$
 	}
 }
 
@@ -38,7 +38,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_agri_drone_add = @berg_resource_p$tier$_job
+		job_agri_drone_add = @berg_resource_food_processing_job_t$tier$
 	}
 }
 
@@ -53,7 +53,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_angler_add = @berg_resource_p$tier$_job
+		job_angler_add = @berg_resource_food_processing_job_t$tier$
 	}
 }
 inline_script = {

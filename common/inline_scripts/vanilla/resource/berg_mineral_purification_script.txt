@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		berg_is_shattered_ring = no
 	}
 	modifier = {
-		planet_miners_minerals_produces_add = @berg_resource_m$tier$_mineral
+		planet_miners_minerals_produces_add = @berg_resource_mineral_purification_miner_add_mineral_t$tier$
 	}
 }
 
@@ -13,8 +13,8 @@ triggered_planet_modifier = {
 		berg_is_shattered_ring = yes
 	}
 	modifier = {
-		planet_miners_minerals_produces_add = @berg_resource_m$tier$_mineral_scrap
-		planet_miners_alloys_produces_add = @berg_resource_m2_alloy
+		planet_miners_minerals_produces_add = @berg_resource_mineral_purification_scrap_add_mineral_t$tier$
+		planet_miners_alloys_produces_add = @berg_resource_mineral_purification_scrap_add_alloy_t$tier$
 	}
 }
 #Job
@@ -32,7 +32,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_miner_add = @berg_resource_m$tier$_job
+		job_miner_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -43,7 +43,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_mine_add = @berg_resource_m$tier$_job
+		job_fe_acolyte_mine_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -63,7 +63,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_mining_drone_add = @berg_resource_m$tier$_job
+		job_mining_drone_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -74,7 +74,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_scrap_miner_add = @berg_resource_m$tier$_job
+		job_scrap_miner_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -85,7 +85,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_scrap_miner_drone_add = @berg_resource_m$tier$_job
+		job_scrap_miner_drone_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -103,7 +103,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		district_mining_max = @berg_resource_m$tier$_district
+		district_mining_max = @berg_resource_mineral_purification_district_add_t$tier$
 	}
 }
 inline_script = {

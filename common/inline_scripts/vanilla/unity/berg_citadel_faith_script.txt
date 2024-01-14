@@ -1,20 +1,83 @@
+country_modifier = {
+	country_official_cap_add = @berg_unity_citadel_faith_leader_t$tier$
+	country_unity_produces_mult = @berg_unity_citadel_faith_unity_mult_t$tier$
+}
+
 planet_modifier = {
-	job_high_priest_add = @berg_unity_j$tier$_job
-	pop_ethic_spiritualist_attraction_mult = @berg_unity_j$tier$_attraction
-	planet_administrators_produces_mult = @berg_unity_j$tier$_unity_mult
+	job_high_priest_add = @berg_unity_citadel_faith_job_t$tier$
+	pop_ethic_spiritualist_attraction_mult = @berg_unity_citadel_faith_attraction_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
 		has_ringworld_output_boost = yes
 	}
-	planet_administrators_unity_produces_add = @berg_unity_j$tier$_unity_add
-	planet_managers_unity_produces_add = @berg_unity_j$tier$_unity_add
-	planet_priests_unity_produces_add = @berg_unity_j$tier$_unity_add
-	planet_telepaths_unity_produces_add = @berg_unity_j$tier$_unity_add
+	planet_administrators_unity_produces_add = 1
+	planet_managers_unity_produces_add = 1
+	planet_priests_unity_produces_add = 1
+	planet_telepaths_unity_produces_add = 1
 }
-inline_script = {
-	script = ECC/berg_ecc_citadel_faith_script
-	tier = $tier$
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_civic = civic_defenders_faith }
+	}
+	modifier = {
+		job_priest_add = -@berg_unity_citadel_faith_ecc_templar_t$tier$
+		job_templar_add = @berg_unity_citadel_faith_ecc_templar_t$tier$
+		pop_ethic_spiritualist_attraction_mult = @berg_unity_citadel_faith_ecc_attraction_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_civic = civic_spiritual_seekers }
+	}
+	modifier = {
+		job_transcend_add = @berg_unity_citadel_faith_ecc_transcend_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_imperial_cult
+				has_civic = civic_divine_council
+				has_civic = civic_spiritual_democracy
+				has_civic = civic_exalted_priesthood
+			}
+		}
+	}
+	modifier = {
+		job_high_priest_add = @berg_unity_citadel_faith_ecc_high_priest_t$tier$
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_spiritual_seekers
+		}
+	}
+	text = job_transcend_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_defenders_faith
+		}
+	}
+	text = job_templar_effect_desc
 }
 triggered_desc = {
 	text = job_high_priest_effect_desc

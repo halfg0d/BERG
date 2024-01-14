@@ -1,0 +1,31 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_trade_galactic_stock_osa_mult_t$tier$
+		rare_crystals = @berg_trade_commercial_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_trade_commercial_upkeep_t$tier$
+		rare_crystals = @berg_trade_commercial_rare_upkeep_t$tier$
+	}
+	produces = {
+		trigger = {
+			berg_has_ecc_mod = yes
+			owner = { has_valid_civic = civic_consumerism }
+		}
+		unity = @berg_trade_commercial_ecc_unity_t$tier$
+	}
+	#OSA
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		energy = @berg_trade_commercial_osa_upkeep_energy_t$tier$
+		minerals = @berg_trade_commercial_osa_upkeep_minerals_t$tier$
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_commerce
+		tier = $tier$
+	}
+}

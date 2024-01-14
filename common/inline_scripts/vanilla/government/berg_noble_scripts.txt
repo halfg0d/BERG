@@ -1,10 +1,79 @@
 planet_modifier = {
-	job_noble_add = @berg_government_n$tier$_jobs
-	planet_housing_add = @berg_government_n$tier_housing
+	job_noble_add = @berg_government_noble_estates_noble_t$tier$
+	planet_housing_add = @berg_government_noble_estates_housing_t$tier$
 }
-inline_script = {
-	script = ECC/berg_ecc_noble_script
-	tier = $tier$
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_civic = civic_harmonious_hierarchy }
+	}
+	modifier = {
+		job_noble_per_pop = @berg_government_noble_estates_ecc_per_pop_t$tier$
+		planet_housing_add = @berg_government_noble_estates_ecc_housing_t$tier$
+		pop_government_ethic_attraction = @berg_government_noble_estates_ecc_attraction_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			AND = {
+				has_civic = civic_aristocratic_elite
+				is_anglers_empire = no
+			}
+		}
+	}
+	modifier = {
+		planet_housing_add = @berg_government_noble_estates_ecc_farmer_t$tier$
+		job_farmer_add = @berg_government_noble_estates_ecc_farmer_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			AND = {
+				has_civic = civic_aristocratic_elite
+				is_anglers_empire = yes
+			}
+		}
+	}
+	modifier = {
+		planet_housing_add = @berg_government_noble_estates_ecc_farmer_t$tier$
+		job_angler_add = @berg_government_noble_estates_ecc_farmer_t$tier$
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			AND = {
+				has_civic = civic_aristocratic_elite
+				is_anglers_empire = no
+			}
+		}
+	}
+	text = job_farmer_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = {
+			AND = {
+				has_civic = civic_aristocratic_elite
+				is_anglers_empire = yes
+			}
+		}
+	}
+	text = job_aqu_angler_effect_desc
 }
 #BugBranch
 triggered_planet_modifier = {
@@ -15,8 +84,8 @@ triggered_planet_modifier = {
 			has_valid_civic = civic_bugged_peerage_assembly
 		}
 	}
-	job_noble_add = 1
-	planet_housing_add = 1
+	job_noble_add = @berg_government_noble_estates_bug_noble_t$tier$
+	planet_housing_add = @berg_government_noble_estates_bug_housing_t$tier$
 }
 #
 triggered_desc = {
