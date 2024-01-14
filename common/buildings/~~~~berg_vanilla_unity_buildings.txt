@@ -2613,13 +2613,13 @@ building_simulation_1 = {
 	inline_script = {
 		script = building_resources/vanilla_version_monument
 		tier = 1
-		type = monument_machines
+		type = monument_machine
 		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
 		tier = 1
-		type = monument_machines
+		type = monument_machine
 	}
 	triggered_desc = {
 		text = building_autochthon_monument_effect
@@ -2687,13 +2687,13 @@ building_simulation_2 = {
 	inline_script = {
 		script = building_resources/vanilla_version_monument
 		tier = 2
-		type = monument_machines
+		type = monument_machine
 		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
 		tier = 2
-		type = monument_machines
+		type = monument_machine
 	}
 
 	triggered_desc = {
@@ -2757,13 +2757,13 @@ building_simulation_3 = {
 	inline_script = {
 		script = building_resources/vanilla_version_monument
 		tier = 3
-		type = monument_machines
+		type = monument_machine
 		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
 		tier = 3
-		type = monument_machines
+		type = monument_machine
 	}
 	triggered_desc = {
 		text = building_hypercomms_forum_effect
@@ -2825,13 +2825,13 @@ building_avb_monument_machine_4 = {
 	inline_script = {
 		script = building_resources/vanilla_version_monument
 		tier = 4
-		type = monument_machines
+		type = monument_machine
 		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
 		tier = 4
-		type = monument_machines
+		type = monument_machine
 	}
 	triggered_desc = {
 		text = building_avb_monument_effect_4
@@ -2891,13 +2891,13 @@ building_avb_monument_machine_5 = {
 	inline_script = {
 		script = building_resources/vanilla_version_monument
 		tier = 5
-		type = monument_machines
+		type = monument_machine
 		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
 		tier = 5
-		type = monument_machines
+		type = monument_machine
 	}
 	triggered_desc = {
 		text = building_avb_monument_effect_5
@@ -2957,13 +2957,13 @@ building_avb_monument_machine_6 = {
 	inline_script = {
 		script = building_resources/vanilla_version_monument
 		tier = 6
-		type = monument_machines
+		type = monument_machine
 		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
 		tier = 6
-		type = monument_machines
+		type = monument_machine
 	}
 	triggered_desc = {
 		text = building_avb_monument_effect_6
@@ -3773,7 +3773,10 @@ building_avb_monument_hive_6 = {
 ##################
 building_autocurating_vault = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	
+	empire_limit = {
+		base = 1
+	}
 
 	category = unity
 
@@ -3848,6 +3851,7 @@ building_avb_autocurating_vault_2 = {
 
 	icon = building_avb_unity_booster_5
 	category = unity
+	can_build = no
 
 	potential = {
 		exists = owner
@@ -3912,7 +3916,10 @@ building_avb_autocurating_vault_2 = {
 
 building_citadel_of_faith = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	
+	empire_limit = {
+		base = 1
+	}
 
 	category = unity
 
@@ -3976,8 +3983,8 @@ building_citadel_of_faith = {
 building_avb_citadel_of_faith_2 = {
 	base_buildtime = @b2_time
 
-
 	category = unity
+	can_build = no
 
 	potential = {
 		exists = owner
@@ -4036,7 +4043,10 @@ building_avb_citadel_of_faith_2 = {
 
 building_corporate_vault = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+	
+	empire_limit = {
+		base = 1
+	}
 	icon = building_autocurating_vault
 
 	category = unity
@@ -4103,6 +4113,7 @@ building_avb_corporate_vault_2 = {
 	base_buildtime = @b3_time
 
 	icon = building_avb_unity_booster_5
+	can_build = no
 
 	category = unity
 
@@ -4161,7 +4172,10 @@ building_avb_corporate_vault_2 = {
 
 building_alpha_hub = {
 	base_buildtime = @b3_time
-	base_cap_amount = 1
+	
+	empire_limit = {
+		base = 1
+	}
 	icon = building_autocurating_vault
 
 	category = unity
@@ -4210,6 +4224,7 @@ building_avb_alpha_hub_2 = {
 	base_buildtime = @b3_time
 	icon = building_avb_unity_booster_5
 	category = unity
+	can_build = no
 
 	potential = {
 		exists = owner

@@ -228,7 +228,10 @@ building_avb_research_lab_6 = {
 
 building_institute = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	
+	empire_limit = {
+		base = 1
+	}
 
 	category = research
 
@@ -360,7 +363,9 @@ building_avb_institute_2 = {
 
 building_supercomputer = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 	icon = building_institute
 
 	category = research
@@ -394,7 +399,7 @@ building_supercomputer = {
 	}
 
 	inline_script = {
-		script = vanilla/research/berg_institute_modifiers_scripts
+		script = vanilla/research/berg_supercomputer
 		tier = 1
 	}
 	inline_script = {
@@ -469,7 +474,7 @@ building_avb_supercomputer_2 = {
 	
 	
 	inline_script = {
-		script = vanilla/research/berg_institute_modifiers_scripts
+		script = vanilla/research/berg_supercomputer
 		tier = 2
 	}
 	inline_script = {

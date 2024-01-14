@@ -106,14 +106,21 @@ triggered_planet_modifier = {
 		district_mining_max = @berg_resource_mineral_purification_district_add_t$tier$
 	}
 }
-inline_script = {
-	script = ECC/berg_ecc_mineral_purification_script
-	tier = $tier$
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		berg_is_shattered_ring = no
+		exists = owner
+		owner = { has_valid_civic = civic_mining_guilds }
+	}
+	modifier = {
+		job_politician_add = 1
+	}
 }
 inline_script = {
 	script = BUG/berg_district_script
 	tier = $tier$
-	district = "mining"
+	district = mining
 }
 #OST
 inline_script = {
@@ -145,6 +152,16 @@ inline_script = {
 	job_subtract = 1
 	drone = scrap_miner_drone
 	trigger = "berg_is_shattered_ring = yes"
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		berg_is_shattered_ring = no
+		exists = owner
+		owner = { has_valid_civic = civic_mining_guilds }
+	}
+	text = job_politician_effect_desc
 }
 triggered_desc = {
 	trigger = {

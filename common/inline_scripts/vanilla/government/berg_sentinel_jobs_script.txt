@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_patrol_drone_add = @berg_government_g$tier$_job
+	job_patrol_drone_add = @berg_government_sentinel_posts_job_t$tier$
 }
 triggered_desc = {
 	text = job_patrol_drone_effect_desc

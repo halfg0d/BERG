@@ -59,7 +59,7 @@ triggered_planet_modifier = {
 inline_script = {
 	script = BUG/berg_districts_script
 	tier = $tier$
-	district = "farming"
+	district = farming
 }
 #OSA
 inline_script = {
@@ -72,8 +72,7 @@ inline_script = {
 	osa_job = @berg_osa_f$tier$_job
 	farmer_subtract = @berg_osa_f$tier$_job
 	canAngler = yes
-	angler_subtract = @berg_osa_f$tier$_jobA
-	pearl_subtract = @berg_osa_f$tier$_jobB
+	angler_subtract = @berg_osa_f$tier$_job
 }
 inline_script = {
 	script = tradition_script/ost_omni_drone

@@ -22,7 +22,7 @@ building_commercial_zone = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commerical
+		script = building_resources/vanilla_commercial
 		tier = 1
 	}
 	inline_script = {
@@ -62,7 +62,7 @@ building_commercial_megaplex = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commerical
+		script = building_resources/vanilla_commercial
 		tier = 2
 	}
 	inline_script = {
@@ -119,7 +119,7 @@ building_avb_commercial_3 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_commerical
+		script = building_resources/vanilla_commercial
 		tier = 3
 	}
 	inline_script = {
@@ -175,7 +175,7 @@ building_avb_commercial_4 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commerical
+		script = building_resources/vanilla_commercial
 		tier = 4
 	}
 	inline_script = {
@@ -231,7 +231,7 @@ building_avb_commercial_5 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commerical
+		script = building_resources/vanilla_commercial
 		tier = 5
 	}
 	inline_script = {

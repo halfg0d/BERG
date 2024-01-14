@@ -1,7 +1,7 @@
 resources = {
 	category = planet_buildings
 	cost = {
-		minerals = @berg_trade_galactic_stock_osa_mult_t$tier$
+		minerals = @berg_trade_commercial_cost_t$tier$
 		rare_crystals = @berg_trade_commercial_rare_cost_t$tier$
 	}
 	upkeep = {

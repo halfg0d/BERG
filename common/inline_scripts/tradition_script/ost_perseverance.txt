@@ -38,8 +38,7 @@ triggered_planet_modifier = {
 	modifier = {
 		planet_housing_add = 5
 		job_osa_agri_director_add = $osa_job$
-		job_angler_add = -$angler_subtract$
-		job_pearl_diver_add = -$pearl_subtract$
+		job_angler_add = -$farmer_subtract$
 	}
 }
 #desc

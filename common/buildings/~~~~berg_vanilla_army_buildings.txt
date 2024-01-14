@@ -3,10 +3,12 @@
 #############
 building_military_academy = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
 	can_be_ruined = no
 	category = army
 
+	empire_limit = {
+		base = 1
+	}
 	potential = {
 		exists = owner
 		owner = { berg_reanimator_civic = no }

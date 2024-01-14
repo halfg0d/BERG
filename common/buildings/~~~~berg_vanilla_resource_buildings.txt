@@ -47,7 +47,7 @@ building_hydroponics_farm = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resource/vanilla_hydroponics
+		script = building_resources/vanilla_hydroponics
 		tier = 1
 	}
 	prerequisites = {
@@ -120,7 +120,7 @@ building_avb_hydroponics_farm_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resource/vanilla_hydroponics
+		script = building_resources/vanilla_hydroponics
 		tier = 2
 	}
 	prerequisites = {
@@ -856,7 +856,7 @@ building_resource_silo = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanila_version_empty
+		script = building_resources/vanilla_version_empty
 		tier = 1
 		category = resource
 		type = silo
@@ -911,7 +911,7 @@ building_avb_resource_silo_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanila_version_empty
+		script = building_resources/vanilla_version_empty
 		tier = 2
 		category = resource
 		type = silo

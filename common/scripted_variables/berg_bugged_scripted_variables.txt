@@ -33,8 +33,6 @@
 @berg_bug_c2_job = 2
 @berg_bug_c3_job = 3
 #resources district
-@berg_bug_d1_district = 1
-@berg_bug_d2_district = 2
 #temple templars
 @berg_bug_e1_templar = 1
 @berg_bug_e1_high_priest = 0
