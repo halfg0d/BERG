@@ -1,37 +1,34 @@
 resources = {
 	category = planet_buildings
 	cost = {
-		minerals = @b2_minerals
-		minor_artifacts = @b2_rare_cost
+		minerals = @berg_research_archaeostudies_cost_t$tier$
+		minor_artifacts = @berg_research_archaeostudies_artifacts_cost_t$tier$
 	}
 	#Vanilla
 	upkeep = {
 		trigger = {
 			berg_has_osa_mod = no
 		}
-		energy = @b4_upkeep
+		energy = @berg_research_archaeostudies_upkeep_t$tier$
 	}
 	#OSA
 	upkeep = {
 		trigger = {
 			berg_has_osa_mod = yes
 		}
-		energy = @ost_b4_upkeep
+		energy = @berg_research_archaeostudies_osa_upkeep_energy_t$tier$
 	}
 	produces = {
 		trigger = {
 			berg_has_osa_mod = yes
 		}
-		physics_research = @ost_b3_produces
-		society_research = @ost_b3_produces
-		engineering_research = @ost_b3_produces
+		physics_research = @berg_research_archaeostudies_osa_produce_t$tier$
+		society_research = @berg_research_archaeostudies_osa_produce_t$tier$
+		engineering_research = @berg_research_archaeostudies_osa_produce_t$tier$
 	}
-	produces = {
-		trigger = {
-			owner = {
-				has_active_tradition = tr_insight_3
-			}
-		}
-		physics_research = 20
+	#OST
+	inline_script = {
+		script = tradition_script/ost_insight
+		tier = 3
 	}
 }

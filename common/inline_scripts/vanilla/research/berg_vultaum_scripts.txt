@@ -1,13 +1,13 @@
 #Modifiers
 planet_modifier = {
-	planet_researchers_physics_research_produces_add = @berg_research_v$tier$_physic
+	planet_researchers_physics_research_produces_add = @berg_research_vultaum_physic_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { has_ascension_perk = ap_archaeoengineers }
 	}
-	planet_researchers_physics_research_produces_add = @berg_research_v$tier$_physic_ap
+	planet_researchers_physics_research_produces_add = @berg_research_vultaum_physic_t$tier$
 }
 #Jobs
 triggered_planet_modifier = {
@@ -16,7 +16,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = no }
 	}
 	modifier = {
-		job_head_researcher_add = @berg_research_v$tier$_jobs
+		job_head_researcher_add = @berg_research_vultaum_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -25,7 +25,7 @@ triggered_planet_modifier = {
 		owner = { is_hive_empire = yes }
 	}
 	modifier = {
-		job_brain_drone_add = @berg_research_v$tier$_jobs
+		job_brain_drone_add = @berg_research_vultaum_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -34,7 +34,7 @@ triggered_planet_modifier = {
 		owner = { is_machine_empire = yes }
 	}
 	modifier = {
-		job_calculator_add = @berg_research_v$tier$_jobs
+		job_calculator_add = @berg_research_vultaum_job_t$tier$
 	}
 }
 #Descriptions

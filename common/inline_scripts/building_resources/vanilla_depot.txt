@@ -1,0 +1,16 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_amenity_depot_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_amenity_depot_upkeep_t$tier$
+	}
+	#OSA
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_amenity_depot_osa_upkeep_energy_t$tier$
+		minerals = @berg_amenity_depot_osa_upkeep_minerals_t$tier$
+	}
+}

@@ -1,0 +1,19 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_pop_assembly_spawning_pool_cost_t$tier$
+		exotic_gases = @berg_pop_assembly_spawning_pool_rare_cost_t$tier$
+		volatile_motes = @berg_pop_assembly_spawning_pool_rare_cost2_t$tier$
+	}
+	upkeep = {
+		energy = @berg_pop_assembly_spawning_pool_upkeep_t$tier$
+		exotic_gases = @berg_pop_assembly_spawning_pool_rare_upkeep_t$tier$
+		volatile_motes = @berg_pop_assembly_spawning_pool_rare_upkeep2_t$tier$
+	}
+	#Osa
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_pop_assembly_spawning_pool_osa_upkeep_energy_t$tier$
+		minerals = @berg_pop_assembly_spawning_pool_osa_upkeep_minerals_t$tier$
+	}
+}

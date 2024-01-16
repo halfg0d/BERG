@@ -36,6 +36,10 @@ building_deep_space_scanner = {
 		cost = { minerals = 400 }
 		produces = { physics_research = 7 unity = 3 }
 		upkeep = { energy = 4 }
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 2
+		}
 	}
 	triggered_desc = {
 		trigger = {

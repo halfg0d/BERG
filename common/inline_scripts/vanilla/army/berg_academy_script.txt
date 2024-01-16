@@ -1,6 +1,6 @@
 country_modifier = {
-	country_commander_cap_add = @berg_army_a$tier$_official_cap
-	country_naval_cap_mult = @berg_army_a$tier$_mult
+	country_commander_cap_add = @berg_army_military_academy_cap_t$tier$
+	country_naval_cap_mult = @berg_army_military_academy_naval_t$tier$
 }
 #jobs
 triggered_planet_modifier = {
@@ -9,7 +9,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = no }
 	}
 	modifier = {
-		job_politician_add = @berg_army_a$tier$_job
+		job_politician_add = @berg_army_military_academy_cap_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -18,7 +18,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_evaluator_add = @berg_army_a$tier$_job_gestalt
+		job_evaluator_add = @berg_army_military_academy_job_gestalt_t$tier$
 	}
 }
 #Desc
@@ -37,27 +37,30 @@ triggered_desc = {
 	}
 	text = job_evaluator_effect_desc
 }
-inline_script = {
-	script = ECC/berg_ecc_academy_script
-	tier = $tier$
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_civic = civic_martial_brotherhood }
+	}
+	modifier = {
+		planet_housing_add = @berg_army_military_academy_ecc_housing_t$tier$
+	}
 }
 #OSA
-triggered_army_modifier = {
-	potential = { has_osa_mod = yes }
-	army_starting_experience_add = 50
-}
-
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 	}
 	modifier = {
-		planet_army_build_speed_mult = 0.50
+		planet_army_build_speed_mult = @berg_army_military_academy_osa_army_speed_t$tier$
+		army_starting_experience_add = @berg_army_military_academy_osa_army_exp_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no
@@ -65,14 +68,14 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_commander_add = 1
-		job_osa_commando_add = 1
+		job_osa_commander_add = @berg_army_military_academy_osa_commander_t$tier$
+		job_osa_commando_add = @berg_army_military_academy_osa_commander_t$tier$
 	}
 }
 
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no
@@ -82,13 +85,13 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_soldier_add = 2
+		job_soldier_add = @berg_army_military_academy_osa_soldier_t$tier$
 	}
 }
 
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = yes
@@ -96,13 +99,13 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_commando_drone_add = 2
+		job_osa_commando_drone_add = @berg_army_military_academy_osa_drone_t$tier$
 	}
 }
 
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = yes
@@ -112,12 +115,12 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_warrior_drone_add = 2
+		job_warrior_drone_add = @berg_army_military_academy_osa_soldier_t$tier$
 	}
 }
 triggered_desc = {
 	trigger = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = yes
@@ -129,7 +132,7 @@ triggered_desc = {
 
 triggered_desc = {
 	trigger = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no
@@ -141,7 +144,7 @@ triggered_desc = {
 
 triggered_desc = {
 	trigger = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no

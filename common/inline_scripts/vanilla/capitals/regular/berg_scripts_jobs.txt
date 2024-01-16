@@ -3,7 +3,8 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = {
 			NOR = {
-				has_authority = auth_corporate
+				is_gestalt = yes
+				is_megacorp = yes
 				berg_has_any_spiritualist_civic = yes
 				berg_has_any_noble_civic = yes
 				berg_has_any_technocracy_civic = yes
@@ -160,6 +161,13 @@ inline_script = {
 }
 #Venture Politics
 inline_script = {
-	script = VP/berg_bp_capital_job
+	script = VP/berg_vp_capital_job
 	tier = $tier$
+}
+#Description
+inline_script = {
+	script = vanilla/capitals/regular/berg_scripts_jobs_desc
+	condition = $trigger$
+	transcend = $transcend$
+	healthcare = $healtcare$
 }

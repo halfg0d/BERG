@@ -1,0 +1,10 @@
+#In every government building
+produces = {
+	trigger = {
+		berg_has_ost_mod = yes
+		owner = {
+			has_active_tradition = tr_order_4
+		}
+	}
+	unity = @berg_ost_order_unity_t$tier$
+}

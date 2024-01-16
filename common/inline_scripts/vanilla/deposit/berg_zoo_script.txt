@@ -6,22 +6,22 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_duelist_add = @berg_deposit_z$tier$_entertainer
+		job_duelist_add = @berg_deposit_xeno_zoo_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			NOT = { has_valid_civic = civic_warrior_culture }
+			berg_can_duelist_be_changed = no
 		}
 	}
 	modifier = {
-		job_entertainer_add = @berg_deposit_z$tier$_entertainer
+		job_entertainer_add = @berg_deposit_xeno_zoo_job_t$tier$
 	}
 }
 planet_modifier = {
-	job_xeno_zoo_keeper_add = @berg_deposit_z$tier$_keeper
+	job_xeno_zoo_keeper_add = @berg_deposit_xeno_zoo_keeper_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -37,7 +37,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_livestock_zoo_animal_add = @berg_deposit_z$tier$_animal
+		job_livestock_zoo_animal_add = @berg_deposit_xeno_zoo_animal_t$tier$
 	}
 }
 
@@ -54,7 +54,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_livestock_zoo_beast_add = @berg_deposit_z$tier$_animal
+		job_livestock_zoo_beast_add = @berg_deposit_xeno_zoo_animal_t$tier$
 	}
 }
 triggered_desc = {
@@ -64,7 +64,7 @@ triggered_desc = {
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { NOT = { has_valid_civic = civic_warrior_culture } }
+		owner = { berg_can_duelist_be_changed = no }
 	}
 	text = job_entertainer_effect_desc
 }

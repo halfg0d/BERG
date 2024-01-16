@@ -1,0 +1,9 @@
+country_modifier = {
+	country_scientist_cap_add = @berg_research_supercomputer_leader_t$tier$
+	all_technology_research_speed = @berg_research_supercomputer_research_t$tier$
+}
+
+inline_script = {
+	script = jobs/researchers_add
+	AMOUNT = @berg_research_supercomputer_job_t$tier$
+}

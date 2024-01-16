@@ -1,11 +1,14 @@
 planet_modifier = {
-	pop_ethic_spiritualist_attraction_mult = @berg_unity_f$tier$_attraction
-	job_death_priest_add = @berg_unity_f$tier$_priest
-	job_mortal_initiate_add = @berg_unity_f$tier$_mortal
+	pop_ethic_spiritualist_attraction_mult = @berg_unity_death_temple_attraction_t$tier$
+	job_death_priest_add = @berg_unity_death_temple_job_t$tier$
+	job_mortal_initiate_add = @berg_unity_death_temple_job_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
-		always = $canMegacorp$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 		exists = owner
 		owner = { is_megacorp = no }
 	}
@@ -16,7 +19,10 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		always = $canMegacorp$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 		exists = owner
 		owner = {
 			is_megacorp = yes
@@ -29,7 +35,10 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		always = $canMegacorp$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 		exists = owner
 		owner = {
 			is_megacorp = yes
@@ -42,7 +51,10 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	trigger = {
-		always = $canMegacorp$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 		exists = owner
 		owner = {
 			is_megacorp = yes
@@ -53,7 +65,10 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		always = $canMegacorp$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 		exists = owner
 		owner = {
 			is_megacorp = yes
@@ -62,10 +77,51 @@ triggered_desc = {
 	}
 	text = job_steward_effect_desc
 }
-inline_script = {
-	script = BUG/berg_templar_jobs
-	tier = $tier$
+triggered_planet_modifier = {
+	potential = {
+		berg_has_bug_mod = yes
+		exists = owner
+		owner = { is_bugged_militant_zealots = yes }
+	}
+	modifier = {
+		job_bugged_templar_add = @berg_unity_death_temple_bug_templar_t$tier$
+	}
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_bug_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_governmental_spiritualist = yes
+		}
+	}
+	modifier = {
+		job_high_priest_add = @berg_unity_death_temple_bug_high_priest_t$tier$
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_bug_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_militant_zealots = yes
+		}
+	}
+	text = job_bugged_templar_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_bug_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_governmental_spiritualist = yes
+		}
+		check_variable = { which = @berg_unity_death_temple_bug_high_priest_t$tier$ value > 0}
+	}
+	text = job_high_priest_effect_desc
+}
+
 triggered_desc = {
 	text = job_death_priest_effect_desc
 }
@@ -75,20 +131,12 @@ triggered_desc = {
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		exists = owner
-		owner = {
-			has_active_tradition = tr_solidarity_5
-		}
-	}
-	modifier = {
-		pop_government_ethic_attraction = 0.1
-	}
-}
-triggered_planet_modifier = {
-	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t$tier$
 	}
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

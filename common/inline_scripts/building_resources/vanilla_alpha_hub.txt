@@ -17,7 +17,7 @@ resources = {
 	#Vanilla
 	upkeep = {
 		trigger = {
-			berg_has_osa_mod = nos
+			berg_has_osa_mod = no
 			has_ringworld_output_boost = no
 		}
 		energy = @b2_upkeep
@@ -46,13 +46,13 @@ resources = {
 			berg_has_osa_mod = yes
 			has_ringworld_output_boost = yes
 		}
-		energy = @ost_b4_upkeep
+		energy = 20
 		rare_crystals = @b3_rare_upkeep
 	}
 	produces = {
 		trigger = {
 			berg_has_osa_mod = yes
 		}
-		unity = @ost_b3_produces
+		unity = 20
 	}
 }

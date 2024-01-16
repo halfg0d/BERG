@@ -1,5 +1,5 @@
 planet_modifier = {
-	planet_technician_energy_produces_add = @berg_resource_e$tier$_energy
+	planet_technician_energy_produces_add = @berg_resource_energy_grid_energy_add_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -15,7 +15,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_technician_add = @berg_resource_e$tier$_job
+		job_technician_add = @berg_resource_energy_grid_job_t$tier$
 	}
 }
 
@@ -25,7 +25,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_generator_add = @berg_resource_e$tier$_job
+		job_fe_acolyte_generator_add = @berg_resource_energy_grid_job_t$tier$
 	}
 }
 
@@ -44,7 +44,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_technician_drone_add = @berg_resource_e$tier$_job
+		job_technician_drone_add = @berg_resource_energy_grid_job_t$tier$
 	}
 }
 
@@ -62,21 +62,41 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		district_generator_max = @berg_resource_e$tier$_district
+		district_generator_max = @berg_resource_energy_grid_district_add_t$tier$
 	}
 }
-inline_script = {
-	script = ECC/berg_ecc_energy_grid_script
-	tier = $tier$
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_policy_flag = economic_stance_market }
+	}
+	modifier = {
+		trade_value_add = @berg_resource_energy_grid_ecc_trade_t$tier$
+		planet_jobs_energy_produces_mult = @berg_resource_energy_grid_ecc_mult_t$tier$
+	}
 }
 inline_script = {
 	script = BUG/berg_district_script
 	tier = $tier$
-	district = "generator"
+	district = generator
+}
+#OST
+inline_script = {
+	script = tradition_script/ost_radiance
+	osa_job = 1
+	job_subtract = 1
+	miner = technician
+	trigger = ""
 }
 inline_script = {
-	script = OSA/berg_osa_energy_nexus
-	tier = $tier$
+	script = tradition_script/ost_omni_drone
+	tradition = radiance
+	job_add = 1
+	job_subtract = 1
+	drone = technician_drone
+	trigger = ""
 }
 triggered_desc = {
 	trigger = {

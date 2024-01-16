@@ -1,0 +1,43 @@
+inline_script = {
+	script = jobs/chemist_add
+	AMOUNT = @berg_manufactury_archaeo_refinery_job_t$tier$
+}
+
+inline_script = {
+	script = jobs/refiner_add
+	AMOUNT = @berg_manufactury_archaeo_refinery_job_t$tier$
+}
+
+inline_script = {
+	script = jobs/translucer_add
+	AMOUNT = @berg_manufactury_archaeo_refinery_job_t$tier$
+}
+
+planet_modifier = {
+	planet_jobs_exotic_gases_produces_mult = @berg_manufactury_archaeo_refinery_mult_t$tier$
+	planet_jobs_rare_crystals_produces_mult = @berg_manufactury_archaeo_refinery_mult_t$tier$
+	planet_jobs_volatile_motes_produces_mult = @berg_manufactury_archaeo_refinery_mult_t$tier$
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			has_ascension_perk = ap_archaeoengineers
+		}
+	}
+	planet_jobs_exotic_gases_produces_mult = 0.15
+	planet_jobs_rare_crystals_produces_mult = 0.15
+	planet_jobs_volatile_motes_produces_mult = 0.15
+}
+#OSA
+triggered_planet_modifier = {
+	potential = {
+		owner = {
+			berg_has_osa_mod = yes
+			has_ascension_perk = ap_archaeoengineers
+		}
+	}
+	planet_jobs_exotic_gases_produces_mult = 0.1
+	planet_jobs_rare_crystals_produces_mult = 0.1
+	planet_jobs_volatile_motes_produces_mult = 0.1
+}

@@ -14,7 +14,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_farmer_add = @berg_resource_h$tier$_job
+		job_farmer_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 
@@ -24,7 +24,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_farm_add = @berg_resource_h$tier$_job
+		job_fe_acolyte_farm_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 
@@ -44,7 +44,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_agri_drone_add = @berg_resource_h$tier$_job
+		job_agri_drone_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 
@@ -59,7 +59,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_angler_add = @berg_resource_h$tier$_job
+		job_angler_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 #OSA
@@ -81,7 +81,7 @@ triggered_planet_modifier = {
 		berg_has_food_processing = yes
 	}
 	modifier = {
-		job_farmer_add = @berg_resource_h$tier$_job
+		job_farmer_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -92,7 +92,7 @@ triggered_planet_modifier = {
 		berg_has_food_processing = yes
 	}
 	modifier = {
-		job_fe_acolyte_farm_add = @berg_resource_h$tier$_job
+		job_fe_acolyte_farm_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -103,7 +103,7 @@ triggered_planet_modifier = {
 		berg_has_food_processing = yes
 	}
 	modifier = {
-		job_agri_drone_add = @berg_resource_h$tier$_job
+		job_agri_drone_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -119,12 +119,13 @@ triggered_planet_modifier = {
 		berg_has_food_processing = yes
 	}
 	modifier = {
-		job_pearl_diver_add = @berg_resource_h$tier$_job
+		job_pearl_diver_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
 #Ecocontuinty
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {

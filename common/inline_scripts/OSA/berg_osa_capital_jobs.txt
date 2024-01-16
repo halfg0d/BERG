@@ -1,16 +1,6 @@
 # Solidarity Tradition
-
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = {
-			has_active_tradition = tr_solidarity_3
-		}
-	}
-	modifier = {
-		job_healthcare_add = 1
-	}
+inline_script = {
+	script = tradition_script/ost_solidarity_job
 }
 
 # Police State Civic
@@ -129,23 +119,6 @@ triggered_planet_modifier = {
 	}
 }
 
-# Machine
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = {
-			AND = {
-				has_active_tradition = tr_solidarity_3_machine
-				is_machine_empire = yes
-			}
-		}
-	}
-	modifier = {
-		job_replicator_add = 1
-	}
-}
-
 # Hive
 triggered_planet_modifier = {
 	potential = {
@@ -170,18 +143,5 @@ triggered_planet_modifier = {
 	modifier = {
 		job_osa_omni_drone_add = @berg_osa_$tier$_job2
 		job_maintenance_drone_add = -@berg_osa_$tier$_job2
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = {
-			has_active_tradition = tr_solidarity_3_hive
-		}
-	}
-	modifier = {
-		job_spawning_drone_add = 1
 	}
 }

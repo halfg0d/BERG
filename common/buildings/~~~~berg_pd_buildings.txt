@@ -74,6 +74,10 @@ building_undersea_gasmine = {
 		upkeep = {
 			energy = 1
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	ai_resource_production = {
@@ -155,6 +159,10 @@ building_storm_lab = {
 		upkeep = {
 			energy = 1
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	 
 
 	ai_resource_production = {
@@ -195,6 +203,10 @@ building_inquisition_hall = {
 		}
 		upkeep = {
 			energy = 2
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
 		}
 	}
 
@@ -251,6 +263,10 @@ building_inquisition_fortress = {
 		upkeep = {
 			energy = @b1_upkeep
 			volatile_motes = @b2_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
 		}
 	}
 
@@ -331,6 +347,10 @@ building_necroseeders_1 = {
 			energy = 20
 			exotic_gases = @b2_rare_upkeep
 		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
+		}
 	}
 
 	planet_modifier = {
@@ -354,6 +374,10 @@ building_necroseeders_2 = {
 		upkeep = {
 			energy = 20
 			exotic_gases = @b3_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
 		}
 	}
 
@@ -527,6 +551,10 @@ building_cryo_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -564,7 +592,7 @@ building_cryo_guild = {
 		NOT = { has_building_construction = building_cryo_resort }
 	}
 
-	inline_script = "buildings/pd_rare_consumer_goods_building"
+	inline_script = PD/berg_pd_rare_consumer_goods_building
 
 	destroy_trigger = {
 		planet = { 
@@ -601,7 +629,7 @@ building_cryo_resort = {
 		NOT = { has_building_construction = building_cryo_resort }
 	}
 
-	inline_script = "buildings/pd_rare_resort_building"
+	inline_script = PD/berg_pd_rare_resort_building
 
 	destroy_trigger = {
 		planet = { 
@@ -649,7 +677,7 @@ building_lichen_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"
+	inline_script = PD/berg_pd_rare_farm_building
 
 	destroy_trigger = {
 		OR = {
@@ -693,7 +721,7 @@ building_lichen_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -793,6 +821,10 @@ building_lichen_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -833,7 +865,7 @@ building_wet_td_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"
+	inline_script = PD/berg_pd_rare_farm_building
 
 	destroy_trigger = {
 		OR = {
@@ -889,7 +921,7 @@ building_wet_td_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -1002,6 +1034,10 @@ building_wet_td_bio_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -1034,7 +1070,7 @@ building_glacio_foundry = {
 		NOT = { has_building = building_glacio_mine }
 		NOT = { has_building_construction = building_glacio_mine }
 	}
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { 
@@ -1058,7 +1094,7 @@ building_glacio_resort = {
 		NOT = { has_building_construction = building_glacio_mine }
 	}
 
-	inline_script = "buildings/pd_rare_resort_building"
+	inline_script = PD/berg_pd_rare_resort_building
 
 	destroy_trigger = {
 		planet = { 
@@ -1088,7 +1124,7 @@ building_glacio_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -1131,7 +1167,7 @@ building_lanthanide_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -1167,7 +1203,7 @@ building_lanthanide_guild = {
 		NOT = { has_building_construction = building_lanthanide_lab }
 	}
 
-	inline_script = "buildings/pd_rare_consumer_goods_building"
+	inline_script = PD/berg_pd_rare_consumer_goods_building
 
 	destroy_trigger = {
 		planet = { 
@@ -1269,6 +1305,10 @@ building_lanthanide_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -1303,7 +1343,7 @@ building_megalfora_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -1405,6 +1445,10 @@ building_megalfora_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -1437,7 +1481,7 @@ building_megalfora_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -1484,7 +1528,7 @@ building_petrified_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -1520,7 +1564,7 @@ building_petrified_guild = {
 		NOT = { has_building_construction = building_petrified_lab }
 	}
 
-	inline_script = "buildings/pd_rare_consumer_goods_building"
+	inline_script = PD/berg_pd_rare_consumer_goods_building
 
 	destroy_trigger = {
 		planet = { 
@@ -1623,6 +1667,10 @@ building_petrified_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -1654,7 +1702,7 @@ building_petrified_lab = {
 		#NOT = { has_building_construction = building_megalfora_tol_grid }
 	#}
 #	
-	#inline_script = "buildings/pd_rare_mining_building"
+	#inline_script = PD/berg_pd_rare_mining_building
 #
 	#destroy_trigger = {
 		#NOT = { owner = { has_origin = origin_pd_tree_of_life } }
@@ -1790,7 +1838,7 @@ building_petrified_lab = {
 		#NOT = { has_building_construction = building_megalfora_tol_grid }
 	#}
 #
-	#inline_script = "buildings/pd_rare_energy_building"
+	#inline_script = PD/berg_pd_rare_energy_building
 #
 	#destroy_trigger = {
 		#planet = {
@@ -1888,6 +1936,10 @@ building_reef_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -1912,7 +1964,7 @@ building_reef_guild = {
 		NOT = { has_building_construction = building_reef_mine }
 	}
 
-	inline_script = "buildings/pd_rare_consumer_goods_building"	
+	inline_script = PD/berg_pd_rare_consumer_goods_building	
 
 	destroy_trigger = {
 		planet = { NOT = { is_planet_class = pc_reef } }
@@ -1953,7 +2005,7 @@ building_reef_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"		
+	inline_script = PD/berg_pd_rare_mining_building		
 
 	destroy_trigger = {
 		OR = {
@@ -1991,7 +2043,7 @@ building_archipelago_foundry = {
 		NOT = { has_building_construction = building_archipelago_resort }
 	}
 
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { NOT = { is_planet_class = pc_pd_archipelago } }
@@ -2023,7 +2075,7 @@ building_archipelago_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"	
+	inline_script = PD/berg_pd_rare_farm_building	
 
 	destroy_trigger = {
 		OR = {
@@ -2060,7 +2112,7 @@ building_archipelago_resort = {
 		NOT = { has_building_construction = building_archipelago_resort }
 	}
 
-	inline_script = "buildings/pd_rare_resort_building"
+	inline_script = PD/berg_pd_rare_resort_building
 
 	destroy_trigger = {
 		planet = { NOT = { is_planet_class = pc_pd_archipelago  } }
@@ -2147,6 +2199,10 @@ building_salt_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}		
 
 	destroy_trigger = {
@@ -2170,7 +2226,7 @@ building_salt_foundry = {
 		NOT = { has_building_construction = building_salt_foundry }
 	}
 
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { NOT = { is_planet_class = pc_salt } }
@@ -2199,7 +2255,7 @@ building_salt_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -2246,7 +2302,7 @@ building_aquifer_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"
+	inline_script = PD/berg_pd_rare_farm_building
 
 	destroy_trigger = {
 		OR = {
@@ -2346,6 +2402,10 @@ building_aquifer_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -2368,7 +2428,7 @@ building_aquifer_resort = {
 		NOT = { has_building_construction = building_aquifer_resort }
 	}
 
-	inline_script = "buildings/pd_rare_resort_building"
+	inline_script = PD/berg_pd_rare_resort_building
 
 	destroy_trigger = {
 		planet = { NOT = { is_planet_class = pc_aquifer } }
@@ -2403,7 +2463,7 @@ building_karst_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -2455,7 +2515,7 @@ building_karst_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -2561,6 +2621,10 @@ building_karst_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -2654,6 +2718,10 @@ building_biolumen_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -2678,7 +2746,7 @@ building_biolumen_resort = {
 		NOT = { has_building_construction = building_biolumen_farm }
 	}
 
-	inline_script = "buildings/pd_rare_resort_building"
+	inline_script = PD/berg_pd_rare_resort_building
 
 	destroy_trigger = {
 		planet = { 
@@ -2712,7 +2780,7 @@ building_biolumen_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"	
+	inline_script = PD/berg_pd_rare_farm_building	
 
 	destroy_trigger = {
 		OR = {
@@ -2758,7 +2826,7 @@ building_geothermal_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -2796,7 +2864,7 @@ building_geothermal_foundry = {
 		NOT = { has_building_construction = building_geothermal_lab }
 	}
 
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { 
@@ -2883,6 +2951,10 @@ building_geothermal_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -2909,7 +2981,7 @@ building_coral_resort = {
 		NOT = { has_building_construction = building_coral_guild }
 	}
 
-	inline_script = "buildings/pd_rare_resort_building"
+	inline_script = PD/berg_pd_rare_resort_building
 
 	destroy_trigger = {
 		planet = { 
@@ -2999,6 +3071,10 @@ building_coral_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -3025,7 +3101,7 @@ building_coral_guild = {
 		NOT = { has_building_construction = building_coral_guild }
 	}
 
-	inline_script = "buildings/pd_rare_consumer_goods_building"
+	inline_script = PD/berg_pd_rare_consumer_goods_building
 
 	destroy_trigger = {
 		planet = { 
@@ -3117,6 +3193,10 @@ building_storm_lab_regular = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -3148,7 +3228,7 @@ building_storm_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -3192,7 +3272,7 @@ building_storm_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -3230,7 +3310,7 @@ building_primal_foundry = {
 		NOT = { has_building_construction = building_primal_mine }
 	}
 
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { 
@@ -3261,7 +3341,7 @@ building_primal_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -3305,7 +3385,7 @@ building_primal_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -3408,6 +3488,10 @@ building_iceberg_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -3442,7 +3526,7 @@ building_iceberg_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"	
+	inline_script = PD/berg_pd_rare_farm_building	
 
 	destroy_trigger = {
 		OR = {
@@ -3480,7 +3564,7 @@ building_iceberg_foundry = {
 		NOT = { has_building_construction = building_iceberg_foundry }
 	}
 
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { 
@@ -3516,7 +3600,7 @@ building_supercon_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"
+	inline_script = PD/berg_pd_rare_farm_building
 
 	destroy_trigger = {
 		OR = {
@@ -3619,6 +3703,10 @@ building_supercon_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -3650,7 +3738,7 @@ building_supercon_grid = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_energy_building"
+	inline_script = PD/berg_pd_rare_energy_building
 
 	destroy_trigger = {
 		OR = {
@@ -3755,6 +3843,10 @@ building_pd_sinkhole_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -3786,7 +3878,7 @@ building_pd_sinkhole_mine = {
 		}
 	}
 	
-	inline_script = "buildings/pd_rare_mining_building"
+	inline_script = PD/berg_pd_rare_mining_building
 
 	destroy_trigger = {
 		OR = {
@@ -3823,7 +3915,7 @@ building_pd_sinkhole_guild = {
 		NOT = { has_building_construction = building_pd_sinkhole_guild }
 	}
 
-	inline_script = "buildings/pd_rare_consumer_goods_building"
+	inline_script = PD/berg_pd_rare_consumer_goods_building
 
 	destroy_trigger = {
 		planet = { 
@@ -3916,6 +4008,10 @@ building_superhab_lab = {
 		upkeep = {
 			energy = 4
 		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
 	}	
 
 	destroy_trigger = {
@@ -3958,7 +4054,7 @@ building_superhab_farm = {
 		}
 	}
 
-	inline_script = "buildings/pd_rare_farm_building"	
+	inline_script = PD/berg_pd_rare_farm_building	
 
 	destroy_trigger = {
 		OR = {
@@ -4006,7 +4102,7 @@ building_superhab_foundry = {
 		NOT = { has_building_construction = building_superhab_foundry }
 	}
 
-	inline_script = "buildings/pd_rare_foundry_building"
+	inline_script = PD/berg_pd_rare_foundry_building
 
 	destroy_trigger = {
 		planet = { 

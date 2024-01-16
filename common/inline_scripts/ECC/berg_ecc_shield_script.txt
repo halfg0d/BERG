@@ -1,7 +1,0 @@
-produces = {
-	trigger = {
-		berg_has_ecc_mod = yes
-		owner = { has_civic = civic_inwards_perfection }
-	}
-	unity = @berg_ecc_p$tier$_unity
-}

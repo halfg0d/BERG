@@ -37,13 +37,10 @@ building_foundry_1 = {
 	inline_script = {
 		script = vanilla/manufacturing/berg_foundry_script
 		tier = 1
-		bonus = no
-		industrialist = no
 	}
 	inline_script = {
 		script = building_resources/vanilla_foundry
 		tier = 1
-		RW_boost = "no"
 	}
 
 	upgrades = {
@@ -82,9 +79,12 @@ building_foundry_2 = {
 	}
 
 	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 2
+	}
+	inline_script = {
 		script = building_resources/vanilla_foundry
 		tier = 2
-		RW_boost = "no"
 	}
 
 	upgrades = {
@@ -93,13 +93,6 @@ building_foundry_2 = {
 
 	prerequisites = {
 		tech_alloys_1
-	}
-
-	inline_script = {
-		script = vanilla/manufacturing/berg_foundry_script
-		tier = 2
-		bonus = yes
-		industrialist = yes
 	}
 }
 
@@ -128,9 +121,12 @@ building_foundry_3 = {
 	}
 
 	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 3
+	}
+	inline_script = {
 		script = building_resources/vanilla_foundry
 		tier = 3
-		RW_boost = "yes"
 	}
 
 	prerequisites = {
@@ -139,40 +135,132 @@ building_foundry_3 = {
 	upgrades = {
 		"building_avb_foundry_4"
 	}
+}
+
+building_avb_foundry_4 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_industry_district = no
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_avb_alloys_3"
+	}	
+
+	upgrades = {
+		building_avb_foundry_5
+	}
+	
 	inline_script = {
 		script = vanilla/manufacturing/berg_foundry_script
-		tier = 3
-		bonus = yes
-		industrialist = yes
+		tier = 4
 	}
-	triggered_planet_modifier = {
-		potential = {
-			has_ringworld_output_boost = yes
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
-		}
-		modifier = {
-			planet_metallurgists_alloys_produces_add = 1
-			planet_metallurgists_minerals_upkeep_add = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_ringworld_output_boost = yes
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
-		}
-		modifier = {
-			planet_metallurgists_alloys_produces_add = 1
-			planet_metallurgists_food_upkeep_add = 3
-		}
+	inline_script = {
+		script = building_resources/vanilla_foundry
+		tier = 4
 	}
 }
 
+building_avb_foundry_5 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_industry_district = no
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_avb_alloys_4"
+	}	
+
+	upgrades = {
+		building_avb_foundry_6
+	}
+	
+	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 5
+	}
+	inline_script = {
+		script = building_resources/vanilla_foundry
+		tier = 5
+	}
+}
+
+building_avb_foundry_6 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_upgraded_capital_5 = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_industry_district = no
+			}
+		}
+	}
+
+	prerequisites = {
+		"tech_avb_alloys_5"
+	}	
+	
+	inline_script = {
+		script = vanilla/manufacturing/berg_foundry_script
+		tier = 6
+	}
+	inline_script = {
+		script = building_resources/vanilla_foundry
+		tier = 6
+	}
+}
 building_factory_1 = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
@@ -238,12 +326,10 @@ building_factory_1 = {
 	inline_script = {
 		script = vanilla/manufacturing/berg_factory_script
 		tier = 1
-		bonus = no
 	}
 	inline_script = {
 		script = building_resources/vanilla_factory
 		tier = 1
-		RW_boost = "no"
 	}
 
 	prerequisites = {
@@ -298,12 +384,10 @@ building_factory_2 = {
 	inline_script = {
 		script = building_resources/vanilla_factory
 		tier = 2
-		RW_boost = "no"
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_factory_script
 		tier = 2
-		bonus = yes
 	}
 
 	prerequisites = {
@@ -357,26 +441,13 @@ building_factory_3 = {
 			}
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_ringworld_output_boost = yes
-		}
-		modifier = {
-			planet_artisans_consumer_goods_produces_add = 1
-			planet_artisans_minerals_upkeep_add = 2
-		}
-	}
-
 	inline_script = {
 		script = building_resources/vanilla_factory
 		tier = 3
-		RW_boost = "yes"
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_factory_script
 		tier = 3
-		bonus = yes
 	}
 
 	prerequisites = {
@@ -384,6 +455,183 @@ building_factory_3 = {
 	}	
 	upgrades = {
 		"building_avb_factory_4"
+	}
+}
+building_avb_factory_4 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOT = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+
+			AND = {
+				exists = owner
+				OR = {
+					owner = { country_uses_consumer_goods = no }
+					AND = {
+						owner = {
+							is_ai = yes
+						}
+						has_any_industry_district = no
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla_factory
+		tier = 4
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_factory_script
+		tier = 4
+	}
+	
+	upgrades = {
+		building_avb_factory_5
+	}
+	
+	prerequisites = {
+		"tech_avb_luxuries_3"
+	}
+	
+}
+
+building_avb_factory_5 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOT = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+
+			AND = {
+				exists = owner
+				OR = {
+					owner = { country_uses_consumer_goods = no }
+					AND = {
+						owner = {
+							is_ai = yes
+						}
+						has_any_industry_district = no
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla_factory
+		tier = 5
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_factory_script
+		tier = 5
+	}
+	upgrades = {
+		building_avb_factory_6
+	}
+	
+	prerequisites = {
+		"tech_avb_luxuries_4"
+	}
+}
+
+building_avb_factory_6 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = manufacturing
+	
+	allow = {
+		has_upgraded_capital_5 = yes
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+		NOT = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+
+			AND = {
+				exists = owner
+				OR = {
+					owner = { country_uses_consumer_goods = no }
+					AND = {
+						owner = {
+							is_ai = yes
+						}
+						has_any_industry_district = no
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla_factory
+		tier = 6
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_factory_script
+		tier = 6
+	}
+	prerequisites = {
+		"tech_avb_luxuries_5"
 	}
 }
 
@@ -400,29 +648,12 @@ building_refinery = {
 			has_modifier = crucible_colony
 		}
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 500
-		}
-		upkeep = {
-			energy = 2.5
-		}
-		upkeep = {
-			trigger = {
-				berg_has_osa_mod = no
-			}
-			energy = 0.5
-		}
-		upkeep = {
-			trigger = {
-				berg_has_osa_mod = yes
-			}
-			minerals = 2.5
-		}
+	inline_script = {
+		script = building_resources/vanilla_refinery
+		tier = 1
 	}
 	inline_script = {
-		script = vanilla/manufacturing/berg_refinery_script
+		script = vanilla/manufacturing/berg_refinery
 		tier = 1
 	}
 	prerequisites = {
@@ -433,6 +664,73 @@ building_refinery = {
 	}
 }
 
+building_avb_refinery_2 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla_refinery
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_refinery
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_exotic_gases_2"
+	}
+	
+	upgrades = {
+		building_avb_refinery_3
+	}
+}
+building_avb_refinery_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_refinery
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_refinery
+		tier = 3
+	}
+	
+	prerequisites = {
+		"tech_avb_exotic_gases_3"
+	}
+}
 building_chemical_plant = {
 	base_buildtime = @b2_time
 
@@ -447,29 +745,12 @@ building_chemical_plant = {
 		}
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-		}
-		upkeep = {
-			energy = 2.5
-		}
-		upkeep = {
-			trigger = {
-				berg_has_osa_mod = no
-			}
-			energy = 0.5
-		}
-		upkeep = {
-			trigger = {
-				berg_has_osa_mod = yes
-			}
-			minerals = 2.5
-		}
+	inline_script = {
+		script = building_resources/vanilla_chemical_plant
+		tier = 1
 	}
 	inline_script = {
-		script = vanilla/manufacturing/berg_chemical_script
+		script = vanilla/manufacturing/berg_chemical
 		tier = 1
 	}
 	prerequisites = {
@@ -480,6 +761,71 @@ building_chemical_plant = {
 	}
 }
 
+building_avb_chemical_plant_2 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+	
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}	
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_chemical_plant
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_chemical
+		tier = 2
+	}
+	upgrades = {
+		building_avb_chemical_plant_3
+	}
+	
+	prerequisites = {
+		"tech_avb_volatile_motes_2"
+	}
+}
+
+building_avb_chemical_plant_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_chemical_plant
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_chemical
+		tier = 3
+	}
+	prerequisites = {
+		"tech_avb_volatile_motes_3"
+	}
+}
 building_crystal_plant = {
 	base_buildtime = @b2_time
 
@@ -493,34 +839,15 @@ building_crystal_plant = {
 			has_modifier = crucible_colony
 		}
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-		}
-		upkeep = {
-			energy = 2.5
-		}
-		upkeep = {
-			trigger = {
-				berg_has_osa_mod = no
-			}
-			energy = 0.5
-		}
-		upkeep = {
-			trigger = {
-				berg_has_osa_mod = yes
-			}
-			minerals = 2.5
-		}
-	}
-
 	prerequisites = {
 		"tech_rare_crystals"
 	}
 	inline_script = {
-		script = vanilla/manufacturing/berg_crystal_script
+		script = building_resources/vanilla_crystal_plant
+		tier = 1
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_crystal
 		tier = 1
 	}
 
@@ -555,9 +882,10 @@ building_crystal_plant_2 = {
 			energy = 3
 		}
 	}
+	
 	inline_script = {
-		script = vanilla/manufacturing/berg_crystal_script
-		tier = 2
+		script = jobs/translucer_add
+		AMOUNT = 5
 	}
 	prerequisites = {
 		"tech_rare_crystals"
@@ -565,6 +893,73 @@ building_crystal_plant_2 = {
 
 	show_tech_unlock_if = {
 		owner = { has_country_flag = lithoid_crystal_plant }
+	}
+}
+building_avb_crystal_plant_2 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla_crystal_plant
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_crystal
+		tier = 2
+	}
+	
+	upgrades = {
+		building_avb_crystal_plant_3
+	}
+	
+	prerequisites = {
+		"tech_avb_rare_crystals_2"
+	}
+}
+
+building_avb_crystal_plant_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_crystal_plant
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_crystal
+		tier = 3
+	}
+	prerequisites = {
+		"tech_avb_rare_crystals_3"
 	}
 }
 
@@ -601,10 +996,9 @@ building_nanite_transmuter = {
 		has_upgraded_capital = yes
 	}
 	inline_script = {
-		script = vanilla/manufacturing/berg_transmuter_script
+		script = building_resources/vanilla_transmuter
 		tier = 1
 	}
-	
 
 	prerequisites = {
 		"tech_nanite_transmutation"
@@ -617,6 +1011,56 @@ building_nanite_transmuter = {
 		rare_crystals = 2
 		volatile_motes = 2
 		exotic_gases = 2
+		trigger = {
+			always = yes
+		}
+	}
+}
+building_avb_nanite_transmuter_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = manufacturing
+	
+	potential = {
+		exists = owner
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = nanites
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = nanites
+						amount > 0
+					}
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_transmuter
+		tier = 2
+	}
+	prerequisites = {
+		"tech_avb_nanite_transmutation_2"
+	}
+
+	ai_resource_production = {
+		rare_crystals = 6
+		volatile_motes = 6
+		exotic_gases = 6
 		trigger = {
 			always = yes
 		}
@@ -664,28 +1108,15 @@ building_ministry_production = {
 		has_major_upgraded_capital = yes
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			volatile_motes = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			volatile_motes = @b2_rare_upkeep
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			minerals = 5
-		}
-	}
-
 	prerequisites = {
 		"tech_global_production_strategy"
 	}
 	upgrades = {
 		"building_avb_ministry_production_2"
+	}
+	inline_script = {
+		script = building_resources/vanilla_ministry_production
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_ministry_script
@@ -695,6 +1126,87 @@ building_ministry_production = {
 		is_regular_empire = yes
 	}
 
+	ai_resource_production = {
+		alloys = 6
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 40
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 8
+		trigger = {
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 50
+				type = produces
+			}
+		}
+	}
+}
+building_avb_ministry_production_2 = {
+	base_buildtime = @avb_b4_time
+	icon = building_avb_production_center_2
+	can_build = no
+
+	category = manufacturing
+	
+	potential = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_industry_district = yes
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_industry_district = no
+			}
+		}
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_ministry_production
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_ministry_script
+		tier = 2
+	}
+	prerequisites = {
+		"tech_avb_global_production_strategy_2"
+	}
+	
+	triggered_desc = {
+		text = job_politician_effect_desc
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	
 	ai_resource_production = {
 		alloys = 6
 		trigger = {
@@ -752,22 +1264,9 @@ building_production_center = {
 	upgrades = {
 		"building_avb_production_center_2"
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			volatile_motes = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			volatile_motes = @b2_rare_upkeep
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			minerals = 5
-		}
+	inline_script = {
+		script = building_resources/vanilla_production_center
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_production_center_script
@@ -780,6 +1279,71 @@ building_production_center = {
 
 	show_tech_unlock_if = {
 		is_gestalt = yes
+	}
+
+	ai_resource_production = {
+		alloys = 6
+		trigger = {
+			planet_resource_compare = {
+				resource = alloys
+				value >= 40
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		consumer_goods = 8
+		trigger = {
+			owner = { country_uses_consumer_goods = yes }
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 50
+				type = produces
+			}
+		}
+	}
+}
+building_avb_production_center_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = manufacturing
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		OR = {
+			owner = { is_ai = no }
+			has_any_industry_district = yes
+		}
+		NOT = { has_modifier = crucible_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = no }
+			AND = {
+				owner = { is_ai = yes }
+				has_any_industry_district = no
+			}
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	show_tech_unlock_if = { 
+		is_gestalt = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_production_center
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_production_center_script
+		tier = 2
 	}
 
 	ai_resource_production = {
@@ -857,20 +1421,9 @@ building_coordinated_fulfillment_center_1 = {
 		building_coordinated_fulfillment_center_2
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
-		upkeep = {
-			unity = 10
-			trigger = {
-				owner = { has_policy_flag = relentless_industrialists_cleanup }
-			}
-		}
+	inline_script = {
+		script = building_resources/vanilla_fulfillment_center
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_fulfillment_center_script
@@ -922,22 +1475,10 @@ building_coordinated_fulfillment_center_2 = {
 	allow = {
 		has_major_upgraded_capital = yes
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			volatile_motes = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			volatile_motes = @b3_rare_upkeep
-		}
-		upkeep = {
-			unity = 20
-			trigger = {
-				owner = { has_policy_flag = relentless_industrialists_cleanup }
-			}
-		}
+	
+	inline_script = {
+		script = building_resources/vanilla_fulfillment_center
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_fulfillment_center_script
@@ -988,18 +1529,12 @@ building_archaeo_refinery = {
 		}
 		owner = { has_technology = tech_archaeo_refinery }
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			minor_artifacts = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_archaeo_refinery
+		tier = 1
 	}
 	inline_script = {
-		script = vanilla/manufacturing/berg_archaeorefinery_script
+		script = vanilla/manufacturing/berg_archaeo_refinery
 		tier = 1
 	}
 	prerequisites = {
@@ -1007,5 +1542,31 @@ building_archaeo_refinery = {
 	}
 	upgrades = {
 		"building_avb_archaeo_refinery_2"
+	}
+}
+
+building_avb_archaeo_refinery_2 = {
+	base_buildtime = @avb_f4_time
+	can_build = no
+	category = manufacturing
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		owner = { has_technology = tech_avb_archaeo_refinery_2 }
+	}
+	inline_script = {
+		script = building_resources/vanilla_archaeo_refinery
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/manufacturing/berg_archaeo_refinery
+		tier = 2
+	}
+	prerequisites = {
+		"tech_avb_archaeo_refinery_2"
 	}
 }

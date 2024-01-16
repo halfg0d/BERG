@@ -1,8 +1,8 @@
 country_modifier = {
-	envoys_add = @berg_government_em$tier$_envoy
+	envoys_add = @berg_government_embassy_envoy_t$tier$
 }
 planet_modifier = {
-	job_politician_add = @berg_government_em$tier$_politician
+	job_politician_add = @berg_government_embassy_envoy_t$tier$
 }
 triggered_desc = {
 	text = job_politician_effect_desc
@@ -12,6 +12,6 @@ triggered_country_modifier = {
 		berg_has_osa_mod = yes
 	}
 	modifier = {
-		country_edict_fund_add = @berg_osa_em$tier$_fund
+		country_edict_fund_add = @berg_government_embassy_osa_fund_t$tier$
 	}
 }

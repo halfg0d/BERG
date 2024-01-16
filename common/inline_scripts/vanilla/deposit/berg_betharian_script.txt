@@ -1,36 +1,6 @@
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
-	}
-	modifier = {
-		job_technician_add = @berg_deposit_b$tier$_job
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	modifier = {
-		job_technician_drone_add = @berg_deposit_b$tier$_job
-	}
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_technician_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	text = job_technician_effect_desc
+inline_script = {
+	script = jobs/technicians_add
+	AMOUNT = @berg_deposit_betharian_job_t$tier$
 }
 #OSA
 triggered_planet_modifier = {
@@ -45,8 +15,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_energy_director_add = @berg_deposit_b$tier$_osa_job
-		job_technician_add = -@berg_deposit_b$tier$_osa_job
+		job_osa_energy_director_add = @berg_deposit_betharian_osa_job_t$tier$
+		job_technician_add = -@berg_deposit_betharian_osa_job_t$tier$
 	}
 }
 
@@ -57,7 +27,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_technician_add = @berg_deposit_b$tier$_osa_job
+		job_technician_add = @berg_deposit_betharian_osa_job_t$tier$
 	}
 }
 
@@ -68,7 +38,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_technician_drone_add = @berg_deposit_b$tier$_osa_job
+		job_technician_drone_add = @berg_deposit_betharian_osa_job_t$tier$
 	}
 }
 triggered_desc = {

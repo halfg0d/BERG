@@ -1,6 +1,6 @@
 triggered_planet_modifier = {
 	potential = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_functional_architecture = yes
@@ -13,6 +13,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		district_$district$_max = @berg_bug_d$tier$_district
+		district_$district$_max = 1
 	}
+	mult = $tier$
 }

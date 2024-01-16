@@ -1,0 +1,64 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_army_planetary_shield_cost_t$tier$
+		exotic_gases = @berg_army_planetary_shield_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_army_planetary_shield_upkeep_t$tier$
+		exotic_gases = @berg_army_planetary_shield_rare_upkeep_t$tier$
+	}
+	#AVB
+	cost = {
+		trigger = {
+			check_variable_arithmetic = {
+				which = $tier$
+				value = 3
+			}
+		}
+		rare_crystals = @berg_army_planetary_shield_avb_crystals_cost_t$tier$
+	}
+	upkeep = {
+		trigger = {
+			check_variable_arithmetic = {
+				which = $tier$
+				value = 3
+			}
+		}
+		rare_crystals = @berg_army_planetary_shield_avb_crystals_upkeep_t$tier$
+	}
+	cost = {
+		trigger = {
+			check_variable_arithmetic = {
+				which = $tier$
+				value = 4
+			}
+		}
+		sr_dark_matter = @berg_army_planetary_shield_avb_dark_matter_cost_t$tier$
+	}
+	upkeep = {
+		trigger = {
+			check_variable_arithmetic = {
+				which = $tier$
+				value = 4
+			}
+		}
+		sr_dark_matter = @berg_army_planetary_shield_avb_dark_matter_upkeep_t$tier$
+	}
+	#ECC
+	produces = {
+		trigger = {
+			berg_has_ecc_mod = yes
+			owner = { has_civic = civic_inwards_perfection }
+		}
+		unity = @berg_army_planetary_shield_ecc_unity_t$tier$
+	}
+	#OSA
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		energy = @berg_army_planetary_shield_osa_upkeep_energy_t$tier$
+		minerals = @berg_army_planetary_shield_osa_upkeep_minerals_t$tier$
+	}
+}

@@ -1,5 +1,5 @@
 planet_modifier = {
-	planet_farmers_food_produces_add = @berg_resource_b$tier$_food
+	planet_farmers_food_produces_add = @berg_resource_baol_plant_food_add_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -8,7 +8,7 @@ triggered_planet_modifier = {
 			country_uses_consumer_goods = yes
 		}
 	}
-	planet_farmers_consumer_goods_produces_add = @berg_resource_b$tier$_goods
+	planet_farmers_consumer_goods_produces_add = @berg_resource_baol_plant_cg_add_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -17,7 +17,8 @@ triggered_planet_modifier = {
 			country_uses_consumer_goods = no
 		}
 	}
-	planet_farmers_energy_produces_add = @berg_resource_b$tier$_energy
+	planet_farmers_energy_produces_add = @berg_resource_baol_plant_cg_add_t$tier$
+	mult = 2
 }
 
 triggered_planet_modifier = {
@@ -27,7 +28,7 @@ triggered_planet_modifier = {
 			has_ascension_perk = ap_archaeoengineers
 		}
 	}
-	planet_farmers_consumer_goods_produces_add = @berg_resource_b$tier$_goods_ap
+	planet_farmers_consumer_goods_produces_add = @berg_resource_baol_plant_cg_add_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -37,7 +38,8 @@ triggered_planet_modifier = {
 			has_ascension_perk = ap_archaeoengineers
 		}
 	}
-	planet_farmers_energy_produces_add = @berg_resource_b$tier$_energy
+	planet_farmers_energy_produces_add = @berg_resource_baol_plant_cg_add_t$tier$
+	mult = 2
 }
 
 triggered_planet_modifier = {
@@ -58,7 +60,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_farmer_add = @berg_resource_b$tier$_job
+		job_farmer_add = @berg_resource_baol_plant_job_t$tier$
 	}
 }
 
@@ -68,7 +70,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_farm_add = @berg_resource_b$tier$_job
+		job_fe_acolyte_farm_add = @berg_resource_baol_plant_job_t$tier$
 	}
 }
 
@@ -78,7 +80,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_agri_drone_add = @berg_resource_b$tier$_job
+		job_agri_drone_add = @berg_resource_baol_plant_job_t$tier$
 	}
 }
 
@@ -93,8 +95,25 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_angler_add = @berg_resource_b$tier$_job
+		job_angler_add = @berg_resource_baol_plant_job_t$tier$
 	}
+}
+#OST
+inline_script = {
+	script = tradition_script/ost_perseverance
+	osa_job = 1
+	farmer_subtract = 1
+	canAngler = yes
+	angler_subtract = 1
+	pearl_subtract = 0
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = perseverance
+	job_add = 1
+	job_subtract = 1
+	drone = agri_drone
+	trigger = ""
 }
 triggered_desc = {
 	trigger = {

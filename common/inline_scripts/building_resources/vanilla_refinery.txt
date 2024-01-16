@@ -1,0 +1,17 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_manufactury_refinery_cost_t$tier$
+		exotic_gases = @berg_manufactury_refinery_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_manufactury_refinery_upkeep_t$tier$
+	}
+	#Osa
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_manufactury_refinery_osa_upkeep_energy_t$tier$
+		minerals = @berg_manufactury_refinery_osa_upkeep_minerals_t$tier$
+	}
+}

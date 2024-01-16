@@ -47,12 +47,11 @@ building_luxury_residence = {
 	}
 
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "r1"
-		tradition = "yes"
+		script = vanilla/amenity/berg_residence
+		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_housing
+		script = building_resources/vanilla_residence
 		tier = 1
 	}
 
@@ -68,7 +67,6 @@ building_paradise_dome = {
 	category = amenity
 
 	potential = {
-		has_building = building_luxury_residence
 		OR = {
 			berg_is_habitat = no
 			berg_pd_resort_habitat = yes
@@ -95,18 +93,12 @@ building_paradise_dome = {
 		building_expanded_warren
 		building_communal_housing_large
 	}
-
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "r2"
-		tradition = "yes"
-	}
-	inline_script = {
-		script = ECC/berg_ecc_residence_script
+		script = vanilla/amenity/berg_residence
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_housing
+		script = building_resources/vanilla_residence
 		tier = 2
 	}
 	prerequisites = {
@@ -120,11 +112,195 @@ building_paradise_dome = {
 		}
 	}
 	upgrades = {
-		building_eutab_gaia_district # EUTAB
+		building_eutab_gaia_district #EUTAB
 		"building_avb_residence_3" #AVB
 	}
 }
+#AVB Residence
+building_avb_residence_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
 
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		OR = {
+			berg_is_habitat = no
+			berg_pd_resort_habitat = yes
+			berg_void_dweller_housing = yes
+		}
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_shared_burden }
+			has_modifier = slave_colony
+		}
+	}
+	
+	convert_to = {
+		building_avb_organic_sanctuary_3
+		building_avb_drone_storage_3
+		building_avb_warren_3
+		building_avb_communal_housing_3
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_residence
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla_residence
+		tier = 3
+	}
+	
+	upgrades = {
+		"building_avb_residence_4"
+	}
+	
+	prerequisites = {
+		"tech_avb_residence_3"
+	}
+	
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = no
+		}
+	}
+}
+
+building_avb_residence_4 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		OR = {
+			is_habitat = no
+			AND = {
+				exists = owner
+				owner = {
+					is_void_dweller_empire = yes
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_shared_burden }
+			has_modifier = slave_colony
+		}
+	}
+	
+	convert_to = {
+		building_avb_organic_sanctuary_4
+		building_avb_drone_storage_4
+		building_avb_warren_4
+		building_avb_communal_housing_4
+	}
+	
+	inline_script = {
+		script = vanilla/amenity/berg_residence
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla_residence
+		tier = 4
+	}
+	
+	upgrades = {
+		"building_avb_residence_5"
+	}
+	
+	prerequisites = {
+		"tech_avb_residence_4"
+	}
+	
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = no
+		}
+	}
+}
+
+building_avb_residence_5 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		OR = {
+			is_habitat = no
+			AND = {
+				exists = owner
+				owner = {
+					is_void_dweller_empire = yes
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_shared_burden }
+			has_modifier = slave_colony
+		}
+	}
+	
+	convert_to = {
+		building_avb_organic_sanctuary_4
+		building_avb_drone_storage_4
+		building_avb_warren_4
+		building_avb_communal_housing_5
+	}
+	
+	
+	inline_script = {
+		script = vanilla/amenity/berg_residence
+		tier = 5
+	}
+	inline_script = {
+		script = building_resources/vanilla_residence
+		tier = 5
+	}
+	
+	prerequisites = {
+		"tech_avb_residence_5"
+	}
+	
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = no
+		}
+	}
+}
+#Vanilla Communal Housing
 building_communal_housing = {
 	base_buildtime = @b1_time
 	icon = building_residence
@@ -175,12 +351,11 @@ building_communal_housing = {
 	}
 
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "c1"
-		tradition = "yes"
+		script = vanilla/amenity/berg_communal
+		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_housing
+		script = building_resources/vanilla_communal
 		tier = 1
 	}
 
@@ -238,19 +413,13 @@ building_communal_housing_large = {
 		building_expanded_warren
 		building_paradise_dome
 	}
-
-	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 6
-	}
-
+	
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "c2"
-		tradition = "yes"
+		script = vanilla/amenity/berg_communal
+		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_housing
+		script = building_resources/vanilla_communal
 		tier = 2
 	}
 
@@ -259,6 +428,209 @@ building_communal_housing_large = {
 	}
 	prerequisites = {
 		"tech_paradise_dome"
+	}
+}
+building_avb_communal_housing_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		berg_has_avb_mod = yes
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = yes
+		}
+		OR = {
+			berg_is_habitat = no
+			berg_pd_resort_habitat = yes
+			berg_void_dweller_housing = yes
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			NOT = {
+				owner = {
+					is_regular_empire = yes
+					berg_has_any_shared_burden_civic = yes
+				}
+			}
+		}
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = yes
+		}
+	}
+	
+	convert_to = {
+		building_avb_warren_3
+		building_avb_drone_storage_3
+		building_avb_residence_3
+		building_avb_organic_sanctuary_3
+	}
+	
+	
+	inline_script = {
+		script = vanilla/amenity/berg_communal
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla_communal
+		tier = 3
+	}
+	
+	upgrades = {
+		"building_avb_communal_housing_4"
+	}
+	
+	prerequisites = {
+		"tech_avb_residence_3"
+	}
+}
+
+building_avb_communal_housing_4 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		berg_has_avb_mod = yes
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = yes
+		}
+
+		OR = {
+			is_habitat = no
+			AND = {
+				exists = owner
+				owner = {
+					is_void_dweller_empire = yes
+				}
+			}
+		}
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			NOT = {
+				owner = {
+					is_regular_empire = yes
+					berg_has_any_shared_burden_civic = yes
+				}
+			}
+		}
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = yes
+		}
+	}
+	convert_to = {
+		building_avb_drone_storage_4
+		building_avb_warren_4
+		building_avb_residence_4
+		building_avb_organic_sanctuary_4
+	}
+	
+	
+	inline_script = {
+		script = vanilla/amenity/berg_communal
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla_communal
+		tier = 4
+	}
+	
+	upgrades = {
+		"building_avb_communal_housing_5"
+	}
+	
+	prerequisites = {
+		"tech_avb_residence_4"
+	}
+}
+
+building_avb_communal_housing_5 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		berg_has_avb_mod = yes
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = yes
+		}
+		OR = {
+			berg_is_habitat = no
+			berg_pd_resort_habitat = yes
+			berg_void_dweller_housing = yes
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			NOT = {
+				owner = {
+					is_regular_empire = yes
+					berg_has_any_shared_burden_civic = yes
+				}
+			}
+		}
+	}
+
+	show_tech_unlock_if = {
+		owner = {
+			is_regular_empire = yes
+			berg_has_any_shared_burden_civic = yes
+		}
+	}
+	convert_to = {
+		building_avb_drone_storage_4
+		building_avb_warren_4
+		building_avb_residence_4
+	}
+	
+	inline_script = {
+		script = vanilla/amenity/berg_communal
+		tier = 5
+	}
+	inline_script = {
+		script = building_resources/vanilla_communal
+		tier = 5
+	}
+	
+	prerequisites = {
+		"tech_avb_residence_5"
 	}
 }
 
@@ -289,20 +661,18 @@ building_drone_storage = {
 			}
 		}
 	}
-
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "m1"
-		tradition = "no"
+		script = building_resources/vanilla_drone_storage
+		tier = 1
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_drone_storage
+		tier = 1
 	}
 	convert_to = {
 		building_luxury_residence
 		building_communal_housing
 		building_hive_warren
-	}
-	inline_script = {
-		script = building_resources/vanilla_housing
-		tier = 1
 	}
 
 	upgrades = {
@@ -320,6 +690,7 @@ building_drone_megastorage = {
 		has_upgraded_capital = yes
 	}
 	potential = {
+		berg_has_avb_mod = yes
 		has_building = building_drone_storage
 	}
 	destroy_trigger = {
@@ -334,12 +705,11 @@ building_drone_megastorage = {
 	}
 
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "m2"
-		tradition = "yes"
+		script = building_resources/vanilla_drone_storage
+		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_housing
+		script = vanilla/amenity/berg_drone_storage
 		tier = 2
 	}
 
@@ -348,6 +718,100 @@ building_drone_megastorage = {
 	}
 	prerequisites = {
 		"tech_micro_replicators"
+	}
+	show_tech_unlock_if = {
+		berg_has_avb_mod = yes
+	}
+}
+#AVB Machine housing
+building_avb_drone_storage_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	category = amenity
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_machine_empire = no }
+	}
+	
+	convert_to = {
+		building_avb_residence_3
+		building_avb_warren_3
+		building_avb_communal_housing_3
+		building_avb_organic_sanctuary_3
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla_drone_storage
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_drone_storage
+		tier = 3
+	}
+	
+	upgrades = {
+		"building_avb_drone_storage_4"
+	}
+	
+	prerequisites = {
+		"tech_self_assembling_components" 
+	}
+	show_tech_unlock_if = {
+		berg_has_avb_mod = yes
+	}
+}
+
+building_avb_drone_storage_4 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = amenity
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_machine_empire = no }
+	}
+	
+	convert_to = {
+		building_avb_residence_4
+		building_avb_warren_4
+		building_avb_communal_housing_4
+		building_avb_organic_sanctuary_4
+	}
+	
+	
+	inline_script = {
+		script = building_resources/vanilla_drone_storage
+		tier = 4
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_drone_storage
+		tier = 4
+	}
+	
+	
+	prerequisites = {
+		"tech_avb_self_assembling_components_2" 
 	}
 }
 
@@ -373,12 +837,11 @@ building_hive_warren = {
 	}
 
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "m2"
-		tradition = "no"
+		script = vanilla/amenity/berg_warren
+		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_housing
+		script = building_resources/vanilla_warren
 		tier = 1
 	}
 
@@ -416,17 +879,13 @@ building_expanded_warren = {
 	}
 
 	inline_script = {
-		script = vanilla/amenity/berg_housing_script
-		building = "m2"
-		tradition = "no"
-	}
-
-	inline_script = {
-		script = building_resources/vanilla_housing
+		script = vanilla/amenity/berg_warren
 		tier = 2
 	}
-
-
+	inline_script = {
+		script = building_resources/vanilla_warren
+		tier = 2
+	}
 	prerequisites = {
 		"tech_housing_2"
 	}
@@ -434,7 +893,99 @@ building_expanded_warren = {
 		"building_avb_warren_3" #AVB
 	}
 }
+#AVB Hive housing
+building_avb_warren_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+	
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
 
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	show_tech_unlock_if = { 
+		owner = { is_hive_empire = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+	
+	convert_to = {
+		building_avb_residence_3
+		building_avb_drone_storage_3
+		building_avb_communal_housing_3
+		building_avb_organic_sanctuary_3
+	}
+	
+	inline_script = {
+		script = vanilla/amenity/berg_warren
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla_warren
+		tier = 3
+	}
+	upgrades = {
+		"building_avb_warren_4"
+	}
+	
+	prerequisites = {
+		"tech_avb_housing_3" 
+	}
+}
+
+building_avb_warren_4 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	show_tech_unlock_if = { 
+		owner = { is_hive_empire = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+	
+	convert_to = {
+		building_avb_residence_4
+		building_avb_drone_storage_4
+		building_avb_communal_housing_4
+		building_avb_organic_sanctuary_4
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_warren
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla_warren
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_housing_4" 
+	}
+}
 building_holo_theatres = {
 	base_buildtime = @b1_time
 
@@ -470,20 +1021,9 @@ building_holo_theatres = {
 		script = vanilla/amenity/berg_holo_theatres_script
 		tier = 1
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			energy = 0.5
-			minerals = 2.5
-		}
+	inline_script = {
+		script = building_resources/vanilla_holo_theatres
+		tier = 1
 	}
 
 	upgrades = {
@@ -533,23 +1073,11 @@ building_hyper_entertainment_forum = {
 	}
 	inline_script = {
 		script = vanilla/amenity/berg_holo_theatres_script
-		tier = 2	
+		tier = 2
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			minerals = 5
-		}
+	inline_script = {
+		script = building_resources/vanilla_holo_theatres
+		tier = 2
 	}
 
 	upgrades = {
@@ -559,7 +1087,136 @@ building_hyper_entertainment_forum = {
 		"tech_hyper_entertainment_forum"
 	}
 }
+#AVB holo Theatres
+building_avb_holo_theatre_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
 
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		NOT = {	has_modifier = slave_colony	}
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_valid_civic = civic_dystopian_society }
+		}
+		OR = {
+			owner = {
+				NOT = { is_ai = yes }
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+			}
+		}
+		NOT = { has_building = building_low_tech_capital }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_dystopian_society }
+			has_modifier = slave_colony
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+		owner = {
+			NOT = { has_valid_civic = civic_dystopian_society }
+		}
+		OR = {
+			owner = {
+				NOT = { is_ai = yes }
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+			}
+		}
+	}
+
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla_holo_theatres
+		tier = 3
+	}
+	
+	upgrades = {
+		"building_avb_holo_theatre_4"
+	}
+	
+	prerequisites = {
+		"tech_avb_holo_entertainment_3"
+	}
+}
+
+building_avb_holo_theatre_4 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		NOT = {	has_modifier = slave_colony	}
+		owner = {
+			is_regular_empire = yes
+			NOT = { has_valid_civic = civic_dystopian_society }
+		}
+		OR = {
+			owner = {
+				NOT = { is_ai = yes }
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+			}
+		}
+		NOT = { has_building = building_low_tech_capital }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { has_valid_civic = civic_dystopian_society }
+			has_modifier = slave_colony
+		}
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+		owner = {
+			NOT = { has_valid_civic = civic_dystopian_society }
+		}
+		OR = {
+			owner = {
+				NOT = { is_ai = yes }
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla_holo_theatres
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_holo_entertainment_4"
+	}
+}
 building_clinic = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
@@ -757,7 +1414,137 @@ building_hospital = {
 		"building_avb_clinic_3" #AVB
 	}
 }
+building_avb_clinic_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+	
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		has_building = building_hospital
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+		OR = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_private_healthcare_corporate
+					is_ai = no
+				}
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+				planet_stability < 55
+				free_amenities < 5
+			}
+			AND = {
+				has_branch_office = yes
+				branch_office_owner = {
+					has_valid_civic = civic_private_healthcare_corporate
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			AND = {
+				buildings_stop_pop = yes
+				owner = { is_ai = yes }
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/amenity/berg_hospital_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla_clinic
+		tier = 3
+	}
+	
+	upgrades = {
+		"building_avb_clinic_4"
+	}
+	
+	prerequisites = {
+		"tech_avb_clinic_3"
+	}
+	
+	show_tech_unlock_if = {
+		is_regular_empire = no
+	}
+}
 
+building_avb_clinic_4 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	
+	category = amenity
+	potential = {
+		berg_has_avb_mod = yes
+        has_building = building_avb_clinic_3
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+		OR = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_private_healthcare_corporate
+					is_ai = no
+				}
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+				planet_stability < 55
+				free_amenities < 5
+			}
+			AND = {
+				has_branch_office = yes
+				branch_office_owner = {
+					has_valid_civic = civic_private_healthcare_corporate
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			AND = {
+				buildings_stop_pop = yes
+				owner = { is_ai = yes }
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/amenity/berg_hospital_script
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla_clinic
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_clinic_4"
+	}
+	
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+}
 building_maintenance_depot = {
 	base_buildtime = 240
 	can_build = no
@@ -784,28 +1571,59 @@ building_maintenance_depot = {
 		script = vanilla/amenity/berg_depot_script
 		tier = 1
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 2
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			energy = 0.5
-			minerals = 2.5
-		}
+	inline_script = {
+		script = building_resources/vanilla_depot
+		tier = 1
 	}
 	upgrades = {
 		building_eutab_preservation_nexus # EUTAB
 		"building_avb_maintenance_depot_2" #AVB
 	}
 }
+building_avb_maintenance_depot_2 = {
+	base_buildtime = @avb_b2_time
+	can_build = no
 
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		owner = { is_gestalt = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = no }
+			AND = {
+				owner = { is_ai = yes }
+				free_amenities > 30
+				free_building_slots = 0
+			}
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	inline_script = {
+		script = vanilla/amenity/berg_depot_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_depot
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_galactic_administration"
+	}
+	show_tech_unlock_if = {
+		berg_has_avb_mod = yes
+		is_machine_empire = yes
+	}
+}
 building_slave_huts = {
 	base_buildtime = 240
 	icon = building_crude_huts
@@ -827,24 +1645,47 @@ building_slave_huts = {
 		script = vanilla/amenity/berg_huts_script
 		tier = 1
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 200
-		}
-		upkeep = {
-			energy = 1
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			energy = 14
-			minerals = 15
-			food = 15
-		}
+	inline_script = {
+		script = building_resources/vanilla_huts
+		tier = 1
 	}
 	upgrades = {
 		"building_avb_slave_huts_2" #AVB
+	}
+}
+building_avb_slave_huts_2 = {
+	base_buildtime = @avb_b2_time
+	can_build = no
+
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		has_modifier = slave_colony
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			NOT = { has_modifier = slave_colony }
+		}
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_huts_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_huts
+		tier = 2
+	}	
+	
+	prerequisites = {
+		"tech_avb_slave_huts_2"
 	}
 }
 
@@ -870,26 +1711,44 @@ building_overseer_homes = {
 		script = vanilla/amenity/berg_overseer_script
 		tier = 1
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 200
-		}
-		upkeep = {
-			energy = 1
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			energy = 9
-			minerals = 10
-			food = 10
-		}
+	inline_script = {
+		script = building_resources/vanilla_overseer
+		tier = 1
 	}
 	upgrades = {
 		"building_avb_overseer_homes_2" #AVB
 	}
+}
+building_avb_overseer_homes_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		has_modifier = slave_colony
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = yes }
+			NOT = { has_modifier = slave_colony }
+		}
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_overseer_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_overseer
+		tier = 2
+	}	
 }
 
 building_ranger_lodge = {
@@ -940,19 +1799,88 @@ building_ranger_lodge = {
 		script = vanilla/amenity/berg_ranger_script
 		tier = 1
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_ranger
+		tier = 1
 	}
 
 	upgrades = {
 		"building_avb_ranger_lodge_2" #AVB
 	}
+	on_built = {
+		planet = {
+			add_blocker = { type = d_big_nature_preserve_blocker }
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			if = {
+				limit = { has_deposit = d_big_nature_preserve_blocker }
+				every_deposit = {
+					limit = {
+						is_deposit_type = d_big_nature_preserve_blocker
+					}
+					remove_deposit = d_big_nature_preserve_blocker
+				}
+			}
+		}
+	}
+}
+building_avb_ranger_lodge_2 = {
+	base_buildtime = @avb_a2_time
+	can_build = no
+	category = amenity
+
+	potential = {
+		berg_has_avb_mod = yes
+		NOT = {	has_modifier = slave_colony	}
+		owner = {
+			is_regular_empire = yes
+			has_valid_civic = civic_environmentalist
+		}
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+		is_artificial = no
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			owner = { NOT = { has_valid_civic = civic_environmentalist } }
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_ranger_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_ranger
+		tier = 2
+	}
+
+	
+	prerequisites = {
+		tech_avb_ranger_lodge_2
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
 	on_built = {
 		planet = {
 			add_blocker = { type = d_big_nature_preserve_blocker }
@@ -1007,20 +1935,61 @@ building_toxic_bath = {
 	}
 
 	inline_script = {
-		script = vanilla/amenity/berg_toxic_barg_script
+		script = vanilla/amenity/berg_toxic_bath_script
 		tier = 1
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
+	inline_script = {
+		script = building_resources/vanilla_toxic_bath_regular
+		tier = 1
 	}
 	upgrades = {
 		"building_avb_toxic_bath_2" #AVB
+	}
+}
+building_avb_toxic_bath_2 = {
+	base_buildtime = @avb_b2_time
+	category = amenity
+	can_build = no
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	potential = {
+		berg_has_avb_mod = yes
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				has_valid_civic = civic_toxic_baths
+				has_valid_civic = civic_corporate_toxic_baths
+			}
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					is_regular_empire = no
+					NOR = {
+						has_valid_civic = civic_toxic_baths
+						has_valid_civic = civic_corporate_toxic_baths
+					}
+				}
+			}
+			has_modifier = slave_colony
+		}
+	}
+	prerequisites = {
+		tech_avb_toxic_bath_2
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_toxic_bath_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_toxic_bath_regular
+		tier = 2
 	}
 }

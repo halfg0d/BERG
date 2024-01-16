@@ -1,0 +1,16 @@
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = no
+		$trigger$
+	}
+	job_merchant_add = $AMOUNT$
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		$trigger$
+	}
+	modifier = {
+		job_mogul_add = $AMOUNT$
+	}
+}

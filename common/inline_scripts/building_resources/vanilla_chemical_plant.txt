@@ -1,0 +1,17 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_manufactury_chemical_plant_cost_t$tier$
+		volatile_motes = @berg_manufactury_chemical_plant_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_manufactury_chemical_plant_upkeep_t$tier$
+	}
+	#Osa
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_manufactury_chemical_plant_osa_upkeep_energy_t$tier$
+		minerals = @berg_manufactury_chemical_plant_osa_upkeep_minerals_t$tier$
+	}
+}

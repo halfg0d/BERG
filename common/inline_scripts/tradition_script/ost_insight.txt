@@ -1,0 +1,10 @@
+#In every research building
+produces = {
+	trigger = {
+		berg_has_ost_mod = yes
+		owner = {
+			has_active_tradition = tr_insight_3
+		}
+	}
+	physics_research = @berg_ost_insight_physics_t$tier$
+}

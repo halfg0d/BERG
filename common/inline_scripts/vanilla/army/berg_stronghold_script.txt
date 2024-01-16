@@ -7,7 +7,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_soldier_add = @berg_army_s$tier$_job
+		job_soldier_add = @berg_army_stronghold_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -16,7 +16,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_warrior_drone_add = @berg_army_s$tier$_job
+		job_warrior_drone_add = @berg_army_stronghold_job_t$tier$
 	}
 }
 triggered_desc = {
@@ -33,18 +33,59 @@ triggered_desc = {
 	}
 	text = job_soldier_effect_desc
 }
-inline_script = {
-	script = ECC/berg_ecc_stronghold_script
-	tier = $tier$
+#ECC
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			berg_has_ecc_mod = yes
+			is_gestalt = no
+			has_civic = civic_private_militaries
+		}
+	}
+	modifier = {
+		job_soldier_add = @berg_army_stronghold_ecc_job_t$tier$
+		job_mercenary_add = @berg_army_stronghold_ecc_job_t$tier$
+	}
 }
-inline_script = {
-	script = BUg/berg_strongholds_jobs
-	tier = $tier$
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			berg_has_ecc_mod = yes
+			is_gestalt = no
+			has_civic = civic_private_militaries
+		}
+	}
+	text = job_mercenary_effect_desc
+}
+#BUG
+triggered_planet_modifier = {
+	potential = {
+		berg_has_bug_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_private_militaries = yes
+		}
+	}
+	modifier = {
+		job_bugged_mercenary_add = @berg_army_stronghold_bug_job_t$tier$
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_bug_mod = yes
+		exists = owner
+		owner = {
+			is_bugged_private_militaries = yes
+		}
+	}
+	text = job_bugged_mercenary_effect_desc
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 	}
 	modifier = {
 		planet_housing_add = 5
@@ -52,88 +93,20 @@ triggered_planet_modifier = {
 }
 triggered_country_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 	}
 	modifier = {
 		country_resource_max_add = 5000
 	}
 }
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	modifier = {
-		job_osa_commando_add = @berg_army_s$tie$_osa_commando
-		job_soldier_add = -@berg_army_s$tie$_osa_commando
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		always = $canCommander$
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	modifier = {
-		job_osa_commander_add = @berg_army_s$tie$_osa_commander
-		job_soldier_add = -@berg_army_s$tie$_osa_commander
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = yes
-			has_active_tradition = tr_defense_4
-		}
-	}
-	modifier = {
-		job_osa_commando_drone_add = @berg_army_s$tie$_osa_job_gestalt
-		job_warrior_drone_add = -@berg_army_s$tie$_osa_job_gestalt
-	}
-}
-triggered_desc = {
-	trigger = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = yes
-			has_active_tradition = tr_defense_4
-		}
-	}
-	text = job_osa_commando_drone_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		has_osa_mod = yes
-		exists = owner
-		always = $canCommander$
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	text = job_osa_commander_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			is_gestalt = no
-			has_active_tradition = tr_defense_4
-		}
-	}
-	text = job_osa_commando_effect_desc
+#OST
+inline_script = {
+	script = tradition_script/ost_defense
+	tier = $tier$
+	commander_add = @berg_army_stronghold_osa_commander_t$tier$
+	soldier1_subtract = @berg_army_stronghold_osa_commander_t$tier$
+	commando_add = @berg_army_stronghold_osa_commando_t$tier$
+	soldier2_subtract = @berg_army_stronghold_osa_commando_t$tier$
+	commando_drone_add = @berg_army_stronghold_osa_drone_t$tier$
+	warrior_drone_subtract = @berg_army_stronghold_osa_drone_t$tier$
 }

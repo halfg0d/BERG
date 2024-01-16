@@ -1,0 +1,26 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_research_supercomputer_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_research_supercomputer_upkeep_t$tier$
+	}
+	#OSA
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_research_supercomputer_osa_upkeep_energy_t$tier$
+		minerals = @berg_research_supercomputer_osa_upkeep_minerals_t$tier$
+	}
+	produces = {
+		trigger = { berg_has_osa_mod = yes }
+		physics_research = @berg_research_supercomputer_osa_produce_t$tier$
+		society_research = @berg_research_supercomputer_osa_produce_t$tier$
+		engineering_research = @berg_research_supercomputer_osa_produce_t$tier$
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_insight
+		tier = 3
+	}
+}

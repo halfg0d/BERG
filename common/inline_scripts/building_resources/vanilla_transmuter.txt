@@ -1,0 +1,25 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_manufactury_nanite_transmuter_cost_t$tier$
+		rare_crystals = @berg_manufactury_nanite_transmuter_rare_cost_t$tier$
+		volatile_motes = @berg_manufactury_nanite_transmuter_rare_cost_t$tier$
+		exotic_gases = @berg_manufactury_nanite_transmuter_rare_cost_t$tier$
+	}
+	produces = {
+		trigger = {
+			owner = {
+				NOT = {
+					has_deficit = nanites
+				}
+			}
+		}
+		rare_crystals = @berg_manufactury_nanite_transmuter_produce_t$tier$
+		volatile_motes = @berg_manufactury_nanite_transmuter_produce_t$tier$
+		exotic_gases = @berg_manufactury_nanite_transmuter_produce_t$tier$
+	}
+	upkeep = {
+		nanites = @berg_manufactury_nanite_transmuter_nanite_upkeep_t$tier$
+		energy = @berg_manufactury_nanite_transmuter_upkeep_t$tier$
+	}
+}

@@ -1,6 +1,0 @@
-upkeep = {
-	trigger = {
-		berg_has_osa_mod = yes
-	}
-	influence = $influence$
-}

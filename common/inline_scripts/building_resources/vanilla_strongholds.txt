@@ -1,12 +1,12 @@
 resources = {
 	category = planet_buildings_strongholds
 	cost = {
-		minerals = @berg_res_stronghold_t$tier$_cost
-		volatile_motes = @berg_res_stronghold_t$tier$_cost_motes
+		minerals = @berg_army_stronghold_cost_t$tier$
+		volatile_motes = @berg_army_stronghold_rare_cost_t$tier$
 	}
 	upkeep = {
-		energy = @berg_res_stronghold_t$tier$_upkeep
-		volatile_motes = @berg_res_stronghold_t$tier$_upkeep_motes
+		energy = @berg_army_stronghold_upkeep_t$tier$
+		volatile_motes = @berg_army_stronghold_rare_upkeep_t$tier$
 	}
 	#ECC
 	produces = {
@@ -20,7 +20,7 @@ resources = {
 				has_active_tradition = tr_unyielding_resistance_is_frugal
 			}
 		}
-		unity = @berg_res_stronghold_t$tier$_tradition_production
+		unity = @berg_army_stronghold_ecc_unity_t$tier$
 	}
 	#OSA
 	produces = {
@@ -31,10 +31,11 @@ resources = {
 				has_active_tradition = tr_unyielding_resistance_is_frugal
 			}
 		}
-		unity = @berg_res_stronghold_t$tier$_osa_production
+		unity = @berg_army_stronghold_osa_unity_t$tier$
 	}	
 	upkeep = {
 		trigger = {
+			berg_has_osa_mod = yes
 			exists = owner
 			owner = { 
 				AND = {
@@ -43,11 +44,12 @@ resources = {
 				}
 			}
 		}
-		energy = @berg_res_stronghold_t$tier$_osa_upkeep
-		food = @berg_res_stronghold_t$tier$_osa_upkeep_special
+		energy = @berg_army_stronghold_osa_upkeep_energy_t$tier$
+		food = @berg_army_stronghold_osa_upkeep_minerals_t$tier$
 	}
 	upkeep = {
 		trigger = {
+			berg_has_osa_mod = yes
 			exists = owner
 			owner = {
 				OR = {
@@ -56,7 +58,7 @@ resources = {
 				}
 			}
 		}
-		energy = @berg_res_stronghold_t$tier$_osa_upkeep
-		minerals = @berg_res_stronghold_t$tier$_osa_upkeep_special
+		energy = @berg_army_stronghold_osa_upkeep_energy_t$tier$
+		minerals = @berg_army_stronghold_osa_upkeep_minerals_t$tier$
 	}
 }

@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_bath_attendant_add = @berg_amenity_b$tier$_job
+	job_bath_attendant_add = @berg_amenity_toxic_bath_job_t$tier$
 }
 triggered_desc = {
 	trigger = {
@@ -13,5 +13,5 @@ triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = yes
 	}
-	job_bath_attendant_add = @berg_osa_s$tier$_jobs
+	job_bath_attendant_add = @berg_amenity_toxic_bath_osa_job_t$tier$
 }

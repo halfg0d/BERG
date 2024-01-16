@@ -1,0 +1,16 @@
+# There're descriptions for traditions. Where they should appear
+#OST
+#benevolence - unity buildings
+#commerce - trade buildings
+#defense - army buildings
+#insight - research buidlings
+#metallurgy - factory and foundry buildings
+#mettle - mineral purification
+#nanobiotics - foundry and factory buildings
+#omni_drone - gestlat version of perseverance, radiance, mettle
+#order - government
+#perseverance - food processing
+#radiance - energy distribution
+#renewal - strategic resources mines
+#solidarity_job - capital buildings
+#solidarity_effect - unity buildings

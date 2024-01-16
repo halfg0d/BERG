@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_crystal_miner_add = @berg_deposit_c$tier$_job
+		job_crystal_miner_add = @berg_deposit_crystal_mines_job_t$tier$
 	}
 }
 
@@ -14,57 +14,32 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_crystal_mining_drone_add = @berg_deposit_c$tier$_job
+		job_crystal_mining_drone_add = @berg_deposit_crystal_mines_job_t$tier$
 	}
 }
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_crystal_miner_add = @berg_deposit_c$tier$_osa_job
+		job_crystal_miner_add = @berg_deposit_crystal_mines_osa_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_crystal_mining_drone_add = @berg_deposit_c$tier$_osa_job
+		job_crystal_mining_drone_add = @berg_deposit_crystal_mines_osa_job_t$tier$
 	}
 }
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		owner = { 
-			AND = {
-				is_regular_empire = yes
-				has_active_tradition = tr_renewal_3
-			}
-		}
-	}
-	modifier = {
-		job_crystal_miner_add = @berg_deposit_c$tier$_osa_job_tradition
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		has_osa_mod = yes
-		exists = owner
-		owner = {
-			AND = {
-				is_gestalt = yes
-				has_active_tradition = tr_renewal_3
-			}
-		}
-	}
-	modifier = {
-		job_crystal_mining_drone_drone_add = @berg_deposit_c$tier$_osa_job_tradition
-	}
+#OST
+inline_script = {
+	script = tradition_script/ost_renewal
+	resource = crystals
 }

@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_reassigner_add = @berg_pop_assembly_h$tier$_job
+	job_reassigner_add = @berg_pop_assembly_posthumous_job_t$tier$
 }
 triggered_desc = {
 	text = job_reassigner_effect_desc

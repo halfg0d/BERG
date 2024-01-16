@@ -1,0 +1,187 @@
+#Vanilla Regular
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = no
+		}
+		berg_pd_is_crucible = no
+	}
+	modifier = {
+		job_foundry_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = no
+		}
+		berg_pd_is_crucible = no
+	}
+	text = job_foundry_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = yes
+		}
+		berg_pd_is_crucible = no
+	}
+	modifier = {
+		job_catalytic_technician_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_catalytic_empire = yes
+		}
+		berg_pd_is_crucible = no
+	}
+	text = job_catalytic_technician_effect_desc
+}
+#Modded Regular
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		berg_pd_is_crucible = yes
+	}
+	modifier = {
+		job_crucible_foundry_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_regular_empire = yes }
+		berg_pd_is_crucible = yes
+	}
+	text = job_crucible_foundry_effect_desc
+}
+#Vanilla Gestalt
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+		berg_pd_is_crucible = no
+	}
+	modifier = {
+		job_catalytic_drone_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			is_catalytic_empire = yes
+		}
+		berg_pd_is_crucible = no
+	}
+	text = job_catalytic_drone_effect_desc
+}
+#Vanilla Machine
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+		berg_pd_is_crucible = no
+	}
+	modifier = {
+		job_fabricator_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_catalytic_empire = no
+		}
+		berg_pd_is_crucible = no
+	}
+	text = job_fabricator_effect_desc
+}
+#Modded Machine
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+		}
+		berg_pd_is_crucible = yes
+	}
+	modifier = {
+		job_crucible_fabricator_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+		berg_pd_is_crucible = yes
+	}
+	text = job_crucible_fabricator_effect_desc
+}
+#Vanilla Hive
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+		berg_pd_is_crucible = no
+	}
+	modifier = {
+		job_alloy_drone_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_catalytic_empire = no
+		}
+		berg_pd_is_crucible = no
+	}
+	text = job_alloy_drone_effect_desc
+}
+#Modded Hive
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		berg_pd_is_crucible = yes
+	}
+	modifier = {
+		job_crucible_alloy_drone_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_hive_empire = yes }
+		berg_pd_is_crucible = yes
+	}
+	text = job_crucible_alloy_drone_effect_desc
+}

@@ -4,7 +4,7 @@ triggered_desc = {
 		owner = {
 			berg_has_any_spiritualist_civic = yes
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_high_priest_effect_desc
 }
@@ -14,7 +14,7 @@ triggered_desc = {
 		owner = {
 			berg_has_any_noble_civic = yes
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_noble_effect_desc
 }
@@ -27,7 +27,7 @@ triggered_desc = {
 				berg_vp_is_science_syndicate = yes
 			}
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_head_researcher_effect_desc
 }
@@ -41,7 +41,7 @@ triggered_desc = {
 				berg_vp_is_bancorp = yes
 			}
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_merchant_effect_desc
 }
@@ -52,7 +52,7 @@ triggered_desc = {
 			NOT = { has_authority = auth_corporate }
 			is_regular_empire = yes
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_politician_effect_desc
 }
@@ -61,7 +61,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = { has_active_tradition = tr_synthetics_finish }
-		$trigger$
+		$condition$
 	}
 	text = job_roboticist_effect_desc
 }
@@ -77,7 +77,7 @@ triggered_desc = {
 				berg_vp_is_bancorp = yes
 			}
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_executive_effect_desc
 }
@@ -88,7 +88,7 @@ triggered_desc = {
 			is_megacorp = yes
 			is_worker_coop_empire = yes
 		}
-		$trigger$
+		$condition$
 	}
 	text = job_steward_effect_desc
 }
@@ -141,13 +141,13 @@ triggered_desc = {
 }
 inline_script = {
 	script = ECC/berg_ecc_capital_desc_script
-	trigger = $trigger$
+	trigger = $condition$
 	transcend = $transcend$
 	healthcare = $healtcare$
 }
 inline_script = {
 	script = BUG/berg_capital_jobs_desc
-	trigger = $trigger$
+	trigger = $condition$
 }
 inline_script = {
 	script = OSA/berg_osa_capital_jobs_desc

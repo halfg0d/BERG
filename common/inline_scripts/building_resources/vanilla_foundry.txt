@@ -2,62 +2,63 @@ resources = {
 	category = planet_buildings
 	#vanilla
 	cost = {
-		minerals = @berg_res_foundry_t$tier$_cost_mineral
-		volatile_motes = @berg_res_foundry_$tier$_cost_motes
+		minerals = @berg_manufactury_foundry_cost_t$tier$
+		volatile_motes = @berg_manufactury_foundry_rare_cost_t$tier$
 	}
 	upkeep = {
-		energy = @berg_res_foundry_t$tier$_upkeep_energy
-		volatile_motes = @berg_res_foundry_t$tier$_upkeep_motes
+		energy = @berg_manufactury_foundry_upkeep_t$tier$
+		volatile_motes = @berg_manufactury_foundry_rare_upkeep_t$tier$
 	}
 	#vanilla Ringworld Boost
 	cost = {
 		trigger = {
-			always = $RW_boost$
+			check_variable_arithmetic = {
+				which = $tier$
+				value >= 3
+			}
 			has_ringworld_output_boost = yes
 		}
-		minerals = @berg_res_foundry_t$tier$_RW_cost_mineral
-		volatile_motes = @berg_res_foundry_t$tier$_RW_cost_motes
+		minerals = 700
+		volatile_motes = 500
 	}
 	upkeep = {
 		trigger = {
-			always = $RW_boost$
+			check_variable_arithmetic = {
+				which = $tier$
+				value >= 3
+			}
 			has_ringworld_output_boost = yes
 		}
-		energy = @berg_res_foundry_t$tier$_RW_upkeep_energy
-		volatile_motes = @berg_res_foundry_t$tier$_RW_upkeep_motes
+		energy = 7
+		volatile_motes = 4
 	}
 	#Osa
 	upkeep = {
 		trigger = { berg_has_osa_mod = yes }
-		energy = @berg_res_foundry_t$tier$_osa_upkeep_energy_add
-		minerals = @berg_res_foundry_t$tier$_osa_upkeep_mineral
+		energy = @berg_manufactury_foundry_osa_upkeep_energy_t$tier$
+		minerals = @berg_manufactury_foundry_osa_upkeep_minerals_t$tier$
 	}
 	produces = {
 		trigger = { berg_has_osa_mod = yes }
-		alloys = @berg_res_foundry_t$tier$_osa_produce_alloy
-	}
-	upkeep = {
-		trigger = {
-			berg_has_osa_mod = yes
-			has_active_tradition = tr_nanobiotics_2
-		}
-		minerals = @berg_res_foundry_t$tier$_osa_upkeep_mineral_tradition
-	}
-	produce = {
-		trigger = {
-			berg_has_osa_mod = yes
-			has_active_tradition = tr_nanobiotics_2
-		}
-		alloys = @berg_res_foundry_t$tier$_osa_produce_alloy_tradition
+		alloys = @berg_manufactury_foundry_osa_produce_t$tier$
 	}
 	#Osa Ringworld Boost
 	upkeep = {
 		trigger = {
-			always = $RW_boost$
+			check_variable_arithmetic = {
+				which = $tier$
+				value >= 3
+			}
 			berg_has_osa_mod = yes
 			has_ringworld_output_boost = yes
 		}
-		energy = @berg_res_foundry_t$tier$_osa_RW_upkeep_energy_add
-		minerals = @berg_res_foundry_t$tier$_osa_RW_upkeep_mineral
+		energy = 5
+		minerals = 5
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_nanobiotics
+		tier = $tier$
+		material = alloys
 	}
 }

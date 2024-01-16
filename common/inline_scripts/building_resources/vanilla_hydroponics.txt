@@ -1,0 +1,21 @@
+resources = {
+	category = planet_buildings
+	cost = {
+		minerals = @berg_resource_hydroponics_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_resource_hydroponics_upkeep_t$tier$
+	}
+	upkeep = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		energy = @berg_resource_hydroponics_osa_upkeep_energy_t$tier$
+	}
+	produces = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		food = @berg_resource_hydroponics_osa_produce_t$tier$
+	}
+}

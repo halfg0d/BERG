@@ -1,6 +1,6 @@
 planet_modifier = {
-	planet_jobs_unity_produces_mult = @berg_unity_h$tier$_unity_bonus
-	job_evaluator_add = @berg_unity_h$tier$_job
+	planet_jobs_unity_produces_mult = @berg_unity_$type$_unity_mult_t$tier$
+	job_evaluator_add = @berg_unity_$type$_job_t$tier$
 }
 triggered_desc = {
 	text = job_evaluator_effect_desc
@@ -8,6 +8,7 @@ triggered_desc = {
 #OSA
 triggered_planet_modifier = {
 	potential = {
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = {
 			is_machine_empire = yes
@@ -21,6 +22,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {

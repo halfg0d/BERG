@@ -27,19 +27,9 @@ building_research_lab_1 = {
 		script = vanilla/research/berg_research_jobs_scripts
 		tier = 1
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = @b1_upkeep
-		}
-		inline_script = {
-			script = OSA/berg_osa_research_lab_resource
-			tier = 1
-		}
+	inline_script = {
+		script = building_resources/vanilla_research_lab
+		tier = 1
 	}
 
 	upgrades = {
@@ -69,26 +59,15 @@ building_research_lab_2 = {
 		}
 	}
 
+	
 	inline_script = {
 		script = vanilla/research/berg_research_jobs_scripts
 		tier = 2
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
-		inline_script = {
-			script = OSA/berg_osa_research_lab_resource
-			tier = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla_research_lab
+		tier = 2
 	}
-
 	upgrades = {
 		"building_research_lab_3"
 	}
@@ -115,41 +94,17 @@ building_research_lab_3 = {
 			has_modifier = crucible_colony
 		}
 	}
-
+	inline_script = {
+		script = vanilla/research/berg_research_resolution_scripts
+	}
+	
 	inline_script = {
 		script = vanilla/research/berg_research_jobs_scripts
 		tier = 3
 	}
 	inline_script = {
-		script = vanilla/research/berg_research_resolution_scripts
+		script = building_resources/vanilla_research_lab
 		tier = 3
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
-		}
-		upkeep = {
-			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
-		}
-		upkeep = {
-			trigger = {
-				owner = {
-					is_galactic_community_member = yes
-				}
-				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
-				planet = {
-					has_modifier = pm_extradimensional_experimentation
-				}
-			}
-			sr_zro = 1
-		}
-		inline_script = {
-			script = OSA/berg_osa_research_lab_resource
-			tier = 3
-		}
 	}
 
 	prerequisites = {
@@ -159,11 +114,125 @@ building_research_lab_3 = {
 		"building_avb_research_lab_4"
 	}
 }
+building_avb_research_lab_4 = {
+	base_buildtime = @avb_r4_time
+	can_build = no
+
+	category = research
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/research/berg_research_resolution_scripts
+	}
+	
+	inline_script = {
+		script = vanilla/research/berg_research_jobs_scripts
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla_research_lab
+		tier = 4
+	}
+	
+	upgrades = {
+		building_avb_research_lab_5
+	}
+	
+	prerequisites = {
+		"tech_avb_basic_science_lab_4"
+	}
+}
+
+building_avb_research_lab_5 = {
+	base_buildtime = @avb_r5_time
+	can_build = no
+
+	category = research
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+		}
+	}
+	inline_script = {
+		script = vanilla/research/berg_research_resolution_scripts
+	}
+	
+	inline_script = {
+		script = vanilla/research/berg_research_jobs_scripts
+		tier = 5
+	}
+	inline_script = {
+		script = building_resources/vanilla_research_lab
+		tier = 5
+	}
+	upgrades = {
+		building_avb_research_lab_6
+	}
+	
+	prerequisites = {
+		"tech_avb_basic_science_lab_5"
+	}
+}
+
+building_avb_research_lab_6 = {
+	base_buildtime = @avb_r6_time
+	can_build = no
+
+	category = research
+	
+	allow = {
+		has_upgraded_capital_5 = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+		}
+	}
+	inline_script = {
+		script = vanilla/research/berg_research_resolution_scripts
+	}
+	
+	inline_script = {
+		script = vanilla/research/berg_research_jobs_scripts
+		tier = 6
+	}
+	inline_script = {
+		script = building_resources/vanilla_research_lab
+		tier = 6
+	}
+	prerequisites = {
+		"tech_avb_basic_science_lab_6"
+	}
+}
 
 building_institute = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
 	
+	empire_limit = {
+		base = 1
+	}
+
 	category = research
 
 	potential = {
@@ -189,32 +258,19 @@ building_institute = {
 	convert_to = {
 		building_supercomputer
 	}
-
 	allow = {
 		has_major_upgraded_capital = yes
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
-		}
-		upkeep = {
-			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
-		}
-		#Yeah, i was lazy and i used script from research lab
-		inline_script = {
-			script = OSA/berg_osa_research_lab_resource
-			tier = 11
-		}
-	}
-
 	inline_script = {
-		script = vanilla/research/berg_institute_modifiers_scripts
+		script = vanilla/research/berg_institute
 		tier = 1
 	}
+	inline_script = {
+		script = building_resources/vanilla_institute
+		tier = 1
+	}
+
 	prerequisites = {
 		"tech_global_research_initiative"
 	}
@@ -241,10 +297,75 @@ building_institute = {
 		"building_avb_institute_2" #AVB
 	}
 }
+building_avb_institute_2 = {
+	base_buildtime = @avb_r4_time
+	can_build = no
+
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			owner = { is_regular_empire = no }
+		}
+	}
+	
+	convert_to = {
+		building_avb_supercomputer_2
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	inline_script = {
+		script = vanilla/research/berg_institute
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_institute
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_global_research_initiative_2"
+	}
+	
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 30
+			}
+		}
+		physics_research = 5
+		society_research = 5
+		engineering_research = 5
+	}
+}
 
 building_supercomputer = {
 	base_buildtime = @b2_time
-	base_cap_amount = 1
+	empire_limit = {
+		base = 1
+	}
 	icon = building_institute
 
 	category = research
@@ -277,23 +398,12 @@ building_supercomputer = {
 		building_institute
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-		}
-		upkeep = {
-			energy = @b2_upkeep
-		}
-		#Yeah, i was lazy and i used script from research lab
-		inline_script = {
-			script = OSA/berg_osa_research_lab_resource
-			tier = 11
-		}
-	}
-
 	inline_script = {
-		script = vanilla/research/berg_institute_modifiers_scripts
+		script = vanilla/research/berg_supercomputer
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla_supercomputer
 		tier = 1
 	}
 	prerequisites = {
@@ -306,6 +416,81 @@ building_supercomputer = {
 	upgrades = {
 		building_eutab_hypercomputing_complex # EUTAB
 		"building_avb_supercomputer_2" #AVB
+	}
+
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+}
+building_avb_supercomputer_2 = {
+	base_buildtime = @avb_b4_time
+	icon = building_institute
+	can_build = no
+
+	category = research
+	
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+			owner = { is_regular_empire = yes }
+		}
+	}
+	
+	
+	inline_script = {
+		script = vanilla/research/berg_supercomputer
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_supercomputer
+		tier = 2
+	}
+
+	convert_to = {
+		building_avb_institute_2
+	}
+	
+	prerequisites = {
+		"tech_avb_global_research_initiative_2"
+	}
+	show_tech_unlock_if = {
+		is_gestalt = yes
 	}
 
 	ai_resource_production = {
@@ -364,6 +549,7 @@ building_archaeostudies_faculty = {
 	}
 	inline_script = {
 		script = building_resources/vanilla_archaeostudies_faculty
+		tier = 1
 	}
 	inline_script = {
 		script = vanilla/research/berg_archeostudies_scripts
@@ -378,6 +564,46 @@ building_archaeostudies_faculty = {
 		"building_avb_archaeostudies_faculty_2" #AVB
 	}
 	
+}
+building_avb_archaeostudies_faculty_2 = {
+	base_buildtime = @avb_f4_time
+
+	can_build = no
+	category = research
+
+	potential = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+		exists = owner
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	inline_script = {
+		script = building_resources/vanilla_archaeostudies_faculty
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/research/berg_archeostudies_scripts
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_avb_archaeostudies_faculty_2"
+	}
 }
 
 building_vultaum_reality_computer = {
@@ -408,45 +634,61 @@ building_vultaum_reality_computer = {
 		}
 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
-			minor_artifacts = 30
-		}
-		upkeep = {
-			energy = @b2_upkeep
-		}
-		#OSA
-		upkeep = {
-			trigger = { berg_has_osa_mod = yes }
-			energy = 5
-			minerals = 10
-		}
-		produces = {
-			trigger = { berg_has_osa_mod = yes }
-			physics_research = 150
-			society_research = 150
-			engineering_research = 150
-		}
-		produces = {
-			trigger = {
-				berg_has_osa_mod = yes
-				owner = {
-					has_active_tradition = tr_insight_3
-				}
-			}
-			physics_research = 50
-		}
-	}
 	inline_script = {
 		script = vanilla/research/berg_vultaum_scripts
 		tier = 1
 	}
+	inline_script = {
+		script = building_resources/vanilla_vultaum
+		tier = 1
+	}
+	
 	prerequisites = {
 		"tech_secrets_vultaum"
 	}
 	upgrades = {
 		"building_avb_vultaum_reality_computer_2" #AVB
+	}
+}
+building_avb_vultaum_reality_computer_2 = {
+	base_buildtime = @avb_f4_time
+
+	can_build = no
+	category = research
+
+	potential = {
+		exists = owner
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+
+	
+	inline_script = {
+		script = vanilla/research/berg_vultaum_scripts
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla_vultaum
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_avb_vultaum_reality_computer_2"
 	}
 }

@@ -5,8 +5,8 @@ triggered_desc = {
 	text = building_coordinated_fulfillment_center_tooltip
 }
 planet_modifier = {
-	planet_metallurgists_produces_mult = @berg_manufacturing_i$tier$_mult
-	planet_artisans_produces_mult = @berg_manufacturing_i$tier$_mult
+	planet_metallurgists_produces_mult = @berg_manufactury_fulfillment_center_mult_t$tier$
+	planet_artisans_produces_mult = @berg_manufactury_fulfillment_center_mult_t$tier$
 }
 
 triggered_planet_modifier = {
@@ -14,8 +14,8 @@ triggered_planet_modifier = {
 		owner = { has_policy_flag = relentless_industrialists_full_steam_ahead }
 	}
 	modifier = {
-		planet_metallurgists_produces_mult = @berg_manufacturing_i$tier$_mult_policy
-		planet_artisans_produces_mult = @berg_manufacturing_i$tier$_mult_policy
+		planet_metallurgists_produces_mult = @berg_manufactury_fulfillment_center_mult_policy_t$tier$
+		planet_artisans_produces_mult = @berg_manufactury_fulfillment_center_mult_policy_t$tier$
 	}
 }
 
@@ -24,7 +24,7 @@ triggered_planet_modifier = {
 		owner = { is_synthetic_empire = no }
 	}
 	modifier = {
-		pop_growth_speed_reduction = @berg_manufacturing_i$tier$_pop_growth_reduction
+		pop_growth_speed_reduction = @berg_manufactury_fulfillment_center_pop_growth_policy_t$tier$
 	}
 }
 
@@ -39,7 +39,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		pop_growth_speed_reduction = @berg_manufacturing_i$tier$_pop_growth_reduction_policy
+		pop_growth_speed_reduction = @berg_manufactury_fulfillment_center_pop_growth_t$tier$
 	}
 }
 
@@ -48,7 +48,7 @@ triggered_planet_modifier = {
 		owner = { is_synthetic_empire = yes }
 	}
 	modifier = {
-		habitability_ceil_add = @berg_manufacturing_i$tier$_habitability_ceil_synthethic
+		habitability_ceil_add = @berg_manufactury_fulfillment_center_habitability_ceil_t$tier$
 	}
 }
 
@@ -63,6 +63,6 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		habitability_ceil_add = @berg_manufacturing_i$tier$_habitability_ceil
+		habitability_ceil_add = @berg_manufactury_fulfillment_center_habitability_ceil_policy_t$tier$
 	}
 }

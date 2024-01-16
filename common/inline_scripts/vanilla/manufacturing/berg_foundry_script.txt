@@ -1,15 +1,10 @@
-#Bonus
+#Modifier
 triggered_planet_modifier = {
 	potential = {
-		always = $bonus$
-	}
-	modifier = {
-		planet_metallurgists_alloys_produces_add = @berg_manufacturing_a$tier$_alloy
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		always = $bonus$
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
+		}
 		exists = owner
 		owner = {
 			is_catalytic_empire = no
@@ -17,12 +12,16 @@ triggered_planet_modifier = {
 		berg_pd_is_crucible = no
 	}
 	modifier = {
-		planet_metallurgists_minerals_upkeep_add = @berg_manufacturing_a$tier$_upkeep_m
+		planet_metallurgists_alloys_produces_add = @berg_manufactury_foundry_alloy_produce_t$tier$
+		planet_metallurgists_minerals_upkeep_add = @berg_manufactury_foundry_mineral_upkeep_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
-		always = $bonus$
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
+		}
 		exists = owner
 		owner = {
 			is_catalytic_empire = yes
@@ -30,151 +29,92 @@ triggered_planet_modifier = {
 		berg_pd_is_crucible = no
 	}
 	modifier = {
-		planet_metallurgists_food_upkeep_add = @berg_manufacturing_a$tier$_upkeep_f
+		planet_metallurgists_alloys_produces_add = @berg_manufactury_foundry_alloy_produce_catalytic_t$tier$
+		planet_metallurgists_food_upkeep_add = @berg_manufactury_foundry_food_upkeep_t$tier$
 	}
 }
-#Job
 triggered_planet_modifier = {
 	potential = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
+		}
+		berg_pd_is_crucible = yes
+	}
+	modifier = {
+		planet_metallurgists_alloys_produces_add = @berg_manufactury_foundry_pd_alloy_produce_crucible_t$tier$
+		planet_metallurgists_energy_upkeep_add = @berg_manufactury_foundry_pd_alloy_produce_upkeep_t$tier$
+	}
+}
+#RW
+triggered_planet_modifier = {
+	potential = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
+		}
+		has_ringworld_output_boost = yes
 		exists = owner
 		owner = {
-			is_hive_empire = yes
 			is_catalytic_empire = no
 		}
 		berg_pd_is_crucible = no
 	}
 	modifier = {
-		job_alloy_drone_add = @berg_manufacturing_a$tier$_job
+		planet_metallurgists_alloys_produces_add = 1
+		planet_metallurgists_minerals_upkeep_add = 2
 	}
 }
-
 triggered_planet_modifier = {
 	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			is_catalytic_empire = no
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
 		}
-		berg_pd_is_crucible = no
-	}
-	modifier = {
-		job_fabricator_add = @berg_manufacturing_a$tier$_job
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
+		has_ringworld_output_boost = yes
 		exists = owner
 		owner = {
-			is_gestalt = yes
 			is_catalytic_empire = yes
 		}
 		berg_pd_is_crucible = no
 	}
 	modifier = {
-		job_catalytic_drone_add = @berg_manufacturing_a$tier$_job
+		planet_metallurgists_alloys_produces_add = 1
+		planet_metallurgists_food_upkeep_add = 3
 	}
 }
-
 triggered_planet_modifier = {
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_catalytic_empire = no
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 2
 		}
-		berg_pd_is_crucible = no
+		has_ringworld_output_boost = yes
+		berg_pd_is_crucible = yes
 	}
 	modifier = {
-		job_foundry_add = @berg_manufacturing_a$tier$_job
+		planet_metallurgists_alloys_produces_add = 1
+		planet_metallurgists_energy_upkeep_add = 2
 	}
 }
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_catalytic_empire = yes
-		}
-		berg_pd_is_crucible = no
-	}
-	modifier = {
-		job_catalytic_technician_add = @berg_manufacturing_a$tier$_job
-	}
+### Jobs
+inline_script = {
+	script = berg_jobs/foundry
+	AMOUNT = @berg_manufactury_foundry_job_t$tier$
 }
 inline_script = {
-	script = UAP/berg_uap_industrialist_jobs
-	buidling = a
-	tier = $tier$
-	industrialist = $industrialist$
+	script = UAP/berg_uap_industrialist
+	AMOUNT = @berg_manufactury_foundry_uap_industrialist_t$tier$
 }
+#OST
 inline_script = {
-	script = OSA/berg_osa_foundry_jobs
-	tier = $tier$
-}
-#desc
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_catalytic_empire = no
-		}
-		berg_pd_is_crucible = no
-	}
-	text = job_foundry_effect_desc
+	script = tradition_script/ost_metallurgy
+	isForge = yes
+	job_add = @berg_manufactury_foundry_ost_jobs_t$tier$
 }
 
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_catalytic_empire = yes
-		}
-		berg_pd_is_crucible = no
-	}
-	text = job_catalytic_technician_effect_desc
-}
 
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-			is_catalytic_empire = no
-		}
-		berg_pd_is_crucible = no
-	}
-	text = job_alloy_drone_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			is_catalytic_empire = no
-		}
-		berg_pd_is_crucible = no
-	}
-	text = job_fabricator_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_gestalt = yes
-			is_catalytic_empire = yes
-		}
-		berg_pd_is_crucible = no
-	}
-	text = job_catalytic_drone_effect_desc
-}
-inline_script = {
-	script = PD/berg_pd_foundry_script
-	tier = $tier$
-	bonus = $bonus$
-}
+#inline_script = {
+#	script = OSA/berg_osa_foundry_jobs
+#	tier = $tier$
+#}

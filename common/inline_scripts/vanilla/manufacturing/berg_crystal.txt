@@ -1,0 +1,4 @@
+inline_script = {
+	script = jobs/translucer_add
+	AMOUNT = @berg_manufactury_crystal_plant_job_t$tier$
+}

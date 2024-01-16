@@ -1,5 +1,5 @@
 planet_modifier = {
-	job_enforcer_add = @berg_government_e$tier$_job
+	job_enforcer_add = @berg_government_precinct_house_job_t$tier$
 }
 triggered_desc = {
 	text = job_enforcer_effect_desc

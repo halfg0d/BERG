@@ -1,13 +1,16 @@
 planet_modifier = {
-	job_bio_trophy_add = @berg_unity_l$tier$_biotrophy
-	job_artisan_drone_add = @berg_unity_l$tier$_artisan
+	job_bio_trophy_add = @berg_unity_organic_paradise_biotrophy_t$tier$
+	job_artisan_drone_add = @berg_unity_organic_paradise_artisan_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
-		always = $maintenance$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 	}
 	modifier = {
-		job_maintenance_drone_add = @berg_unity_l$tier$_maintenance
+		job_maintenance_drone_add = @berg_unity_organic_paradise_maintenance_t$tier$
 	}
 }
 triggered_desc = {
@@ -19,7 +22,10 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		always = $maintenance$
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
 	}
 	text = job_maintenance_drone_effect_desc
 }

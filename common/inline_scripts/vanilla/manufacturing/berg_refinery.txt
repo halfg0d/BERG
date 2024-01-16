@@ -1,0 +1,4 @@
+inline_script = {
+	script = jobs/refiner_add
+	AMOUNT = @berg_manufactury_refinery_job_t$tier$
+}

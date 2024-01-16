@@ -1,0 +1,2 @@
+# Irony this is a placeholder file please ignore it
+healthcare = { potential = { always = no } option = { name = "public_healthcare" } option = { name = "B" } }

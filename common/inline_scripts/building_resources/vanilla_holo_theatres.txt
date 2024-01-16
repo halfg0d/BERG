@@ -1,0 +1,18 @@
+resources = {
+	category = planet_buildings
+	#Vanilla
+	cost = {
+		minerals = @berg_amenity_holo_theatres_cost_t$tier$
+		exotic_gases = @berg_amenity_holo_theatres_rare_cost_t$tier$
+	}
+	upkeep = {
+		energy = @berg_amenity_holo_theatres_upkeep_t$tier$
+		exotic_gases = @berg_amenity_holo_theatres_rare_upkeep_t$tier$
+	}
+	#OSA
+	upkeep = {
+		trigger = { berg_has_osa_mod = yes }
+		energy = @berg_amenity_holo_theatres_osa_upkeep_energy_t$tier$
+		minerals = @berg_amenity_holo_theatres_osa_upkeep_minerals_t$tier$
+	}
+}

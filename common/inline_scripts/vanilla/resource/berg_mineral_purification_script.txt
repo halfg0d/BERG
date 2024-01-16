@@ -4,7 +4,7 @@ triggered_planet_modifier = {
 		berg_is_shattered_ring = no
 	}
 	modifier = {
-		planet_miners_minerals_produces_add = @berg_resource_m$tier$_mineral
+		planet_miners_minerals_produces_add = @berg_resource_mineral_purification_miner_add_mineral_t$tier$
 	}
 }
 
@@ -13,8 +13,8 @@ triggered_planet_modifier = {
 		berg_is_shattered_ring = yes
 	}
 	modifier = {
-		planet_miners_minerals_produces_add = @berg_resource_m$tier$_mineral_scrap
-		planet_miners_alloys_produces_add = @berg_resource_m2_alloy
+		planet_miners_minerals_produces_add = @berg_resource_mineral_purification_scrap_add_mineral_t$tier$
+		planet_miners_alloys_produces_add = @berg_resource_mineral_purification_scrap_add_alloy_t$tier$
 	}
 }
 #Job
@@ -32,7 +32,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_miner_add = @berg_resource_m$tier$_job
+		job_miner_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -43,7 +43,7 @@ triggered_planet_modifier = {
 		owner = { is_fallen_empire_spiritualist = yes }
 	}
 	modifier = {
-		job_fe_acolyte_mine_add = @berg_resource_m$tier$_job
+		job_fe_acolyte_mine_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -63,7 +63,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_mining_drone_add = @berg_resource_m$tier$_job
+		job_mining_drone_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -74,7 +74,7 @@ triggered_planet_modifier = {
 		owner = { is_regular_empire = yes }
 	}
 	modifier = {
-		job_scrap_miner_add = @berg_resource_m$tier$_job
+		job_scrap_miner_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 
@@ -85,7 +85,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_scrap_miner_drone_add = @berg_resource_m$tier$_job
+		job_scrap_miner_drone_add = @berg_resource_mineral_purification_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -103,21 +103,65 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		district_mining_max = @berg_resource_m$tier$_district
+		district_mining_max = @berg_resource_mineral_purification_district_add_t$tier$
 	}
 }
-inline_script = {
-	script = ECC/berg_ecc_mineral_purification_script
-	tier = $tier$
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		berg_is_shattered_ring = no
+		exists = owner
+		owner = { has_valid_civic = civic_mining_guilds }
+	}
+	modifier = {
+		job_politician_add = 1
+	}
 }
 inline_script = {
 	script = BUG/berg_district_script
 	tier = $tier$
-	district = "mining"
+	district = mining
+}
+#OST
+inline_script = {
+	script = tradition_script/ost_mettle
+	osa_job = 1
+	job_subtract = 1
+	miner = miner
+	trigger = "berg_is_shattered_ring = no"
 }
 inline_script = {
-	script = OSA/berg_osa_mineral_purification
-	tier = $tier$
+	script = tradition_script/ost_mettle
+	osa_job = 1
+	job_subtract = 1
+	miner = scrap_miner
+	trigger = "berg_is_shattered_ring = yes"
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = mettle
+	job_add = 1
+	job_subtract = 1
+	drone = mining_drone
+	trigger = "berg_is_shattered_ring = no"
+}
+inline_script = {
+	script = tradition_script/ost_omni_drone
+	tradition = mettle
+	job_add = 1
+	job_subtract = 1
+	drone = scrap_miner_drone
+	trigger = "berg_is_shattered_ring = yes"
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_ecc_mod = yes
+		berg_is_shattered_ring = no
+		exists = owner
+		owner = { has_valid_civic = civic_mining_guilds }
+	}
+	text = job_politician_effect_desc
 }
 triggered_desc = {
 	trigger = {

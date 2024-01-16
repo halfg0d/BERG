@@ -1,12 +1,12 @@
 planet_modifier = {
-	job_ranger_add = @berg_amenity_a$tier$_job
-	deposit_blockers_natural_unity_produces_add = @berg_amenity_a$tier$_unity_per_blocker
+	job_ranger_add = @berg_amenity_ranger_job_t$tier$
+	deposit_blockers_natural_unity_produces_add = @berg_amenity_ranger_unity_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
 		always = yes
 	}
-	job_ranger_add = @berg_amenity_a1_job_mult1 # +1 Ranger per natural blocker
+	job_ranger_add = 1 # +1 Ranger per natural blocker
 	mult = value:natural_blocker_count
 }
 
@@ -14,7 +14,7 @@ triggered_planet_modifier = {
 	potential = {
 		owner_has_resolution = { RES = resolution_ecology_paradise_initiative }
 	}
-	job_ranger_add = @berg_amenity_a1_job_mult2 # +1 Ranger per natural blocker if GalCom approves
+	job_ranger_add = 1 # +1 Ranger per natural blocker if GalCom approves
 	mult = value:natural_blocker_count
 }
 triggered_desc = {

@@ -1,0 +1,71 @@
+##############
+## Tradition Variables
+##############
+#OST
+@berg_ost_benelovence_unity_t$tier$ = 0
+@berg_ost_benelovence_unity_t1 = 5
+@berg_ost_benelovence_unity_t2 = 10
+@berg_ost_benelovence_unity_t3 = 20
+#
+@berg_ost_commerce_unity_t$tier$ = 0
+@berg_ost_commerce_unity_t1 = 5
+@berg_ost_commerce_unity_t2 = 10
+@berg_ost_commerce_unity_t3 = 20
+@berg_ost_commerce_unity_t4 = 25
+@berg_ost_commerce_unity_t5 = 30
+@berg_ost_commerce_unity_t6 = 40
+#
+@berg_ost_insight_physics_t$tier$ = 0
+@berg_ost_insight_physics_t1 = 5
+@berg_ost_insight_physics_t2 = 10
+@berg_ost_insight_physics_t3 = 20
+@berg_ost_insight_physics_t4 = 25
+@berg_ost_insight_physics_t5 = 30
+@berg_ost_insight_physics_t6 = 40
+#
+@berg_ost_nanobiotics_material_t$tier$ = 0
+@berg_ost_nanobiotics_minerals_t$tier$ = 0
+@berg_ost_nanobiotics_material_1 = 5
+@berg_ost_nanobiotics_minerals_1 = 10
+@berg_ost_nanobiotics_material_2 = 10
+@berg_ost_nanobiotics_minerals_2 = 20
+@berg_ost_nanobiotics_material_3 = 20
+@berg_ost_nanobiotics_minerals_3 = 40
+@berg_ost_nanobiotics_material_4 = 20
+@berg_ost_nanobiotics_minerals_4 = 40
+@berg_ost_nanobiotics_material_5 = 20
+@berg_ost_nanobiotics_minerals_5 = 40
+@berg_ost_nanobiotics_material_6 = 20
+@berg_ost_nanobiotics_minerals_6 = 40
+#
+@berg_ost_metallurgy_job_$tier$ = 0
+@berg_ost_metallurgy_job_1 = 1
+@berg_ost_metallurgy_job_2 = 1
+@berg_ost_metallurgy_job_3 = 2
+#
+@berg_ost_mettle_job_t$tier$ = 0
+@berg_ost_mettle_job_t1 = 1
+@berg_ost_mettle_job_t2 = 2
+#
+@berg_ost_order_unity_t$tier$ = 0
+@berg_ost_order_unity_t1 = 5
+@berg_ost_order_unity_t2 = 10
+@berg_ost_order_unity_t3 = 20
+@berg_ost_order_unity_t4 = 40
+#
+@berg_ost_perseverance_job_t$tier$ = 0
+@berg_ost_perseverance_angler_t$tier$ = 0
+@berg_ost_perseverance_pearl_t$tier$ = 0
+@berg_ost_perseverance_job_t1 = 1
+@berg_ost_perseverance_angler_t1 = 1
+@berg_ost_perseverance_pearl_t1 = 0
+@berg_ost_perseverance_job_t2 = 2
+@berg_ost_perseverance_angler_t2 = 1
+@berg_ost_perseverance_pearl_t2 = 1
+#
+@berg_ost_radiance_job_t$tier$ = 0
+@berg_ost_radiance_job_t1 = 1
+@berg_ost_radiance_job_t2 = 2
+#
+@berg_ost_renewal_job_t$tier$ = 0
+@berg_ost_renewal_job_t1 = 3

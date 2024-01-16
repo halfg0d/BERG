@@ -2,31 +2,26 @@ resources = {
 	category = planet_buildings
 	#Vanilla
 	cost = {
-		minerals = @berg_res_bureacracy_t$tier$_cost
-		rare_crystals = @berg_res_bureacracy_t$tier$_cost_crystals
+		minerals = @berg_unity_bureaucratic_cost_t$tier$
+		rare_crystals = @berg_unity_bureaucratic_rare_cost_t$tier$
 	}
 	upkeep = {
-		energy = @berg_res_bureacracy_t$tier$_upkeep
-		rare_crystals = @berg_res_bureacracy_t$tier$_upkeep_crystals
+		energy = @berg_unity_bureaucratic_upkeep_t$tier$
+		rare_crystals = @berg_unity_bureaucratic_rare_upkeep_t$tier$
 	}
 	#Osa
 	upkeep = {
 		trigger = { berg_has_osa_mod = yes }
-		energy = @berg_res_bureacracy_t$tier$_osa_upkeep
-		minerals = @berg_res_bureacracy_t$tier$_osa_upkeep_minerals
+		energy = @berg_unity_bureaucratic_osa_upkeep_energy_t$tier$
+		minerals = @berg_unity_bureaucratic_osa_upkeep_minerals_t$tier$
 	}
 	produces = {
 		trigger = { berg_has_osa_mod = yes }
-		unity = @berg_res_bureacracy_t$tier$_osa_produces
+		unity = @berg_unity_bureaucratic_osa_produce_t$tier$
 	}
-	produces = {
-		trigger = {
-			berg_has_osa_mod = yes 
-			exists = owner
-			owner = {
-				has_active_tradition = tr_benevolence_1
-			}
-		}
-		unity = @berg_res_bureacracy_t$tier$_osa_produces_tradition
+	#OST
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
 	}
 }

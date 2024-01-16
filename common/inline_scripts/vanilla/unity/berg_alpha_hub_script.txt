@@ -1,38 +1,13 @@
 country_modifier = {
-	country_official_cap_add = @berg_unity_n$tier$_official_cap
-	country_unity_produces_mult = @berg_unity_n$tier$_unity_mult
+	country_official_cap_add = @berg_unity_alpha_hub_leader_t$tier$
+	country_unity_produces_mult = @berg_unity_alpha_hub_unity_mult_t$tier$
 }
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	modifier = {
-		job_politician_add = @berg_unity_n$tier$_job_regular
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	modifier = {
-		job_evaluator_add = @berg_unity_n$tier$_job_gestalt
-	}
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	text = job_politician_effect_desc
+
+planet_modifier = {
+	job_evaluator_add = @berg_unity_alpha_hub_job_t$tier$
 }
 
 triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
 	text = job_evaluator_effect_desc
 }
 triggered_planet_modifier = {
@@ -47,16 +22,19 @@ triggered_planet_modifier = {
 		berg_has_osa_mod = yes
 	}
 	modifier = {
-		planet_administrators_produces_mult = @berg_osa_a$tier$_mult
-		job_evaluator_add = @berg_osa_a$tier$_job
+		planet_administrators_produces_mult = @berg_unity_alpha_hub_osa_unity_mult_t$tier$
+		job_evaluator_add = @berg_unity_alpha_hub_osa_job_t$tier$
 	}
 }
 #EOC
 triggered_planet_modifier = {
 	potential = {
+		always = no
 		planet_has_ecocontinuity = yes
 	}
 	modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t3
 	}
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

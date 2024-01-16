@@ -15,7 +15,9 @@ building_bank_office = {
 
 	potential = {
 		exists = owner
-		berg_vp_is_bancorp = yes
+		owner = {
+			berg_vp_is_bancorp = yes
+		}
 		NOT = { has_modifier = slave_colony }
 	}
 
@@ -27,7 +29,9 @@ building_bank_office = {
 
 	destroy_trigger = {
 		exists = owner
-		berg_vp_is_bancorp = no
+		owner = {
+			berg_vp_is_bancorp = no
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -69,6 +73,10 @@ building_bank_office = {
 		upkeep = {
 			energy = 2
 			#rare_crystals = @b2_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_commerce
+			tier = 1
 		}
 	}
 

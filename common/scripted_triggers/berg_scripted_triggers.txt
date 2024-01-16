@@ -137,7 +137,7 @@ berg_reanimator_civic = {
 	OR = {
 		has_valid_civic = civic_reanimated_armies
 		AND = {
-			has_bugged_mod = yes
+			berg_has_bug_mod = yes
 			has_valid_civic = civic_bugged_graveyard_shift
 		}
 		has_reanimated_armies = yes
@@ -215,6 +215,12 @@ berg_vp_is_science_syndicate = {
 	is_megacorp = yes
 	has_civic = civic_science_syndicate
 }
+berg_can_toxic_knight = {
+	OR = {
+		NOT = { has_planet_flag = toxic_knights_habitat }
+		NOT = { owner = { berg_is_toxic_knight_empire = yes } }
+	}
+}
 berg_has_food_processing = {
 	OR = {
 		has_active_building = building_food_processing_facility
@@ -249,4 +255,13 @@ berg_avb_build_imperial_capital = {
 }
 berg_has_acot_mod = {
 	has_acot = yes
+}
+berg_has_osa_mod = {
+	has_global_flag = osa_active
+}
+berg_has_ost_mod = {
+	OR = {
+		berg_has_osa_mod = yes
+		has_global_flag = ost_active
+	}
 }

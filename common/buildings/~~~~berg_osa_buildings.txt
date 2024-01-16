@@ -135,7 +135,9 @@ building_commercial_trading_terminal = {
 	triggered_desc = {
 		text = job_trader_effect_desc
 	}
-
+	show_tech_unlock_if = {
+		berg_has_osa_mod = yes
+	}
 	ai_resource_production = {
 		energy = 18
 		trigger = {
@@ -190,5 +192,8 @@ building_zitadom = {
 
 	prerequisites = {
 		"tech_global_defense_grid"
+	}
+	show_tech_unlock_if = {
+		berg_has_osa_mod = yes
 	}
 }

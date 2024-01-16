@@ -1,18 +1,18 @@
 country_modifier = {
-	country_edict_fund_add = @berg_unity_m$tier$_edict
+	country_edict_fund_add = @berg_unity_league_offices_edicts_t$tier$
 }
 
 triggered_country_modifier = {
 	potential = {
 		owner = { has_ascension_perk = ap_archaeoengineers }
 	}
-	country_edict_fund_add = @berg_unity_m$tier$_edict_ap
+	country_edict_fund_add = @berg_unity_league_offices_edicts_t$tier$
 }
 
 planet_modifier = {
-	planet_administrators_unity_produces_add = @berg_unity_m$tier$_unity_add
-	planet_managers_unity_produces_add = @berg_unity_m$tier$_unity_add
-	planet_priests_unity_produces_add = @berg_unity_m$tier$_unity_add
+	planet_administrators_unity_produces_add = 1
+	planet_managers_unity_produces_add = 1
+	planet_priests_unity_produces_add = 1
 }
 
 triggered_planet_modifier = {
@@ -27,7 +27,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_bureaucrat_add = @berg_unity_m$tier$_job
+		job_bureaucrat_add = @berg_unity_league_offices_job_t$tier$
 	}
 }
 
@@ -42,7 +42,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_priest_add = @berg_unity_m$tier$_job
+		job_priest_add = @berg_unity_league_offices_job_t$tier$
 	}
 }
 
@@ -56,7 +56,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_manager_add = @berg_unity_m$tier$_job
+		job_manager_add = @berg_unity_league_offices_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -69,7 +69,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_steward_add = @berg_unity_m$tier$_job
+		job_steward_add = @berg_unity_league_offices_job_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -82,8 +82,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_manager_add = @berg_unity_m$tier$_megacorp_spiritualist
-		job_priest_add = @berg_unity_m$tier$_megacorp_spiritualist
+		job_manager_add = @berg_unity_league_offices_corp_spirit_t$tier$
+		job_priest_add = @berg_unity_league_offices_corp_spirit_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -97,8 +97,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_steward_add = @berg_unity_m$tier$_megacorp_spiritualist
-		job_priest_add = @berg_unity_m$tier$_megacorp_spiritualist
+		job_steward_add = @berg_unity_league_offices_corp_spirit_t$tier$
+		job_priest_add = @berg_unity_league_offices_corp_spirit_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -107,7 +107,7 @@ triggered_planet_modifier = {
 		owner = { is_hive_empire = yes }
 	}
 	modifier = {
-		job_synapse_drone_add = @berg_unity_m$tier$_job
+		job_synapse_drone_add = @berg_unity_league_offices_job_t$tier$
 	}
 }
 
@@ -117,7 +117,7 @@ triggered_planet_modifier = {
 		owner = { is_machine_empire = yes }
 	}
 	modifier = {
-		job_coordinator_add = @berg_unity_m$tier$_job
+		job_coordinator_add = @berg_unity_league_offices_job_t$tier$
 	}
 }
 
@@ -187,3 +187,5 @@ triggered_desc = {
 	}
 	text = job_steward_effect_desc
 }
+#OST
+inline_script = tradition_script/ost_solidarity_effect

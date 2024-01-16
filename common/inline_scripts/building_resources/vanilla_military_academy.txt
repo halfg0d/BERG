@@ -2,23 +2,27 @@ resources = {
 	category = planet_buildings
 	#Vanilla
 	cost = {
-		minerals = @b1_minerals
+		minerals = @berg_army_military_academy_cost_t$tier$
+		volatile_motes = @berg_army_military_academy_rare_cost_t$tier$
 	}
 	upkeep = {
-		energy = @b1_upkeep
+		energy = @berg_army_military_academy_upkeep_t$tier$
+		volatile_motes = @berg_army_military_academy_rare_upkeep_t$tier$
 	}
 	#ECC
 	produces = {
 		trigger = {
 			berg_has_ecc_mod = yes
-			owner = { has_civic = civic_martial_brotherhood }
+			owner = {
+				has_civic = civic_martial_brotherhood
+			}
 		}
-		unity = @berg_ecc_l1_unity
+		unity = @berg_army_military_academy_ecc_unity_t$tier$
 	}
 	#OSA
 	upkeep = {
 		trigger = {
-			has_osa_mod = yes
+			berg_has_osa_mod = yes
 			exists = owner
 			owner = { 
 				AND = {
@@ -27,8 +31,8 @@ resources = {
 				}
 			}
 		}
-		energy = 0.5
-		food = 2.5
+		energy = @berg_army_military_academy_osa_upkeep_energy_t$tier$
+		food = @berg_army_military_academy_osa_upkeep_minerals_t$tier$
 	}
 	upkeep = {
 		trigger = {
@@ -40,7 +44,7 @@ resources = {
 				}
 			}
 		}
-		energy = 0.5
-		minerals = 2.5
+		energy = @berg_army_military_academy_osa_upkeep_energy_t$tier$
+		minerals = @berg_army_military_academy_osa_upkeep_minerals_t$tier$
 	}
 }
