@@ -160,7 +160,7 @@
 @berg_army_planetary_shield_bombardment_t1 = -0.5
 @berg_army_planetary_shield_bombardment_t2 = -0.65
 @berg_army_planetary_shield_bombardment_t3 = -0.75
-@berg_army_planetary_shield_bombardment_t4 = -0.65
+@berg_army_planetary_shield_bombardment_t4 = -0.85
 @berg_army_planetary_shield_osa_housing_t1 = 5
 @berg_army_planetary_shield_osa_housing_t2 = 5
 @berg_army_planetary_shield_osa_housing_t3 = 5

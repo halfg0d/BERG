@@ -49,7 +49,7 @@ building_private_mining_consortium = {
 		}
 		#OSA
 		produces = {
-			trigger = { has_osa_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			minerals = 20
 		}
 	}
@@ -162,7 +162,7 @@ building_food_conglomerate = {
 		}
 		#OSA
 		produces = {
-			trigger = { has_osa_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			food = 20
 		}
 	}
@@ -209,7 +209,7 @@ building_virtual_entertainment_studios = {
 		}
 		#OSA
 		produces = {
-			trigger = { has_osa_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			consumer_goods = 9
 		}
 	}

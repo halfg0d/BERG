@@ -266,7 +266,7 @@ building_galactic_stock_exchange = {
 	category = trade
 
 	potential = {
-		has_bugged_mod = no
+		berg_has_bug_mod = no
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
 	}
@@ -297,7 +297,7 @@ building_galactic_stock_exchange = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_bugged_mod = yes
+			berg_has_bug_mod = yes
 		}
 	}
 	inline_script = {
@@ -316,7 +316,7 @@ building_galactic_stock_exchange = {
 		"building_avb_galactic_stock_exchange_2" #AVB
 	}
 	show_tech_unlock_if = {
-		has_bugged_mod = no
+		berg_has_bug_mod = no
 	}
 	ai_resource_production = {
 		energy = 5

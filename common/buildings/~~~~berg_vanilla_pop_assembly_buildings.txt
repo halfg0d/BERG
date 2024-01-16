@@ -835,7 +835,7 @@ building_clone_vats = {
 	#BugBranch
 	triggered_planet_modifier = {
 		potential = {
-			has_bugged_mod = yes
+			berg_has_bug_mod = yes
 			exists = owner
 			owner = {
 				is_bugged_evolutionary_architects = yes
@@ -978,12 +978,11 @@ building_clone_army_clone_vat = {
 	}
 	inline_script = {
 		script = vanilla/pop_assembly/berg_clone_army_script
-		tier = 1
 	}
 	#BugBranch
 	triggered_planet_modifier = {
 		potential = {
-			has_bugged_mod = yes
+			berg_has_bug_mod = yes
 			exists = owner
 			owner = {
 				is_bugged_evolutionary_architects = yes
@@ -1081,6 +1080,7 @@ building_posthumous_employment_center = {
 		script = building_resources/vanilla_version_no_rare
 		tier = 1
 		type = posthumous
+		category = pop_assembly
 	}
 	upgrades = {
 		"building_avb_posthumous_employment_center_2" #AVB
@@ -1155,6 +1155,7 @@ building_avb_posthumous_employment_center_2 = {
 		script = building_resources/vanilla_version_no_rare
 		tier = 2
 		type = posthumous
+		category = pop_assembly
 	}
 }
 
@@ -1204,6 +1205,7 @@ building_toxic_bath_hive = {
 		script = building_resources/vanilla_version_no_rare
 		tier = 1
 		type = toxic_bath_hive
+		category = pop_assembly
 	}
 	upgrades = {
 		"building_avb_toxic_bath_hive_2" #AVB
@@ -1267,6 +1269,7 @@ building_avb_toxic_bath_hive_2 = {
 		script = building_resources/vanilla_version_no_rare
 		tier = 2
 		type = toxic_bath_hive
+		category = pop_assembly
 	}
 }
 
@@ -1299,6 +1302,7 @@ building_toxic_bath_machine = {
 		script = building_resources/vanilla_version_no_rare
 		tier = 1
 		type = toxic_bath_machine
+		category = pop_assembly
 	}
 	upgrades = {
 		"building_avb_toxic_bath_machine_2" #AVB
@@ -1340,6 +1344,7 @@ building_avb_toxic_bath_machine_2 = {
 		script = building_resources/vanilla_version_no_rare
 		tier = 2
 		type = toxic_bath_machine
+		category = pop_assembly
 	}
 	triggered_desc = {
 		trigger = {

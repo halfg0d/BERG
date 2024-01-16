@@ -2,13 +2,15 @@ triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = no
 	}
-	job_maintenance_drone_add = @berg_amenity_d$tier$_jobs
+	job_maintenance_drone_add = @berg_amenity_depot_job_t$tier$
 }
 triggered_desc = {
 	trigger = {
 		OR = {
 			berg_has_osa_mod = no
-			NOT = { has_valid_civic = civic_hive_aggregate_catharsis }
+			owner = {
+				NOT = { has_valid_civic = civic_hive_aggregate_catharsis }
+			}
 		}
 	}
 	text = job_maintenance_drone_effect_desc
@@ -18,7 +20,7 @@ triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = yes
 	}
-	planet_jobs_simple_drone_produces_mult = @berg_osa_o$tier$_mult
+	planet_jobs_simple_drone_produces_mult = @berg_amenity_depot_osa_mult_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
@@ -29,7 +31,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_maintenance_drone_add = @berg_osa_o$tier$_jobs
+		job_maintenance_drone_add = 5
 	}
 }
 	
@@ -42,7 +44,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_evaluator_add = @berg_osa_o$tier$_jobs
+		job_evaluator_add = 5
 	}
 }
 triggered_desc = {

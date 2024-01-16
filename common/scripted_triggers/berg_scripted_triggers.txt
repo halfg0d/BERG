@@ -137,7 +137,7 @@ berg_reanimator_civic = {
 	OR = {
 		has_valid_civic = civic_reanimated_armies
 		AND = {
-			has_bugged_mod = yes
+			berg_has_bug_mod = yes
 			has_valid_civic = civic_bugged_graveyard_shift
 		}
 		has_reanimated_armies = yes

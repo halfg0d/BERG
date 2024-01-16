@@ -5,7 +5,7 @@ building_bugged_planetary_stock_exchange = {
 	category = trade
 
 	potential = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
 	}
@@ -36,7 +36,7 @@ building_bugged_planetary_stock_exchange = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_bugged_mod = no
+			berg_has_bug_mod = no
 		}
 	}
 
@@ -54,7 +54,7 @@ building_bugged_planetary_stock_exchange = {
 		"tech_galactic_markets"
 	}
 	show_tech_unlock_if = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 	}
 	upgrades = {
 		"building_galactic_stock_exchange"
@@ -96,7 +96,7 @@ building_bug_galactic_stock_exchange = {
 	can_build = no
 
 	potential = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
 	}
@@ -133,7 +133,7 @@ building_bug_galactic_stock_exchange = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_bugged_mod = no
+			berg_has_bug_mod = no
 		}
 	}
 	
@@ -150,7 +150,7 @@ building_bug_galactic_stock_exchange = {
 		"tech_galactic_markets"
 	}
 	show_tech_unlock_if = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 	}
 	upgrades = {
 		"building_avb_galactic_stock_exchange_2" #AVB

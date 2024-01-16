@@ -49,22 +49,18 @@ triggered_planet_modifier = {
 	}
 }
 #OSA
-triggered_army_modifier = {
-	potential = { has_osa_mod = yes }
-	army_starting_experience_add = @berg_army_military_academy_osa_army_exp_t$tier$
-}
-
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 	}
 	modifier = {
 		planet_army_build_speed_mult = @berg_army_military_academy_osa_army_speed_t$tier$
+		army_starting_experience_add = @berg_army_military_academy_osa_army_exp_t$tier$
 	}
 }
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no
@@ -79,7 +75,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no
@@ -95,7 +91,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = yes
@@ -109,7 +105,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = yes
@@ -124,7 +120,7 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	trigger = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = yes
@@ -136,7 +132,7 @@ triggered_desc = {
 
 triggered_desc = {
 	trigger = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no
@@ -148,7 +144,7 @@ triggered_desc = {
 
 triggered_desc = {
 	trigger = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 		exists = owner
 		owner = { 
 			is_gestalt = no

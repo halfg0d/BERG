@@ -1,6 +1,6 @@
 triggered_planet_modifier = {
 	potential = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_functional_architecture = yes

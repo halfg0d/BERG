@@ -59,8 +59,10 @@ triggered_desc = {
 	}
 	text = job_mercenary_effect_desc
 }
+#BUG
 triggered_planet_modifier = {
 	potential = {
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_private_militaries = yes
@@ -72,6 +74,7 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	trigger = {
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_private_militaries = yes
@@ -82,7 +85,7 @@ triggered_desc = {
 #OSA
 triggered_planet_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 	}
 	modifier = {
 		planet_housing_add = 5
@@ -90,7 +93,7 @@ triggered_planet_modifier = {
 }
 triggered_country_modifier = {
 	potential = {
-		has_osa_mod = yes
+		berg_has_osa_mod = yes
 	}
 	modifier = {
 		country_resource_max_add = 5000

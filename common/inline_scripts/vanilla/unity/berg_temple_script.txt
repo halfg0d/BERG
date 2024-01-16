@@ -57,7 +57,7 @@ triggered_desc = {
 }
 triggered_planet_modifier = {
 	potential = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = { is_bugged_militant_zealots = yes }
 	}
@@ -67,7 +67,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_governmental_spiritualist = yes
@@ -80,7 +80,7 @@ triggered_planet_modifier = {
 
 triggered_desc = {
 	trigger = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_militant_zealots = yes
@@ -90,7 +90,7 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		has_bugged_mod = yes
+		berg_has_bug_mod = yes
 		exists = owner
 		owner = {
 			is_bugged_governmental_spiritualist = yes

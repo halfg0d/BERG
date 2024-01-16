@@ -158,9 +158,7 @@ building_ancient_palace = {
 		}
 	}
 	#ACOT
-	inline_script = {
-		script = ACOT/berg_ancient_palace
-	}
+	inline_script = ACOT/berg_ancient_palace
 
 	resources = {
 		category = planet_buildings
@@ -520,7 +518,7 @@ building_class_4_singularity = {
 	can_build = yes
 	can_demolish = yes
 
-	category = resources
+	category = resource
 
 	potential = {
 		custom_tooltip = {

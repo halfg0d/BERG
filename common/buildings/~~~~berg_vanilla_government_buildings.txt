@@ -541,7 +541,7 @@ building_order_keep = {
 	}
 
 	inline_script = {
-		script = vanilla/government/berg_order_jobs_script
+		script = vanilla/government/berg_order_keep
 		tier = 1
 	}
 

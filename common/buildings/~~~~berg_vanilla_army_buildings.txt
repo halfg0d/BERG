@@ -312,9 +312,9 @@ building_planetary_shield_generator = {
 	}
 	potential = {
 		OR = {
-			has_osa_mod = no
+			berg_has_osa_mod = no
 			AND = {
-				has_osa_mod = yes
+				berg_has_osa_mod = yes
 				NOR = {
 					has_building = "building_mem_planetary_shield_generator"
 					has_building = "building_mem_planetary_shield_generator_heavy"

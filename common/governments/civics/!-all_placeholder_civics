@@ -49,3 +49,12 @@ civic_imperial_cult = { potential = { always = no } }
 civic_divine_council = { potential = { always = no } }
 civic_spiritual_democracy = { potential = { always = no } }
 civic_harmonious_hierarchy = { potential = { always = no } }
+civic_hive_aggregate_catharsis = { potential = { always = no } }
+civic_corporate_mercenary_contractors = { potential = { always = no } }
+civic_keepers_harmony = { potential = { always = no } }
+civic_energy_consortiums = { potential = { always = no } }
+civic_corporate_energy_consortiums = { potential = { always = no } }
+civic_bugged_peerage_assembly = { potential = { always = no } }
+civic_innovative_economy = { potential = { always = no } }
+civic_bugged_research_cooperatives = { potential = { always = no } }
+civic_consumerism = { potential = { always = no } }

@@ -2272,7 +2272,7 @@ building_galactic_memorial_1 = {
 		"tech_cultural_heritage"
 	}
 	inline_script = {
-		script = building_resources/vanilla_memorial_regular
+		script = building_resources/vanilla_version_memorialist
 		tier = 1
 		type = memorial_regular
 		rare_material = exotic_gases
@@ -2330,7 +2330,7 @@ building_galactic_memorial_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_memorial_regular
+		script = building_resources/vanilla_version_memorialist
 		tier = 2
 		type = memorial_regular
 		rare_material = exotic_gases
@@ -2390,7 +2390,7 @@ building_galactic_memorial_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_memorial_regular
+		script = building_resources/vanilla_version_memorialist
 		tier = 3
 		type = memorial_regular
 		rare_material = exotic_gases
@@ -2446,7 +2446,7 @@ building_avb_monument_memorial_4 = {
 		building_avb_monument_4
 	}
 	inline_script = {
-		script = building_resources/vanilla_memorial_regular
+		script = building_resources/vanilla_version_memorialist
 		tier = 4
 		type = memorial_regular
 		rare_material = exotic_gases
@@ -2499,7 +2499,7 @@ building_avb_monument_memorial_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_memorial_regular
+		script = building_resources/vanilla_version_memorialist
 		tier = 5
 		type = memorial_regular
 		rare_material = exotic_gases
@@ -2555,7 +2555,7 @@ building_avb_monument_memorial_6 = {
 		building_avb_monument_6
 	}
 	inline_script = {
-		script = building_resources/vanilla_memorial_regular
+		script = building_resources/vanilla_version_memorialist
 		tier = 6
 		type = memorial_regular
 		rare_material = exotic_gases
@@ -4312,7 +4312,7 @@ building_organic_sanctuary = {
 		rare_material = exotic_gases
 	}
 	inline_script = {
-		script = building_resources/vanilla_organic_paradise
+		script = vanilla/unity/berg_organic_paradise_script
 		tier = 1
 	}
 
@@ -4504,7 +4504,7 @@ building_avb_organic_sanctuary_3 = {
 		rare_material = exotic_gases
 	}
 	inline_script = {
-		script = building_resources/vanilla_organic_paradise
+		script = vanilla/unity/berg_organic_paradise_script
 		tier = 3
 	}
 	prerequisites = { "tech_avb_residence_3" }
@@ -4592,7 +4592,7 @@ building_avb_organic_sanctuary_4 = {
 		rare_material = exotic_gases
 	}
 	inline_script = {
-		script = building_resources/vanilla_organic_paradise
+		script = vanilla/unity/berg_organic_paradise_script
 		tier = 4
 	}
 	prerequisites = { "tech_avb_residence_4" }

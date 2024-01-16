@@ -56,7 +56,7 @@ resources = {
 	#OSA
 	upkeep = {
 		trigger = {
-			has_osa_mod = yes
+			berg_has_osa_mod = yes
 		}
 		energy = @berg_army_planetary_shield_osa_upkeep_energy_t$tier$
 		minerals = @berg_army_planetary_shield_osa_upkeep_minerals_t$tier$

@@ -114,8 +114,10 @@ building_colony_shelter = {
 		upkeep = {
 			energy = 1
 		}
-		inline_script = {
-			script = OSA/berg_osa_influence
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
 			influence = 0.05
 		}
 	}
@@ -1120,7 +1122,7 @@ building_deployment_post = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = OSA/berg_osa_capital_job
+		script = OSA/berg_osa_capital_jobs
 		tier = d0
 	}
 	triggered_planet_modifier = {
@@ -1158,8 +1160,10 @@ building_deployment_post = {
 		upkeep = {
 			energy = 1
 		}
-		inline_script = {
-			script = OSA/berg_osa_influence
+		upkeep = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
 			influence = 0.05
 		}
 	}
