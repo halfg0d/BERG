@@ -10,3 +10,4 @@ building_ae_empyrean_shrine = { potential = { always = no } allow = { always = n
 building_ae_ancient_cryo_chamber = { potential = { always = no } allow = { always = no } }
 building_ae_sky_dome = { potential = { always = no } allow = { always = no } }
 building_ae_stronghold = { potential = { always = no } allow = { always = no } }
+building_food_processing_complex = { potential = { always = no } allow = { always = no } }

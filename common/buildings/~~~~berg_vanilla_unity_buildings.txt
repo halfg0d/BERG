@@ -215,6 +215,7 @@ building_avb_monument_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -289,6 +290,7 @@ building_avb_monument_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -357,6 +359,7 @@ building_avb_monument_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -612,6 +615,7 @@ building_avb_bureaucratic_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -674,6 +678,7 @@ building_avb_bureaucratic_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -735,6 +740,7 @@ building_avb_bureaucratic_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -1024,6 +1030,7 @@ building_avb_temple_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -1098,6 +1105,7 @@ building_avb_temple_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -1172,6 +1180,7 @@ building_avb_temple_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -1434,6 +1443,7 @@ building_avb_machine_unity_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_machine_empire = yes
@@ -1508,6 +1518,7 @@ building_avb_machine_unity_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_machine_empire = yes
@@ -1571,6 +1582,7 @@ building_avb_machine_unity_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_machine_empire = yes
@@ -1762,6 +1774,7 @@ building_avb_hive_unity_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_hive_empire = yes
@@ -1806,6 +1819,7 @@ building_avb_hive_unity_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_hive_empire = yes
@@ -1849,6 +1863,7 @@ building_avb_hive_unity_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_hive_empire = yes
@@ -2070,6 +2085,7 @@ building_avb_death_temple_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_death_cult_empire = yes
@@ -2137,6 +2153,7 @@ building_avb_death_temple_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_death_cult_empire = yes
@@ -2190,6 +2207,7 @@ building_avb_death_temple_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_death_cult_empire = yes
@@ -2420,6 +2438,7 @@ building_avb_monument_memorial_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -2472,6 +2491,7 @@ building_avb_monument_memorial_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -2529,6 +2549,7 @@ building_avb_monument_memorial_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -2790,6 +2811,7 @@ building_avb_monument_machine_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -2856,6 +2878,7 @@ building_avb_monument_machine_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -2922,6 +2945,7 @@ building_avb_monument_machine_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3183,6 +3207,7 @@ building_avb_monument_corp_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3247,6 +3272,7 @@ building_avb_monument_corp_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3310,6 +3336,7 @@ building_avb_monument_corp_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3578,6 +3605,7 @@ building_avb_monument_hive_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3645,6 +3673,7 @@ building_avb_monument_hive_5 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3711,6 +3740,7 @@ building_avb_monument_hive_6 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3854,6 +3884,7 @@ building_avb_autocurating_vault_2 = {
 	can_build = no
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -3990,6 +4021,7 @@ building_avb_citadel_of_faith_2 = {
 	can_build = no
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -4121,6 +4153,7 @@ building_avb_corporate_vault_2 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
@@ -4230,6 +4263,7 @@ building_avb_alpha_hub_2 = {
 	can_build = no
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_machine_empire = yes }
 	}
@@ -4483,6 +4517,7 @@ building_avb_organic_sanctuary_3 = {
 	category = unity
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {	
 			has_valid_civic = civic_machine_servitor
@@ -4574,6 +4609,7 @@ building_avb_organic_sanctuary_4 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { has_valid_civic = civic_machine_servitor }
 	}
@@ -4696,6 +4732,7 @@ building_avb_league_offices_2 = {
 	category = unity
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { has_technology = tech_avb_league_offices_2 }
 		NOT = { has_modifier = slave_colony }

@@ -105,6 +105,7 @@ building_avb_commercial_3 = {
 	}
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_gestalt = no }
 		NOT = { has_modifier = slave_colony }
@@ -162,6 +163,7 @@ building_avb_commercial_4 = {
 	}
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_gestalt = no }
 		NOT = { has_modifier = slave_colony }
@@ -218,6 +220,7 @@ building_avb_commercial_5 = {
 	}
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_gestalt = no }
 		NOT = { has_modifier = slave_colony }
@@ -343,6 +346,7 @@ building_avb_galactic_stock_exchange_2 = {
 	category = trade
 	
 	potential = {
+		berg_has_avb_mod = yes
 		NOT = { has_modifier = resort_colony }	
 		NOT = { has_modifier = slave_colony }
 	}

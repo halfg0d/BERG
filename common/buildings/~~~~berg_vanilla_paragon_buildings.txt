@@ -226,6 +226,9 @@ building_avb_paragon_memory_vaults_2 = {
 	prerequisites = {
 		"tech_avb_paragon_memory_vaults_2"
 	}
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	destroy_trigger = {
 		exists = owner
 		owner = {

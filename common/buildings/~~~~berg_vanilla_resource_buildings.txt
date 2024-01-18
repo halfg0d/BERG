@@ -66,6 +66,7 @@ building_avb_hydroponics_farm_2 = {
 	category = resource
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -241,7 +242,9 @@ building_avb_food_processing_3 = {
 		exists = owner
 		has_fully_upgraded_capital = yes
 	}
-	
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	destroy_trigger = {
 		OR = {
 			AND = {
@@ -288,6 +291,9 @@ building_avb_food_processing_4 = {
 	allow = {
 		exists = owner
 		has_upgraded_capital_4 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
 	}
 
 	destroy_trigger = {
@@ -373,6 +379,7 @@ building_avb_baol_organic_plant_2 = {
 	can_build = no
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOR = {
 			is_planet_class = pc_machine
@@ -550,7 +557,9 @@ building_avb_mineral_purification_3 = {
 			has_modifier = crucible_colony
 		}
 	}
-	
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
@@ -602,6 +611,9 @@ building_avb_mineral_purification_4 = {
 			has_modifier = resort_colony
 			has_modifier = crucible_colony
 		}
+	}
+	potential = {
+		berg_has_avb_mod = yes
 	}
 	
 	destroy_trigger = {
@@ -763,6 +775,9 @@ building_avb_energy_grid_3 = {
 			}
 		}
 	}
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	inline_script = {
 		script = vanilla/resource/berg_energy_grid_script
 		tier = 3
@@ -787,6 +802,9 @@ building_avb_energy_grid_4 = {
 	
 	allow = {
 		has_upgraded_capital_5 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
 	}
 
 	destroy_trigger = {
@@ -875,6 +893,7 @@ building_avb_resource_silo_2 = {
 	category = resource
 	
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -964,6 +983,7 @@ building_avb_bio_reactor_2 = {
 	category = resource
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {

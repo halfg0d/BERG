@@ -123,7 +123,9 @@ building_avb_research_lab_4 = {
 	allow = {
 		has_fully_upgraded_capital = yes
 	}
-	
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = slave_colony
@@ -163,6 +165,9 @@ building_avb_research_lab_5 = {
 	allow = {
 		has_upgraded_capital_4 = yes
 	}
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	
 	destroy_trigger = {
 		OR = {
@@ -200,6 +205,9 @@ building_avb_research_lab_6 = {
 	
 	allow = {
 		has_upgraded_capital_5 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
 	}
 	
 	destroy_trigger = {
@@ -304,6 +312,7 @@ building_avb_institute_2 = {
 	category = research
 
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -449,6 +458,7 @@ building_avb_supercomputer_2 = {
 	category = research
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 		NOR = {
@@ -572,6 +582,7 @@ building_avb_archaeostudies_faculty_2 = {
 	category = research
 
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -657,6 +668,7 @@ building_avb_vultaum_reality_computer_2 = {
 	category = research
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		NOR = {
 			has_modifier = resort_colony
