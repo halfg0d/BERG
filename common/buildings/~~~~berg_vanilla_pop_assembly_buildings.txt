@@ -168,6 +168,7 @@ building_avb_robot_assembly_plant_2 = {
 	category = pop_assembly
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		OR = {
 			owner = { is_ai = no }
@@ -360,6 +361,7 @@ building_avb_machine_assembly_plant_2 = {
 	category = pop_assembly
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_machine_empire = yes }
 		NOT = { has_modifier = crucible_colony }
@@ -457,6 +459,7 @@ building_avb_spawning_pool_2 = {
 	category = amenity
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_hive_empire = yes
@@ -541,6 +544,7 @@ building_avb_offspring_nest_2 = {
 	category = pop_assembly
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { has_origin = origin_progenitor_hive }
 		or = {
@@ -881,6 +885,7 @@ building_avb_clone_vats_2 = {
 	category = pop_assembly
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { has_tradition = tr_genetics_adopt }
 		NOT = { has_modifier = resort_colony }
@@ -1093,6 +1098,7 @@ building_avb_posthumous_employment_center_2 = {
 	category = pop_assembly
 
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		OR = {
 			owner = { is_ai = no }
@@ -1227,6 +1233,7 @@ building_avb_toxic_bath_hive_2 = {
 	}
 
 	potential = {
+		berg_has_avb_mod = yes
 		owner = {
 			is_hive_empire = yes
 			has_valid_civic = civic_hive_toxic_baths
@@ -1318,6 +1325,7 @@ building_avb_toxic_bath_machine_2 = {
 	}
 
 	potential = {
+		berg_has_avb_mod = yes
 		owner = {
 			is_machine_empire = yes
 			has_valid_civic = civic_machine_toxic_baths

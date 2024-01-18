@@ -663,7 +663,7 @@ building_wildcat_miners = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			minerals = 20
 		}
 	}
@@ -718,7 +718,7 @@ building_bio_reprocessing_facilities = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			food = 20
 		}
 	}
@@ -766,7 +766,7 @@ building_underground_chemists = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			consumer_goods = 9
 		}
 	}
@@ -835,7 +835,7 @@ building_wrecking_yards = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			alloys = 12
 		}
 	}
@@ -924,7 +924,7 @@ building_underground_clubs = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			energy = 20
 		}
 	}
@@ -984,7 +984,7 @@ building_syndicate_outreach_office = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			unity = 19
 		}
 	}
@@ -1042,7 +1042,7 @@ building_illicit_research_labs = {
 		}
 		#OSA
 		produces = {
-			trigger = { berg_has_mod = yes }
+			trigger = { berg_has_osa_mod = yes }
 			physics_research = 4
 			engineering_research = 4
 			society_research = 4

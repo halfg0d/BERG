@@ -63,6 +63,7 @@ building_avb_noble_estates_2 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		planet = {
 			or = {
@@ -171,6 +172,7 @@ building_avb_slave_processing_2 = {
 	category = government
 
 	potential = {
+		berg_has_avb_mod = yes
 		owner = { is_gestalt = no }
 		owner = { has_policy_flag = slavery_allowed }
 		NOT = { has_modifier = resort_colony }
@@ -331,6 +333,7 @@ building_avb_enforcement_3 = {
 	can_build = no
 	
 	potential = {
+		berg_has_avb_mod = yes
 		owner = { is_gestalt = no }
 		NOT = { has_modifier = slave_colony }
 		if = {
@@ -380,6 +383,7 @@ building_avb_enforcement_4 = {
 	can_build = no
 	
 	potential = {
+		berg_has_avb_mod = yes
 		owner = { is_gestalt = no }
 		NOT = { has_modifier = slave_colony }
 		if = {
@@ -474,6 +478,7 @@ building_avb_sentinel_posts_2 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
@@ -648,6 +653,7 @@ building_avb_psi_corps_2 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		host_has_dlc = "Utopia"
 		owner = { has_tradition = tr_psionics_psi_corps }
 		NOT = { has_modifier = resort_colony }
@@ -706,6 +712,7 @@ building_avb_psi_corps_3 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		host_has_dlc = "Utopia"
 		owner = { has_tradition = tr_psionics_psi_corps }
 		NOT = { has_modifier = resort_colony }

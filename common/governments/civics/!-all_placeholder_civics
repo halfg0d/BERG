@@ -58,3 +58,6 @@ civic_bugged_peerage_assembly = { potential = { always = no } }
 civic_innovative_economy = { potential = { always = no } }
 civic_bugged_research_cooperatives = { potential = { always = no } }
 civic_consumerism = { potential = { always = no } }
+civic_bugged_graveyard_shift = { potential = { always = no } }
+civic_bancorp = { potential = { always = no } }
+civic_science_syndicate = { potential = { always = no } }

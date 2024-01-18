@@ -146,7 +146,9 @@ building_avb_foundry_4 = {
 	allow = {
 		has_fully_upgraded_capital = yes
 	}
-	
+	potential = {
+		berg_has_avb_mod = yes
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
@@ -188,6 +190,9 @@ building_avb_foundry_5 = {
 	
 	allow = {
 		has_upgraded_capital_4 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
 	}
 	
 	destroy_trigger = {
@@ -231,6 +236,9 @@ building_avb_foundry_6 = {
 	
 	allow = {
 		has_upgraded_capital_5 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
 	}
 	
 	destroy_trigger = {
@@ -468,6 +476,7 @@ building_avb_factory_4 = {
 	}
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			country_uses_consumer_goods = yes
@@ -530,6 +539,7 @@ building_avb_factory_5 = {
 	}
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			country_uses_consumer_goods = yes
@@ -590,6 +600,7 @@ building_avb_factory_6 = {
 	}
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			country_uses_consumer_goods = yes
@@ -672,6 +683,7 @@ building_avb_refinery_2 = {
 	category = manufacturing
 	
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -708,6 +720,7 @@ building_avb_refinery_3 = {
 	category = manufacturing
 	
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -769,6 +782,7 @@ building_avb_chemical_plant_2 = {
 	category = manufacturing
 
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -804,6 +818,7 @@ building_avb_chemical_plant_3 = {
 	category = manufacturing
 
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -903,6 +918,7 @@ building_avb_crystal_plant_2 = {
 	category = manufacturing
 	
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -940,6 +956,7 @@ building_avb_crystal_plant_3 = {
 	category = manufacturing
 	
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
@@ -1023,6 +1040,7 @@ building_avb_nanite_transmuter_2 = {
 	category = manufacturing
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		OWNER = {
 			OR = {
@@ -1155,6 +1173,7 @@ building_avb_ministry_production_2 = {
 	category = manufacturing
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_regular_empire = yes }
 		NOR = {
@@ -1309,6 +1328,7 @@ building_avb_production_center_2 = {
 
 	category = manufacturing
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 		OR = {
@@ -1551,6 +1571,7 @@ building_avb_archaeo_refinery_2 = {
 	category = manufacturing
 
 	potential = {
+		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony

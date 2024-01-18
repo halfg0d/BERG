@@ -609,6 +609,7 @@ building_avb_capital_4 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -768,6 +769,7 @@ building_avb_capital_5 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -927,6 +929,7 @@ building_avb_capital_6 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
@@ -1500,6 +1503,7 @@ building_avb_machine_capital_4 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -1609,6 +1613,7 @@ building_avb_machine_capital_5 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -1717,6 +1722,7 @@ building_avb_machine_capital_6 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -2102,6 +2108,7 @@ building_avb_hive_capital_4 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
 			OR = {
@@ -2548,6 +2555,7 @@ building_avb_hab_capital_3 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		uses_habitat_capitals = yes
 		exists = owner
 		owner = { is_fallen_empire = no }
@@ -2904,7 +2912,8 @@ building_avb_resort_capital_3 = {
 	category = government
 	
 	potential = {
-		has_modifier = resort_colony
+		berg_has_avb_mod = yes
+		berg_is_resort_world = yes
 	}
 	
 	convert_to = {
@@ -3098,6 +3107,7 @@ building_slave_major_capital = {
 	category = government
 
 	potential = {
+		berg_has_avb_mod = yes
 		has_modifier = slave_colony
 	}
 

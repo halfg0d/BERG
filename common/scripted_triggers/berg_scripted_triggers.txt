@@ -226,6 +226,8 @@ berg_has_food_processing = {
 		has_active_building = building_food_processing_facility
 		has_active_building = building_food_processing_center
 		has_active_building = building_food_processing_complex
+		has_active_building = building_avb_food_processing_3
+		has_active_building = building_avb_food_processing_4
 	}
 }
 berg_can_duelist_be_changed = {

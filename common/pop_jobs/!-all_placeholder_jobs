@@ -12,3 +12,6 @@ entrepreneur = { category = worker resources = {} possible = { always = no } wei
 mogul = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 templar = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
 transcend = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+job_osa_mining_director = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+job_osa_chief_engineer = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
+job_planet_cultivators = { category = worker resources = {} possible = { always = no } weight = { weight = 0 } }
