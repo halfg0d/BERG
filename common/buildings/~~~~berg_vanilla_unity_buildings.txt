@@ -35,10 +35,8 @@ building_autochthon_monument = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_regular
 		tier = 1
-		type = monument_regular
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -112,10 +110,8 @@ building_heritage_site = {
 		building_sensorium_2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_regular
 		tier = 2
-		type = monument_regular
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -182,10 +178,8 @@ building_hypercomms_forum = {
 		building_sensorium_3
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_regular
 		tier = 3
-		type = monument_regular
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -256,10 +250,8 @@ building_avb_monument_4 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_regular
 		tier = 4
-		type = monument_regular
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -327,10 +319,8 @@ building_avb_monument_5 = {
 		building_avb_monument_memorial_5
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_regular
 		tier = 5
-		type = monument_regular
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -396,10 +386,8 @@ building_avb_monument_6 = {
 		building_avb_monument_memorial_6
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_regular
 		tier = 6
-		type = monument_regular
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -463,10 +451,8 @@ building_bureaucratic_1 = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/bureaucratic
 		tier = 1
-		type = bureaucratic
-		rare_material = rare_crystals
 	}
 	upgrades = {
 		"building_bureaucratic_2"
@@ -525,10 +511,8 @@ building_bureaucratic_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/bureaucratic
 		tier = 2
-		type = bureaucratic
-		rare_material = rare_crystals
 	}
 
 	upgrades = {
@@ -588,10 +572,8 @@ building_bureaucratic_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
-		tier = 1
-		type = bureaucratic
-		rare_material = rare_crystals
+		script = building_resources/vanilla/bureaucratic
+		tier = 3
 	}
 	inline_script = vanilla/unity/berg_priest_federation_script
 
@@ -652,10 +634,8 @@ building_avb_bureaucratic_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/bureaucratic
 		tier = 4
-		type = bureaucratic
-		rare_material = rare_crystals
 	}
 	prerequisites = {
 		"tech_avb_bureaucratic_4"
@@ -714,10 +694,8 @@ building_avb_bureaucratic_5 = {
 		tier = 5
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/bureaucratic
 		tier = 5
-		type = bureaucratic
-		rare_material = rare_crystals
 	}
 	prerequisites = {
 		"tech_avb_bureaucratic_5"
@@ -777,10 +755,8 @@ building_avb_bureaucratic_6 = {
 		tier = 6
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/bureaucratic
 		tier = 6
-		type = bureaucratic
-		rare_material = rare_crystals
 	}
 	prerequisites = {
 		"tech_avb_bureaucratic_6"
@@ -840,10 +816,8 @@ building_temple = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/temple
 		tier = 1
-		type = temple
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -915,10 +889,8 @@ building_holotemple = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/temple
 		tier = 2
-		type = temple
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -991,10 +963,8 @@ building_sacred_nexus = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/temple
 		tier = 3
-		type = temple
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -1072,10 +1042,8 @@ building_avb_temple_4 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/temple
 		tier = 4
-		type = temple
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -1147,10 +1115,8 @@ building_avb_temple_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/temple
 		tier = 5
-		type = temple
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -1222,10 +1188,8 @@ building_avb_temple_6 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/temple
 		tier = 6
-		type = temple
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_temple_script
@@ -1285,10 +1249,8 @@ building_uplink_node = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/uplink_node
 		tier = 1
-		type = uplink_node
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -1348,10 +1310,8 @@ building_network_junction = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/uplink_node
 		tier = 2
-		type = uplink_node
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -1411,10 +1371,8 @@ building_system_conflux = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/uplink_node
 		tier = 3
-		type = uplink_node
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -1487,10 +1445,8 @@ building_avb_machine_unity_4 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/uplink_node
 		tier = 4
-		type = uplink_node
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -1550,10 +1506,8 @@ building_avb_machine_unity_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/uplink_node
 		tier = 5
-		type = uplink_node
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -1614,10 +1568,8 @@ building_avb_machine_unity_6 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/uplink_node
 		tier = 6
-		type = uplink_node
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_uplink_node_script
@@ -1661,7 +1613,7 @@ building_hive_node = {
 		building_uplink_node
 	}
 	inline_script = {
-		script = building_resources/vanilla_hive_node
+		script = building_resources/vanilla/hive_node
 		tier = 1
 	}
 	inline_script = {
@@ -1706,7 +1658,7 @@ building_hive_cluster = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_hive_node
+		script = building_resources/vanilla/hive_node
 		tier = 2
 	}
 	inline_script = {
@@ -1753,7 +1705,7 @@ building_hive_confluence = {
 
 	
 	inline_script = {
-		script = building_resources/vanilla_hive_node
+		script = building_resources/vanilla/hive_node
 		tier = 3
 	}
 	inline_script = {
@@ -1798,7 +1750,7 @@ building_avb_hive_unity_4 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_hive_node
+		script = building_resources/vanilla/hive_node
 		tier = 4
 	}
 	inline_script = {
@@ -1842,7 +1794,7 @@ building_avb_hive_unity_5 = {
 		building_avb_death_temple_5
 	}
 	inline_script = {
-		script = building_resources/vanilla_hive_node
+		script = building_resources/vanilla/hive_node
 		tier = 5
 	}
 	inline_script = {
@@ -1887,7 +1839,7 @@ building_avb_hive_unity_6 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_hive_node
+		script = building_resources/vanilla/hive_node
 		tier = 6
 	}
 	inline_script = {
@@ -1936,10 +1888,8 @@ building_sacrificial_temple_1 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/death_temple
 		tier = 1
-		type = death_temple
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -1999,10 +1949,8 @@ building_sacrificial_temple_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/death_temple
 		tier = 2
-		type = death_temple
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -2057,10 +2005,8 @@ building_sacrificial_temple_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/death_temple
 		tier = 3
-		type = death_temple
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -2125,10 +2071,8 @@ building_avb_death_temple_4 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/death_temple
 		tier = 4
-		type = death_temple
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -2180,10 +2124,8 @@ building_avb_death_temple_5 = {
 		building_avb_temple_5
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/death_temple
 		tier = 5
-		type = death_temple
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -2234,10 +2176,8 @@ building_avb_death_temple_6 = {
 		building_avb_temple_6
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/death_temple
 		tier = 6
-		type = death_temple
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_sacrificial_temple_script
@@ -2290,10 +2230,8 @@ building_galactic_memorial_1 = {
 		"tech_cultural_heritage"
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_memorialist
+		script = building_resources/vanilla/memorial_regular
 		tier = 1
-		type = memorial_regular
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -2348,10 +2286,8 @@ building_galactic_memorial_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_memorialist
+		script = building_resources/vanilla/memorial_regular
 		tier = 2
-		type = memorial_regular
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -2408,10 +2344,8 @@ building_galactic_memorial_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_memorialist
+		script = building_resources/vanilla/memorial_regular
 		tier = 3
-		type = memorial_regular
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -2465,10 +2399,8 @@ building_avb_monument_memorial_4 = {
 		building_avb_monument_4
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_memorialist
+		script = building_resources/vanilla/memorial_regular
 		tier = 4
-		type = memorial_regular
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -2519,10 +2451,8 @@ building_avb_monument_memorial_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_memorialist
+		script = building_resources/vanilla/memorial_regular
 		tier = 5
-		type = memorial_regular
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -2576,10 +2506,8 @@ building_avb_monument_memorial_6 = {
 		building_avb_monument_6
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_memorialist
+		script = building_resources/vanilla/memorial_regular
 		tier = 6
-		type = memorial_regular
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_script
@@ -2632,10 +2560,8 @@ building_simulation_1 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_machine
 		tier = 1
-		type = monument_machine
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -2706,10 +2632,8 @@ building_simulation_2 = {
 		building_sensorium_2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_machine
 		tier = 2
-		type = monument_machine
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -2776,10 +2700,8 @@ building_simulation_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_machine
 		tier = 3
-		type = monument_machine
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -2845,10 +2767,8 @@ building_avb_monument_machine_4 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_machine
 		tier = 4
-		type = monument_machine
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -2912,10 +2832,8 @@ building_avb_monument_machine_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_machine
 		tier = 5
-		type = monument_machine
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -2979,10 +2897,8 @@ building_avb_monument_machine_6 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_machine
 		tier = 6
-		type = monument_machine
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -3042,10 +2958,8 @@ building_corporate_monument = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_megacorp
 		tier = 1
-		type = monument_megacorp
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -3108,10 +3022,8 @@ building_corporate_site = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_megacorp
 		tier = 2
-		type = monument_megacorp
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -3174,10 +3086,8 @@ building_corporate_forum = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_megacorp
 		tier = 3
-		type = monument_megacorp
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -3239,10 +3149,8 @@ building_avb_monument_corp_4 = {
 		building_avb_monument_memorial_4
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_megacorp
 		tier = 4
-		type = monument_megacorp
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -3305,10 +3213,8 @@ building_avb_monument_corp_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_megacorp
 		tier = 5
-		type = monument_megacorp
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -3369,10 +3275,8 @@ building_avb_monument_corp_6 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_megacorp
 		tier = 6
-		type = monument_megacorp
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_regular_monument_script
@@ -3424,10 +3328,8 @@ building_sensorium_1 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_hive
 		tier = 1
-		type = monument_hive
-		rare_material = exotic_gases
 	}
 
 	inline_script = {
@@ -3501,10 +3403,8 @@ building_sensorium_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_hive
 		tier = 2
-		type = monument_hive
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -3570,10 +3470,8 @@ building_sensorium_3 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_hive
 		tier = 3
-		type = monument_hive
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -3639,10 +3537,8 @@ building_avb_monument_hive_4 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_hive
 		tier = 4
-		type = monument_hive
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -3707,10 +3603,8 @@ building_avb_monument_hive_5 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_hive
 		tier = 5
-		type = monument_hive
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -3774,10 +3668,8 @@ building_avb_monument_hive_6 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_monument
+		script = building_resources/vanilla/monument_hive
 		tier = 6
-		type = monument_hive
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_memorialist_gestalt_script
@@ -3849,10 +3741,8 @@ building_autocurating_vault = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/vault
 		tier = 1
-		type = vault
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
@@ -3915,10 +3805,8 @@ building_avb_autocurating_vault_2 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/vault
 		tier = 2
-		type = vault
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
@@ -3998,10 +3886,8 @@ building_citadel_of_faith = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/citadel_faith
 		tier = 1
-		type = citadel_faith
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_citadel_faith_script
@@ -4061,10 +3947,8 @@ building_avb_citadel_of_faith_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/citadel_faith
 		tier = 2
-		type = citadel_faith
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_citadel_faith_script
@@ -4121,10 +4005,8 @@ building_corporate_vault = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/vault
 		tier = 1
-		type = vault
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
@@ -4187,10 +4069,8 @@ building_avb_corporate_vault_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/vault
 		tier = 2
-		type = vault
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_vault_script
@@ -4236,10 +4116,8 @@ building_alpha_hub = {
 		building_corporate_vault
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/alpha_hub
 		tier = 1
-		type = alpha_hub
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_alpha_hub_script
@@ -4283,10 +4161,8 @@ building_avb_alpha_hub_2 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_version_vault
+		script = building_resources/vanilla/alpha_hub
 		tier = 2
-		type = alpha_hub
-		rare_material = rare_crystals
 	}
 	inline_script = {
 		script = vanilla/unity/berg_alpha_hub_script
@@ -4343,10 +4219,8 @@ building_organic_sanctuary = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/organic_paradise
 		tier = 1
-		type = organic_paradise
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_organic_paradise_script
@@ -4442,10 +4316,8 @@ building_organic_paradise = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/organic_paradise
 		tier = 2
-		type = organic_paradise
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_organic_paradise_script
@@ -4536,10 +4408,8 @@ building_avb_organic_sanctuary_3 = {
 	
 	
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/organic_paradise
 		tier = 3
-		type = organic_paradise
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_organic_paradise_script
@@ -4625,10 +4495,8 @@ building_avb_organic_sanctuary_4 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_version_unity
+		script = building_resources/vanilla/organic_paradise
 		tier = 4
-		type = organic_paradise
-		rare_material = exotic_gases
 	}
 	inline_script = {
 		script = vanilla/unity/berg_organic_paradise_script
@@ -4711,7 +4579,7 @@ building_league_offices = {
 		has_modifier = slave_colony
 	}
 	inline_script = {
-		script = building_resources/vanilla_league_offices
+		script = building_resources/vanilla/league_offices
 		tier = 1
 	}
 	inline_script = {
@@ -4746,7 +4614,7 @@ building_avb_league_offices_2 = {
 		has_modifier = slave_colony
 	}
 	inline_script = {
-		script = building_resources/vanilla_league_offices
+		script = building_resources/vanilla/league_offices
 		tier = 2
 	}
 	inline_script = {

@@ -51,7 +51,7 @@ building_luxury_residence = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_residence
+		script = building_resources/vanilla/residence
 		tier = 1
 	}
 
@@ -98,7 +98,7 @@ building_paradise_dome = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_residence
+		script = building_resources/vanilla/residence
 		tier = 2
 	}
 	prerequisites = {
@@ -156,7 +156,7 @@ building_avb_residence_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_residence
+		script = building_resources/vanilla/residence
 		tier = 3
 	}
 	
@@ -220,7 +220,7 @@ building_avb_residence_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_residence
+		script = building_resources/vanilla/residence
 		tier = 4
 	}
 	
@@ -285,7 +285,7 @@ building_avb_residence_5 = {
 		tier = 5
 	}
 	inline_script = {
-		script = building_resources/vanilla_residence
+		script = building_resources/vanilla/residence
 		tier = 5
 	}
 	
@@ -355,7 +355,7 @@ building_communal_housing = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_communal
+		script = building_resources/vanilla/communal
 		tier = 1
 	}
 
@@ -419,7 +419,7 @@ building_communal_housing_large = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_communal
+		script = building_resources/vanilla/communal
 		tier = 2
 	}
 
@@ -486,7 +486,7 @@ building_avb_communal_housing_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_communal
+		script = building_resources/vanilla/communal
 		tier = 3
 	}
 	
@@ -559,7 +559,7 @@ building_avb_communal_housing_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_communal
+		script = building_resources/vanilla/communal
 		tier = 4
 	}
 	
@@ -625,7 +625,7 @@ building_avb_communal_housing_5 = {
 		tier = 5
 	}
 	inline_script = {
-		script = building_resources/vanilla_communal
+		script = building_resources/vanilla/communal
 		tier = 5
 	}
 	
@@ -662,7 +662,7 @@ building_drone_storage = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_drone_storage
+		script = building_resources/vanilla/drone_storage
 		tier = 1
 	}
 	inline_script = {
@@ -705,7 +705,7 @@ building_drone_megastorage = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_drone_storage
+		script = building_resources/vanilla/drone_storage
 		tier = 2
 	}
 	inline_script = {
@@ -752,7 +752,7 @@ building_avb_drone_storage_3 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_drone_storage
+		script = building_resources/vanilla/drone_storage
 		tier = 3
 	}
 	inline_script = {
@@ -801,7 +801,7 @@ building_avb_drone_storage_4 = {
 	
 	
 	inline_script = {
-		script = building_resources/vanilla_drone_storage
+		script = building_resources/vanilla/drone_storage
 		tier = 4
 	}
 	inline_script = {
@@ -841,7 +841,7 @@ building_hive_warren = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_warren
+		script = building_resources/vanilla/warren
 		tier = 1
 	}
 
@@ -883,7 +883,7 @@ building_expanded_warren = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_warren
+		script = building_resources/vanilla/warren
 		tier = 2
 	}
 	prerequisites = {
@@ -931,7 +931,7 @@ building_avb_warren_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_warren
+		script = building_resources/vanilla/warren
 		tier = 3
 	}
 	upgrades = {
@@ -979,7 +979,7 @@ building_avb_warren_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_warren
+		script = building_resources/vanilla/warren
 		tier = 4
 	}
 	prerequisites = {
@@ -1022,7 +1022,7 @@ building_holo_theatres = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_holo_theatres
+		script = building_resources/vanilla/holo_theatres
 		tier = 1
 	}
 
@@ -1076,7 +1076,7 @@ building_hyper_entertainment_forum = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_holo_theatres
+		script = building_resources/vanilla/holo_theatres
 		tier = 2
 	}
 
@@ -1143,7 +1143,7 @@ building_avb_holo_theatre_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_holo_theatres
+		script = building_resources/vanilla/holo_theatres
 		tier = 3
 	}
 	
@@ -1210,7 +1210,7 @@ building_avb_holo_theatre_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_holo_theatres
+		script = building_resources/vanilla/holo_theatres
 		tier = 4
 	}
 	prerequisites = {
@@ -1285,7 +1285,7 @@ building_clinic = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_clinic
+		script = building_resources/vanilla/clinic
 		tier = 1
 	}
 
@@ -1401,7 +1401,7 @@ building_hospital = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_clinic
+		script = building_resources/vanilla/clinic
 		tier = 2
 	}
 	prerequisites = {
@@ -1466,7 +1466,7 @@ building_avb_clinic_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_clinic
+		script = building_resources/vanilla/clinic
 		tier = 3
 	}
 	
@@ -1534,7 +1534,7 @@ building_avb_clinic_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_clinic
+		script = building_resources/vanilla/clinic
 		tier = 4
 	}
 	prerequisites = {
@@ -1572,7 +1572,7 @@ building_maintenance_depot = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_depot
+		script = building_resources/vanilla/depot
 		tier = 1
 	}
 	upgrades = {
@@ -1612,7 +1612,7 @@ building_avb_maintenance_depot_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_depot
+		script = building_resources/vanilla/depot
 		tier = 2
 	}
 	
@@ -1646,7 +1646,7 @@ building_slave_huts = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_huts
+		script = building_resources/vanilla/slave_huts
 		tier = 1
 	}
 	upgrades = {
@@ -1680,7 +1680,7 @@ building_avb_slave_huts_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_huts
+		script = building_resources/vanilla/slave_huts
 		tier = 2
 	}	
 	
@@ -1712,7 +1712,7 @@ building_overseer_homes = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_overseer
+		script = building_resources/vanilla/overseer_home
 		tier = 1
 	}
 	upgrades = {
@@ -1746,7 +1746,7 @@ building_avb_overseer_homes_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_overseer
+		script = building_resources/vanilla/overseer_home
 		tier = 2
 	}	
 }
@@ -1800,7 +1800,7 @@ building_ranger_lodge = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_ranger
+		script = building_resources/vanilla/ranger
 		tier = 1
 	}
 
@@ -1869,7 +1869,7 @@ building_avb_ranger_lodge_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_ranger
+		script = building_resources/vanilla/ranger
 		tier = 2
 	}
 
@@ -1939,7 +1939,7 @@ building_toxic_bath = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_toxic_bath_regular
+		script = building_resources/vanilla/toxic_bath
 		tier = 1
 	}
 	upgrades = {
@@ -1989,7 +1989,7 @@ building_avb_toxic_bath_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_toxic_bath_regular
+		script = building_resources/vanilla/toxic_bath
 		tier = 2
 	}
 }

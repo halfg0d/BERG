@@ -78,10 +78,8 @@ building_robot_assembly_plant = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/robot_plant
 		tier = 1
-		type = robot_plant
-		rare_material = rare_crystals
 	}
 
 	prerequisites = {
@@ -151,10 +149,8 @@ building_robot_assembly_complex = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/robot_plant
 		tier = 2
-		type = robot_plant
-		rare_material = rare_crystals
 	}
 
 	prerequisites = {
@@ -225,10 +221,8 @@ building_avb_robot_assembly_plant_2 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/robot_plant
 		tier = 3
-		type = robot_plant
-		rare_material = rare_crystals
 	}
 	prerequisites = {
 		"tech_avb_robot_assembly_plant_2"
@@ -288,10 +282,8 @@ building_machine_assembly_plant = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/machine_plant
 		tier = 1
-		type = machine_plant
-		rare_material = rare_crystals
 	}
 
 	upgrades = {
@@ -340,10 +332,8 @@ building_machine_assembly_complex = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/machine_plant
 		tier = 2
-		type = machine_plant
-		rare_material = rare_crystals
 	}
 	prerequisites = {
 		tech_mega_assembly
@@ -394,10 +384,8 @@ building_avb_machine_assembly_plant_2 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/machine_plant
 		tier = 3
-		type = machine_plant
-		rare_material = rare_crystals
 	}
 	prerequisites = {
 		"tech_avb_machine_assembly_plant_2"
@@ -440,7 +428,7 @@ building_spawning_pool = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_spawning_pool
+		script = building_resources/vanilla/spawning_pool
 		tier = 1
 	}
 
@@ -491,7 +479,7 @@ building_avb_spawning_pool_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_spawning_pool
+		script = building_resources/vanilla/spawning_pool
 		tier = 2
 	}
 	
@@ -525,7 +513,7 @@ building_offspring_nest = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_offspring_nest
+		script = building_resources/vanilla/offspring_nest
 		tier = 1
 	}
 	
@@ -578,7 +566,7 @@ building_avb_offspring_nest_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_offspring_nest
+		script = building_resources/vanilla/offspring_nest
 		tier = 2
 	}
 }
@@ -689,10 +677,8 @@ building_necrophage_elevation_chamber = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/necrophage
 		tier = 1
-		type = necrophage
-		rare_material = exotic_gases
 	}
 
 	upgrades = {
@@ -791,10 +777,8 @@ building_necrophage_house_of_apotheosis = {
 	inline_script = vanilla/pop_assembly/berg_necrophage_desc
 
 	inline_script = {
-		script = building_resources/vanilla_version_universal
+		script = building_resources/vanilla/necrophage
 		tier = 2
-		type = necrophage
-		rare_material = exotic_gases
 	}
 
 	prerequisites = {
@@ -870,7 +854,7 @@ building_clone_vats = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_clone
+		script = building_resources/vanilla/clone_vats
 		tier = 1
 	}
 	upgrades = {
@@ -928,7 +912,7 @@ building_avb_clone_vats_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_clone
+		script = building_resources/vanilla/clone_vats
 		tier = 2
 	}
 	prerequisites = {
@@ -1082,10 +1066,8 @@ building_posthumous_employment_center = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_no_rare
+		script = building_resources/vanilla/posthumous
 		tier = 1
-		type = posthumous
-		category = pop_assembly
 	}
 	upgrades = {
 		"building_avb_posthumous_employment_center_2" #AVB
@@ -1158,10 +1140,8 @@ building_avb_posthumous_employment_center_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_no_rare
+		script = building_resources/vanilla/posthumous
 		tier = 2
-		type = posthumous
-		category = pop_assembly
 	}
 }
 
@@ -1208,10 +1188,8 @@ building_toxic_bath_hive = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_no_rare
+		script = building_resources/vanilla/toxic_bath_hive
 		tier = 1
-		type = toxic_bath_hive
-		category = pop_assembly
 	}
 	upgrades = {
 		"building_avb_toxic_bath_hive_2" #AVB
@@ -1273,10 +1251,8 @@ building_avb_toxic_bath_hive_2 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_version_no_rare
+		script = building_resources/vanilla/toxic_bath_hive
 		tier = 2
-		type = toxic_bath_hive
-		category = pop_assembly
 	}
 }
 
@@ -1306,10 +1282,8 @@ building_toxic_bath_machine = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_no_rare
+		script = building_resources/vanilla/toxic_bath_machine
 		tier = 1
-		type = toxic_bath_machine
-		category = pop_assembly
 	}
 	upgrades = {
 		"building_avb_toxic_bath_machine_2" #AVB
@@ -1349,10 +1323,8 @@ building_avb_toxic_bath_machine_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_version_no_rare
+		script = building_resources/vanilla/toxic_bath_machine
 		tier = 2
-		type = toxic_bath_machine
-		category = pop_assembly
 	}
 	triggered_desc = {
 		trigger = {

@@ -1,0 +1,22 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = unity
+		building = monument_machine
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = unity
+		building = monument_machine
+		tier = $tier$
+		material = rare_crystals
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = unity
+		building = monument_machine
+		tier = $tier$
+	}
+}

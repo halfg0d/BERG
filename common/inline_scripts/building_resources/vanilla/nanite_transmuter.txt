@@ -1,0 +1,9 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = manufactury
+		building = nanite_transmuter
+		tier = $tier$
+	}
+}

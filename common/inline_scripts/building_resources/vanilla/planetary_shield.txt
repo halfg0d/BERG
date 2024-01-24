@@ -1,0 +1,22 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = army
+		building = planetary_shield
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = army
+		building = planetary_shield
+		tier = $tier$
+		material = exotic_gases
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = army
+		building = planetary_shield
+		tier = $tier$
+	}
+}
