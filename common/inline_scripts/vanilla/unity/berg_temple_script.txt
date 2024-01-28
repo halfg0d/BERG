@@ -2,12 +2,12 @@ planet_modifier = {
 	pop_ethic_spiritualist_attraction_mult = @berg_unity_temple_attraction_t$tier$
 }
 inline_script = {
-	script = jobs/priest_desc
+	script = berg_jobs/priest_desc
 	AMOUNT = @berg_unity_temple_job_priest_t$tier$
 	trigger = ""
 }
 inline_script = {
-	script = jobs/priest_desc
+	script = berg_jobs/priest
 	AMOUNT = @berg_unity_temple_job_corpo_t$tier$
 	trigger = "owner = { is_megacorp = no }"
 }
