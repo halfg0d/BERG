@@ -1,0 +1,19 @@
+That file contains almost every important information to implement things mod-to-mod.
+Traditions are desribed in common/inline_scripts/tradition_scripts/!desc.txt
+
+Ethics & Civics: Bug Branch
+https://steamcommunity.com/sharedfiles/filedetails/?id=2517213262
+Last overview: 26.01.2024-xx.xx.2024
+Info:
+- Strongholds added mercenary jobs from Private Militaries civic
+- Planetary Shield gives unity from jobs with Inwards Perfection civic
+- Branch office temple of prosperity are unable to build for bug branch basic cults
+- Noble estates gives more nobles and housing with Peerage Assembly civic
+- Overlord holding noble vacation homes are able to any noble civic
+- Robot assembly plants are unable to build for machine cult
+- Machine Plant gives artisan for happy machines
+- Spawning Pool and Offspring Nest gives artisan for happy hive
+- Clone Vats give unity produces with evolutionary architects civic
+- Clone Army Vat also /\
+- Supercomputers gives examinatorn with machine researcher civic
+- Institute gives some resources with civic or with council trait

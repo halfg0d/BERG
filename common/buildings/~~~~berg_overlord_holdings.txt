@@ -1010,7 +1010,7 @@ holding_noble_vacation_homes = {
 	}
 
 	potential = {
-		owner.overlord = { has_valid_civic = civic_aristocratic_elite }
+		owner.overlord = { berg_has_any_noble_civic = yes }
 	}
 
 	planet_modifier = {

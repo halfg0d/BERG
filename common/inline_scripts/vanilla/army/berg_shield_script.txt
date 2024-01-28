@@ -1,6 +1,16 @@
 planet_modifier = {
 	planet_orbital_bombardment_damage = @berg_army_planetary_shield_bombardment_t$tier$
 }
+#BUG
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_inwards_perfection }
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+	}
+}
 #OSA
 triggered_planet_modifier = {
 	potential = {

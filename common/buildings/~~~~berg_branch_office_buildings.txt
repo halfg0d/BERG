@@ -1220,6 +1220,14 @@ building_temple_of_prosperity = {
 		branch_office_owner = {
 			has_valid_civic = civic_gospel_of_the_masses
 			is_criminal_syndicate = no
+			# no bug branch or bug branch and condition
+			OR = {
+				berg_has_bug_mod = no
+				AND = {
+					berg_has_bug_mod = yes
+					is_bugged_basic_cult = no
+				}
+			}
 		}
 	}
 

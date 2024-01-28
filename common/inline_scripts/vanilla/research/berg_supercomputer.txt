@@ -7,3 +7,26 @@ inline_script = {
 	script = jobs/researchers_add
 	AMOUNT = @berg_research_supercomputer_job_t$tier$
 }
+#BUG
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			berg_has_bug_mod = yes
+			has_civic = civic_bugged_machine_researcher 
+		}
+	}
+	modifier = {
+		job_bugged_examinatron_add = 1
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			berg_has_bug_mod = yes
+			has_civic = civic_bugged_machine_researcher 
+		}
+	}
+	text = job_bugged_examinatron_effect_desc
+}

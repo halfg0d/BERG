@@ -23,6 +23,10 @@ building_robot_assembly_plant = {
 				NOT = { has_ascension_perk = ap_engineered_evolution }
 				is_materialist = yes
 			}
+			NAND = {
+				berg_has_bug_mod = no
+				is_bugged_machine_cult = no
+			}
 		}
 		NOT = { has_modifier = slave_colony }
 	}
@@ -71,6 +75,12 @@ building_robot_assembly_plant = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
+			owner = {
+				AND = {
+					berg_has_bug_mod = yes
+					is_bugged_machine_cult = yes
+				}
+			}
 		}
 	}
 	inline_script = {
@@ -83,7 +93,12 @@ building_robot_assembly_plant = {
 		type = robot_plant
 		rare_material = rare_crystals
 	}
-
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_bug_mod = no
+			is_bugged_machine_cult = no
+		}
+	}
 	prerequisites = {
 		"tech_robotic_workers"
 	}
@@ -110,6 +125,10 @@ building_robot_assembly_complex = {
 				is_ai = no
 				NOT = { has_ascension_perk = ap_engineered_evolution }
 				is_materialist = yes
+			}
+			NAND = {
+				berg_has_bug_mod = no
+				is_bugged_machine_cult = no
 			}
 		}
 		NOT = { has_modifier = slave_colony }
@@ -144,6 +163,12 @@ building_robot_assembly_complex = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
+			owner = {
+				AND = {
+					berg_has_bug_mod = yes
+					is_bugged_machine_cult = yes
+				}
+			}
 		}
 	}
 	inline_script = {
@@ -156,7 +181,12 @@ building_robot_assembly_complex = {
 		type = robot_plant
 		rare_material = rare_crystals
 	}
-
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_bug_mod = no
+			is_bugged_machine_cult = no
+		}
+	}
 	prerequisites = {
 		tech_robot_assembly_complex
 	}
@@ -182,6 +212,10 @@ building_avb_robot_assembly_plant_2 = {
 				is_ai = no
 				NOT = { has_ascension_perk = ap_engineered_evolution }
 				is_materialist = yes
+			}
+			NAND = {
+				berg_has_bug_mod = no
+				is_bugged_machine_cult = no
 			}
 		}
 		NOT = { has_modifier = slave_colony }
@@ -217,6 +251,12 @@ building_avb_robot_assembly_plant_2 = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
+			owner = {
+				AND = {
+					berg_has_bug_mod = yes
+					is_bugged_machine_cult = yes
+				}
+			}
 		}
 	}
 	
@@ -229,6 +269,12 @@ building_avb_robot_assembly_plant_2 = {
 		tier = 3
 		type = robot_plant
 		rare_material = rare_crystals
+	}
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_bug_mod = no
+			is_bugged_machine_cult = no
+		}
 	}
 	prerequisites = {
 		"tech_avb_robot_assembly_plant_2"
@@ -836,21 +882,6 @@ building_clone_vats = {
 			}
 		}
 	}
-	#BugBranch
-	triggered_planet_modifier = {
-		potential = {
-			berg_has_bug_mod = yes
-			exists = owner
-			owner = {
-				is_bugged_evolutionary_architects = yes
-			}
-		}
-		modifier = {
-			planet_jobs_unity_produces_mult = 0.1
-
-		}
-	}
-	#
 
 	destroy_trigger = {
 		exists = owner

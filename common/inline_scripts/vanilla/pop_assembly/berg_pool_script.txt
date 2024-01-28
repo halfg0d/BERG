@@ -87,3 +87,27 @@ triggered_desc = {
 	}
 	text = offspring_nest_tooltip
 }
+#BUG
+
+triggered_planet_modifier = { # Bug Branch
+	potential = {
+		exists = owner
+		owner = {
+			berg_has_bug_mod = yes
+			is_bugged_happy_gestalt = yes
+		}
+	}
+	modifier = {
+		job_artisan_drone_add = 1
+	}
+}
+triggered_desc = { # Bug Branch
+	trigger = {
+		exists = owner
+		owner = {
+			berg_has_bug_mod = yes
+			is_bugged_happy_gestalt = yes
+		}
+	}
+	text = job_artisan_drone_effect_desc
+}

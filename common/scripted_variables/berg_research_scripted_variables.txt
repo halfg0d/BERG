@@ -63,8 +63,6 @@
 @berg_research_institute_rare_upkeep_t2 = 2
 @berg_research_institute_upkeep_t1 = 2
 @berg_research_institute_upkeep_t2 = 4
-@berg_research_institute_bug_unity_t1 = 0.05
-@berg_research_institute_bug_unity_t2 = 0.1
 @berg_research_institute_ecc_housing_t1 = 3
 @berg_research_institute_ecc_housing_t2 = 6
 @berg_research_institute_ecc_unity_t1 = 0.1
