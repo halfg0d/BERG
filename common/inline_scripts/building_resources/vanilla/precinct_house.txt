@@ -19,4 +19,8 @@ resources = {
 		building = precinct_house
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = $tier$
+	}
 }

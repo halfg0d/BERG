@@ -6,10 +6,4 @@ resources = {
 		building = crystal_mines
 		tier = $tier$
 	}
-	inline_script = {
-		script = resources_scripts/osa_upkeep
-		category = deposit
-		building = crystal_mines
-		tier = $tier$
-	}
 }

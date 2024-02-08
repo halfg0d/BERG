@@ -19,4 +19,49 @@ resources = {
 		building = planetary_shield
 		tier = $tier$
 	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_ecc_mod = yes
+exists = owner
+owner = {
+	has_civic = civic_inwards_perfection"
+		resource = unity
+		amount = @berg_army_planetary_shield_ecc_unity_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "check_variable_arithmetic = {
+	which = $tier$
+	value = 4
+}"
+		resource = sr_dark_matter
+		amount = @berg_army_planetary_shield_avb_dark_matter_cost_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/upkeep
+		trigger = "check_variable_arithmetic = {
+	which = $tier$
+	value = 4
+}"
+		resource = sr_dark_matter
+		amount = @berg_army_planetary_shield_avb_dark_matter_upkeep_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "check_variable_arithmetic = {
+	which = $tier$
+	value = 3
+}"
+		resource = rare_crystals
+		amount = @berg_army_planetary_shield_avb_crystals_cost_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/upkeep
+		trigger = "check_variable_arithmetic = {
+	which = $tier$
+	value = 3
+}"
+		resource = rare_crystals
+		amount = @berg_army_planetary_shield_avb_crystals_upkeep_t$tier$
+	}
 }

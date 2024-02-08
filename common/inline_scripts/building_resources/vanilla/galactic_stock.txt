@@ -14,9 +14,7 @@ resources = {
 		material = rare_crystals
 	}
 	inline_script = {
-		script = resources_scripts/osa_upkeep
-		category = trade
-		building = galactic_stock
-		tier = $tier$
+		script = tradition_script/ost_commerce
+		tier = 3
 	}
 }

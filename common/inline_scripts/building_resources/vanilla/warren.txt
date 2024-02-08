@@ -13,10 +13,4 @@ resources = {
 		tier = $tier$
 		material = rare_crystals
 	}
-	inline_script = {
-		script = resources_scripts/osa_upkeep
-		category = amenity
-		building = warren
-		tier = $tier$
-	}
 }

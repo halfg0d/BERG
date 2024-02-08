@@ -19,4 +19,19 @@ resources = {
 		building = energy_grid
 		tier = $tier$
 	}
+	inline_script = {
+		script = resources_scripts/ringworld_bonus
+		tier = $tier$
+		material = exotic_gases
+	}
+	inline_script = {
+		script = resources_scripts/ringworld_bonus_osa
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = energy
+		amount = @berg_resource_energy_grid_osa_produce_t$tier$
+	}
 }

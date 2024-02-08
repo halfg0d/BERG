@@ -19,4 +19,14 @@ resources = {
 		building = uplink_node
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = unity
+		amount = @berg_unity_uplink_node_osa_produce_t$tier$
+	}
 }

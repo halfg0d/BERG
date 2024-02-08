@@ -13,4 +13,10 @@ resources = {
 		tier = $tier$
 		material = rare_crystals
 	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minor_artifacts
+		amount = @berg_unity_league_offices_artifacts_cost_t$tier$
+	}
 }

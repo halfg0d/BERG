@@ -7,9 +7,37 @@ resources = {
 		tier = $tier$
 	}
 	inline_script = {
-		script = resources_scripts/osa_upkeep
+		script = resources_scripts/osa_upkeep_energy
 		category = research
 		building = archaeostudies
 		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minor_artifacts
+		amount = @berg_research_archaeostudies_artifacts_cost_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = physics_research
+		amount = @berg_research_archaeostudies_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = society_research
+		amount = @berg_research_archaeostudies_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = engineering_research
+		amount = @berg_research_archaeostudies_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_insight
+		tier = 3
 	}
 }

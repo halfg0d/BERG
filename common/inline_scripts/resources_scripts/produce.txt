@@ -1,0 +1,6 @@
+produces = {
+	trigger = {
+		$trigger$
+	}
+	$resource$ = $amount$
+}

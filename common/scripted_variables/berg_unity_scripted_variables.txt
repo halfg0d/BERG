@@ -73,3 +73,10 @@
 @berg_unity_m1_unity_add = 1
 @berg_unity_m1_job = 2
 @berg_unity_m1_megacorp_spiritualist = 1
+#
+@berg_unity_osa_production_t1 = 5
+@berg_unity_osa_production_t2 = 10
+@berg_unity_osa_production_t3 = 20
+@berg_unity_osa_production_t4 = 30
+@berg_unity_osa_production_t5 = 35
+@berg_unity_osa_production_t6 = 40
