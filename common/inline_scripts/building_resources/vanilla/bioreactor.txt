@@ -22,7 +22,7 @@ owner = {
 	NOT = { has_deficit = food }
 }"
 		resource = food
-		amount = @berg_resource_bioreactor_upkeep_t$tier$
+		amount = @berg_resource_bioreactor_upkeepS_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/produce

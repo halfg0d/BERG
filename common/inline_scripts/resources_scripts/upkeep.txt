@@ -1,0 +1,6 @@
+upkeep = {
+	trigger = {
+		$trigger$
+	}
+	$resource$ = $amount$
+}
