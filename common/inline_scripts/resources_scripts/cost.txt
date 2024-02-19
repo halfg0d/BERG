@@ -1,0 +1,6 @@
+cost = {
+	trigger = {
+		$trigger$
+	}
+	$resource$ = $amount$
+}

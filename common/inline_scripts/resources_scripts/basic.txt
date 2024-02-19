@@ -1,0 +1,6 @@
+cost = {
+	minerals = @berg_$category$_$building$_cost_t$tier$
+}
+upkeep = {
+	energy = @berg_$category$_$building$_upkeep_t$tier$
+}

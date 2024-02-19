@@ -1,0 +1,32 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = unity
+		building = organic_paradise
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = unity
+		building = organic_paradise
+		tier = $tier$
+		material = exotic_gases
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = unity
+		building = organic_paradise
+		tier = $tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = unity
+		amount = @berg_unity_organic_paradise_osa_produce_t$tier$
+	}
+}

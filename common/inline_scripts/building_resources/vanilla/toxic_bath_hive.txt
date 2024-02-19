@@ -1,0 +1,15 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = pop_assembly
+		building = toxic_bath_hive
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = pop_assembly
+		building = toxic_bath_hive
+		tier = $tier$
+	}
+}

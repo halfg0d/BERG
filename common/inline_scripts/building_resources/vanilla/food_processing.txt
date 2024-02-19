@@ -1,0 +1,37 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = resource
+		building = food_processing
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = resource
+		building = food_processing
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = resource
+		building = food_processing
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/ringworld_bonus
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/ringworld_bonus_osa
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = food
+		amount = @berg_resource_food_processing_osa_produce_t$tier$
+	}
+}

@@ -16,13 +16,45 @@ building_military_academy = {
 
 	allow = {
 		has_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = owner
+				owner = { is_ai = yes }
+			}
+			OR = {
+				has_building = building_stronghold
+				has_building = building_fortress
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				berg_reanimator_civic = yes
+				AND = {
+					is_ai = yes
+					prev = {
+						NOR = {
+							has_building = building_stronghold
+							has_building = building_fortress
+						}
+					}
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_dread_encampment
 	}
 	inline_script = {
 		script = vanilla/army/berg_academy_script
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_military_academy
+		script = building_resources/vanilla/military_academy
 		tier = 1
 	}
 
@@ -57,7 +89,7 @@ building_avb_military_academy_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_military_academy
+		script = building_resources/vanilla/military_academy
 		tier = 2
 	}
 	prerequisites = {
@@ -88,7 +120,7 @@ building_dread_encampment = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_dread
+		script = building_resources/vanilla/dread_encampment
 		tier = 1
 	}
 	upgrades = {
@@ -118,7 +150,7 @@ building_avb_dread_encampment_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_dread
+		script = building_resources/vanilla/dread_encampment
 		tier = 2
 	}
 	prerequisites = {
@@ -152,7 +184,7 @@ building_stronghold = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_strongholds
+		script = building_resources/vanilla/stronghold
 		tier = 1
 	}
 
@@ -181,7 +213,7 @@ building_fortress = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_strongholds
+		script = building_resources/vanilla/stronghold
 		tier = 2
 	}
 
@@ -212,7 +244,7 @@ building_avb_stronghold_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_strongholds
+		script = building_resources/vanilla/stronghold
 		tier = 3
 	}
 	
@@ -249,7 +281,7 @@ building_avb_stronghold_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_strongholds
+		script = building_resources/vanilla/stronghold
 		tier = 4
 	}
 	
@@ -279,7 +311,7 @@ building_avb_stronghold_5 = {
 		tier = 5
 	}
 	inline_script = {
-		script = building_resources/vanilla_strongholds
+		script = building_resources/vanilla/stronghold
 		tier = 5
 	}
 	
@@ -345,7 +377,7 @@ building_planetary_shield_generator = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_shield
+		script = building_resources/vanilla/planetary_shield
 		tier = 1
 	}
 
@@ -395,7 +427,7 @@ building_avb_planetary_shield_generator_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_shield
+		script = building_resources/vanilla/planetary_shield
 		tier = 2
 	}
 	prerequisites = {
@@ -447,7 +479,7 @@ building_avb_planetary_shield_generator_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_shield
+		script = building_resources/vanilla/planetary_shield
 		tier = 3
 	}
 	prerequisites = {
@@ -494,7 +526,7 @@ building_avb_dark_matter_planetary_shield_generator = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_shield
+		script = building_resources/vanilla/planetary_shield
 		tier = 4
 	}
 	

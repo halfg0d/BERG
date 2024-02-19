@@ -22,7 +22,7 @@ building_commercial_zone = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commercial
+		script = building_resources/vanilla/commercial
 		tier = 1
 	}
 	inline_script = {
@@ -62,7 +62,7 @@ building_commercial_megaplex = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commercial
+		script = building_resources/vanilla/commercial
 		tier = 2
 	}
 	inline_script = {
@@ -120,7 +120,7 @@ building_avb_commercial_3 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_commercial
+		script = building_resources/vanilla/commercial
 		tier = 3
 	}
 	inline_script = {
@@ -177,7 +177,7 @@ building_avb_commercial_4 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commercial
+		script = building_resources/vanilla/commercial
 		tier = 4
 	}
 	inline_script = {
@@ -234,7 +234,7 @@ building_avb_commercial_5 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_commercial
+		script = building_resources/vanilla/commercial
 		tier = 5
 	}
 	inline_script = {
@@ -308,7 +308,7 @@ building_galactic_stock_exchange = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_galactic_stock
+		script = building_resources/vanilla/galactic_stock
 		tier = 2
 	}
 
@@ -383,7 +383,7 @@ building_avb_galactic_stock_exchange_2 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_galactic_stock
+		script = building_resources/vanilla/galactic_stock
 		tier = 3
 	}
 	prerequisites = {

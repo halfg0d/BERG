@@ -1,0 +1,20 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = trade
+		building = galactic_stock
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = trade
+		building = galactic_stock
+		tier = $tier$
+		material = rare_crystals
+	}
+	inline_script = {
+		script = tradition_script/ost_commerce
+		tier = 3
+	}
+}

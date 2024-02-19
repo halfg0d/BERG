@@ -1,0 +1,26 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = government
+		building = psi_corps
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = government
+		building = psi_corps
+		tier = $tier$
+		material = sr_zro
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = government
+		building = psi_corps
+		tier = $tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = 3
+	}
+}

@@ -1,0 +1,16 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = manufactury
+		building = fulfillment_center
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = manufactury
+		building = fulfillment_center
+		tier = $tier$
+		material = volatile_motes
+	}
+}

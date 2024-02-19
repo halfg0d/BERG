@@ -1,0 +1,33 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = manufactury
+		building = refinery
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = manufactury
+		building = refinery
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = exotic_gases
+		amount = @berg_manufactury_refinery_rare_cost_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = volatile_motes
+		amount = @berg_manufactury_refinery_rare_cost_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = rare_crystals
+		amount = @berg_manufactury_refinery_rare_cost_t$tier$
+	}
+}

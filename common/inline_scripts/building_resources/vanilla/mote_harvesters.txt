@@ -1,0 +1,9 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = deposit
+		building = mote_harvesters
+		tier = $tier$
+	}
+}

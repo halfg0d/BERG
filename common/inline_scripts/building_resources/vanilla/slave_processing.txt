@@ -1,0 +1,13 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = government
+		building = slave_processing
+		tier = $tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = 2
+	}
+}

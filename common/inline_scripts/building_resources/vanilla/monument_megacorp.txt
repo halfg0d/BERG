@@ -1,0 +1,9 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minerals
+		amount = @berg_unity_monument_megacorp_cost_t$tier$
+	}
+}
