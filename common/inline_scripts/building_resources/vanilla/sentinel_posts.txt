@@ -1,0 +1,19 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = government
+		building = sentinel_posts
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = government
+		building = sentinel_posts
+		tier = $tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = $tier$
+	}
+}

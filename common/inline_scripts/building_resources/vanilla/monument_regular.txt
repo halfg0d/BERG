@@ -1,0 +1,32 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/rare
+		category = unity
+		building = monument_regular
+		tier = $tier$
+		material = rare_crystals
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = unity
+		building = monument_regular
+		tier = $tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = unity
+		amount = @berg_unity_monument_regular_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minerals
+		amount = @berg_unity_monument_regular_cost_t$tier$
+	}
+}

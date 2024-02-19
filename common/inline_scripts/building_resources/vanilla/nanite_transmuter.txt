@@ -1,0 +1,42 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = manufactury
+		building = nanite_transmuter
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/upkeep
+		trigger = "always = yes"
+		resource = nanites
+		amount = @berg_manufactury_nanite_transmuter_nanite_upkeep_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "exists = owner
+owner = {
+	NOT = { has_deficit = nanites }
+}"
+		resource = rare_crystals
+		amount = @berg_manufactury_nanite_transmuter_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "exists = owner
+owner = {
+	NOT = { has_deficit = nanites }
+}"
+		resource = exotic_gases
+		amount = @berg_manufactury_nanite_transmuter_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "exists = owner
+owner = {
+	NOT = { has_deficit = nanites }
+}"
+		resource = volatile_motes
+		amount = @berg_manufactury_nanite_transmuter_produce_t$tier$
+	}
+}

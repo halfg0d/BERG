@@ -1,0 +1,5 @@
+upkeep = {
+	trigger = { berg_has_osa_mod = yes }
+	energy = @berg_$category$_$building$_osa_upkeep_energy_t$tier$
+	minerals = @berg_$category$_$building$_osa_upkeep_minerals_t$tier$
+}

@@ -28,7 +28,7 @@ building_research_lab_1 = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_research_lab
+		script = building_resources/vanilla/research_lab
 		tier = 1
 	}
 
@@ -65,7 +65,7 @@ building_research_lab_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_research_lab
+		script = building_resources/vanilla/research_lab
 		tier = 2
 	}
 	upgrades = {
@@ -103,7 +103,7 @@ building_research_lab_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_research_lab
+		script = building_resources/vanilla/research_lab
 		tier = 3
 	}
 
@@ -143,7 +143,7 @@ building_avb_research_lab_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_research_lab
+		script = building_resources/vanilla/research_lab
 		tier = 4
 	}
 	
@@ -185,7 +185,7 @@ building_avb_research_lab_5 = {
 		tier = 5
 	}
 	inline_script = {
-		script = building_resources/vanilla_research_lab
+		script = building_resources/vanilla/research_lab
 		tier = 5
 	}
 	upgrades = {
@@ -226,7 +226,7 @@ building_avb_research_lab_6 = {
 		tier = 6
 	}
 	inline_script = {
-		script = building_resources/vanilla_research_lab
+		script = building_resources/vanilla/research_lab
 		tier = 6
 	}
 	prerequisites = {
@@ -275,7 +275,7 @@ building_institute = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_institute
+		script = building_resources/vanilla/institute
 		tier = 1
 	}
 
@@ -345,7 +345,7 @@ building_avb_institute_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_institute
+		script = building_resources/vanilla/institute
 		tier = 2
 	}
 	
@@ -412,7 +412,7 @@ building_supercomputer = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_supercomputer
+		script = building_resources/vanilla/supercomputer
 		tier = 1
 	}
 	prerequisites = {
@@ -488,7 +488,7 @@ building_avb_supercomputer_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_supercomputer
+		script = building_resources/vanilla/supercomputer
 		tier = 2
 	}
 
@@ -558,7 +558,7 @@ building_archaeostudies_faculty = {
 		has_upgraded_capital = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_archaeostudies_faculty
+		script = building_resources/vanilla/archaeostudies
 		tier = 1
 	}
 	inline_script = {
@@ -604,7 +604,7 @@ building_avb_archaeostudies_faculty_2 = {
 		has_fully_upgraded_capital = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_archaeostudies_faculty
+		script = building_resources/vanilla/archaeostudies
 		tier = 2
 	}
 	inline_script = {
@@ -650,7 +650,7 @@ building_vultaum_reality_computer = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_vultaum
+		script = building_resources/vanilla/vultaum
 		tier = 1
 	}
 	
@@ -696,7 +696,7 @@ building_avb_vultaum_reality_computer_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_vultaum
+		script = building_resources/vanilla/vultaum
 		tier = 2
 	}
 

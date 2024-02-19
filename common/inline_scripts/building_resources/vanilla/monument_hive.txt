@@ -1,0 +1,16 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/rare
+		category = unity
+		building = monument_hive
+		tier = $tier$
+		material = exotic_gases
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minerals
+		amount = @berg_unity_monument_hive_cost_t$tier$
+	}
+}

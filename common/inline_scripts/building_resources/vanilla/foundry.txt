@@ -1,0 +1,41 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = manufactury
+		building = foundry
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = manufactury
+		building = foundry
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = manufactury
+		building = foundry
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/ringworld_bonus
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/ringworld_bonus_osa
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = alloys
+		amount = @berg_manufactury_foundry_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_nanobiotics
+		tier = $tier$
+		material = alloys	}
+}

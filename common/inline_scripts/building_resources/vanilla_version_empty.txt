@@ -1,9 +1,0 @@
-resources = {
-	category = planet_buildings
-	cost = {
-		minerals = @berg_$category$_$type$_cost_t$tier$
-	}
-	upkeep = {
-		energy = @berg_$category$_$type$_upkeep_t$tier$
-	}
-}

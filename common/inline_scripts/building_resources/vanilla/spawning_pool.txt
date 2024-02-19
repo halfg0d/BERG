@@ -1,0 +1,34 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = pop_assembly
+		building = spawning_pool
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = pop_assembly
+		building = spawning_pool
+		tier = $tier$
+		material = exotic_gases
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = pop_assembly
+		building = spawning_pool
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = volatile_motes
+		amount = @berg_pop_assembly_spawning_pool_rare_cost2_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/upkeep
+		trigger = "always = yes"
+		resource = volatile_motes
+		amount = @berg_pop_assembly_spawning_pool_rare_upkeep2_t$tier$
+	}
+}

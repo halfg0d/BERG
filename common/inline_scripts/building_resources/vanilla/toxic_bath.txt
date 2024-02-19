@@ -1,0 +1,16 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = amenity
+		building = toxic_bath
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = amenity
+		building = toxic_bath
+		tier = $tier$
+		material = exotic_gases
+	}
+}

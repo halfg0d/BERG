@@ -1,0 +1,22 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = unity
+		building = league_offices
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = unity
+		building = league_offices
+		tier = $tier$
+		material = rare_crystals
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minor_artifacts
+		amount = @berg_unity_league_offices_artifacts_cost_t$tier$
+	}
+}
