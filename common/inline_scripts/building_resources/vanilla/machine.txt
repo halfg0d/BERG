@@ -6,4 +6,8 @@ resources = {
 		building = machine
 		tier = $tier$
 	}
+	inline_script = {
+		script = resources_scripts/osa_influence_upkeep
+		resource = $tier$ 
+	}
 }

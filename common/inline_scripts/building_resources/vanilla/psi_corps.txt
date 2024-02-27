@@ -19,4 +19,8 @@ resources = {
 		building = psi_corps
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = 3
+	}
 }

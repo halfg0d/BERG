@@ -1,0 +1,5 @@
+Machines:
+capital - building slots
+robot assembly t1 rare upkeep and cost
+bioreactor upkeep energy -> food
+nanite transmuter

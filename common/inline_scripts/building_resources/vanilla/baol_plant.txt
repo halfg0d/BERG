@@ -7,9 +7,27 @@ resources = {
 		tier = $tier$
 	}
 	inline_script = {
-		script = resources_scripts/osa_upkeep
+		script = resources_scripts/osa_upkeep_energy
 		category = resource
 		building = baol_plant
 		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = food
+		amount = @berg_resource_baol_plant_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = unity
+		amount = @berg_resource_baol_plant_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minor_artifacts
+		amount = @berg_resource_baol_plant_artifacts_cost_t$tier$
 	}
 }

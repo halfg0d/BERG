@@ -19,4 +19,8 @@ resources = {
 		building = embassy
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = 2
+	}
 }

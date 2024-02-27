@@ -1,0 +1,12 @@
+upkeep = {
+	trigger = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		berg_has_osa_mod = yes
+		has_ringworld_output_boost = yes
+	}
+	energy = 5
+	minerals = 5
+}

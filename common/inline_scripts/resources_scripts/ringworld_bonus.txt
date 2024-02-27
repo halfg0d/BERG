@@ -1,0 +1,22 @@
+cost = {
+	trigger = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	minerals = 700
+	$material$ = 500
+}
+upkeep = {
+	trigger = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	energy = 7
+	$material$ = 4
+}

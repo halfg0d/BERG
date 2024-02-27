@@ -6,10 +6,4 @@ resources = {
 		building = mote_harvesters
 		tier = $tier$
 	}
-	inline_script = {
-		script = resources_scripts/osa_upkeep
-		category = deposit
-		building = mote_harvesters
-		tier = $tier$
-	}
 }

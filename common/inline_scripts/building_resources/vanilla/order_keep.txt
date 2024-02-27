@@ -6,4 +6,14 @@ resources = {
 		building = order_keep
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = 3
+	}
+	inline_script = {
+		script = resources_scripts/cost
+		trigger = "always = yes"
+		resource = minerals
+		amount = @berg_government_order_keep_cost_t$tier$
+	}
 }

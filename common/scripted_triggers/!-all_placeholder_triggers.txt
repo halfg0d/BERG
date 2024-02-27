@@ -38,3 +38,7 @@ is_machine_world = { always = no }
 is_fear_of_the_dark_empire = { always = no }
 is_private_healthcare_empire = { always = no }
 is_clone_army_empire = { always = no }
+has_upgraded_capital_4 = { always = no }
+has_upgraded_capital_5 = { always = no }
+has_upgraded_capital_6 = { always = no }
+is_habitat = { always = no }

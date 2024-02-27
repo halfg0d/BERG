@@ -19,4 +19,24 @@ resources = {
 		building = bureaucratic
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = unity
+		amount = @berg_unity_bureaucratic_osa_produce_t$tier$
+	}
+	inline_script = {
+		script = tradition_script/ost_benevolence
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/produce
+		trigger = "berg_has_osa_mod = yes"
+		resource = unity
+		amount = @berg_unity_bureaucratic_osa_produce_t$tier$
+	}
 }

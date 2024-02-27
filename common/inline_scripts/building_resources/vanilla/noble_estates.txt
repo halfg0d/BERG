@@ -12,4 +12,8 @@ resources = {
 		building = noble_estates
 		tier = $tier$
 	}
+	inline_script = {
+		script = tradition_script/ost_order
+		tier = 3
+	}
 }

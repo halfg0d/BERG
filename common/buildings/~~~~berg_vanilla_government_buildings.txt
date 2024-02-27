@@ -549,16 +549,9 @@ building_order_keep = {
 		script = vanilla/government/berg_order_keep
 		tier = 1
 	}
-
-	resources = {
-		cost = {
-			minerals = 1000
-		}
-		category = planet_buildings
-		inline_script = {
-			script = tradition_script/ost_order
-			tier = 3
-		}
+	inline_script = {
+		script = building_resources/vanilla/berg_order_keep
+		tier = 1
 	}
 }
 building_order_castle = {
@@ -580,15 +573,10 @@ building_order_castle = {
 		script = vanilla/government/berg_order_castle
 		tier = 1
 	}
-
-	resources = {
-		category = planet_buildings
-		inline_script = {
-			script = tradition_script/ost_order
-			tier = 2
-		}
+	inline_script = {
+		script = building_resources/vanilla/berg_order_castle
+		tier = 1
 	}
-
 }
 
 #############

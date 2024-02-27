@@ -13,10 +13,4 @@ resources = {
 		tier = $tier$
 		material = exotic_gases
 	}
-	inline_script = {
-		script = resources_scripts/osa_upkeep
-		category = amenity
-		building = toxic_bath
-		tier = $tier$
-	}
 }
