@@ -1,7 +1,15 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { NOT = { has_civic = civic_defenders_faith } }
+		owner = {
+			NOR = {
+				is_megacorp = yes
+				AND = {
+					berg_has_ecc_mod = yes
+					has_civic = civic_defenders_faith
+				}
+			}
+		}
 		$trigger$
 	}
 	modifier = {
@@ -12,10 +20,25 @@ triggered_planet_modifier = {
 	potential = {
 		berg_has_ecc_mod = yes
 		exists = owner
-		owner = { has_civic = civic_defenders_faith }
+		owner = {
+			has_civic = civic_defenders_faith
+			is_megacorp = no
+		}
 		$trigger$
 	}
 	modifier = {
 		job_templar_add = $AMOUNT$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_preacher_add = $AMOUNT$
 	}
 }

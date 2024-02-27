@@ -227,18 +227,12 @@
 @berg_unity_temple_ecc_templar_t4 = 4.0
 @berg_unity_temple_ecc_templar_t5 = 5.0
 @berg_unity_temple_ecc_templar_t6 = 6.0
-@berg_unity_temple_job_corpo_t1 = 1.0
-@berg_unity_temple_job_corpo_t2 = 2.0
-@berg_unity_temple_job_corpo_t3 = 3.0
-@berg_unity_temple_job_corpo_t4 = 4.0
-@berg_unity_temple_job_corpo_t5 = 5.0
-@berg_unity_temple_job_corpo_t6 = 6.0
-@berg_unity_temple_job_priest_t1 = 1.0
-@berg_unity_temple_job_priest_t2 = 2.0
-@berg_unity_temple_job_priest_t3 = 3.0
-@berg_unity_temple_job_priest_t4 = 4.0
-@berg_unity_temple_job_priest_t5 = 5.0
-@berg_unity_temple_job_priest_t6 = 6.0
+@berg_unity_temple_job_priest_t1 = 2.0
+@berg_unity_temple_job_priest_t2 = 4.0
+@berg_unity_temple_job_priest_t3 = 6.0
+@berg_unity_temple_job_priest_t4 = 8.0
+@berg_unity_temple_job_priest_t5 = 10.0
+@berg_unity_temple_job_priest_t6 = 12.0
 # uplink_node
 @berg_unity_uplink_node_cost_t1 = 400
 @berg_unity_uplink_node_cost_t2 = 600
