@@ -21,7 +21,7 @@ building_mote_harvesters = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_harvesters
+		script = building_resources/vanilla/mote_harvesters
 		tier = 1
 	}
 
@@ -54,7 +54,7 @@ building_avb_mote_harvesters_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_harvesters
+		script = building_resources/vanilla/mote_harvesters
 		tier = 2
 	}
 	
@@ -81,7 +81,7 @@ building_gas_extractors = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_extractors
+		script = building_resources/vanilla/gas_extractors
 		tier = 1
 	}
 
@@ -115,7 +115,7 @@ building_avb_gas_extractors_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_extractors
+		script = building_resources/vanilla/gas_extractors
 		tier = 2
 	}
 	
@@ -142,7 +142,7 @@ building_crystal_mines = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_crystal_mines
+		script = building_resources/vanilla/crystal_mines
 		tier = 1
 	}
 
@@ -176,7 +176,7 @@ building_avb_crystal_mines_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_crystal_mines
+		script = building_resources/vanilla/crystal_mines
 		tier = 2
 	}	
 	
@@ -203,7 +203,7 @@ building_betharian_power_plant = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_betharian
+		script = building_resources/vanilla/betharian
 		tier = 1
 	}
 	prerequisites = {
@@ -235,7 +235,7 @@ building_avb_betharian_power_plant_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_betharian
+		script = building_resources/vanilla/betharian
 		tier = 2
 	}
 	
@@ -301,7 +301,7 @@ building_xeno_zoo = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_xeno_zoo
+		script = building_resources/vanilla/xeno_zoo
 		tier = 1
 	}
 	prerequisites = {
@@ -376,7 +376,7 @@ building_avb_xeno_zoo_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_xeno_zoo
+		script = building_resources/vanilla/xeno_zoo
 		tier = 2
 	}
 	prerequisites = {

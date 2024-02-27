@@ -49,7 +49,7 @@ building_noble_estates = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_noble
+		script = building_resources/vanilla/noble_estates
 		tier = 1
 	}
 	upgrades = {
@@ -103,7 +103,7 @@ building_avb_noble_estates_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_noble
+		script = building_resources/vanilla/noble_estates
 		tier = 2
 	}
 	
@@ -155,7 +155,7 @@ building_slave_processing = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_slave_processing
+		script = building_resources/vanilla/slave_processing
 		tier = 1
 	}
 	prerequisites = {
@@ -210,7 +210,7 @@ building_avb_slave_processing_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_slave_processing
+		script = building_resources/vanilla/slave_processing
 		tier = 2
 	}
 
@@ -267,7 +267,7 @@ building_precinct_house = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_precinct
+		script = building_resources/vanilla/precinct_house
 		tier = 1
 	}
 
@@ -312,7 +312,7 @@ building_hall_judgment = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_precinct
+		script = building_resources/vanilla/precinct_house
 		tier = 2
 	}
 	prerequisites = {
@@ -359,7 +359,7 @@ building_avb_enforcement_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_precinct
+		script = building_resources/vanilla/precinct_house
 		tier = 3
 	}
 	
@@ -409,7 +409,7 @@ building_avb_enforcement_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_precinct
+		script = building_resources/vanilla/precinct_house
 		tier = 4
 	}
 	
@@ -456,7 +456,7 @@ building_sentinel_posts = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_sentinel_posts
+		script = building_resources/vanilla/sentinel_posts
 		tier = 1
 	}
 
@@ -507,7 +507,7 @@ building_avb_sentinel_posts_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_sentinel_posts
+		script = building_resources/vanilla/sentinel_posts
 		tier = 2
 	}
 	
@@ -639,7 +639,7 @@ building_psi_corps = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_psi_corps
+		script = building_resources/vanilla/psi_corps
 		tier = 1
 	}
 	upgrades = {
@@ -689,7 +689,7 @@ building_avb_psi_corps_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_psi_corps
+		script = building_resources/vanilla/psi_corps
 		tier = 2
 	}
 	upgrades = {
@@ -748,7 +748,7 @@ building_avb_psi_corps_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_psi_corps
+		script = building_resources/vanilla/psi_corps
 		tier = 3
 	}
 	triggered_desc = {
@@ -813,7 +813,7 @@ building_embassy = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_embassy
+		script = building_resources/vanilla/embassy
 		tier = 1
 	}
 
@@ -875,7 +875,7 @@ building_grand_embassy = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_embassy
+		script = building_resources/vanilla/embassy
 		tier = 2
 	}
 

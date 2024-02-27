@@ -1,0 +1,15 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = research
+		building = supercomputer
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = research
+		building = supercomputer
+		tier = $tier$
+	}
+}

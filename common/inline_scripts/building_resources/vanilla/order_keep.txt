@@ -1,0 +1,9 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = government
+		building = order_keep
+		tier = $tier$
+	}
+}

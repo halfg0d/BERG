@@ -1,0 +1,22 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = manufactury
+		building = ministry_production
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = manufactury
+		building = ministry_production
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = manufactury
+		building = ministry_production
+		tier = $tier$
+	}
+}

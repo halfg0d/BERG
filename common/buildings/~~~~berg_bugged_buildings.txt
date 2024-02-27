@@ -46,7 +46,7 @@ building_bugged_planetary_stock_exchange = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_galactic_stock
+		script = building_resources/vanilla/galactic_stock
 		tier = 1
 	}
 
@@ -142,7 +142,7 @@ building_bug_galactic_stock_exchange = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_galactic_stock
+		script = building_resources/vanilla/galactic_stock
 		tier = 2
 	}
 

@@ -2247,7 +2247,7 @@ building_hab_capital = {
 		"building_hab_major_capital"
 	}
 	inline_script = {
-		script = building_resources/vanilla_habitat
+		script = building_resources/vanilla/habitat
 		tier = 1
 	}
 
@@ -2426,7 +2426,7 @@ building_hab_major_capital = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_habitat
+		script = building_resources/vanilla/habitat
 		tier = 2
 	}
 
@@ -2602,7 +2602,7 @@ building_avb_hab_capital_3 = {
 		"tech_avb_hab_capital_3"
 	}
 	inline_script = {
-		script = building_resources/vanilla_habitat
+		script = building_resources/vanilla/habitat
 		tier = 3
 	}
 	

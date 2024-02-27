@@ -39,7 +39,7 @@ building_foundry_1 = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_foundry
+		script = building_resources/vanilla/foundry
 		tier = 1
 	}
 
@@ -83,7 +83,7 @@ building_foundry_2 = {
 		tier = 2
 	}
 	inline_script = {
-		script = building_resources/vanilla_foundry
+		script = building_resources/vanilla/foundry
 		tier = 2
 	}
 
@@ -125,7 +125,7 @@ building_foundry_3 = {
 		tier = 3
 	}
 	inline_script = {
-		script = building_resources/vanilla_foundry
+		script = building_resources/vanilla/foundry
 		tier = 3
 	}
 
@@ -177,7 +177,7 @@ building_avb_foundry_4 = {
 		tier = 4
 	}
 	inline_script = {
-		script = building_resources/vanilla_foundry
+		script = building_resources/vanilla/foundry
 		tier = 4
 	}
 }
@@ -223,7 +223,7 @@ building_avb_foundry_5 = {
 		tier = 5
 	}
 	inline_script = {
-		script = building_resources/vanilla_foundry
+		script = building_resources/vanilla/foundry
 		tier = 5
 	}
 }
@@ -265,7 +265,7 @@ building_avb_foundry_6 = {
 		tier = 6
 	}
 	inline_script = {
-		script = building_resources/vanilla_foundry
+		script = building_resources/vanilla/foundry
 		tier = 6
 	}
 }
@@ -336,7 +336,7 @@ building_factory_1 = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla_factory
+		script = building_resources/vanilla/factory
 		tier = 1
 	}
 
@@ -390,7 +390,7 @@ building_factory_2 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_factory
+		script = building_resources/vanilla/factory
 		tier = 2
 	}
 	inline_script = {
@@ -450,7 +450,7 @@ building_factory_3 = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_factory
+		script = building_resources/vanilla/factory
 		tier = 3
 	}
 	inline_script = {
@@ -510,7 +510,7 @@ building_avb_factory_4 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_factory
+		script = building_resources/vanilla/factory
 		tier = 4
 	}
 	inline_script = {
@@ -573,7 +573,7 @@ building_avb_factory_5 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_factory
+		script = building_resources/vanilla/factory
 		tier = 5
 	}
 	inline_script = {
@@ -634,7 +634,7 @@ building_avb_factory_6 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_factory
+		script = building_resources/vanilla/factory
 		tier = 6
 	}
 	inline_script = {
@@ -660,7 +660,7 @@ building_refinery = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla_refinery
+		script = building_resources/vanilla/refinery
 		tier = 1
 	}
 	inline_script = {
@@ -696,7 +696,7 @@ building_avb_refinery_2 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_refinery
+		script = building_resources/vanilla/refinery
 		tier = 2
 	}
 	inline_script = {
@@ -732,7 +732,7 @@ building_avb_refinery_3 = {
 		has_upgraded_capital_4 = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_refinery
+		script = building_resources/vanilla/refinery
 		tier = 3
 	}
 	inline_script = {
@@ -759,7 +759,7 @@ building_chemical_plant = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_chemical_plant
+		script = building_resources/vanilla/chemical_plant
 		tier = 1
 	}
 	inline_script = {
@@ -794,7 +794,7 @@ building_avb_chemical_plant_2 = {
 		has_major_upgraded_capital = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_chemical_plant
+		script = building_resources/vanilla/chemical_plant
 		tier = 2
 	}
 	inline_script = {
@@ -830,7 +830,7 @@ building_avb_chemical_plant_3 = {
 		has_upgraded_capital_4 = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_chemical_plant
+		script = building_resources/vanilla/chemical_plant
 		tier = 3
 	}
 	inline_script = {
@@ -858,7 +858,7 @@ building_crystal_plant = {
 		"tech_rare_crystals"
 	}
 	inline_script = {
-		script = building_resources/vanilla_crystal_plant
+		script = building_resources/vanilla/crystal_plant
 		tier = 1
 	}
 	inline_script = {
@@ -931,7 +931,7 @@ building_avb_crystal_plant_2 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_crystal_plant
+		script = building_resources/vanilla/crystal_plant
 		tier = 2
 	}
 	inline_script = {
@@ -968,7 +968,7 @@ building_avb_crystal_plant_3 = {
 		has_upgraded_capital_4 = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_crystal_plant
+		script = building_resources/vanilla/crystal_plant
 		tier = 3
 	}
 	inline_script = {
@@ -1013,7 +1013,7 @@ building_nanite_transmuter = {
 		has_upgraded_capital = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_transmuter
+		script = building_resources/vanilla/nanite_transmuter
 		tier = 1
 	}
 
@@ -1068,7 +1068,7 @@ building_avb_nanite_transmuter_2 = {
 		has_fully_upgraded_capital = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_transmuter
+		script = building_resources/vanilla/nanite_transmuter
 		tier = 2
 	}
 	prerequisites = {
@@ -1133,7 +1133,7 @@ building_ministry_production = {
 		"building_avb_ministry_production_2"
 	}
 	inline_script = {
-		script = building_resources/vanilla_ministry_production
+		script = building_resources/vanilla/ministry_production
 		tier = 1
 	}
 	inline_script = {
@@ -1207,7 +1207,7 @@ building_avb_ministry_production_2 = {
 		has_fully_upgraded_capital = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_ministry_production
+		script = building_resources/vanilla/ministry_production
 		tier = 2
 	}
 	inline_script = {
@@ -1284,7 +1284,7 @@ building_production_center = {
 		"building_avb_production_center_2"
 	}
 	inline_script = {
-		script = building_resources/vanilla_production_center
+		script = building_resources/vanilla/production_center
 		tier = 1
 	}
 	inline_script = {
@@ -1358,7 +1358,7 @@ building_avb_production_center_2 = {
 		is_gestalt = yes
 	}
 	inline_script = {
-		script = building_resources/vanilla_production_center
+		script = building_resources/vanilla/production_center
 		tier = 2
 	}
 	inline_script = {
@@ -1442,7 +1442,7 @@ building_coordinated_fulfillment_center_1 = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla_fulfillment_center
+		script = building_resources/vanilla/fulfillment_center
 		tier = 1
 	}
 	inline_script = {
@@ -1497,7 +1497,7 @@ building_coordinated_fulfillment_center_2 = {
 	}
 	
 	inline_script = {
-		script = building_resources/vanilla_fulfillment_center
+		script = building_resources/vanilla/fulfillment_center
 		tier = 2
 	}
 	inline_script = {
@@ -1550,7 +1550,7 @@ building_archaeo_refinery = {
 		owner = { has_technology = tech_archaeo_refinery }
 	}
 	inline_script = {
-		script = building_resources/vanilla_archaeo_refinery
+		script = building_resources/vanilla/archaeo_refinery
 		tier = 1
 	}
 	inline_script = {
@@ -1580,7 +1580,7 @@ building_avb_archaeo_refinery_2 = {
 		owner = { has_technology = tech_avb_archaeo_refinery_2 }
 	}
 	inline_script = {
-		script = building_resources/vanilla_archaeo_refinery
+		script = building_resources/vanilla/archaeo_refinery
 		tier = 2
 	}
 	inline_script = {

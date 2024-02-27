@@ -1,0 +1,6 @@
+cost = {
+	$material$ = @berg_$category$_$building$_rare_cost_t$tier$
+}
+upkeep = {
+	$material$ = @berg_$category$_$building$_rare_upkeep_t$tier$
+}

@@ -1,0 +1,22 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = army
+		building = military_academy
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = army
+		building = military_academy
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = army
+		building = military_academy
+		tier = $tier$
+	}
+}

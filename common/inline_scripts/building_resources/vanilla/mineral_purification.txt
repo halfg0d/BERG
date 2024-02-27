@@ -1,0 +1,22 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = resource
+		building = mineral_purification
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/rare
+		category = resource
+		building = mineral_purification
+		tier = $tier$
+		material = volatile_motes
+	}
+	inline_script = {
+		script = resources_scripts/osa_upkeep
+		category = resource
+		building = mineral_purification
+		tier = $tier$
+	}
+}
