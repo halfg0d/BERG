@@ -82,3 +82,24 @@ triggered_desc = {
 	}
 	text = job_entrepreneur_effect_desc
 }
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { has_civic = civic_merchant_guilds }
+	}
+	modifier = {
+		job_manager_add = 1
+		job_clerk_add = -1
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { has_civic = civic_merchant_guilds }
+	}
+	text = job_manager_effect_desc
+}

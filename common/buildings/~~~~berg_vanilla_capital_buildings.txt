@@ -1143,6 +1143,17 @@ building_deployment_post = {
 		script = OSA/berg_osa_capital_jobs
 		tier = d0
 	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = owner
+			owner = { is_servitor_empire = yes }
+		}
+		modifier = {
+			job_bio_trophy_add = 3
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

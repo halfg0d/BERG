@@ -207,3 +207,24 @@ triggered_desc = {
 	}
 	text = job_scrap_miner_effect_desc
 }
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { has_civic = civic_mining_guilds }
+	}
+	modifier = {
+		job_guildmaster_add = 1
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_mining_guilds
+		}
+	}
+	text = job_guildmaster_effect_desc
+}

@@ -9,7 +9,6 @@ building_foundry_1 = {
 	potential = {
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
 		OR = {
@@ -18,12 +17,13 @@ building_foundry_1 = {
 			}
 			has_any_industry_district = yes
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -32,6 +32,7 @@ building_foundry_1 = {
 				}
 				has_any_industry_district = no
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	inline_script = {
@@ -66,7 +67,6 @@ building_foundry_2 = {
 		OR = {
 			NOT = { exists = owner }
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -75,6 +75,7 @@ building_foundry_2 = {
 				}
 				has_any_industry_district = no
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 
@@ -108,7 +109,6 @@ building_foundry_3 = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -117,6 +117,7 @@ building_foundry_3 = {
 				}
 				has_any_industry_district = no
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 
@@ -152,7 +153,6 @@ building_avb_foundry_4 = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -161,6 +161,7 @@ building_avb_foundry_4 = {
 				}
 				has_any_industry_district = no
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 
@@ -198,7 +199,6 @@ building_avb_foundry_5 = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -207,6 +207,7 @@ building_avb_foundry_5 = {
 				}
 				has_any_industry_district = no
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 
@@ -244,7 +245,6 @@ building_avb_foundry_6 = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -253,6 +253,7 @@ building_avb_foundry_6 = {
 				}
 				has_any_industry_district = no
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 
@@ -284,7 +285,6 @@ building_factory_1 = {
 		}
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
 		OR = {
@@ -298,12 +298,13 @@ building_factory_1 = {
 				}
 			}
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 
 			AND = {
@@ -329,6 +330,7 @@ building_factory_1 = {
 					}
 				}
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	inline_script = {
@@ -363,17 +365,17 @@ building_factory_2 = {
 		owner = {
 			country_uses_consumer_goods = yes
 		}
-		NOT = {
+		NOR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 			AND = {
 				exists = owner
@@ -387,6 +389,7 @@ building_factory_2 = {
 					}
 				}
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	inline_script = {
@@ -422,17 +425,17 @@ building_factory_3 = {
 		owner = {
 			country_uses_consumer_goods = yes
 		}
-		NOT = {
+		NOR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 
 			AND = {
@@ -447,6 +450,7 @@ building_factory_3 = {
 					}
 				}
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	inline_script = {
@@ -481,17 +485,17 @@ building_avb_factory_4 = {
 		owner = {
 			country_uses_consumer_goods = yes
 		}
-		NOT = {
+		NOR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 
 			AND = {
@@ -506,6 +510,7 @@ building_avb_factory_4 = {
 					}
 				}
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	
@@ -546,15 +551,15 @@ building_avb_factory_5 = {
 		}
 		NOT = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 	
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 
 			AND = {
@@ -569,6 +574,7 @@ building_avb_factory_5 = {
 					}
 				}
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	
@@ -607,15 +613,15 @@ building_avb_factory_6 = {
 		}
 		NOT = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 		}
+		#zExpanded
+		berg_slave_colony_manufactury = yes
 	}
 	
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = slave_colony
 			has_modifier = crucible_colony
 
 			AND = {
@@ -630,6 +636,7 @@ building_avb_factory_6 = {
 					}
 				}
 			}
+			berg_slave_colony_manufactury_not = yes
 		}
 	}
 	

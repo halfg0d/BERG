@@ -598,7 +598,21 @@ holding_distributed_processing = {
 	potential = {
 		owner.overlord = {
 			is_machine_empire = yes
-			NOT = { has_civic = civic_machine_servitor }
+			NOR = {
+				has_civic = civic_machine_servitor
+				# z expanded condition
+				AND = {
+					berg_has_zexpanded_mod = yes
+					OR ={
+						is_servitor_empire = yes
+						has_valid_civic = civic_harm_machine
+						has_valid_civic = civic_machine_memorialist
+						has_valid_civic = civic_machine_emotions
+						has_origin = origin_extant_creators
+						has_origin = origin_scion
+					}
+				}
+			}
 		}
 		has_overlord_dlc = yes
 	}
@@ -1423,9 +1437,19 @@ holding_park_ranger_lodge = {
 	}
 
 	potential = {
-		owner.overlord = { berg_is_environmental = yesist }
+		owner.overlord = {
+			berg_is_environmental = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				OR = {
+					has_origin = origin_delicate_ecosystem
+					has_valid_civic = civic_harm_hive
+					has_valid_civic = civic_harm_machine
+				}
+			}
+		}
 		NOT = {
-			owner = { berg_is_environmental = yesist }
+			owner = { berg_is_environmental = yes }
 		}
 		NOR = {
 			berg_is_city_world = yes
@@ -1857,7 +1881,7 @@ holding_toxic_bath = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { berg_is_environmental = yesist }
+			planet.owner = { berg_is_environmental = yes }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -1909,7 +1933,7 @@ holding_toxic_bath_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { berg_is_environmental = yesist }
+			planet.owner = { berg_is_environmental = yes }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -1961,7 +1985,7 @@ holding_toxic_bath_machine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { berg_is_environmental = yesist }
+			planet.owner = { berg_is_environmental = yes }
 		}
 		monthly_loyalty = -0.5
 	}

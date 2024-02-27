@@ -27,3 +27,15 @@ inline_script = {
 	tier = $tier$
 }
 inline_script = "vanilla/capitals/machine/berg_scripts_jobs_desc"
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { is_servitor_empire = yes }
+	}
+	modifier = {
+		job_bio_trophy_add = @berg_capital_machine_capital_zex_biotrophy_t$tier$
+		job_servitor_caretaker_drone_add = @berg_capital_machine_capital_zex_catetaker_t$tier$
+	}
+}

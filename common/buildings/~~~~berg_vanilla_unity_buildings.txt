@@ -15,7 +15,7 @@ building_autochthon_monument = {
 			NOR = {
 				is_gestalt = yes
 				is_megacorp = yes
-				is_memorialist_empire = yes
+				berg_has_any_memorialist_civic = yes
 			}
 		}
 	}
@@ -28,7 +28,7 @@ building_autochthon_monument = {
 				OR = {
 					is_gestalt = yes
 					is_megacorp = yes
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -80,7 +80,7 @@ building_heritage_site = {
 			NOR = {
 				is_gestalt = yes
 				is_megacorp = yes
-				is_memorialist_empire = yes
+				berg_has_any_memorialist_civic = yes
 			}
 		}
 	}
@@ -97,7 +97,7 @@ building_heritage_site = {
 				OR = {
 					is_gestalt = yes
 					is_megacorp = yes
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -148,7 +148,7 @@ building_hypercomms_forum = {
 			NOR = {
 				is_gestalt = yes
 				is_megacorp = yes
-				is_memorialist_empire = yes
+				berg_has_any_memorialist_civic = yes
 			}
 		}
 	}
@@ -165,7 +165,7 @@ building_hypercomms_forum = {
 				OR = {
 					is_gestalt = yes
 					is_megacorp = yes
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -216,7 +216,7 @@ building_avb_monument_4 = {
 			NOR = {
 				is_gestalt = yes
 				is_megacorp = yes
-				is_memorialist_empire = yes
+				berg_has_any_memorialist_civic = yes
 			}
 		}
 		owner = {
@@ -236,7 +236,7 @@ building_avb_monument_4 = {
 				OR = {
 					is_gestalt = yes
 					is_megacorp = yes
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -289,7 +289,7 @@ building_avb_monument_5 = {
 			NOR = {
 				is_gestalt = yes
 				is_megacorp = yes
-				is_memorialist_empire = yes
+				berg_has_any_memorialist_civic = yes
 			}
 		}
 	}
@@ -306,7 +306,7 @@ building_avb_monument_5 = {
 				OR = {
 					is_gestalt = yes
 					is_megacorp = yes
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -356,7 +356,7 @@ building_avb_monument_6 = {
 			NOR = {
 				is_gestalt = yes
 				is_megacorp = yes
-				is_memorialist_empire = yes
+				berg_has_any_memorialist_civic = yes
 			}
 		}
 	}
@@ -373,7 +373,7 @@ building_avb_monument_6 = {
 				OR = {
 					is_gestalt = yes
 					is_megacorp = yes
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2206,7 +2206,7 @@ building_galactic_memorial_1 = {
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
-			is_memorialist_empire = yes
+			berg_has_any_memorialist_civic = yes
 		}
 	}
 
@@ -2245,7 +2245,7 @@ building_galactic_memorial_1 = {
 	}
 
 	show_tech_unlock_if = {
-		is_memorialist_empire = yes
+		berg_has_any_memorialist_civic = yes
 	}
 }
 
@@ -2259,7 +2259,7 @@ building_galactic_memorial_2 = {
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
-			is_memorialist_empire = yes
+			berg_has_any_memorialist_civic = yes
 		}
 	}
 
@@ -2306,7 +2306,7 @@ building_galactic_memorial_2 = {
 	}
 
 	show_tech_unlock_if = {
-		is_memorialist_empire = yes
+		berg_has_any_memorialist_civic = yes
 	 }
 }
 
@@ -2320,7 +2320,7 @@ building_galactic_memorial_3 = {
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
-			is_memorialist_empire = yes
+			berg_has_any_memorialist_civic = yes
 		}
 	}
 
@@ -2363,7 +2363,7 @@ building_galactic_memorial_3 = {
 	}
 
 	show_tech_unlock_if = {
-		is_memorialist_empire = yes
+		berg_has_any_memorialist_civic = yes
 	}
 }
 building_avb_monument_memorial_4 = {
@@ -2376,7 +2376,7 @@ building_avb_monument_memorial_4 = {
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
-			is_memorialist_empire = yes
+			berg_has_any_memorialist_civic = yes
 		}
 	}
 
@@ -2411,7 +2411,7 @@ building_avb_monument_memorial_4 = {
 	}
 
 	show_tech_unlock_if = {
-		is_memorialist_empire = yes
+		berg_has_any_memorialist_civic = yes
 	}
 	upgrades = {
 		building_avb_monument_memorial_5
@@ -2427,7 +2427,7 @@ building_avb_monument_memorial_5 = {
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
-			is_memorialist_empire = yes
+			berg_has_any_memorialist_civic = yes
 		}
 	}
 
@@ -2467,7 +2467,7 @@ building_avb_monument_memorial_5 = {
 	}
 
 	show_tech_unlock_if = {
-		is_memorialist_empire = yes
+		berg_has_any_memorialist_civic = yes
 	}
 	upgrades = {
 		building_avb_monument_memorial_6
@@ -2483,7 +2483,7 @@ building_avb_monument_memorial_6 = {
 		exists = owner
 		NOT = { has_modifier = slave_colony }
 		owner = {
-			is_memorialist_empire = yes
+			berg_has_any_memorialist_civic = yes
 		}
 	}
 
@@ -2522,7 +2522,7 @@ building_avb_monument_memorial_6 = {
 	}
 
 	show_tech_unlock_if = {
-		is_memorialist_empire = yes
+		berg_has_any_memorialist_civic = yes
 	}
 }
 
@@ -2553,7 +2553,7 @@ building_simulation_1 = {
 			owner = {
 				OR = {
 					is_machine_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2619,7 +2619,7 @@ building_simulation_2 = {
 			owner = {
 				OR = {
 					is_machine_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2686,7 +2686,7 @@ building_simulation_3 = {
 			owner = {
 				OR = {
 					is_machine_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2753,7 +2753,7 @@ building_avb_monument_machine_4 = {
 			owner = {
 				OR = {
 					is_machine_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2818,7 +2818,7 @@ building_avb_monument_machine_5 = {
 			owner = {
 				OR = {
 					is_machine_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2883,7 +2883,7 @@ building_avb_monument_machine_6 = {
 			owner = {
 				OR = {
 					is_machine_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -2944,7 +2944,7 @@ building_corporate_monument = {
 			owner = {
 				OR = {
 					is_megacorp = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3008,7 +3008,7 @@ building_corporate_site = {
 			owner = {
 				OR = {
 					is_megacorp = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3072,7 +3072,7 @@ building_corporate_forum = {
 			owner = {
 				OR = {
 					is_megacorp = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3136,7 +3136,7 @@ building_avb_monument_corp_4 = {
 			owner = {
 				OR = {
 					is_megacorp = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3199,7 +3199,7 @@ building_avb_monument_corp_5 = {
 			owner = {
 				OR = {
 					is_megacorp = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3261,7 +3261,7 @@ building_avb_monument_corp_6 = {
 			owner = {
 				OR = {
 					is_megacorp = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3321,7 +3321,7 @@ building_sensorium_1 = {
 			owner = {
 				OR = {
 					is_hive_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3389,7 +3389,7 @@ building_sensorium_2 = {
 			owner = {
 				OR = {
 					is_hive_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3456,7 +3456,7 @@ building_sensorium_3 = {
 			owner = {
 				OR = {
 					is_hive_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3523,7 +3523,7 @@ building_avb_monument_hive_4 = {
 			owner = {
 				OR = {
 					is_hive_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3589,7 +3589,7 @@ building_avb_monument_hive_5 = {
 			owner = {
 				OR = {
 					is_hive_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}
@@ -3654,7 +3654,7 @@ building_avb_monument_hive_6 = {
 			owner = {
 				OR = {
 					is_hive_empire = no
-					is_memorialist_empire = yes
+					berg_has_any_memorialist_civic = yes
 				}
 			}
 		}

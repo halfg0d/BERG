@@ -995,7 +995,13 @@ building_holo_theatres = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
-			berg_is_dystopian_society = no
+			OR = {
+				berg_is_dystopian_society = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					berg_can_duelist_be_changed = no
+				}
+			}
 		}
 		OR = {
 			owner = {
@@ -1013,7 +1019,15 @@ building_holo_theatres = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { berg_is_dystopian_society = yes }
+			owner = {
+				OR = {
+					berg_is_dystopian_society = yes
+					AND = {
+						berg_has_zexpanded_mod = yes
+						berg_can_duelist_be_changed = yes
+					}
+				}
+			}
 			has_modifier = slave_colony
 		}
 	}
@@ -1050,7 +1064,14 @@ building_hyper_entertainment_forum = {
 	allow = {
 		has_upgraded_capital = yes
 		owner = {
-			berg_is_dystopian_society = no
+			is_regular_empire = yes
+			OR = {
+				berg_is_dystopian_society = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					berg_can_duelist_be_changed = no
+				}
+			}
 		}
 		OR = {
 			owner = {
@@ -1069,6 +1090,15 @@ building_hyper_entertainment_forum = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
+			owner = {
+				OR = {
+					berg_is_dystopian_society = yes
+					AND = {
+						berg_has_zexpanded_mod = yes
+						berg_can_duelist_be_changed = yes
+					}
+				}
+			}
 		}
 	}
 	inline_script = {
@@ -1099,7 +1129,13 @@ building_avb_holo_theatre_3 = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
-			NOT = { has_valid_civic = civic_dystopian_society }
+			OR = {
+				berg_is_dystopian_society = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					berg_can_duelist_be_changed = no
+				}
+			}
 		}
 		OR = {
 			owner = {
@@ -1117,8 +1153,16 @@ building_avb_holo_theatre_3 = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { has_valid_civic = civic_dystopian_society }
 			has_modifier = slave_colony
+			owner = {
+				OR = {
+					berg_is_dystopian_society = yes
+					AND = {
+						berg_has_zexpanded_mod = yes
+						berg_can_duelist_be_changed = yes
+					}
+				}
+			}
 		}
 	}
 	
@@ -1167,7 +1211,13 @@ building_avb_holo_theatre_4 = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
-			NOT = { has_valid_civic = civic_dystopian_society }
+			OR = {
+				berg_is_dystopian_society = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					berg_can_duelist_be_changed = no
+				}
+			}
 		}
 		OR = {
 			owner = {
@@ -1185,8 +1235,16 @@ building_avb_holo_theatre_4 = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { has_valid_civic = civic_dystopian_society }
 			has_modifier = slave_colony
+			owner = {
+				OR = {
+					berg_is_dystopian_society = yes
+					AND = {
+						berg_has_zexpanded_mod = yes
+						berg_can_duelist_be_changed = yes
+					}
+				}
+			}
 		}
 	}
 	

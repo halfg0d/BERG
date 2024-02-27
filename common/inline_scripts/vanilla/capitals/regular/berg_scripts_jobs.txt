@@ -20,7 +20,7 @@ triggered_planet_modifier = {
 		job_politician_add = @berg_capital_$tier$_politician1
 	}
 }
-
+m
 triggered_planet_modifier = {
 	potential = {
 		exists = owner

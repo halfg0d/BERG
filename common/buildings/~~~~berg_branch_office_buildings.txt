@@ -329,7 +329,17 @@ building_military_contractors = {
 			job_healthcare_add = 1
 		}
 	}
-
+	#zExpanded
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_private_military_companies }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -462,7 +472,15 @@ building_amusement_megaplex = {
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
-		branch_office_owner = { berg_is_toxic_knight_empire = no }
+		branch_office_owner = {
+			OR = {
+				berg_is_toxic_knight_empire = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					has_country_flag = quest_abandoned
+				}
+			}
+		}
 	}
 
 	planet_modifier = {
@@ -475,6 +493,12 @@ building_amusement_megaplex = {
 			job_clerk_add = 1
 			job_culture_worker_add = 2
 		}
+	}
+	#zExpanded
+	inline_script = {
+		script = berg_jobs/entertainer_desc
+		AMOUNT = 1
+		trigger = "berg_has_zexpanded_mod = yes"
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -872,6 +896,17 @@ building_pirate_haven = {
 		army_starting_experience_add = 100
 	}
 
+	#zExpanded
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_private_military_companies }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -914,6 +949,12 @@ building_underground_clubs = {
 		}
 	}
 
+	#zExpanded
+	inline_script = {
+		script = berg_jobs/entertainer_desc
+		AMOUNT = 1
+		trigger = "berg_has_zexpanded_mod = yes"
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
@@ -1450,6 +1491,12 @@ building_knightly_theme_park = {
 		planet_amenities_add = 10
 	}
 
+	#zExpanded
+	inline_script = {
+		script = berg_jobs/entertainer_desc
+		AMOUNT = 1
+		trigger = "berg_has_zexpanded_mod = yes"
+	}
 	resources = {
 		category = planet_branch_office_buildings
 		cost = {
