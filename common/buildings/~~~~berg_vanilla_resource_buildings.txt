@@ -937,72 +937,178 @@ building_avb_resource_silo_2 = {
 	}
 }
 
+
 building_bio_reactor = {
-	base_buildtime = 240
+	base_buildtime = @b1_time
+	base_cap_amount = 1
 
 	category = resource
 
 	potential = {
 		exists = owner
-		owner = {
-			OR = {
-				is_machine_empire = yes
-				is_mechanical_empire = yes
-				is_lithoid_empire = yes
+		NOR = {
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+		}
+
+		OR = {
+			owner = {
+				is_ai = no
 			}
-			OR = {
-				owner = { is_ai = no }
-				owner = { country_uses_food = no }
-			}
+			has_any_farming_district_or_buildings = yes
 		}
 	}
 
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
 	inline_script = {
 		script = building_resources/vanilla/bioreactor
 		tier = 1
+	}
+	inline_script = {
+		script = vanilla/resource/berg_bioreactor_script
+		tier = 1
+	}
+
+	upgrades = {
+		building_bio_reactor_2
 	}
 
 	prerequisites = {
 		"tech_bio_reactor"
 	}
-	upgrades = {
-		"building_avb_bio_reactor_2" #AVB
-	}
 }
-building_avb_bio_reactor_2 = {
-	base_buildtime = @avb_rs4_time
-	can_build = no
 
+building_bio_reactor_2 = {
+	base_buildtime = @b2_time
+	can_build = no
 	category = resource
-	
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
 	potential = {
-		berg_has_avb_mod = yes
 		exists = owner
-		owner = {
-			OR = {
-				is_catalytic_empire = yes
-				is_machine_empire = yes
-				is_mechanical_empire = yes
-				is_lithoid_empire = yes
+		NOR = {
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+		}
+
+		OR = {
+			owner = {
+				is_ai = no
 			}
-			OR = {
-				owner = { is_ai = no }
-				owner = { country_uses_food = no }
+			has_any_farming_district_or_buildings = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
 			}
 		}
 	}
-	
-	allow = {
-		has_major_upgraded_capital = yes
-	}
-	
-	
 	inline_script = {
 		script = building_resources/vanilla/bioreactor
 		tier = 2
 	}
-	
+	inline_script = {
+		script = vanilla/resource/berg_bioreactor_script
+		tier = 2
+	}
+	upgrades = {
+		building_avb_bio_reactor_3
+	}
 	prerequisites = {
-		"tech_avb_bio_reactor_2"
+		tech_bio_reactor_2
+	}
+}
+
+building_avb_bio_reactor_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		NOR = {
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+		}
+
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_farming_district_or_buildings = yes
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			is_planet_class = pc_machine
+			has_modifier = resort_colony
+			has_modifier = crucible_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/bioreactor
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/resource/berg_bioreactor_script
+		tier = 3
+	}
+
+	prerequisites = {
+		tech_bio_reactor_3
 	}
 }
