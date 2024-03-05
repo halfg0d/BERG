@@ -73,7 +73,7 @@ building_colony_shelter = {
 		osa_branch_add = 1
 	}
 	inline_script = {
-		script = OSA/berg_osa_colony_jobs
+		script = OST/ost_capital_colony_jobs
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -2260,7 +2260,7 @@ building_hab_capital = {
 		tier = h1
 	}
 	inline_script = {
-		script = OSA/berg_osa_colony_jobs
+		script = OST/ost_capital_colony_jobs
 	}
 	inline_script = "BUG/berg_distributism_effect"
 	inline_script = "BUG/berg_capital_jobs_desc"
