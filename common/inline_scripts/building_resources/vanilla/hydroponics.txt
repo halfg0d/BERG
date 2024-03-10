@@ -1,7 +1,7 @@
 resources = {
 	category = planet_buildings
 	inline_script = {
-		script = resources_scripts/basic
+		script = resources_scripts/special/zExpanded/civicBioarchitecturePlantOrganic
 		category = resource
 		building = hydroponics
 		tier = $tier$

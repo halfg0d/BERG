@@ -1,10 +1,6 @@
 #Modifier
 triggered_planet_modifier = {
 	potential = {
-		check_variable_arithmetic = {
-			which = $tier$
-			value >= 2
-		}
 		exists = owner
 		owner = {
 			is_catalytic_empire = no
@@ -18,10 +14,6 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		check_variable_arithmetic = {
-			which = $tier$
-			value >= 2
-		}
 		exists = owner
 		owner = {
 			is_catalytic_empire = yes
@@ -35,10 +27,6 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		check_variable_arithmetic = {
-			which = $tier$
-			value >= 2
-		}
 		berg_pd_is_crucible = yes
 	}
 	modifier = {
@@ -51,7 +39,7 @@ triggered_planet_modifier = {
 	potential = {
 		check_variable_arithmetic = {
 			which = $tier$
-			value >= 2
+			value >= 3
 		}
 		has_ringworld_output_boost = yes
 		exists = owner
@@ -69,7 +57,7 @@ triggered_planet_modifier = {
 	potential = {
 		check_variable_arithmetic = {
 			which = $tier$
-			value >= 2
+			value >= 3
 		}
 		has_ringworld_output_boost = yes
 		exists = owner
@@ -87,7 +75,7 @@ triggered_planet_modifier = {
 	potential = {
 		check_variable_arithmetic = {
 			which = $tier$
-			value >= 2
+			value >= 3
 		}
 		has_ringworld_output_boost = yes
 		berg_pd_is_crucible = yes

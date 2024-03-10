@@ -18,9 +18,9 @@ triggered_planet_modifier = {
 		job_crucible_drone_add = 2
 	}
 }
+# Solidarity Tradition
 inline_script = {
-	script = OSA/berg_osa_capital_job
-	tier = d$tier$
+	script = tradition_script/ost_solidarity_job
 }
 inline_script = {
 	script = BUG/berg_examinatron_job

@@ -5,12 +5,21 @@ triggered_planet_modifier = {
 		owner = { has_civic = civic_defenders_faith }
 	}
 	modifier = {
-	job_priest_add = -@berg_ecc_k$tier$_templar
-	job_templar_add = @berg_ecc_k$tier$_templar
-	pop_ethic_spiritualist_attraction_mult = @berg_ecc_k$tier$_attraction
+		job_templar_add = @berg_ecc_k$tier$_templar
+		pop_ethic_spiritualist_attraction_mult = @berg_ecc_k$tier$_attraction
 	}
 }
-
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ecc_mod = yes
+		exists = owner
+		owner = { has_civic = civic_defenders_faith }
+	}
+	modifier = {
+		job_priest_add = @berg_ecc_k$tier$_templar
+	}
+	mult = -1
+}
 triggered_planet_modifier = {
 	potential = {
 		berg_has_ecc_mod = yes

@@ -5,7 +5,7 @@ inline_script = {
 }
 
 planet_modifier = {
-	planet_farmers_food_produces_add = -@berg_resource_bioreactor_farmer_food_$tier$
+	planet_farmers_food_produces_add = @berg_resource_bioreactor_farmer_food_t$tier$
 	planet_farmers_energy_produces_add = @berg_resource_bioreactor_farmer_energy_t$tier$
 	planet_farmers_exotic_gases_produces_add = @berg_resource_bioreactor_farmer_gases_t$tier$
 }

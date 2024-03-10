@@ -141,29 +141,3 @@ triggered_desc = {
 	}
 	text = job_artificer_effect_desc
 }
-
-# Hive
-triggered_desc = {
-	trigger = {
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = {
-			has_civic = civic_hive_aggregate_catharsis
-		}
-	}
-	text = job_osa_omni_drone_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		NOT = { 
-			is_planet_class = pc_habitat
-		}
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = {
-			has_civic = civic_hive_sonar_senses
-		}
-	}
-	text = job_osom_mapping_drone_effect_desc
-}

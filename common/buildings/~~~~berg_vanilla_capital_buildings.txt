@@ -218,7 +218,7 @@ building_capital = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r1
+		tier = 1
 		trigger = ""
 		#ECC
 		transcend = no
@@ -349,7 +349,7 @@ building_major_capital = {
 
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r2
+		tier = 2
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -509,7 +509,7 @@ building_system_capital = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r3
+		tier = 3
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -682,7 +682,7 @@ building_avb_capital_4 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r4
+		tier = 4
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -841,7 +841,7 @@ building_avb_capital_5 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r5
+		tier = 5
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -1000,7 +1000,7 @@ building_avb_capital_6 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r6
+		tier = 6
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -1063,7 +1063,7 @@ building_avb_capital_6 = {
 
 	inline_script = {
 		script = building_resources/vanilla/regular_capital
-		tier = 5
+		tier = 6
 	}
 
 	triggered_desc = {
@@ -1894,7 +1894,7 @@ building_hive_capital = {
 	}
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h1
+		tier = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1917,9 +1917,8 @@ building_hive_capital = {
 		pop_growth_speed = 0.10
 	}
 	inline_script = {
-		script = building_resources/vanilla/
+		script = building_resources/vanilla/hive_capital
 		tier = 1
-		type = hive
 	}
 }
 
@@ -1986,7 +1985,7 @@ building_hive_major_capital = {
 	
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h2
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
@@ -2066,7 +2065,7 @@ building_avb_hive_capital_3 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h3
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
@@ -2100,7 +2099,7 @@ building_avb_hive_capital_3 = {
 	
 	upgrades = {
 		building_avb_hive_capital_4
-	}	
+	}
 }
 
 building_avb_hive_capital_4 = {
@@ -2160,7 +2159,7 @@ building_avb_hive_capital_4 = {
 	
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h4
+		tier = 4
 	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script

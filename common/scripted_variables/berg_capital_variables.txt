@@ -3,93 +3,78 @@
 @berg_capital_regular_capital_cost_t1 = 600
 @berg_capital_regular_capital_cost_t2 = 800
 @berg_capital_regular_capital_cost_t3 = 2000
+@berg_capital_regular_capital_cost_t4 = 4000
+@berg_capital_regular_capital_cost_t5 = 5400
+@berg_capital_regular_capital_cost_t6 = 7000
+@berg_capital_regular_capital_osa_job1_t1 = 1
+@berg_capital_regular_capital_osa_job1_t2 = 1
+@berg_capital_regular_capital_osa_job1_t3 = 2
+@berg_capital_regular_capital_osa_job1_t4 = 2
+@berg_capital_regular_capital_osa_job1_t5 = 3
+@berg_capital_regular_capital_osa_job1_t6 = 3
+@berg_capital_regular_capital_osa_job2_t1 = 2
+@berg_capital_regular_capital_osa_job2_t2 = 2
+@berg_capital_regular_capital_osa_job2_t3 = 4
+@berg_capital_regular_capital_osa_job2_t4 = 4
+@berg_capital_regular_capital_osa_job2_t5 = 6
+@berg_capital_regular_capital_osa_job2_t6 = 6
 @berg_capital_regular_capital_upkeep_t1 = 5
 @berg_capital_regular_capital_upkeep_t2 = 8
 @berg_capital_regular_capital_upkeep_t3 = 10
+@berg_capital_regular_capital_upkeep_t4 = 18
+@berg_capital_regular_capital_upkeep_t5 = 26
+@berg_capital_regular_capital_upkeep_t6 = 35
 # machine_capital
 @berg_capital_machine_capital_cost_t1 = 600
 @berg_capital_machine_capital_cost_t2 = 800
 @berg_capital_machine_capital_cost_t3 = 2000
+@berg_capital_machine_capital_cost_t4 = 4000
+@berg_capital_machine_capital_cost_t5 = 5400
 @berg_capital_machine_capital_upkeep_t1 = 5
 @berg_capital_machine_capital_upkeep_t2 = 8
 @berg_capital_machine_capital_upkeep_t3 = 10
+@berg_capital_machine_capital_upkeep_t4 = 18
+@berg_capital_machine_capital_upkeep_t5 = 26
+@berg_capital_machine_capital_zex_biotrophy_t1 = 0.0
+@berg_capital_machine_capital_zex_biotrophy_t2 = 5.0
+@berg_capital_machine_capital_zex_biotrophy_t3 = 10.0
+@berg_capital_machine_capital_zex_biotrophy_t4 = 15.0
+@berg_capital_machine_capital_zex_biotrophy_t5 = 20.0
+@berg_capital_machine_capital_zex_catetaker_t1 = 0.0
+@berg_capital_machine_capital_zex_catetaker_t2 = 1.0
+@berg_capital_machine_capital_zex_catetaker_t3 = 2.0
+@berg_capital_machine_capital_zex_catetaker_t4 = 3.0
+@berg_capital_machine_capital_zex_catetaker_t5 = 4.0
+@berg_capital_machine_capital_zex_catetaker_t6 = 5.0
 # hive_capital
+@berg_capital_hive_capital_costOneThird_t1 = 333.33
+@berg_capital_hive_capital_costOneThird_t2 = 200.0
+@berg_capital_hive_capital_costOneThird_t3 = 333.33
+@berg_capital_hive_capital_costOneThird_t4 = 666.67
+@berg_capital_hive_capital_costTwoThird_t1 = 666.67
+@berg_capital_hive_capital_costTwoThird_t2 = 400.0
+@berg_capital_hive_capital_costTwoThird_t3 = 666.67
+@berg_capital_hive_capital_costTwoThird_t4 = 1333.33
 @berg_capital_hive_capital_cost_t1 = 1000
 @berg_capital_hive_capital_cost_t2 = 600
+@berg_capital_hive_capital_cost_t3 = 1000
+@berg_capital_hive_capital_cost_t4 = 2000
+@berg_capital_hive_capital_osa_job2_t1 = 2
+@berg_capital_hive_capital_osa_job2_t2 = 4
+@berg_capital_hive_capital_osa_job2_t3 = 6
+@berg_capital_hive_capital_osa_job2_t4 = 8
+@berg_capital_hive_capital_upkeepOneThird_t1 = 0.67
+@berg_capital_hive_capital_upkeepOneThird_t2 = 1.67
+@berg_capital_hive_capital_upkeepOneThird_t3 = 2.0
+@berg_capital_hive_capital_upkeepOneThird_t4 = 4.0
+@berg_capital_hive_capital_upkeepTwoThird_t1 = 1.33
+@berg_capital_hive_capital_upkeepTwoThird_t2 = 3.33
+@berg_capital_hive_capital_upkeepTwoThird_t3 = 4.0
+@berg_capital_hive_capital_upkeepTwoThird_t4 = 8.0
 @berg_capital_hive_capital_upkeep_t1 = 2
 @berg_capital_hive_capital_upkeep_t2 = 5
-# resort_capital
-@berg_capital_resort_capital_cost_t1 = 400
-@berg_capital_resort_capital_cost_t2 = 600
-@berg_capital_resort_capital_upkeep_t1 = 2
-@berg_capital_resort_capital_upkeep_t2 = 5
-# habitat_capital
-@berg_capital_habitat_capital_cost_t1 = 0
-@berg_capital_habitat_capital_cost_t2 = 500
-@berg_capital_habitat_capital_upkeep_alloy_t1 = 5
-@berg_capital_habitat_capital_upkeep_alloy_t2 = 5
-@berg_capital_habitat_capital_upkeep_t1 = 3
-@berg_capital_habitat_capital_upkeep_t2 = 3
-# slave_capital
-@berg_capital_slave_capital_cost_t1 = 0
-@berg_capital_slave_capital_cost_t2 = 500
-@berg_capital_slave_capital_upkeep_t1 = 2
-@berg_capital_slave_capital_upkeep_t2 = 2
-# regular_capital
-@berg_capital_regular_capital_cost_t1 = 600
-@berg_capital_regular_capital_cost_t2 = 800
-@berg_capital_regular_capital_cost_t3 = 2000
-@berg_capital_regular_capital_upkeep_t1 = 5
-@berg_capital_regular_capital_upkeep_t2 = 8
-@berg_capital_regular_capital_upkeep_t3 = 10
-# machine_capital
-@berg_capital_machine_capital_cost_t1 = 600
-@berg_capital_machine_capital_cost_t2 = 800
-@berg_capital_machine_capital_cost_t3 = 2000
-@berg_capital_machine_capital_upkeep_t1 = 5
-@berg_capital_machine_capital_upkeep_t2 = 8
-@berg_capital_machine_capital_upkeep_t3 = 10
-# hive_capital
-@berg_capital_hive_capital_cost_t1 = 1000
-@berg_capital_hive_capital_cost_t2 = 600
-@berg_capital_hive_capital_upkeep_t1 = 2
-@berg_capital_hive_capital_upkeep_t2 = 5
-# resort_capital
-@berg_capital_resort_capital_cost_t1 = 400
-@berg_capital_resort_capital_cost_t2 = 600
-@berg_capital_resort_capital_upkeep_t1 = 2
-@berg_capital_resort_capital_upkeep_t2 = 5
-# habitat_capital
-@berg_capital_habitat_capital_cost_t1 = 0
-@berg_capital_habitat_capital_cost_t2 = 500
-@berg_capital_habitat_capital_upkeep_alloy_t1 = 5
-@berg_capital_habitat_capital_upkeep_alloy_t2 = 5
-@berg_capital_habitat_capital_upkeep_t1 = 3
-@berg_capital_habitat_capital_upkeep_t2 = 3
-# slave_capital
-@berg_capital_slave_capital_cost_t1 = 0
-@berg_capital_slave_capital_cost_t2 = 500
-@berg_capital_slave_capital_upkeep_t1 = 2
-@berg_capital_slave_capital_upkeep_t2 = 2
-# regular_capital
-@berg_capital_regular_capital_cost_t1 = 600
-@berg_capital_regular_capital_cost_t2 = 800
-@berg_capital_regular_capital_cost_t3 = 2000
-@berg_capital_regular_capital_upkeep_t1 = 5
-@berg_capital_regular_capital_upkeep_t2 = 8
-@berg_capital_regular_capital_upkeep_t3 = 10
-# machine_capital
-@berg_capital_machine_capital_cost_t1 = 600
-@berg_capital_machine_capital_cost_t2 = 800
-@berg_capital_machine_capital_cost_t3 = 2000
-@berg_capital_machine_capital_upkeep_t1 = 5
-@berg_capital_machine_capital_upkeep_t2 = 8
-@berg_capital_machine_capital_upkeep_t3 = 10
-# hive_capital
-@berg_capital_hive_capital_cost_t1 = 1000
-@berg_capital_hive_capital_cost_t2 = 600
-@berg_capital_hive_capital_upkeep_t1 = 2
-@berg_capital_hive_capital_upkeep_t2 = 5
+@berg_capital_hive_capital_upkeep_t3 = 6
+@berg_capital_hive_capital_upkeep_t4 = 12
 # resort_capital
 @berg_capital_resort_capital_cost_t1 = 400
 @berg_capital_resort_capital_cost_t2 = 600

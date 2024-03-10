@@ -17,7 +17,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_politician_add = @berg_capital_$tier$_politician1
+		job_politician_add = @berg_capital_r$tier$_politician1
 	}
 }
 
@@ -31,7 +31,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_executive_add = @berg_capital_$tier$_executive
+		job_executive_add = @berg_capital_r$tier$_executive
 	}
 }
 triggered_planet_modifier = {
@@ -44,7 +44,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_steward_add = @berg_capital_$tier$_steward
+		job_steward_add = @berg_capital_r$tier$_steward
 	}
 }
 
@@ -57,8 +57,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_high_priest_add = @berg_capital_$tier$_high_priest
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_high_priest_add = @berg_capital_r$tier$_high_priest
+		job_politician_add = @berg_capital_r$tier$_politician2
 	}
 }
 
@@ -71,8 +71,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_noble_add = @berg_capital_$tier$_noble
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_noble_add = @berg_capital_r$tier$_noble
+		job_politician_add = @berg_capital_r$tier$_politician2
 	}
 }
 
@@ -85,8 +85,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_head_researcher_add = @berg_capital_$tier$_head_researcher
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_head_researcher_add = @berg_capital_r$tier$_head_researcher
+		job_politician_add = @berg_capital_r$tier$_politician2
 	}
 }
 
@@ -100,8 +100,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_merchant_add = @berg_capital_$tier$_merchant
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_merchant_add = @berg_capital_r$tier$_merchant
+		job_politician_add = @berg_capital_r$tier$_politician2
 	}
 }
 triggered_planet_modifier = {
@@ -114,8 +114,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_mogul_add = @berg_ecc_$tier$_mogul
-		job_politician_add = @berg_ecc_$tier$_politician_mogul
+		job_mogul_add = @berg_ecc_r$tier$_mogul
+		job_politician_add = @berg_ecc_r$tier$_politician_mogul
 	}
 }
 
@@ -128,8 +128,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_knight_commander_add = @berg_capital_$tier$_knight_commander
-		job_knight_add = @berg_capital_$tier$_knight
+		job_knight_commander_add = @berg_capital_r$tier$_knight_commander
+		job_knight_add = @berg_capital_r$tier$_knight
 	}
 }
 #Vanilla
@@ -143,7 +143,7 @@ triggered_planet_modifier = {
 #Ethic Civic Classic
 inline_script = {
 	script = ECC/berg_ecc_capital_script
-	tier = $tier$
+	tier = r$tier$
 	trigger = $trigger$
 	transcend = $transcend$
 	healthcare = $healtcare$
@@ -151,18 +151,18 @@ inline_script = {
 #Ethic Civic Bug Branch
 inline_script = {
 	script = BUG/berg_capital_jobs
-	tier = $tier$
+	tier = r$tier$
 	trigger = $trigger$
 }
 #Omega Stellaris Tradition
 inline_script = {
 	script = OSA/berg_osa_capital_jobs
-	tier = $tier$
+	tier = r$tier$
 }
 #Venture Politics
 inline_script = {
 	script = VP/berg_vp_capital_job
-	tier = $tier$
+	tier = r$tier$
 }
 #Description
 inline_script = {

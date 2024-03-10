@@ -213,16 +213,6 @@ building_avb_slave_processing_2 = {
 		script = building_resources/vanilla/slave_processing
 		tier = 2
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @avb_g4_minerals
-		}
-		upkeep = {
-			energy = @avb_g4_upkeep
-		}
-	}
 	
 	prerequisites = {
 		"tech_avb_slave_processing_2"

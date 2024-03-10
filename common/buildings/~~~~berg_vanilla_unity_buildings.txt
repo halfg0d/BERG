@@ -1431,19 +1431,6 @@ building_avb_machine_unity_4 = {
 		building_avb_bureaucratic_4
 		building_avb_death_temple_4
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @avb_u4_minerals
-			rare_crystals = @avb_u4_rare_cost
-		}
-		upkeep = {
-			energy = @avb_u4_upkeep
-			rare_crystals = @avb_u4_rare_upkeep
-		}
-	}
-
 	inline_script = {
 		script = building_resources/vanilla/uplink_node
 		tier = 4
@@ -2057,19 +2044,6 @@ building_avb_death_temple_4 = {
 		building_avb_bureaucratic_4
 		building_avb_temple_4
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @avb_u4_minerals
-			exotic_gases = @avb_u4_rare_cost
-		}
-		upkeep = {
-			energy = @avb_u4_upkeep
-			exotic_gases = @avb_u4_rare_upkeep
-			volatile_motes = @avb_u4_rare_upkeep
-		}
-	}
-	
 	inline_script = {
 		script = building_resources/vanilla/death_temple
 		tier = 4

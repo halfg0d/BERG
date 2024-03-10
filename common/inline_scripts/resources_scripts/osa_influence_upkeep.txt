@@ -9,5 +9,5 @@ upkeep = {
         berg_has_osa_mod = yes
     }
     influence = 0.05
-    mult = $tier$
+    multiplier = $resource$
 }

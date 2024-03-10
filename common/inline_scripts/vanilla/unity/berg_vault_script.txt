@@ -100,14 +100,6 @@ triggered_desc = {
 	}
 	text = job_politician_effect_desc
 }
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_evaluator_effect_desc
-}
 #Megacorp
 triggered_planet_modifier = {
 	potential = {

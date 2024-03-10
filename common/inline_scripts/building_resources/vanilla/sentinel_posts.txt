@@ -7,6 +7,12 @@ resources = {
 		tier = $tier$
 	}
 	inline_script = {
+		script = resources_scripts/special/zExpanded/civicBioarchitecture
+		category = government
+		building = sentinel_posts
+		tier = $tier$
+	}
+	inline_script = {
 		script = resources_scripts/osa_upkeep
 		category = government
 		building = sentinel_posts

@@ -16,10 +16,24 @@ triggered_planet_modifier = {
 	}
 	modifier = {
 		job_osa_energy_director_add = @berg_deposit_betharian_osa_job_t$tier$
-		job_technician_add = -@berg_deposit_betharian_osa_job_t$tier$
 	}
 }
-
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				has_civic = civic_energy_consortiums
+				has_civic = civic_corporate_energy_consortiums
+			}
+		}
+	}
+	modifier = {
+		job_technician_add = @berg_deposit_betharian_osa_job_t$tier$
+	}
+	mult = -1
+}
 triggered_planet_modifier = {
 	potential = {
 		berg_has_osa_mod = yes
