@@ -17,7 +17,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_politician_add = @berg_capital_r$tier$_politician1
+		job_politician_add = @berg_capital_regular_capital_politician1_t$tier$
 	}
 }
 
@@ -31,7 +31,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_executive_add = @berg_capital_r$tier$_executive
+		job_executive_add = @berg_capital_regular_capital_executive_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -44,7 +44,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_steward_add = @berg_capital_r$tier$_steward
+		job_steward_add = @berg_capital_regular_capital_steward_t$tier$
 	}
 }
 
@@ -57,8 +57,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_high_priest_add = @berg_capital_r$tier$_high_priest
-		job_politician_add = @berg_capital_r$tier$_politician2
+		job_high_priest_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
@@ -71,8 +71,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_noble_add = @berg_capital_r$tier$_noble
-		job_politician_add = @berg_capital_r$tier$_politician2
+		job_noble_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
@@ -85,8 +85,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_head_researcher_add = @berg_capital_r$tier$_head_researcher
-		job_politician_add = @berg_capital_r$tier$_politician2
+		job_head_researcher_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
@@ -100,8 +100,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_merchant_add = @berg_capital_r$tier$_merchant
-		job_politician_add = @berg_capital_r$tier$_politician2
+		job_merchant_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -114,7 +114,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_mogul_add = @berg_ecc_r$tier$_mogul
+		job_mogul_add = @berg_capital_regular_capital_special_t$tier$
 		job_politician_add = @berg_ecc_r$tier$_politician_mogul
 	}
 }
