@@ -2,9 +2,11 @@ planet_modifier = {
 	trade_value_mult = @berg_trade_galactic_stock_mult_t$tier$
 }
 inline_script = {
-	script = berg_jobs/merchant_desc
+	script = berg_jobs_group/merchant_add
 	AMOUNT = @berg_trade_galactic_stock_job_t$tier$
-	trigger = " "
+	MULT = 1
+	TRIGGER = " "
+	DESC = with
 }
 #OSA
 triggered_planet_modifier = {
@@ -19,9 +21,11 @@ triggered_desc = {
 	text = job_clerk_effect_desc
 }
 inline_script = {
-	script = berg_jobs/merchant_without_desc
+	script = berg_jobs_group/merchant_add
 	AMOUNT = @berg_trade_galactic_stock_osa_merchant_t$tier$
-	trigger = "berg_has_osa_mod = yes"
+	MULT = 1
+	TRIGGER = "berg_has_osa_mod = yes"
+	DESC = no
 }
 #ECC
 triggered_planet_modifier = {

@@ -76,3 +76,7 @@ berg_ecc_has_terraforming_civic = {
 	berg_has_ecc_mod = yes
 	has_valid_civic = civic_terraforming
 }
+berg_ecc_is_defender_faith = {
+	berg_has_ecc_mod = yes
+	has_civic = civic_defenders_faith
+}

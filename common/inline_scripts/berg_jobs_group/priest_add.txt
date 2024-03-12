@@ -1,0 +1,48 @@
+#Priest add
+#Swaps between empires
+#Civics: defenders_faith(ECC)
+
+#Priest
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = priest
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_megacorp = no
+		berg_ecc_is_defender_faith = no
+	}
+	"
+}
+#Preacher
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = preacher
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_megacorp = yes
+	}
+	"
+}
+#Templar
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = templar
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_megacorp = no
+		berg_ecc_is_defender_faith = yes
+	}
+	"
+}

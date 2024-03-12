@@ -1,0 +1,22 @@
+#Add merchant
+#With ECC swaps into mogul
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = merchant
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	berg_has_ecc_mod = no
+	"
+}
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = mogul
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	berg_has_ecc_mod = yes
+	"
+}

@@ -2,9 +2,11 @@ planet_modifier = {
 	pop_ethic_spiritualist_attraction_mult = @berg_unity_temple_attraction_t$tier$
 }
 inline_script = {
-	script = berg_jobs/priest_desc
-	AMOUNT = @berg_unity_temple_job_priest_t$tier$
-	trigger = ""
+	script = berg_jobs_group/priest_add
+	AMOUNT = @berg_unity_temple_job_t$tier$
+	TRIGGER = " "
+	MULT = 1
+	DESC = with
 }
 triggered_planet_modifier = {
 	potential = {

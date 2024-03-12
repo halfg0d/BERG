@@ -1,0 +1,130 @@
+#Foundry jobs
+#Swaps between empires
+#Civics: catalytic
+#Planets: crucible(PD)
+
+#Regular
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = foundry
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_catalytic_empire = no
+	}
+	berg_pd_is_crucible = no
+	"
+}
+#Regular catalytic
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = catalytic_technician
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_catalytic_empire = yes
+	}
+	berg_pd_is_crucible = no
+	"
+}
+#Regular crucible(PD)
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = crucible_foundry
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+	}
+	berg_pd_is_crucible = yes
+	"
+}
+#Gestalt catalytic
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = catalytic_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_gestalt = yes
+		is_catalytic_empire = yes
+	}
+	berg_pd_is_crucible = no
+	"
+}
+#Machine
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = fabricator
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_machine_empire = yes
+		is_catalytic_empire = no
+	}
+	berg_pd_is_crucible = no
+	"
+}
+#Machine crucible(PD)
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = crucible_fabricator
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_machine_empire = yes
+	}
+	berg_pd_is_crucible = yes
+	"
+}
+#Hive
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = alloy_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+		is_catalytic_empire = no
+	}
+	berg_pd_is_crucible = no
+	"
+}
+#Hive crucible(PD)
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = crucible_alloy_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+	}
+	berg_pd_is_crucible = yes
+	"
+}

@@ -115,7 +115,7 @@ triggered_planet_modifier = {
 	}
 	modifier = {
 		job_mogul_add = @berg_capital_regular_capital_special_t$tier$
-		job_politician_add = @berg_ecc_r$tier$_politician_mogul
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 

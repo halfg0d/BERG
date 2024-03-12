@@ -22,8 +22,11 @@ triggered_planet_modifier = {
 	}
 }
 inline_script = {
-	script = berg_jobs/factory
+	script = berg_jobs_group/factory_add
 	AMOUNT = @berg_manufactury_factory_job_t$tier$
+	MULT = 1
+	TRIGGER = " "
+	DESC = with
 }
 inline_script = {
 	script = UAP/berg_uap_industrialist

@@ -1,0 +1,9 @@
+triggered_planet_modifier = {
+	potential = {
+		$TRIGGER$
+	}
+	modifier = {
+		job_$JOB$_add = $AMOUNT$
+	}
+	mult = $MULT$
+}

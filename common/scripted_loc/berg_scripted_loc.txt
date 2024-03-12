@@ -1,0 +1,11 @@
+defined_text = {
+	name = GetsupPD
+	random = no
+	text = {
+		trigger = {
+			berg_has_planetary_diversity_mod = yes
+		}
+		localization_key = mod_prefix_desc_pd
+	}
+	default = ""
+}

@@ -1,0 +1,23 @@
+triggered_planet_modifier = {
+	potential = {
+		$TRIGGER$
+	}
+	modifier = {
+		job_$JOB$_add = $AMOUNT$
+	}
+	mult = $MULT$
+}
+triggered_desc = {
+	trigger = {
+		$TRIGGER$
+		check_variable_arithmetic = {
+			which = $AMOUNT$
+			value > 0
+		}
+		check_variable_arithmetic = {
+			which = $MULT$
+			value > 0
+		}
+	}
+	text = job_$JOB$_effect_desc
+}

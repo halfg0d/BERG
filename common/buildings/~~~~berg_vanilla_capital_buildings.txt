@@ -282,6 +282,11 @@ building_capital = {
 		}
 		text = job_unifier_effect_desc
 	}
+
+	desc = {
+		trigger = { always = yes }
+		text = berg_capital_regular_support
+	}
 }
 
 # Major Capital
