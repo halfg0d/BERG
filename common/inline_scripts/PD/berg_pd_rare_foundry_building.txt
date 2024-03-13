@@ -24,38 +24,12 @@ triggered_planet_modifier = {
 	planet_metallurgists_alloys_produces_add = 1
 	planet_metallurgists_minerals_upkeep_add = 2
 }
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_catalytic_empire = no
-		}
-	}
-	modifier = {
-		job_foundry_add = 2
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
-	}
-	modifier = {
-		job_alloy_drone_add = 2
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-	}
-	modifier = {
-		job_fabricator_add = 2
-	}
+inline_script = {
+	script = berg_jobs_group/foundry_add
+	AMOUNT = 2
+	TRIGGER = " "
+	MULT = 1
+	DESC = with
 }
 
 inline_script = {

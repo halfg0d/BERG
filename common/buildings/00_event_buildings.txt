@@ -227,9 +227,19 @@ building_nuumismatic_shrine = {
 		}
 	}
 
-	planet_modifier = {
-		job_merchant_add = 2
-		job_priest_add = 2
+	inline_script = {
+		script = berg_jobs_group/priest_add
+		AMOUNT = 2
+		TRIGGER = " "
+		MULT = 1
+		DESC = with
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 2
+		MULT = 1
+		TRIGGER = " "
+		DESC = with
 	}
 
 	resources = {
@@ -237,13 +247,6 @@ building_nuumismatic_shrine = {
 			minerals = 1000
 		}
 		category = planet_buildings
-	}
-
-	triggered_desc = {
-		text = job_priest_effect_desc
-	}
-	triggered_desc = {
-		text = job_merchant_effect_desc
 	}
 }
 

@@ -255,13 +255,12 @@ building_private_shipyards = {
 		job_clerk_add = 2
 	}
 	#OSA
-	triggered_planet_modifier = {
-		potential = {
-			berg_has_osa_mod = yes
-		}
-		modifier = {
-			job_foundry_add = 1
-		}
+	inline_script = {
+		script = berg_jobs_group/foundry_add
+		AMOUNT = 1
+		TRIGGER = "berg_has_osa_mod = yes"
+		MULT = 1
+		DESC = no
 	}
 	resources = {
 		category = planet_branch_office_buildings
@@ -521,7 +520,6 @@ building_commercial_forum = {
 	#Vanilla
 	planet_modifier = {
 		branch_office_value_mult = 0.15
-		job_merchant_add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -529,12 +527,26 @@ building_commercial_forum = {
 		}
 		branch_office_value_mult = 0.10
 	}
+	
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = " "
+		DESC = no
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = @berg_trade_galactic_stock_job_t$tier$
+		MULT = 2
+		TRIGGER = "berg_has_osa_mod = yes"
+		DESC = no
+	}
 	#OSA
 	triggered_planet_modifier = {
 		potential = {
 			berg_has_osa_mod = yes
 		}
-		job_merchant_add = 2
 		job_clerk_add = 1
 	}
 	resources = {
@@ -1071,7 +1083,13 @@ building_smuggling_rings = {
 	planet_modifier = {
 		planet_crime_add = 50
 		branch_office_value_mult = 0.15
-		job_merchant_add = 1
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = " "
+		DESC = no
 	}
 	triggered_planet_modifier = {
 		potential = { berg_has_osa_mod = no }
@@ -1391,8 +1409,14 @@ building_imperial_concession_port = {
 		}
 		modifier = {
 			job_politician_add = 2
-			job_merchant_add = 2
 		}
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 2
+		MULT = 1
+		TRIGGER = "berg_has_osa_mod = yes"
+		DESC = no
 	}
 	resources = {
 		category = planet_branch_office_buildings

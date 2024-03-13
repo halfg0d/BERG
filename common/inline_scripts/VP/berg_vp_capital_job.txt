@@ -1,29 +1,25 @@
 triggered_planet_modifier = { #megacorp_mod
 	potential = {
-		berg_has_ecc_mod = no
 		exists = owner
 		owner = {
 			berg_vp_is_bancorp = yes
 		}
 	}
 	modifier = {
-		job_merchant_add = @berg_vp_$tier$_second_job
 		job_executive_add = @berg_vp_$tier$_executive
 	}
 }
-
-triggered_planet_modifier = { #megacorp_mod
-	potential = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			berg_vp_is_bancorp = yes
-		}
+inline_script = {
+	script = berg_jobs_group/merchant_add
+	AMOUNT = @berg_vp_$tier$_second_job
+	MULT = 1
+	TRIGGER = "
+	exists = owner
+	owner = {
+		berg_vp_is_bancorp = yes
 	}
-	modifier = {
-		job_mogul_add = @berg_vp_$tier$_second_job
-		job_executive_add = @berg_vp_$tier$_executive
-	}
+	"
+	DESC = with
 }
 triggered_planet_modifier = { #megacorp_mod
 	potential = {

@@ -92,31 +92,28 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ecc_mod = no
 		exists = owner
 		owner = { 
 			berg_has_any_merchant_civic = yes
 		}
 		$trigger$
 	}
-	modifier = {
-		job_merchant_add = @berg_capital_regular_capital_special_t$tier$
+	modifier = {=
 		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			berg_has_any_merchant_civic = yes
-		}
-		$trigger$
+inline_script = {
+	script = berg_jobs_group/merchant_add
+	AMOUNT = @berg_capital_regular_capital_special_t$tier$
+	MULT = 1
+	TRIGGER = "
+	exists = owner
+	owner = { 
+		berg_has_any_merchant_civic = yes
 	}
-	modifier = {
-		job_mogul_add = @berg_capital_regular_capital_special_t$tier$
-		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
-	}
+	$trigger$
+	"
+	DESC = with
 }
 
 triggered_planet_modifier = {

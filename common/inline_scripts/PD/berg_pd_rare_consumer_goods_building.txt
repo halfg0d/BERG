@@ -25,32 +25,12 @@
 		planet_artisans_minerals_upkeep_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				is_regular_empire = yes
-				is_crafter_empire = no
-			}
-		
-		}
-		modifier = {
-			job_artisan_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				is_regular_empire = yes
-				is_crafter_empire = yes
-			}
-		
-		}
-		modifier = {
-			job_artificer_add = 2
-		}
+	inline_script = {
+		script = berg_jobs_group/factory_add
+		AMOUNT = 2
+		MULT = 1
+		TRIGGER = " "
+		DESC = no
 	}
 	inline_script = {
 		scrript = tradition_script/ost_metallurgy

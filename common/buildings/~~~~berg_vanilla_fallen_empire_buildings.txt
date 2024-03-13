@@ -754,16 +754,19 @@ building_empyrean_shrine = {
 		}
 	}
 	#ACOT
-	triggered_planet_modifier = {
-		potential = {
-			berg_has_acot_mod = yes
-			exists = owner
-			owner = { 
-				is_fallen_empire = no 
-				is_spiritualist = yes
-			}
+	inline_script = {
+		script = berg_jobs_group/priest_add
+		AMOUNT = 10
+		TRIGGER = "
+		berg_has_acot_mod = yes
+		exists = owner
+		owner = { 
+			is_fallen_empire = no 
+			is_spiritualist = yes
 		}
-		job_priest_add = 10
+		"
+		MULT = 1
+		DESC = no
 	}
 	triggered_planet_modifier = {
 		potential = {

@@ -137,9 +137,22 @@ triggered_planet_modifier = {
 		}					
 	}
 	modifier = {
-		job_merchant_add = 3
 		job_politician_add = 2
 	}
+}
+inline_script = {
+	script = berg_jobs_group/merchant_add
+	AMOUNT = 3
+	MULT = 1
+	TRIGGER = "
+	berg_has_acot_mod = yes
+		exists = owner
+		owner = { 
+			has_civic = civic_merchant_guilds 
+			is_fallen_empire = no			
+		}
+	"
+	DESC = with
 }
 #FE
 triggered_planet_modifier = {
