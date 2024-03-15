@@ -109,3 +109,5 @@ inline_script = {
 #	script = OSA/berg_osa_foundry_jobs
 #	tier = $tier$
 #}
+#BERG - building desc
+inline_script = "berg_building_desc/foundry_desc"

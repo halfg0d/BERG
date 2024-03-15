@@ -14,3 +14,5 @@ triggered_planet_modifier = {
 triggered_desc = {
 	text = job_replicator_effect_desc
 }
+#BERG - building desc
+inline_script = "berg_building_desc/machine_plant_desc"

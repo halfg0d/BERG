@@ -87,3 +87,7 @@ triggered_desc = {
 	}
 	text = offspring_nest_tooltip
 }
+#BERG - building desc
+inline_script = "berg_building_desc/offspring_nest_desc"
+#BERG - building desc
+inline_script = "berg_building_desc/spawning_pool_desc"

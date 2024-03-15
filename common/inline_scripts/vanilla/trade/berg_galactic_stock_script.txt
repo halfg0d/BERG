@@ -44,3 +44,5 @@ triggered_planet_modifier = {
 		trade_value_mult = @berg_trade_galactic_stock_ecc_mult_t$tier$
 	}
 }
+#BERG - building desc
+inline_script = "berg_building_desc/galactic_stock_desc"

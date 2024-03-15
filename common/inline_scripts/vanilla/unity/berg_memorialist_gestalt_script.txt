@@ -29,3 +29,7 @@ triggered_planet_modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t$tier$
 	}
 }
+#BERG - building desc
+inline_script = "berg_building_desc/monument_machine_desc"
+#BERG - building desc
+inline_script = "berg_building_desc/monument_hive_desc"

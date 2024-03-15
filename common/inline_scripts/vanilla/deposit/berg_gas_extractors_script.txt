@@ -43,3 +43,5 @@ inline_script = {
 	script = tradition_script/ost_renewal
 	resource = gases
 }
+#BERG - building desc
+inline_script = "berg_building_desc/gas_extractors_desc"

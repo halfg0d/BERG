@@ -41,3 +41,5 @@ triggered_planet_modifier = {
 	planet_jobs_rare_crystals_produces_mult = 0.1
 	planet_jobs_volatile_motes_produces_mult = 0.1
 }
+#BERG - building desc
+inline_script = "berg_building_desc/archaeo_refinery_desc"

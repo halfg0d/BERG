@@ -180,3 +180,5 @@ triggered_desc = {
 }
 #OST
 inline_script = tradition_script/ost_solidarity_effect
+#BERG - building desc
+inline_script = "berg_building_desc/league_offices_desc"

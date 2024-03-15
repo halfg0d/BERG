@@ -1,0 +1,21 @@
+# alpha_hub
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = alpha_hub
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_alpha_hub_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

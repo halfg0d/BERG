@@ -52,3 +52,5 @@ triggered_desc = {
 	}
 	text = job_duelist_effect_desc
 }
+#BERG - building desc
+inline_script = "berg_building_desc/holo_theatres_desc"

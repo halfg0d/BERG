@@ -1,0 +1,67 @@
+# monument_machine
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = simulation_1
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	is_machine_empire = yes
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = simulation_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	is_machine_empire = yes
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = simulation_3
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 3
+	}
+	is_machine_empire = yes
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_monument_machine_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 4
+	}
+	is_machine_empire = yes
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_monument_machine_5
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 5
+	}
+	is_machine_empire = yes
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_monument_machine_6
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 6
+	}
+	is_machine_empire = yes
+	"
+}

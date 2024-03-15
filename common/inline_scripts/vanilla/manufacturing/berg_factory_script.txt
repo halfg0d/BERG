@@ -42,4 +42,5 @@ inline_script = {
 	isForge = no
 	job_add = @berg_manufactury_factory_ost_job_t$tier$
 }
-#Desc
+#BERG - building desc
+inline_script = "berg_building_desc/factory_desc"

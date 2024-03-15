@@ -59,3 +59,5 @@ triggered_planet_modifier = {
 		planet_districts_cities_ecocontinuity_upkeep_add = @ecocontinuity_upkeep_t$tier$
 	}
 }
+#BERG - building desc
+inline_script = "berg_building_desc/hive_node_desc"

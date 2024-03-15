@@ -284,8 +284,8 @@ building_capital = {
 	}
 
 	desc = {
-		trigger = { always = yes }
-		text = berg_capital_regular_support
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_capital_sup
 	}
 }
 
@@ -447,6 +447,10 @@ building_major_capital = {
 
 	upgrades = {
 		"building_system_capital"
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_major_capital_sup
 	}
 }
 
@@ -619,6 +623,10 @@ building_system_capital = {
 		"building_imperial_capital" #Vanilla
 		"building_avb_capital_4" #AVB
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_system_capital_sup
+	}
 }
 building_avb_capital_4 = {
 	base_buildtime = @avb_c4_time
@@ -777,6 +785,10 @@ building_avb_capital_4 = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_capital_4_sup
 	}
 }
 building_avb_capital_5 = {
@@ -937,6 +949,10 @@ building_avb_capital_5 = {
 		}
 		text = job_unifier_effect_desc
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_capital_5_sup
+	}
 }
 building_avb_capital_6 = {
 	base_buildtime = @avb_c6_time
@@ -1095,6 +1111,10 @@ building_avb_capital_6 = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_capital_6_sup
 	}
 }
 
@@ -1313,6 +1333,10 @@ building_machine_capital = {
 	upgrades = {
 		building_machine_major_capital
 	}	
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_machine_capital_sup
+	}
 }
 
 # Planetary Processor
@@ -1399,6 +1423,10 @@ building_machine_major_capital = {
 
 	upgrades = {
 		"building_machine_system_capital"
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_machine_major_capital_sup
 	}
 }
 
@@ -1506,6 +1534,10 @@ building_machine_system_capital = {
 	upgrades = {
 		"building_imperial_machine_capital" #Vanilla
 		"building_avb_machine_capital_4" #AVB
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_machine_system_capital_sup
 	}
 }
 building_avb_machine_capital_4 = {
@@ -1615,6 +1647,10 @@ building_avb_machine_capital_4 = {
 		script = building_resources/vanilla/machine_capital
 		tier = 4
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_machine_capital_4_sup
+	}
 }
 
 building_avb_machine_capital_5 = {
@@ -1723,6 +1759,10 @@ building_avb_machine_capital_5 = {
 		script = building_resources/vanilla/machine_capital
 		tier = 5
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_machine_capital_5_sup
+	}
 }
 
 building_avb_machine_capital_6 = {
@@ -1830,6 +1870,10 @@ building_avb_machine_capital_6 = {
 		script = building_resources/vanilla/machine_capital
 		tier = 6
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_machine_capital_6_sup
+	}
 }
 
 
@@ -1925,6 +1969,10 @@ building_hive_capital = {
 		script = building_resources/vanilla/hive_capital
 		tier = 1
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_hive_capital_sup
+	}
 }
 
 # Hive Nexus
@@ -2013,6 +2061,10 @@ building_hive_major_capital = {
 	inline_script = {
 		script = building_resources/vanilla/hive_capital
 		tier = 2
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_hive_major_capital_sup
 	}
 }
 building_avb_hive_capital_3 = {
@@ -2104,6 +2156,10 @@ building_avb_hive_capital_3 = {
 	
 	upgrades = {
 		building_avb_hive_capital_4
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_hive_capital_3_sup
 	}
 }
 
@@ -2206,6 +2262,10 @@ building_avb_hive_capital_4 = {
 	}
 	upgrades = {
 		building_imperial_hive_capital
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_hive_capital_4_sup
 	}
 }
 
@@ -2386,6 +2446,10 @@ building_hab_capital = {
 	}
 	inline_script = "vanilla/capitals/habitat/berg_scripts_regular_jobs_desc"
 	
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_hab_capital_sup
+	}
 }
 
 
@@ -2563,6 +2627,10 @@ building_hab_major_capital = {
 		}
 		text = job_culture_worker_effect_desc
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_hab_major_capital_sup
+	}
 }
 building_avb_hab_capital_3 = {
 	base_buildtime = @avb_c4_time
@@ -2726,6 +2794,10 @@ building_avb_hab_capital_3 = {
 		}
 		text = job_culture_worker_effect_desc
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_hab_capital_3_sup
+	}
 }
 
 #############
@@ -2815,6 +2887,10 @@ building_resort_capital = {
 	}
 	upgrades = {
 		"building_resort_major_capital"
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_resort_capital_sup
 	}
 }
 
@@ -2914,6 +2990,10 @@ building_resort_major_capital = {
 			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		text = job_roboticist_effect_desc
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_resort_major_capital_sup
 	}
 }
 building_avb_resort_capital_3 = {
@@ -3015,6 +3095,10 @@ building_avb_resort_capital_3 = {
 		}
 		text = job_roboticist_effect_desc
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_resort_capital_3_sup
+	}
 }
 
 # Thrall-World Capital
@@ -3103,6 +3187,10 @@ building_slave_capital = {
 	upgrades = {
 		"building_slave_major_capital"
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_slave_capital_sup
+	}
 }
 
 # Thrall-World Major Capital
@@ -3180,6 +3268,10 @@ building_slave_major_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_slave_major_capital_sup
 	}
 }
 building_avb_slave_capital_3 = {
@@ -3259,6 +3351,10 @@ building_avb_slave_capital_3 = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_avb_slave_capital_3_sup
 	}
 }
 
@@ -3390,6 +3486,11 @@ building_imperial_capital = {
 		}
 		text = job_roboticist_effect_desc
 	}
+
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_imperial_capital_sup
+	}
 }
 
 # Imperial Center
@@ -3486,6 +3587,10 @@ building_imperial_machine_capital = {
 		script = building_resources/vanilla/machine_capital
 		tier = 7
 	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_imperial_machine_capital_sup
+	}
 }
 
 # Imperial Complex
@@ -3566,5 +3671,9 @@ building_imperial_hive_capital = {
 	inline_script = {
 		script = building_resources/vanilla/hive_capital
 		tier = 7
+	}
+	desc = {
+		trigger = { can_show_support_desc = yes }
+		text = berg_building_imperial_hive_capital_sup
 	}
 }

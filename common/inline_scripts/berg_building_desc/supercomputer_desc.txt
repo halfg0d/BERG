@@ -1,0 +1,21 @@
+# supercomputer
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = supercomputer
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_supercomputer_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

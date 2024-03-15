@@ -1,0 +1,23 @@
+# toxic_bath_hive
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = toxic_bath_hive
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	is_hive_empire = yes
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_toxic_bath_hive_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	is_hive_empire = yes
+	"
+}

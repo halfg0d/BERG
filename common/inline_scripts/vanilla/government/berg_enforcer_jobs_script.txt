@@ -4,3 +4,5 @@ planet_modifier = {
 triggered_desc = {
 	text = job_enforcer_effect_desc
 }
+#BERG - building desc
+inline_script = "berg_building_desc/precinct_house_desc"

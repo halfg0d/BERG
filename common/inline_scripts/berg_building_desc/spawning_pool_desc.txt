@@ -1,0 +1,23 @@
+# spawning_pool
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = spawning_pool
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	berg_is_progenitor_empire = no
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_spawning_pool_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	berg_is_progenitor_empire = no
+	"
+}

@@ -20,5 +20,3 @@ l_english:
  building_fe_xeno_zoo_vanilla:0 "$building_fe_xeno_zoo_desc$"
  building_bug_galactic_stock_exchange:0 "$building_galactic_stock_exchange$"
  building_bug_galactic_stock_exchange_desc:0 "$building_galactic_stock_exchange_desc$"
-#Buildings support
- berg_capital_regular_support:0 "$building_capital_desc$\n$mod_support_title$ [Root.GetsupPD]"

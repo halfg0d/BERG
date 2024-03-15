@@ -271,3 +271,6 @@ berg_is_machine_cult = {
 	berg_has_ecc_mod = yes
 	has_civic = civic_machine_cult
 }
+can_show_support_desc = {
+	always = no
+}

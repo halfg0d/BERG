@@ -196,3 +196,5 @@ triggered_desc = {
 	}
 	text = job_scrap_miner_effect_desc
 }
+#BERG - building desc
+inline_script = "berg_building_desc/mineral_purification_desc"

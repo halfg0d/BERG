@@ -1,0 +1,11 @@
+# machine_plant
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = machine_assembly_plant
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}

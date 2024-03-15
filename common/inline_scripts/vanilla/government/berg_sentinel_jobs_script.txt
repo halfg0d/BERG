@@ -14,3 +14,5 @@ triggered_planet_modifier = {
 		planet_crime_add = -25
 	}
 }
+#BERG - building desc
+inline_script = "berg_building_desc/sentinel_posts_desc"

@@ -70,3 +70,5 @@ triggered_planet_modifier = {
 }
 #OST
 inline_script = tradition_script/ost_solidarity_effect
+#BERG - building desc
+inline_script = "berg_building_desc/bureaucratic_desc"

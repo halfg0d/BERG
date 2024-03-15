@@ -39,3 +39,5 @@ inline_script = {
 	script = UAP/berg_uap_industrialist_jobs
 	AMOUNT = @berg_manufactury_ministry_production_uap_industrialist_t$tier$
 }
+#BERG - building desc
+inline_script = "berg_building_desc/ministry_production_desc"

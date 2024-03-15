@@ -41,3 +41,5 @@ triggered_desc = {
 	}
 	text = tooltip_organic_and_artificial_assembly_warning
 }
+#BERG - building desc
+inline_script = "berg_building_desc/robot_plant_desc"

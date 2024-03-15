@@ -5,3 +5,5 @@ planet_modifier = {
 triggered_desc = {
 	text = job_telepath_effect_desc
 }
+#BERG - building desc
+inline_script = "berg_building_desc/psi_corps_desc"

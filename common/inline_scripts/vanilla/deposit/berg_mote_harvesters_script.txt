@@ -43,3 +43,5 @@ inline_script = {
 	script = tradition_script/ost_renewal
 	resource = mote
 }
+#BERG - building desc
+inline_script = "berg_building_desc/mote_harvesters_desc"
