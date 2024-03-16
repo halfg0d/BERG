@@ -274,3 +274,9 @@ berg_is_machine_cult = {
 can_show_support_desc = {
 	always = no
 }
+berg_has_gpm_mod = {
+	gpm_mod_active = yes
+}
+berg_has_zexpanded_mod = {
+	always = no
+}

@@ -1,3 +1,4 @@
+#PD
 defined_text = {
 	name = GetsupPD
 	random = no
@@ -6,6 +7,115 @@ defined_text = {
 			berg_has_planetary_diversity_mod = yes
 		}
 		localization_key = mod_prefix_desc_pd
+	}
+	default = ""
+}
+#OSA
+defined_text = {
+	name = GetsupOsa
+	random = no
+	text = {
+		trigger = {
+			berg_has_osa_mod = yes
+		}
+		localization_key = mod_prefix_desc_osa
+	}
+	default = ""
+}
+#OST
+defined_text = {
+	name = GetsupOst
+	random = no
+	text = {
+		trigger = {
+			berg_has_ost_mod = yes
+			berg_has_osa_mod = no
+		}
+		localization_key = mod_prefix_desc_ost
+	}
+	default = ""
+}
+#ECC
+defined_text = {
+	name = GetsupECC
+	random = no
+	text = {
+		trigger = {
+			berg_has_ecc_mod = yes
+		}
+		localization_key = mod_prefix_desc_ecc
+	}
+	default = ""
+}
+#AVB
+defined_text = {
+	name = GetsupAVB
+	random = no
+	text = {
+		trigger = {
+			berg_has_avb_mod = yes
+		}
+		localization_key = mod_prefix_desc_avb
+	}
+	default = ""
+}
+#BUG
+defined_text = {
+	name = GetsupBug
+	random = no
+	text = {
+		trigger = {
+			berg_has_bug_mod = yes
+		}
+		localization_key = mod_prefix_desc_bug
+	}
+	default = ""
+}
+#GPM
+defined_text = {
+	name = GetsupPD
+	random = no
+	text = {
+		trigger = {
+			berg_has_gpm_mod = yes
+		}
+		localization_key = mod_prefix_desc_gpm
+	}
+	default = ""
+}
+#UAP
+defined_text = {
+	name = GetsupUap
+	random = no
+	text = {
+		trigger = {
+			berg_has_uap_mod = yes
+		}
+		localization_key = mod_prefix_desc_uap
+	}
+	default = ""
+}
+#GIGA
+defined_text = {
+	name = GetsupGiga
+	random = no
+	text = {
+		trigger = {
+			berg_has_giga_mod = yes
+		}
+		localization_key = mod_prefix_desc_giga
+	}
+	default = ""
+}
+#ZEX
+defined_text = {
+	name = GetsupZex
+	random = no
+	text = {
+		trigger = {
+			berg_has_zexpanded_mod = yes
+		}
+		localization_key = mod_prefix_desc_zex
 	}
 	default = ""
 }
