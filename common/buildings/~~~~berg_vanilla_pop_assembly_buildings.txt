@@ -25,9 +25,17 @@ building_robot_assembly_plant = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
+		OR = {
+			berg_has_bug_mod = no
+			AND = {
+				berg_has_avb_mod = yes
+				owner = { is_bugged_machine_cult = no }
+			}
+		}
 	}
 
 	convert_to = {
+		building_bugged_mecha_monastery
 		building_machine_assembly_plant
 	}
 
@@ -71,6 +79,10 @@ building_robot_assembly_plant = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
+			AND = {
+				is_bugged_machine_cult = yes
+				berg_has_bug_mod = yes
+			}
 		}
 	}
 	inline_script = {
@@ -84,6 +96,15 @@ building_robot_assembly_plant = {
 
 	prerequisites = {
 		"tech_robotic_workers"
+	}
+	show_tech_unlock_if = {
+		OR = {
+			berg_has_bug_mod = no
+			AND = {
+				is_bugged_machine_cult = no
+				berg_has_bug_mod = yes
+			}
+		}
 	}
 }
 
@@ -111,6 +132,13 @@ building_robot_assembly_complex = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
+		OR = {
+			berg_has_bug_mod = no
+			AND = {
+				berg_has_avb_mod = yes
+				owner = { is_bugged_machine_cult = no }
+			}
+		}
 	}
 
 	convert_to = {
@@ -142,6 +170,10 @@ building_robot_assembly_complex = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
+			AND = {
+				is_bugged_machine_cult = yes
+				berg_has_bug_mod = yes
+			}
 		}
 	}
 	inline_script = {
@@ -155,6 +187,15 @@ building_robot_assembly_complex = {
 
 	prerequisites = {
 		tech_robot_assembly_complex
+	}
+	show_tech_unlock_if = {
+		OR = {
+			berg_has_bug_mod = no
+			AND = {
+				is_bugged_machine_cult = no
+				berg_has_bug_mod = yes
+			}
+		}
 	}
 }
 building_avb_robot_assembly_plant_2 = {
@@ -181,6 +222,13 @@ building_avb_robot_assembly_plant_2 = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
+		OR = {
+			berg_has_bug_mod = no
+			AND = {
+				berg_has_avb_mod = yes
+				owner = { is_bugged_machine_cult = no }
+			}
+		}
 	}
 	
 	allow = {
@@ -188,6 +236,7 @@ building_avb_robot_assembly_plant_2 = {
 	}
 	
 	convert_to = {
+		building_bugged_mecha_monastery_two
 		building_avb_machine_assembly_plant_2
 	}
 	
@@ -213,6 +262,10 @@ building_avb_robot_assembly_plant_2 = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
+			AND = {
+				is_bugged_machine_cult = yes
+				berg_has_bug_mod = yes
+			}
 		}
 	}
 	
@@ -226,6 +279,15 @@ building_avb_robot_assembly_plant_2 = {
 	}
 	prerequisites = {
 		"tech_avb_robot_assembly_plant_2"
+	}
+	show_tech_unlock_if = {
+		OR = {
+			berg_has_bug_mod = no
+			AND = {
+				is_bugged_machine_cult = no
+				berg_has_bug_mod = yes
+			}
+		}
 	}
 }
 

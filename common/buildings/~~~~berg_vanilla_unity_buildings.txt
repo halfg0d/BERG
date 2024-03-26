@@ -778,7 +778,7 @@ building_temple = {
 	exempt_from_ai_planet_specialization = no
 
 	category = unity
-
+	
 	potential = {
 		exists = owner
 		owner = {
@@ -787,6 +787,7 @@ building_temple = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -803,6 +804,10 @@ building_temple = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -856,6 +861,7 @@ building_holotemple = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -876,6 +882,10 @@ building_holotemple = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -930,6 +940,7 @@ building_sacred_nexus = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -950,6 +961,10 @@ building_sacred_nexus = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1008,6 +1023,7 @@ building_avb_temple_4 = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -1028,6 +1044,10 @@ building_avb_temple_4 = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1081,6 +1101,7 @@ building_avb_temple_5 = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -1101,6 +1122,10 @@ building_avb_temple_5 = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1154,6 +1179,7 @@ building_avb_temple_6 = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -1174,6 +1200,10 @@ building_avb_temple_6 = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
