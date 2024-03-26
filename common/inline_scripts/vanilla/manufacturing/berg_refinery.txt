@@ -2,5 +2,3 @@ inline_script = {
 	script = jobs/refiner_add
 	AMOUNT = @berg_manufactury_refinery_job_t$tier$
 }
-#BERG - building desc
-inline_script = "berg_building_desc/refinery_desc"

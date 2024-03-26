@@ -150,5 +150,3 @@ triggered_desc = {
 	}
 	text = job_aqu_angler_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/baol_plant_desc"

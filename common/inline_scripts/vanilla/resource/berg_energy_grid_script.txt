@@ -128,5 +128,3 @@ triggered_desc = {
 	}
 	text = job_fe_acolyte_generator_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/energy_grid_desc"

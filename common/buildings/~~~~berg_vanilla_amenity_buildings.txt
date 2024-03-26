@@ -58,6 +58,11 @@ building_luxury_residence = {
 	upgrades = {
 		"building_paradise_dome"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = luxury_residence
+		TRIGGER = " "
+	}
 }
 
 building_paradise_dome = {
@@ -114,6 +119,11 @@ building_paradise_dome = {
 	upgrades = {
 		building_eutab_gaia_district #EUTAB
 		"building_avb_residence_3" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = paradise_dome
+		TRIGGER = " "
 	}
 }
 #AVB Residence
@@ -173,6 +183,11 @@ building_avb_residence_3 = {
 			is_regular_empire = yes
 			berg_has_any_shared_burden_civic = no
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_residence_3
+		TRIGGER = " "
 	}
 }
 
@@ -238,6 +253,11 @@ building_avb_residence_4 = {
 			berg_has_any_shared_burden_civic = no
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_residence_4
+		TRIGGER = " "
+	}
 }
 
 building_avb_residence_5 = {
@@ -298,6 +318,11 @@ building_avb_residence_5 = {
 			is_regular_empire = yes
 			berg_has_any_shared_burden_civic = no
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_residence_5
+		TRIGGER = " "
 	}
 }
 #Vanilla Communal Housing
@@ -361,6 +386,11 @@ building_communal_housing = {
 
 	upgrades = {
 		"building_communal_housing_large"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = communal_housing
+		TRIGGER = " "
 	}
 }
 
@@ -429,6 +459,11 @@ building_communal_housing_large = {
 	prerequisites = {
 		"tech_paradise_dome"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = communal_housing_large
+		TRIGGER = " "
+	}
 }
 building_avb_communal_housing_3 = {
 	base_buildtime = @avb_b3_time
@@ -496,6 +531,11 @@ building_avb_communal_housing_3 = {
 	
 	prerequisites = {
 		"tech_avb_residence_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_communal_housing_3
+		TRIGGER = " "
 	}
 }
 
@@ -570,6 +610,11 @@ building_avb_communal_housing_4 = {
 	prerequisites = {
 		"tech_avb_residence_4"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_communal_housing_4
+		TRIGGER = " "
+	}
 }
 
 building_avb_communal_housing_5 = {
@@ -632,6 +677,11 @@ building_avb_communal_housing_5 = {
 	prerequisites = {
 		"tech_avb_residence_5"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_communal_housing_5
+		TRIGGER = " "
+	}
 }
 
 #Machine housing
@@ -678,6 +728,11 @@ building_drone_storage = {
 	upgrades = {
 		"building_drone_megastorage"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = drone_storage
+		TRIGGER = " "
+	}
 }
 
 building_drone_megastorage = {
@@ -721,6 +776,11 @@ building_drone_megastorage = {
 	}
 	show_tech_unlock_if = {
 		berg_has_avb_mod = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = drone_megastorage
+		TRIGGER = " "
 	}
 }
 #AVB Machine housing
@@ -770,6 +830,11 @@ building_avb_drone_storage_3 = {
 	show_tech_unlock_if = {
 		berg_has_avb_mod = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_drone_storage_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_drone_storage_4 = {
@@ -813,6 +878,11 @@ building_avb_drone_storage_4 = {
 	prerequisites = {
 		"tech_avb_self_assembling_components_2" 
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_drone_storage_4
+		TRIGGER = " "
+	}
 }
 
 #Hive housing
@@ -847,6 +917,11 @@ building_hive_warren = {
 
 	upgrades = {
 		"building_expanded_warren"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hive_warren
+		TRIGGER = " "
 	}
 }
 
@@ -891,6 +966,11 @@ building_expanded_warren = {
 	}
 	upgrades = {
 		"building_avb_warren_3" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = expanded_warren
+		TRIGGER = " "
 	}
 }
 #AVB Hive housing
@@ -941,6 +1021,11 @@ building_avb_warren_3 = {
 	prerequisites = {
 		"tech_avb_housing_3" 
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_warren_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_warren_4 = {
@@ -984,6 +1069,11 @@ building_avb_warren_4 = {
 	}
 	prerequisites = {
 		"tech_avb_housing_4" 
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_warren_4
+		TRIGGER = " "
 	}
 }
 building_holo_theatres = {
@@ -1033,8 +1123,11 @@ building_holo_theatres = {
 	prerequisites = {
 		"tech_holo_entertainment"
 	}
-
-	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = holo_theatres
+		TRIGGER = " "
+	}
 }
 
 building_hyper_entertainment_forum = {
@@ -1085,6 +1178,11 @@ building_hyper_entertainment_forum = {
 	}
 	prerequisites = {
 		"tech_hyper_entertainment_forum"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hyper_entertainment_forum
+		TRIGGER = " "
 	}
 }
 #AVB holo Theatres
@@ -1154,6 +1252,11 @@ building_avb_holo_theatre_3 = {
 	prerequisites = {
 		"tech_avb_holo_entertainment_3"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_holo_theatre_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_holo_theatre_4 = {
@@ -1215,6 +1318,11 @@ building_avb_holo_theatre_4 = {
 	}
 	prerequisites = {
 		"tech_avb_holo_entertainment_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_holo_theatre_4
+		TRIGGER = " "
 	}
 }
 building_clinic = {
@@ -1350,6 +1458,11 @@ building_clinic = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = clinic
+		TRIGGER = " "
+	}
 }
 
 building_hospital = {
@@ -1412,6 +1525,11 @@ building_hospital = {
 	}
 	upgrades = {
 		"building_avb_clinic_3" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hospital
+		TRIGGER = " "
 	}
 }
 building_avb_clinic_3 = {
@@ -1479,7 +1597,12 @@ building_avb_clinic_3 = {
 	}
 	
 	show_tech_unlock_if = {
-		is_regular_empire = no
+		is_regular_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_clinic_3
+		TRIGGER = " "
 	}
 }
 
@@ -1544,6 +1667,11 @@ building_avb_clinic_4 = {
 	show_tech_unlock_if = {
 		is_regular_empire = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_clinic_4
+		TRIGGER = " "
+	}
 }
 building_maintenance_depot = {
 	base_buildtime = 240
@@ -1578,6 +1706,11 @@ building_maintenance_depot = {
 	upgrades = {
 		building_eutab_preservation_nexus # EUTAB
 		"building_avb_maintenance_depot_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = maintenance_depot
+		TRIGGER = " "
 	}
 }
 building_avb_maintenance_depot_2 = {
@@ -1623,6 +1756,11 @@ building_avb_maintenance_depot_2 = {
 		berg_has_avb_mod = yes
 		is_machine_empire = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_maintenance_depot_2
+		TRIGGER = " "
+	}
 }
 building_slave_huts = {
 	base_buildtime = 240
@@ -1651,6 +1789,11 @@ building_slave_huts = {
 	}
 	upgrades = {
 		"building_avb_slave_huts_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = slave_huts
+		TRIGGER = " "
 	}
 }
 building_avb_slave_huts_2 = {
@@ -1687,6 +1830,11 @@ building_avb_slave_huts_2 = {
 	prerequisites = {
 		"tech_avb_slave_huts_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_slave_huts_2
+		TRIGGER = " "
+	}
 }
 
 building_overseer_homes = {
@@ -1717,6 +1865,11 @@ building_overseer_homes = {
 	}
 	upgrades = {
 		"building_avb_overseer_homes_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = overseer_homes
+		TRIGGER = " "
 	}
 }
 building_avb_overseer_homes_2 = {
@@ -1749,6 +1902,11 @@ building_avb_overseer_homes_2 = {
 		script = building_resources/vanilla/overseer_home
 		tier = 2
 	}	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_overseer_homes_2
+		TRIGGER = " "
+	}
 }
 
 building_ranger_lodge = {
@@ -1826,6 +1984,11 @@ building_ranger_lodge = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = ranger_lodge
+		TRIGGER = " "
+	}
 }
 building_avb_ranger_lodge_2 = {
 	base_buildtime = @avb_a2_time
@@ -1900,6 +2063,11 @@ building_avb_ranger_lodge_2 = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_ranger_lodge_2
+		TRIGGER = " "
+	}
 }
 
 building_toxic_bath = {
@@ -1944,6 +2112,11 @@ building_toxic_bath = {
 	}
 	upgrades = {
 		"building_avb_toxic_bath_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = toxic_bath
+		TRIGGER = " "
 	}
 }
 building_avb_toxic_bath_2 = {
@@ -1991,5 +2164,10 @@ building_avb_toxic_bath_2 = {
 	inline_script = {
 		script = building_resources/vanilla/toxic_bath
 		tier = 2
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_toxic_bath_2
+		TRIGGER = " "
 	}
 }

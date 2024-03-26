@@ -1,27 +1,23 @@
 #resource variables
 # hydroponics
-@berg_resource_hydroponics_costOneThird_t1 = 133.33
-@berg_resource_hydroponics_costOneThird_t2 = 200.0
-@berg_resource_hydroponics_costTwoThird_t1 = 266.67
-@berg_resource_hydroponics_costTwoThird_t2 = 400.0
 @berg_resource_hydroponics_cost_t1 = 400
 @berg_resource_hydroponics_cost_t2 = 600
+@berg_resource_hydroponics_cost_t3 = 1000
 @berg_resource_hydroponics_osa_produce_t1 = 5
 @berg_resource_hydroponics_osa_produce_t2 = 10
 @berg_resource_hydroponics_osa_produce_t3 = 20
 @berg_resource_hydroponics_osa_produce_t4 = 30
 @berg_resource_hydroponics_osa_produce_t5 = 35
 @berg_resource_hydroponics_osa_produce_t6 = 40
-@berg_resource_hydroponics_osa_upkeep_energy_t1 = 0.5
-@berg_resource_hydroponics_osa_upkeep_energy_t2 = 0.5
-@berg_resource_hydroponics_upkeepOneThird_t1 = 0.67
-@berg_resource_hydroponics_upkeepOneThird_t2 = 1.33
-@berg_resource_hydroponics_upkeepTwoThird_t1 = 1.33
-@berg_resource_hydroponics_upkeepTwoThird_t2 = 2.67
+@berg_resource_hydroponics_osa_upkeep_energy_t1 = 0.0
+@berg_resource_hydroponics_osa_upkeep_energy_t2 = 0.0
+@berg_resource_hydroponics_osa_upkeep_energy_t3 = 0.0
 @berg_resource_hydroponics_upkeep_t1 = 2
 @berg_resource_hydroponics_upkeep_t2 = 4
+@berg_resource_hydroponics_upkeep_t3 = 6
 @berg_resource_hydroponics_job_t1 = 2
 @berg_resource_hydroponics_job_t2 = 4
+@berg_resource_hydroponics_job_t3 = 6
 # food_processing
 @berg_resource_food_processing_cost_t1 = 400
 @berg_resource_food_processing_cost_t2 = 600
@@ -195,12 +191,16 @@
 # silo
 @berg_resource_silo_cost_t1 = 200
 @berg_resource_silo_cost_t2 = 600
+@berg_resource_silo_cost_t3 = 1000
 @berg_resource_silo_upkeep_t1 = 1
 @berg_resource_silo_upkeep_t2 = 4
+@berg_resource_silo_upkeep_t3 = 6
 @berg_resource_silo_job_t1 = 1
 @berg_resource_silo_job_t2 = 2
+@berg_resource_silo_job_t3 = 3
 @berg_resource_silo_silo_t1 = 5000
 @berg_resource_silo_silo_t2 = 10000
+@berg_resource_silo_silo_t3 = 20000
 # bioreactor
 @berg_resource_bioreactor_cost_t1 = 400
 @berg_resource_bioreactor_cost_t2 = 600

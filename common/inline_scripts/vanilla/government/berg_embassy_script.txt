@@ -15,5 +15,3 @@ triggered_country_modifier = {
 		country_edict_fund_add = @berg_government_embassy_osa_fund_t$tier$
 	}
 }
-#BERG - building desc
-inline_script = "berg_building_desc/embassy_desc"

@@ -70,6 +70,11 @@ building_military_academy = {
 		"building_mechanicum_academy" #OSA
 		"building_avb_military_academy_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = military_academy
+		TRIGGER = " "
+	}
 }
 building_avb_military_academy_2 = {
 	base_buildtime = @avb_b3_time
@@ -99,6 +104,11 @@ building_avb_military_academy_2 = {
 	show_tech_unlock_if = {
 		always = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_military_academy_2
+		TRIGGER = " "
+	}
 }
 
 building_dread_encampment = {
@@ -125,6 +135,11 @@ building_dread_encampment = {
 	}
 	upgrades = {
 		"building_avb_dread_encampment_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = dread_encampment
+		TRIGGER = " "
 	}
 }
 building_avb_dread_encampment_2 = {
@@ -168,6 +183,11 @@ building_avb_dread_encampment_2 = {
 		}
 		text = job_necromancer_effect_desc
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_dread_encampment_2
+		TRIGGER = " "
+	}
 }
 
 building_stronghold = {
@@ -194,6 +214,11 @@ building_stronghold = {
 
 	upgrades = {
 		"building_fortress"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = stronghold
+		TRIGGER = " "
 	}
 }
 
@@ -224,6 +249,11 @@ building_fortress = {
 		"building_zitadom" #OSA
 		"building_avb_stronghold_3" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = fortress
+		TRIGGER = " "
+	}
 }
 building_avb_stronghold_3 = {
 	base_buildtime = @avb_b2_time
@@ -253,6 +283,11 @@ building_avb_stronghold_3 = {
 	}
 	upgrades = {
 		"building_avb_stronghold_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_stronghold_3
+		TRIGGER = " "
 	}
 }
 
@@ -289,6 +324,11 @@ building_avb_stronghold_4 = {
 		"tech_avb_stronghold_4"
 	}
 	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_stronghold_4
+		TRIGGER = " "
+	}
 }
 
 building_avb_stronghold_5 = {
@@ -317,6 +357,11 @@ building_avb_stronghold_5 = {
 	
 	prerequisites = {
 		"tech_avb_stronghold_5"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_stronghold_5
+		TRIGGER = " "
 	}
 }
 
@@ -384,6 +429,11 @@ building_planetary_shield_generator = {
 	prerequisites = {
 		"tech_planetary_shield_generator"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = planetary_shield_generator
+		TRIGGER = " "
+	}
 }
 building_avb_planetary_shield_generator_2 = {
 	base_buildtime = @avb_b4_time
@@ -432,6 +482,11 @@ building_avb_planetary_shield_generator_2 = {
 	}
 	prerequisites = {
 		"tech_avb_planetary_shield_generator_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_planetary_shield_generator_2
+		TRIGGER = " "
 	}
 }
 
@@ -485,6 +540,11 @@ building_avb_planetary_shield_generator_3 = {
 	prerequisites = {
 		"tech_avb_planetary_shield_generator_3"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_planetary_shield_generator_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_dark_matter_planetary_shield_generator = {
@@ -532,5 +592,10 @@ building_avb_dark_matter_planetary_shield_generator = {
 	
 	prerequisites = {
 		"tech_avb_dark_matter_planetary_shield_generator"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_dark_matter_planetary_shield_generator
+		TRIGGER = " "
 	}
 }

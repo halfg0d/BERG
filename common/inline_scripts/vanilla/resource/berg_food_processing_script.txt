@@ -117,5 +117,3 @@ triggered_desc = {
 	}
 	text = job_aqu_angler_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/food_processing_desc"

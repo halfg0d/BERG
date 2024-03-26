@@ -1,17 +1,17 @@
 ﻿# Irony this is a placeholder file please ignore it
 l_english:
 #MOD text description
- mod_support_title: "§G- Mods supported in that building -§!"
- mod_prefix_desc_pd: "\n§M> Planetary Diversity§!"
- mod_prefix_desc_avb: "§M> Additional Vanilla buildings - Unofficial§!"
- mod_prefix_desc_osa: "§M> Omega's Stellaris Additions§!"
- mod_prefix_desc_ost: "§M> Omega's Stellaris Traditions§!"
- mod_prefix_desc_ecc: "§M> Ethics and Civics Classic§!"
- mod_prefix_desc_bug: "§M> Ethics & Civics: Bug Branch§!"
- mod_prefix_desc_gpm: "§M> Guilli's Planet Modifiers and Features§!"
- mod_prefix_desc_uap: "§M> Unique Ascension Perks§!"
- mod_prefix_desc_giga: "§M> Gigastructural Engineering & More§!"
- mod_prefix_desc_zex: "§M> z Expanded Traits, Civics, Pops, and More§!"
+ mod_support_title:    "\n§G- Mods supported in that building -§!"
+ mod_prefix_desc_pd:   "\n§M> Planetary Diversity§!"
+ mod_prefix_desc_avb:  "\n§M> Additional Vanilla buildings - Unofficial§!"
+ mod_prefix_desc_osa:  "\n§M> Omega's Stellaris Additions§!"
+ mod_prefix_desc_ost:  "\n§M> Omega's Stellaris Traditions§!"
+ mod_prefix_desc_ecc:  "\n§M> Ethics and Civics Classic§!"
+ mod_prefix_desc_bug:  "\n§M> Ethics & Civics: Bug Branch§!"
+ mod_prefix_desc_gpm:  "\n§M> Guilli's Planet Modifiers and Features§!"
+ mod_prefix_desc_uap:  "\n§M> Unique Ascension Perks§!"
+ mod_prefix_desc_giga: "\n§M> Gigastructural Engineering & More§!"
+ mod_prefix_desc_zex:  "\n§M> z Expanded Traits, Civics, Pops, and More§!"
 #Buildings cloned
  building_deep_space_scanner_ecc:0 "$building_deep_space_scanner$"
  building_deep_space_scanner_ecc_desc:0 "$building_deep_space_scanner_desc$"

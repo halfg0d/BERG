@@ -34,5 +34,3 @@ inline_script = {
 	MULT = 1
 	DESC = with
 }
-#BERG - building desc
-inline_script = "berg_building_desc/production_center_desc"

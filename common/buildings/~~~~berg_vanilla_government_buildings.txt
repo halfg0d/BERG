@@ -55,6 +55,11 @@ building_noble_estates = {
 	upgrades = {
 		"building_avb_noble_estates_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = noble_estates
+		TRIGGER = " "
+	}
 }
 building_avb_noble_estates_2 = {
 	base_buildtime = @avb_g4_time
@@ -110,6 +115,11 @@ building_avb_noble_estates_2 = {
 	prerequisites = {
 		"tech_avb_noble_estates_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_noble_estates_2
+		TRIGGER = " "
+	}
 }
 
 building_slave_processing = {
@@ -164,6 +174,11 @@ building_slave_processing = {
 	upgrades = {
 		"building_avb_slave_processing_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = slave_processing
+		TRIGGER = " "
+	}
 }
 building_avb_slave_processing_2 = {
 	base_buildtime = @avb_g4_time
@@ -216,6 +231,11 @@ building_avb_slave_processing_2 = {
 	
 	prerequisites = {
 		"tech_avb_slave_processing_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_slave_processing_2
+		TRIGGER = " "
 	}
 }
 
@@ -272,6 +292,11 @@ building_precinct_house = {
 	upgrades = {
 		building_hall_judgment
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = precinct_house
+		TRIGGER = " "
+	}
 }
 
 building_hall_judgment = {
@@ -314,6 +339,11 @@ building_hall_judgment = {
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hall_judgment
+		TRIGGER = " "
 	}
 }
 building_avb_enforcement_3 = {
@@ -364,6 +394,11 @@ building_avb_enforcement_3 = {
 	upgrades = {
 		building_avb_enforcement_4
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_enforcement_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_enforcement_4 = {
@@ -409,6 +444,11 @@ building_avb_enforcement_4 = {
 	
 	show_tech_unlock_if = {
 		is_gestalt = no
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_enforcement_4
+		TRIGGER = " "
 	}
 }
 
@@ -460,6 +500,11 @@ building_sentinel_posts = {
 		"building_sentinel_hubs"
 		"building_avb_sentinel_posts_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sentinel_posts
+		TRIGGER = " "
+	}
 }
 building_avb_sentinel_posts_2 = {
 	base_buildtime = @avb_g4_time 
@@ -507,6 +552,11 @@ building_avb_sentinel_posts_2 = {
 	
 	show_tech_unlock_if = {
 		is_gestalt = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_sentinel_posts_2
+		TRIGGER = " "
 	}
 }
 
@@ -623,6 +673,11 @@ building_psi_corps = {
 	upgrades = {
 		"building_avb_psi_corps_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = psi_corps
+		TRIGGER = " "
+	}
 }
 building_avb_psi_corps_2 = {
 	base_buildtime = @avb_g4_time
@@ -681,6 +736,11 @@ building_avb_psi_corps_2 = {
 	prerequisites = {
 		"tech_avb_psi_corps_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_psi_corps_2
+		TRIGGER = " "
+	}
 }
 
 building_avb_psi_corps_3 = {
@@ -735,6 +795,11 @@ building_avb_psi_corps_3 = {
 	
 	prerequisites = {
 		"tech_avb_psi_corps_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_psi_corps_3
+		TRIGGER = " "
 	}
 }
 
@@ -802,6 +867,11 @@ building_embassy = {
 	prerequisites = {
 		"tech_xeno_diplomacy"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = embassy
+		TRIGGER = " "
+	}
 }
 
 building_grand_embassy = {
@@ -866,6 +936,76 @@ building_grand_embassy = {
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = grand_embassy
+		TRIGGER = " "
+	}
+}
+building_avb_grand_embassy_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = government
+
+	potential = {
+		avb_hg_changes = yes
+		exists = owner
+		owner = { is_regular_empire = yes }
+
+		planet = { is_capital = yes }
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex
+						is_starbase_building_building = ring_embassy_complex
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = { is_regular_empire = no }
+			}
+			planet = { is_capital = no }
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 3
+	}
+
+	prerequisites = {
+		"tech_avb_xeno_relations_2"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_grand_embassy_2
+		TRIGGER = " "
 	}
 }
 

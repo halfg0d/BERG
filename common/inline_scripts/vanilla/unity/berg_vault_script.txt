@@ -148,7 +148,3 @@ triggered_desc = {
 	}
 	text = job_steward_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/vault_desc"
-#BERG - building desc
-inline_script = "berg_building_desc/corp_vault"

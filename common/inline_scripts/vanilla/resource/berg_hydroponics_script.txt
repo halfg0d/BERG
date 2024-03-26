@@ -196,5 +196,3 @@ triggered_desc = {
 	}
 	text = job_pearl_diver_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/hydroponics_desc"

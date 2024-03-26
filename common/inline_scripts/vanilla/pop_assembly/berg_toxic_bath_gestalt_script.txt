@@ -65,7 +65,3 @@ triggered_planet_modifier = {
 		job_bath_attendant_machine_add = 2
 	}
 }
-#BERG - building desc
-inline_script = "berg_building_desc/toxic_bath_hive_desc"
-#BERG - building desc
-inline_script = "berg_building_desc/toxic_bath_machine_desc"

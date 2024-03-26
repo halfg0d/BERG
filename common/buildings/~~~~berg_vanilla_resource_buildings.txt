@@ -58,6 +58,11 @@ building_hydroponics_farm = {
 		"building_hydroponics_station" #OSA
 		"building_avb_hydroponics_farm_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hydroponics_farm
+		TRIGGER = " "
+	}
 }
 building_avb_hydroponics_farm_2 = {
 	base_buildtime = @avb_rs4_time
@@ -127,6 +132,91 @@ building_avb_hydroponics_farm_2 = {
 	prerequisites = {
 		"tech_avb_hydroponics_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hydroponics_farm_2
+		TRIGGER = " "
+	}
+}
+building_avb_hydroponics_farm_3 = {
+	base_buildtime = @avb_rs5_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				country_uses_food = yes
+				is_ai = no
+			}
+		}
+		NOT = { is_planet_class = pc_machine }
+		NOT = { has_modifier = resort_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+		OR = {
+			owner = { is_ai = no }
+			AND = {
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value < 30
+					}
+				}
+				free_district_slots = 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			planet = {
+				NOT = { is_planet_class = pc_habitat }
+				free_building_slots = 0
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value > 100
+					}
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_hydroponics_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/hydroponics
+		tier = 3
+	}
+
+	prerequisites = {
+		"tech_avb_hydroponics_3"
+	}
+	ai_resource_production = {
+		food = 3
+		trigger = {
+			always = yes
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hydroponics_farm_3
+		TRIGGER = " "
+	}
 }
 
 building_food_processing_facility = {
@@ -184,6 +274,11 @@ building_food_processing_facility = {
 	prerequisites = {
 		"tech_food_processing_1"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = food_processing_facility
+		TRIGGER = " "
+	}
 }
 
 building_food_processing_center = {
@@ -231,6 +326,11 @@ building_food_processing_center = {
 	}
 	upgrades = {
 		"building_avb_food_processing_3" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = food_processing_center
+		TRIGGER = " "
 	}
 }
 building_avb_food_processing_3 = {
@@ -282,6 +382,11 @@ building_avb_food_processing_3 = {
 	prerequisites = {
 		"tech_avb_food_processing_3"
 	}	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_food_processing_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_food_processing_4 = {
@@ -330,6 +435,11 @@ building_avb_food_processing_4 = {
 	prerequisites = {
 		"tech_avb_food_processing_4"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_food_processing_4
+		TRIGGER = " "
+	}
 }
 
 building_baol_organic_plant = {
@@ -372,6 +482,11 @@ building_baol_organic_plant = {
 	upgrades = {
 		"building_avb_baol_organic_plant_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = baol_organic_plant
+		TRIGGER = " "
+	}
 }
 building_avb_baol_organic_plant_2 = {
 	base_buildtime = @avb_f4_time
@@ -410,6 +525,11 @@ building_avb_baol_organic_plant_2 = {
 	}
 	prerequisites = {
 		"tech_avb_baol_organic_plant_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_baol_organic_plant_2
+		TRIGGER = " "
 	}
 }
 
@@ -480,6 +600,11 @@ building_mineral_purification_plant = {
 	upgrades = {
 		building_mineral_purification_hub
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = mineral_purification_plant
+		TRIGGER = " "
+	}
 }
 
 building_mineral_purification_hub = {
@@ -533,6 +658,11 @@ building_mineral_purification_hub = {
 	}
 	upgrades = {
 		"building_avb_mineral_purification_3" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = mineral_purification_hub
+		TRIGGER = " "
 	}
 }
 building_avb_mineral_purification_3 = {
@@ -588,6 +718,11 @@ building_avb_mineral_purification_3 = {
 	prerequisites = {
 		"tech_avb_mineral_purification_3"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_mineral_purification_4 = {
@@ -640,6 +775,11 @@ building_avb_mineral_purification_4 = {
 	}
 	prerequisites = {
 		"tech_avb_mineral_purification_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_4
+		TRIGGER = " "
 	}
 }
 
@@ -712,6 +852,11 @@ building_energy_grid = {
 	upgrades = {
 		building_energy_nexus
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = energy_grid
+		TRIGGER = " "
+	}
 }
 
 building_energy_nexus = {
@@ -751,6 +896,11 @@ building_energy_nexus = {
 	upgrades = {
 		"building_avb_energy_grid_3" #AVB
 		"building_eludium_plant"  #PD?
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = energy_nexus
+		TRIGGER = " "
 	}
 }
 building_avb_energy_grid_3 = {
@@ -793,6 +943,11 @@ building_avb_energy_grid_3 = {
 	prerequisites = {
 		"tech_avb_power_hub_3"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_energy_grid_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_energy_grid_4 = {
@@ -830,6 +985,11 @@ building_avb_energy_grid_4 = {
 	}
 	prerequisites = {
 		"tech_avb_power_hub_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_energy_grid_4
+		TRIGGER = " "
 	}
 }
 
@@ -883,6 +1043,11 @@ building_resource_silo = {
 	upgrades = {
 		"building_avb_resource_silo_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = resource_silo
+		TRIGGER = " "
+	}
 }
 building_avb_resource_silo_2 = {
 	base_buildtime = @avb_rs4_time
@@ -934,6 +1099,68 @@ building_avb_resource_silo_2 = {
 
 	prerequisites = {
 		"tech_mining_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_resource_silo_2
+		TRIGGER = " "
+	}
+}
+building_avb_resource_silo_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		avb_hg_changes = yes
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = crucible_colony
+		}
+	}
+	
+	allow = {
+		exists = owner
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				AND = {
+					NOT = { has_building = building_resource_silo }
+					OR = {
+						owner = {
+							is_machine_empire = yes
+							has_active_tradition = tr_domination_modular_depot
+						}
+						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+						owner = {
+							has_ascension_perk = ap_arcology_project
+							NOT = { has_technology = tech_mega_engineering }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/resource/berg_silo_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/silo
+		tier = 3
+	}
+	prerequisites = {
+		tech_avb_mining_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_resource_silo_3
+		TRIGGER = " "
 	}
 }
 
@@ -994,6 +1221,11 @@ building_bio_reactor = {
 	prerequisites = {
 		"tech_bio_reactor"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = bio_reactor
+		TRIGGER = " "
+	}
 }
 
 building_bio_reactor_2 = {
@@ -1053,6 +1285,11 @@ building_bio_reactor_2 = {
 	prerequisites = {
 		tech_bio_reactor_2
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bio_reactor_2
+		TRIGGER = " "
+	}
 }
 
 building_avb_bio_reactor_3 = {
@@ -1109,6 +1346,11 @@ building_avb_bio_reactor_3 = {
 	}
 
 	prerequisites = {
-		tech_bio_reactor_3
+		"tech_avb_bio_reactor_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bio_reactor_3
+		TRIGGER = " "
 	}
 }

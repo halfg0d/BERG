@@ -106,6 +106,11 @@ building_robot_assembly_plant = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = robot_assembly_plant
+		TRIGGER = " "
+	}
 }
 
 building_robot_assembly_complex = {
@@ -196,6 +201,11 @@ building_robot_assembly_complex = {
 				berg_has_bug_mod = yes
 			}
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = robot_assembly_complex
+		TRIGGER = " "
 	}
 }
 building_avb_robot_assembly_plant_2 = {
@@ -289,6 +299,11 @@ building_avb_robot_assembly_plant_2 = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_robot_assembly_plant_2
+		TRIGGER = " "
+	}
 }
 
 #############
@@ -356,6 +371,11 @@ building_machine_assembly_plant = {
 
 	}
 	is_essential = yes
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = machine_assembly_plant
+		TRIGGER = " "
+	}
 }
 
 building_machine_assembly_complex = {
@@ -404,6 +424,11 @@ building_machine_assembly_complex = {
 		"building_eutab_automation_sector" #EUTAB
 		"building_avb_machine_assembly_plant_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = machine_assembly_complex
+		TRIGGER = " "
+	}
 }
 building_avb_machine_assembly_plant_2 = {
 	icon = building_avb_robot_assembly_plant_2
@@ -451,6 +476,11 @@ building_avb_machine_assembly_plant_2 = {
 	}
 	prerequisites = {
 		"tech_avb_machine_assembly_plant_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_assembly_plant_2
+		TRIGGER = " "
 	}
 }
 
@@ -501,6 +531,11 @@ building_spawning_pool = {
 		"building_eutab_spawning_garden" # EUTAB
 		"building_avb_spawning_pool_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = spawning_pool
+		TRIGGER = " "
+	}
 }
 building_avb_spawning_pool_2 = {
 	base_buildtime = @avb_b2_time
@@ -548,6 +583,11 @@ building_avb_spawning_pool_2 = {
 	prerequisites = {
 		"tech_avb_spawning_pool_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_spawning_pool_2
+		TRIGGER = " "
+	}
 }
 
 building_offspring_nest = {
@@ -585,6 +625,11 @@ building_offspring_nest = {
 
 	upgrades = {
 		"building_avb_offspring_nest_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = offspring_nest
+		TRIGGER = " "
 	}
 }
 building_avb_offspring_nest_2 = {
@@ -630,6 +675,11 @@ building_avb_offspring_nest_2 = {
 	inline_script = {
 		script = building_resources/vanilla/offspring_nest
 		tier = 2
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_offspring_nest_2
+		TRIGGER = " "
 	}
 }
 
@@ -923,6 +973,11 @@ building_clone_vats = {
 		"building_eutab_adv_clone_vats" # EUTAB
 		"building_avb_clone_vats_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = clone_vats
+		TRIGGER = " "
+	}
 }
 building_avb_clone_vats_2 = {
 	base_buildtime = @avb_b2_time
@@ -979,6 +1034,11 @@ building_avb_clone_vats_2 = {
 	}
 	prerequisites = {
 		"tech_avb_clone_vats_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_clone_vats_2
+		TRIGGER = " "
 	}
 }
 
@@ -1071,6 +1131,93 @@ building_clone_army_clone_vat = {
 	is_essential = yes
 	ai_estimate_without_unemployment = yes
 }
+building_avb_clone_army_clone_vat_2 = {
+	base_buildtime = 900
+	position_priority = 100
+	prerequisites = { tech_avb_clone_army_vats_2 }
+	can_build = no
+
+	category = pop_assembly
+
+	potential = {
+		avb_hg_changes = yes
+		exists = owner
+		owner = {
+			has_origin = origin_clone_army
+			has_clone_full_path = yes
+		}
+		if = {
+			limit = {
+				owner = { is_ai = yes }
+			}
+			NOR = {
+				has_building = building_avb_clone_army_clone_vat_2
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					NOT = { has_origin = origin_clone_army }
+					is_synthetic_empire = yes
+					has_clone_full_path = no
+				}
+			}
+		}
+	}
+
+	#BugBranch
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_bug_mod = yes
+			exists = owner
+			owner = {
+				is_bugged_evolutionary_architects = yes
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+
+		}
+	}
+	#
+	inline_script = pop_assembly/avb_clone_army_vat_t2
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @avb_b3_minerals
+		}
+		upkeep = {
+			energy = @avb_b3_upkeep
+		}
+	}
+	triggered_desc = {
+		text = building_clone_army_clone_vat_2_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+
+	is_essential = yes
+	ai_estimate_without_unemployment = yes
+}
 
 #############
 # Permanent Employment Building
@@ -1134,6 +1281,11 @@ building_posthumous_employment_center = {
 	upgrades = {
 		"building_avb_posthumous_employment_center_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = posthumous_employment_center
+		TRIGGER = " "
+	}
 }
 building_avb_posthumous_employment_center_2 = {
 	base_buildtime = @avb_b3_time
@@ -1142,6 +1294,7 @@ building_avb_posthumous_employment_center_2 = {
 	category = pop_assembly
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		OR = {
@@ -1205,6 +1358,11 @@ building_avb_posthumous_employment_center_2 = {
 		script = building_resources/vanilla/posthumous
 		tier = 2
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_posthumous_employment_center_2
+		TRIGGER = " "
+	}
 }
 
 building_toxic_bath_hive = {
@@ -1256,6 +1414,11 @@ building_toxic_bath_hive = {
 	upgrades = {
 		"building_avb_toxic_bath_hive_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = toxic_bath_hive
+		TRIGGER = " "
+	}
 }
 building_avb_toxic_bath_hive_2 = {
 	base_buildtime = @avb_b2_time
@@ -1273,6 +1436,7 @@ building_avb_toxic_bath_hive_2 = {
 	}
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		owner = {
 			is_hive_empire = yes
@@ -1316,6 +1480,11 @@ building_avb_toxic_bath_hive_2 = {
 		script = building_resources/vanilla/toxic_bath_hive
 		tier = 2
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_toxic_bath_hive_2
+		TRIGGER = " "
+	}
 }
 
 building_toxic_bath_machine = {
@@ -1350,6 +1519,11 @@ building_toxic_bath_machine = {
 	upgrades = {
 		"building_avb_toxic_bath_machine_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = toxic_bath_machine
+		TRIGGER = " "
+	}
 }
 building_avb_toxic_bath_machine_2 = {
 	base_buildtime = @avb_b2_time
@@ -1361,6 +1535,7 @@ building_avb_toxic_bath_machine_2 = {
 	}
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		owner = {
 			is_machine_empire = yes
@@ -1393,5 +1568,10 @@ building_avb_toxic_bath_machine_2 = {
 			exists = owner
 		}
 		text = job_toxic_baths_effect_machine_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_toxic_bath_machine_2
+		TRIGGER = " "
 	}
 }

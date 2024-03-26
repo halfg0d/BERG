@@ -43,3 +43,5 @@ has_upgraded_capital_5 = { always = no }
 has_upgraded_capital_6 = { always = no }
 is_habitat = { always = no }
 is_bugged_basic_cult = { always = no }
+avb_hg_changes = { always = no }
+has_clone_full_path = { always = no }

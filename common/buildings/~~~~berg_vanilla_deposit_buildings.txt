@@ -31,6 +31,11 @@ building_mote_harvesters = {
 	upgrades = {
 		"building_avb_gas_extractors_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = mote_harvesters
+		TRIGGER = " "
+	}
 }
 building_avb_mote_harvesters_2 = {
 	base_buildtime = @avb_d4_time
@@ -61,6 +66,11 @@ building_avb_mote_harvesters_2 = {
 	prerequisites = {
 		"tech_avb_mote_harvesters_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mote_harvesters_2
+		TRIGGER = " "
+	}
 }
 building_gas_extractors = {
 	base_buildtime = @b1_time
@@ -90,6 +100,11 @@ building_gas_extractors = {
 	}
 	upgrades = {
 		"building_avb_crystal_mines_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = gas_extractors
+		TRIGGER = " "
 	}
 }
 building_avb_gas_extractors_2 = {
@@ -122,6 +137,11 @@ building_avb_gas_extractors_2 = {
 	prerequisites = {
 		"tech_avb_gas_extractors_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_gas_extractors_2
+		TRIGGER = " "
+	}
 }
 
 building_crystal_mines = {
@@ -151,6 +171,11 @@ building_crystal_mines = {
 	}
 	upgrades = {
 		"building_avb_mote_harvesters_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = crystal_mines
+		TRIGGER = " "
 	}
 }
 
@@ -183,6 +208,11 @@ building_avb_crystal_mines_2 = {
 	prerequisites = {
 		"tech_avb_crystal_mines_2"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_crystal_mines_2
+		TRIGGER = " "
+	}
 }
 
 building_betharian_power_plant = {
@@ -211,6 +241,11 @@ building_betharian_power_plant = {
 	}
 	upgrades = {
 		"building_avb_betharian_power_plant_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = betharian_power_plant
+		TRIGGER = " "
 	}
 }
 building_avb_betharian_power_plant_2 = {
@@ -241,6 +276,11 @@ building_avb_betharian_power_plant_2 = {
 	
 	prerequisites = {
 		"tech_avb_betharian_power_plant_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_betharian_power_plant_2
+		TRIGGER = " "
 	}
 }
 
@@ -309,6 +349,11 @@ building_xeno_zoo = {
 	}
 	upgrades = {
 		"building_avb_xeno_zoo_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = xeno_zoo
+		TRIGGER = " "
 	}
 }
 building_avb_xeno_zoo_2 = {
@@ -385,5 +430,10 @@ building_avb_xeno_zoo_2 = {
 	
 	triggered_desc = {
 		text = job_xeno_zoo_keeper_effect_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_xeno_zoo_2
+		TRIGGER = " "
 	}
 }

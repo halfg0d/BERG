@@ -11,7 +11,7 @@ resources = {
 		category = manufactury
 		building = factory
 		tier = $tier$
-		material = volatile_motes
+		material = rare_crystals
 	}
 	inline_script = {
 		script = resources_scripts/osa_upkeep
@@ -22,7 +22,7 @@ resources = {
 	inline_script = {
 		script = resources_scripts/ringworld_bonus
 		tier = $tier$
-		material = volatile_motes
+		material = rare_crystals
 	}
 	inline_script = {
 		script = resources_scripts/ringworld_bonus_osa

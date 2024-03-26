@@ -66,7 +66,3 @@ triggered_planet_modifier = {
 }
 #OST
 inline_script = tradition_script/ost_solidarity_effect
-#BERG - building desc
-inline_script = "berg_building_desc/monument_megacorp_desc"
-#BERG - building desc
-inline_script = "berg_building_desc/memorial_regular_desc"

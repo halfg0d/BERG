@@ -5,7 +5,7 @@ inline_script = {
 	TRIGGER = "
 	check_variable_arithmetic = {
 		which = $tier$
-		tier = 1
+		value >= 1
 	}
 	"
 }
@@ -15,7 +15,7 @@ inline_script = {
 	TRIGGER = "
 	check_variable_arithmetic = {
 		which = $tier$
-		tier = 2
+		value >= 2
 	}
 	"
 }
@@ -25,7 +25,7 @@ inline_script = {
 	TRIGGER = "
 	check_variable_arithmetic = {
 		which = $tier$
-		tier = 3
+		value >= 3
 	}
 	"
 }
@@ -35,7 +35,7 @@ inline_script = {
 	TRIGGER = "
 	check_variable_arithmetic = {
 		which = $tier$
-		tier = 4
+		value >= 4
 	}
 	"
 }
@@ -45,7 +45,7 @@ inline_script = {
 	TRIGGER = "
 	check_variable_arithmetic = {
 		which = $tier$
-		tier = 5
+		value >= 5
 	}
 	"
 }
@@ -55,7 +55,7 @@ inline_script = {
 	TRIGGER = "
 	check_variable_arithmetic = {
 		which = $tier$
-		tier = 6
+		value >= 6
 	}
 	"
 }

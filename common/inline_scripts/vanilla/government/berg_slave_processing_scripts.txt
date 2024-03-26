@@ -9,5 +9,3 @@ triggered_desc = {
 triggered_desc = {
 	text = building_slave_processing_migrate_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/slave_processing_desc"
