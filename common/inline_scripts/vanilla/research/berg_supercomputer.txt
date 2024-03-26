@@ -7,5 +7,3 @@ inline_script = {
 	script = jobs/researchers_add
 	AMOUNT = @berg_research_supercomputer_job_t$tier$
 }
-#BERG - building desc
-inline_script = "berg_building_desc/supercomputer_desc"

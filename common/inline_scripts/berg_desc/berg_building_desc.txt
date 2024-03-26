@@ -3,5 +3,5 @@ desc = {
 		can_show_support_desc = yes 
 		$TRIGGER$
 	}
-	text = berg_$BUILDING$_sup
+	text = berg_building_$BUILDING$_sup
 }

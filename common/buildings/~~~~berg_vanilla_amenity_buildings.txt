@@ -1479,7 +1479,7 @@ building_avb_clinic_3 = {
 	}
 	
 	show_tech_unlock_if = {
-		is_regular_empire = no
+		is_regular_empire = yes
 	}
 }
 

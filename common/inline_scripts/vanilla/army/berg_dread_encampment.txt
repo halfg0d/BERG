@@ -7,5 +7,3 @@ triggered_desc = {
 	}
 	text = job_necromancer_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/dread_encampment_desc"

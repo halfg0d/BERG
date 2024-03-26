@@ -110,5 +110,3 @@ inline_script = {
 	commando_drone_add = @berg_army_stronghold_osa_drone_t$tier$
 	warrior_drone_subtract = @berg_army_stronghold_osa_drone_t$tier$
 }
-#BERG - building desc
-inline_script = "berg_building_desc/stronghold_desc"

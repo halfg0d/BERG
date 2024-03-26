@@ -1,6 +1,17 @@
+defined_text = {
+	name = GetSupTitle
+	random = no
+	text = {
+		trigger = {
+			berg_has_any_supported_mod = yes
+		}
+		localization_key = mod_support_title
+	}
+	default = ""
+}
 #PD
 defined_text = {
-	name = GetsupPD
+	name = GetSupPD
 	random = no
 	text = {
 		trigger = {
@@ -12,7 +23,7 @@ defined_text = {
 }
 #OSA
 defined_text = {
-	name = GetsupOsa
+	name = GetSupOsa
 	random = no
 	text = {
 		trigger = {
@@ -24,7 +35,7 @@ defined_text = {
 }
 #OST
 defined_text = {
-	name = GetsupOst
+	name = GetSupOst
 	random = no
 	text = {
 		trigger = {
@@ -37,7 +48,7 @@ defined_text = {
 }
 #ECC
 defined_text = {
-	name = GetsupECC
+	name = GetSupECC
 	random = no
 	text = {
 		trigger = {
@@ -49,7 +60,7 @@ defined_text = {
 }
 #AVB
 defined_text = {
-	name = GetsupAVB
+	name = GetSupAVB
 	random = no
 	text = {
 		trigger = {
@@ -61,7 +72,7 @@ defined_text = {
 }
 #BUG
 defined_text = {
-	name = GetsupBug
+	name = GetSupBug
 	random = no
 	text = {
 		trigger = {
@@ -73,7 +84,7 @@ defined_text = {
 }
 #GPM
 defined_text = {
-	name = GetsupPD
+	name = GetSupPD
 	random = no
 	text = {
 		trigger = {
@@ -85,7 +96,7 @@ defined_text = {
 }
 #UAP
 defined_text = {
-	name = GetsupUap
+	name = GetSupUap
 	random = no
 	text = {
 		trigger = {
@@ -97,7 +108,7 @@ defined_text = {
 }
 #GIGA
 defined_text = {
-	name = GetsupGiga
+	name = GetSupGiga
 	random = no
 	text = {
 		trigger = {
@@ -109,7 +120,7 @@ defined_text = {
 }
 #ZEX
 defined_text = {
-	name = GetsupZex
+	name = GetSupZex
 	random = no
 	text = {
 		trigger = {

@@ -3748,6 +3748,7 @@ building_avb_autocurating_vault_2 = {
 	can_build = no
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
@@ -3881,6 +3882,7 @@ building_avb_citadel_of_faith_2 = {
 	can_build = no
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
@@ -4009,6 +4011,7 @@ building_avb_corporate_vault_2 = {
 	category = unity
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
@@ -4118,6 +4121,7 @@ building_avb_alpha_hub_2 = {
 	can_build = no
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_machine_empire = yes }
@@ -4577,6 +4581,7 @@ building_avb_league_offices_2 = {
 	category = unity
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		owner = { has_technology = tech_avb_league_offices_2 }

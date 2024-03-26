@@ -1009,6 +1009,93 @@ building_clone_army_clone_vat = {
 	is_essential = yes
 	ai_estimate_without_unemployment = yes
 }
+building_avb_clone_army_clone_vat_2 = {
+	base_buildtime = 900
+	position_priority = 100
+	prerequisites = { tech_avb_clone_army_vats_2 }
+	can_build = no
+
+	category = pop_assembly
+
+	potential = {
+		avb_hg_changes = yes
+		exists = owner
+		owner = {
+			has_origin = origin_clone_army
+			has_clone_full_path = yes
+		}
+		if = {
+			limit = {
+				owner = { is_ai = yes }
+			}
+			NOR = {
+				has_building = building_avb_clone_army_clone_vat_2
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					NOT = { has_origin = origin_clone_army }
+					is_synthetic_empire = yes
+					has_clone_full_path = no
+				}
+			}
+		}
+	}
+
+	#BugBranch
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_bug_mod = yes
+			exists = owner
+			owner = {
+				is_bugged_evolutionary_architects = yes
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.1
+
+		}
+	}
+	#
+	inline_script = pop_assembly/avb_clone_army_vat_t2
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @avb_b3_minerals
+		}
+		upkeep = {
+			energy = @avb_b3_upkeep
+		}
+	}
+	triggered_desc = {
+		text = building_clone_army_clone_vat_2_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+
+	is_essential = yes
+	ai_estimate_without_unemployment = yes
+}
 
 #############
 # Permanent Employment Building
@@ -1080,6 +1167,7 @@ building_avb_posthumous_employment_center_2 = {
 	category = pop_assembly
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		OR = {
@@ -1211,6 +1299,7 @@ building_avb_toxic_bath_hive_2 = {
 	}
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		owner = {
 			is_hive_empire = yes
@@ -1299,6 +1388,7 @@ building_avb_toxic_bath_machine_2 = {
 	}
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		owner = {
 			is_machine_empire = yes

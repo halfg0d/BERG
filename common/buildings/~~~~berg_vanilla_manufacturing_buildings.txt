@@ -1571,6 +1571,7 @@ building_avb_archaeo_refinery_2 = {
 	category = manufacturing
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		NOR = {
 			has_modifier = resort_colony

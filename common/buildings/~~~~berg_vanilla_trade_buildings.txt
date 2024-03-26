@@ -40,6 +40,11 @@ building_commercial_zone = {
 	upgrades = {
 		"building_commercial_megaplex"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = commercial_zone
+		TRIGGER = " "
+	}
 }
 
 building_commercial_megaplex = {
@@ -92,6 +97,11 @@ building_commercial_megaplex = {
 				}
 			}
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = commercial_megaplex
+		TRIGGER = " "
 	}
 }
 building_avb_commercial_3 = {
@@ -150,6 +160,11 @@ building_avb_commercial_3 = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_commercial_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_commercial_4 = {
@@ -207,6 +222,11 @@ building_avb_commercial_4 = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_supercomputer_4
+		TRIGGER = " "
+	}
 }
 
 building_avb_commercial_5 = {
@@ -259,6 +279,11 @@ building_avb_commercial_5 = {
 				}
 			}
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_commercial_5
+		TRIGGER = " "
 	}
 }
 
@@ -338,6 +363,11 @@ building_galactic_stock_exchange = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = galactic_stock_exchange
+		TRIGGER = " "
+	}
 }
 building_avb_galactic_stock_exchange_2 = {
 	base_buildtime = @avb_t4_time
@@ -410,5 +440,10 @@ building_avb_galactic_stock_exchange_2 = {
 				has_system_trade_value >= 80
 			}
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_galactic_stock_exchange_2
+		TRIGGER = " "
 	}
 }

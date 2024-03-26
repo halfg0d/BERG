@@ -29,5 +29,3 @@ triggered_planet_modifier = {
 		job_warrior_drone_add = @berg_army_planetary_shield_osa_job_t$tier$
 	}
 }
-#BERG - building desc
-inline_script = "berg_building_desc/planetary_shield_desc"

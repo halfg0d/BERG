@@ -84,5 +84,3 @@ triggered_desc = {
 	}
 	text = job_entrepreneur_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/commercial_desc"
