@@ -15,5 +15,3 @@ triggered_planet_modifier = {
 	}
 	job_bath_attendant_add = @berg_amenity_toxic_bath_osa_job_t$tier$
 }
-#BERG - building desc
-inline_script = "berg_building_desc/toxic_bath_desc"

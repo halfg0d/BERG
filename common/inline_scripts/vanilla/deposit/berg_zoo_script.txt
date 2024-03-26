@@ -128,5 +128,3 @@ triggered_desc = {
 	}
 	text = job_livestock_zoo_beast_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/xeno_zoo_desc"

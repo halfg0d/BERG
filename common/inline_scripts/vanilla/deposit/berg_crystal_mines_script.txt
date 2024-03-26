@@ -43,5 +43,3 @@ inline_script = {
 	script = tradition_script/ost_renewal
 	resource = crystals
 }
-#BERG - building desc
-inline_script = "berg_building_desc/crystal_mines_desc"

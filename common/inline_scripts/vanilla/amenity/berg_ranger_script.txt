@@ -21,5 +21,3 @@ triggered_desc = {
 	text = job_ranger_effect_desc
 }
 inline_script = vanilla/amenity/berg_resolution_script
-#BERG - building desc
-inline_script = "berg_building_desc/ranger_desc"

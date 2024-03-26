@@ -10,5 +10,3 @@ triggered_planet_modifier = {
 	planet_housing_add = @berg_amenity_overseer_home_osa_housing_t$tier$
 	job_slave_overseer_add = @berg_amenity_overseer_home_osa_job_t$tier$
 }
-#BERG - building desc
-inline_script = "berg_building_desc/overseer_home_desc"

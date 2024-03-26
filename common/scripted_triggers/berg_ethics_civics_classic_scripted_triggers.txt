@@ -80,3 +80,12 @@ berg_ecc_is_defender_faith = {
 	berg_has_ecc_mod = yes
 	has_civic = civic_defenders_faith
 }
+berg_ecc_temple_construct = {
+	OR = {
+		berg_has_ecc_mod = no
+		AND = {
+			berg_has_ecc_mod = yes
+			is_death_cult_empire = no
+		}
+	}
+}

@@ -154,5 +154,3 @@ triggered_desc = {
 	}
 	text = job_osa_commando_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/military_academy_desc"

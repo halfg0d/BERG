@@ -57,5 +57,3 @@ triggered_desc = {
 	}
 	text = job_evaluator_effect_desc
 }
-#BERG - building desc
-inline_script = "berg_building_desc/depot_desc"
