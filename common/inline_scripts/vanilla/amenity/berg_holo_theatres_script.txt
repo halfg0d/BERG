@@ -2,10 +2,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			NOR = {
-				has_valid_civic = civic_warrior_culture
-				has_valid_civic = civic_corporate_mercenary_contractors
-			}
+			berg_can_duelist_be_changed = no
 		}
 	}
 	modifier = {
@@ -17,10 +14,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			OR = {
-				has_valid_civic = civic_warrior_culture
-				has_valid_civic = civic_corporate_mercenary_contractors
-			}
+			berg_can_duelist_be_changed = yes
 		}
 	}
 	modifier = {
@@ -32,10 +26,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			NOR = {
-				has_valid_civic = civic_warrior_culture
-				has_valid_civic = civic_corporate_mercenary_contractors
-			}
+			berg_can_duelist_be_changed = no
 		}
 	}
 	text = job_entertainer_effect_desc
@@ -44,10 +35,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			OR = {
-				has_valid_civic = civic_warrior_culture
-				has_valid_civic = civic_corporate_mercenary_contractors
-			}
+			berg_can_duelist_be_changed = yes
 		}
 	}
 	text = job_duelist_effect_desc

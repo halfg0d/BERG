@@ -1,0 +1,47 @@
+#Factory jobs
+#Swaps between empires type
+
+#Artisan
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = artisan
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_crafter_empire = no
+	}
+	"
+}
+#Artificier
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = artificer
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_crafter_empire = yes
+	}
+	"
+}
+#Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = artisan_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_gestalt = yes
+	}
+	"
+}

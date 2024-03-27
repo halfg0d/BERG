@@ -1,0 +1,61 @@
+# temple
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = temple
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = holotemple
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = sacred_nexus
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 3
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_temple_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 4
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_temple_5
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 5
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_temple_6
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 6
+	}
+	"
+}

@@ -316,6 +316,7 @@ building_necroseeders_1 = {
 				has_civic = civic_permanent_employment
 				has_civic = civic_reanimated_armies
 				berg_is_necrophage_empire = yes
+				has_ascension_perk = ap_mechromancy
 			}
 		}
 	}
@@ -408,6 +409,7 @@ building_necroseeders_2 = {
 				has_civic = civic_permanent_employment
 				has_civic = civic_reanimated_armies
 				berg_is_necrophage_empire = yes
+				has_ascension_perk = ap_mechromancy
 			}
 		}
 	}
@@ -458,6 +460,7 @@ building_necroseeders_3 = {
 				has_civic = civic_permanent_employment
 				has_civic = civic_reanimated_armies
 				berg_is_necrophage_empire = yes
+				has_ascension_perk = ap_mechromancy
 			}
 		}
 	}

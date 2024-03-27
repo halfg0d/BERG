@@ -7,8 +7,64 @@ triggered_planet_modifier = {
 	job_spawning_drone_add = -1
 	job_offspring_drone_add = 1
 }
+# OSA
+triggered_planet_modifier = {
+	potential = {
+		berg_is_habitat = no
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_hive_sonar_senses
+		}
+	}
+	modifier = {
+		job_osom_mapping_drone_add = @berg_capital_hive_capital_osa_job2_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { has_civic = civic_hive_aggregate_catharsis }
+	}
+	modifier = {
+		job_osa_omni_drone_add = @berg_capital_hive_capital_osa_job2_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { has_civic = civic_hive_aggregate_catharsis }
+	}
+	modifier = {
+		job_maintenance_drone_add = @berg_capital_hive_capital_osa_job2_t$tier$
+	}
+	mult = -1
+}
+triggered_desc = {
+	trigger = {
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = { has_civic = civic_hive_aggregate_catharsis }
+	}
+	text = job_osa_omni_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_is_habitat = no
+		berg_has_osa_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_hive_sonar_senses
+		}
+	}
+	text = job_osom_mapping_drone_effect_desc
+}
+# Solidarity Tradition
 inline_script = {
-	script = OSA/berg_osa_capital_job
-	tier = $tier$
+	script = tradition_script/ost_solidarity_job
 }
 inline_script = "vanilla/capitals/hive/berg_scripts_jobs_desc"

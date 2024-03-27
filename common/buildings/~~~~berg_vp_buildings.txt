@@ -33,23 +33,12 @@ building_bank_office = {
 			berg_vp_is_bancorp = no
 		}
 	}
-
-	triggered_planet_modifier = {
-		potential = {
-			berg_has_ecc_mod = no
-		}
-		modifier = {
-			job_merchant_add = 1
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			berg_has_ecc_mod = yes
-		}
-		modifier = {
-			job_mogul_add = 1
-		}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = " "
+		DESC = with
 	}
 
 	triggered_planet_modifier = {
@@ -78,19 +67,6 @@ building_bank_office = {
 			script = tradition_script/ost_commerce
 			tier = 1
 		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			berg_has_ecc_mod = no
-		}
-		text = job_merchant_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			berg_has_ecc_mod = yes
-		}
-		text = job_mogul_effect_desc
 	}
 	triggered_desc = {
 		trigger = {

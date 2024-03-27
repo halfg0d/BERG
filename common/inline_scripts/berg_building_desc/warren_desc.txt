@@ -1,0 +1,41 @@
+# warren
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = hive_warren
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = expanded_warren
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_warren_3
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 3
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_warren_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 4
+	}
+	"
+}

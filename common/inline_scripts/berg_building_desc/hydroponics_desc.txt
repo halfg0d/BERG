@@ -1,0 +1,21 @@
+# hydroponics
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = hydroponics_farm
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_hydroponics_farm_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

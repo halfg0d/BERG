@@ -40,10 +40,10 @@ triggered_planet_modifier = {
 		job_slave_overseer_add = @berg_capitals_$tier$_overseer
 	}
 }
-#OSA
+#OST
 triggered_planet_modifier = {
 	potential = {
-		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = {
 			has_active_tradition = tr_solidarity_3

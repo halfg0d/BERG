@@ -62,10 +62,19 @@ triggered_planet_modifier = {
 		job_angler_add = @berg_resource_hydroponics_job_t$tier$
 	}
 }
-#OSA
+#OST
 triggered_planet_modifier = {
 	potential = {
-		berg_has_osa_mod = yes
+		exists = owner
+		berg_has_ost_mod = yes
+	}
+	modifier = {
+		planet_farmers_food_produces = 0.5
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = {
 			is_gestalt = no
@@ -86,7 +95,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = { is_fallen_empire_spiritualist = yes }
 		berg_has_food_processing = yes
@@ -97,7 +106,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = { is_gestalt = yes }
 		berg_has_food_processing = yes
@@ -108,7 +117,7 @@ triggered_planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes

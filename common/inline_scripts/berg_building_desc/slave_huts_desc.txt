@@ -1,0 +1,21 @@
+# slave_huts
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = slave_huts
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_slave_huts_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

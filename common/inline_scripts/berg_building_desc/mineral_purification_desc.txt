@@ -1,0 +1,21 @@
+# mineral_purification
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = mineral_purification_plant
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = scrap_processing_hub
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

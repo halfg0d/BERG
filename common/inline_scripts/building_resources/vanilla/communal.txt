@@ -7,6 +7,12 @@ resources = {
 		tier = $tier$
 	}
 	inline_script = {
+		script = resources_scripts/special/zExpanded/civicPlantOrganic
+		category = amenity
+		building = communal
+		tier = $tier$
+	}
+	inline_script = {
 		script = resources_scripts/rare
 		category = amenity
 		building = communal

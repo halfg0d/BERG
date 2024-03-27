@@ -33,20 +33,6 @@ triggered_desc = {
 }
 triggered_desc = {
 	trigger = {
-		berg_has_ecc_mod = no
-		exists = owner
-		owner = {
-			OR = {
-				berg_has_any_merchant_civic = yes
-				berg_vp_is_bancorp = yes
-			}
-		}
-		$condition$
-	}
-	text = job_merchant_effect_desc
-}
-triggered_desc = {
-	trigger = {
 		exists = owner
 		owner = {
 			NOT = { has_authority = auth_corporate }

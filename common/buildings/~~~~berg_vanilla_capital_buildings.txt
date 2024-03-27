@@ -73,7 +73,7 @@ building_colony_shelter = {
 		osa_branch_add = 1
 	}
 	inline_script = {
-		script = OSA/berg_osa_colony_jobs
+		script = OST/ost_capital_colony_jobs
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -218,7 +218,7 @@ building_capital = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r1
+		tier = 1
 		trigger = ""
 		#ECC
 		transcend = no
@@ -281,6 +281,11 @@ building_capital = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = capital
+		TRIGGER = " "
 	}
 }
 
@@ -349,7 +354,7 @@ building_major_capital = {
 
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r2
+		tier = 2
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -443,6 +448,11 @@ building_major_capital = {
 	upgrades = {
 		"building_system_capital"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = major_capital
+		TRIGGER = " "
+	}
 }
 
 building_system_capital = {
@@ -509,7 +519,7 @@ building_system_capital = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r3
+		tier = 3
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -614,6 +624,11 @@ building_system_capital = {
 		"building_imperial_capital" #Vanilla
 		"building_avb_capital_4" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = system_capital
+		TRIGGER = " "
+	}
 }
 building_avb_capital_4 = {
 	base_buildtime = @avb_c4_time
@@ -682,7 +697,7 @@ building_avb_capital_4 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r4
+		tier = 4
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -773,6 +788,11 @@ building_avb_capital_4 = {
 		}
 		text = job_unifier_effect_desc
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_capital_4
+		TRIGGER = " "
+	}
 }
 building_avb_capital_5 = {
 	base_buildtime = @avb_c5_time
@@ -841,7 +861,7 @@ building_avb_capital_5 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r5
+		tier = 5
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -931,6 +951,11 @@ building_avb_capital_5 = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_capital_5
+		TRIGGER = " "
 	}
 }
 building_avb_capital_6 = {
@@ -1000,7 +1025,7 @@ building_avb_capital_6 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/regular/berg_scripts_jobs
-		tier = r6
+		tier = 6
 		trigger = ""
 		#ECC
 		transcend = yes
@@ -1063,7 +1088,7 @@ building_avb_capital_6 = {
 
 	inline_script = {
 		script = building_resources/vanilla/regular_capital
-		tier = 5
+		tier = 6
 	}
 
 	triggered_desc = {
@@ -1090,6 +1115,11 @@ building_avb_capital_6 = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_capital_6
+		TRIGGER = " "
 	}
 }
 
@@ -1319,6 +1349,11 @@ building_machine_capital = {
 	upgrades = {
 		building_machine_major_capital
 	}	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = machine_capital
+		TRIGGER = " "
+	}
 }
 
 # Planetary Processor
@@ -1405,6 +1440,11 @@ building_machine_major_capital = {
 
 	upgrades = {
 		"building_machine_system_capital"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = machine_major_capital
+		TRIGGER = " "
 	}
 }
 
@@ -1512,6 +1552,11 @@ building_machine_system_capital = {
 	upgrades = {
 		"building_imperial_machine_capital" #Vanilla
 		"building_avb_machine_capital_4" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = machine_system_capital
+		TRIGGER = " "
 	}
 }
 building_avb_machine_capital_4 = {
@@ -1621,6 +1666,11 @@ building_avb_machine_capital_4 = {
 		script = building_resources/vanilla/machine_capital
 		tier = 4
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_capital_4
+		TRIGGER = " "
+	}
 }
 
 building_avb_machine_capital_5 = {
@@ -1729,6 +1779,11 @@ building_avb_machine_capital_5 = {
 		script = building_resources/vanilla/machine_capital
 		tier = 5
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_capital_5
+		TRIGGER = " "
+	}
 }
 
 building_avb_machine_capital_6 = {
@@ -1836,6 +1891,11 @@ building_avb_machine_capital_6 = {
 		script = building_resources/vanilla/machine_capital
 		tier = 6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_capital_6
+		TRIGGER = " "
+	}
 }
 
 
@@ -1905,7 +1965,7 @@ building_hive_capital = {
 	}
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h1
+		tier = 1
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -1928,9 +1988,13 @@ building_hive_capital = {
 		pop_growth_speed = 0.10
 	}
 	inline_script = {
-		script = building_resources/vanilla/
+		script = building_resources/vanilla/hive_capital
 		tier = 1
-		type = hive
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hive_capital
+		TRIGGER = " "
 	}
 }
 
@@ -1997,7 +2061,7 @@ building_hive_major_capital = {
 	
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h2
+		tier = 2
 	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
@@ -2020,6 +2084,11 @@ building_hive_major_capital = {
 	inline_script = {
 		script = building_resources/vanilla/hive_capital
 		tier = 2
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hive_major_capital
+		TRIGGER = " "
 	}
 }
 building_avb_hive_capital_3 = {
@@ -2077,7 +2146,7 @@ building_avb_hive_capital_3 = {
 	}
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h3
+		tier = 3
 	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
@@ -2111,7 +2180,12 @@ building_avb_hive_capital_3 = {
 	
 	upgrades = {
 		building_avb_hive_capital_4
-	}	
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hive_capital_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_hive_capital_4 = {
@@ -2171,7 +2245,7 @@ building_avb_hive_capital_4 = {
 	
 	inline_script = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
-		tier = h4
+		tier = 4
 	}
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
@@ -2213,6 +2287,11 @@ building_avb_hive_capital_4 = {
 	}
 	upgrades = {
 		building_imperial_hive_capital
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hive_capital_4
+		TRIGGER = " "
 	}
 }
 
@@ -2271,7 +2350,7 @@ building_hab_capital = {
 		tier = h1
 	}
 	inline_script = {
-		script = OSA/berg_osa_colony_jobs
+		script = OST/ost_capital_colony_jobs
 	}
 	inline_script = "BUG/berg_distributism_effect"
 	inline_script = "BUG/berg_capital_jobs_desc"
@@ -2393,6 +2472,11 @@ building_hab_capital = {
 	}
 	inline_script = "vanilla/capitals/habitat/berg_scripts_regular_jobs_desc"
 	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hab_capital
+		TRIGGER = " "
+	}
 }
 
 
@@ -2570,6 +2654,11 @@ building_hab_major_capital = {
 		}
 		text = job_culture_worker_effect_desc
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hab_major_capital
+		TRIGGER = " "
+	}
 }
 building_avb_hab_capital_3 = {
 	base_buildtime = @avb_c4_time
@@ -2733,6 +2822,11 @@ building_avb_hab_capital_3 = {
 		}
 		text = job_culture_worker_effect_desc
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hab_capital_3
+		TRIGGER = " "
+	}
 }
 
 #############
@@ -2822,6 +2916,11 @@ building_resort_capital = {
 	}
 	upgrades = {
 		"building_resort_major_capital"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = resort_capital
+		TRIGGER = " "
 	}
 }
 
@@ -2921,6 +3020,11 @@ building_resort_major_capital = {
 			owner = { has_active_tradition = tr_synthetics_finish }
 		}
 		text = job_roboticist_effect_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = resort_major_capital
+		TRIGGER = " "
 	}
 }
 building_avb_resort_capital_3 = {
@@ -3022,6 +3126,11 @@ building_avb_resort_capital_3 = {
 		}
 		text = job_roboticist_effect_desc
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_resort_capital_3
+		TRIGGER = " "
+	}
 }
 
 # Thrall-World Capital
@@ -3110,6 +3219,11 @@ building_slave_capital = {
 	upgrades = {
 		"building_slave_major_capital"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = slave_capital
+		TRIGGER = " "
+	}
 }
 
 # Thrall-World Major Capital
@@ -3187,6 +3301,11 @@ building_slave_major_capital = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = slave_major_capital
+		TRIGGER = " "
 	}
 }
 building_avb_slave_capital_3 = {
@@ -3266,6 +3385,11 @@ building_avb_slave_capital_3 = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_slave_capital_3
+		TRIGGER = " "
 	}
 }
 
@@ -3397,6 +3521,12 @@ building_imperial_capital = {
 		}
 		text = job_roboticist_effect_desc
 	}
+
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = imperial_capital
+		TRIGGER = "always = no"
+	}
 }
 
 # Imperial Center
@@ -3493,6 +3623,11 @@ building_imperial_machine_capital = {
 		script = building_resources/vanilla/machine_capital
 		tier = 7
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = imperial_machine_capital
+		TRIGGER = "always = no"
+	}
 }
 
 # Imperial Complex
@@ -3573,5 +3708,10 @@ building_imperial_hive_capital = {
 	inline_script = {
 		script = building_resources/vanilla/hive_capital
 		tier = 7
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = imperial_hive_capital
+		TRIGGER = "always = no"
 	}
 }

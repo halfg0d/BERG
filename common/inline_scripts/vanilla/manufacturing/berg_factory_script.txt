@@ -1,10 +1,7 @@
 #Bonus
 triggered_planet_modifier = {
 	potential = {
-		check_variable_arithmetic = {
-			which = $tier$
-			value >= 2
-		}
+		always = yes
 	}
 	modifier = {
 		planet_artisans_consumer_goods_produces_add = @berg_manufactury_factory_produce_t$tier$
@@ -15,7 +12,7 @@ triggered_planet_modifier = {
 	potential = {
 		check_variable_arithmetic = {
 			which = $tier$
-			value >= 2
+			value >= 3
 		}
 		has_ringworld_output_boost = yes
 	}
@@ -25,8 +22,11 @@ triggered_planet_modifier = {
 	}
 }
 inline_script = {
-	script = berg_jobs/factory
+	script = berg_jobs_group/factory_add
 	AMOUNT = @berg_manufactury_factory_job_t$tier$
+	MULT = 1
+	TRIGGER = " "
+	DESC = with
 }
 inline_script = {
 	script = UAP/berg_uap_industrialist
@@ -42,4 +42,3 @@ inline_script = {
 	isForge = no
 	job_add = @berg_manufactury_factory_ost_job_t$tier$
 }
-#Desc

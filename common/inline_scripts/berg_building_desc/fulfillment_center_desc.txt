@@ -1,0 +1,21 @@
+# fulfillment_center
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = coordinated_fulfillment_center_1
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = coordinated_fulfillment_center_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

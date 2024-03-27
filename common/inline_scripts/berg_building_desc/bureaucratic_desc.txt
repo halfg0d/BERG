@@ -1,0 +1,61 @@
+# bureaucratic
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = bureaucratic_1
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = bureaucratic_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = bureaucratic_3
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 3
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_bureaucratic_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 4
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_bureaucratic_5
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 5
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_bureaucratic_6
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 6
+	}
+	"
+}

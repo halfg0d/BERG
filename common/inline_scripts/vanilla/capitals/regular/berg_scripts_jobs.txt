@@ -17,7 +17,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_politician_add = @berg_capital_$tier$_politician1
+		job_politician_add = @berg_capital_regular_capital_politician1_t$tier$
 	}
 }
 m
@@ -31,7 +31,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_executive_add = @berg_capital_$tier$_executive
+		job_executive_add = @berg_capital_regular_capital_executive_t$tier$
 	}
 }
 triggered_planet_modifier = {
@@ -44,7 +44,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_steward_add = @berg_capital_$tier$_steward
+		job_steward_add = @berg_capital_regular_capital_steward_t$tier$
 	}
 }
 
@@ -57,8 +57,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_high_priest_add = @berg_capital_$tier$_high_priest
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_high_priest_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
@@ -71,8 +71,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_noble_add = @berg_capital_$tier$_noble
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_noble_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
@@ -85,38 +85,35 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_head_researcher_add = @berg_capital_$tier$_head_researcher
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_head_researcher_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
 triggered_planet_modifier = {
 	potential = {
-		berg_has_ecc_mod = no
 		exists = owner
 		owner = { 
 			berg_has_any_merchant_civic = yes
 		}
 		$trigger$
 	}
-	modifier = {
-		job_merchant_add = @berg_capital_$tier$_merchant
-		job_politician_add = @berg_capital_$tier$_politician2
+	modifier = {=
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			berg_has_any_merchant_civic = yes
-		}
-		$trigger$
+inline_script = {
+	script = berg_jobs_group/merchant_add
+	AMOUNT = @berg_capital_regular_capital_special_t$tier$
+	MULT = 1
+	TRIGGER = "
+	exists = owner
+	owner = { 
+		berg_has_any_merchant_civic = yes
 	}
-	modifier = {
-		job_mogul_add = @berg_ecc_$tier$_mogul
-		job_politician_add = @berg_ecc_$tier$_politician_mogul
-	}
+	$trigger$
+	"
+	DESC = with
 }
 
 triggered_planet_modifier = {
@@ -128,8 +125,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_knight_commander_add = @berg_capital_$tier$_knight_commander
-		job_knight_add = @berg_capital_$tier$_knight
+		job_knight_commander_add = @berg_capital_r$tier$_knight_commander
+		job_knight_add = @berg_capital_r$tier$_knight
 	}
 }
 #Vanilla
@@ -143,7 +140,7 @@ triggered_planet_modifier = {
 #Ethic Civic Classic
 inline_script = {
 	script = ECC/berg_ecc_capital_script
-	tier = $tier$
+	tier = r$tier$
 	trigger = $trigger$
 	transcend = $transcend$
 	healthcare = $healtcare$
@@ -151,18 +148,18 @@ inline_script = {
 #Ethic Civic Bug Branch
 inline_script = {
 	script = BUG/berg_capital_jobs
-	tier = $tier$
+	tier = r$tier$
 	trigger = $trigger$
 }
 #Omega Stellaris Tradition
 inline_script = {
 	script = OSA/berg_osa_capital_jobs
-	tier = $tier$
+	tier = r$tier$
 }
 #Venture Politics
 inline_script = {
 	script = VP/berg_vp_capital_job
-	tier = $tier$
+	tier = r$tier$
 }
 #Description
 inline_script = {

@@ -118,6 +118,7 @@ triggered_planet_modifier = {
 		job_warrior_drone_add = @berg_army_military_academy_osa_soldier_t$tier$
 	}
 }
+
 triggered_desc = {
 	trigger = {
 		berg_has_osa_mod = yes

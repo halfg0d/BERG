@@ -560,8 +560,14 @@ ring_galactic_stock_exchange = {
 	}
 
 	planet_modifier = {
-		job_merchant_add = 1
 		trade_value_mult = 0.20
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = " "
+		DESC = with
 	}
 
 	resources = {

@@ -1,0 +1,41 @@
+# food_processing
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = food_processing_facility
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = food_processing_center
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_food_processing_3
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 3
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_food_processing_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 4
+	}
+	"
+}

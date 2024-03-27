@@ -1,0 +1,61 @@
+# research_lab
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = research_lab_1
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = research_lab_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 2
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = research_lab_3
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 3
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_research_lab_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 4
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_research_lab_5
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 5
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_research_lab_6
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 6
+	}
+	"
+}

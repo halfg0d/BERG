@@ -347,5 +347,31 @@ berg_slave_colony_manufactury_not = {
 			}
 		}
 	}
-	
+}
+berg_is_machine_cult = {
+	berg_has_ecc_mod = yes
+	has_civic = civic_machine_cult
+}
+can_show_support_desc = {
+	always = no #DESC Support
+}
+berg_has_gpm_mod = {
+	gpm_mod_active = yes
+}
+berg_has_zexpanded_mod = {
+	always = no
+}
+berg_has_any_supported_mod = {
+	OR = {
+		berg_has_planetary_diversity_mod = yes
+		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
+		berg_has_ecc_mod = yes
+		berg_has_avb_mod = yes
+		berg_has_bug_mod = yes
+		berg_has_gpm_mod = yes
+		berg_has_uap_mod = yes
+		berg_has_giga_mod = yes
+		berg_has_zexpanded_mod = yes
+	}
 }

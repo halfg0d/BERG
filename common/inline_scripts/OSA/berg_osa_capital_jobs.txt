@@ -13,8 +13,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_commander_add = @berg_osa_$tier$_job1
-		job_osa_commando_add = @berg_osa_$tier$_job1
+		job_osa_commander_add = @berg_capital_regular_capital_osa_job1_t$tier$
+		job_osa_commando_add = @berg_capital_regular_capital_osa_job1_t$tier$
 	}
 }
 
@@ -28,8 +28,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_head_ecologist_add = @berg_osa_$tier$_job1
-		job_ranger_add = @berg_osa_$tier$_job1
+		job_osa_head_ecologist_add = @berg_capital_regular_capital_osa_job1_t$tier$
+		job_ranger_add = @berg_capital_regular_capital_osa_job1_t$tier$
 	}
 }
 
@@ -43,8 +43,8 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_chief_engineer_add = @berg_osa_$tier$_job1
-		job_artificer_add = @berg_osa_$tier$_job1
+		job_osa_chief_engineer_add = @berg_capital_regular_capital_osa_job1_t$tier$
+		job_artificer_add = @berg_capital_regular_capital_osa_job1_t$tier$
 	}
 }
 
@@ -61,7 +61,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_mining_director_add = @berg_osa_$tier$_job2
+		job_osa_mining_director_add = @berg_capital_regular_capital_osa_job2_t$tier$
 	}
 }
 
@@ -78,7 +78,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_agri_director_add = @berg_osa_$tier$_job2
+		job_osa_agri_director_add = @berg_capital_regular_capital_osa_job2_t$tier$
 	}
 }
 
@@ -95,7 +95,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osa_energy_director_add = @berg_osa_$tier$_job2
+		job_osa_energy_director_add = @berg_capital_regular_capital_osa_job2_t$tier$
 	}
 }
 
@@ -115,33 +115,6 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_osom_speleologist_add = @berg_osa_$tier$_job2
-	}
-}
-
-# Hive
-triggered_planet_modifier = {
-	potential = {
-		berg_is_habitat = no
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = {
-			has_civic = civic_hive_sonar_senses
-		}
-	}
-	modifier = {
-		job_osom_mapping_drone_add = @berg_osa_$tier$_job2
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
-		exists = owner
-		owner = { has_civic = civic_hive_aggregate_catharsis }
-	}
-	modifier = {
-		job_osa_omni_drone_add = @berg_osa_$tier$_job2
-		job_maintenance_drone_add = -@berg_osa_$tier$_job2
+		job_osom_speleologist_add = @berg_capital_regular_capital_osa_job2_t$tier$
 	}
 }

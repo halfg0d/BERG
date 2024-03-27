@@ -1,0 +1,23 @@
+# vault
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = autocurating_vault
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	is_megacorp = no
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_autocurating_vault_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	is_megacorp = no
+	"
+}

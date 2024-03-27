@@ -1,0 +1,21 @@
+# silo
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = resource_silo
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_resource_silo_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

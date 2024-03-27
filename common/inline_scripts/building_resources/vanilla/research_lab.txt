@@ -25,14 +25,15 @@ resources = {
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
-		trigger = "exists = owner
-owner = {
-	is_galactic_community_member = yes
-}
-is_active_resolution = \"resolution_galacticstudies_extradimensional_experimentation\"
-planet = {
-	has_modifier = pm_extradimensional_experimentation
-}"
+		trigger = "
+		exists = owner
+		owner = {
+			is_galactic_community_member = yes
+		}
+		is_active_resolution = \"resolution_galacticstudies_extradimensional_experimentation\"
+		planet = {
+			has_modifier = pm_extradimensional_experimentation
+		}"
 		resource = sr_zro
 		amount = @berg_research_research_lab_resolution_upkeep_t$tier$
 	}

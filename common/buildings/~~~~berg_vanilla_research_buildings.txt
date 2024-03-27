@@ -39,6 +39,11 @@ building_research_lab_1 = {
 	prerequisites = {
 		"tech_basic_science_lab_1"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = research_lab_1
+		TRIGGER = " "
+	}
 }
 
 building_research_lab_2 = {
@@ -74,6 +79,11 @@ building_research_lab_2 = {
 
 	prerequisites = {
 		"tech_basic_science_lab_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = research_lab_2
+		TRIGGER = " "
 	}
 }
 
@@ -112,6 +122,11 @@ building_research_lab_3 = {
 	}
 	upgrades = {
 		"building_avb_research_lab_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = research_lab_3
+		TRIGGER = " "
 	}
 }
 building_avb_research_lab_4 = {
@@ -154,6 +169,11 @@ building_avb_research_lab_4 = {
 	prerequisites = {
 		"tech_avb_basic_science_lab_4"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_research_lab_4
+		TRIGGER = " "
+	}
 }
 
 building_avb_research_lab_5 = {
@@ -195,6 +215,11 @@ building_avb_research_lab_5 = {
 	prerequisites = {
 		"tech_avb_basic_science_lab_5"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_research_lab_5
+		TRIGGER = " "
+	}
 }
 
 building_avb_research_lab_6 = {
@@ -231,6 +256,11 @@ building_avb_research_lab_6 = {
 	}
 	prerequisites = {
 		"tech_avb_basic_science_lab_6"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_research_lab_6
+		TRIGGER = " "
 	}
 }
 
@@ -304,6 +334,11 @@ building_institute = {
 		building_eutab_foundation_institute_1 # EUTAB
 		"building_avb_institute_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = institute
+		TRIGGER = " "
+	}
 }
 building_avb_institute_2 = {
 	base_buildtime = @avb_r4_time
@@ -367,6 +402,11 @@ building_avb_institute_2 = {
 		physics_research = 5
 		society_research = 5
 		engineering_research = 5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_institute_2
+		TRIGGER = " "
 	}
 }
 
@@ -449,6 +489,11 @@ building_supercomputer = {
 		society_research = 3
 		engineering_research = 3
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = supercomputer
+		TRIGGER = " "
+	}
 }
 building_avb_supercomputer_2 = {
 	base_buildtime = @avb_b4_time
@@ -525,6 +570,11 @@ building_avb_supercomputer_2 = {
 		society_research = 3
 		engineering_research = 3
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_supercomputer_2
+		TRIGGER = " "
+	}
 }
 
 building_archaeostudies_faculty = {
@@ -573,6 +623,11 @@ building_archaeostudies_faculty = {
 	upgrades = {
 		"building_avb_archaeostudies_faculty_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = archaeostudies_faculty
+		TRIGGER = " "
+	}
 	
 }
 building_avb_archaeostudies_faculty_2 = {
@@ -614,6 +669,11 @@ building_avb_archaeostudies_faculty_2 = {
 
 	prerequisites = {
 		"tech_avb_archaeostudies_faculty_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_archaeostudies_faculty_2
+		TRIGGER = " "
 	}
 }
 
@@ -660,6 +720,11 @@ building_vultaum_reality_computer = {
 	upgrades = {
 		"building_avb_vultaum_reality_computer_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = vultaum_reality_computer
+		TRIGGER = " "
+	}
 }
 building_avb_vultaum_reality_computer_2 = {
 	base_buildtime = @avb_f4_time
@@ -702,5 +767,10 @@ building_avb_vultaum_reality_computer_2 = {
 
 	prerequisites = {
 		"tech_avb_vultaum_reality_computer_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_vultaum_reality_computer_2
+		TRIGGER = " "
 	}
 }

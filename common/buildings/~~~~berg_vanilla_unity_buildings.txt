@@ -65,6 +65,11 @@ building_autochthon_monument = {
 		is_megacorp = no
 		is_memorialist_empire = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = autochton_monument
+		TRIGGER = " "
+	}
 }
 
 building_heritage_site = {
@@ -133,6 +138,11 @@ building_heritage_site = {
 	upgrades = {
 		building_hypercomms_forum
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = heritage_site
+		TRIGGER = " "
+	}
 }
 
 building_hypercomms_forum = {
@@ -200,6 +210,11 @@ building_hypercomms_forum = {
 		is_gestalt = no
 		is_megacorp = no
 		is_memorialist_empire = no
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hypercomms_forum
+		TRIGGER = " "
 	}
 }
 building_avb_monument_4 = {
@@ -274,6 +289,11 @@ building_avb_monument_4 = {
 	upgrades = {
 		building_avb_monument_5
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_4
+		TRIGGER = " "
+	}
 }
 building_avb_monument_5 = {
 	base_buildtime = @avb_u5_time
@@ -341,6 +361,11 @@ building_avb_monument_5 = {
 	upgrades = {
 		building_avb_monument_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_5
+		TRIGGER = " "
+	}
 }
 building_avb_monument_6 = {
 	base_buildtime = @avb_u6_time
@@ -406,6 +431,11 @@ building_avb_monument_6 = {
 		is_megacorp = no
 		is_memorialist_empire = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_6
+		TRIGGER = " "
+	}
 }
 
 ##################
@@ -466,6 +496,11 @@ building_bureaucratic_1 = {
 		is_regular_empire = yes
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = bureaucratic_1
+		TRIGGER = " "
 	}
 }
 
@@ -528,6 +563,11 @@ building_bureaucratic_2 = {
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = bureaucratic_2
+		TRIGGER = " "
+	}
 }
 
 building_bureaucratic_3 = {
@@ -589,6 +629,11 @@ building_bureaucratic_3 = {
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = bureaucratic_3
+		TRIGGER = " "
+	}
 }
 building_avb_bureaucratic_4 = {
 	base_buildtime = @avb_u4_time
@@ -648,6 +693,11 @@ building_avb_bureaucratic_4 = {
 	}
 	upgrades = {
 		building_avb_bureaucratic_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bureaucratic_4
+		TRIGGER = " "
 	}
 }
 
@@ -709,6 +759,11 @@ building_avb_bureaucratic_5 = {
 	upgrades = {
 		building_avb_bureaucratic_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bureaucratic_5
+		TRIGGER = " "
+	}
 }
 
 building_avb_bureaucratic_6 = {
@@ -767,6 +822,11 @@ building_avb_bureaucratic_6 = {
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bureaucratic_6
+		TRIGGER = " "
+	}
 }
 
 ##################
@@ -778,7 +838,7 @@ building_temple = {
 	exempt_from_ai_planet_specialization = no
 
 	category = unity
-
+	
 	potential = {
 		exists = owner
 		owner = {
@@ -787,6 +847,7 @@ building_temple = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -803,6 +864,10 @@ building_temple = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -840,6 +905,11 @@ building_temple = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = temple
+		TRIGGER = " "
+	}
 }
 
 building_holotemple = {
@@ -856,6 +926,7 @@ building_holotemple = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -876,6 +947,10 @@ building_holotemple = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -914,6 +989,11 @@ building_holotemple = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = holotemple
+		TRIGGER = " "
+	}
 }
 
 building_sacred_nexus = {
@@ -930,6 +1010,7 @@ building_sacred_nexus = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -950,6 +1031,10 @@ building_sacred_nexus = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -992,6 +1077,11 @@ building_sacred_nexus = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sacred_nexus
+		TRIGGER = " "
+	}
 }
 building_avb_temple_4 = {
 	base_buildtime = @avb_u4_time
@@ -1008,6 +1098,7 @@ building_avb_temple_4 = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -1028,6 +1119,10 @@ building_avb_temple_4 = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1065,6 +1160,11 @@ building_avb_temple_4 = {
 	upgrades = {
 		"building_avb_temple_5"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_temple_4
+		TRIGGER = " "
+	}
 }
 building_avb_temple_5 = {
 	base_buildtime = @avb_u5_time
@@ -1081,6 +1181,7 @@ building_avb_temple_5 = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -1101,6 +1202,10 @@ building_avb_temple_5 = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1138,6 +1243,11 @@ building_avb_temple_5 = {
 	upgrades = {
 		"building_avb_temple_6"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_temple_5
+		TRIGGER = " "
+	}
 }
 building_avb_temple_6 = {
 	base_buildtime = @avb_u6_time
@@ -1154,6 +1264,7 @@ building_avb_temple_6 = {
 				AND = {
 					is_gestalt = no
 					has_make_spiritualist_perk = yes
+					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
 				}
 			}
 		}
@@ -1174,6 +1285,10 @@ building_avb_temple_6 = {
 						has_make_spiritualist_perk = no
 					}
 					is_gestalt = yes
+					AND = {
+						berg_has_ecc_mod = yes
+						is_death_cult_empire = no
+					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1207,6 +1322,11 @@ building_avb_temple_6 = {
 				has_make_spiritualist_perk = yes
 			}
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_temple_6
+		TRIGGER = " "
 	}
 }
 
@@ -1270,6 +1390,11 @@ building_uplink_node = {
 			berg_is_servitor_empire = yes
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = uplink_node
+		TRIGGER = " "
+	}
 }
 
 building_network_junction = {
@@ -1330,6 +1455,11 @@ building_network_junction = {
 		NOT = {
 			berg_is_servitor_empire = yes
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = network_junction
+		TRIGGER = " "
 	}
 }
 
@@ -1392,6 +1522,11 @@ building_system_conflux = {
 			berg_is_servitor_empire = yes
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = system_conflux
+		TRIGGER = " "
+	}
 }
 building_avb_machine_unity_4 = {
 	base_buildtime = @avb_u4_time
@@ -1431,19 +1566,6 @@ building_avb_machine_unity_4 = {
 		building_avb_bureaucratic_4
 		building_avb_death_temple_4
 	}
-
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @avb_u4_minerals
-			rare_crystals = @avb_u4_rare_cost
-		}
-		upkeep = {
-			energy = @avb_u4_upkeep
-			rare_crystals = @avb_u4_rare_upkeep
-		}
-	}
-
 	inline_script = {
 		script = building_resources/vanilla/uplink_node
 		tier = 4
@@ -1464,6 +1586,11 @@ building_avb_machine_unity_4 = {
 	}
 	upgrades = {
 		building_avb_machine_unity_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_unity_4
+		TRIGGER = " "
 	}
 }
 building_avb_machine_unity_5 = {
@@ -1527,6 +1654,11 @@ building_avb_machine_unity_5 = {
 	upgrades = {
 		building_avb_machine_unity_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_unity_5
+		TRIGGER = " "
+	}
 }
 building_avb_machine_unity_6 = {
 	base_buildtime = @avb_u6_time
@@ -1585,6 +1717,11 @@ building_avb_machine_unity_6 = {
 			has_valid_civic = civic_machine_servitor
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_machine_unity_6
+		TRIGGER = " "
+	}
 }
 
 ##################
@@ -1626,6 +1763,11 @@ building_hive_node = {
 
 	upgrades = {
 		building_hive_cluster
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hive_node
+		TRIGGER = " "
 	}
 }
 
@@ -1673,6 +1815,11 @@ building_hive_cluster = {
 	upgrades = {
 		building_hive_confluence
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hive_cluster
+		TRIGGER = " "
+	}
 }
 
 building_hive_confluence = {
@@ -1717,6 +1864,11 @@ building_hive_confluence = {
 	}
 	upgrades = {
 		"building_avb_hive_unity_4" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hive_confluence
+		TRIGGER = " "
 	}
 }
 building_avb_hive_unity_4 = {
@@ -1763,6 +1915,11 @@ building_avb_hive_unity_4 = {
 	upgrades = {
 		"building_avb_hive_unity_5"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hive_unity_4
+		TRIGGER = " "
+	}
 }
 building_avb_hive_unity_5 = {
 	base_buildtime = @avb_u5_time
@@ -1807,6 +1964,11 @@ building_avb_hive_unity_5 = {
 	upgrades = {
 		"building_avb_hive_unity_6"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hive_unity_5
+		TRIGGER = " "
+	}
 }
 building_avb_hive_unity_6 = {
 	base_buildtime = @avb_u6_time
@@ -1848,6 +2010,11 @@ building_avb_hive_unity_6 = {
 	}
 	prerequisites = {
 		tech_avb_hive_unity_6
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hive_unity_6
+		TRIGGER = " "
 	}
 }
 
@@ -1905,6 +2072,11 @@ building_sacrificial_temple_1 = {
 
 	show_tech_unlock_if = {
 		is_death_cult_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sacrificial_temple_1
+		TRIGGER = " "
 	}
 }
 
@@ -1967,6 +2139,11 @@ building_sacrificial_temple_2 = {
 	show_tech_unlock_if = {
 		is_death_cult_empire = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sacrificial_temple_2
+		TRIGGER = " "
+	}
 }
 
 # Temple of Grand Sacrifice
@@ -2023,6 +2200,11 @@ building_sacrificial_temple_3 = {
 	show_tech_unlock_if = {
 		is_death_cult_empire = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sacrificial_temple_3
+		TRIGGER = " "
+	}
 }
 building_avb_death_temple_4 = {
 	base_buildtime = @avb_u4_time
@@ -2057,19 +2239,6 @@ building_avb_death_temple_4 = {
 		building_avb_bureaucratic_4
 		building_avb_temple_4
 	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = @avb_u4_minerals
-			exotic_gases = @avb_u4_rare_cost
-		}
-		upkeep = {
-			energy = @avb_u4_upkeep
-			exotic_gases = @avb_u4_rare_upkeep
-			volatile_motes = @avb_u4_rare_upkeep
-		}
-	}
-	
 	inline_script = {
 		script = building_resources/vanilla/death_temple
 		tier = 4
@@ -2088,6 +2257,11 @@ building_avb_death_temple_4 = {
 	}
 	upgrades = {
 		building_avb_death_temple_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_death_temple_4
+		TRIGGER = " "
 	}
 }
 building_avb_death_temple_5 = {
@@ -2141,6 +2315,11 @@ building_avb_death_temple_5 = {
 	upgrades = {
 		building_avb_death_temple_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_death_temple_5
+		TRIGGER = " "
+	}
 }
 building_avb_death_temple_6 = {
 	base_buildtime = @avb_u6_time
@@ -2189,6 +2368,11 @@ building_avb_death_temple_6 = {
 
 	show_tech_unlock_if = {
 		is_death_cult_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_death_temple_6
+		TRIGGER = " "
 	}
 }
 
@@ -2246,6 +2430,11 @@ building_galactic_memorial_1 = {
 
 	show_tech_unlock_if = {
 		berg_has_any_memorialist_civic = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = galactic_memorial_1
+		TRIGGER = " "
 	}
 }
 
@@ -2308,6 +2497,11 @@ building_galactic_memorial_2 = {
 	show_tech_unlock_if = {
 		berg_has_any_memorialist_civic = yes
 	 }
+	 inline_script = {
+		 script = berg_desc/berg_building_desc
+		 BUILDING = galactic_memorial_2
+		 TRIGGER = " "
+	 }
 }
 
 #Galactic Memorial
@@ -2365,6 +2559,11 @@ building_galactic_memorial_3 = {
 	show_tech_unlock_if = {
 		berg_has_any_memorialist_civic = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = galactic_memorial_3
+		TRIGGER = " "
+	}
 }
 building_avb_monument_memorial_4 = {
 	base_buildtime = @avb_u4_time
@@ -2415,6 +2614,11 @@ building_avb_monument_memorial_4 = {
 	}
 	upgrades = {
 		building_avb_monument_memorial_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_memorial_4
+		TRIGGER = " "
 	}
 }
 building_avb_monument_memorial_5 = {
@@ -2472,6 +2676,11 @@ building_avb_monument_memorial_5 = {
 	upgrades = {
 		building_avb_monument_memorial_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_memorial_5
+		TRIGGER = " "
+	}
 }
 building_avb_monument_memorial_6 = {
 	base_buildtime = @avb_u6_time
@@ -2523,6 +2732,11 @@ building_avb_monument_memorial_6 = {
 
 	show_tech_unlock_if = {
 		berg_has_any_memorialist_civic = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_memorial_6
+		TRIGGER = " "
 	}
 }
 
@@ -2589,6 +2803,11 @@ building_simulation_1 = {
 
 	upgrades = {
 		building_simulation_2
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = simulation_1
+		TRIGGER = " "
 	}
 }
 
@@ -2657,6 +2876,11 @@ building_simulation_2 = {
 	upgrades = {
 		building_simulation_3
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = simulation_2
+		TRIGGER = " "
+	}
 }
 
 building_simulation_3 = {
@@ -2724,6 +2948,11 @@ building_simulation_3 = {
 		is_machine_empire = yes
 		is_memorialist_empire = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = simulation_3
+		TRIGGER = " "
+	}
 }
 building_avb_monument_machine_4 = {
 	base_buildtime = @avb_u4_time
@@ -2788,6 +3017,11 @@ building_avb_monument_machine_4 = {
 	}
 	upgrades = {
 		building_avb_monument_machine_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_machine_4
+		TRIGGER = " "
 	}
 }
 building_avb_monument_machine_5 = {
@@ -2854,6 +3088,11 @@ building_avb_monument_machine_5 = {
 	upgrades = {
 		building_avb_monument_machine_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_machine_5
+		TRIGGER = " "
+	}
 }
 building_avb_monument_machine_6 = {
 	base_buildtime = @avb_u6_time
@@ -2915,6 +3154,11 @@ building_avb_monument_machine_6 = {
 	show_tech_unlock_if = {
 		is_machine_empire = yes
 		is_memorialist_empire = no
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_machine_6
+		TRIGGER = " "
 	}
 }
 
@@ -2980,6 +3224,11 @@ building_corporate_monument = {
 	upgrades = {
 		building_corporate_site
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = corporate_monument
+		TRIGGER = " "
+	}
 }
 
 building_corporate_site = {
@@ -3043,6 +3292,11 @@ building_corporate_site = {
 
 	upgrades = {
 		building_corporate_forum
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = corporate_site
+		TRIGGER = " "
 	}
 }
 
@@ -3108,6 +3362,11 @@ building_corporate_forum = {
 	show_tech_unlock_if = {
 		is_megacorp = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = corporate_forum
+		TRIGGER = " "
+	}
 }
 building_avb_monument_corp_4 = {
 	base_buildtime = @avb_u4_time
@@ -3171,6 +3430,11 @@ building_avb_monument_corp_4 = {
 	upgrades = {
 		"building_avb_monument_corp_5"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_corp_4
+		TRIGGER = " "
+	}
 }
 building_avb_monument_corp_5 = {
 	base_buildtime = @avb_u5_time
@@ -3233,6 +3497,11 @@ building_avb_monument_corp_5 = {
 	upgrades = {
 		"building_avb_monument_corp_6"
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_corp_5
+		TRIGGER = " "
+	}
 }
 building_avb_monument_corp_6 = {
 	base_buildtime = @avb_u6_time
@@ -3292,6 +3561,11 @@ building_avb_monument_corp_6 = {
 
 	show_tech_unlock_if = {
 		is_megacorp = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_corp_6
+		TRIGGER = " "
 	}
 }
 
@@ -3360,6 +3634,11 @@ building_sensorium_1 = {
 	upgrades = {
 		building_sensorium_2
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sensorium_1
+		TRIGGER = " "
+	}
 }
 
 building_sensorium_2 = {
@@ -3426,6 +3705,11 @@ building_sensorium_2 = {
 
 	upgrades = {
 		building_sensorium_3
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sensorium_2
+		TRIGGER = " "
 	}
 }
 
@@ -3494,6 +3778,11 @@ building_sensorium_3 = {
 		is_hive_empire = yes
 		is_memorialist_empire = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = sensorium_3
+		TRIGGER = " "
+	}
 }
 building_avb_monument_hive_4 = {
 	base_buildtime = @avb_u4_time
@@ -3560,6 +3849,11 @@ building_avb_monument_hive_4 = {
 	upgrades = {
 		building_avb_monument_hive_5
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_hive_4
+		TRIGGER = " "
+	}
 }
 building_avb_monument_hive_5 = {
 	base_buildtime = @avb_u5_time
@@ -3625,6 +3919,11 @@ building_avb_monument_hive_5 = {
 	upgrades = {
 		building_avb_monument_hive_6
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_hive_5
+		TRIGGER = " "
+	}
 }
 building_avb_monument_hive_6 = {
 	base_buildtime = @avb_u6_time
@@ -3687,6 +3986,11 @@ building_avb_monument_hive_6 = {
 	show_tech_unlock_if = {
 		is_hive_empire = yes
 		is_memorialist_empire = no
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_monument_hive_6
+		TRIGGER = " "
 	}
 }
 
@@ -3765,6 +4069,11 @@ building_autocurating_vault = {
 			has_make_spiritualist_perk = no
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = autocurating_vault
+		TRIGGER = " "
+	}
 }
 building_avb_autocurating_vault_2 = {
 	base_buildtime = @b4_time
@@ -3774,6 +4083,7 @@ building_avb_autocurating_vault_2 = {
 	can_build = no
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
@@ -3830,6 +4140,11 @@ building_avb_autocurating_vault_2 = {
 			is_hive_empire = yes
 			has_make_spiritualist_perk = no
 		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_autocurating_vault_2
+		TRIGGER = " "
 	}
 }
 
@@ -3899,6 +4214,11 @@ building_citadel_of_faith = {
 	upgrades = {
 		"building_avb_citadel_of_faith_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = citadel_of_faith
+		TRIGGER = " "
+	}
 }
 building_avb_citadel_of_faith_2 = {
 	base_buildtime = @b2_time
@@ -3907,6 +4227,7 @@ building_avb_citadel_of_faith_2 = {
 	can_build = no
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		owner = {
@@ -3956,6 +4277,11 @@ building_avb_citadel_of_faith_2 = {
 	}
 	prerequisites = {
 		"tech_avb_transcendent_faith_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_citadel_of_faith_2
+		TRIGGER = " "
 	}
 
 }
@@ -4025,6 +4351,11 @@ building_corporate_vault = {
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = corporate_vault
+		TRIGGER = " "
+	}
 }
 building_avb_corporate_vault_2 = {
 	base_buildtime = @b3_time
@@ -4035,6 +4366,7 @@ building_avb_corporate_vault_2 = {
 	category = unity
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		NOT = { has_modifier = slave_colony }
@@ -4083,6 +4415,11 @@ building_avb_corporate_vault_2 = {
 		is_megacorp = yes
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_corporate_vault_2
+		TRIGGER = " "
 	}
 }
 
@@ -4133,6 +4470,11 @@ building_alpha_hub = {
 	show_tech_unlock_if = {
 		is_machine_empire = yes
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = alpha_hub
+		TRIGGER = " "
+	}
 }
 building_avb_alpha_hub_2 = {
 	base_buildtime = @b3_time
@@ -4141,6 +4483,7 @@ building_avb_alpha_hub_2 = {
 	can_build = no
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		owner = { is_machine_empire = yes }
@@ -4175,6 +4518,11 @@ building_avb_alpha_hub_2 = {
 
 	show_tech_unlock_if = {
 		is_machine_empire = yes
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_alpha_hub_2
+		TRIGGER = " "
 	}
 }
 
@@ -4291,6 +4639,11 @@ building_organic_sanctuary = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = organic_sanctuary
+		TRIGGER = " "
+	}
 }
 
 building_organic_paradise = {
@@ -4382,6 +4735,11 @@ building_organic_paradise = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = organic_paradise
+		TRIGGER = " "
+	}
 }
 building_avb_organic_sanctuary_3 = {
 	base_buildtime = @avb_u4_time
@@ -4471,6 +4829,11 @@ building_avb_organic_sanctuary_3 = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_organic_sanctuary_3
+		TRIGGER = " "
+	}
 }
 
 building_avb_organic_sanctuary_4 = {
@@ -4554,6 +4917,11 @@ building_avb_organic_sanctuary_4 = {
 			}
 		}
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_organic_sanctuary_4
+		TRIGGER = " "
+	}
 }
 
 # Archaeotech
@@ -4592,6 +4960,11 @@ building_league_offices = {
 	upgrades = {
 		"building_avb_league_offices_2" #AVB
 	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = league_offices
+		TRIGGER = " "
+	}
 }
 building_avb_league_offices_2 = {
 	base_buildtime = @avb_f4_time
@@ -4600,6 +4973,7 @@ building_avb_league_offices_2 = {
 	category = unity
 
 	potential = {
+		avb_hg_changes = yes
 		berg_has_avb_mod = yes
 		exists = owner
 		owner = { has_technology = tech_avb_league_offices_2 }
@@ -4627,5 +5001,10 @@ building_avb_league_offices_2 = {
 
 	prerequisites = {
 		"tech_avb_league_offices_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_league_offices_2
+		TRIGGER = " "
 	}
 }

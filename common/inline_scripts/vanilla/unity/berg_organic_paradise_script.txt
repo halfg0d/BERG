@@ -1,6 +1,5 @@
 planet_modifier = {
 	job_bio_trophy_add = @berg_unity_organic_paradise_biotrophy_t$tier$
-	job_artisan_drone_add = @berg_unity_organic_paradise_artisan_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
@@ -24,9 +23,6 @@ triggered_desc = {
 	text = job_bio_trophy_effect_desc
 }
 
-triggered_desc = {
-	text = job_artisan_drone_effect_desc
-}
 triggered_desc = {
 	trigger = {
 		OR = {

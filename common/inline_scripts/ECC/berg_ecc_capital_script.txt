@@ -1,3 +1,4 @@
+#Commandate
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -7,11 +8,11 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_commandante_add = @berg_ecc_$tier$_commandate
-		job_politician_add = @berg_capital_$tier$_politician2
+		job_commandante_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
-
+#Supervisor
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -21,8 +22,8 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_supervisor_add = @berg_ecc_$tier$_supervisor
-		job_politician_add = @berg_ecc_$tier$_politician_supervisor
+		job_supervisor_add = @berg_capital_regular_capital_special_t$tier$
+		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
 
@@ -37,7 +38,7 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_healthcare_add = @berg_ecc_$tier$_healthcare
+		job_healthcare_add = @berg_capital_regular_capital_ecc_healthcare_t$tier$
 	}
 }
 
@@ -91,6 +92,6 @@ triggered_planet_modifier = {
 		$trigger$
 	}
 	modifier = {
-		job_transcend_add = @berg_ecc_$tier$_transcend
+		job_transcend_add = @berg_capital_regular_capital_ecc_transcend_t$tier$
 	}
 }

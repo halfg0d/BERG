@@ -270,19 +270,37 @@ building_affluence_center = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = {
-					has_country_flag = affluence_center_can_build
+				# GPM disabled
+				AND = {
+					berg_has_gpm_mod = no
+					owner = {
+						has_country_flag = affluence_center_can_build
+					}
 				}
-				has_planet_flag = fallen_empire_world
+				AND = {
+					berg_has_gpm_mod = no
+					has_planet_flag = fallen_empire_world
+				}
+				#GPM enabled
+				AND = {
+					berg_has_gpm_mod = yes
+					owner = { check_variable = { which = affluence_center_build_count value >= 1 } }
+				}
 			}
 		}
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = ancrel.10004.failtext
-			owner = {
-				check_variable = { which = affluence_center_build_count value >= 1 }
+		OR = {
+			berg_has_gpm_mod = yes
+			AND = {
+				berg_has_gpm_mod = no
+				custom_tooltip = {
+					fail_text = ancrel.10004.failtext
+					owner = {
+						check_variable = { which = affluence_center_build_count value >= 1 }
+					}
+				}
 			}
 		}
 	}
@@ -335,25 +353,42 @@ building_nourishment_center = {
 	icon = building_food_processing_center
 
 	category = resources
-
 	potential = {
 		custom_tooltip = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = {
-					has_country_flag = nourishment_center_can_build
+				#GPM disabled
+				AND = {
+					berg_has_gpm_mod = no
+					owner = {
+						has_country_flag = nourishment_center_can_build
+					}
 				}
-				has_planet_flag = fallen_empire_world
+				AND = {
+					berg_has_gpm_mod = no
+					has_planet_flag = fallen_empire_world
+				}
+				#GPM enabled
+				AND = {
+					berg_has_gpm_mod = yes
+					owner = { check_variable = { which = nourishment_center_build_count value >= 1 } }
+				}
 			}
 		}
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = ancrel.10004.failtext
-			owner = {
-				check_variable = { which = nourishment_center_build_count value >= 1 }
+		OR = {
+			berg_has_gpm_mod = yes
+			AND = {
+				berg_has_gpm_mod = no
+				custom_tooltip = {
+					fail_text = ancrel.10004.failtext
+					owner = {
+						check_variable = { which = nourishment_center_build_count value >= 1 }
+					}
+				}
 			}
 		}
 	}
@@ -426,19 +461,35 @@ building_dimensional_fabricator = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = {
-					has_country_flag = dimensional_fabricator_can_build
+				AND = {
+					berg_has_gpm_mod = no
+					owner = {
+						has_country_flag = dimensional_fabricator_can_build
+					}
 				}
-				has_planet_flag = fallen_empire_world
+				AND = {
+					berg_has_gpm_mod = no
+					has_planet_flag = fallen_empire_world
+				}
+				AND = {
+					berg_has_gpm_mod = yes
+					owner = { check_variable = { which = dimensional_fabricator_build_count value >= 1 } }
+				}
 			}
 		}
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = ancrel.10004.failtext
-			owner = {
-				check_variable = { which = dimensional_fabricator_build_count value >= 1 }
+		OR = {
+			berg_has_gpm_mod = yes
+			AND = {
+				berg_has_gpm_mod = no
+				custom_tooltip = {
+					fail_text = ancrel.10004.failtext
+					owner = {
+						check_variable = { which = dimensional_fabricator_build_count value >= 1 }
+					}
+				}
 			}
 		}
 	}
@@ -525,19 +576,35 @@ building_class_4_singularity = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = {
-					has_country_flag = class_4_singularity_can_build
+				AND = {
+					berg_has_gpm_mod = no
+					owner = {
+						has_country_flag = class_4_singularity_can_build
+					}
 				}
-				has_planet_flag = fallen_empire_world
+				AND = {
+					berg_has_gpm_mod = no
+					has_planet_flag = fallen_empire_world
+				}
+				AND = {
+					berg_has_gpm_mod = yes
+					owner = { check_variable = { which = class_4_singularity_build_count value >= 1 } }
+				}
 			}
 		}
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = ancrel.10004.failtext
-			owner = {
-				check_variable = { which = class_4_singularity_build_count value >= 1 }
+		OR = {
+			berg_has_gpm_mod = yes
+			AND = {
+				berg_has_gpm_mod = no
+				custom_tooltip = {
+					fail_text = ancrel.10004.failtext
+					owner = {
+						check_variable = { which = class_4_singularity_build_count value >= 1 }
+					}
+				}
 			}
 		}
 	}
@@ -597,19 +664,35 @@ building_nano_forge = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = {
-					has_country_flag = nano_forge_can_build
+				AND = {
+					berg_has_gpm_mod = no
+					owner = {
+						has_country_flag = nano_forge_can_build
+					}
 				}
-				has_planet_flag = fallen_empire_world
+				AND = {
+					berg_has_gpm_mod = no
+					has_planet_flag = fallen_empire_world
+				}
+				AND = {
+					berg_has_gpm_mod = yes
+					owner = { check_variable = { which = nano_forge_build_count value >= 1 } }
+				}
 			}
 		}
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = ancrel.10004.failtext
-			owner = {
-				check_variable = { which = nano_forge_build_count value >= 1 }
+		OR = {
+			berg_has_gpm_mod = yes
+			AND = {
+				berg_has_gpm_mod = no
+				custom_tooltip = {
+					fail_text = ancrel.10004.failtext
+					owner = {
+						check_variable = { which = nano_forge_build_count value >= 1 }
+					}
+				}
 			}
 		}
 	}
@@ -687,6 +770,14 @@ building_master_archive = {
 		}
 		job_fe_archivist_add = 10
 	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_acot_mod = yes
+			exists = owner
+			owner = { is_fallen_empire = no }
+		}
+		job_researcher_add = 10
+	}
 
 	resources = {
 		category = planet_buildings
@@ -754,16 +845,19 @@ building_empyrean_shrine = {
 		}
 	}
 	#ACOT
-	triggered_planet_modifier = {
-		potential = {
-			berg_has_acot_mod = yes
-			exists = owner
-			owner = { 
-				is_fallen_empire = no 
-				is_spiritualist = yes
-			}
+	inline_script = {
+		script = berg_jobs_group/priest_add
+		AMOUNT = 10
+		TRIGGER = "
+		berg_has_acot_mod = yes
+		exists = owner
+		owner = { 
+			is_fallen_empire = no 
+			is_spiritualist = yes
 		}
-		job_priest_add = 10
+		"
+		MULT = 1
+		DESC = no
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -941,19 +1035,36 @@ building_fe_dome = {
 			exists = owner
 			OR = {
 				owner = { is_fallen_empire = yes }
-				owner = {
-					has_country_flag = skydome_can_build
+				#disabled in gpm
+				AND = {
+					berg_has_gpm_mod = no
+					owner = { has_country_flag = skydome_can_build }
 				}
-				has_planet_flag = fallen_empire_world
+				AND = {
+					berg_has_gpm_mod = no
+					has_planet_flag = fallen_empire_world
+				}
+				#enabled in gpm
+				AND = {
+					berg_has_gpm_mod = yes
+					owner = { check_variable = { which = skydome_build_count value >= 1 } }
+				}
 			}
 		}
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = ancrel.10004.failtext
-			owner = {
-				check_variable = { which = skydome_build_count value >= 1 }
+		#GPM changes
+		OR = {
+			berg_has_gpm_mod = yes
+			AND = {
+				berg_has_gpm_mod = no
+				custom_tooltip = {
+					fail_text = ancrel.10004.failtext
+					owner = {
+						check_variable = { which = skydome_build_count value >= 1 }
+					}
+				}
 			}
 		}
 	}

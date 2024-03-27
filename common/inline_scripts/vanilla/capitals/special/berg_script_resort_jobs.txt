@@ -35,29 +35,15 @@ triggered_planet_modifier = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = {
-			has_valid_civic = civic_warrior_culture
-		}
 	}
 	modifier = {
-		job_duelist_add = @berg_capitals_$tier$_entertainer
+		job_resort_worker_add = @berg_capitals_$tier$_entertainer
 	}
 }
+#OST
 triggered_planet_modifier = {
 	potential = {
-		exists = owner
-		owner = {
-			NOT = { has_valid_civic = civic_warrior_culture }
-		}
-	}
-	modifier = {
-		job_entertainer_add = @berg_capitals_$tier$_entertainer
-	}
-}
-#OSA
-triggered_planet_modifier = {
-	potential = {
-		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
 		exists = owner
 		owner = {
 			has_active_tradition = tr_solidarity_3

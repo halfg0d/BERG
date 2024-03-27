@@ -1,0 +1,71 @@
+# regular_capital
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = capital
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = major_capital
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = system_capital
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 3
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_capital_4
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 4
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_capital_5
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 5
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_capital_6
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 6
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = imperial_capital
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 7
+	}
+	"
+}

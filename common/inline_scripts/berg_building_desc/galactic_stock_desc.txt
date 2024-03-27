@@ -1,0 +1,21 @@
+# galactic_stock
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = galactic_stock_exchange
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 1
+	}
+	"
+}
+inline_script = {
+	script = berg_desc/berg_building_desc
+	BUILDING = avb_galactic_stock_exchange_2
+	TRIGGER = "
+	check_variable_arithmetic = {
+		which = $tier$
+		tier = 2
+	}
+	"
+}

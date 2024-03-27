@@ -4,3 +4,13 @@ planet_modifier = {
 triggered_desc = {
 	text = job_patrol_drone_effect_desc
 }
+#OST
+triggered_planet_modifier = {
+	potential = {
+		berg_has_ost_mod = yes
+		exists = owner
+	}
+	modifier = {
+		planet_crime_add = -25
+	}
+}

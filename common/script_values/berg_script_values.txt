@@ -1,0 +1,5 @@
+get_negative_of = {
+	base = 1
+	set = $NUMBER$
+	mult = 2
+}

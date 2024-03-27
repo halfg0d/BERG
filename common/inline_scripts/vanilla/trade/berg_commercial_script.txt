@@ -48,8 +48,20 @@ triggered_planet_modifier = {
 	}
 	modifier = {
 		job_clerk_add = 1
-		job_merchant_add = 1
 	}
+}
+inline_script = {
+	script = berg_jobs_group/merchant_add
+	AMOUNT = 1
+	MULT = 1
+	TRIGGER = "
+	berg_has_ecc_mod = yes
+	exists = owner
+	owner = {
+		has_valid_civic = civic_consumerism
+	}
+	"
+	DESC = with
 }
 
 triggered_desc = {
@@ -57,16 +69,6 @@ triggered_desc = {
 }
 triggered_desc = {
 	text = job_trader_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			has_valid_civic = civic_consumerism
-		}
-	}
-	text = job_merchant_effect_desc
 }
 triggered_desc = {
 	trigger = {
