@@ -29,7 +29,7 @@ building_mote_harvesters = {
 		"tech_mine_volatile_motes"
 	}
 	upgrades = {
-		"building_avb_gas_extractors_2" #AVB
+		"building_avb_mote_harvesters_2" #AVB
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -99,7 +99,7 @@ building_gas_extractors = {
 		"tech_mine_exotic_gases"
 	}
 	upgrades = {
-		"building_avb_crystal_mines_2" #AVB
+		"building_avb_gas_extractors_2" #AVB
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -170,7 +170,7 @@ building_crystal_mines = {
 		"tech_mine_rare_crystals"
 	}
 	upgrades = {
-		"building_avb_mote_harvesters_2" #AVB
+		"building_avb_crystal_mines_2" #AVB
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc

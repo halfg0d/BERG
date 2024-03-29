@@ -1,7 +1,10 @@
 planet_modifier = {
-	job_telepath_add = @berg_government_psi_corps_job_t$tier$
 	planet_stability_add = @berg_government_psi_corps_stability_t$tier$
 }
-triggered_desc = {
-	text = job_telepath_effect_desc
+inline_script = {
+	script = berg_jobs_group/telepath_add
+	AMOUNT = @berg_government_psi_corps_job_t$tier$
+	TRIGGER = " "
+	MULT = 1
+	DESC = with
 }

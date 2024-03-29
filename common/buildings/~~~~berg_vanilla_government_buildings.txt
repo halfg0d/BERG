@@ -729,10 +729,6 @@ building_avb_psi_corps_2 = {
 		building_avb_psi_corps_3
 	}
 	
-	triggered_desc = {
-		text = job_telepath_effect_desc
-	}	
-	
 	prerequisites = {
 		"tech_avb_psi_corps_2"
 	}
@@ -789,10 +785,6 @@ building_avb_psi_corps_3 = {
 		script = building_resources/vanilla/psi_corps
 		tier = 3
 	}
-	triggered_desc = {
-		text = job_telepath_effect_desc
-	}	
-	
 	prerequisites = {
 		"tech_avb_psi_corps_3"
 	}
