@@ -1,4 +1,4 @@
-version="1.2.5.2"
+version="1.2.6"
 tags={
 	"Buildings"
 	"Fixes"

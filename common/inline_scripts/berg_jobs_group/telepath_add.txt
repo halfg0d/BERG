@@ -8,10 +8,7 @@ inline_script = {
 	TRIGGER = "
 	OR = {
 		berg_has_hme_mod = no
-		AND = {
-			berg_has_hme_mod = yes
-			is_hive_empire = no
-		}
+		is_hive_empire = no
 	}
 	"
 }
