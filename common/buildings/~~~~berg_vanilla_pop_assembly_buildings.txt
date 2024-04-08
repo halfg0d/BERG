@@ -832,7 +832,6 @@ building_necrophage_house_of_apotheosis = {
 		exists = owner
 		owner = {
 			berg_is_necrophage_empire = yes
-			has_trait = trait_necrophage
 			NOR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_hive_devouring_swarm
@@ -900,8 +899,108 @@ building_necrophage_house_of_apotheosis = {
 	show_tech_unlock_if = {
 		berg_is_necrophage_empire = yes
 	}
+	upgrades = {
+		"building_avb_necrophage_3"
+	}
 }
 
+building_avb_necrophage_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+	position_priority = 100
+
+	category = pop_assembly
+
+	desc = {
+		trigger = {
+			OR = {
+				NOT = { exists = owner }
+				owner = { is_hive_empire = no }
+			}
+		}
+		text = building_avb_necrophage_3_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = building_avb_necrophage_3_desc_hive
+	}
+
+	potential = {
+		avb_hg_changes = yes
+		exists = owner
+		owner = {
+			berg_is_necrophage_empire = yes
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+			is_ai = no #the AI will just kill all its necrophytes
+		}
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+		hidden_trigger = {
+			if = {
+				limit = {
+					owner = { is_ai = yes }
+				}
+				any_owned_species = {
+					species_can_be_necrophaged = yes
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				OR = {
+					NOT = { has_origin = origin_necrophage }
+					NOT = { has_trait = trait_necrophage }
+				}
+			}
+			AND = {
+				owner = { is_ai = yes }
+				NOT = {
+					any_owned_species = {
+						species_can_be_necrophaged = yes
+					}
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_necro_apprentice_add = 8
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			berg_is_hive_world = yes
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_necro_apprentice_add = 4
+	}
+
+	inline_script = {
+		script = building_resources/vanilla/necrophage
+		tier = 3
+	}
+
+	prerequisites = {
+		"tech_avb_necrophage_3"
+	}
+	show_tech_unlock_if = {
+		berg_is_necrophage_empire = yes
+	}
+	inline_script = vanilla/pop_assembly/berg_necrophage_desc
+}
 #############
 # Clone vats
 #############
