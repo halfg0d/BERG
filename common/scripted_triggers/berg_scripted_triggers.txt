@@ -349,8 +349,11 @@ berg_slave_colony_manufactury_not = {
 	}
 }
 berg_is_machine_cult = {
-	berg_has_ecc_mod = yes
-	has_civic = civic_machine_cult
+	OR = {
+		berg_has_ecc_mod = yes
+		berg_has_zexpanded_mod = yes
+	}
+	has_valid_civic = civic_machine_cult
 }
 can_show_support_desc = {
 	always = no #DESC Support
@@ -374,4 +377,7 @@ berg_has_any_supported_mod = {
 		berg_has_giga_mod = yes
 		berg_has_zexpanded_mod = yes
 	}
+}
+berg_has_private_military_companies = {
+	has_valid_civic = civic_private_military_companies
 }

@@ -15,5 +15,5 @@ Info:
 - Spawning Pool and Offspring Nest gives artisan for happy hive
 - Clone Vats give unity produces with evolutionary architects civic
 - Clone Army Vat also /\
-- Supercomputers gives examinatorn with machine researcher civic
+- Supercomputers gives examinator with machine researcher civic
 - Institute gives some resources with civic or with council trait

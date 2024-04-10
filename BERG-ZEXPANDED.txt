@@ -1,0 +1,147 @@
+civic machine cult 
+DONE:
+priest -> tech priest
+DONE:
+civic organic construction
+
+DONE:
+Principled Epicureans
+bureaucrat czasem zmienaine 50:50 z culture workers
+monument regular dodaja culture worker 1-6
+
+DONE:
+Harmonious Hive Mind (Hive Mind) / Cooperative Network (Machine Intelligence) !!!!!!
+holding_distributed_processing
+holding_park_ranger_lodge
+
+holding has_prio cos tam
+
+planetary station cos tam
+
+DONE:
+Integrated Bioarchitecture
++hydroponics organic construction
+building_hive_capital
+toxic_bath_hive
+sentinel posts
+warren
+hive_node
+
+DONE:
+aristocratic elite
+t2 building -> building_palatial_estates
+
+WORK: cost/upkeep
+catalityc processing
++factory and foundry
+
+DONE:
+memorialist
+megacorp version 
+in buildings changed trigger 
+
+DONE:
+merchant guilds
+
+DONE:
+mining guild
+
+TODO:
+rebuild capital jobs
+
+DONE:
+slaver guilds
+
+TODO:
+warrior culture
+support with osa
+to do: colosseum 1-4Tier, also technologies
+holdings
+DONE:
+private military companies
+
+determinated exterminators ???
+
+WORK: waint until changes 
+rogue servitors !!!!
+organic sanctuaries replace maintenance drones with caretaker
+capital buildings gives biotrophy job
+bergonator resource do zmiany i dodanie t7 kosztów
+
+Hive Mind
+	- The cost and maintenance for some items has been split between minerals/energy and food for non-lithoid Hive Minds, including:
+		- Capital Buildings
+		- Spawning Pools
+		- Housing Buildings
+		- Unity Buildings
+		- City and Rural Districts
+		- Basic Assault Armies
+	- Seat of Consciousness, Hive equivalent of the Alpha Hub
+	- Food processing buildings and the Baol Organic Plant have an additional food cost, and now give an additional +5% food production and +2/+4 max farming districts. Lithoids get better mineral processing instead
+	- With Galactic Administration, the Hive Nexus gives +1 maintenance drone and +1 hunter-seeker drone jobs once you reach 80 pops
+	- Habitat capitals give an extra maintenance drone
+
+
+Buildings and Districts
+	- NEW: Planetary Citadel building, gives +6 solder jobs and housing
+	- NEW: Coordination Districts for Gestalts Ecumenopolis, give +6 synapse drone/coordinator jobs
+	- NEW: Non-Homicidal Gestalts can build Animal Evaluation Laborator, equivalent of Alien Zoos
+	- Alien Zoos gives +25% immigration attraction
+	- Baol Organic Plant produce +1 consumer goods (from +0.5)
+	- Upgraded Habitats give extra building slots
+	- Commercial Buildings give +2%/+4% trade value
+	- Housing buildings benefit from housing technologies
+	- Holo theaters give +2% trade value per level, arenas give +1% happiness per level
+	- Utopian Communal Housing no longer costs rare crystals, has higher energy and mineral costs instead
+	- Nanite Transmuter provides 4 rare resources each
+	- Orbital Maintenance Drops gives +1.5 amenities from maintenance drones
+    
+Branch Office Buildings
+	- NEW: Criminal equivalent buildings for Xeno-Outreach Agency, Executive Retreat
+	- Xeno Tourism and Questionable Charity branch office buildings, chance for unemployed pops to one of the branch office owner's planets every 5 years (will not reduce planet below 25 pops)
+		- This requires a migration treaty with the owner (unless you are a criminal Heritage)
+		- Criminal Heritage corps will also take enslaved, undesirable, and criminal pops
+	- Resources from corporate buildings have been doubled
+	- Private Mining Consortium will also produce strategic resources, so long as the planet has rare deposits, and you have the technology to mine it.
+	- Many corporate buildings give a relevant production bonus (less if criminal), those who do not give extra jobs
+	- Some corporate buildings produce unique jobs
+	- Amusement Megaplex and Underground Clubs are more effective on gaia and resort worlds, gives +1 entertainer job
+	- Mercenary Liaison Office/Pirate Free Haven produce 10 energy for its corporate owner if the planet's owner is at war (or has pirates, in case of the Pirate Free Haven)
+	- Mercenary Liaison Office/Pirate Free Haven unlocks a decision to hire mercenary armies, giving the branch office owner energy credits when used
+
+Overlord Holdings
+	- NEW: Network Hub, can be built by Cooperative Network, Socialization Protocols, machine Memorialists, Extant Creators, and machine Scions instead of the Distributed Processing holding
+		- Gives 2 Overlord Coordinator jobs that turns consumer goods / minerals and energy into unity and research for the overlord
+	- NEW: House of Pleasure, unlocked by Pleasure Seeker and Corporate Hedonism
+		- Gives +10% amenities to overlord (+15% if built on gaia or resort world), -15 amenities and -1 loyalty to subject
+	- New: Colosseum, unlocked by Warrior Culture and Barbaric Despoilers
+		- Gives +6% amenities to overlord (+9% is subject is militaristic), +2 duelist jobs that give unity to overlord, amenities to subject
+		- Gives +0.5 loyalty to militaristic subjects, -0.5 loyalty to pacifistic subjects
+	- NEW: Hunting Lodge, unlocked by Natural Hunters
+		- Gives +10% amenities to overlord, +2 Gameskeeper jobs that turn subject consumer goods / food into overlord unity
+		- Gives -1 loyalty (only -0.5 if subject has the Natural Hunter origin)
+		- Wildlife will occasionally escape, causing bad effects like devastation
+	- NEW: Ministry of Apotheosis, unlocked by Necrophages
+		- Gives 4 Overlord Necrophyte jobs, which gives amenities to the subject and unity to the overlord
+		- Every 10 years, Overlord Necrophytes are transformed into necrophages and moved to the overlord's capital
+		- Gives -1 Loyalty
+	- NEW: Brood Chamber, unlocked by Parasitic Hives
+		- Gives 4 Overlord Incubator jobs, which are purged every 5 years to birth overlord pops on their capital
+		- Gives -2 Loyalty
+	- Overlord Garrisons spawn 6 Garrison armies, which counts as overlord armies for the purpose of the holding's effects.
+	- Orbital Assembly Complex gives +0.5 loyalty if built on a planet with an orbital ring
+	- Ministry of Truth gives +25% ethics attraction to the overlord's ethics
+	- Overlord Trader jobs give 10 energy
+	- Aid Agency has double upkeep in exchange for higher monthly loyalty (except from xenophobic subjects), more unity for the overlord, and food for the subject
+	- Distributed Processing gives +4% research to overlord
+	- Offworld Foundry gives +1 Overlord Metallurgist jobs per industrial district
+	- Foundry buildings now also boost Overlord Metallurgist jobs
+	- Noble Chateaus also give +5% amenities to the overlord's worlds
+	- Gaia Seeder Outpost gives more loyalty
+	- Organic Haven gives more loyalty from hedonistic, decadent, or xenophilic empires
+	- Experimental Crater gives +25% colony development speed to the overlord
+	- Experimental Crater gives 50% more research to the overlord
+	- Experimental Crater gives less loyalty loss from lithoids and robots, more from environmentalists
+	- Recruitment Office gives +20 naval capacity, +0.5 loyalty from militarist vassals
+	- Ranger Lodge, increased / decreased loyalty from environmentalist / mining civics and origins
+	- Tree of Life Sapling gives less loyalty from lithoid and robot subjects
