@@ -3,6 +3,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_any_supported_mod = yes
 		}
 		localization_key = mod_support_title
@@ -15,6 +16,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_planetary_diversity_mod = yes
 		}
 		localization_key = mod_prefix_desc_pd
@@ -27,6 +29,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_osa_mod = yes
 		}
 		localization_key = mod_prefix_desc_osa
@@ -39,6 +42,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_ost_mod = yes
 			berg_has_osa_mod = no
 		}
@@ -52,6 +56,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_ecc_mod = yes
 		}
 		localization_key = mod_prefix_desc_ecc
@@ -64,6 +69,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_avb_mod = yes
 		}
 		localization_key = mod_prefix_desc_avb
@@ -76,6 +82,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_bug_mod = yes
 		}
 		localization_key = mod_prefix_desc_bug
@@ -88,6 +95,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_gpm_mod = yes
 		}
 		localization_key = mod_prefix_desc_gpm
@@ -100,6 +108,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_uap_mod = yes
 		}
 		localization_key = mod_prefix_desc_uap
@@ -112,6 +121,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_giga_mod = yes
 		}
 		localization_key = mod_prefix_desc_giga
@@ -124,6 +134,7 @@ defined_text = {
 	random = no
 	text = {
 		trigger = {
+			can_show_support_desc = yes 
 			berg_has_zexpanded_mod = yes
 		}
 		localization_key = mod_prefix_desc_zex

@@ -1,6 +1,5 @@
 desc = {
 	trigger = {
-		can_show_support_desc = yes 
 		$TRIGGER$
 	}
 	text = berg_building_$BUILDING$_sup

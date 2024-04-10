@@ -860,14 +860,19 @@ building_temple = {
 			owner = {
 				OR = {
 					AND = {
-						is_spiritualist = no
-						has_make_spiritualist_perk = no
+						AND = {
+							is_spiritualist = no
+							has_make_spiritualist_perk = no
+						}
+						OR = {
+							berg_has_ecc_mod = no
+							AND = {
+								berg_has_ecc_mod = yes
+								is_death_cult_empire = yes
+							}
+						}
 					}
 					is_gestalt = yes
-					AND = {
-						berg_has_ecc_mod = yes
-						is_death_cult_empire = no
-					}
 				}
 			}
 			has_modifier = slave_colony
@@ -943,14 +948,19 @@ building_holotemple = {
 			owner = {
 				OR = {
 					AND = {
-						is_spiritualist = no
-						has_make_spiritualist_perk = no
+						AND = {
+							is_spiritualist = no
+							has_make_spiritualist_perk = no
+						}
+						OR = {
+							berg_has_ecc_mod = no
+							AND = {
+								berg_has_ecc_mod = yes
+								is_death_cult_empire = yes
+							}
+						}
 					}
 					is_gestalt = yes
-					AND = {
-						berg_has_ecc_mod = yes
-						is_death_cult_empire = no
-					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1027,14 +1037,19 @@ building_sacred_nexus = {
 			owner = {
 				OR = {
 					AND = {
-						is_spiritualist = no
-						has_make_spiritualist_perk = no
+						AND = {
+							is_spiritualist = no
+							has_make_spiritualist_perk = no
+						}
+						OR = {
+							berg_has_ecc_mod = no
+							AND = {
+								berg_has_ecc_mod = yes
+								is_death_cult_empire = yes
+							}
+						}
 					}
 					is_gestalt = yes
-					AND = {
-						berg_has_ecc_mod = yes
-						is_death_cult_empire = no
-					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1115,14 +1130,19 @@ building_avb_temple_4 = {
 			owner = {
 				OR = {
 					AND = {
-						is_spiritualist = no
-						has_make_spiritualist_perk = no
+						AND = {
+							is_spiritualist = no
+							has_make_spiritualist_perk = no
+						}
+						OR = {
+							berg_has_ecc_mod = no
+							AND = {
+								berg_has_ecc_mod = yes
+								is_death_cult_empire = yes
+							}
+						}
 					}
 					is_gestalt = yes
-					AND = {
-						berg_has_ecc_mod = yes
-						is_death_cult_empire = no
-					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1198,14 +1218,19 @@ building_avb_temple_5 = {
 			owner = {
 				OR = {
 					AND = {
-						is_spiritualist = no
-						has_make_spiritualist_perk = no
+						AND = {
+							is_spiritualist = no
+							has_make_spiritualist_perk = no
+						}
+						OR = {
+							berg_has_ecc_mod = no
+							AND = {
+								berg_has_ecc_mod = yes
+								is_death_cult_empire = yes
+							}
+						}
 					}
 					is_gestalt = yes
-					AND = {
-						berg_has_ecc_mod = yes
-						is_death_cult_empire = no
-					}
 				}
 			}
 			has_modifier = slave_colony
@@ -1281,14 +1306,19 @@ building_avb_temple_6 = {
 			owner = {
 				OR = {
 					AND = {
-						is_spiritualist = no
-						has_make_spiritualist_perk = no
+						AND = {
+							is_spiritualist = no
+							has_make_spiritualist_perk = no
+						}
+						OR = {
+							berg_has_ecc_mod = no
+							AND = {
+								berg_has_ecc_mod = yes
+								is_death_cult_empire = yes
+							}
+						}
 					}
 					is_gestalt = yes
-					AND = {
-						berg_has_ecc_mod = yes
-						is_death_cult_empire = no
-					}
 				}
 			}
 			has_modifier = slave_colony
