@@ -1,4 +1,4 @@
-﻿# Irony this is a placeholder file please ignore it
+# Irony this is a placeholder file please ignore it
 #Description files
 l_english:
 # residence
@@ -17,12 +17,14 @@ l_english:
  berg_building_hive_warren_sup:0 "$building_hive_warren_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
  berg_building_expanded_warren_sup:0 "$building_expanded_warren_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
  berg_building_avb_warren_3_sup:0 "$building_avb_warren_3_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
- berg_building_avb_warren_4_sup:0 "$building_avb_warren_4_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]"
+ berg_building_avb_warren_4_sup:0 "$building_avb_warren_4_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
+ berg_building_avb_warren_5_sup:0 "$building_avb_warren_5_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]"
 # drone_storage 
  berg_building_drone_storage_sup:0 "$building_drone_storage_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
  berg_building_drone_megastorage_sup:0 "$building_drone_megastorage_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
  berg_building_avb_drone_storage_3_sup:0 "$building_avb_drone_storage_3_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
- berg_building_avb_drone_storage_4_sup:0 "$building_avb_drone_storage_4_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]"
+ berg_building_avb_drone_storage_4_sup:0 "$building_avb_drone_storage_4_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
+ berg_building_avb_drone_storage_5_sup:0 "$building_avb_drone_storage_5_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]"
 # holo_theatres 
  berg_building_holo_theatres_sup:0 "$building_holo_theatres_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
  berg_building_hyper_entertainment_forum_sup:0 "$building_hyper_entertainment_forum_desc$ [Root.GetSupTitle] [Root.GetSupAVB] [Root.GetSupOsa]" 
@@ -55,11 +57,11 @@ l_english:
  berg_building_dread_encampment_sup:0 "$building_dread_encampment_desc$" 
  berg_building_avb_dread_encampment_2_sup:0 "$building_avb_dread_encampment_2_desc$"
 # stronghold 
- berg_building_stronghold_sup:0 "$building_stronghold_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
- berg_building_fortress_sup:0 "$building_fortress_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
- berg_building_avb_stronghold_3_sup:0 "$building_avb_stronghold_3_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
- berg_building_avb_stronghold_4_sup:0 "$building_avb_stronghold_4_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
- berg_building_avb_stronghold_5_sup:0 "$building_avb_stronghold_5_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]"
+ berg_building_stronghold_sup:0 "$building_stronghold_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
+ berg_building_fortress_sup:0 "$building_fortress_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
+ berg_building_avb_stronghold_3_sup:0 "$building_avb_stronghold_3_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
+ berg_building_avb_stronghold_4_sup:0 "$building_avb_stronghold_4_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
+ berg_building_avb_stronghold_5_sup:0 "$building_avb_stronghold_5_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]"
 # planetary_shield 
  berg_building_planetary_shield_generator_sup:0 "$building_planetary_shield_generator_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupOsa] [Root.GetSupAVB]" 
  berg_building_avb_planetary_shield_generator_2_sup:0 "$building_avb_planetary_shield_generator_2_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupOsa] [Root.GetSupAVB]" 
@@ -105,12 +107,12 @@ l_english:
  berg_building_grand_embassy_sup:0 "$building_grand_embassy_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
  berg_building_avb_grand_embassy_2_sup:0 "$building_avb_grand_embassy_2_desc$ [Root.GetSupTitle] [Root.GetSupOsa]"
 # research_lab 
- berg_building_research_lab_1_sup:0 "$building_research_lab_1_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
- berg_building_research_lab_2_sup:0 "$building_research_lab_2_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
- berg_building_research_lab_3_sup:0 "$building_research_lab_3_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
- berg_building_avb_research_lab_4_sup:0 "$building_avb_research_lab_4_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
- berg_building_avb_research_lab_5_sup:0 "$building_avb_research_lab_5_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
- berg_building_avb_research_lab_6_sup:0 "$building_avb_research_lab_6_desc$ [Root.GetSupTitle] [Root.GetSupOsa]"
+ berg_building_research_lab_1_sup:0 "$building_research_lab_1_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_research_lab_2_sup:0 "$building_research_lab_2_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_research_lab_3_sup:0 "$building_research_lab_3_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_avb_research_lab_4_sup:0 "$building_avb_research_lab_4_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_avb_research_lab_5_sup:0 "$building_avb_research_lab_5_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_avb_research_lab_6_sup:0 "$building_avb_research_lab_6_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa] [Root.GetSupAVB]"
 # institute 
  berg_building_institute_sup:0 "$building_institute_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]" 
  berg_building_avb_institute_2_sup:0 "$building_avb_institute_2_desc$ [Root.GetSupTitle] [Root.GetSupECC] [Root.GetSupBug] [Root.GetSupOsa]"
@@ -230,12 +232,12 @@ l_english:
  berg_building_avb_monument_machine_5_sup:0 "$building_avb_monument_machine_5_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
  berg_building_avb_monument_machine_6_sup:0 "$building_avb_monument_machine_6_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]"
 # monument_megacorp 
- berg_building_corporate_monument_sup:0 "$building_corporate_monument_desc$" 
- berg_building_corporate_site_sup:0 "$building_corporate_site_desc$" 
- berg_building_corporate_forum_sup:0 "$building_corporate_forum_desc$" 
- berg_building_avb_monument_corp_4_sup:0 "$building_avb_monument_corp_4_desc$" 
- berg_building_avb_monument_corp_5_sup:0 "$building_avb_monument_corp_5_desc$" 
- berg_building_avb_monument_corp_6_sup:0 "$building_avb_monument_corp_6_desc$"
+ berg_building_corporate_monument_sup:0 "$building_corporate_monument_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
+ berg_building_corporate_site_sup:0 "$building_corporate_site_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
+ berg_building_corporate_forum_sup:0 "$building_corporate_forum_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
+ berg_building_avb_monument_corp_4_sup:0 "$building_avb_monument_corp_4_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
+ berg_building_avb_monument_corp_5_sup:0 "$building_avb_monument_corp_5_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
+ berg_building_avb_monument_corp_6_sup:0 "$building_avb_monument_corp_6_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]"
 # monument_hive 
  berg_building_sensorium_1_sup:0 "$building_sensorium_1_desc$" 
  berg_building_sensorium_2_sup:0 "$building_sensorium_2_desc$" 
@@ -256,7 +258,8 @@ l_english:
  berg_building_organic_sanctuary_sup:0 "$building_organic_sanctuary_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
  berg_building_organic_paradise_sup:0 "$building_organic_paradise_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
  berg_building_avb_organic_sanctuary_3_sup:0 "$building_avb_organic_sanctuary_3_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
- berg_building_avb_organic_sanctuary_4_sup:0 "$building_avb_organic_sanctuary_4_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]"
+ berg_building_avb_organic_sanctuary_4_sup:0 "$building_avb_organic_sanctuary_4_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]" 
+ berg_building_avb_organic_sanctuary_5_sup:0 "$building_avb_organic_sanctuary_5_desc$ [Root.GetSupTitle] [Root.GetSupOst] [Root.GetSupOsa]"
 # league_offices 
  berg_building_league_offices_sup:0 "$building_league_offices_desc$" 
  berg_building_avb_league_offices_2_sup:0 "$building_avb_league_offices_2_desc$"
@@ -275,7 +278,10 @@ l_english:
 # offspring_nest 
  berg_building_offspring_nest_sup:0 "$building_offspring_nest_desc$ [Root.GetSupTitle] [Root.GetSupOsa]" 
  berg_building_avb_offspring_nest_2_sup:0 "$building_avb_offspring_nest_2_desc$ [Root.GetSupTitle] [Root.GetSupOsa]"
-# necrophage
+# necrophage 
+ berg_building_necrophage_elevation_chamber_sup:0 "$building_necrophage_elevation_chamber_desc$ [Root.GetSupTitle] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_necrophage_house_of_apotheosis_sup:0 "$building_necrophage_house_of_apotheosis_desc$ [Root.GetSupTitle] [Root.GetSupOsa] [Root.GetSupAVB]" 
+ berg_building_avb_necrophage_3_sup:0 "$building_avb_necrophage_3_desc$ [Root.GetSupTitle] [Root.GetSupOsa] [Root.GetSupAVB]"
 # clone_vats 
  berg_building_clone_vats_sup:0 "$building_clone_vats_desc$ [Root.GetSupTitle] [Root.GetSupECC]" 
  berg_building_avb_clone_vats_2_sup:0 "$building_avb_clone_vats_2_desc$ [Root.GetSupTitle] [Root.GetSupECC]"

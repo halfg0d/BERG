@@ -873,8 +873,9 @@ building_avb_drone_storage_4 = {
 		script = vanilla/amenity/berg_drone_storage
 		tier = 4
 	}
-	
-	
+	upgrades = {
+		"building_avb_drone_storage_5"
+	}
 	prerequisites = {
 		"tech_avb_self_assembling_components_2" 
 	}
@@ -882,6 +883,51 @@ building_avb_drone_storage_4 = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_drone_storage_4
 		TRIGGER = " "
+	}
+}
+building_avb_drone_storage_5 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = amenity
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_machine_empire = no }
+	}
+	
+	convert_to = {
+		building_avb_residence_5
+		building_avb_warren_5
+		building_avb_communal_housing_5
+		building_avb_organic_sanctuary_5
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla/drone_storage
+		tier = 5
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_drone_storage
+		tier = 5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_drone_storage_5
+		TRIGGER = " "
+	}
+	
+	prerequisites = {
+		"tech_avb_self_assembling_components_3" 
 	}
 }
 
@@ -1073,6 +1119,62 @@ building_avb_warren_4 = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_warren_4
+		TRIGGER = " "
+	}
+	upgrades = {
+		"building_avb_warren_5"
+	}
+}
+building_avb_warren_5 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+	
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	show_tech_unlock_if = { 
+		owner = { is_hive_empire = yes }
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+	
+	convert_to = {
+		building_avb_residence_5
+		building_avb_drone_storage_5
+		building_avb_communal_housing_5
+		building_avb_organic_sanctuary_5
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 60
+		planet_amenities_add = 32
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_warren
+		tier = 5
+	}
+	inline_script = {
+		script = building_resources/vanilla/warren
+		tier = 5
+	}
+	prerequisites = {
+		"tech_avb_housing_5" 
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_warren_5
 		TRIGGER = " "
 	}
 }

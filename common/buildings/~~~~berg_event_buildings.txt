@@ -353,8 +353,12 @@ building_composer_sanctum = {
 		}
 	}
 
-	planet_modifier = {
-		job_telepath_add = 3
+	inline_script = {
+		script = berg_jobs_group/telepath_add
+		AMOUNT = 3
+		TRIGGER = " "
+		MULT = 1
+		DESC = with
 	}
 
 	country_modifier = {
@@ -372,10 +376,6 @@ building_composer_sanctum = {
 			energy = @b3_upkeep
 			exotic_gases = @b3_rare_upkeep
 		}
-	}
-
-	triggered_desc = {
-		text = job_telepath_effect_desc
 	}
 }
 
@@ -409,8 +409,12 @@ building_eater_sanctum = {
 		}
 	}
 
-	planet_modifier = {
-		job_telepath_add = 3
+	inline_script = {
+		script = berg_jobs_group/telepath_add
+		AMOUNT = 3
+		TRIGGER = " "
+		MULT = 1
+		DESC = with
 	}
 
 	country_modifier = {
@@ -428,10 +432,6 @@ building_eater_sanctum = {
 			energy = @b3_upkeep
 			exotic_gases = @b3_rare_upkeep
 		}
-	}
-
-	triggered_desc = {
-		text = job_telepath_effect_desc
 	}
 }
 
@@ -465,8 +465,12 @@ building_instrument_sanctum = {
 		}
 	}
 
-	planet_modifier = {
-		job_telepath_add = 3
+	inline_script = {
+		script = berg_jobs_group/telepath_add
+		AMOUNT = 3
+		TRIGGER = " "
+		MULT = 1
+		DESC = with
 	}
 
 	country_modifier = {
@@ -484,10 +488,6 @@ building_instrument_sanctum = {
 			energy = @b3_upkeep
 			exotic_gases = @b3_rare_upkeep
 		}
-	}
-
-	triggered_desc = {
-		text = job_telepath_effect_desc
 	}
 }
 
@@ -520,8 +520,12 @@ building_whisperers_sanctum = {
 		}
 	}
 
-	planet_modifier = {
-		job_telepath_add = 3
+	inline_script = {
+		script = berg_jobs_group/telepath_add
+		AMOUNT = 3
+		TRIGGER = " "
+		MULT = 1
+		DESC = with
 	}
 
 	country_modifier = {
@@ -583,9 +587,5 @@ building_whisperers_sanctum = {
 			energy = @b3_upkeep
 			exotic_gases = @b3_rare_upkeep
 		}
-	}
-
-	triggered_desc = {
-		text = job_telepath_effect_desc
 	}
 }

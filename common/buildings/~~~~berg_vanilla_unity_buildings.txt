@@ -4952,6 +4952,95 @@ building_avb_organic_sanctuary_4 = {
 		BUILDING = avb_organic_sanctuary_4
 		TRIGGER = " "
 	}
+	upgrades = {
+		building_avb_organic_sanctuary_5
+	}
+}
+building_avb_organic_sanctuary_5 = {
+	base_buildtime = @avb_b6_time
+	can_build = no
+	category = unity
+
+	potential = {
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { has_valid_civic = civic_machine_servitor }
+	}
+	destroy_trigger = {
+		exists = owner
+		NOT = { owner = { has_valid_civic = civic_machine_servitor } }
+	}
+	
+	convert_to = {
+		building_avb_residence_5
+		building_avb_communal_housing_5
+	}
+		
+	inline_script = {
+		script = building_resources/vanilla/organic_paradise
+		tier = 5
+	}
+	inline_script = {
+		script = vanilla/unity/berg_organic_paradise_script
+		tier = 5
+	}
+	prerequisites = { "tech_avb_residence_5" }
+	
+	show_tech_unlock_if = {
+		owner = { has_valid_civic = civic_machine_servitor }
+	}
+	#science
+	ai_resource_production = {
+		unity = 50
+		physics_research = 50
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 120
+				type = produces
+			}
+		}
+	}
+
+	#alloys
+	ai_resource_production = {
+		unity = 50
+		alloys = 50
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = alloys
+				value >= 120
+				type = produces
+			}
+		}
+	}
+
+	#cgs
+	ai_resource_production = {
+		unity = 50
+		consumer_goods = 50
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 120
+				type = produces
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_organic_sanctuary_5
+		TRIGGER = " "
+	}
 }
 
 # Archaeotech
