@@ -534,17 +534,6 @@ building_avb_baol_organic_plant_2 = {
 }
 
 building_mineral_purification_plant = {
-
-	desc = {
-		trigger = { berg_is_shattered_ring = no }
-		text = building_mineral_purification_plant_desc
-	}
-
-	desc = {
-		trigger = { berg_is_shattered_ring = yes }
-		text = building_scrap_processing_plant_desc
-	}
-
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 	category = resource
@@ -603,22 +592,16 @@ building_mineral_purification_plant = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = mineral_purification_plant
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = scrap_processing_plant
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 
 building_mineral_purification_hub = {
-
-	desc = {
-		trigger = { berg_is_shattered_ring = no }
-		text = building_mineral_purification_hub_desc
-	}
-
-	desc = {
-		trigger = { berg_is_shattered_ring = yes }
-		text = building_scrap_processing_hub_desc
-	}
-
 	base_buildtime = @b2_time
 	can_build = no
 	category = resource
@@ -662,23 +645,18 @@ building_mineral_purification_hub = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = mineral_purification_hub
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = scrap_processing_hub
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 building_avb_mineral_purification_3 = {
 	base_buildtime = @avb_rs4_time
 	can_build = no
 	category = resource
-
-	desc = {
-		trigger = { NOT = { is_planet_class = pc_shattered_ring_habitable } }
-		text = building_mineral_purification_hub_desc
-	}
-
-	desc = {
-		trigger = { is_planet_class = pc_shattered_ring_habitable }
-		text = building_scrap_processing_hub_desc
-	}
 
 	allow = {
 		has_fully_upgraded_capital = yes
@@ -721,7 +699,12 @@ building_avb_mineral_purification_3 = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_mineral_purification_3
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_3_scrap
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 
@@ -729,17 +712,6 @@ building_avb_mineral_purification_4 = {
 	base_buildtime = @avb_rs5_time
 	can_build = no
 	category = resource
-	
-	desc = {
-		trigger = { NOT = { is_planet_class = pc_shattered_ring_habitable } }
-		text = building_mineral_purification_hub_desc
-	}
-
-	desc = {
-		trigger = { is_planet_class = pc_shattered_ring_habitable }
-		text = building_scrap_processing_hub_desc
-	}
-
 	allow = {
 		has_upgraded_capital_4 = yes
 		NOR = {
@@ -779,7 +751,12 @@ building_avb_mineral_purification_4 = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_mineral_purification_4
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_4_scrap
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 
