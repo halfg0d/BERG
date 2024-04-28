@@ -1,0 +1,216 @@
+#############
+# z Expanded pops buildings
+#############
+
+building_hive_primary_confluence = {
+	base_buildtime = @b3_time
+	empire_limit = {
+		base = 1
+	}
+	icon = building_hive_capital
+
+	category = unity
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_hive_empire = no }
+		}
+	}
+
+	convert_to = {
+		building_autocurating_vault
+		building_citadel_of_faith
+		building_corporate_vault
+		building_alpha_hub
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+					is_lithoid_empire = no
+				}
+			}
+			minerals = @b2_hive_minerals
+			food = @b2_hive_food
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					has_valid_civic = civic_integrated_bioarchitecture
+					is_lithoid_empire = no
+				}
+			}
+			food = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			minerals = 1200
+			exotic_gases = 375
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+					is_lithoid_empire = no
+				}
+			}
+			minerals = 800
+			food = 400
+			exotic_gases = 375
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					has_valid_civic = civic_integrated_bioarchitecture
+					is_lithoid_empire = no
+				}
+			}
+			food = 1200
+			exotic_gases = 375
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+				}
+			}
+			energy = @b2_upkeep_hive
+			food = @b2_upkeep_food
+			exotic_gases = @b2_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+				}
+			}
+			energy = 8
+			exotic_gases = 3
+		}
+
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+				}
+			}
+			energy = 5.3
+			food = 2.7
+			exotic_gases = 3
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+				}
+			}
+			energy = 8
+			exotic_gases = 3
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+					has_edict = synaptic_reinforcement
+				}
+			}
+			energy = 1
+			food = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					has_edict = synaptic_reinforcement
+				}
+			}
+			energy = 1
+			minerals = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+		}
+		planet_administrators_unity_produces_add = 1
+		planet_managers_unity_produces_add = 1
+		planet_priests_unity_produces_add = 1
+		planet_telepaths_unity_produces_add = 1
+	}
+
+	country_modifier = {
+		country_official_cap_add = 1
+		country_unity_produces_mult = 0.05
+	}
+
+	planet_modifier = {
+		job_evaluator_add = 2
+	}
+
+	triggered_desc = {
+		text = job_evaluator_effect_desc
+	}
+	
+	prerequisites = {
+		"tech_autocurating_vault"
+	}
+
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_hive_empire = yes
+	}
+}

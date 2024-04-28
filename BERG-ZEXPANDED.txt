@@ -62,12 +62,13 @@ private military companies
 
 determinated exterminators ???
 
-WORK: waint until changes 
+DONE: waint until changes 
 rogue servitors !!!!
 organic sanctuaries replace maintenance drones with caretaker
 capital buildings gives biotrophy job
 bergonator resource do zmiany i dodanie t7 kosztów
 
+DONE:
 Hive Mind
 	- The cost and maintenance for some items has been split between minerals/energy and food for non-lithoid Hive Minds, including:
 		- Capital Buildings

@@ -81,7 +81,13 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			is_robot_empire = yes
+			OR = {
+				is_robot_empire = yes
+				AND = {
+					berg_has_zexpanded_mod = yes
+					is_lithoid_empire = yes
+				}
+			}
 		}
 		NOR = {
 			berg_is_habitat = yes
@@ -216,4 +222,18 @@ triggered_desc = {
 		}
 	}
 	text = job_guildmaster_effect_desc
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_robot_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+	}
+	modifier = { 
+		planet_miners_minerals_produces_mult = 0.05
+	}
 }

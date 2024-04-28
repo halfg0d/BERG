@@ -117,3 +117,32 @@ triggered_desc = {
 	}
 	text = job_aqu_angler_effect_desc
 }
+#zex
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+	}
+	modifier = {
+		planet_farmers_food_produces_mult = 0.05
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { 
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}
+		# undercoat: replaced unnecessary planet class check
+		uses_district_set = standard
+	}
+	modifier = {
+		district_farming_max = @berg_resource_food_processing_zex_district_t$tier$
+	}
+}
