@@ -36,14 +36,6 @@
 @berg_government_slave_processing_resettlment_t1 = -0.5
 @berg_government_slave_processing_resettlment_t2 = -0.35
 # precinct_house
-@berg_government_precinct_house_costOneThird_t1 = 133.33
-@berg_government_precinct_house_costOneThird_t2 = 200.0
-@berg_government_precinct_house_costOneThird_t3 = 333.33
-@berg_government_precinct_house_costOneThird_t4 = 666.67
-@berg_government_precinct_house_costTwoThird_t1 = 266.67
-@berg_government_precinct_house_costTwoThird_t2 = 400.0
-@berg_government_precinct_house_costTwoThird_t3 = 666.67
-@berg_government_precinct_house_costTwoThird_t4 = 1333.33
 @berg_government_precinct_house_cost_t1 = 400
 @berg_government_precinct_house_cost_t2 = 600
 @berg_government_precinct_house_cost_t3 = 1000
@@ -64,14 +56,6 @@
 @berg_government_precinct_house_rare_upkeep_t2 = 1
 @berg_government_precinct_house_rare_upkeep_t3 = 4
 @berg_government_precinct_house_rare_upkeep_t4 = 6
-@berg_government_precinct_house_upkeepOneThird_t1 = 0.67
-@berg_government_precinct_house_upkeepOneThird_t2 = 0.67
-@berg_government_precinct_house_upkeepOneThird_t3 = 2.0
-@berg_government_precinct_house_upkeepOneThird_t4 = 4.0
-@berg_government_precinct_house_upkeepTwoThird_t1 = 1.33
-@berg_government_precinct_house_upkeepTwoThird_t2 = 1.33
-@berg_government_precinct_house_upkeepTwoThird_t3 = 4.0
-@berg_government_precinct_house_upkeepTwoThird_t4 = 8.0
 @berg_government_precinct_house_upkeep_t1 = 2
 @berg_government_precinct_house_upkeep_t2 = 2
 @berg_government_precinct_house_upkeep_t3 = 6
@@ -81,20 +65,12 @@
 @berg_government_precinct_house_job_t3 = 6
 @berg_government_precinct_house_job_t4 = 8
 # sentinel_posts
-@berg_government_sentinel_posts_costOneThird_t1 = 133.33
-@berg_government_sentinel_posts_costOneThird_t2 = 200.0
-@berg_government_sentinel_posts_costTwoThird_t1 = 266.67
-@berg_government_sentinel_posts_costTwoThird_t2 = 400.0
 @berg_government_sentinel_posts_cost_t1 = 400
 @berg_government_sentinel_posts_cost_t2 = 600
 @berg_government_sentinel_posts_osa_upkeep_energy_t1 = 0.5
 @berg_government_sentinel_posts_osa_upkeep_energy_t2 = 1.0
 @berg_government_sentinel_posts_osa_upkeep_minerals_t1 = 2.5
 @berg_government_sentinel_posts_osa_upkeep_minerals_t2 = 5.0
-@berg_government_sentinel_posts_upkeepOneThird_t1 = 0.67
-@berg_government_sentinel_posts_upkeepOneThird_t2 = 1.33
-@berg_government_sentinel_posts_upkeepTwoThird_t1 = 1.33
-@berg_government_sentinel_posts_upkeepTwoThird_t2 = 2.67
 @berg_government_sentinel_posts_upkeep_t1 = 2
 @berg_government_sentinel_posts_upkeep_t2 = 4
 @berg_government_sentinel_posts_job_t1 = 2

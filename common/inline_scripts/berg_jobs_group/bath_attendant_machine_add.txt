@@ -1,22 +1,25 @@
-#Add merchant
-#With ECC swaps into mogul
+#Bath Attendant jobs
+#Swaps between empires type
+
+# Machine
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = merchant
+	JOB = bath_attendant_machine
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	berg_has_ecc_mod = no
+	is_machine_empire = yes
 	"
 }
+# Individual
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = mogul
+	JOB = bath_attendant_individual_machine
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	berg_has_ecc_mod = yes
+	is_individual_machine = yes
 	"
 }

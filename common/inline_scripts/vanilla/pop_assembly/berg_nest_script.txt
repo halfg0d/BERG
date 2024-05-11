@@ -1,6 +1,6 @@
-#Normal
+#Progenitor Hiive
 planet_modifier = {
-	job_spawning_drone_add = @berg_pop_assembly_spawning_pool_job_t$tier$
+	job_offspring_drone_add = @berg_pop_assembly_offspring_nest_job_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
@@ -13,7 +13,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		auto_mod_monthly_add = @berg_pop_assembly_spawning_pool_auto_mod_t$tier$
+		auto_mod_monthly_add = @berg_pop_assembly_offspring_nest_auto_mod_t$tier$
 	}
 }
 
@@ -28,35 +28,23 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		auto_mod_monthly_add = @berg_pop_assembly_spawning_pool_auto_mod_t$tier$
+		auto_mod_monthly_add = @berg_pop_assembly_offspring_nest_auto_mod_t$tier$
 	}
-}
-triggered_desc = {
-	text = spawning_pool_tooltip
-}
-triggered_desc = {
-	trigger = {
-		NAND = {
-			exists = owner
-			owner = { has_origin = origin_necrophage }
-			exists = growing_species
-			growing_species = {
-				NOT = { has_trait = trait_hive_mind }
-			}
-		}
-	}
-	text = job_spawning_drone_effect_desc
 }
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_origin = origin_necrophage }
+		owner = { has_origin = origin_progenitor_hive }
 		exists = growing_species
 		growing_species = {
-			NOT = { has_trait = trait_hive_mind }
+			has_trait = trait_hive_mind
 		}
 	}
-	text = job_spawning_drone_necrophage_effect_desc
+	text = job_offspring_drone_effect_desc
+}
+
+triggered_desc = {
+	text = offspring_nest_tooltip
 }
 #Cyborgs
 triggered_planet_modifier = {

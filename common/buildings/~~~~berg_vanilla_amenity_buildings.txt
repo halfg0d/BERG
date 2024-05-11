@@ -7,18 +7,7 @@ building_luxury_residence = {
 	category = amenity
 
 	potential = {
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
-		NOT = { has_modifier = slave_colony }
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			berg_has_any_shared_burden_civic = no
-		}
-		NOT = { has_building = building_low_tech_capital }
+		berg_st_can_build_luxury_residence = yes
 	}
 
 	destroy_trigger = {
@@ -72,11 +61,7 @@ building_paradise_dome = {
 	category = amenity
 
 	potential = {
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
+		berg_st_can_build_luxury_residence = yes
 	}
 
 	allow = {
@@ -135,11 +120,7 @@ building_avb_residence_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
+		berg_st_can_build_luxury_residence = yes
 	}
 
 	allow = {
@@ -199,15 +180,7 @@ building_avb_residence_4 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		OR = {
-			is_habitat = no
-			AND = {
-				exists = owner
-				owner = {
-					is_void_dweller_empire = yes
-				}
-			}
-		}
+		berg_st_can_build_luxury_residence = yes
 	}
 
 	allow = {
@@ -268,15 +241,7 @@ building_avb_residence_5 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		OR = {
-			is_habitat = no
-			AND = {
-				exists = owner
-				owner = {
-					is_void_dweller_empire = yes
-				}
-			}
-		}
+		berg_st_can_build_luxury_residence = yes
 	}
 
 	allow = {
@@ -333,17 +298,7 @@ building_communal_housing = {
 	category = amenity
 
 	potential = {
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
-		NOT = { has_modifier = slave_colony }
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			berg_has_any_shared_burden_civic = yes
-		}
+		berg_st_can_build_communal_housing = yes
 	}
 
 	destroy_trigger = {
@@ -402,16 +357,7 @@ building_communal_housing_large = {
 	category = amenity
 
 	potential = {
-		has_building = building_communal_housing
-		owner = {
-			is_regular_empire = yes
-			berg_has_any_shared_burden_civic = yes
-		}
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
+		berg_st_can_build_communal_housing = yes
 	}
 
 	allow = {
@@ -473,15 +419,7 @@ building_avb_communal_housing_3 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		owner = {
-			is_regular_empire = yes
-			berg_has_any_shared_burden_civic = yes
-		}
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
+		berg_st_can_build_communal_housing = yes
 	}
 	
 	allow = {
@@ -547,20 +485,7 @@ building_avb_communal_housing_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		owner = {
-			is_regular_empire = yes
-			berg_has_any_shared_burden_civic = yes
-		}
-
-		OR = {
-			is_habitat = no
-			AND = {
-				exists = owner
-				owner = {
-					is_void_dweller_empire = yes
-				}
-			}
-		}
+		berg_st_can_build_communal_housing = yes
 	}
 	
 	allow = {
@@ -625,15 +550,7 @@ building_avb_communal_housing_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		owner = {
-			is_regular_empire = yes
-			berg_has_any_shared_burden_civic = yes
-		}
-		OR = {
-			berg_is_habitat = no
-			berg_pd_resort_habitat = yes
-			berg_void_dweller_housing = yes
-		}
+		berg_st_can_build_communal_housing = yes
 	}
 	
 	allow = {
@@ -691,8 +608,7 @@ building_drone_storage = {
 	category = amenity
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
+		berg_st_can_build_drone_storage = yes
 	}
 
 	destroy_trigger = {
@@ -746,7 +662,7 @@ building_drone_megastorage = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
-		has_building = building_drone_storage
+		berg_st_can_build_drone_storage = yes
 	}
 	destroy_trigger = {
 		exists = owner
@@ -795,8 +711,7 @@ building_avb_drone_storage_3 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_machine_empire = yes }
+		berg_st_can_build_drone_storage = yes
 	}
 	
 	destroy_trigger = {
@@ -848,8 +763,7 @@ building_avb_drone_storage_4 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_machine_empire = yes }
+		berg_st_can_build_drone_storage = yes
 	}
 	
 	destroy_trigger = {
@@ -896,8 +810,7 @@ building_avb_drone_storage_5 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_machine_empire = yes }
+		berg_st_can_build_drone_storage = yes
 	}
 	
 	destroy_trigger = {
@@ -938,8 +851,7 @@ building_hive_warren = {
 	category = amenity
 
 	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
+		berg_st_can_build_warren = yes
 	}
 
 	destroy_trigger = {
@@ -978,7 +890,7 @@ building_expanded_warren = {
 	category = amenity
 
 	potential = {
-		has_building = building_hive_warren
+		berg_st_can_build_warren = yes
 	}
 
 	allow = {
@@ -1028,8 +940,7 @@ building_avb_warren_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_hive_empire = yes }
+		berg_st_can_build_warren = yes
 	}
 
 	allow = {
@@ -1082,8 +993,7 @@ building_avb_warren_4 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_hive_empire = yes }
+		berg_st_can_build_warren = yes
 	}
 
 	allow = {
@@ -1133,8 +1043,7 @@ building_avb_warren_5 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_hive_empire = yes }
+		berg_st_can_build_warren = yes
 	}
 
 	allow = {
@@ -1184,21 +1093,7 @@ building_holo_theatres = {
 	category = amenity
 
 	potential = {
-		NOT = {	has_modifier = slave_colony	}
-		owner = {
-			is_regular_empire = yes
-			berg_is_dystopian_society = no
-		}
-		OR = {
-			owner = {
-				NOT = { is_ai = yes }
-			}
-			AND = {
-				NOT = { has_available_jobs = entertainer }
-				NOT = { has_forbidden_jobs = entertainer }
-			}
-		}
-		NOT = { has_building = building_low_tech_capital }
+		berg_st_can_build_holotheatres = yes
 	}
 
 	destroy_trigger = {
@@ -1239,7 +1134,7 @@ building_hyper_entertainment_forum = {
 	category = amenity
 
 	potential = {
-		has_building = building_holo_theatres
+		berg_st_can_build_holotheatres = yes
 	}
 
 	allow = {
@@ -1296,21 +1191,7 @@ building_avb_holo_theatre_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOT = {	has_modifier = slave_colony	}
-		owner = {
-			is_regular_empire = yes
-			NOT = { has_valid_civic = civic_dystopian_society }
-		}
-		OR = {
-			owner = {
-				NOT = { is_ai = yes }
-			}
-			AND = {
-				NOT = { has_available_jobs = entertainer }
-				NOT = { has_forbidden_jobs = entertainer }
-			}
-		}
-		NOT = { has_building = building_low_tech_capital }
+		berg_st_can_build_holotheatres = yes
 	}
 
 	destroy_trigger = {
@@ -1369,21 +1250,7 @@ building_avb_holo_theatre_4 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOT = {	has_modifier = slave_colony	}
-		owner = {
-			is_regular_empire = yes
-			NOT = { has_valid_civic = civic_dystopian_society }
-		}
-		OR = {
-			owner = {
-				NOT = { is_ai = yes }
-			}
-			AND = {
-				NOT = { has_available_jobs = entertainer }
-				NOT = { has_forbidden_jobs = entertainer }
-			}
-		}
-		NOT = { has_building = building_low_tech_capital }
+		berg_st_can_build_holotheatres = yes
 	}
 
 	destroy_trigger = {
@@ -1434,37 +1301,7 @@ building_clinic = {
 	category = amenity
 
 	potential = {
-		owner = {
-			OR = {
-				is_regular_empire = yes
-				AND = {
-					berg_is_fear_of_the_dark_empire = yes
-					is_country_type = primitive
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
-
-		OR = {
-			owner = {
-				OR = {
-					is_ai = no
-					berg_is_private_healthcare_empire = yes
-					prev = {
-						has_branch_office = yes
-						branch_office_owner = {
-							berg_is_private_healthcare_empire = yes
-						}
-					}
-				}
-			}
-			AND = {
-				NOT = { has_available_jobs = entertainer }
-				NOT = { has_forbidden_jobs = entertainer }
-				planet_stability < 50
-				free_amenities < 0
-			}
-		}
+		berg_st_can_build_clinic = yes
 	}
 
 	destroy_trigger = {
@@ -1574,7 +1411,7 @@ building_hospital = {
 	category = amenity
 
 	potential = {
-		has_building = building_clinic
+		berg_st_can_build_clinic = yes
 	}
 
 	allow = {
@@ -1642,7 +1479,7 @@ building_avb_clinic_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		has_building = building_hospital
+		berg_st_can_build_clinic = yes
 	}
 	
 	allow = {
@@ -1715,7 +1552,7 @@ building_avb_clinic_4 = {
 	category = amenity
 	potential = {
 		berg_has_avb_mod = yes
-        has_building = building_avb_clinic_3
+		berg_st_can_build_clinic = yes
 	}
 	
 	allow = {
@@ -1782,7 +1619,7 @@ building_maintenance_depot = {
 	category = amenity
 
 	potential = {
-		owner = { is_gestalt = yes }
+		berg_st_can_build_depot = yes
 	}
 
 	destroy_trigger = {
@@ -1823,7 +1660,7 @@ building_avb_maintenance_depot_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		owner = { is_gestalt = yes }
+		berg_st_can_build_depot = yes
 	}
 	
 	destroy_trigger = {
@@ -1871,7 +1708,7 @@ building_slave_huts = {
 	category = amenity
 
 	potential = {
-		has_modifier = slave_colony
+		berg_st_can_build_huts = yes
 	}
 
 	destroy_trigger = {
@@ -1906,7 +1743,7 @@ building_avb_slave_huts_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		has_modifier = slave_colony
+		berg_st_can_build_huts = yes
 	}
 	
 	allow = {
@@ -1946,7 +1783,7 @@ building_overseer_homes = {
 	category = amenity
 
 	potential = {
-		has_modifier = slave_colony
+		berg_st_can_build_overseer = yes
 	}
 
 	destroy_trigger = {
@@ -1982,7 +1819,7 @@ building_avb_overseer_homes_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		has_modifier = slave_colony
+		berg_st_can_build_overseer = yes
 	}
 	
 	allow = {
@@ -2017,18 +1854,7 @@ building_ranger_lodge = {
 	category = amenity
 	icon = holding_park_ranger_lodge
 	potential = {
-		NOT = {	has_modifier = slave_colony	}
-		owner = {
-			is_regular_empire = yes
-			berg_is_environmental = yes
-		}
-		NOR = {
-			berg_is_city_world = yes
-			berg_is_hive_world = yes
-			berg_is_machine_world = yes
-			is_planet_class = pc_relic
-		}
-		is_artificial = no
+		berg_st_can_build_ranger = yes
 	}
 
 	allow = {
@@ -2099,18 +1925,7 @@ building_avb_ranger_lodge_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		NOT = {	has_modifier = slave_colony	}
-		owner = {
-			is_regular_empire = yes
-			has_valid_civic = civic_environmentalist
-		}
-		NOR = {
-			is_planet_class = pc_city
-			is_planet_class = pc_hive
-			is_planet_class = pc_machine
-			is_planet_class = pc_relic
-		}
-		is_artificial = no
+		berg_st_can_build_ranger = yes
 	}
 
 	allow = {
@@ -2179,14 +1994,7 @@ building_toxic_bath = {
 	icon = building_toxic_bath
 
 	potential = {
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_regular_empire = yes
-			OR = {
-				has_valid_civic = civic_toxic_baths
-				has_valid_civic = civic_corporate_toxic_baths
-			}
-		}
+		berg_st_can_build_toxic_bath = yes
 	}
 	destroy_trigger = {
 		exists = owner
@@ -2232,14 +2040,7 @@ building_avb_toxic_bath_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_regular_empire = yes
-			OR = {
-				has_valid_civic = civic_toxic_baths
-				has_valid_civic = civic_corporate_toxic_baths
-			}
-		}
+		berg_st_can_build_toxic_bath = yes
 	}
 	destroy_trigger = {
 		exists = owner

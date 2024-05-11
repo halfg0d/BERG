@@ -1,5 +1,5 @@
 resources = {
-	category = planet_buildings
+	category = planet_buildings_clone_vats
 	inline_script = {
 		script = resources_scripts/basic
 		category = pop_assembly

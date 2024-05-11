@@ -690,7 +690,7 @@ building_lichen_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -730,7 +730,7 @@ building_lichen_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -878,7 +878,7 @@ building_wet_td_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -930,7 +930,7 @@ building_wet_td_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -1132,7 +1132,7 @@ building_glacio_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -1175,7 +1175,7 @@ building_lanthanide_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -1351,7 +1351,7 @@ building_megalfora_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -1490,7 +1490,7 @@ building_megalfora_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -1536,7 +1536,7 @@ building_petrified_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -2013,7 +2013,7 @@ building_reef_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -2088,7 +2088,7 @@ building_archipelago_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -2263,7 +2263,7 @@ building_salt_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -2315,7 +2315,7 @@ building_aquifer_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -2472,7 +2472,7 @@ building_karst_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -2523,7 +2523,7 @@ building_karst_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -2793,7 +2793,7 @@ building_biolumen_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -2835,7 +2835,7 @@ building_geothermal_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -3237,7 +3237,7 @@ building_storm_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -3280,7 +3280,7 @@ building_storm_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -3350,7 +3350,7 @@ building_primal_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -3393,7 +3393,7 @@ building_primal_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -3539,7 +3539,7 @@ building_iceberg_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -3613,7 +3613,7 @@ building_supercon_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -3747,7 +3747,7 @@ building_supercon_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -3886,7 +3886,7 @@ building_pd_sinkhole_mine = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -4067,7 +4067,7 @@ building_superhab_farm = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes

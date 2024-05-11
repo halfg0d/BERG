@@ -127,11 +127,7 @@ building_paragon_memory_vaults = {
 	}
 
 	potential = {
-		custom_tooltip = {
-			text = EMPIRE_UNIQUE_BUILDING
-			owner = { is_memory_vault_empire = yes }
-		}
-		exists = planet
+		berg_st_can_build_memory_vault = yes
 	}
 
 	resources = {
@@ -229,6 +225,7 @@ building_avb_paragon_memory_vaults_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
+		berg_st_can_build_memory_vault = yes
 	}
 	destroy_trigger = {
 		exists = owner

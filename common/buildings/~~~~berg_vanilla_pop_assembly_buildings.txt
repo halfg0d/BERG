@@ -9,29 +9,7 @@ building_robot_assembly_plant = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { berg_is_robotic = yes }
-		}
-		owner = {
-			is_regular_empire = yes
-			NOT = { has_policy_flag = robots_outlawed }
-			OR = {
-				is_ai = no
-				NOT = { has_ascension_perk = ap_engineered_evolution }
-				is_materialist = yes
-			}
-		}
-		NOT = { has_modifier = slave_colony }
-		OR = {
-			berg_has_bug_mod = no
-			AND = {
-				berg_has_avb_mod = yes
-				owner = { is_bugged_machine_cult = no }
-			}
-		}
+		berg_st_can_build_robot_plant = yes
 	}
 
 	convert_to = {
@@ -121,29 +99,7 @@ building_robot_assembly_complex = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { berg_is_robotic = yes }
-		}
-		owner = {
-			is_regular_empire = yes
-			NOT = { has_policy_flag = robots_outlawed }
-			OR = {
-				is_ai = no
-				NOT = { has_ascension_perk = ap_engineered_evolution }
-				is_materialist = yes
-			}
-		}
-		NOT = { has_modifier = slave_colony }
-		OR = {
-			berg_has_bug_mod = no
-			AND = {
-				berg_has_avb_mod = yes
-				owner = { is_bugged_machine_cult = no }
-			}
-		}
+		berg_st_can_build_robot_plant = yes
 	}
 
 	convert_to = {
@@ -216,29 +172,7 @@ building_avb_robot_assembly_plant_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_robotic_species = yes }
-		}
-		owner = {
-			is_regular_empire = yes
-			NOT = { has_policy_flag = robots_outlawed }
-			OR = {
-				is_ai = no
-				NOT = { has_ascension_perk = ap_engineered_evolution }
-				is_materialist = yes
-			}
-		}
-		NOT = { has_modifier = slave_colony }
-		OR = {
-			berg_has_bug_mod = no
-			AND = {
-				berg_has_avb_mod = yes
-				owner = { is_bugged_machine_cult = no }
-			}
-		}
+		berg_st_can_build_robot_plant = yes
 	}
 	
 	allow = {
@@ -318,9 +252,7 @@ building_machine_assembly_plant = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-		NOT = { has_modifier = crucible_colony }
+		berg_st_can_build_machine_plant = yes
 	}
 
 	convert_to = {
@@ -385,9 +317,7 @@ building_machine_assembly_complex = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-		NOT = { has_modifier = crucible_colony }
+		berg_st_can_build_machine_plant = yes
 	}
 
 	convert_to = {
@@ -439,9 +369,7 @@ building_avb_machine_assembly_plant_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_machine_empire = yes }
-		NOT = { has_modifier = crucible_colony }
+		berg_st_can_build_machine_plant = yes
 	}
 	allow = {
 		has_upgraded_capital_4 = yes
@@ -495,15 +423,7 @@ building_spawning_pool = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-			berg_is_progenitor_empire = no
-		}
-		or = {
-			num_buildings = { type = any value < 15 }
-			owner = { is_ai = no }
-		}
+		berg_st_can_build_spawning_pool = yes
 	}
 
 	destroy_trigger = {
@@ -545,15 +465,7 @@ building_avb_spawning_pool_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-			NOT = { has_origin = origin_progenitor_hive }
-		}
-		or = {
-			num_buildings = { type = any value < 15 }
-			owner = { is_ai = no }
-		}
+		berg_st_can_build_spawning_pool = yes
 	}
 	convert_to = {
 		building_avb_offspring_nest_2
@@ -597,12 +509,7 @@ building_offspring_nest = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		owner = { berg_is_progenitor_empire = yes }
-		or = {
-			num_buildings = { type = any value < 15 }
-			owner = { is_ai = no }
-		}
+		berg_st_can_build_offspring_nest = yes
 	}
 
 	destroy_trigger = {
@@ -611,7 +518,7 @@ building_offspring_nest = {
 	}
 
 	inline_script = {
-		script = vanilla/pop_assembly/berg_pool_script
+		script = vanilla/pop_assembly/berg_nest_script
 		tier = 1
 	}
 	inline_script = {
@@ -640,12 +547,7 @@ building_avb_offspring_nest_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { has_origin = origin_progenitor_hive }
-		or = {
-			num_buildings = { type = any value < 15 }
-			owner = { is_ai = no }
-		}
+		berg_st_can_build_offspring_nest = yes
 	}
 
 	destroy_trigger = {
@@ -669,7 +571,7 @@ building_avb_offspring_nest_2 = {
 		tech_avb_offspring_nest_2
 	}
 	inline_script = {
-		script = vanilla/pop_assembly/berg_pool_script
+		script = vanilla/pop_assembly/berg_nest_script
 		tier = 2
 	}
 	inline_script = {
@@ -714,14 +616,7 @@ building_necrophage_elevation_chamber = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		owner = {
-			berg_is_necrophage_empire = yes
-			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-			}
-		}
+		berg_st_can_build_necrophage = yes
 	}
 
 	allow = {
@@ -829,15 +724,8 @@ building_necrophage_house_of_apotheosis = {
 	}
 
 	potential = {
-		exists = owner
-		owner = {
-			berg_is_necrophage_empire = yes
-			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-			}
-			is_ai = no #the AI will just kill all its necrophytes
-		}
+		berg_st_can_build_necrophage = yes
+		owner = { is_ai = no }
 	}
 
 	allow = {
@@ -930,15 +818,8 @@ building_avb_necrophage_3 = {
 
 	potential = {
 		avb_hg_changes = yes
-		exists = owner
-		owner = {
-			berg_is_necrophage_empire = yes
-			NOR = {
-				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_hive_devouring_swarm
-			}
-			is_ai = no #the AI will just kill all its necrophytes
-		}
+		berg_st_can_build_necrophage = yes
+		owner = { is_ai = no }
 	}
 
 	allow = {
@@ -1013,23 +894,7 @@ building_clone_vats = {
 	base_cap_amount = 1
 
 	potential = {
-		exists = owner
-		owner = { has_tradition = tr_genetics_adopt }
-		NOT = { has_modifier = resort_colony }
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
-		OR = {
-			owner = { is_ai = no }
-			NAND = {
-				free_district_slots = 0
-				free_building_slots <= 1
-				free_housing <= 0
-				free_jobs <= 0
-			}
-		}
+		berg_st_can_build_clone_vats = yes
 	}
 	#BugBranch
 	triggered_planet_modifier = {
@@ -1086,23 +951,7 @@ building_avb_clone_vats_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { has_tradition = tr_genetics_adopt }
-		NOT = { has_modifier = resort_colony }
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
-		OR = {
-			owner = { is_ai = no }
-			NAND = {
-				free_district_slots = 0
-				free_building_slots <= 1
-				free_housing <= 0
-				free_jobs <= 0
-			}
-		}
+		berg_st_can_build_clone_vats = yes
 	}
 	
 	allow = {
@@ -1153,25 +1002,7 @@ building_clone_army_clone_vat = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		owner = {
-			berg_is_clone_army_empire = yes
-			NOT = {
-				has_country_flag = clone_army_fertility_unlocked
-			}
-		}
-		if = {
-			limit = {
-				owner = { is_ai = yes }
-			}
-			NOR = {
-				has_building = building_clone_army_clone_vat
-				AND = {
-					exists = assembling_species
-					assembling_species = { berg_is_robotic = yes }
-				}
-			}
-		}
+		berg_st_can_build_clone_army_vats = yes
 	}
 
 	destroy_trigger = {
@@ -1240,23 +1071,7 @@ building_avb_clone_army_clone_vat_2 = {
 
 	potential = {
 		avb_hg_changes = yes
-		exists = owner
-		owner = {
-			has_origin = origin_clone_army
-			has_clone_full_path = yes
-		}
-		if = {
-			limit = {
-				owner = { is_ai = yes }
-			}
-			NOR = {
-				has_building = building_avb_clone_army_clone_vat_2
-				AND = {
-					exists = assembling_species
-					assembling_species = { is_robotic_species = yes }
-				}
-			}
-		}
+		berg_st_can_build_clone_army_vats = yes
 	}
 
 	destroy_trigger = {
@@ -1329,25 +1144,7 @@ building_posthumous_employment_center = {
 	category = pop_assembly
 
 	potential = {
-		exists = owner
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
-		OR = {
-			owner = { is_ai = no }
-			NAND = {
-				free_district_slots = 0
-				free_building_slots <= 1
-				free_housing <= 0
-				free_jobs <= 0
-			}
-		}
-		owner = {
-			is_regular_empire = yes
-			berg_is_permanent_employment = yes
-		}
+		berg_st_can_build_posthumous_employment = yes
 	}
 
 	allow = {
@@ -1395,25 +1192,7 @@ building_avb_posthumous_employment_center_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		exists = owner
-		OR = {
-			owner = { is_ai = no }
-			NOT = { exists = assembling_species }
-			assembling_species = { is_organic_species = yes }
-		}
-		OR = {
-			owner = { is_ai = no }
-			NAND = {
-				free_district_slots = 0
-				free_building_slots <= 1
-				free_housing <= 0
-				free_jobs <= 0
-			}
-		}
-		owner = {
-			is_regular_empire = yes
-			has_valid_civic = civic_permanent_employment
-		}
+		berg_st_can_build_posthumous_employment = yes
 	}
 
 	allow = {
@@ -1471,14 +1250,7 @@ building_toxic_bath_hive = {
 	icon = building_toxic_bath_hive
 
 	potential = {
-		owner = {
-			is_hive_empire = yes
-			has_valid_civic = civic_hive_toxic_baths
-			NAND = {
-				is_ai = yes
-				prev = { has_any_industry_district = no }
-			}
-		}
+		berg_st_can_build_toxic_bath_hive = yes
 	}
 	allow = {
 		owner = {
@@ -1502,7 +1274,7 @@ building_toxic_bath_hive = {
 		}
 	}
 	inline_script = {
-		script = vanilla/pop_assembly/berg_toxic_bath_gestalt_script
+		script = vanilla/pop_assembly/berg_toxic_bath_hive_script
 		tier = 1
 	}
 
@@ -1537,14 +1309,7 @@ building_avb_toxic_bath_hive_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		owner = {
-			is_hive_empire = yes
-			has_valid_civic = civic_hive_toxic_baths
-			NAND = {
-				is_ai = yes
-				prev = { has_any_industry_district = no }
-			}
-		}
+		berg_st_can_build_toxic_bath_hive = yes
 	}
 	prerequisites = {
 		tech_avb_toxic_bath_hive_2
@@ -1571,7 +1336,7 @@ building_avb_toxic_bath_hive_2 = {
 	}
 
 	inline_script = {
-		script = vanilla/pop_assembly/berg_toxic_bath_gestalt_script
+		script = vanilla/pop_assembly/berg_toxic_bath_hive_script
 		tier = 2
 	}
 
@@ -1593,10 +1358,7 @@ building_toxic_bath_machine = {
 	icon = building_toxic_bath_machine
 
 	potential = {
-		owner = {
-			is_machine_empire = yes
-			has_valid_civic = civic_machine_toxic_baths
-		}
+		berg_st_can_build_toxic_bath_machine = yes
 	}
 	destroy_trigger = {
 		exists = owner
@@ -1608,7 +1370,7 @@ building_toxic_bath_machine = {
 		}
 	}
 	inline_script = {
-		script = vanilla/pop_assembly/berg_toxic_bath_gestalt_script
+		script = vanilla/pop_assembly/berg_toxic_bath_machine_script
 		tier = 1
 	}
 	inline_script = {
@@ -1636,10 +1398,7 @@ building_avb_toxic_bath_machine_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		owner = {
-			is_machine_empire = yes
-			has_valid_civic = civic_machine_toxic_baths
-		}
+		berg_st_can_build_toxic_bath_machine = yes
 	}
 	prerequisites = {
 		tech_avb_toxic_bath_machine_2
@@ -1655,7 +1414,7 @@ building_avb_toxic_bath_machine_2 = {
 	}
 	
 	inline_script = {
-		script = vanilla/pop_assembly/berg_toxic_bath_gestalt_script
+		script = vanilla/pop_assembly/berg_toxic_bath_machine_script
 		tier = 2
 	}
 	inline_script = {

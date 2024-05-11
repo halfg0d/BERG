@@ -8,10 +8,7 @@ building_commercial_zone = {
 	category = trade
 
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
-		NOT = { has_building = building_low_tech_capital }
+		berg_st_can_build_commercial_zone = yes
 	}
 
 	destroy_trigger = {
@@ -54,9 +51,7 @@ building_commercial_megaplex = {
 	category = trade
 
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_commercial_zone = yes
 	}
 
 	destroy_trigger = {
@@ -116,9 +111,7 @@ building_avb_commercial_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_gestalt = no }
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_commercial_zone = yes
 	}
 	
 	destroy_trigger = {
@@ -179,9 +172,7 @@ building_avb_commercial_4 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_gestalt = no }
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_commercial_zone = yes
 	}
 	
 	destroy_trigger = {
@@ -241,9 +232,7 @@ building_avb_commercial_5 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_gestalt = no }
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_commercial_zone = yes
 	}
 	
 	destroy_trigger = {
@@ -295,8 +284,7 @@ building_galactic_stock_exchange = {
 
 	potential = {
 		berg_has_bug_mod = no
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_galactic_stock = yes
 	}
 
 	allow = {
@@ -377,8 +365,7 @@ building_avb_galactic_stock_exchange_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOT = { has_modifier = resort_colony }	
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_galactic_stock = yes
 	}
 	
 	destroy_trigger = {

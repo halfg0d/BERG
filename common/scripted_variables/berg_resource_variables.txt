@@ -17,7 +17,7 @@
 @berg_resource_hydroponics_upkeep_t3 = 6
 @berg_resource_hydroponics_job_t1 = 2
 @berg_resource_hydroponics_job_t2 = 4
-@berg_resource_hydroponics_job_t3 = 6
+@berg_resource_hydroponics_job_t3 = 2
 # food_processing
 @berg_resource_food_processing_cost_t1 = 400
 @berg_resource_food_processing_cost_t2 = 600
@@ -197,10 +197,10 @@
 @berg_resource_silo_upkeep_t3 = 6
 @berg_resource_silo_job_t1 = 1
 @berg_resource_silo_job_t2 = 2
-@berg_resource_silo_job_t3 = 3
+@berg_resource_silo_job_t3 = 1
 @berg_resource_silo_silo_t1 = 5000
 @berg_resource_silo_silo_t2 = 10000
-@berg_resource_silo_silo_t3 = 20000
+@berg_resource_silo_silo_t3 = 10000
 # bioreactor
 @berg_resource_bioreactor_cost_t1 = 400
 @berg_resource_bioreactor_cost_t2 = 600

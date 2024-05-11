@@ -21,6 +21,27 @@ triggered_planet_modifier = {
 		job_evaluator_add = @berg_army_military_academy_job_gestalt_t$tier$
 	}
 }
+triggered_country_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_tactical_algorithms }
+
+	}
+	ship_evasion_mult = @berg_army_military_academy_ship_evasion_t$tier$
+	ship_tracking_mult = @berg_army_military_academy_ship_tracking_t$tier$
+	ship_shield_penetration_add = @berg_army_military_academy_ship_shield_pen_t$tier$
+	ship_armor_penetration_add = @berg_army_military_academy_ship_armor_pen_t$tier$
+	mult = owner.value:tactical_algorithms_scaling_mult
+}
+triggered_country_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_machine_tactical_algorithms }
+
+	}
+	ship_shield_hardening_add = @berg_army_military_academy_ship_shield_hardening_t$tier$
+	mult = owner.value:tactical_algorithms_enclave_scaling_mult
+}
 #Desc
 triggered_desc = {
 	trigger = {

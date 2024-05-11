@@ -8,15 +8,7 @@ building_hydroponics_farm = {
 	category = resource
 
 	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				country_uses_food = yes
-				is_ai = no
-			}
-		}
-		berg_is_machine_world = no
-		NOT = { has_modifier = resort_colony }
+		berg_st_can_build_hydroponics = yes
 	}
 
 	allow = {
@@ -72,15 +64,7 @@ building_avb_hydroponics_farm_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				country_uses_food = yes
-				is_ai = no
-			}
-		}
-		NOT = { is_planet_class = pc_machine }
-		NOT = { has_modifier = resort_colony }
+		berg_st_can_build_hydroponics = yes
 	}
 	
 	allow = {
@@ -146,15 +130,7 @@ building_avb_hydroponics_farm_3 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				country_uses_food = yes
-				is_ai = no
-			}
-		}
-		NOT = { is_planet_class = pc_machine }
-		NOT = { has_modifier = resort_colony }
+		berg_st_can_build_hydroponics = yes
 	}
 	
 	allow = {
@@ -225,19 +201,7 @@ building_food_processing_facility = {
 	category = resource
 
 	potential = {
-		exists = owner
-		NOR = {
-			berg_is_machine_world = yes
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
-
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_farming_district_or_buildings = yes
-		}
+		berg_st_can_build_food_processing = yes
 	}
 
 	destroy_trigger = {
@@ -249,7 +213,7 @@ building_food_processing_facility = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -291,6 +255,9 @@ building_food_processing_center = {
 		has_upgraded_capital = yes
 	}
 
+	potential = {
+		berg_st_can_build_food_processing = yes
+	}
 	destroy_trigger = {
 		OR = {
 			AND = {
@@ -310,7 +277,7 @@ building_food_processing_center = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -344,6 +311,7 @@ building_avb_food_processing_3 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_food_processing = yes
 	}
 	destroy_trigger = {
 		OR = {
@@ -364,7 +332,7 @@ building_avb_food_processing_3 = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -399,6 +367,7 @@ building_avb_food_processing_4 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_food_processing = yes
 	}
 
 	destroy_trigger = {
@@ -420,7 +389,7 @@ building_avb_food_processing_4 = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 
@@ -448,12 +417,7 @@ building_baol_organic_plant = {
 	category = resource
 
 	potential = {
-		exists = owner
-		NOR = {
-			berg_is_machine_world = yes
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_baol_plant = yes
 	}
 
 	destroy_trigger = {
@@ -465,7 +429,7 @@ building_baol_organic_plant = {
 			}
 			berg_is_machine_world = yes
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -495,12 +459,7 @@ building_avb_baol_organic_plant_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOR = {
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_baol_plant = yes
 	}
 
 	destroy_trigger = {
@@ -512,7 +471,7 @@ building_avb_baol_organic_plant_2 = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -534,17 +493,6 @@ building_avb_baol_organic_plant_2 = {
 }
 
 building_mineral_purification_plant = {
-
-	desc = {
-		trigger = { berg_is_shattered_ring = no }
-		text = building_mineral_purification_plant_desc
-	}
-
-	desc = {
-		trigger = { berg_is_shattered_ring = yes }
-		text = building_scrap_processing_plant_desc
-	}
-
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 	category = resource
@@ -552,7 +500,7 @@ building_mineral_purification_plant = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -564,25 +512,7 @@ building_mineral_purification_plant = {
 	}
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
-
-		NOR = { # Ringworlds don't have mines
-			is_planet_class = pc_ringworld_habitable
-			is_planet_class = pc_cybrex
-		}
-		OR = { # Habitats only have mines if they're built on an appropriate deposit
-			berg_is_habitat = no
-			has_planet_flag = mining_habitat
-		}
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_mining_district = yes
-		}
+		berg_st_can_build_mineral_purification = yes
 	}
 	inline_script = {
 		script = vanilla/resource/berg_mineral_purification_script
@@ -603,22 +533,16 @@ building_mineral_purification_plant = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = mineral_purification_plant
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = scrap_processing_plant
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 
 building_mineral_purification_hub = {
-
-	desc = {
-		trigger = { berg_is_shattered_ring = no }
-		text = building_mineral_purification_hub_desc
-	}
-
-	desc = {
-		trigger = { berg_is_shattered_ring = yes }
-		text = building_scrap_processing_hub_desc
-	}
-
 	base_buildtime = @b2_time
 	can_build = no
 	category = resource
@@ -627,14 +551,16 @@ building_mineral_purification_hub = {
 		has_upgraded_capital = yes
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
-
+	potential = {
+		berg_st_can_build_mineral_purification = yes
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -662,7 +588,12 @@ building_mineral_purification_hub = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = mineral_purification_hub
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = scrap_processing_hub
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 building_avb_mineral_purification_3 = {
@@ -670,30 +601,21 @@ building_avb_mineral_purification_3 = {
 	can_build = no
 	category = resource
 
-	desc = {
-		trigger = { NOT = { is_planet_class = pc_shattered_ring_habitable } }
-		text = building_mineral_purification_hub_desc
-	}
-
-	desc = {
-		trigger = { is_planet_class = pc_shattered_ring_habitable }
-		text = building_scrap_processing_hub_desc
-	}
-
 	allow = {
 		has_fully_upgraded_capital = yes
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_mineral_purification = yes
 	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -721,7 +643,12 @@ building_avb_mineral_purification_3 = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_mineral_purification_3
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_3_scrap
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 
@@ -729,32 +656,22 @@ building_avb_mineral_purification_4 = {
 	base_buildtime = @avb_rs5_time
 	can_build = no
 	category = resource
-	
-	desc = {
-		trigger = { NOT = { is_planet_class = pc_shattered_ring_habitable } }
-		text = building_mineral_purification_hub_desc
-	}
-
-	desc = {
-		trigger = { is_planet_class = pc_shattered_ring_habitable }
-		text = building_scrap_processing_hub_desc
-	}
-
 	allow = {
 		has_upgraded_capital_4 = yes
 		NOR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_mineral_purification = yes
 	}
 	
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -779,7 +696,12 @@ building_avb_mineral_purification_4 = {
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_mineral_purification_4
-		TRIGGER = " "
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_4_scrap
+		TRIGGER = "berg_is_shattered_ring = yes"
 	}
 }
 
@@ -792,7 +714,7 @@ building_energy_grid = {
 		OR = {
 			OR = {
 				has_modifier = resort_colony
-				has_modifier = crucible_colony
+				
 			}
 			AND = {
 				exists = owner
@@ -805,30 +727,7 @@ building_energy_grid = {
 	}
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
-		OR = {
-			berg_is_habitat = no
-			AND = {
-				exists = owner
-				owner = { is_gestalt = yes }
-			}
-			AND = {
-				berg_is_habitat = yes
-				check_modifier_value = {
-					modifier = district_hab_energy_max
-					value > 0
-				}
-			}
-		}
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_generator_district_or_building = yes
-		}
+		berg_st_can_build_energy_grid = yes
 	}
 	triggered_desc = {
 		trigger = {
@@ -868,10 +767,13 @@ building_energy_nexus = {
 		has_upgraded_capital = yes
 	}
 
+	potential = {
+		berg_st_can_build_energy_grid = yes
+	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -915,7 +817,7 @@ building_avb_energy_grid_3 = {
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -927,6 +829,7 @@ building_avb_energy_grid_3 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_energy_grid = yes
 	}
 	inline_script = {
 		script = vanilla/resource/berg_energy_grid_script
@@ -960,12 +863,13 @@ building_avb_energy_grid_4 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_energy_grid = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				exists = owner
 				owner = {
@@ -999,11 +903,7 @@ building_resource_silo = {
 	category = resource
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_resource_silo = yes
 	}
 
 	allow = {
@@ -1057,11 +957,7 @@ building_avb_resource_silo_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_resource_silo = yes
 	}
 	
 	allow = {
@@ -1115,11 +1011,7 @@ building_avb_resource_silo_3 = {
 	potential = {
 		berg_has_avb_mod = yes
 		avb_hg_changes = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_resource_silo = yes
 	}
 	
 	allow = {
@@ -1172,19 +1064,7 @@ building_bio_reactor = {
 	category = resource
 
 	potential = {
-		exists = owner
-		NOR = {
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
-
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_farming_district_or_buildings = yes
-		}
+		berg_st_can_build_bioreactor = yes
 	}
 
 	destroy_trigger = {
@@ -1196,7 +1076,7 @@ building_bio_reactor = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -1238,19 +1118,7 @@ building_bio_reactor_2 = {
 	}
 
 	potential = {
-		exists = owner
-		NOR = {
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
-
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_farming_district_or_buildings = yes
-		}
+		berg_st_can_build_bioreactor = yes
 	}
 
 	destroy_trigger = {
@@ -1262,7 +1130,7 @@ building_bio_reactor_2 = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes
@@ -1303,19 +1171,7 @@ building_avb_bio_reactor_3 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOR = {
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
-
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_farming_district_or_buildings = yes
-		}
+		berg_st_can_build_bioreactor = yes
 	}
 
 	destroy_trigger = {
@@ -1327,7 +1183,7 @@ building_avb_bio_reactor_3 = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 			AND = {
 				owner = {
 					is_ai = yes

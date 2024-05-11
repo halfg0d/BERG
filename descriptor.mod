@@ -1,8 +1,8 @@
-version="1.2.7"
+version="1.3.0"
 tags={
 	"Buildings"
 	"Fixes"
 }
 name="!BERG - Building Merger"
-supported_version="3.11.*"
+supported_version="3.12.1"
 remote_file_id="3029875068"

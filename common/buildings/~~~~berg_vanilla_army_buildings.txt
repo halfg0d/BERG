@@ -10,20 +10,18 @@ building_military_academy = {
 		base = 1
 	}
 	potential = {
-		exists = owner
-		owner = { berg_reanimator_civic = no }
+		berg_st_can_build_military_academy = yes
 	}
 
 	allow = {
-		has_upgraded_capital = yes
-		if = {
-			limit = {
+		OR = {
+			has_upgraded_capital_4 = yes
+			AND = {
+				has_major_upgraded_capital = yes
 				exists = owner
-				owner = { is_ai = yes }
-			}
-			OR = {
-				has_building = building_stronghold
-				has_building = building_fortress
+				owner = {
+					has_valid_civic = civic_machine_tactical_algorithms
+				}
 			}
 		}
 	}
@@ -83,6 +81,7 @@ building_avb_military_academy_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_military_academy = yes
 	}
 
 	allow = {
@@ -118,8 +117,7 @@ building_dread_encampment = {
 	category = army
 
 	potential = {
-		exists = owner
-		owner = { berg_reanimator_civic = yes }
+		berg_st_can_build_dread_encampment = yes
 	}
 	allow = {
 		has_upgraded_capital = yes
@@ -151,8 +149,7 @@ building_avb_dread_encampment_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { has_valid_civic = civic_reanimated_armies }
+		berg_st_can_build_dread_encampment = yes
 	}
 
 	
@@ -198,6 +195,7 @@ building_stronghold = {
 	exempt_from_ai_planet_specialization = no
 
 	potential = {
+		berg_st_can_build_stronghold = yes
 	}
 	inline_script = {
 		script = vanilla/army/berg_stronghold_script
@@ -229,6 +227,9 @@ building_fortress = {
 	position_priority = 100
 	can_be_ruined = no
 	category = army
+	potential = {
+		berg_st_can_build_stronghold = yes
+	}
 
 	allow = {
 		has_upgraded_capital = yes
@@ -265,6 +266,7 @@ building_avb_stronghold_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_stronghold = yes
 	}
 	allow = {
 		has_major_upgraded_capital = yes
@@ -301,6 +303,7 @@ building_avb_stronghold_4 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_stronghold = yes
 	}
 	allow = {
 		has_fully_upgraded_capital = yes
@@ -341,6 +344,7 @@ building_avb_stronghold_5 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_stronghold = yes
 	}
 	allow = {
 		has_upgraded_capital_4 = yes
@@ -395,23 +399,7 @@ building_planetary_shield_generator = {
 		"building_avb_planetary_shield_generator_2" #AVB
 	}
 	potential = {
-		OR = {
-			berg_has_osa_mod = no
-			AND = {
-				berg_has_osa_mod = yes
-				NOR = {
-					has_building = "building_mem_planetary_shield_generator"
-					has_building = "building_mem_planetary_shield_generator_heavy"
-					has_building = "building_mem_planetary_shield_generator_orila"
-				}
-				planet = {
-					NOR = {
-						uses_habitat_capitals = yes
-						is_planet_class = pc_habitat
-					}	
-				}
-			}
-		}
+		berg_st_can_build_planetary_shield = yes
 	}
 	destroy_trigger = {
 		exists = owner
@@ -443,6 +431,7 @@ building_avb_planetary_shield_generator_2 = {
 	category = army
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_planetary_shield = yes
 	}
 	allow = {
 		has_fully_upgraded_capital = yes
@@ -499,6 +488,7 @@ building_avb_planetary_shield_generator_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_planetary_shield = yes
 	}
 	allow = {
 		has_upgraded_capital_5 = yes
@@ -556,6 +546,7 @@ building_avb_dark_matter_planetary_shield_generator = {
 	
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_planetary_shield = yes
 	}
 	allow = {
 		has_upgraded_capital_6 = yes

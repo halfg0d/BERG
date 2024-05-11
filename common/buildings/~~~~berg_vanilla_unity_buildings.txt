@@ -9,15 +9,7 @@ building_autochthon_monument = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				is_memorialist_empire = yes
-			}
-		}
+		berg_st_can_build_autochton_monument = yes
 	}
 
 	destroy_trigger = {
@@ -79,15 +71,7 @@ building_heritage_site = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				is_memorialist_empire = yes
-			}
-		}
+		berg_st_can_build_autochton_monument = yes
 	}
 
 	allow = {
@@ -152,15 +136,7 @@ building_hypercomms_forum = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				is_memorialist_empire = yes
-			}
-		}
+		berg_st_can_build_autochton_monument = yes
 	}
 
 	allow = {
@@ -225,18 +201,7 @@ building_avb_monument_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				is_memorialist_empire = yes
-			}
-		}
-		owner = {
-			is_ai = no
-		}
+		berg_st_can_build_autochton_monument = yes
 	}
 
 	allow = {
@@ -303,15 +268,7 @@ building_avb_monument_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				is_memorialist_empire = yes
-			}
-		}
+		berg_st_can_build_autochton_monument = yes
 	}
 
 	allow = {
@@ -375,15 +332,7 @@ building_avb_monument_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				is_memorialist_empire = yes
-			}
-		}
+		berg_st_can_build_autochton_monument = yes
 	}
 
 	allow = {
@@ -450,13 +399,7 @@ building_bureaucratic_1 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_bureaucratic = yes
 	}
 
 	destroy_trigger = {
@@ -511,13 +454,7 @@ building_bureaucratic_2 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_bureaucratic = yes
 	}
 
 	allow = {
@@ -577,13 +514,7 @@ building_bureaucratic_3 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_bureaucratic = yes
 	}
 
 	allow = {
@@ -643,13 +574,7 @@ building_avb_bureaucratic_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_bureaucratic = yes
 	}
 
 	allow = {
@@ -709,13 +634,7 @@ building_avb_bureaucratic_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_bureaucratic = yes
 	}
 
 	allow = {
@@ -774,13 +693,7 @@ building_avb_bureaucratic_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_bureaucratic = yes
 	}
 
 	allow = {
@@ -840,18 +753,7 @@ building_temple = {
 	category = unity
 	
 	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_temple = yes
 	}
 
 	destroy_trigger = {
@@ -924,18 +826,7 @@ building_holotemple = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_temple = yes
 	}
 
 	allow = {
@@ -1013,18 +904,7 @@ building_sacred_nexus = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_temple = yes
 	}
 
 	allow = {
@@ -1106,18 +986,7 @@ building_avb_temple_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_temple = yes
 	}
 
 	allow = {
@@ -1194,18 +1063,7 @@ building_avb_temple_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_temple = yes
 	}
 
 	allow = {
@@ -1282,18 +1140,7 @@ building_avb_temple_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-					berg_ecc_temple_construct = yes #building disabled when DeathCultCivic
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_temple = yes
 	}
 
 	allow = {
@@ -1373,13 +1220,7 @@ building_uplink_node = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = {
-				berg_is_servitor_empire = yes
-			}
-		}
+		berg_st_can_build_uplink_node = yes
 	}
 
 	destroy_trigger = {
@@ -1435,13 +1276,7 @@ building_network_junction = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = {
-				berg_is_servitor_empire = yes
-			}
-		}
+		berg_st_can_build_uplink_node = yes
 	}
 
 	allow = {
@@ -1501,13 +1336,7 @@ building_system_conflux = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = {
-				berg_is_servitor_empire = yes
-			}
-		}
+		berg_st_can_build_uplink_node = yes
 	}
 
 	allow = {
@@ -1567,13 +1396,7 @@ building_avb_machine_unity_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = {
-				has_valid_civic = civic_machine_servitor
-			}
-		}
+		berg_st_can_build_uplink_node = yes
 	}
 
 	allow = {
@@ -1632,13 +1455,7 @@ building_avb_machine_unity_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = {
-				has_valid_civic = civic_machine_servitor
-			}
-		}
+		berg_st_can_build_uplink_node = yes
 	}
 
 	allow = {
@@ -1699,13 +1516,7 @@ building_avb_machine_unity_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			NOT = {
-				has_valid_civic = civic_machine_servitor
-			}
-		}
+		berg_st_can_build_uplink_node = yes
 	}
 
 	allow = {
@@ -1765,8 +1576,7 @@ building_hive_node = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
+		berg_st_can_build_hive_node = yes
 	}
 
 	destroy_trigger = {
@@ -1810,8 +1620,7 @@ building_hive_cluster = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
+		berg_st_can_build_hive_node = yes
 	}
 
 	allow = {
@@ -1859,10 +1668,7 @@ building_hive_confluence = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-		}
+		berg_st_can_build_hive_node = yes
 	}
 
 	allow = {
@@ -1909,10 +1715,7 @@ building_avb_hive_unity_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-		}
+		berg_st_can_build_hive_node = yes
 	}
 
 	allow = {
@@ -1959,10 +1762,7 @@ building_avb_hive_unity_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-		}
+		berg_st_can_build_hive_node = yes
 	}
 
 	allow = {
@@ -2008,10 +1808,7 @@ building_avb_hive_unity_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_hive_empire = yes
-		}
+		berg_st_can_build_hive_node = yes
 	}
 
 	allow = {
@@ -2060,11 +1857,7 @@ building_sacrificial_temple_1 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_death_cult_empire = yes
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_death_temple = yes
 	}
 
 	destroy_trigger = {
@@ -2119,11 +1912,7 @@ building_sacrificial_temple_2 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_death_cult_empire = yes
-		}
+		berg_st_can_build_death_temple = yes
 	}
 
 	allow = {
@@ -2185,11 +1974,7 @@ building_sacrificial_temple_3 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_death_cult_empire = yes
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_death_temple = yes
 	}
 
 	allow = {
@@ -2244,11 +2029,7 @@ building_avb_death_temple_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_death_cult_empire = yes
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_death_temple = yes
 	}
 
 	allow = {
@@ -2302,11 +2083,7 @@ building_avb_death_temple_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_death_cult_empire = yes
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_death_temple = yes
 	}
 
 	allow = {
@@ -2359,11 +2136,7 @@ building_avb_death_temple_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_death_cult_empire = yes
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_death_temple = yes
 	}
 
 	allow = {
@@ -2417,11 +2190,7 @@ building_galactic_memorial_1 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_memorialist_empire = yes
-		}
+		berg_st_can_build_galactic_memorial = yes
 	}
 
 	destroy_trigger = {
@@ -2475,11 +2244,7 @@ building_galactic_memorial_2 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_memorialist_empire = yes
-		}
+		berg_st_can_build_galactic_memorial = yes
 	}
 
 	allow = {
@@ -2541,11 +2306,7 @@ building_galactic_memorial_3 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_memorialist_empire = yes
-		}
+		berg_st_can_build_galactic_memorial = yes
 	}
 
 	allow = {
@@ -2602,11 +2363,7 @@ building_avb_monument_memorial_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_memorialist_empire = yes
-		}
+		berg_st_can_build_galactic_memorial = yes
 	}
 
 	allow = {
@@ -2658,11 +2415,7 @@ building_avb_monument_memorial_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_memorialist_empire = yes
-		}
+		berg_st_can_build_galactic_memorial = yes
 	}
 
 	allow = {
@@ -2719,11 +2472,7 @@ building_avb_monument_memorial_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_memorialist_empire = yes
-		}
+		berg_st_can_build_galactic_memorial = yes
 	}
 
 	allow = {
@@ -2782,12 +2531,7 @@ building_simulation_1 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_simulation = yes
 	}
 
 	destroy_trigger = {
@@ -2849,12 +2593,7 @@ building_simulation_2 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_simulation = yes
 	}
 
 	allow = {
@@ -2921,12 +2660,7 @@ building_simulation_3 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_simulation = yes
 	}
 
 	allow = {
@@ -2993,12 +2727,7 @@ building_avb_monument_machine_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_simulation = yes
 	}
 
 	allow = {
@@ -3063,12 +2792,7 @@ building_avb_monument_machine_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_simulation = yes
 	}
 
 	allow = {
@@ -3133,12 +2857,7 @@ building_avb_monument_machine_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_simulation = yes
 	}
 
 	allow = {
@@ -3203,12 +2922,7 @@ building_corporate_monument = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_corporate_monument = yes
 	}
 
 	destroy_trigger = {
@@ -3269,11 +2983,7 @@ building_corporate_site = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-		}
+		berg_st_can_build_corporate_monument = yes
 	}
 
 	allow = {
@@ -3338,11 +3048,7 @@ building_corporate_forum = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-		}
+		berg_st_can_build_corporate_monument = yes
 	}
 
 	allow = {
@@ -3407,11 +3113,7 @@ building_avb_monument_corp_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-		}
+		berg_st_can_build_corporate_monument = yes
 	}
 
 	allow = {
@@ -3475,11 +3177,7 @@ building_avb_monument_corp_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-		}
+		berg_st_can_build_corporate_monument = yes
 	}
 
 	allow = {
@@ -3542,11 +3240,7 @@ building_avb_monument_corp_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-		}
+		berg_st_can_build_corporate_monument = yes
 	}
 
 	allow = {
@@ -3610,12 +3304,7 @@ building_sensorium_1 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_hive_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_sensorium = yes
 	}
 
 	destroy_trigger = {
@@ -3679,12 +3368,7 @@ building_sensorium_2 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_hive_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_sensorium = yes
 	}
 
 	allow = {
@@ -3751,12 +3435,7 @@ building_sensorium_3 = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_hive_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_sensorium = yes
 	}
 
 	allow = {
@@ -3823,12 +3502,7 @@ building_avb_monument_hive_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_hive_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_sensorium = yes
 	}
 
 	allow = {
@@ -3894,12 +3568,7 @@ building_avb_monument_hive_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_hive_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_sensorium = yes
 	}
 
 	allow = {
@@ -3964,12 +3633,7 @@ building_avb_monument_hive_6 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_hive_empire = yes
-			is_memorialist_empire = no
-		}
+		berg_st_can_build_sensorium = yes
 	}
 
 	allow = {
@@ -4037,17 +3701,7 @@ building_autocurating_vault = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = no
-			is_megacorp = no
-			is_spiritualist = no
-			OR = {
-				is_hive_empire = yes
-				has_make_spiritualist_perk = no
-			}
-		}
+		berg_st_can_build_autocurating_vault = yes
 	}
 
 	allow = {
@@ -4115,17 +3769,7 @@ building_avb_autocurating_vault_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_machine_empire = no		# see 'building_alpha_hub'
-			is_megacorp = no			# see 'building_corporate_vault'
-			is_spiritualist = no		# see 'building_citadel_of_faith'
-			OR = {						# only Hive Minds may avoid effects and restrictions imposed by the 'make_spiritualist_1' Federation Perk
-				is_hive_empire = yes
-				has_make_spiritualist_perk = no
-			}
-		}
+		berg_st_can_build_autocurating_vault = yes
 	}
 
 	allow = {
@@ -4184,24 +3828,11 @@ building_citadel_of_faith = {
 	empire_limit = {
 		base = 1
 	}
-	empire_limit = {
-		base = 1
-	}
 
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_citadel_faith = yes
 	}
 
 	allow = {
@@ -4259,17 +3890,7 @@ building_avb_citadel_of_faith_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				is_spiritualist = yes
-				AND = {
-					is_gestalt = no
-					has_make_spiritualist_perk = yes
-				}
-			}
-		}
-		NOT = { has_modifier = slave_colony }
+		berg_st_can_build_citadel_faith = yes
 	}
 
 	allow = {
@@ -4327,13 +3948,7 @@ building_corporate_vault = {
 	category = unity
 
 	potential = {
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
+		berg_st_can_build_corporate_vault = yes
 	}
 
 	allow = {
@@ -4398,13 +4013,7 @@ building_avb_corporate_vault_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		exists = owner
-		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_megacorp = yes
-			is_spiritualist = no
-			has_make_spiritualist_perk = no
-		}
+		berg_st_can_build_corporate_vault = yes
 	}
 
 	allow = {
@@ -4464,8 +4073,7 @@ building_alpha_hub = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
+		berg_st_can_build_alpha_hub = yes
 	}
 
 	allow = {
@@ -4515,8 +4123,7 @@ building_avb_alpha_hub_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_machine_empire = yes }
+		berg_st_can_build_alpha_hub = yes
 	}
 
 	allow = {
@@ -4563,9 +4170,7 @@ building_organic_sanctuary = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = { berg_is_servitor_empire = yes }
-
+		berg_st_can_build_organic_sanctuary = yes
 		OR = {
 			owner = { is_ai = no }
 			has_upgraded_capital = yes
@@ -4684,8 +4289,7 @@ building_organic_paradise = {
 	category = unity
 
 	potential = {
-		exists = owner
-		owner = { berg_is_servitor_empire = yes }
+		berg_st_can_build_organic_sanctuary = yes
 	}
 
 	destroy_trigger = {
@@ -4778,10 +4382,7 @@ building_avb_organic_sanctuary_3 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {	
-			has_valid_civic = civic_machine_servitor
-		}
+		berg_st_can_build_organic_sanctuary = yes
 	}
 
 	destroy_trigger = {
@@ -4873,8 +4474,7 @@ building_avb_organic_sanctuary_4 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { has_valid_civic = civic_machine_servitor }
+		berg_st_can_build_organic_sanctuary = yes
 	}
 
 	destroy_trigger = {
@@ -4963,8 +4563,7 @@ building_avb_organic_sanctuary_5 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { has_valid_civic = civic_machine_servitor }
+		berg_st_can_build_organic_sanctuary = yes
 	}
 	destroy_trigger = {
 		exists = owner
@@ -5053,9 +4652,8 @@ building_league_offices = {
 	category = unity
 
 	potential = {
-		exists = owner
+		berg_st_can_build_league_offices = yes
 		owner = { has_technology = tech_secrets_league }
-		NOT = { has_modifier = slave_colony }
 	}
 
 	allow = {
@@ -5094,9 +4692,8 @@ building_avb_league_offices_2 = {
 	potential = {
 		avb_hg_changes = yes
 		berg_has_avb_mod = yes
-		exists = owner
+		berg_st_can_build_league_offices = yes
 		owner = { has_technology = tech_avb_league_offices_2 }
-		NOT = { has_modifier = slave_colony }
 	}
 
 	allow = {

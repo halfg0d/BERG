@@ -1,0 +1,15 @@
+inline_script = {
+	script = berg_jobs_group/bath_attendant_machine_add
+	DESC = with
+	AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t$tier$
+	MULT = 1
+	TRIGGER = " "
+}
+#OST
+inline_script = {
+	script = berg_jobs_group/bath_attendant_machine_add
+	DESC = no
+	AMOUNT = 2
+	MULT = 1
+	TRIGGER = "berg_has_ost_mod = yes"
+}

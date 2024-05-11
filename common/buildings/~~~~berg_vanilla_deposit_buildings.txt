@@ -11,10 +11,7 @@ building_mote_harvesters = {
 	category = resource
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_mote_harvesters = yes
 	}
 	inline_script = {
 		script = vanilla/deposit/berg_mote_harvesters_script
@@ -45,10 +42,7 @@ building_avb_mote_harvesters_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_mote_harvesters = yes
 	}
 	
 	allow = {
@@ -81,10 +75,7 @@ building_gas_extractors = {
 	category = resource
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_gas_extractors = yes
 	}
 	inline_script = {
 		script = vanilla/deposit/berg_gas_extractors_script
@@ -116,10 +107,7 @@ building_avb_gas_extractors_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_gas_extractors = yes
 	}
 	
 	allow = {
@@ -152,10 +140,7 @@ building_crystal_mines = {
 	category = resource
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_crystal_mines = yes
 	}
 	inline_script = {
 		script = vanilla/deposit/berg_crystal_mines_script
@@ -187,10 +172,7 @@ building_avb_crystal_mines_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_crystal_mines = yes
 	}
 	
 	allow = {
@@ -223,10 +205,7 @@ building_betharian_power_plant = {
 	category = resource
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_betharian = yes
 	}
 	inline_script = {
 		script = vanilla/deposit/berg_betharian_script
@@ -256,10 +235,7 @@ building_avb_betharian_power_plant_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_betharian = yes
 	}
 	
 	allow = {
@@ -290,25 +266,7 @@ building_xeno_zoo = {
 	category = amenity
 
 	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-		}
-		planet = {
-			OR = {
-				has_deposit = d_alien_pets_deposit
-				AND = {
-					exists = owner
-					owner = { has_policy_flag = pre_sapients_protect }
-					any_owned_pop = {
-						is_sapient = no
-					}
-				}
-				any_owned_pop = {
-					is_livestock = yes
-				}
-			}
-		}
+		berg_st_can_build_xeno_zoo = yes
 	}
 
 	destroy_trigger = {
@@ -364,25 +322,7 @@ building_avb_xeno_zoo_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-		}
-		planet = {
-			OR = {
-				has_deposit = d_alien_pets_deposit
-				AND = {
-					exists = owner
-					owner = { has_policy_flag = pre_sapients_protect }
-					any_owned_pop = {
-						is_sapient = no
-					}
-				}
-				any_owned_pop = {
-					is_livestock = yes
-				}
-			}
-		}
+		berg_st_can_build_xeno_zoo = yes
 	}
 	
 	allow = {

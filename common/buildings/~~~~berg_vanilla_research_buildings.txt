@@ -9,18 +9,14 @@ building_research_lab_1 = {
 	category = research
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_research_lab = yes
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -52,6 +48,9 @@ building_research_lab_2 = {
 
 	category = research
 
+	potential = {
+		berg_st_can_build_research_lab = yes
+	}
 	allow = {
 		has_upgraded_capital = yes
 	}
@@ -60,7 +59,7 @@ building_research_lab_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 
@@ -93,6 +92,9 @@ building_research_lab_3 = {
 
 	category = research
 
+	potential = {
+		berg_st_can_build_research_lab = yes
+	}
 	allow = {
 		has_major_upgraded_capital = yes
 	}
@@ -101,7 +103,7 @@ building_research_lab_3 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -140,12 +142,13 @@ building_avb_research_lab_4 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_research_lab = yes
 	}
 	destroy_trigger = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	
@@ -187,13 +190,14 @@ building_avb_research_lab_5 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_research_lab = yes
 	}
 	
 	destroy_trigger = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -233,13 +237,14 @@ building_avb_research_lab_6 = {
 	}
 	potential = {
 		berg_has_avb_mod = yes
+		berg_st_can_build_research_lab = yes
 	}
 	
 	destroy_trigger = {
 		OR = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 	inline_script = {
@@ -274,13 +279,7 @@ building_institute = {
 	category = research
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
-		exists = owner
-		owner = { is_regular_empire = yes }
+		berg_st_can_build_institute = yes
 	}
 
 	destroy_trigger = {
@@ -288,7 +287,7 @@ building_institute = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 			owner = { is_regular_empire = no }
 		}
 	}
@@ -348,13 +347,7 @@ building_avb_institute_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
-		exists = owner
-		owner = { is_regular_empire = yes }
+		berg_st_can_build_institute = yes
 	}
 
 	destroy_trigger = {
@@ -362,7 +355,7 @@ building_avb_institute_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 			owner = { is_regular_empire = no }
 		}
 	}
@@ -420,13 +413,7 @@ building_supercomputer = {
 	category = research
 
 	potential = {
-		exists = owner
-		owner = { is_gestalt = yes }
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_supercomputer = yes
 	}
 
 	allow = {
@@ -438,7 +425,7 @@ building_supercomputer = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 			owner = { is_regular_empire = yes }
 		}
 	}
@@ -504,13 +491,7 @@ building_avb_supercomputer_2 = {
 	
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		owner = { is_gestalt = yes }
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_supercomputer = yes
 	}
 
 	allow = {
@@ -522,7 +503,7 @@ building_avb_supercomputer_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 			owner = { is_regular_empire = yes }
 		}
 	}
@@ -587,12 +568,7 @@ building_archaeostudies_faculty = {
 	}
 
 	potential = {
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
-		exists = owner
+		berg_st_can_build_archaeostudies_faculty = yes
 	}
 
 	destroy_trigger = {
@@ -600,7 +576,7 @@ building_archaeostudies_faculty = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 
@@ -638,12 +614,7 @@ building_avb_archaeostudies_faculty_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
-		exists = owner
+		berg_st_can_build_archaeostudies_faculty = yes
 	}
 
 	destroy_trigger = {
@@ -651,7 +622,7 @@ building_avb_archaeostudies_faculty_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 
@@ -684,12 +655,7 @@ building_vultaum_reality_computer = {
 	category = research
 
 	potential = {
-		exists = owner
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_vultaum_computer = yes
 	}
 
 	allow = {
@@ -701,7 +667,7 @@ building_vultaum_reality_computer = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 
@@ -734,12 +700,7 @@ building_avb_vultaum_reality_computer_2 = {
 
 	potential = {
 		berg_has_avb_mod = yes
-		exists = owner
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			has_modifier = crucible_colony
-		}
+		berg_st_can_build_vultaum_computer = yes
 	}
 
 	allow = {
@@ -751,7 +712,7 @@ building_avb_vultaum_reality_computer_2 = {
 		OR = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			has_modifier = crucible_colony
+			
 		}
 	}
 
