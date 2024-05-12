@@ -1,0 +1,11 @@
+
+#Enforcer
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = enforcer
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	"
+}

@@ -11,11 +11,11 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		has_designation = col_crucible
+		has_modifier = gestation_colony
 	}
 	modifier = {
 		job_replicator_add = -1
-		job_crucible_drone_add = 2
+		job_gestation_drone_add = 2
 	}
 }
 # Solidarity Tradition

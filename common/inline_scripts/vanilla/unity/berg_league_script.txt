@@ -11,8 +11,6 @@ triggered_country_modifier = {
 
 planet_modifier = {
 	planet_administrators_unity_produces_add = 1
-	planet_managers_unity_produces_add = 1
-	planet_priests_unity_produces_add = 1
 }
 
 triggered_planet_modifier = {

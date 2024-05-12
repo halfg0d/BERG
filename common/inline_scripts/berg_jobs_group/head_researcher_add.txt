@@ -1,0 +1,11 @@
+
+#Head Researcher
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = head_researcher
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	"
+}

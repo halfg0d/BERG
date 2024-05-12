@@ -297,3 +297,23 @@ berg_has_any_supported_mod = {
 berg_has_hme_mod = {
 	has_hme_mod = yes
 }
+berg_has_holy_covenant_perk = {
+	exists = owner.federation
+	owner = {
+		federation = {
+			has_federation_perk = all_the_priests_2
+		}
+	}
+
+}
+berg_has_any_high_spiritual_civic = {
+	exists = owner
+	owner = {
+		OR = {
+			has_civic = civic_imperial_cult
+			has_civic = civic_divine_council
+			has_civic = civic_spiritual_democracy
+			has_civic = civic_exalted_priesthood
+		}
+	}
+}

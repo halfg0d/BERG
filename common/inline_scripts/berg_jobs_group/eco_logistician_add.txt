@@ -1,0 +1,12 @@
+
+#Eco logistician
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = bugged_eco_logistician
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	berg_has_bug_mod = yes
+	$TRIGGER$
+	"
+}

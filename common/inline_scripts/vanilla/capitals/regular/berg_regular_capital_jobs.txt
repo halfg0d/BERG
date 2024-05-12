@@ -1,0 +1,257 @@
+# Base 1 Politican Job
+inline_script = {
+	script = berg_jobs_group/politician_add
+	MULT = 1
+	AMOUNT = 1
+	DESC = with
+	TRIGGER = "is_regular_empire = yes
+	is_megacorp = no"
+}
+# Politican Job
+inline_script = {
+	script = berg_jobs_group/politician_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_politician1_t$tier$
+	DESC = no
+	TRIGGER = "berg_RCJT_can_politician = yes"
+}
+# Holy Civic
+inline_script = {
+	script = berg_jobs_group/high_priest_add
+	MULT = 1
+	AMOUNT = berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "berg_RCJT_holy_civic = yes"
+}
+# Elite
+inline_script = {
+	script = berg_jobs_group/noble_add
+	MULT = 1
+	AMOUNT = berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "berg_RCJT_noble_civic = yes"
+}
+# Additional Nobles Jobs from Cyber Imperial Governments
+inline_script = {
+	script = berg_jobs_group/noble_add
+	MULT = 1
+	AMOUNT = berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = no
+	TRIGGER = "exists = owner
+	owner = {
+		is_cyber_imperial = yes
+	}"
+}
+inline_script = {
+	script = berg_jobs/berg_job_with_desc
+	JOB = noble
+	MULT = 1
+	AMOUNT = berg_capital_regular_capital_secondary_job_t$tier$
+	TRIGGER = "OR = {
+		berg_RCJT_noble_civic = yes
+		owner = { is_cyber_imperial = yes }
+	}"
+}
+# Technocracy
+inline_script = {
+	script = berg_jobs_group/head_researcher_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	TRIGGER = "berg_RCJT_techno_civic = yes"
+	DESC = with
+}
+# Merchant Guilds
+inline_script = {
+	script = berg_jobs_group/merchant_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	TRIGGER = "berg_RCJT_merchant_civic = yes"
+	DESC = with
+}
+
+# Corporate Empire
+inline_script = {
+	berg_jobs_group/executive_add
+	MULT = 1
+	AMOUNT = @[@berg_capital_regular_capital_primary_job_t$tier$ + @berg_capital_regular_capital_secondary_job_t$tier$]
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_megacorp = yes
+		is_worker_coop_empire = no
+	}"
+}
+# Worker Coop Empire
+inline_script = {
+	script = berg_jobs_group/steward_add
+	MULT = 1
+	AMOUNT = @[@berg_capital_regular_capital_primary_job_t$tier$ + @berg_capital_regular_capital_secondary_job_t$tier$ + @berg_capital_regular_capital_tertiary_job_t$tier$]
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_megacorp = yes
+		is_worker_coop_empire = yes
+	}"
+}
+# Roboticist
+inline_script = {
+	script = berg_jobs_group/roboticist_add
+	MULT = 1
+	AMOUNT = 1
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_regular_empire = yes
+		has_active_tradition = tr_synthetics_prefabricated_components
+	}"
+}
+inline_script = {
+	script = berg_jobs_group/roboticist_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_primary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_individual_machine = yes
+	}"
+}
+# Pharma State
+inline_script = {
+	script = berg_jobs_group/healthcare_add
+	MULT = 1
+	AMOUNT = 1
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = { has_valid_civic = civic_private_healthcare_corporate }"
+}
+# Pleasure Seeker
+inline_script = {
+	script = berg_jobs_group/entertainer_add
+	MULT = 1
+	AMOUNT = 1
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_pleasure_seeker = yes
+	}"
+}
+# Military Dictatorship
+inline_script = {
+	script = berg_jobs_group/commandante_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "berg_RCJT_military_dictatorship_civic = yes"
+}
+# Supervisor
+inline_script = {
+	script = berg_jobs_group/supervisor_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "berg_RCJT_supervisor_civic = yes"
+}
+# Enlightment
+inline_script = {
+	script = berg_jobs_group/healthcare_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_ecc_healthcare_t$tier$
+	DESC = no
+	TRIGGER = "
+	berg_has_ecc_mod = yes
+	exists = owner
+	owner = {
+		has_valid_civic = civic_enlightment
+	}
+	planet = { is_habitat = no }"
+}
+# Transcend
+inline_script = {
+	script = berg_jobs_group/transcend_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_ecc_transcend_t$tier$
+	DESC = with
+	TRIGGER = "berg_has_ecc_mod = yes
+	exists = owner
+	owner = { has_civic = civic_spiritual_seekers }"
+}
+# ECC Enforcer
+inline_script = ECC/berg_regular_capital_enforcer
+# Commander
+inline_script = {
+	script = berg_jobs_group/commander_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_bugged_governmental_militarist = yes
+	}"
+}
+# Thinker
+inline_script = {
+	script = berg_jobs_group/thinker_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_bugged_governmental_pacifist = yes
+	}"
+}
+# Advisor
+inline_script = {
+	script = berg_jobs_group/advisor_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_bugged_governmental_pluralist = yes
+	}"
+}
+# Financier
+inline_script = {
+	script = berg_jobs_group/financier_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_bugged_governmental_competitive = yes
+	}"
+}
+# Industry Captain
+inline_script = {
+	script = berg_jobs_group/industry_captain_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_bugged_governmental_anthropocentric = yes
+	}"
+}
+# Eco logistician
+inline_script = {
+	script = berg_jobs_group/eco_logistician_add
+	MULT = 1
+	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	DESC = with
+	TRIGGER = "exists = owner
+	owner = {
+		is_bugged_governmental_ecocentric = yes
+	}"
+}
+# OSA
+inline_script = {
+	script = OSA/berg_osa_capital_jobs
+	tier = $tier$
+}
+#Venture Politics
+inline_script = {
+	script = VP/berg_vp_capital_job
+	tier = r$tier$
+}

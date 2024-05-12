@@ -1,15 +1,7 @@
-triggered_planet_modifier = {
-	potential = {
-		exists = owner.federation
-		owner.federation = { has_federation_perk = all_the_priests_2 }
-	}
-	job_high_priest_add = 1
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner.federation
-		owner.federation = { has_federation_perk = all_the_priests_2 }
-	}
-	text = job_high_priest_effect_desc
+inline_script = {
+	script = berg_jobs_group/high_priest_add
+	MULT = 1
+	AMOUNT = 1
+	DESC = with
+	TRIGGER = "berg_has_holy_covenant_perk = yes"
 }

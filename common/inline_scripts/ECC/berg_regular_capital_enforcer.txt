@@ -1,0 +1,33 @@
+inline_script = {
+	script = berg_jobs_group/enforcer_add
+	MULT = -1
+	AMOUNT = 1
+	DESC = no
+	TRIGGER = "berg_has_ecc_mod = yes
+	exists = owner
+	owner = {
+		has_valid_civic = civic_anarchy_ideals
+	}"
+}
+inline_script = {
+	script = berg_jobs_group/enforcer_add
+	MULT = 1
+	AMOUNT = 1
+	DESC = no
+	TRIGGER = "berg_has_ecc_mod = yes
+	exists = owner
+	owner = {
+		has_ethic = ethic_authoritarian
+	}"
+}
+inline_script = {
+	script = berg_jobs_group/enforcer_add
+	MULT = 1
+	AMOUNT = 2
+	DESC = no
+	TRIGGER = "berg_has_ecc_mod = yes
+	exists = owner
+	owner = {
+		has_ethic = ethic_fanatic_authoritarian
+	}"
+}

@@ -1,6 +1,6 @@
-desc = {
-	trigger = {
-		$TRIGGER$
-	}
-	text = berg_building_$BUILDING$_sup
-}
+# desc = {
+# 	trigger = {
+# 		$TRIGGER$
+# 	}
+# 	text = berg_building_$BUILDING$_sup
+# }

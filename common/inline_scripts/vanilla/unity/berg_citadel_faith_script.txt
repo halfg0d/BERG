@@ -4,17 +4,20 @@ country_modifier = {
 }
 
 planet_modifier = {
-	job_high_priest_add = @berg_unity_citadel_faith_job_t$tier$
 	pop_ethic_spiritualist_attraction_mult = @berg_unity_citadel_faith_attraction_t$tier$
+}
+inline_script = {
+	script = berg_jobs_group/high_priest_add
+	MULT = 1
+	AMOUNT = @berg_unity_citadel_faith_job_t$tier$
+	TRIGGER = " "
+	DESC = with
 }
 triggered_planet_modifier = {
 	potential = {
 		has_ringworld_output_boost = yes
 	}
 	planet_administrators_unity_produces_add = 1
-	planet_managers_unity_produces_add = 1
-	planet_priests_unity_produces_add = 1
-	planet_telepaths_unity_produces_add = 1
 }
 #ECC
 triggered_planet_modifier = {
@@ -50,23 +53,13 @@ triggered_planet_modifier = {
 		job_transcend_add = @berg_unity_citadel_faith_ecc_transcend_t$tier$
 	}
 }
-
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				has_civic = civic_imperial_cult
-				has_civic = civic_divine_council
-				has_civic = civic_spiritual_democracy
-				has_civic = civic_exalted_priesthood
-			}
-		}
-	}
-	modifier = {
-		job_high_priest_add = @berg_unity_citadel_faith_ecc_high_priest_t$tier$
-	}
+inline_script = {
+	script = berg_jobs_group/high_priest_add
+	MULT = 1
+	AMOUNT = @berg_unity_citadel_faith_ecc_high_priest_t$tier$
+	DESC = no
+	TRIGGER = "berg_has_ecc_mod = yes
+	berg_has_any_high_spiritual_civic = yes"
 }
 triggered_desc = {
 	trigger = {
@@ -88,9 +81,6 @@ triggered_desc = {
 		}
 	}
 	text = job_templar_effect_desc
-}
-triggered_desc = {
-	text = job_high_priest_effect_desc
 }
 #OST
 inline_script = tradition_script/ost_solidarity_effect

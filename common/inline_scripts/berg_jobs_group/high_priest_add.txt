@@ -1,0 +1,31 @@
+# High Priest add
+#Swaps between empires "Saintly Hierarchy" Federation Perk: add bonus High Priest OR Tech Hierophant 
+
+# High Priest
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = high_priest
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		NOT = { has_origin = origin_cybernetic_creed }
+	}
+	"
+}
+# Technophhant
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = technophant
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		has_origin = origin_cybernetic_creed
+	}
+	"
+}

@@ -183,14 +183,9 @@ building_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs
+		script = vanilla/capitals/regular/berg_regular_capital_jobs
 		tier = 1
-		trigger = ""
-		#ECC
-		transcend = no
-		healthcare = yes
 	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -312,22 +307,10 @@ building_major_capital = {
 	}
 
 	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs
+		script = vanilla/capitals/regular/berg_regular_capital_jobs
 		tier = 2
-		trigger = ""
-		#ECC
-		transcend = yes
-		healthcare = yes
 	}
 
-	#Description
-	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs_desc
-		trigger = ""
-		#ECC
-		transcend = no
-		healthcare = yes
-	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -470,20 +453,8 @@ building_system_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs
+		script = vanilla/capitals/regular/berg_regular_capital_jobs
 		tier = 3
-		trigger = ""
-		#ECC
-		transcend = yes
-		healthcare = yes
-	}
-	#Description
-	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs_desc
-		trigger = ""
-		#ECC
-		transcend = no
-		healthcare = yes
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -640,12 +611,8 @@ building_avb_capital_4 = {
 		osa_branch_add = 2
 	}
 	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs
+		script = vanilla/capitals/regular/berg_regular_capital_jobs
 		tier = 4
-		trigger = ""
-		#ECC
-		transcend = yes
-		healthcare = yes
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -796,12 +763,8 @@ building_avb_capital_5 = {
 		osa_branch_add = 2
 	}
 	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs
+		script = vanilla/capitals/regular/berg_regular_capital_jobs
 		tier = 5
-		trigger = ""
-		#ECC
-		transcend = yes
-		healthcare = yes
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -952,12 +915,8 @@ building_avb_capital_6 = {
 		osa_branch_add = 2
 	}
 	inline_script = {
-		script = vanilla/capitals/regular/berg_scripts_jobs
+		script = vanilla/capitals/regular/berg_regular_capital_jobs
 		tier = 6
-		trigger = ""
-		#ECC
-		transcend = yes
-		healthcare = yes
 	}
 	triggered_planet_modifier = {
 		potential = {
