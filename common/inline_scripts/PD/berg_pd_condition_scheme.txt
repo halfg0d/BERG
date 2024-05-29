@@ -1,0 +1,15 @@
+NOR = {
+	has_building = $BUILDING_1$
+	has_building_construction = $BUILDING_1$
+	has_building = $BUILDING_2$
+	has_building_construction = $BUILDING_2$
+	has_building = $BUILDING_3$
+	has_building_construction = $BUILDING_3$
+}
+
+# inline_script = {
+# 	script = PD/berg_pd_condition_scheme
+# 	BUILDING_1 = 
+# 	BUILDING_2 = 
+# 	BUILDING_3 = 
+# }

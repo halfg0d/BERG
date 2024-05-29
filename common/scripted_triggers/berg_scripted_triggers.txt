@@ -119,6 +119,9 @@ berg_is_resort_world = {
 		berg_pd_resort_habitat = yes
 	}
 }
+berg_is_slave_world = {
+	has_modifier = slave_colony
+}
 
 berg_has_giga_mod = {
 	has_global_flag = gigastructures_enabled

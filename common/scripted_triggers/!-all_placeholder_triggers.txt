@@ -46,3 +46,8 @@ is_bugged_basic_cult = { always = no }
 avb_hg_changes = { always = no }
 has_clone_full_path = { always = no }
 has_hme_mod = { always = no }
+pd_is_planet_class_tidally_locked = { always = no }
+pd_is_planet_class_cave = { always = no }
+pd_is_planet_class_superhabitable = { always = no }
+pd_is_planet_class_all = { always = no }
+pd_is_planet_class_gaia = { always = no }

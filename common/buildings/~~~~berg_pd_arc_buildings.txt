@@ -40,6 +40,10 @@ building_pd_rogue_council = {
 	show_tech_unlock_if = {
 		berg_pd_has_arcology_mod = yes
 	}
+	planet_modifier = {
+		job_pd_capital_bio_politician_add = 4
+		planet_housing_add = 4
+	}
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -54,10 +58,10 @@ building_pd_rogue_council = {
 			tier = 3
 		}
 	}
-	inline_script = {
-		script = PD/berg_pd_arc_council_script
-		tier = 1
+	triggered_desc = {
+		text = job_pd_capital_bio_effect_desc
 	}
+
 }
 
 building_navel_base = {
@@ -70,6 +74,7 @@ building_navel_base = {
 
 	potential = {
 		berg_pd_has_arcology_mod = yes
+		berg_is_slave_world = no
 	}
 	resources = {
 		category = planet_buildings_strongholds
@@ -93,7 +98,7 @@ building_navel_base = {
 	}
 	inline_script = {
 		script = PD/berg_pd_naval_base_script
-		tier = 1
+		JOB = 3
 	}
 	#OST
 	inline_script = {
@@ -145,7 +150,7 @@ building_navel_command = {
 
 	inline_script = {
 		script = PD/berg_pd_naval_base_script
-		tier = 2
+		JOB = 6
 	}
 	#OST
 	inline_script = {
