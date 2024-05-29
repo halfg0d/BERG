@@ -57,6 +57,32 @@ holding_garrison = {
 	triggered_desc = {
 		text = holding_garrison_armies_desc
 	}
+	#zExpanded
+	on_built = {
+		if = {
+			limit = { berg_has_zexpanded_mod = yes }
+			planet = {
+				while = {
+					count = 6
+					create_army = {
+						name = "NAME_Garrison_Army"
+						owner = owner
+						species = owner.overlord.owner_species
+						type = garrison_army
+					}
+					last_created_army = { set_army_flag = overlord_garrison }
+				}
+			}
+		}
+	}
+	on_destroy = {
+		planet = {
+			every_planet_army = {
+				limit = { has_army_flag = overlord_garrison }
+				remove_army = yes
+			}
+		}
+	}
 }
 
 holding_orbital_assembly_complex = {
@@ -86,6 +112,14 @@ holding_orbital_assembly_complex = {
 		planet_building_build_speed_mult = 0.10
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet
+			planet = { exists = orbital_defence }
+		}
+		monthly_loyalty = 0.5
+	}
 	triggered_desc = {
 		text = holding_orbital_assembly_complex_effect
 	}
@@ -133,7 +167,7 @@ holding_propaganda_office = {
 			energy = @b1_upkeep
 		}
 	}
-
+	inline_script = ZEX/holding_propaganda
 	triggered_desc = {
 		text = job_overlord_propagandist_effect_desc
 	}
@@ -252,6 +286,10 @@ holding_aid_agency = {
 				NOR = {
 					has_ethic = ethic_xenophobe
 					has_ethic = ethic_fanatic_xenophobe
+					AND = {
+						berg_has_zexpanded_mod = yes
+						is_xenophobic_isolationists = yes
+					}
 				}
 			}
 		}
@@ -276,7 +314,21 @@ holding_aid_agency = {
 	planet_modifier = {
 		monthly_loyalty = 0.5
 	}
-
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				NOR = {
+					is_xenophobe = yes
+					is_xenophobic_isolationists = yes
+				}
+			}
+		}
+		modifier = {
+			monthly_loyalty = 0.5
+		}
+	}
 	resources = {
 		category = planet_holdings
 		cost = {
@@ -306,6 +358,40 @@ holding_aid_agency = {
 		}
 		upkeep = {
 			trigger = {
+				exists = planet.owner
+				planet.owner = {
+					is_lithoid = no
+					is_machine_empire = no
+					is_mechanical_empire = no
+				}
+			}
+			food = 10
+		}
+		#zExpanded
+		upkeep = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = planet.owner
+				planet.owner = { is_lithoid = yes }
+			}
+			minerals = 10
+		}
+		upkeep = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = planet.owner
+				planet.owner = {
+					OR = {
+						is_machine_empire = yes
+						is_mechanical_empire = yes
+					}
+				}
+			}
+			energy = 10
+		}
+		upkeep = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
 				exists = planet.owner
 				planet.owner = {
 					is_lithoid = no
@@ -631,6 +717,14 @@ holding_distributed_processing = {
 		monthly_loyalty = -2
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			all_technology_research_speed = 0.04
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
@@ -1030,7 +1124,15 @@ holding_noble_vacation_homes = {
 	planet_modifier = {
 		monthly_loyalty = -1
 	}
-
+	#zExpanded
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_amenities_mult = 0.05
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
@@ -1250,6 +1352,16 @@ holding_idyllic_bloom = {
 		}
 		monthly_loyalty = 1
 	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				NOT = { has_ascension_perk = ap_hydrocentric }
+			}
+		}
+		monthly_loyalty = 0.5
+	}
 
 	on_built = {
 		planet = {
@@ -1404,9 +1516,38 @@ holding_recruitment_office = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { is_pacifist = yes }
+			planet.owner = {
+				is_pacifist = yes
+				AND = {
+					berg_has_zexpanded_mod = yes
+					OR = {
+						is_civic_machine_servitor = yes
+						is_inwards_perfection_empire = yes
+						is_pompous_empire = yes
+					}
+				}
+			}
 		}
 		monthly_loyalty = -0.5
+	}
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		country_naval_cap_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				OR = {
+					is_militarist = yes
+					is_civic_militarist = yes
+				}
+			}
+		}
+		monthly_loyalty = 0.5
 	}
 	triggered_desc = {
 		text = job_overlord_recruiter_effect_desc
@@ -1495,6 +1636,28 @@ holding_park_ranger_lodge = {
 		}
 		job_overlord_ranger_drone_add = 1
 	}
+	#zExpanded
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				is_civic_environmentalist = yes
+			}
+		}
+		monthly_loyalty = 0.5
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				is_civic_mining_guilds = yes
+			}
+		}
+		monthly_loyalty = -0.5
+	}
 
 	on_built = {
 		planet = {
@@ -1574,6 +1737,20 @@ holding_tree_of_life_sapling = {
 		}
 		job_overlord_arborist_drone_add = 1
 	}
+	#zExpanded
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				OR = {
+					is_lithoid_empire = yes
+					is_robot_empire = yes
+				}
+			}
+		}
+		monthly_loyalty = -0.5
+	}
 }
 
 holding_experimental_crater = {
@@ -1590,31 +1767,78 @@ holding_experimental_crater = {
 			engineering_research = 8
 			physics_research = 4
 		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			engineering_research = 4
+			physics_research = 2
+		}
 	}
 
 	potential = {
 		owner.overlord = { has_origin = origin_lithoid }
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = no
+		}
+		monthly_loyalty = -1
+	}
+
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = 3
+	}
+
+	#zEXPANDED
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		planet_colony_development_speed_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				NOR = {
+					is_lithoid_empire = yes
+					is_robot_empire = yes
+					is_civic_environmentalist = yes
+				}
+			}
+		}
 		monthly_loyalty = -1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
+			berg_has_zexpanded_mod = yes
 			exists = planet.owner
-			planet.owner = { is_gestalt = no }
+			planet.owner = {
+				OR = {
+					is_lithoid_empire = yes
+					is_robot_empire = yes
+				}
+				is_civic_environmentalist = no
+			}
 		}
-		job_miner_add = 3
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet.owner
-			planet.owner = { is_gestalt = yes }
-		}
-		job_mining_drone_add = 3
+		monthly_loyalty = -0.5
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				is_civic_environmentalist = yes
+			}
+		}
+		monthly_loyalty = -1.5
+	}
 	on_built = {
 		planet = {
 			planet_event = { id = subject.5005 days = 360 }
@@ -1639,6 +1863,12 @@ holding_organic_sanctuary = {
 		upkeep = {
 			consumer_goods = 10
 		}
+		cost = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			minerals = @b1_minerals
+		}
 	}
 
 	potential = {
@@ -1652,6 +1882,41 @@ holding_organic_sanctuary = {
 			planet.owner = { is_gestalt = no }
 		}
 		job_overlord_bio_trophy_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = no
+		}
+		monthly_loyalty = 0.5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				is_gestalt = no
+				OR = {
+					is_pleasure_seeker = yes
+					has_trait = trait_decadent
+					is_xenophile = yes
+				}
+			}
+		}
+		monthly_loyalty = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = planet.owner
+			planet.owner = {
+				is_gestalt = no
+				NOR = {
+					is_pleasure_seeker = yes
+					has_trait = trait_decadent
+					is_xenophile = yes
+				}
+			}
+		}
 		monthly_loyalty = 0.5
 	}
 	triggered_planet_modifier = {

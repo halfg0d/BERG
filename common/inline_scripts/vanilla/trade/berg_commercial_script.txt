@@ -88,6 +88,14 @@ triggered_desc = {
 triggered_planet_modifier = {
 	potential = {
 		berg_has_zexpanded_mod = yes
+	}
+	modifier = {
+		trade_value_mult = 0
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
 		exists = owner
 		owner = { has_civic = civic_merchant_guilds }
 	}

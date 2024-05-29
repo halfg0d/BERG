@@ -2085,6 +2085,16 @@ building_hive_major_capital = {
 		script = building_resources/vanilla/hive_capital
 		tier = 2
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			exists = planet
+			planet = { num_sapient_pops >= 50 }
+			owner = { has_technology = tech_galactic_administration }		
+		}
+		job_maintenance_drone_add = 1
+		job_patrol_drone_add = 1
+	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = hive_major_capital
@@ -2178,6 +2188,16 @@ building_avb_hive_capital_3 = {
 		pop_growth_speed = 0.10
 	}
 	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			exists = planet
+			planet = { num_sapient_pops >= 50 }
+			owner = { has_technology = tech_galactic_administration }		
+		}
+		job_maintenance_drone_add = 1
+		job_patrol_drone_add = 1
+	}
 	upgrades = {
 		building_avb_hive_capital_4
 	}
@@ -2284,6 +2304,16 @@ building_avb_hive_capital_4 = {
 			growing_species = { has_trait = trait_cybernetic }
 		}
 		pop_growth_speed = 0.10
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			exists = planet
+			planet = { num_sapient_pops >= 50 }
+			owner = { has_technology = tech_galactic_administration }		
+		}
+		job_maintenance_drone_add = 1
+		job_patrol_drone_add = 1
 	}
 	upgrades = {
 		building_imperial_hive_capital
@@ -2613,6 +2643,26 @@ building_hab_major_capital = {
 		}
 		modifier = {
 			planet_max_buildings_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			has_planet_flag = advanced_habitat
+		}
+		modifier = {
+			planet_max_buildings_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			has_planet_flag = advanced_habitat_2
+		}
+		modifier = {
+			planet_max_buildings_add = 1
 		}
 	}
 

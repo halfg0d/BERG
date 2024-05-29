@@ -57,6 +57,16 @@ triggered_planet_modifier = {
 		job_livestock_zoo_beast_add = @berg_deposit_xeno_zoo_animal_t$tier$
 	}
 }
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+	}
+	modifier = {
+		planet_immigration_pull_mult = 0.25
+	}
+}
+#Desc
 triggered_desc = {
 	text = job_xeno_zoo_keeper_effect_desc
 }

@@ -23,3 +23,5 @@ triggered_planet_modifier = {
 	planet_housing_add = @berg_amenity_warren_osa_housing_t$tier$
 	planet_amenities_add = @berg_amenity_warren_osa_amenities_t$tier$
 }
+#zExpanded
+inline_script = ZEX/housing_tech

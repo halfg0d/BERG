@@ -41,3 +41,5 @@ triggered_planet_modifier = {
 		planet_housing_add = @berg_amenity_residence_ecc_housing_t$tier$
 	}
 }
+#zExpanded
+inline_script = ZEX/housing_tech

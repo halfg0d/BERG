@@ -1,0 +1,72 @@
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_spiritualist = yes
+		}
+	}
+	pop_ethic_spiritualist_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_materialist = yes
+		}
+	}
+	pop_ethic_materialist_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_xenophobe = yes
+		}
+	}
+	pop_ethic_xenophobe_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_xenophile = yes
+		}
+	}
+	pop_ethic_xenophile_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_pacifist = yes
+		}
+	}
+	pop_ethic_pacifist_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_militarist = yes
+		}
+	}
+	pop_ethic_militarist_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_authoritarian = yes
+		}
+	}
+	pop_ethic_authoritarian_attraction_mult = 0.25
+}
+
+triggered_planet_modifier = {
+	potential = {
+		owner.overlord = {
+			is_egalitarian = yes
+		}
+	}
+	pop_ethic_egalitarian_attraction_mult = 0.25
+}
