@@ -320,3 +320,6 @@ berg_has_any_high_spiritual_civic = {
 		}
 	}
 }
+berg_has_mcp_mod = {
+	always = no
+}

@@ -1,18 +1,18 @@
 inline_script = {
 	script = berg_jobs_group/trader_add
-	AMOUNT = @berg_trade_commercial_trader_t$tier$
+	AMOUNT = @berg_mcp_trade_commercial_trader_t$tier$
 	MULT = 1
 	DESC = with
 }
 inline_script = {
 	script = berg_jobs_group/clerk_add
-	AMOUNT = @berg_trade_commercial_clerk_t$tier$
+	AMOUNT = @berg_mcp_trade_commercial_clerk_t$tier$
 	MULT = 1
 	DESC = with
 }
 inline_script = {
 	script = berg_jobs_group/trader_add
-	AMOUNT = @berg_trade_commercial_trader_t$tier$
+	AMOUNT = @berg_mcp_trade_commercial_trader_t$tier$
 	MULT = 1
 	DESC = no
 	TRIGGER = "
@@ -31,7 +31,7 @@ triggered_planet_modifier = {
 #ECC
 inline_script = {
 	script = berg_jobs_group/entrepreneur_add
-	AMOUNT = @berg_trade_commercial_ecc_job_t$tier$
+	AMOUNT = @berg_mcp_trade_commercial_ecc_job_t$tier$
 	MULT = 1
 	DESC = with
 	TRIGGER = "

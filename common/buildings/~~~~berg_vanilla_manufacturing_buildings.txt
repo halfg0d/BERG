@@ -1262,6 +1262,9 @@ building_avb_production_center_2 = {
 			}
 		}
 	}
+	prerequisites = {
+		"tech_avb_global_production_strategy_2"
+	}
 	ai_resource_production = {
 		consumer_goods = 8
 		trigger = {
