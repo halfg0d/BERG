@@ -637,7 +637,10 @@ building_necrophage_elevation_chamber = {
 				any_owned_species = {
 					species_can_be_necrophaged = yes
 				}
-				num_pops > 5
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 5
+				}
 			}
 		}
 	}

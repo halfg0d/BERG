@@ -1,0 +1,10 @@
+OR = {
+	AND = {
+		berg_has_production_revolution_mod = no
+		num_sapient_pops <= $NUM$
+	}
+	AND = {
+		berg_has_production_revolution_mod = yes
+		PR_prmt_trgr_HC = { MORE = $NUM$ }
+	}
+}

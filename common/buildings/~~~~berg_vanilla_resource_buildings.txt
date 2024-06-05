@@ -49,6 +49,7 @@ building_hydroponics_farm = {
 		"building_eutab_hydroponics_tower" # EUTAB
 		"building_hydroponics_station" #OSA
 		"building_avb_hydroponics_farm_2" #AVB
+		"PR_building_RES_food_farm_2" #PR
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -212,8 +213,8 @@ building_food_processing_facility = {
 				country_uses_food = no
 			}
 			berg_is_machine_world = yes
-			has_modifier = resort_colony
-			
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 			AND = {
 				owner = {
 					is_ai = yes
@@ -221,6 +222,9 @@ building_food_processing_facility = {
 				has_any_farming_district_or_buildings = no
 			}
 		}
+	}
+	convert_to = {
+		PR_building_RES_food_boost_1
 	}
 	inline_script = {
 		script = vanilla/resource/berg_food_processing_script
@@ -276,9 +280,12 @@ building_food_processing_center = {
 				}
 			}
 			berg_is_machine_world = yes
-			has_modifier = resort_colony
-			
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 		}
+	}
+	convert_to = {
+		PR_building_RES_food_boost_2
 	}
 	inline_script = {
 		script = vanilla/resource/berg_food_processing_script
@@ -330,9 +337,8 @@ building_avb_food_processing_3 = {
 					}
 				}
 			}
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
 		}
 	}
 	inline_script = {
@@ -387,9 +393,8 @@ building_avb_food_processing_4 = {
 					}
 				}
 			}
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
 		}
 	}
 
@@ -428,9 +433,12 @@ building_baol_organic_plant = {
 				country_uses_food = no
 			}
 			berg_is_machine_world = yes
-			has_modifier = resort_colony
-			
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 		}
+	}
+	convert_to = {
+		PR_building_RES_food_artifact_1
 	}
 	inline_script = {
 		script = vanilla/resource/berg_baol_organic_script
@@ -469,9 +477,9 @@ building_avb_baol_organic_plant_2 = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 		}
 	}
 	inline_script = {
@@ -499,8 +507,8 @@ building_mineral_purification_plant = {
 
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
-			
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 			AND = {
 				exists = owner
 				owner = {
@@ -509,6 +517,9 @@ building_mineral_purification_plant = {
 				has_any_mining_district = no
 			}
 		}
+	}
+	convert_to = {
+		PR_building_RES_minerals_boost_1
 	}
 
 	potential = {
@@ -550,7 +561,7 @@ building_mineral_purification_hub = {
 	allow = {
 		has_upgraded_capital = yes
 		NOR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 		}
 	}
@@ -559,8 +570,8 @@ building_mineral_purification_hub = {
 	}
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
-			
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 			AND = {
 				exists = owner
 				owner = {
@@ -569,6 +580,9 @@ building_mineral_purification_hub = {
 				has_any_mining_district = no
 			}
 		}
+	}
+	convert_to = {
+		PR_building_RES_minerals_boost_2
 	}
 	inline_script = {
 		script = vanilla/resource/berg_mineral_purification_script
@@ -604,8 +618,7 @@ building_avb_mineral_purification_3 = {
 	allow = {
 		has_fully_upgraded_capital = yes
 		NOR = {
-			has_modifier = resort_colony
-			
+			berg_is_resort_world = yes
 		}
 	}
 	potential = {
@@ -614,7 +627,7 @@ building_avb_mineral_purification_3 = {
 	}
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 			AND = {
 				exists = owner
@@ -659,7 +672,7 @@ building_avb_mineral_purification_4 = {
 	allow = {
 		has_upgraded_capital_4 = yes
 		NOR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 		}
 	}
@@ -670,7 +683,7 @@ building_avb_mineral_purification_4 = {
 	
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 			AND = {
 				exists = owner
@@ -713,7 +726,7 @@ building_energy_grid = {
 	destroy_trigger = {
 		OR = {
 			OR = {
-				has_modifier = resort_colony
+				berg_is_resort_world = yes
 				
 			}
 			AND = {
@@ -723,7 +736,11 @@ building_energy_grid = {
 				}
 				has_any_generator_district_or_building = no
 			}
+			berg_pr_cannot_vanilla = yes
 		}
+	}
+	convert_to = {
+		PR_building_RES_energy_boost_1
 	}
 
 	potential = {
@@ -772,7 +789,7 @@ building_energy_nexus = {
 	}
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 			AND = {
 				exists = owner
@@ -781,7 +798,11 @@ building_energy_nexus = {
 				}
 				has_any_generator_district_or_building = no
 			}
+			berg_pr_cannot_vanilla = yes
 		}
+	}
+	convert_to = {
+		PR_building_RES_energy_boost_2
 	}
 	inline_script = {
 		script = vanilla/resource/berg_energy_grid_script
@@ -816,7 +837,7 @@ building_avb_energy_grid_3 = {
 	
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 			AND = {
 				exists = owner
@@ -868,7 +889,7 @@ building_avb_energy_grid_4 = {
 
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 			
 			AND = {
 				exists = owner
@@ -912,7 +933,7 @@ building_resource_silo = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					NOT = { has_building = building_resource_silo }
+					berg_st_has_any_silo = no
 					OR = {
 						owner = {
 							is_machine_empire = yes
@@ -942,6 +963,7 @@ building_resource_silo = {
 	}
 	upgrades = {
 		"building_avb_resource_silo_2" #AVB
+		"PR_building_RES_soil_2" #PR
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -966,7 +988,7 @@ building_avb_resource_silo_2 = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					NOT = { has_building = building_resource_silo }
+					berg_st_has_any_silo = no
 					OR = {
 						owner = {
 							is_machine_empire = yes
@@ -1020,7 +1042,7 @@ building_avb_resource_silo_3 = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					NOT = { has_building = building_resource_silo }
+					berg_st_has_any_silo = no
 					OR = {
 						owner = {
 							is_machine_empire = yes
@@ -1074,9 +1096,9 @@ building_bio_reactor = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 			AND = {
 				owner = {
 					is_ai = yes
@@ -1084,6 +1106,9 @@ building_bio_reactor = {
 				has_any_farming_district_or_buildings = no
 			}
 		}
+	}
+	convert_to = {
+		PR_building_RES_reactor_1
 	}
 	inline_script = {
 		script = building_resources/vanilla/bioreactor
@@ -1128,9 +1153,9 @@ building_bio_reactor_2 = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
-			
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
 			AND = {
 				owner = {
 					is_ai = yes
@@ -1138,6 +1163,9 @@ building_bio_reactor_2 = {
 				has_any_farming_district_or_buildings = no
 			}
 		}
+	}
+	convert_to = {
+		PR_building_RES_reactor_2
 	}
 	inline_script = {
 		script = building_resources/vanilla/bioreactor
@@ -1181,8 +1209,8 @@ building_avb_bio_reactor_3 = {
 				is_ai = yes
 				country_uses_food = no
 			}
-			is_planet_class = pc_machine
-			has_modifier = resort_colony
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
 			
 			AND = {
 				owner = {

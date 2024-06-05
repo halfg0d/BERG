@@ -151,7 +151,10 @@ building_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 10
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 10
+		}
 	}
 
 	upgrades = {
@@ -267,7 +270,10 @@ building_major_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 25
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
 	}
 
 	convert_to = {
@@ -424,7 +430,10 @@ building_system_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -580,7 +589,10 @@ building_avb_capital_4 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t4_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t4_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -732,7 +744,10 @@ building_avb_capital_5 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t5_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t5_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -884,7 +899,10 @@ building_avb_capital_6 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t6_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t6_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -1152,7 +1170,10 @@ building_machine_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 10
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 10
+		}
 	}
 
 	prerequisites = {
@@ -1237,7 +1258,10 @@ building_machine_major_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 25
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
 	}
 
 	prerequisites = {
@@ -1323,7 +1347,10 @@ building_machine_system_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -1354,7 +1381,10 @@ building_machine_system_capital = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 10
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 10
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1362,7 +1392,10 @@ building_machine_system_capital = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 40
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 40
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1427,7 +1460,10 @@ building_avb_machine_capital_4 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t4_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t4_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -1460,7 +1496,10 @@ building_avb_machine_capital_4 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 10
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 10
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1468,7 +1507,10 @@ building_avb_machine_capital_4 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 40
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 40
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1476,7 +1518,10 @@ building_avb_machine_capital_4 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 80
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 80
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1534,7 +1579,10 @@ building_avb_machine_capital_5 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t5_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t5_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -1566,7 +1614,10 @@ building_avb_machine_capital_5 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 10
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 10
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1574,7 +1625,10 @@ building_avb_machine_capital_5 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 40
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 40
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1582,7 +1636,10 @@ building_avb_machine_capital_5 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 80
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 80
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1640,7 +1697,10 @@ building_avb_machine_capital_6 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t6_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t6_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -1671,7 +1731,10 @@ building_avb_machine_capital_6 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 10
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 10
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1679,7 +1742,10 @@ building_avb_machine_capital_6 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 40
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 40
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1687,7 +1753,10 @@ building_avb_machine_capital_6 = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 80
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 80
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -1841,7 +1910,10 @@ building_hive_major_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 25
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
 	}
 
 	prerequisites = {
@@ -1921,7 +1993,10 @@ building_avb_hive_capital_3 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 	
 	prerequisites = {
@@ -2012,7 +2087,10 @@ building_avb_hive_capital_4 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= @capital_t4_min_pops
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = @capital_t4_min_pops
+		}
 	}
 	
 	prerequisites = {
@@ -2294,7 +2372,10 @@ building_hab_major_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 10
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 10
+		}
 	}
 
 	inline_script = {
@@ -2470,7 +2551,10 @@ building_avb_hab_capital_3 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= 30
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 30
+		}
 	}
 	
 	prerequisites = {
@@ -2738,7 +2822,10 @@ building_resort_major_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 20
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 20
+		}
 	}
 
 	inline_script = {
@@ -2840,7 +2927,10 @@ building_avb_resort_capital_3 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= 40
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 40
+		}
 	}
 	
 	prerequisites = {
@@ -3033,7 +3123,10 @@ building_slave_major_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 20
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 20
+		}
 	}
 
 	convert_to = {
@@ -3112,7 +3205,10 @@ building_avb_slave_capital_3 = {
 	}
 	
 	allow = {
-		num_sapient_pops >= 40
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 40
+		}
 	}
 	
 	convert_to = {
@@ -3212,7 +3308,10 @@ building_imperial_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -3345,7 +3444,10 @@ building_imperial_machine_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -3368,7 +3470,10 @@ building_imperial_machine_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 10
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 10
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -3376,7 +3481,10 @@ building_imperial_machine_capital = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 40
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 40
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -3443,7 +3551,10 @@ building_imperial_hive_capital = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -3652,7 +3763,10 @@ building_capital_nanotech = {
 	}
 
 	allow = {
-		num_sapient_pops >= 10
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 10
+		}
 	}
 
 	upgrades = {
@@ -3774,7 +3888,10 @@ building_major_capital_nanotech = {
 	}
 
 	allow = {
-		num_sapient_pops >= 25
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
 	}
 
 	convert_to = {
@@ -3925,7 +4042,10 @@ building_system_capital_nanotech = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -4179,7 +4299,10 @@ building_machine_capital_nanotech = {
 	}
 
 	allow = {
-		num_sapient_pops >= 10
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 10
+		}
 	}
 
 	prerequisites = {
@@ -4298,7 +4421,10 @@ building_machine_major_capital_nanotech = {
 	}
 
 	allow = {
-		num_sapient_pops >= 25
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
 	}
 
 	prerequisites = {
@@ -4425,7 +4551,10 @@ building_machine_system_capital_nanotech = {
 	}
 
 	allow = {
-		num_sapient_pops >= 50
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
 	}
 
 	prerequisites = {
@@ -4452,7 +4581,10 @@ building_machine_system_capital_nanotech = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 10
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 10
+			}
 		}
 		modifier = {
 			job_replicator_add = 1
@@ -4460,7 +4592,10 @@ building_machine_system_capital_nanotech = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			num_sapient_pops >= 40
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 40
+			}
 		}
 		modifier = {
 			job_replicator_add = 1

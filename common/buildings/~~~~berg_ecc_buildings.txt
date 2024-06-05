@@ -224,7 +224,10 @@ building_tribal_council = {
 
 	allow = {
 		has_upgraded_capital = yes
-		num_pops > 39
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 39
+		}
 	}
 
 	#num_unique_species > 9
@@ -242,8 +245,14 @@ building_tribal_council = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_pops > 39
-			num_pops < 80
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 39
+			}
+			inline_script = {
+				script = building_triggers/less_num_pops
+				NUM = 80
+			}
 		}
 		modifier = {
 			planet_stability_add = 4
@@ -254,8 +263,14 @@ building_tribal_council = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_pops > 79
-			num_pops < 120
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 80
+			}
+			inline_script = {
+				script = building_triggers/less_num_pops
+				NUM = 119
+			}
 		}
 		modifier = {
 			planet_stability_add = 6
@@ -266,8 +281,14 @@ building_tribal_council = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_pops > 119
-			num_pops < 160
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 120
+			}
+			inline_script = {
+				script = building_triggers/less_num_pops
+				NUM = 159
+			}
 		}
 		modifier = {
 			planet_stability_add = 8
@@ -278,8 +299,14 @@ building_tribal_council = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_pops > 159
-			num_pops < 180
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 160
+			}
+			inline_script = {
+				script = building_triggers/less_num_pops
+				NUM = 179
+			}
 		}
 		modifier = {
 			planet_stability_add = 10
@@ -290,8 +317,14 @@ building_tribal_council = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_pops > 179
-			num_pops < 200
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 180
+			}
+			inline_script = {
+				script = building_triggers/less_num_pops
+				NUM = 199
+			}
 		}
 		modifier = {
 			planet_stability_add = 12
@@ -302,7 +335,10 @@ building_tribal_council = {
 
 	triggered_planet_modifier = {
 		potential = {
-			num_pops > 199
+			inline_script = {
+				script = building_triggers/more_num_pops
+				NUM = 200
+			}
 		}
 		modifier = {
 			planet_stability_add = 15
@@ -321,42 +357,75 @@ building_tribal_council = {
 		}
 		upkeep = {
 			trigger = {
-				num_pops > 74
-				num_pops < 100
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 75
+				}
+				inline_script = {
+					script = building_triggers/less_num_pops
+					NUM = 99
+				}
 			}
 			energy = 1
 		}
 		upkeep = {
 			trigger = {
-				num_pops > 99
-				num_pops < 125
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 100
+				}
+				inline_script = {
+					script = building_triggers/less_num_pops
+					NUM = 124
+				}
 			}
 			energy = 1
 		}
 		upkeep = {
 			trigger = {
-				num_pops > 124
-				num_pops < 150
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 125
+				}
+				inline_script = {
+					script = building_triggers/less_num_pops
+					NUM = 149
+				}
 			}
 			energy = 2
 		}
 		upkeep = {
 			trigger = {
-				num_pops > 149
-				num_pops < 175
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 150
+				}
+				inline_script = {
+					script = building_triggers/less_num_pops
+					NUM = 174
+				}
 			}
 			energy = 2
 		}
 		upkeep = {
 			trigger = {
-				num_pops > 174
-				num_pops < 200
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 175
+				}
+				inline_script = {
+					script = building_triggers/less_num_pops
+					NUM = 199
+				}
 			}
 			energy = 3
 		}
 		upkeep = {
 			trigger = {
-				num_pops > 200
+				inline_script = {
+					script = building_triggers/more_num_pops
+					NUM = 200
+				}
 			}
 			energy = 3
 		}

@@ -13,6 +13,9 @@ building_foundry_1 = {
 	destroy_trigger = {
 		berg_st_can_build_foundry = no
 	}
+	convert_to = {
+		PR_building_MANU_foundry_1
+	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_foundry_script
 		tier = 1
@@ -52,6 +55,9 @@ building_foundry_2 = {
 	destroy_trigger = {
 		berg_st_can_build_foundry = no
 	}
+	convert_to = {
+		PR_building_MANU_foundry_2
+	}
 
 	inline_script = {
 		script = vanilla/manufacturing/berg_foundry_script
@@ -90,6 +96,9 @@ building_foundry_3 = {
 
 	destroy_trigger = {
 		berg_st_can_build_foundry = no
+	}
+	convert_to = {
+		PR_building_MANU_foundry_3
 	}
 
 	inline_script = {
@@ -241,35 +250,10 @@ building_factory_1 = {
 	}
 
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			
-
-			AND = {
-				exists = owner
-				OR = {
-					owner = { 
-						AND = {
-							country_uses_consumer_goods = no
-							berg_is_fear_of_the_dark_empire = no
-						}
-					}
-					AND = {
-						owner = {
-							is_ai = yes
-						}
-						has_any_industry_district = no
-					}
-					AND = {
-						owner = {
-							should_ai_focus_on_trade = yes
-							has_monthly_income = { resource = consumer_goods value > 30 }
-						}
-					}
-				}
-			}
-		}
+		berg_st_can_build_factory = no
+	}
+	convert_to = {
+		PR_building_MANU_factory_1
 	}
 	inline_script = {
 		script = vanilla/manufacturing/berg_factory_script
@@ -324,6 +308,9 @@ building_factory_2 = {
 				}
 			}
 		}
+	}
+	convert_to = {
+		PR_building_MANU_factory_2
 	}
 	inline_script = {
 		script = building_resources/vanilla/factory
@@ -381,6 +368,9 @@ building_factory_3 = {
 				}
 			}
 		}
+	}
+	convert_to = {
+		PR_building_MANU_factory_3
 	}
 	inline_script = {
 		script = building_resources/vanilla/factory
@@ -805,42 +795,6 @@ building_crystal_plant = {
 		script = berg_desc/berg_building_desc
 		BUILDING = crystal_plant
 		TRIGGER = " "
-	}
-}
-building_crystal_plant_2 = {
-	base_buildtime = 800
-	can_build = no
-
-	category = manufacturing
-
-	potential = {
-		owner = { has_country_flag = lithoid_crystal_plant }
-		berg_st_can_build_crystal_plant = yes
-	}
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 1000
-		}
-		upkeep = {
-			energy = 3
-		}
-	}
-	
-	inline_script = {
-		script = jobs/translucer_add
-		AMOUNT = 5
-	}
-	prerequisites = {
-		"tech_rare_crystals"
-	}
-
-	show_tech_unlock_if = {
-		owner = { has_country_flag = lithoid_crystal_plant }
 	}
 }
 building_avb_crystal_plant_2 = {
