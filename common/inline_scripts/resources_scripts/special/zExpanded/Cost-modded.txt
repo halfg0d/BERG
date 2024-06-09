@@ -1,0 +1,70 @@
+# twisted code for merge two civics
+# shortcuts to understanding| Minerals:Food
+
+# cost 2:0
+# has mod and is Regular OR hive
+# but hive has bioarchitecture and lithoi species or simpy havent bioarchitecture
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		OR = {
+			is_regular_empire = yes
+			AND = {
+				is_hive_empire = yes
+				OR = {
+					berg_has_integrated_bioarchitecture = no
+					AND = {
+						berg_has_integrated_bioarchitecture = yes
+						is_lithoid_empire = yes
+					}
+				}
+			}
+		}
+	}
+	minerals = @berg_$category$_$building$_costTwoThird_t$tier$
+}
+# cost 1:0
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		OR = {
+			AND = {
+				is_regular_empire = yes
+				is_civic_plant_organic = no
+			}
+			AND = {
+				is_hive_empire = yes
+				berg_has_integrated_bioarchitecture = yes
+				is_lithoid_empire = no
+			}
+		}
+	}
+	minerals = @berg_$category$_$building$_costOneThird_t$tier$
+}
+# cost 0:1
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		OR = {
+			AND = {
+				is_regular_empire = yes
+				is_civic_plant_organic = yes
+			}
+			AND = {
+				is_hive_empire = yes
+				berg_has_integrated_bioarchitecture = no
+			}
+		}
+	}
+	food = @berg_$category$_$building$_costOneThird_t$tier$
+}
+# cost 0:2
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		is_hive_empire = yes
+		berg_has_integrated_bioarchitecture = yes
+		is_lithoid_empire = no
+	}
+	food = @berg_$category$_$building$_costTwoThird_t$tier$
+}

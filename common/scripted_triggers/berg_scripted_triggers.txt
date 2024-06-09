@@ -381,3 +381,6 @@ berg_has_any_supported_mod = {
 berg_has_private_military_companies = {
 	has_valid_civic = civic_private_military_companies
 }
+berg_has_integrated_bioarchitecture = {
+	has_valid_civic = civic_integrated_bioarchitecture
+}

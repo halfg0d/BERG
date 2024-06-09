@@ -1,40 +1,39 @@
 #Basic
-cost = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_civic_plant_organic = no
-		}
-	}
-	minerals = @berg_$category$_$building$_cost_t$tier$
-}
-upkeep = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_civic_plant_organic = no
-		}
-	}
-	energy = @berg_$category$_$building$_upkeep_t$tier$
-}
+# cost = {
+# 	trigger = {
+# 		exists = owner
+# 		owner = {
+# 			is_civic_plant_organic = no
+# 		}
+# 	}
+# 	minerals = @berg_$category$_$building$_cost_t$tier$
+# }
+# upkeep = {
+# 	trigger = {
+# 		exists = owner
+# 		owner = {
+# 			is_civic_plant_organic = no
+# 		}
+# 	}
+# 	energy = @berg_$category$_$building$_upkeep_t$tier$
+# }
+
 #CivicPlantOrganic
 cost = {
 	trigger = {
 		exists = owner
 		owner = {
-			is_civic_plant_organic = no
+			is_civic_plant_organic = yes
 		}
 	}
-	minerals = @berg_$category$_$building$_costTwoThird_t$tier$
 	food = @berg_$category$_$building$_costOneThird_t$tier$
 }
 upkeep = {
 	trigger = {
 		exists = owner
 		owner = {
-			is_civic_plant_organic = no
+			is_civic_plant_organic = yes
 		}
 	}
-	energy = @berg_$category$_$building$_upkeepTwoThird_t$tier$
 	food = @berg_$category$_$building$_upkeepOneThird_t$tier$
 }

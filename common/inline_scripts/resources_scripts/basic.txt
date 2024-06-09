@@ -1,6 +1,14 @@
+# Only for simplicity when doesn't have z Expanded installed
+# if have check /special/zExpanded/Cost-modded.txt and /special/zExpanded/Upkeep-modded.txt
 cost = {
+	trigger = {
+		berg_has_zexpanded_mod = no
+	}
 	minerals = @berg_$category$_$building$_cost_t$tier$
 }
 upkeep = {
+	trigger = {
+		berg_has_zexpanded_mod = no
+	}
 	energy = @berg_$category$_$building$_upkeep_t$tier$
 }
