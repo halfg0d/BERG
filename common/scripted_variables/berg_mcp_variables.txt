@@ -1,0 +1,33 @@
+###
+# MCP
+##
+@berg_mcp_trade_commercial_trader_t1 = 4
+@berg_mcp_trade_commercial_trader_t2 = 16
+@berg_mcp_trade_commercial_trader_t3 = 32
+@berg_mcp_trade_commercial_clerk_t1 = 8
+@berg_mcp_trade_commercial_clerk_t2 = 8
+@berg_mcp_trade_commercial_clerk_t3 = 16
+@berg_mcp_trade_commercial_ecc_job_t1 = 2
+@berg_mcp_trade_commercial_ecc_job_t2 = 3
+@berg_mcp_trade_commercial_ecc_job_t3 = 4
+@berg_mcp_trade_commercial_cost_t3 = 600
+@berg_mcp_trade_commercial_cost_t4 = 2000
+@berg_mcp_trade_commercial_cost_t5 = 4000
+@berg_mcp_trade_commercial_upkeep_t3 = 5
+@berg_mcp_trade_commercial_upkeep_t4 = 10
+@berg_mcp_trade_commercial_upkeep_t5 = 15
+@berg_mcp_trade_commercial_rare_cost_t3 = 50
+@berg_mcp_trade_commercial_rare_cost_t4 = 200
+@berg_mcp_trade_commercial_rare_cost_t5 = 400
+@berg_mcp_trade_commercial_rare_upkeep_t3 = 1
+@berg_mcp_trade_commercial_rare_upkeep_t4 = 4
+@berg_mcp_trade_commercial_rare_upkeep_t5 = 8
+@berg_mcp_trade_commercial_ecc_unity_t3 = 10
+@berg_mcp_trade_commercial_ecc_unity_t4 = 15
+@berg_mcp_trade_commercial_ecc_unity_t5 = 20
+@berg_mcp_trade_commercial_osa_upkeep_energy_t3 = 7 #12
+@berg_mcp_trade_commercial_osa_upkeep_energy_t4 = 8 #18
+@berg_mcp_trade_commercial_osa_upkeep_energy_t5 = 11  #26
+@berg_mcp_trade_commercial_osa_upkeep_minerals_t3 = 12 
+@berg_mcp_trade_commercial_osa_upkeep_minerals_t4 = 18 
+@berg_mcp_trade_commercial_osa_upkeep_minerals_t5 = 26

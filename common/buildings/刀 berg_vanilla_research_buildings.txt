@@ -13,11 +13,10 @@ building_research_lab_1 = {
 	}
 
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			
-		}
+		berg_st_can_build_research_lab = no
+	}
+	convert_to = {
+		PR_building_TECH_lab_1
 	}
 	inline_script = {
 		script = vanilla/research/berg_research_jobs_scripts
@@ -56,11 +55,10 @@ building_research_lab_2 = {
 	}
 
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			
-		}
+		berg_st_can_build_research_lab = no
+	}
+	convert_to = {
+		PR_building_TECH_lab_2
 	}
 
 	
@@ -100,11 +98,10 @@ building_research_lab_3 = {
 	}
 
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-			
-		}
+		berg_st_can_build_research_lab = no
+	}
+	convert_to = {
+		PR_building_TECH_lab_3
 	}
 	inline_script = {
 		script = vanilla/research/berg_research_resolution_scripts

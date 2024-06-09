@@ -1,0 +1,12 @@
+
+#Entrepreneur
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = entrepreneur
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	berg_has_ecc_mod = yes
+	$TRIGGER$
+	"
+}

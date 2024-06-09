@@ -320,3 +320,25 @@ berg_has_any_high_spiritual_civic = {
 		}
 	}
 }
+berg_has_mcp_mod = {
+	always = no
+}
+berg_has_production_revolution_mod = {
+	has_global_flag = PR_installed
+}
+berg_production_revolution_decision = {
+	has_planet_flag = PR_flg_plnt_VALID
+}
+berg_pr_can_vanilla = {
+	OR = {
+		berg_has_production_revolution_mod = no
+		AND = {
+			berg_has_production_revolution_mod = yes
+			berg_production_revolution_decision = no
+		}
+	}
+}
+berg_pr_cannot_vanilla = {
+	berg_has_production_revolution_mod = yes
+	berg_production_revolution_decision = yes
+}
