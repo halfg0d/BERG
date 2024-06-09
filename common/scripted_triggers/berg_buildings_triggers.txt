@@ -493,7 +493,7 @@ berg_st_can_build_machine_plant = {
 			is_individual_machine = yes
 		}
 	}
-	NOT = { has_modifier = gestation_colony }
+	berg_is_gestation_world = no
 }
 berg_st_can_build_spawning_pool = {
 	exists = owner
@@ -720,7 +720,7 @@ berg_st_can_build_energy_grid = {
 }
 berg_st_can_build_resource_silo = {
 	berg_is_resort_world = no
-	berg_is_slave_worldd = no
+	berg_is_slave_world = no
 }
 berg_st_has_any_silo = {
 	OR = {
