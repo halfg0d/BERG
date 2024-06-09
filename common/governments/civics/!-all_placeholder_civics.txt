@@ -61,3 +61,17 @@ civic_consumerism = { potential = { always = no } }
 civic_bugged_graveyard_shift = { potential = { always = no } }
 civic_bancorp = { potential = { always = no } }
 civic_science_syndicate = { potential = { always = no } }
+civic_exploration = { potential = { always = no } }
+civic_in_perfect = { potential = { always = no } }
+civic_keepers_harmony = { potential = { always = no } }
+civic_xeno_militarist = { potential = { always = no } }
+civic_evangelism = { potential = { always = no } }
+civic_globalism = { potential = { always = no } }
+civic_peacekeepers = { potential = { always = no } }
+civic_natural_capitalism = { potential = { always = no } }
+civic_asceticism = { potential = { always = no } }
+civic_chosen_people = { potential = { always = no } }
+civic_machine_cult = { potential = { always = no } }
+civic_divine_order = { potential = { always = no } }
+civic_hive_pd_planetary_infesters = { potential = { always = no } }
+civic_pdinquisition = { potential = { always = no } }

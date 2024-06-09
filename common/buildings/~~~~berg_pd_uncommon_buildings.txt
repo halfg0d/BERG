@@ -12,13 +12,11 @@ building_wet_td_farm = {
 		}
 		berg_is_resort_world = no
 		pd_is_planet_class_tidally_locked = yes
-		NOR = {
-			has_building = building_wet_td_farm
-			has_building_construction = building_wet_td_farm
-			has_building = building_wet_td_grid
-			has_building_construction = building_wet_td_grid
-			has_building = building_wet_td_bio_lab
-			has_building_construction = building_wet_td_bio_lab
+		inline_script = {
+			script = PD/berg_pd_condition_scheme
+			BUILDING_1 = building_wet_td_farm
+			BUILDING_2 = building_wet_td_grid
+			BUILDING_3 = building_wet_td_bio_lab
 		}
 		OR = {
 			owner = {
@@ -35,7 +33,7 @@ building_wet_td_farm = {
 			owner = {
 				is_ai = yes
 				country_uses_food = no
-			}=
+			}
 			berg_is_resort_world = yes
 			AND = {
 				owner = {

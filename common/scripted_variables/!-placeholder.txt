@@ -1,0 +1,6 @@
+# Irony this is a placeholder file please ignore it
+fe_sr_cost = 0
+b1_alloy_upkeep = 0
+b2_alloy_upkeep = 0
+b3_alloy_upkeep = 0
+ecocontinuity_upkeep_t3 = 0

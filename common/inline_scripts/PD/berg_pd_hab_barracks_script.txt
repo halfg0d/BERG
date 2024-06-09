@@ -16,7 +16,7 @@ triggered_planet_modifier = {
 }
 #OST
 inline_script = {
-	script = tradition_script/ost_defense
+	script = tradition_script/ost_defence
 	tier = $tier$
 	commander_add = 1
 	soldier1_subtract = 0

@@ -33,7 +33,7 @@ inline_script = {
 }
 
 inline_script = {
-	scrript = tradition_script/ost_metallurgy
+	script = tradition_script/ost_metallurgy
 	isForge = yes
 	job_add = 1
 }

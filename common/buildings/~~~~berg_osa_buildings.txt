@@ -186,7 +186,7 @@ building_zitadom = {
 	}
 
 	inline_script = {
-		script = building_resources/vanilla/strongholds
+		script = building_resources/vanilla/stronghold
 		tier = 3
 	}
 
