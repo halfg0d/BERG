@@ -1,0 +1,18 @@
+# Irony this is a placeholder file please ignore it
+tech_fe_affluence_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_affluence_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_nourishment_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_nourishment_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_fabricator_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_fabricator_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_singularity_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_singularity_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_forge_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_forge_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_dome_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_dome_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_fortress_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_fe_fortress_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_thermal_borehole = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_bioreactor = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_deep_scanner = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }

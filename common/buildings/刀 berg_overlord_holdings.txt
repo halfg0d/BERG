@@ -1426,9 +1426,9 @@ holding_park_ranger_lodge = {
 	}
 
 	potential = {
-		owner.overlord = { berg_is_environmental = yesist }
+		owner.overlord = { berg_is_environmental = yes }
 		NOT = {
-			owner = { berg_is_environmental = yesist }
+			owner = { berg_is_environmental = yes }
 		}
 		NOR = {
 			berg_is_city_world = yes
@@ -1860,7 +1860,7 @@ holding_toxic_bath = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { berg_is_environmental = yesist }
+			planet.owner = { berg_is_environmental = yes }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -1912,7 +1912,7 @@ holding_toxic_bath_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { berg_is_environmental = yesist }
+			planet.owner = { berg_is_environmental = yes }
 		}
 		monthly_loyalty = -0.5
 	}
@@ -1964,7 +1964,7 @@ holding_toxic_bath_machine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner
-			planet.owner = { berg_is_environmental = yesist }
+			planet.owner = { berg_is_environmental = yes }
 		}
 		monthly_loyalty = -0.5
 	}

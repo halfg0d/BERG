@@ -419,7 +419,7 @@ building_private_research_initiative = {
 			berg_has_osa_mod = yes
 		}
 		modifier = {
-			job_research_add = 2
+			job_researcher_add = 2
 			job_head_researcher_add = 1
 		}
 	}
@@ -1036,7 +1036,7 @@ building_illicit_research_labs = {
 			berg_has_osa_mod = yes
 		}
 		modifier = {
-			job_research_add = 2
+			job_researcher_add = 2
 		}
 	}
 	resources = {

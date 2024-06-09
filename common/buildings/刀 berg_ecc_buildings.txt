@@ -619,7 +619,7 @@ building_galactic_navy_academy = {
 	
 	#OST
 	inline_script = {
-		script = tradition_script/ost_defense
+		script = tradition_script/ost_defence
 		tier = $tier$
 		commander_add = 1
 		soldier1_subtract = 0

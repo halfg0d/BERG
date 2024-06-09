@@ -1,0 +1,19 @@
+# Irony this is a placeholder file please ignore it
+pd_megaflora = {}
+pd_reef = {}
+pd_archipelago = {}
+pd_biolumen = {}
+pd_geothermal = {}
+pd_salt = {}
+pd_aquifer = {}
+pd_primal = {}
+pd_coral = {}
+pd_supercontinent = {}
+pd_sinkhole = {}
+pd_storm = {}
+pd_iceberg = {}
+pd_cryoflora = {}
+pd_lichen = {}
+pd_glaciovolcanic = {}
+pd_lanthanide = {}
+pd_petrified = {}

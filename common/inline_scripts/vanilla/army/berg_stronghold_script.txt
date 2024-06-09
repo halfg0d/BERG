@@ -101,7 +101,7 @@ triggered_country_modifier = {
 }
 #OST
 inline_script = {
-	script = tradition_script/ost_defense
+	script = tradition_script/ost_defence
 	tier = $tier$
 	commander_add = @berg_army_stronghold_osa_commander_t$tier$
 	soldier1_subtract = @berg_army_stronghold_osa_commander_t$tier$
