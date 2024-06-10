@@ -54,7 +54,7 @@ building_noble_estates = {
 	}
 }
 building_avb_noble_estates_2 = {
-	base_buildtime = @avb_g4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = government
@@ -163,7 +163,7 @@ building_slave_processing = {
 	}
 }
 building_avb_slave_processing_2 = {
-	base_buildtime = @avb_g4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = government
@@ -318,7 +318,7 @@ building_hall_judgment = {
 	}
 }
 building_avb_enforcement_3 = {
-	base_buildtime = @avb_g4_time
+	base_buildtime = @avb_b4_time
 
 	category = government
 	can_build = no
@@ -365,7 +365,7 @@ building_avb_enforcement_3 = {
 }
 
 building_avb_enforcement_4 = {
-	base_buildtime = @avb_g5_time
+	base_buildtime = @avb_b5_time
 
 	category = government
 	can_build = no
@@ -461,7 +461,7 @@ building_sentinel_posts = {
 	}
 }
 building_avb_sentinel_posts_2 = {
-	base_buildtime = @avb_g4_time 
+	base_buildtime = @avb_b4_time 
 	can_build = no
 
 	category = government
@@ -630,7 +630,7 @@ building_psi_corps = {
 	}
 }
 building_avb_psi_corps_2 = {
-	base_buildtime = @avb_g4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = government
@@ -687,7 +687,7 @@ building_avb_psi_corps_2 = {
 }
 
 building_avb_psi_corps_3 = {
-	base_buildtime = @avb_g5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = government

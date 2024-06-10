@@ -129,7 +129,7 @@ building_research_lab_3 = {
 	}
 }
 building_avb_research_lab_4 = {
-	base_buildtime = @avb_r4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = research
@@ -177,7 +177,7 @@ building_avb_research_lab_4 = {
 }
 
 building_avb_research_lab_5 = {
-	base_buildtime = @avb_r5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = research
@@ -224,7 +224,7 @@ building_avb_research_lab_5 = {
 }
 
 building_avb_research_lab_6 = {
-	base_buildtime = @avb_r6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = research
@@ -337,7 +337,7 @@ building_institute = {
 	}
 }
 building_avb_institute_2 = {
-	base_buildtime = @avb_r4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = research
@@ -604,7 +604,7 @@ building_archaeostudies_faculty = {
 	
 }
 building_avb_archaeostudies_faculty_2 = {
-	base_buildtime = @avb_f4_time
+	base_buildtime = @avb_b4_time
 
 	can_build = no
 	category = research
@@ -690,7 +690,7 @@ building_vultaum_reality_computer = {
 	}
 }
 building_avb_vultaum_reality_computer_2 = {
-	base_buildtime = @avb_f4_time
+	base_buildtime = @avb_b4_time
 
 	can_build = no
 	category = research

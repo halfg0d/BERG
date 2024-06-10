@@ -101,7 +101,7 @@ building_commercial_megaplex = {
 	}
 }
 building_avb_commercial_3 = {
-	base_buildtime = @avb_t4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = trade
@@ -162,7 +162,7 @@ building_avb_commercial_3 = {
 }
 
 building_avb_commercial_4 = {
-	base_buildtime = @avb_t5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = trade
@@ -222,7 +222,7 @@ building_avb_commercial_4 = {
 }
 
 building_avb_commercial_5 = {
-	base_buildtime = @avb_t6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = trade
@@ -359,7 +359,7 @@ building_galactic_stock_exchange = {
 	}
 }
 building_avb_galactic_stock_exchange_2 = {
-	base_buildtime = @avb_t4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = trade

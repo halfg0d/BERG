@@ -9,7 +9,7 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	is_machine_empire = yes
+	owner = { is_machine_empire = yes }
 	"
 }
 # Individual
@@ -20,6 +20,6 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	is_individual_machine = yes
+	owner = { is_individual_machine = yes }
 	"
 }

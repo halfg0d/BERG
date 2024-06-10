@@ -194,7 +194,7 @@ building_hypercomms_forum = {
 	}
 }
 building_avb_monument_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = unity
@@ -261,7 +261,7 @@ building_avb_monument_4 = {
 	}
 }
 building_avb_monument_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = unity
@@ -325,7 +325,7 @@ building_avb_monument_5 = {
 	}
 }
 building_avb_monument_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = unity
@@ -567,7 +567,7 @@ building_bureaucratic_3 = {
 	}
 }
 building_avb_bureaucratic_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = unity
@@ -627,7 +627,7 @@ building_avb_bureaucratic_4 = {
 }
 
 building_avb_bureaucratic_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = unity
@@ -686,7 +686,7 @@ building_avb_bureaucratic_5 = {
 }
 
 building_avb_bureaucratic_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = unity
@@ -979,7 +979,7 @@ building_sacred_nexus = {
 	}
 }
 building_avb_temple_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = unity
@@ -1056,7 +1056,7 @@ building_avb_temple_4 = {
 	}
 }
 building_avb_temple_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = unity
@@ -1133,7 +1133,7 @@ building_avb_temple_5 = {
 	}
 }
 building_avb_temple_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = unity
@@ -1388,7 +1388,7 @@ building_system_conflux = {
 	}
 }
 building_avb_machine_unity_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	icon = building_avb_monument_4
 
@@ -1447,7 +1447,7 @@ building_avb_machine_unity_4 = {
 	}
 }
 building_avb_machine_unity_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	icon = building_avb_monument_5
 
@@ -1508,7 +1508,7 @@ building_avb_machine_unity_5 = {
 	}
 }
 building_avb_machine_unity_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 	icon = building_avb_monument_6
 
@@ -1708,7 +1708,7 @@ building_hive_confluence = {
 	}
 }
 building_avb_hive_unity_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = unity
@@ -1755,7 +1755,7 @@ building_avb_hive_unity_4 = {
 	}
 }
 building_avb_hive_unity_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = unity
@@ -1801,7 +1801,7 @@ building_avb_hive_unity_5 = {
 	}
 }
 building_avb_hive_unity_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = unity
@@ -2022,7 +2022,7 @@ building_sacrificial_temple_3 = {
 	}
 }
 building_avb_death_temple_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = unity
@@ -2076,7 +2076,7 @@ building_avb_death_temple_4 = {
 	}
 }
 building_avb_death_temple_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = unity
@@ -2129,7 +2129,7 @@ building_avb_death_temple_5 = {
 	}
 }
 building_avb_death_temple_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 
 	category = unity
@@ -2357,7 +2357,7 @@ building_galactic_memorial_3 = {
 	}
 }
 building_avb_monument_memorial_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	category = unity
 
@@ -2409,7 +2409,7 @@ building_avb_monument_memorial_4 = {
 	}
 }
 building_avb_monument_memorial_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	category = unity
 
@@ -2466,7 +2466,7 @@ building_avb_monument_memorial_5 = {
 	}
 }
 building_avb_monument_memorial_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 	category = unity
 
@@ -2719,7 +2719,7 @@ building_simulation_3 = {
 	}
 }
 building_avb_monument_machine_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	icon = building_avb_holo_theatre_4
 
@@ -2784,7 +2784,7 @@ building_avb_monument_machine_4 = {
 	}
 }
 building_avb_monument_machine_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	icon = building_avb_holo_theatre_5
 
@@ -2849,7 +2849,7 @@ building_avb_monument_machine_5 = {
 	}
 }
 building_avb_monument_machine_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 	icon = building_avb_holo_theatre_6
 
@@ -3105,7 +3105,7 @@ building_corporate_forum = {
 	}
 }
 building_avb_monument_corp_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	icon = building_avb_monument_4
 
@@ -3169,7 +3169,7 @@ building_avb_monument_corp_4 = {
 	}
 }
 building_avb_monument_corp_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	icon = building_avb_monument_5
 
@@ -3232,7 +3232,7 @@ building_avb_monument_corp_5 = {
 	}
 }
 building_avb_monument_corp_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 	icon = building_avb_monument_6
 
@@ -3494,7 +3494,7 @@ building_sensorium_3 = {
 	}
 }
 building_avb_monument_hive_4 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	icon = building_avb_holo_theatre_4
 
@@ -3560,7 +3560,7 @@ building_avb_monument_hive_4 = {
 	}
 }
 building_avb_monument_hive_5 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	icon = building_avb_holo_theatre_5
 
@@ -3625,7 +3625,7 @@ building_avb_monument_hive_5 = {
 	}
 }
 building_avb_monument_hive_6 = {
-	base_buildtime = @avb_u6_time
+	base_buildtime = @avb_b6_time
 	can_build = no
 	icon = building_avb_holo_theatre_6
 
@@ -4376,7 +4376,7 @@ building_organic_paradise = {
 	}
 }
 building_avb_organic_sanctuary_3 = {
-	base_buildtime = @avb_u4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	category = unity
 	
@@ -4468,7 +4468,7 @@ building_avb_organic_sanctuary_3 = {
 }
 
 building_avb_organic_sanctuary_4 = {
-	base_buildtime = @avb_u5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	category = unity
 
@@ -4684,7 +4684,7 @@ building_league_offices = {
 	}
 }
 building_avb_league_offices_2 = {
-	base_buildtime = @avb_f4_time
+	base_buildtime = @avb_b4_time
 
 	can_build = no
 	category = unity

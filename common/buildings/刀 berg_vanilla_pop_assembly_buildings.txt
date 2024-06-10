@@ -1372,16 +1372,16 @@ building_toxic_bath_machine = {
 			}
 		}
 	}
-	# inline_script = {
-	# 	script = vanilla/pop_assembly/berg_toxic_bath_machine_script
-	# 	tier = 1
-	# }
 	inline_script = {
-		script = berg_jobs_group/bath_attendant_machine_add
-		DESC = with
-		AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t1
-		MULT = 1
+		script = vanilla/pop_assembly/berg_toxic_bath_machine_script
+		tier = 1
 	}
+	# inline_script = {
+	# 	script = berg_jobs_group/bath_attendant_machine_add
+	# 	DESC = with
+	# 	AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t1
+	# 	MULT = 1
+	# }
 	inline_script = {
 		script = building_resources/vanilla/toxic_bath_machine
 		tier = 1
@@ -1422,16 +1422,16 @@ building_avb_toxic_bath_machine_2 = {
 		}
 	}
 	
-	# inline_script = {
-	# 	script = vanilla/pop_assembly/berg_toxic_bath_machine_script
-	# 	tier = 2
-	# }
 	inline_script = {
-		script = berg_jobs_group/bath_attendant_machine_add
-		DESC = with
-		AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t2
-		MULT = 1
+		script = vanilla/pop_assembly/berg_toxic_bath_machine_script
+		tier = 2
 	}
+	# inline_script = {
+	# 	script = berg_jobs_group/bath_attendant_machine_add
+	# 	DESC = with
+	# 	AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t2
+	# 	MULT = 1
+	# }
 	inline_script = {
 		script = building_resources/vanilla/toxic_bath_machine
 		tier = 2

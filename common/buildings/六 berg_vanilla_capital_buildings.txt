@@ -246,6 +246,9 @@ building_capital = {
 		}
 		text = job_unifier_effect_desc
 	}
+	triggered_desc = {
+		text = job_enforcer_effect_desc
+	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
 		BUILDING = capital
@@ -391,6 +394,9 @@ building_major_capital = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+	triggered_desc = {
+		text = job_enforcer_effect_desc
 	}
 
 	upgrades = {
@@ -563,7 +569,7 @@ building_system_capital = {
 	}
 }
 building_avb_capital_4 = {
-	base_buildtime = @avb_c4_time
+	base_buildtime = @avb_b4_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -718,7 +724,7 @@ building_avb_capital_4 = {
 	}
 }
 building_avb_capital_5 = {
-	base_buildtime = @avb_c5_time
+	base_buildtime = @avb_b5_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -873,7 +879,7 @@ building_avb_capital_5 = {
 	}
 }
 building_avb_capital_6 = {
-	base_buildtime = @avb_c6_time
+	base_buildtime = @avb_b6_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -1436,7 +1442,7 @@ building_machine_system_capital = {
 	}
 }
 building_avb_machine_capital_4 = {
-	base_buildtime = @avb_c4_time
+	base_buildtime = @avb_b4_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -1555,7 +1561,7 @@ building_avb_machine_capital_4 = {
 }
 
 building_avb_machine_capital_5 = {
-	base_buildtime = @avb_c5_time
+	base_buildtime = @avb_b5_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -1673,7 +1679,7 @@ building_avb_machine_capital_5 = {
 }
 
 building_avb_machine_capital_6 = {
-	base_buildtime = @avb_c6_time
+	base_buildtime = @avb_b6_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -1971,7 +1977,7 @@ building_hive_major_capital = {
 	}
 }
 building_avb_hive_capital_3 = {
-	base_buildtime = @avb_c3_time
+	base_buildtime = @avb_b3_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -2064,7 +2070,7 @@ building_avb_hive_capital_3 = {
 }
 
 building_avb_hive_capital_4 = {
-	base_buildtime = @avb_c4_time
+	base_buildtime = @avb_b4_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -2531,7 +2537,7 @@ building_hab_major_capital = {
 	}
 }
 building_avb_hab_capital_3 = {
-	base_buildtime = @avb_c4_time
+	base_buildtime = @avb_b4_time
 	capital = yes
 	can_build = no
 	can_demolish = no
@@ -2902,7 +2908,7 @@ building_resort_major_capital = {
 	}
 }
 building_avb_resort_capital_3 = {
-	base_buildtime = @avb_c4_time
+	base_buildtime = @avb_b4_time
 	capital = yes
 	can_build = no
 	can_demolish = no

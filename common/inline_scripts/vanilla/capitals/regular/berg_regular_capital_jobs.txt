@@ -4,8 +4,12 @@ inline_script = {
 	MULT = 1
 	AMOUNT = 1
 	DESC = with
-	TRIGGER = "is_regular_empire = yes
-	is_megacorp = no"
+	TRIGGER = "
+	owner = {
+		is_regular_empire = yes
+		is_megacorp = no
+	}
+	"
 }
 # Politican Job
 inline_script = {
@@ -65,28 +69,29 @@ inline_script = {
 	script = berg_jobs_group/merchant_add
 	MULT = 1
 	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
-	TRIGGER = "berg_RCJT_merchant_civic = yes"
 	DESC = with
+	TRIGGER = "berg_RCJT_merchant_civic = yes"
 }
-
 # Corporate Empire
 inline_script = {
-	berg_jobs_group/executive_add
+	script = berg_jobs_group/executive_add
 	MULT = 1
-	AMOUNT = @[@berg_capital_regular_capital_primary_job_t$tier$ + @berg_capital_regular_capital_secondary_job_t$tier$]
+	AMOUNT = @[berg_capital_regular_capital_primary_job_t$tier$ + berg_capital_regular_capital_secondary_job_t$tier$]
 	DESC = with
-	TRIGGER = "exists = owner
-	owner = {
-		is_regular_empire = yes
-		is_megacorp = yes
-		is_worker_coop_empire = no
-	}"
+	TRIGGER = "
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_megacorp = yes
+			is_worker_coop_empire = no
+		}
+	"
 }
 # Worker Coop Empire
 inline_script = {
 	script = berg_jobs_group/steward_add
 	MULT = 1
-	AMOUNT = @[@berg_capital_regular_capital_primary_job_t$tier$ + @berg_capital_regular_capital_secondary_job_t$tier$ + @berg_capital_regular_capital_tertiary_job_t$tier$]
+	AMOUNT = @[berg_capital_regular_capital_primary_job_t$tier$ + berg_capital_regular_capital_secondary_job_t$tier$ + berg_capital_regular_capital_tertiary_job_t$tier$]
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
