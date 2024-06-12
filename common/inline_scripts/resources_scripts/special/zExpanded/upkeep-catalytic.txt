@@ -1,0 +1,16 @@
+# shortcuts to understanding| Minerals:Food
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = { is_catalytic_empire = no } 
+	}
+	energy = @berg_$category$_$building$_upkeep_t$tier$
+}
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = { is_catalytic_empire = yes }
+	}
+	energy = @berg_$category$_$building$_upkeepTwoThird_t$tier$
+	food = @berg_$category$_$building$_upkeepOneThird_t$tier$
+}

@@ -1,5 +1,37 @@
 # twisted code for merge two civics
 # shortcuts to understanding| Minerals:Food
+
+# upkeep 3:0
 upkeep = {
-	
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				is_lithoid_empire = yes
+				AND = {
+					is_hive_empire = no
+					is_civic_plant_organic = no
+				}
+			}
+			berg_has_integrated_bioarchitecture = no
+		}
+	}
+	energy = @berg_$category$_$building$_upkeep_t$tier$
+}
+# upkeep 2:1
+upkeep = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_lithoid_empire = no
+			OR = {
+				is_hive_empire = yes
+				is_civic_plant_organic = yes
+			}
+		}
+	}
+	energy = @berg_$category$_$building$_upkeepTwoThird_t$tier$
+	food = @berg_$category$_$building$_upkeepOneThird_t$tier$
 }

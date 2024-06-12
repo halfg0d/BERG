@@ -1,46 +1,31 @@
-# twisted code for merge two civics
 # shortcuts to understanding| Minerals:Food
-
-# cost 3:0
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
 		exists = owner
-		owner = {
-			OR = {
-				is_lithoid_empire = yes
-				AND = {
-					is_hive_empire = no
-					is_civic_plant_organic = no
-				}
-			}
-		}
+		owner = { is_catalytic_empire = no }
 	}
 	minerals = @berg_$category$_$building$_cost_t$tier$
 }
-# cost 2:1
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		owner = {
+		exists = owner
+		owner = { 
+			is_catalytic_empire = yes 
 			berg_has_integrated_bioarchitecture = no
-			OR = {
-				is_hive_empire = yes
-				is_civic_plant_organic = yes
-			}
-			is_lithoid_empire = no
-		}
+		} 
 	}
 	minerals = @berg_$category$_$building$_costTwoThird_t$tier$
 	food = @berg_$category$_$building$_costOneThird_t$tier$
 }
-# cost 0:3
 cost = {
 	trigger = {
+		berg_has_zexpanded_mod = yes
 		exists = owner
 		owner = {
+			is_catalytic_empire = yes
 			berg_has_integrated_bioarchitecture = yes
-			is_lithoid_empire = no
 		}
 	}
 	food = @berg_$category$_$building$_cost_t$tier$

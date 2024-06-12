@@ -34,7 +34,7 @@ t2 building -> building_palatial_estates
 TODO: cost/upkeep
 catalityc processing
 +factory and foundry
-
+dodac do IntelliJ cost-catalytic oraz ringworld_bonus-catalytic do factory/foundry
 DONE:
 memorialist
 megacorp version 
