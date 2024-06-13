@@ -1,12 +1,12 @@
 
-#Politician
+# Coordinator
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = politician
+	JOB = coordinator
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	owner = { is_regular_empire = yes }
+	owner = { is_machine_empire = yes }
 	"
 }

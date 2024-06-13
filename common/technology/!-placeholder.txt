@@ -28,3 +28,9 @@ tech_planetary_stock_exchange = { cost = 0 area = society category = { archaeost
 tech_mcp_interstellar_economics_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
 tech_mcp_interstellar_economics_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
 tech_mcp_interstellar_economics_3 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_avb_capital_5 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_empath_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_emotion_emulators_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_avb_xeno_relations_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_emotion_emulators_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_empath_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }

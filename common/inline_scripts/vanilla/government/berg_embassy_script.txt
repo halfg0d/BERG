@@ -1,11 +1,26 @@
 country_modifier = {
 	envoys_add = @berg_government_embassy_envoy_t$tier$
 }
-planet_modifier = {
-	job_politician_add = @berg_government_embassy_envoy_t$tier$
+inline_script = {
+	script = berg_jobs_group/politician_add
+	AMOUNT = @berg_government_embassy_envoy_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
-triggered_desc = {
-	text = job_politician_effect_desc
+inline_script = {
+	script = berg_jobs_group/coordinator_add
+	AMOUNT = @berg_government_embassy_envoy_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/synapse_drone_add
+	AMOUNT = @berg_government_embassy_envoy_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
 triggered_country_modifier = {
 	potential = {

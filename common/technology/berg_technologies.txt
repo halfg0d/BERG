@@ -1,0 +1,104 @@
+# ##################
+# Technologies 
+# ##################
+
+berg_tech_emotion_emulators_3 = {
+	icon = tech_avb_xeno_relations_2
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { statecraft }
+	prerequisites = { "tech_emotion_emulators_2" "tech_avb_capital_5" }
+	weight = @tier5weight3
+	
+	potential = {
+		berg_has_better_diplo_mod = yes
+		berg_has_avb_mod = yes
+		is_machine_empire = yes
+		avb_hg_changes = yes
+	}
+	
+	modifier = {
+		diplo_weight_mult = 0.1
+	}
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			is_galactic_community_member = yes
+		}
+		modifier = {
+			factor = 2
+			owner_species = { has_trait = trait_robot_emotion_emulators }
+		}
+		modifier = {
+			factor = 0.5
+			owner_species = { has_trait = trait_robot_uncanny }
+		}
+		modifier = {
+			factor = 0.01
+			has_civic = civic_closed_collective
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 2
+			owner_species = { has_trait = trait_robot_emotion_emulators }
+		}
+		modifier = {
+			factor = 0.01
+			has_civic = civic_closed_collective
+		}
+	}
+}
+berg_tech_empath_3 = {
+	icon = tech_avb_xeno_relations_2
+	cost = @tier5cost3
+	area = society
+	tier = 5
+	category = { statecraft }
+	prerequisites = { "tech_empath_2" "tech_avb_capital_5" }
+	weight = @tier5weight3
+	
+	potential = {
+		berg_has_better_diplo_mod = yes
+		berg_has_avb_mod = yes
+		is_hive_empire = yes
+		avb_hg_changes = yes
+	}
+	
+	modifier = {
+		diplo_weight_mult = 0.1
+	}
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 2
+			has_civic = civic_hive_empath
+		}
+		modifier = {
+			factor = 2
+			is_galactic_community_member = yes
+		}
+		modifier = {
+			factor = 0.01
+			has_civic = civic_closed_collective
+		}
+	}
+
+	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 2
+			has_civic = civic_hive_empath
+		}
+		modifier = {
+			factor = 0.01
+			has_civic = civic_closed_collective
+		}
+	}
+}

@@ -19,3 +19,12 @@ l_english:
  building_fe_xeno_zoo_vanilla:0 "$building_fe_xeno_zoo_desc$"
  building_bug_galactic_stock_exchange:0 "$building_galactic_stock_exchange$"
  building_bug_galactic_stock_exchange_desc:0 "$building_galactic_stock_exchange_desc$"
+# Technologies
+ berg_tech_emotion_emulators_3: "$tech_avb_xeno_relations_2$"
+ berg_tech_emotion_emulators_3_desc: "$tech_avb_xeno_relations_2_desc$"
+ berg_tech_empath_3: "$tech_avb_xeno_relations_2$"
+ berg_tech_empath_3_desc: "$tech_avb_xeno_relations_2_desc$"
+ building_avb_grand_embassy_machine_2: "$building_avb_grand_embassy_2$"
+ building_avb_grand_embassy_machine_2_desc: "$building_avb_grand_embassy_2_desc$"
+ building_avb_grand_embassy_hive_2: "$building_avb_grand_embassy_2$"
+ building_avb_grand_embassy_hive_2_desc: "$building_avb_grand_embassy_2_desc$"

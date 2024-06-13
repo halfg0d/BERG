@@ -132,7 +132,7 @@
 @berg_government_embassy_upkeep_t3 = 12
 @berg_government_embassy_envoy_t1 = 1
 @berg_government_embassy_envoy_t2 = 2
-@berg_government_embassy_envoy_t3 = 1
+@berg_government_embassy_envoy_t3 = 4
 @berg_government_embassy_osa_fund_t1 = 50
 @berg_government_embassy_osa_fund_t2 = 100
 @berg_government_embassy_osa_fund_t3 = 50
