@@ -6,7 +6,7 @@ inline_script = {
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
-	is_regular_empire = yes
+	owner = { is_regular_empire = yes }
 	$TRIGGER$
 	"
 }
@@ -17,7 +17,7 @@ inline_script = {
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
-	is_hive_empire = yes
+	owner = { is_hive_empire = yes }
 	$TRIGGER$
 	"
 }
@@ -28,7 +28,7 @@ inline_script = {
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
-	is_machine_empire = yes
+	owner = { is_machine_empire = yes }
 	$TRIGGER$
 	"
 }

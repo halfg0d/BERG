@@ -7,5 +7,6 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
+	owner = { is_regular_empire = yes }
 	"
 }

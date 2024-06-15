@@ -1,12 +1,12 @@
 
-#Clerk
+# Synapse Drone
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = clerk
+	JOB = synapse_drone
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	always = yes
+	owner = { is_hive_empire = yes }
 	"
 }

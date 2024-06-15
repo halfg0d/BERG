@@ -1,0 +1,352 @@
+###########################
+# Better Diplo Buildings
+###########################
+# Embassies Machine
+building_embassy_machine = {
+	base_buildtime = @b2_time
+	icon = building_embassy
+	category = government
+	base_cap_amount = 1
+	potential = {
+		berg_st_can_build_embassy_machine = yes
+	}
+	upgrades = {
+		"building_grand_embassy_machine"
+	}
+	allow = {
+		has_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex_machine
+						is_starbase_building_building = ring_embassy_complex_machine
+					}
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_machine_empire = no
+				}
+			}
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 1
+	}
+	show_tech_unlock_if = {
+		berg_has_better_diplo_mod = yes
+		is_machine_empire = yes
+	}
+	prerequisites = {
+		"tech_emotion_emulators_1"
+	}
+}
+
+building_grand_embassy_machine = {
+	base_buildtime = @b3_time
+	icon = building_grand_embassy
+	can_build = no
+	category = government
+	potential = {
+		berg_st_can_build_embassy_machine = yes
+	}
+	allow = {
+		has_major_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex_machine
+						is_starbase_building_building = ring_embassy_complex_machine
+					}
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_machine_empire = no
+				}
+			}
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 2
+	}
+	prerequisites = {
+		"tech_emotion_emulators_2"
+	}
+	show_tech_unlock_if = {
+		berg_has_better_diplo_mod = yes
+		is_machine_empire = yes
+	}
+	upgrades = {
+		"building_avb_grand_embassy_machine_2"
+	}
+}
+
+building_avb_grand_embassy_machine_2 = {
+	base_buildtime = @avb_b4_time
+	icon = building_avb_grand_embassy_2
+	can_build = no
+	category = government
+	potential = {
+		berg_has_better_diplo_mod = yes
+		avb_hg_changes = yes
+		berg_st_can_build_embassy_machine = yes
+	}
+	allow = {
+		has_upgraded_capital_4 = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex_machine
+						is_starbase_building_building = ring_embassy_complex_machine
+					}
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_machine_empire = no
+				}
+			}
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 3
+	}
+	prerequisites = {
+		"berg_tech_emotion_emulators_3"
+	}
+	show_tech_unlock_if = {
+		berg_has_avb_mod = yes
+		berg_has_better_diplo_mod = yes
+		is_machine_empire = yes
+	}
+}
+
+# Embassies Hive
+building_embassy_hive = {
+	base_buildtime = @b2_time
+	icon = building_embassy
+	category = government
+	base_cap_amount = 1
+	potential = {
+		berg_st_can_build_embassy_hive = yes
+	}
+	upgrades = {
+		"building_grand_embassy_hive"
+	}
+	allow = {
+		has_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex_hive
+						is_starbase_building_building = ring_embassy_complex_hive
+					}
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_hive_empire = no
+				}
+			}
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 1
+	}
+	show_tech_unlock_if = {
+		berg_has_better_diplo_mod = yes
+		is_hive_empire = yes
+	}
+	prerequisites = {
+		"tech_empath_1"
+	}
+}
+
+building_grand_embassy_hive = {
+	base_buildtime = @b3_time
+	icon = building_grand_embassy
+	can_build = no
+	category = government
+	potential = {
+		berg_st_can_build_embassy_hive = yes
+	}
+	allow = {
+		has_major_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex_hive
+						is_starbase_building_building = ring_embassy_complex_hive
+					}
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_hive_empire = no
+				}
+			}
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 2
+	}
+	prerequisites = {
+		"tech_empath_2"
+	}
+	show_tech_unlock_if = {
+		berg_has_better_diplo_mod = yes
+		is_hive_empire = yes
+	}
+	upgrades = {
+		"building_avb_grand_embassy_hive_2"
+	}
+}
+
+building_avb_grand_embassy_hive_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	icon = building_avb_grand_embassy_2
+	category = government
+	potential = {
+		berg_has_better_diplo_mod = yes
+		avb_hg_changes = yes
+		berg_st_can_build_embassy_hive = yes
+	}
+	allow = {
+		has_upgraded_capital_4 = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_embassy_complex_hive
+						is_starbase_building_building = ring_embassy_complex_hive
+					}
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_hive_empire = no
+				}
+			}
+			planet = {
+				is_capital = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_embassy_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/embassy
+		tier = 3
+	}
+	prerequisites = {
+		"berg_tech_empath_3"
+	}
+	show_tech_unlock_if = {
+		berg_has_avb_mod = yes
+		berg_has_better_diplo_mod = yes
+		is_hive_empire = yes
+	}
+}

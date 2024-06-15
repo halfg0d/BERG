@@ -58,7 +58,7 @@ building_hydroponics_farm = {
 	}
 }
 building_avb_hydroponics_farm_2 = {
-	base_buildtime = @avb_rs4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = resource
@@ -124,7 +124,7 @@ building_avb_hydroponics_farm_2 = {
 	}
 }
 building_avb_hydroponics_farm_3 = {
-	base_buildtime = @avb_rs5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 
 	category = resource
@@ -308,7 +308,7 @@ building_food_processing_center = {
 	}
 }
 building_avb_food_processing_3 = {
-	base_buildtime = @avb_rs4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	category = resource
 	
@@ -364,7 +364,7 @@ building_avb_food_processing_3 = {
 }
 
 building_avb_food_processing_4 = {
-	base_buildtime = @avb_rs5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	category = resource
 	allow = {
@@ -461,7 +461,7 @@ building_baol_organic_plant = {
 	}
 }
 building_avb_baol_organic_plant_2 = {
-	base_buildtime = @avb_f4_time
+	base_buildtime = @avb_b4_time
 	category = resource
 	can_build = no
 
@@ -611,7 +611,7 @@ building_mineral_purification_hub = {
 	}
 }
 building_avb_mineral_purification_3 = {
-	base_buildtime = @avb_rs4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	category = resource
 
@@ -666,7 +666,7 @@ building_avb_mineral_purification_3 = {
 }
 
 building_avb_mineral_purification_4 = {
-	base_buildtime = @avb_rs5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	category = resource
 	allow = {
@@ -827,7 +827,7 @@ building_energy_nexus = {
 	}
 }
 building_avb_energy_grid_3 = {
-	base_buildtime = @avb_rs4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	category = resource
 	
@@ -875,7 +875,7 @@ building_avb_energy_grid_3 = {
 }
 
 building_avb_energy_grid_4 = {
-	base_buildtime = @avb_rs5_time
+	base_buildtime = @avb_b5_time
 	can_build = no
 	category = resource
 	
@@ -972,7 +972,7 @@ building_resource_silo = {
 	}
 }
 building_avb_resource_silo_2 = {
-	base_buildtime = @avb_rs4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 
 	category = resource

@@ -1406,7 +1406,7 @@ building_archaeo_refinery = {
 }
 
 building_avb_archaeo_refinery_2 = {
-	base_buildtime = @avb_f4_time
+	base_buildtime = @avb_b4_time
 	can_build = no
 	category = manufacturing
 

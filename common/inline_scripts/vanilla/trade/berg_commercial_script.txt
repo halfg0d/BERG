@@ -3,12 +3,14 @@ inline_script = {
 	AMOUNT = @berg_trade_commercial_trader_t$tier$
 	MULT = 1
 	DESC = with
+	TRIGGER = " "
 }
 inline_script = {
 	script = berg_jobs_group/clerk_add
 	AMOUNT = @berg_trade_commercial_clerk_t$tier$
 	MULT = 1
 	DESC = with
+	TRIGGER = " "
 }
 inline_script = {
 	script = berg_jobs_group/trader_add
