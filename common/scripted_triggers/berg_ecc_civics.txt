@@ -1,6 +1,3 @@
-berg_has_ecc_mod = {
-	has_global_flag = ethic_civic_classic_active
-}
 #ECC = Ethics and Civics Classic
 berg_ecc_spiritualist_civic = {
 	OR = {

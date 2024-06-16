@@ -114,7 +114,8 @@ building_foundry_3 = {
 		tech_alloys_2
 	}
 	upgrades = {
-		"building_avb_foundry_4"
+		"building_avb_foundry_4" #AVB
+		"building_roci_nano_forge_mod" #ROCI
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -385,7 +386,8 @@ building_factory_3 = {
 		tech_luxuries_2
 	}	
 	upgrades = {
-		"building_avb_factory_4"
+		"building_avb_factory_4" #AVB
+		"building_roci_affluence_center_mod" #ROCI
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc

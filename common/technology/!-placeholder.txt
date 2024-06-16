@@ -34,3 +34,8 @@ tech_emotion_emulators_2 = { cost = 0 area = society category = { archaeostudies
 tech_avb_xeno_relations_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
 tech_emotion_emulators_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
 tech_empath_1 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_roci_affluence_center = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_roci_nourishment_center = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_roci_singularity_power = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_roci_auto_forge = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_roci_dimensional_fabricator = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
