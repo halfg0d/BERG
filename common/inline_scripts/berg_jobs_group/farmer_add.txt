@@ -1,0 +1,64 @@
+
+# Farmer
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = farmer
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_fallen_empire_spiritualist = no
+		OR = {
+			is_anglers_empire = no
+			AND = {
+				is_anglers_empire = yes
+				NOT = { PREV = { planet = { is_wet = yes } } }
+			}
+		}
+	}
+	"
+}
+# Angler
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = angler
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_fallen_empire_spiritualist = no
+		is_anglers_empire = yes
+		PREV = { planet = { is_wet = yes } }
+	}
+	"
+}
+# Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = agri_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { is_gestalt = yes }
+	"
+}
+# Fallen Empire
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = fe_acolyte_farm
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { is_fallen_empire_spiritualist = yes }
+	"
+}

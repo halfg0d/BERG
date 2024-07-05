@@ -18,64 +18,12 @@ triggered_planet_modifier = {
 	}
 }
 #Job
-triggered_planet_modifier = {
-	potential = {
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_fallen_empire_spiritualist = no
-		}
-	}
-	modifier = {
-		job_miner_add = @berg_resource_mineral_purification_job_t$tier$
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = { is_fallen_empire_spiritualist = yes }
-	}
-	modifier = {
-		job_fe_acolyte_mine_add = @berg_resource_mineral_purification_job_t$tier$
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = {
-			is_gestalt = yes
-		}
-	}
-	modifier = {
-		job_mining_drone_add = @berg_resource_mineral_purification_job_t$tier$
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		berg_is_shattered_ring = yes
-		exists = owner
-		owner = { is_regular_empire = yes }
-	}
-	modifier = {
-		job_scrap_miner_add = @berg_resource_mineral_purification_job_t$tier$
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		berg_is_shattered_ring = yes
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	modifier = {
-		job_scrap_miner_drone_add = @berg_resource_mineral_purification_job_t$tier$
-	}
+inline_script = {
+	script = berg_jobs_group/miner_add
+	AMOUNT = @berg_resource_mineral_purification_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
 triggered_planet_modifier = {
 	potential = {
@@ -107,7 +55,7 @@ triggered_planet_modifier = {
 	}
 }
 inline_script = {
-	script = BUG/berg_district_script
+	script = BUG/berg_districts_script
 	tier = $tier$
 	district = mining
 }
@@ -141,58 +89,4 @@ inline_script = {
 	job_subtract = 1
 	drone = scrap_miner_drone
 	trigger = "berg_is_shattered_ring = yes"
-}
-
-triggered_desc = {
-	trigger = {
-		berg_has_ecc_mod = yes
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = { has_valid_civic = civic_mining_guilds }
-	}
-	text = job_politician_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_mining_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = {
-			is_gestalt = no
-			is_fallen_empire_spiritualist = no
-		}
-	}
-	text = job_miner_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_is_shattered_ring = no
-		exists = owner
-		owner = { is_fallen_empire_spiritualist = yes }
-	}
-	text = job_fe_acolyte_mine_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		berg_is_shattered_ring = yes
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_scrap_miner_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_is_shattered_ring = yes
-		exists = owner
-		owner = { is_regular_empire = yes }
-	}
-	text = job_scrap_miner_effect_desc
 }

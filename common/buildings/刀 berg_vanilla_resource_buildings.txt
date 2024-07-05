@@ -300,6 +300,7 @@ building_food_processing_center = {
 	}
 	upgrades = {
 		"building_avb_food_processing_3" #AVB
+		"building_roci_nourishment_center_mod" #ROCI
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -598,6 +599,7 @@ building_mineral_purification_hub = {
 	}
 	upgrades = {
 		"building_avb_mineral_purification_3" #AVB
+		"building_roci_dimensional_fabricator_mod" #ROCI
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -819,6 +821,7 @@ building_energy_nexus = {
 	upgrades = {
 		"building_avb_energy_grid_3" #AVB
 		"building_eludium_plant"  #PD?
+		"building_roci_class_4_singularity_mod" #ROCI
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc

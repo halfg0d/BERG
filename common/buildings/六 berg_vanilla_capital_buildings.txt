@@ -4265,7 +4265,7 @@ building_deployment_post_nanotech = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		modifier = {
 			job_replicator_add = -1
@@ -4286,14 +4286,14 @@ building_deployment_post_nanotech = {
 
 	triggered_desc = {
 		trigger = {
-			NOT = { has_modifier = gestation_colony }
+			berg_is_gestation_world = no
 		}
 		text = job_replicator_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		text = job_gestation_drone_effect_desc
 	}
@@ -4379,7 +4379,7 @@ building_machine_capital_nanotech = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		modifier = {
 			job_replicator_add = -1
@@ -4414,14 +4414,14 @@ building_machine_capital_nanotech = {
 
 	triggered_desc = {
 		trigger = {
-			NOT = { has_modifier = gestation_colony }
+			berg_is_gestation_world = no
 		}
 		text = job_replicator_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		text = job_gestation_drone_effect_desc
 	}
@@ -4502,7 +4502,7 @@ building_machine_major_capital_nanotech = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		modifier = {
 			job_replicator_add = -1
@@ -4544,14 +4544,14 @@ building_machine_major_capital_nanotech = {
 
 	triggered_desc = {
 		trigger = {
-			NOT = { has_modifier = gestation_colony }
+			berg_is_gestation_world = no
 		}
 		text = job_replicator_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		text = job_gestation_drone_effect_desc
 	}
@@ -4655,7 +4655,7 @@ building_machine_system_capital_nanotech = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		modifier = {
 			job_replicator_add = -1
@@ -4712,7 +4712,7 @@ building_machine_system_capital_nanotech = {
 
 	triggered_desc = {
 		trigger = {
-			has_modifier = gestation_colony
+			berg_is_gestation_world = yes
 		}
 		text = job_gestation_drone_effect_desc
 	}

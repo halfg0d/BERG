@@ -1,10 +1,3 @@
-berg_has_planetary_diversity_mod = {
-	has_global_flag = planetarydiversity
-}
-berg_has_pd_habitats_mod = {
-	berg_has_planetary_diversity_mod = yes #Submod require original mod
-	has_global_flag = planetarydiversityphabs
-}
 berg_pd_faculty_relic_planet = {
 	berg_has_planetary_diversity_mod = yes
 	OR = {
@@ -17,10 +10,7 @@ berg_pd_resort_habitat = {
 	berg_has_pd_habitats_mod = yes
 	has_modifier = resort_colony_pd_hab
 }
-berg_has_pd_unique_worlds_mod = {
-	berg_has_planetary_diversity_mod = yes #Submod require original mod
-	has_global_flag = planetarydiversityuniques
-}
+
 berg_pd_is_crucible = {
 	berg_has_pd_unique_worlds_mod = yes
 	is_pd_crucible = yes
@@ -51,10 +41,7 @@ berg_pd_gaiaseeders_destroy = {
 		is_planet_class = pc_nuked_relic
 	}
 }
-berg_pd_has_arcology_mod = {
-	berg_has_planetary_diversity_mod = yes #Submod require original mod
-	has_global_flag = planetarydiversityarcs
-}
+
 berg_pd_is_military_hab = {
 	berg_has_pd_habitats_mod = yes
 	OR = {

@@ -51,6 +51,7 @@ pd_is_planet_class_cave = { always = no }
 pd_is_planet_class_superhabitable = { always = no }
 pd_is_planet_class_all = { always = no }
 pd_is_planet_class_gaia = { always = no }
+is_individual_machine = { always = no }
 is_industrial = { always = no }
 is_playable = { always = no }
 is_bugged_globalism = { always = no }
