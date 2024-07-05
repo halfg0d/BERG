@@ -463,7 +463,7 @@ berg_st_can_build_embassy_hive = {
 berg_st_can_build_gaiaseeders = {
 	exists = owner
 	owner = {
-		is_country_type = default
+		is_playable = yes
 		is_idyllic_bloom_empire = yes
 	}
 	berg_can_gaiaseeders_planet = yes

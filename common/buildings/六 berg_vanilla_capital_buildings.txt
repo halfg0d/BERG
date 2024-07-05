@@ -23,6 +23,7 @@ building_colony_shelter = {
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_colony_shelter_nanotech
 	}
@@ -146,6 +147,7 @@ building_capital = {
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_capital_nanotech
 	}
@@ -285,6 +287,7 @@ building_major_capital = {
 		building_resort_major_capital
 		building_slave_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_major_capital_nanotech
 	}
@@ -431,6 +434,7 @@ building_system_capital = {
 		building_resort_major_capital
 		building_slave_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_system_capital_nanotech
 	}
@@ -591,6 +595,7 @@ building_avb_capital_4 = {
 		building_resort_major_capital
 		building_slave_major_capital	
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace		
 	}
 	
@@ -746,6 +751,7 @@ building_avb_capital_5 = {
 		building_avb_resort_capital_3
 		building_avb_slave_capital_3		
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace		
 	}
 	
@@ -901,6 +907,7 @@ building_avb_capital_6 = {
 		building_avb_resort_capital_3
 		building_avb_slave_capital_3
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -1057,6 +1064,7 @@ building_deployment_post = {
 		building_hive_capital
 		building_colony_shelter
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_deployment_post_nanotech
 	}
@@ -1172,6 +1180,7 @@ building_machine_capital = {
 		building_hive_capital
 		building_colony_shelter
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -1260,6 +1269,7 @@ building_machine_major_capital = {
 		building_hive_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -1349,6 +1359,7 @@ building_machine_system_capital = {
 		building_major_capital
 		building_machine_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -1462,6 +1473,7 @@ building_avb_machine_capital_4 = {
 		building_avb_capital_4
 		building_machine_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -1581,6 +1593,7 @@ building_avb_machine_capital_5 = {
 		building_avb_capital_5
 		building_avb_machine_capital_4
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -1699,6 +1712,7 @@ building_avb_machine_capital_6 = {
 		building_avb_capital_6
 		building_avb_machine_capital_5
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -1824,6 +1838,7 @@ building_hive_capital = {
 		building_machine_capital
 		building_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -1907,6 +1922,7 @@ building_hive_major_capital = {
 		building_machine_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -1995,6 +2011,7 @@ building_avb_hive_capital_3 = {
 		building_machine_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -2089,6 +2106,7 @@ building_avb_hive_capital_4 = {
 		building_machine_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -2732,6 +2750,7 @@ building_resort_capital = {
 		building_machine_capital
 		building_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -2824,6 +2843,7 @@ building_resort_major_capital = {
 		building_machine_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -2929,6 +2949,7 @@ building_avb_resort_capital_3 = {
 		building_machine_major_capital
 		building_major_capital	
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -3038,6 +3059,7 @@ building_slave_capital = {
 		building_machine_capital
 		building_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	inline_script = {
@@ -3140,6 +3162,7 @@ building_slave_major_capital = {
 		building_machine_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -3222,6 +3245,7 @@ building_avb_slave_capital_3 = {
 		building_machine_major_capital
 		building_major_capital	
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 	
@@ -3310,6 +3334,7 @@ building_imperial_capital = {
 		building_system_capital
 		building_hab_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -3446,6 +3471,7 @@ building_imperial_machine_capital = {
 		building_system_capital
 		building_hab_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -3553,6 +3579,7 @@ building_imperial_hive_capital = {
 		building_system_capital
 		building_hab_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -3644,6 +3671,7 @@ building_colony_shelter_nanotech = {
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -3765,6 +3793,7 @@ building_capital_nanotech = {
 		building_resort_capital
 		building_slave_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -3906,6 +3935,7 @@ building_major_capital_nanotech = {
 		building_resort_major_capital
 		building_slave_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -4044,6 +4074,7 @@ building_system_capital_nanotech = {
 		building_resort_major_capital
 		building_slave_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -4205,6 +4236,7 @@ building_deployment_post_nanotech = {
 		building_hive_capital
 		building_colony_shelter
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -4301,6 +4333,7 @@ building_machine_capital_nanotech = {
 		building_hive_capital
 		building_colony_shelter
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -4423,6 +4456,7 @@ building_machine_major_capital_nanotech = {
 		building_hive_major_capital
 		building_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
@@ -4553,6 +4587,7 @@ building_machine_system_capital_nanotech = {
 		building_major_capital
 		building_machine_major_capital
 		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 	}
 
