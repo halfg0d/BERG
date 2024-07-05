@@ -345,3 +345,6 @@ berg_pr_cannot_vanilla = {
 berg_has_better_diplo_mod = {
 	has_global_flag = better_diplo_installed
 }
+berg_has_zofe_sandbox_mod = {
+	zofe_sandbox = yes
+}

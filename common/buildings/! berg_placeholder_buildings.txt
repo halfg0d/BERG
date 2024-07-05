@@ -31,3 +31,6 @@ PR_building_RES_reactor_1 = { potential = { always = no } allow = { always = no 
 PR_building_RES_reactor_2 = { potential = { always = no } allow = { always = no } }
 PR_building_RES_food_farm_2 = { potential = { always = no } allow = { always = no } }
 PR_building_RES_soil_2 = { potential = { always = no } allow = { always = no } }
+building_acot_dm_ancient_palace = { potential = { always = no } allow = { always = no } }
+building_acot_dm_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
+building_acot_dm_ancient_control_center = { potential = { always = no } allow = { always = no } }

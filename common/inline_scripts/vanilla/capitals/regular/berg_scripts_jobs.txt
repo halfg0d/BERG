@@ -75,7 +75,7 @@ triggered_planet_modifier = {
 		}
 		$trigger$
 	}
-	modifier = {=
+	modifier = {
 		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }
