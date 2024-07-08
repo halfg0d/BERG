@@ -2,7 +2,7 @@
 # Miner
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = politician
+	JOB = miner
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
@@ -18,7 +18,7 @@ inline_script = {
 # Scrap Miner
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = politician
+	JOB = scrap_miner
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
@@ -31,7 +31,7 @@ inline_script = {
 # Miner Drone
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = politician
+	JOB = mining_drone
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
@@ -44,7 +44,7 @@ inline_script = {
 # Scrap Miner Drone
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = politician
+	JOB = scrap_miner_drone
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
@@ -57,7 +57,7 @@ inline_script = {
 # Fallen Empire Miner
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = politician
+	JOB = fe_acolyte_mine
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
