@@ -18,7 +18,7 @@ berg_has_pd_unique_worlds_mod = {
 }
 berg_pd_has_arcology_mod = {
 	berg_has_planetary_diversity_mod = yes #Submod require original mod
-	has_global_flag = planetarydiversityarcs
+	has_global_flag = planetarydiversitymorearcologies
 }
 berg_has_giga_mod = {
 	has_global_flag = gigastructures_enabled

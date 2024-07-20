@@ -1,0 +1,25 @@
+
+# Naval Admin
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = pd_naval_admin
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { is_gestalt = no }
+	"
+}
+# Naval Admin Gestalt
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = pd_naval_admin_gestalt
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { is_gestalt = yes }
+	"
+}
