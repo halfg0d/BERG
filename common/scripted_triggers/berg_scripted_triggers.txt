@@ -125,7 +125,9 @@ berg_is_slave_world = {
 berg_is_gestation_world = {
 	has_modifier = gestation_colony
 }
-
+berg_is_penal_world = {
+	has_modifier = penal_colony
+}
 
 
 berg_void_dweller_housing = {

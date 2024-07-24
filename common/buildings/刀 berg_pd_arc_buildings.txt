@@ -21,7 +21,7 @@ building_pd_rogue_council = {
 			is_machine_empire = yes
 			berg_is_servitor_empire = yes
 		}
-		NOT = { has_modifier = slave_colony }
+		berg_is_slave_world = no
 	}
 
 	allow = {
@@ -75,6 +75,8 @@ building_navel_base = {
 	potential = {
 		berg_pd_has_arcology_mod = yes
 		berg_is_slave_world = no
+		berg_is_resort_world = no
+		berg_is_penal_world = no
 	}
 	resources = {
 		category = planet_buildings_strongholds
@@ -97,8 +99,11 @@ building_navel_base = {
 		"building_navel_command"
 	}
 	inline_script = {
-		script = PD/berg_pd_naval_base_script
-		JOB = 3
+		script = berg_jobs_group/pd_naval_admin
+		AMOUNT = 3
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
 	}
 	#OST
 	inline_script = {
@@ -149,8 +154,11 @@ building_navel_command = {
 	}
 
 	inline_script = {
-		script = PD/berg_pd_naval_base_script
-		JOB = 6
+		script = berg_jobs_group/pd_naval_admin
+		AMOUNT = 6
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
 	}
 	#OST
 	inline_script = {
