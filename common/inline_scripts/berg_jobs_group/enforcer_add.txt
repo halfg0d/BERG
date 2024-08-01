@@ -7,5 +7,17 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
+	is_gestalt = no
+	"
+}
+# Patrol Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = patrol_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_gestalt = yes
 	"
 }

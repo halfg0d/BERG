@@ -39,3 +39,12 @@ tech_roci_nourishment_center = { cost = 0 area = society category = { archaeostu
 tech_roci_singularity_power = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
 tech_roci_auto_forge = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
 tech_roci_dimensional_fabricator = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_paradise_homeplanet = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_control_dark_energy = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_molecular_manipulation = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_ultimate_technology = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_edenization = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_ultimate_armies = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_supreme_power = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_strategic_resources_production = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
+tech_ult_nano_drone_colony = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } }
