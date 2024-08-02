@@ -1,5 +1,5 @@
 resources = {
-	category = planet_buildings
+	category = planet_buildings_stronghold
 	inline_script = {
 		script = resources_scripts/basic
 		category = army

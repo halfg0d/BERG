@@ -17,7 +17,7 @@
 @berg_resource_hydroponics_upkeep_t3 = 6
 @berg_resource_hydroponics_job_t1 = 2
 @berg_resource_hydroponics_job_t2 = 4
-@berg_resource_hydroponics_job_t3 = 6
+@berg_resource_hydroponics_job_t3 = 2
 # food_processing
 @berg_resource_food_processing_cost_t1 = 400
 @berg_resource_food_processing_cost_t2 = 600
@@ -53,22 +53,10 @@
 @berg_resource_food_processing_add_t2 = 2.0
 @berg_resource_food_processing_add_t3 = 3.0
 @berg_resource_food_processing_add_t4 = 4.0
-@berg_resource_food_processing_ecc_unity_t1 = 5
-@berg_resource_food_processing_ecc_unity_t2 = 5
-@berg_resource_food_processing_ecc_unity_t3 = 5
-@berg_resource_food_processing_ecc_unity_t4 = 5
-@berg_resource_food_processing_job_t1 = 2
+@berg_resource_food_processing_job_t1 = 1
 @berg_resource_food_processing_job_t2 = 2
-@berg_resource_food_processing_job_t3 = 2
-@berg_resource_food_processing_job_t4 = 2
-@berg_resource_food_processing_zex_cost_t1 = 200
-@berg_resource_food_processing_zex_cost_t2 = 600
-@berg_resource_food_processing_zex_cost_t3 = 1000
-@berg_resource_food_processing_zex_cost_t4 = 1400
-@berg_resource_food_processing_zex_district_t1 = 2.0
-@berg_resource_food_processing_zex_district_t2 = 4.0
-@berg_resource_food_processing_zex_district_t3 = 6.0
-@berg_resource_food_processing_zex_district_t4 = 8.0
+@berg_resource_food_processing_job_t3 = 3
+@berg_resource_food_processing_job_t4 = 4
 # baol_plant
 @berg_resource_baol_plant_artifacts_cost_t1 = 25
 @berg_resource_baol_plant_artifacts_cost_t2 = 50
@@ -131,14 +119,10 @@
 @berg_resource_mineral_purification_district_add_t2 = 4
 @berg_resource_mineral_purification_district_add_t3 = 5
 @berg_resource_mineral_purification_district_add_t4 = 6
-@berg_resource_mineral_purification_ecc_politician_t1 = 1
-@berg_resource_mineral_purification_ecc_politician_t2 = 1
-@berg_resource_mineral_purification_ecc_politician_t3 = 1
-@berg_resource_mineral_purification_ecc_politician_t4 = 1
-@berg_resource_mineral_purification_job_t1 = 2
+@berg_resource_mineral_purification_job_t1 = 1
 @berg_resource_mineral_purification_job_t2 = 2
-@berg_resource_mineral_purification_job_t3 = 2
-@berg_resource_mineral_purification_job_t4 = 2
+@berg_resource_mineral_purification_job_t3 = 3
+@berg_resource_mineral_purification_job_t4 = 4
 @berg_resource_mineral_purification_miner_add_mineral_t1 = 1.0
 @berg_resource_mineral_purification_miner_add_mineral_t2 = 2.0
 @berg_resource_mineral_purification_miner_add_mineral_t3 = 3.0
@@ -208,8 +192,8 @@
 @berg_resource_energy_grid_energy_add_t4 = 4.0
 @berg_resource_energy_grid_job_t1 = 1
 @berg_resource_energy_grid_job_t2 = 2
-@berg_resource_energy_grid_job_t3 = 1
-@berg_resource_energy_grid_job_t4 = 1
+@berg_resource_energy_grid_job_t3 = 3
+@berg_resource_energy_grid_job_t4 = 4
 # silo
 @berg_resource_silo_cost_t1 = 200
 @berg_resource_silo_cost_t2 = 600
@@ -219,10 +203,10 @@
 @berg_resource_silo_upkeep_t3 = 6
 @berg_resource_silo_job_t1 = 1
 @berg_resource_silo_job_t2 = 2
-@berg_resource_silo_job_t3 = 3
+@berg_resource_silo_job_t3 = 1
 @berg_resource_silo_silo_t1 = 5000
 @berg_resource_silo_silo_t2 = 10000
-@berg_resource_silo_silo_t3 = 20000
+@berg_resource_silo_silo_t3 = 10000
 # bioreactor
 @berg_resource_bioreactor_cost_t1 = 400
 @berg_resource_bioreactor_cost_t2 = 600

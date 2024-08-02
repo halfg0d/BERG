@@ -1,3 +1,0 @@
-berg_has_uap_mod = {
-	has_global_flag = has_uap_mod
-}

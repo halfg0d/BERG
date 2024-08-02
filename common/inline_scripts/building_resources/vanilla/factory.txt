@@ -37,5 +37,6 @@ resources = {
 	inline_script = {
 		script = tradition_script/ost_nanobiotics
 		tier = $tier$
-		material = consumer_goods	}
+		material = consumer_goods
+	}
 }

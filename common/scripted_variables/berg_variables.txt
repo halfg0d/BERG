@@ -1,0 +1,24 @@
+#############
+# Variables
+#############
+@berg_buildings_t1 = 1
+@berg_buildings_t2 = 2
+@berg_buildings_t3 = 3
+@berg_buildings_t4 = 4
+@berg_buildings_t5 = 5
+@berg_buildings_t6 = 6
+@berg_buildings_t7 = 7
+
+@capital_t4_min_pops = 80
+@capital_t5_min_pops = 120
+@capital_t6_min_pops = 150
+
+@capital_t6_cost = 10400
+@capital_t6_upkeep = 64
+
+@tier_2_capital_defense_armies = 4
+@tier_3_capital_defense_armies = 8
+@tier_4_capital_defense_armies = 16
+@tier_5_capital_defense_armies = 24
+@tier_6_capital_defense_armies = 32
+@tier_7_capital_defense_armies = 40

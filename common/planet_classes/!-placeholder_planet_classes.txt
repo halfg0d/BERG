@@ -1,0 +1,3 @@
+# Irony this is a placeholder file please ignore it
+pc_aquatic = { entity = arid_planet }
+pc_storm = { entity = arid_planet }

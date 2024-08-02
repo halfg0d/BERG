@@ -1,0 +1,80 @@
+# Here are scripted triggers which asks about mods, nothing special
+berg_has_bug_mod = {
+	has_global_flag = bug_branch_active
+}
+berg_has_ecc_mod = {
+	has_global_flag = ethic_civic_classic_active
+}
+berg_has_planetary_diversity_mod = {
+	has_global_flag = planetarydiversity
+}
+berg_has_pd_habitats_mod = {
+	berg_has_planetary_diversity_mod = yes #Submod require original mod
+	has_global_flag = planetarydiversityphabs
+}
+berg_has_pd_unique_worlds_mod = {
+	berg_has_planetary_diversity_mod = yes #Submod require original mod
+	has_global_flag = planetarydiversityuniques
+}
+berg_pd_has_arcology_mod = {
+	berg_has_planetary_diversity_mod = yes #Submod require original mod
+	has_global_flag = planetarydiversitymorearcologies
+}
+berg_has_giga_mod = {
+	has_global_flag = gigastructures_enabled
+}
+berg_has_avb_mod = {
+	has_global_flag = avb_mod_flag
+}
+berg_has_acot_mod = {
+	has_acot = yes
+}
+berg_has_osa_mod = {
+	has_global_flag = osa_active
+}
+berg_has_ost_mod = {
+	OR = {
+		berg_has_osa_mod = yes
+		has_global_flag = ost_active
+	}
+}
+berg_has_gpm_mod = {
+	gpm_mod_active = yes
+}
+berg_has_zexpanded_mod = {
+	always = no
+}
+berg_has_production_revolution_mod = {
+	has_global_flag = PR_installed
+}
+berg_has_better_diplo_mod = {
+	has_global_flag = better_diplo_installed
+}
+berg_has_roci_mod = {
+	has_global_flag = roci_has_host
+}
+berg_has_mcp_mod = {
+	always = no
+}
+berg_has_hme_mod = {
+	has_hme_mod = yes
+}
+berg_has_uap_mod = {
+	has_global_flag = has_uap_mod
+}
+berg_has_any_supported_mod = {
+	always = no
+	# For now that feature will be disabled and rethinked if it's worth it
+	OR = {
+		berg_has_planetary_diversity_mod = yes
+		berg_has_osa_mod = yes
+		berg_has_ost_mod = yes
+		berg_has_ecc_mod = yes
+		berg_has_avb_mod = yes
+		berg_has_bug_mod = yes
+		berg_has_gpm_mod = yes
+		berg_has_uap_mod = yes
+		berg_has_giga_mod = yes
+		berg_has_zexpanded_mod = yes
+	}
+}

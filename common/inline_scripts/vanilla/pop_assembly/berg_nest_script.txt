@@ -1,0 +1,67 @@
+#Progenitor Hiive
+planet_modifier = {
+	job_offspring_drone_add = @berg_pop_assembly_offspring_nest_job_t$tier$
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_gene_tailoring
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
+		}
+	}
+	modifier = {
+		auto_mod_monthly_add = @berg_pop_assembly_offspring_nest_auto_mod_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_overtuned
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
+		}
+	}
+	modifier = {
+		auto_mod_monthly_add = @berg_pop_assembly_offspring_nest_auto_mod_t$tier$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_origin = origin_progenitor_hive }
+		exists = growing_species
+		growing_species = {
+			has_trait = trait_hive_mind
+		}
+	}
+	text = job_offspring_drone_effect_desc
+}
+
+triggered_desc = {
+	text = offspring_nest_tooltip
+}
+#Cyborgs
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_active_tradition = tr_cybernetics_modular_cybernetics_hive }
+	}
+	modifier = {
+		job_augmentor_drone_add = 2
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			has_active_tradition = tr_cybernetics_modular_cybernetics_hive
+		}
+	}
+	text = job_augmentor_drone_effect_desc
+}

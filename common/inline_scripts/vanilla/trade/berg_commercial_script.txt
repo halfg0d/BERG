@@ -1,20 +1,29 @@
-planet_modifier = {
-	job_clerk_add = @berg_trade_commercial_clerk_t$tier$
-	job_trader_add = @berg_trade_commercial_trader_t$tier$
+inline_script = {
+	script = berg_jobs_group/trader_add
+	AMOUNT = @berg_trade_commercial_trader_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = " "
 }
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			has_active_tradition = tr_mercantile_commercial_enterprise
-		}
-	}
-	modifier = {
-		job_trader_add = 1
-	}
+inline_script = {
+	script = berg_jobs_group/clerk_add
+	AMOUNT = @berg_trade_commercial_clerk_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = " "
 }
-
+inline_script = {
+	script = berg_jobs_group/trader_add
+	AMOUNT = @berg_trade_commercial_trader_t$tier$
+	MULT = 1
+	DESC = no
+	TRIGGER = "
+	exists = owner
+	owner = {
+		has_active_tradition = tr_mercantile_commercial_enterprise
+	}
+	"
+}
 #OSA
 triggered_planet_modifier = {
 	potential = { berg_has_osa_mod = yes }
@@ -22,33 +31,34 @@ triggered_planet_modifier = {
 	multiplier = $tier$
 }
 #ECC
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			has_valid_civic = civic_corporate_dominion
-		}
-		check_variable_arithmetic = {
-			which = $tier$
-			value >= 2
-		}
+inline_script = {
+	script = berg_jobs_group/entrepreneur_add
+	AMOUNT = @berg_trade_commercial_ecc_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = "
+	exists = owner
+	owner = {
+		has_valid_civic = civic_corporate_dominion
 	}
-	modifier = {
-		job_entrepreneur_add = @berg_trade_commercial_ecc_job_t$tier$
+	check_variable_arithmetic = {
+		which = $tier$
+		value >= 2
 	}
+	"
 }
-triggered_planet_modifier = {
-	potential = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			has_valid_civic = civic_consumerism
-		}
+inline_script = {
+	script = berg_jobs_group/clerk_add
+	AMOUNT = 1
+	MULT = 1
+	DESC = no
+	TRIGGER = "
+	berg_has_ecc_mod = yes
+	exists = owner
+	owner = {
+		has_valid_civic = civic_consumerism
 	}
-	modifier = {
-		job_clerk_add = 1
-	}
+	"
 }
 inline_script = {
 	script = berg_jobs_group/merchant_add
@@ -62,54 +72,4 @@ inline_script = {
 	}
 	"
 	DESC = with
-}
-
-triggered_desc = {
-	text = job_clerk_effect_desc
-}
-triggered_desc = {
-	text = job_trader_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_has_ecc_mod = yes
-		exists = owner
-		owner = {
-			has_valid_civic = civic_corporate_dominion
-		}
-		check_variable_arithmetic = {
-			which = $tier$
-			value >= 2
-		}
-	}
-	text = job_entrepreneur_effect_desc
-}
-#zExpanded
-triggered_planet_modifier = {
-	potential = {
-		berg_has_zexpanded_mod = yes
-	}
-	modifier = {
-		trade_value_mult = 0
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		berg_has_zexpanded_mod = yes
-		exists = owner
-		owner = { has_civic = civic_merchant_guilds }
-	}
-	modifier = {
-		job_manager_add = 1
-		job_clerk_add = -1
-	}
-}
-
-triggered_desc = {
-	trigger = {
-		berg_has_zexpanded_mod = yes
-		exists = owner
-		owner = { has_civic = civic_merchant_guilds }
-	}
-	text = job_manager_effect_desc
 }

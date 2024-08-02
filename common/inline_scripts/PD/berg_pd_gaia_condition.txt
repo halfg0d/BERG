@@ -1,0 +1,16 @@
+NOR = {
+	has_building = building_gaia_lab
+	has_building_construction = building_gaia_lab
+	has_building = building_gaia_unity_admin
+	has_building_construction = building_gaia_unity_admin
+	has_building = building_gaia_unity_temple
+	has_building_construction = building_gaia_unity_temple
+	has_building = building_gaia_unity_robot
+	has_building_construction = building_gaia_unity_robot
+	has_building = building_gaia_unity_servitor
+	has_building_construction = building_gaia_unity_servitor
+	has_building = building_gaia_unity_hive
+	has_building_construction = building_gaia_unity_hive
+	has_building = building_gaia_resort
+	has_building_construction = building_gaia_resort
+}

@@ -1,0 +1,492 @@
+# Tidal Locked
+building_wet_td_farm = {
+	base_buildtime = 600
+
+	category = resource
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		owner = {
+			country_uses_food = yes
+		}
+		berg_is_resort_world = no
+		pd_is_planet_class_tidally_locked = yes
+		inline_script = {
+			script = PD/berg_pd_condition_scheme
+			BUILDING_1 = building_wet_td_farm
+			BUILDING_2 = building_wet_td_grid
+			BUILDING_3 = building_wet_td_bio_lab
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_farming_district_or_buildings = yes
+		}
+	}
+
+	inline_script = PD/berg_pd_rare_farm_building
+
+	destroy_trigger = {
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_resort_world = yes
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+			planet = { 
+				pd_is_planet_class_tidally_locked = no
+			}
+		}
+	}	 
+}
+building_wet_td_grid = {
+	base_buildtime = 600
+
+	category = resource
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		berg_is_resort_world = no
+		pd_is_planet_class_tidally_locked = yes
+		NOR = {
+			has_building = building_wet_td_farm
+			has_building_construction = building_wet_td_farm
+			has_building = building_wet_td_grid
+			has_building_construction = building_wet_td_grid
+			has_building = building_wet_td_bio_lab
+			has_building_construction = building_wet_td_bio_lab
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_generator_district_or_building = yes
+		}
+	}
+
+	inline_script = PD/berg_pd_rare_energy_building
+
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
+			}
+		}
+		planet = {
+			pd_is_planet_class_tidally_locked = no
+		}
+	}		  
+}
+building_wet_td_bio_lab = {
+	base_buildtime = 600
+
+	category = research
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		berg_is_resort_world = no
+		pd_is_planet_class_tidally_locked = yes
+		NOR = {
+			has_building = building_wet_td_farm
+			has_building_construction = building_wet_td_farm
+			has_building = building_wet_td_grid
+			has_building_construction = building_wet_td_grid
+			has_building = building_wet_td_bio_lab
+			has_building_construction = building_wet_td_bio_lab
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	inline_script = PD/berg_pd_rare_physics_building
+	inline_script = PD/berg_pd_rare_society_building
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_researcher_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 4
+		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
+	}	
+
+	destroy_trigger = {
+		planet = { 
+			pd_is_planet_class_tidally_locked = no
+		}
+	}		 
+}
+
+#Karst Buildings
+building_karst_grid = {
+	base_buildtime = 600
+
+	category = resource
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		berg_is_resort_world = no
+		pd_is_planet_class_cave = yes
+		NOR = {
+			has_building = building_karst_grid
+			has_building_construction = building_karst_grid
+			has_building = building_karst_mine
+			has_building_construction = building_karst_mine
+			has_building = building_karst_lab
+			has_building_construction = building_karst_lab
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_generator_district_or_building = yes
+		}
+	}
+
+	inline_script = PD/berg_pd_rare_energy_building
+
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
+			}
+		}
+		planet = { 
+			pd_is_planet_class_cave = no
+		}
+	}	
+}
+building_karst_mine = {
+	base_buildtime = 600
+
+	category = resource
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		berg_is_resort_world = no
+		pd_is_planet_class_cave = yes
+		NOR = {
+			has_building = building_karst_grid
+			has_building_construction = building_karst_grid
+			has_building = building_karst_mine
+			has_building_construction = building_karst_mine
+			has_building = building_karst_lab
+			has_building_construction = building_karst_lab
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_mining_district = yes
+		}
+	}
+	
+	inline_script = PD/berg_pd_rare_mining_building
+
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_mining_district = no
+			}
+		}
+		planet = { 
+			pd_is_planet_class_cave = no
+		}
+	}
+}
+building_karst_lab = {
+	base_buildtime = 600
+
+	category = research
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		berg_is_resort_world = no
+		pd_is_planet_class_cave = yes
+		NOR = {
+			has_building = building_karst_grid
+			has_building_construction = building_karst_grid
+			has_building = building_karst_mine
+			has_building_construction = building_karst_mine
+			has_building = building_karst_lab
+			has_building_construction = building_karst_lab
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	inline_script = PD/berg_pd_rare_engineering_building
+	inline_script = PD/berg_pd_rare_engineering_building
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_researcher_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 4
+		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
+	}	
+
+	destroy_trigger = {
+		planet = { 
+			pd_is_planet_class_cave = no
+		}
+	} 
+}
+
+#Superhabitable Buildings
+building_superhab_lab = {
+	base_buildtime = 600
+
+	category = research
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		berg_is_resort_world = no
+		pd_is_planet_class_superhabitable = yes
+		NOR = {
+			has_building = building_superhab_lab
+			has_building_construction = building_superhab_lab
+			has_building = building_superhab_farm
+			has_building_construction = building_superhab_farm
+			has_building = building_superhab_foundry
+			has_building_construction = building_superhab_foundry
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	inline_script = PD/berg_pd_rare_society_building
+	inline_script = PD/berg_pd_rare_society_building
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_head_researcher_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 4
+		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
+	}	
+
+	destroy_trigger = {
+		planet = { 
+			pd_is_planet_class_superhabitable = no
+		}
+	}
+}
+building_superhab_farm = {
+	base_buildtime = 600
+
+	category = resource
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		owner = {
+			country_uses_food = yes
+		}
+		berg_is_resort_world = no
+		pd_is_planet_class_superhabitable = yes
+		NOR = {
+			has_building = building_superhab_lab
+			has_building_construction = building_superhab_lab
+			has_building = building_superhab_farm
+			has_building_construction = building_superhab_farm
+			has_building = building_superhab_foundry
+			has_building_construction = building_superhab_foundry
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_farming_district_or_buildings = yes
+		}
+	}
+
+	inline_script = PD/berg_pd_rare_farm_building	
+
+	destroy_trigger = {
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_resort_world = yes
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+			planet = { 
+				pd_is_planet_class_superhabitable = no
+			}
+		}
+	}		
+}
+building_superhab_foundry = {
+	base_buildtime = 600
+
+	category = manufacturing
+	
+	potential = {
+		berg_has_planetary_diversity_mod = yes
+		exists = owner
+		owner = { is_catalytic_empire = no }
+		berg_is_resort_world = no
+		pd_is_planet_class_superhabitable = yes
+		NOR = {
+			has_building = building_superhab_lab
+			has_building_construction = building_superhab_lab
+			has_building = building_superhab_farm
+			has_building_construction = building_superhab_farm
+			has_building = building_superhab_foundry
+			has_building_construction = building_superhab_foundry
+		}
+	}
+
+	inline_script = PD/berg_pd_rare_foundry_building
+
+	destroy_trigger = {
+		planet = { 
+			pd_is_planet_class_superhabitable = no
+		}
+	}	
+}

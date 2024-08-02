@@ -1,0 +1,471 @@
+#############
+# PD 
+#############
+
+building_undersea_gasmine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+
+	category = research
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_aquatic
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_exotic_gases"
+	#}
+	
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_physics_research_produces_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_underwater_venter_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		energy = 20
+	}	  
+}
+
+#PD Storm Event Planet
+building_storm_lab = {
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	is_capped_by_modifier = yes
+
+	category = research
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_storm
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_engineering_research_produces_mult = 0.05
+	#	planet_jobs_physics_research_produces_mult = 0.05
+	#	planet_housing_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_storm_researcher_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 6
+			planet_housing_mult = 0.15
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 6
+			planet_housing_mult = 0.15
+		}
+	}
+
+	show_tech_unlock_if = {
+		owner = { any_owned_planet = { is_planet_class = pc_storm } }
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+		inline_script = {
+			script = tradition_script/ost_insight
+			tier = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		engineering_research = 30
+	}
+}
+
+#PD Inquisition Civic
+building_inquisition_hall = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		owner = { has_civic = civic_pdinquisition }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {	owner = { has_civic = civic_pdinquisition }	}
+	}
+
+	planet_modifier = {
+		job_inquisitor_add = 2
+		#planet_stability_add = 5
+		pop_cat_worker_happiness = -0.05
+		pop_cat_worker_political_power = -0.25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
+		}
+	}
+
+	#prerequisites = {
+	#	"tech_planetary_government"
+	#}
+
+	triggered_desc = {
+		text = job_inquisitor_effect_desc
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	upgrades = {
+		building_inquisition_fortress
+	} 
+}
+
+building_inquisition_fortress = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = government
+
+	potential = {
+		owner = { has_civic = civic_pdinquisition }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {	owner = { has_civic = civic_pdinquisition }	}
+	}
+
+	planet_modifier = {
+		job_high_inquisitor_add = 1
+		job_inquisitor_add = 2
+		pop_cat_worker_happiness = -0.10
+		pop_cat_worker_political_power = -0.50
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			volatile_motes = @b2_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
+		}
+	}
+
+	prerequisites = {
+		"tech_colonial_centralization"
+	}
+
+	show_tech_unlock_if = {
+		owner = { has_civic = civic_pdinquisition }
+	}
+
+	triggered_desc = {
+		text = job_inquisitor_effect_desc
+	} 
+}
+
+#Necro Seeder Building
+building_necroseeders_1 = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_necroseeders_2" }
+
+	potential = {
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_pd_necro_worlds
+		}
+		berg_is_city_world = no
+		is_pd_necro_world = no
+		is_pd_arcology = no
+		is_pd_robot_arcology = no
+		is_pd_hive_arcology = no
+		is_artificial = no
+		is_pd_habitat = no
+		is_pd_planetary_megaproject = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		owner = { 
+			OR = {
+				has_civic = civic_memorialist
+				has_civic = civic_death_cult
+				has_civic = civic_death_cult_corporate
+				has_civic = civic_permanent_employment
+				has_civic = civic_reanimated_armies
+				berg_is_necrophage_empire = yes
+				has_ascension_perk = ap_mechromancy
+			}
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			is_pd_necro_world = yes
+			berg_is_city_world = yes
+			is_pd_arcology = yes
+			is_pd_robot_arcology = yes
+			is_pd_hive_arcology = yes
+			is_artificial = yes
+			is_pd_habitat = yes
+			is_pd_planetary_megaproject = yes
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_ascension_perk = ap_pd_necro_worlds	}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			exotic_gases = @b2_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		pop_government_ethic_attraction = 0.05
+	}
+}
+building_necroseeders_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_necroseeders_3" }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			exotic_gases = @b3_rare_upkeep
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			berg_is_city_world = yes
+			is_pd_necro_world = yes
+			is_pd_arcology = yes
+			is_pd_robot_arcology = yes
+			is_pd_hive_arcology = yes
+			is_artificial = yes
+			is_pd_habitat = yes
+			is_pd_planetary_megaproject = yes
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_ascension_perk = ap_pd_necro_worlds	}
+			}
+		}
+	}
+
+	allow = {
+		is_pd_necro_world = no
+		owner = { 
+			OR = {
+				has_civic = civic_memorialist
+				has_civic = civic_death_cult
+				has_civic = civic_death_cult_corporate
+				has_civic = civic_permanent_employment
+				has_civic = civic_reanimated_armies
+				berg_is_necrophage_empire = yes
+				has_ascension_perk = ap_mechromancy
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.05
+		pop_government_ethic_attraction = 0.1
+	}
+}
+building_necroseeders_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = government
+	can_be_disabled = no
+
+	destroy_trigger = {
+		OR = {
+			is_pd_necro_world = yes
+			berg_is_city_world = yes
+			is_pd_arcology = yes
+			is_pd_robot_arcology = yes
+			is_pd_hive_arcology = yes
+			is_artificial = yes
+			is_pd_habitat = yes
+			is_pd_planetary_megaproject = yes
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_ascension_perk = ap_pd_necro_worlds	}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 1500
+			exotic_gases = @b4_rare_cost
+		}
+	}
+
+	allow = {
+		is_pd_necro_world = no
+		owner = { 
+			OR = {
+				has_civic = civic_memorialist
+				has_civic = civic_death_cult
+				has_civic = civic_death_cult_corporate
+				has_civic = civic_permanent_employment
+				has_civic = civic_reanimated_armies
+				berg_is_necrophage_empire = yes
+				has_ascension_perk = ap_mechromancy
+			}
+		}
+	}
+
+	triggered_desc = {
+		text = building_necroseeders_3_effect_desc
+	}
+}

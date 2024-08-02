@@ -8,9 +8,6 @@ triggered_planet_modifier = {
 		has_ringworld_output_boost = yes
 	}
 	planet_administrators_unity_produces_add = 1
-	planet_managers_unity_produces_add = 1
-	planet_priests_unity_produces_add = 1
-	planet_telepaths_unity_produces_add = 1
 }
 
 triggered_planet_modifier = {

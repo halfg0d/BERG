@@ -11,6 +11,34 @@ triggered_planet_modifier = {
 		job_healthcare_add = @berg_amenity_clinic_ecc_job_t$tier$
 	}
 }
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_technology = tech_gene_tailoring
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
+		}
+	}
+	modifier = {
+		auto_mod_monthly_add = @berg_amenity_clinic_auto_mod_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_overtuned
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
+		}
+	}
+	modifier = {
+		auto_mod_monthly_add = @berg_amenity_clinic_auto_mod_t$tier$
+	}
+}
 #OSA
 triggered_planet_modifier = {
 	potential = {

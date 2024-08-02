@@ -87,19 +87,18 @@ triggered_planet_modifier = {
 		job_bugged_templar_add = @berg_unity_death_temple_bug_templar_t$tier$
 	}
 }
-triggered_planet_modifier = {
-	potential = {
-		berg_has_bug_mod = yes
-		exists = owner
-		owner = {
-			is_bugged_governmental_spiritualist = yes
-		}
-	}
-	modifier = {
-		job_high_priest_add = @berg_unity_death_temple_bug_high_priest_t$tier$
-	}
+inline_script = {
+	script = berg_jobs_group/high_priest_add
+	MULT = 1
+	AMOUNT = @berg_unity_death_temple_bug_high_priest_t$tier$
+	DESC = with
+	TRIGGER = "
+	berg_has_bug_mod = yes
+	exists = owner
+	owner = {
+		is_bugged_governmental_spiritualist = yes
+	}"
 }
-
 triggered_desc = {
 	trigger = {
 		berg_has_bug_mod = yes
@@ -109,17 +108,6 @@ triggered_desc = {
 		}
 	}
 	text = job_bugged_templar_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		berg_has_bug_mod = yes
-		exists = owner
-		owner = {
-			is_bugged_governmental_spiritualist = yes
-		}
-		check_variable = { which = @berg_unity_death_temple_bug_high_priest_t$tier$ value > 0}
-	}
-	text = job_high_priest_effect_desc
 }
 
 triggered_desc = {

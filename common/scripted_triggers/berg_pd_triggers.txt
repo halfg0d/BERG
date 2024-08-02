@@ -1,0 +1,51 @@
+berg_pd_faculty_relic_planet = {
+	berg_has_planetary_diversity_mod = yes
+	OR = {
+		is_planet_class = pc_nuked_relic
+		is_planet_class = pc_milarc_relic
+		is_planet_class = pc_pd_scrapyard
+	}
+}
+berg_pd_resort_habitat = {
+	berg_has_pd_habitats_mod = yes
+	has_modifier = resort_colony_pd_hab
+}
+
+berg_pd_is_crucible = {
+	berg_has_pd_unique_worlds_mod = yes
+	is_pd_crucible = yes
+}
+berg_pd_gaiaseeders_planet = {
+	berg_has_planetary_diversity_mod = yes
+	OR = {
+		is_planet_class = pc_nuked_relic
+		is_pd_gaia = yes
+		is_pd_hive_world = yes
+		is_pd_machine = yes
+		is_pd_aquatics = yes
+		is_artificial = yes
+		is_pd_habitat = yes
+		is_pd_unique = yes
+		is_pd_arcology = yes
+		is_pd_shroud_world = yes
+	}
+}
+berg_pd_gaiaseeders_destroy = {
+	berg_has_planetary_diversity_mod = yes
+	OR = {
+		is_pd_gaia = yes
+		berg_is_city_world = yes
+		is_pd_hive_world = yes
+		is_pd_machine = yes
+		is_planet_class = pc_relic
+		is_planet_class = pc_nuked_relic
+	}
+}
+
+berg_pd_is_military_hab = {
+	berg_has_pd_habitats_mod = yes
+	OR = {
+		has_modifier = military_pd_habitat_reg
+		has_modifier = military_pd_habitat_reg_asteroid
+	}
+}

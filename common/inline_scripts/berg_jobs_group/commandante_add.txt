@@ -1,0 +1,12 @@
+
+#Commandante
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = commandante
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	berg_has_ecc_mod = yes
+	$TRIGGER$
+	"
+}

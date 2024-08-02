@@ -1,0 +1,180 @@
+# Irony this is a placeholder file please ignore it
+# Here are stored buildings which are copies existed buildings,
+# they are created due to unsolvable compatibility where copie and changing are much easier
+
+# e.g where I do this: different icon, different prerequites
+building_ancient_control_center_dummy = {
+	base_buildtime = @b3_time
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	position_priority = 0
+
+	icon = building_maintenance_depot
+
+	category = government
+
+	potential = {
+		berg_has_acot_mod = no
+		exists = owner
+		owner = { is_fallen_empire_machine = yes }
+	}
+	destroy_trigger = {
+		berg_has_acot_mod = yes
+	}
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital
+		building_ancient_palace
+		building_ancient_control_center
+	}
+
+	planet_modifier = {
+		planet_housing_add = 12
+		planet_amenities_add = 150
+		job_fe_maintenance_bot_add = 4
+		job_fe_guardian_bot_add = 5
+		planet_max_buildings_add = 11
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	upgrades = {
+	}
+}
+building_ancient_hive_capital_dummy = {
+	base_buildtime = @b3_time
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	position_priority = 0
+
+	icon = building_hive_major_capital
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_fallen_empire = yes
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital
+		building_ancient_palace
+		building_ancient_control_center
+		building_ancient_hive_capital
+	}
+	destroy_trigger = {
+		berg_has_acot_mod = yes
+	}
+	planet_modifier = {
+		planet_housing_add = 12
+		planet_amenities_add = 150
+		job_synapse_drone_add = 5
+		job_maintenance_drone_add = 7
+		job_patrol_drone_add = 4
+		planet_max_buildings_add = 11
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	upgrades = {
+	}
+}
+
+building_ancient_palace_dummy = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = yes
+	position_priority = 0
+
+	icon = building_palace
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_fallen_empire = yes
+			is_hive_empire = no
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital
+		building_ancient_control_center
+		building_fallen_ancient_palace # ZOFE
+		building_ancient_palace
+	}
+	destroy_trigger = {
+		OR = {
+			berg_has_zofe_sandbox_mod = yes
+			berg_has_acot_mod = yes
+		}
+	}
+	planet_modifier = {
+		planet_housing_add = 12
+		planet_amenities_add = 150
+		planet_max_buildings_add = 11
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = no }
+		}
+		modifier = {
+			job_fe_overseer_add = 2
+			job_fe_protector_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_sky_cardinal_add = 2
+			job_fe_protector_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	upgrades = {
+	}
+}

@@ -1,0 +1,379 @@
+#########################
+## Limited by deposits ##
+#########################
+@avb_d4_time = 960
+building_mote_harvesters = {
+	base_buildtime = @b1_time
+	icon = building_mote_harvesting_traps
+
+	is_capped_by_modifier = yes
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_mote_harvesters = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_mote_harvesters_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/mote_harvesters
+		tier = 1
+	}
+
+	prerequisites = {
+		"tech_mine_volatile_motes"
+	}
+	upgrades = {
+		"building_avb_mote_harvesters_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = mote_harvesters
+		TRIGGER = " "
+	}
+}
+building_avb_mote_harvesters_2 = {
+	base_buildtime = @avb_d4_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_mote_harvesters = yes
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_mote_harvesters_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/mote_harvesters
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_mote_harvesters_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mote_harvesters_2
+		TRIGGER = " "
+	}
+}
+building_gas_extractors = {
+	base_buildtime = @b1_time
+	icon = building_gas_extractors
+
+	is_capped_by_modifier = yes
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_gas_extractors = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_gas_extractors_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/gas_extractors
+		tier = 1
+	}
+
+	prerequisites = {
+		"tech_mine_exotic_gases"
+	}
+	upgrades = {
+		"building_avb_gas_extractors_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = gas_extractors
+		TRIGGER = " "
+	}
+}
+building_avb_gas_extractors_2 = {
+	base_buildtime = @avb_d4_time
+	icon = building_gas_extractors
+	can_build = no
+
+	category = resource
+
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_gas_extractors = yes
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_gas_extractors_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/gas_extractors
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_gas_extractors_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_gas_extractors_2
+		TRIGGER = " "
+	}
+}
+
+building_crystal_mines = {
+	base_buildtime = @b1_time
+
+	is_capped_by_modifier = yes
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_crystal_mines = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_crystal_mines_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/crystal_mines
+		tier = 1
+	}
+
+	prerequisites = {
+		"tech_mine_rare_crystals"
+	}
+	upgrades = {
+		"building_avb_crystal_mines_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = crystal_mines
+		TRIGGER = " "
+	}
+}
+
+building_avb_crystal_mines_2 = {
+	base_buildtime = @avb_d4_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_crystal_mines = yes
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_crystal_mines_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/crystal_mines
+		tier = 2
+	}	
+	
+	prerequisites = {
+		"tech_avb_crystal_mines_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_crystal_mines_2
+		TRIGGER = " "
+	}
+}
+
+building_betharian_power_plant = {
+	base_buildtime = @b1_time
+
+	is_capped_by_modifier = yes
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_betharian = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_betharian_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/betharian
+		tier = 1
+	}
+	prerequisites = {
+		"tech_mine_betharian"
+	}
+	upgrades = {
+		"building_avb_betharian_power_plant_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = betharian_power_plant
+		TRIGGER = " "
+	}
+}
+building_avb_betharian_power_plant_2 = {
+	base_buildtime = @avb_d4_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_betharian = yes
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_betharian_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/betharian
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_betharian_power_plant_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_betharian_power_plant_2
+		TRIGGER = " "
+	}
+}
+
+building_xeno_zoo = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = amenity
+
+	potential = {
+		berg_st_can_build_xeno_zoo = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_regular_empire = no
+				}
+			}
+			planet = {
+				NOR = {
+					has_deposit = d_alien_pets_deposit
+					AND = {
+						exists = owner
+						owner = { has_policy_flag = pre_sapients_protect }
+						any_owned_pop = {
+							is_sapient = no
+						}
+					}
+					any_owned_pop = {
+						is_livestock = yes
+					}
+				}
+			}			
+		}
+	}
+	inline_script = {
+		script = vanilla/deposit/berg_zoo_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/xeno_zoo
+		tier = 1
+	}
+	prerequisites = {
+		"tech_alien_life_studies"
+	}
+	upgrades = {
+		"building_avb_xeno_zoo_2" #AVB
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = xeno_zoo
+		TRIGGER = " "
+	}
+}
+building_avb_xeno_zoo_2 = {
+	base_buildtime = @avb_d4_time
+	can_build = no
+
+	category = amenity
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_xeno_zoo = yes
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_regular_empire = no
+				}
+			}
+			planet = {
+				NOR = {
+					has_deposit = d_alien_pets_deposit
+					AND = {
+						exists = owner
+						owner = { has_policy_flag = pre_sapients_protect }
+						any_owned_pop = {
+							is_sapient = no
+						}
+					}
+					any_owned_pop = {
+						is_livestock = yes
+					}
+				}
+			}
+		}
+	}
+	
+	
+	inline_script = {
+		script = vanilla/deposit/berg_zoo_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/xeno_zoo
+		tier = 2
+	}
+	prerequisites = {
+		"tech_avb_xeno_zoo_2"
+	}
+	
+	triggered_desc = {
+		text = job_xeno_zoo_keeper_effect_desc
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_xeno_zoo_2
+		TRIGGER = " "
+	}
+}

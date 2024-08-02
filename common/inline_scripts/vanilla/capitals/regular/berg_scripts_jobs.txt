@@ -2,29 +2,6 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			NOR = {
-				is_gestalt = yes
-				is_megacorp = yes
-				berg_has_any_spiritualist_civic = yes
-				berg_has_any_noble_civic = yes
-				berg_has_any_technocracy_civic = yes
-				berg_has_any_merchant_civic = yes
-				berg_ecc_military_dictatorship_civic = yes
-				berg_ecc_supervisor_civic = yes
-				is_bugged_governmental_spiritualist = yes
-			}
-		}
-		$trigger$
-	}
-	modifier = {
-		job_politician_add = @berg_capital_regular_capital_politician1_t$tier$
-	}
-}
-m
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
 			is_megacorp = yes
 			is_worker_coop_empire = no
 		}
@@ -98,7 +75,7 @@ triggered_planet_modifier = {
 		}
 		$trigger$
 	}
-	modifier = {=
+	modifier = {
 		job_politician_add = @berg_capital_regular_capital_politician2_t$tier$
 	}
 }

@@ -1,29 +1,52 @@
 planet_modifier = {
 	job_roboticist_add = @berg_pop_assembly_robot_plant_job_t$tier$
 }
-triggered_desc = {
-	trigger = {
-		OR = {
-			NOT = { exists = owner }
-			AND = {
-				exists = owner
-				owner = {
-					NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-				}
-			}
-		}
 
-	}
-	text = job_roboticist_effect_desc
-}
-triggered_desc = {
-	trigger = {
+triggered_planet_modifier = {
+	potential = {
 		exists = owner
 		owner = {
-			has_policy_flag = roboticist_output_build_cyborgs
+			OR = {
+				has_origin = origin_mechanists
+				is_individual_machine = yes
+				has_country_flag = synthetic_empire
+			}
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
 		}
 	}
-	text = job_roboticist_cyborg_effect_desc
+	modifier = {
+		auto_mod_monthly_add = @berg_pop_assembly_robot_plant_auto_mod_t$tier$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = synth_unscheduled_updates
+		}
+	}
+	modifier = {
+		planet_pop_assembly_mult = 0.1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = synth_safe_updates
+		}
+	}
+	modifier = {
+		planet_pop_assembly_mult = -0.1
+		planet_stability_add = 5
+	}
+}
+triggered_desc = {
+	text = job_roboticist_effect_desc
 }
 triggered_desc = {
 	trigger = {
@@ -33,9 +56,6 @@ triggered_desc = {
 				exists = assembling_species
 				assembling_species = { is_organic_species = yes }
 				exists = owner
-				owner = {
-					NOT = { has_policy_flag = roboticist_output_build_cyborgs }
-				}
 			}
 		}
 	}

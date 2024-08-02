@@ -1,0 +1,1243 @@
+#############
+# Resource buildings
+#############
+
+building_hydroponics_farm = {
+	base_buildtime = @b1_time
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_hydroponics = yes
+	}
+
+	allow = {
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			planet = {
+				berg_is_habitat = no
+				free_building_slots = 0
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value > 100
+					}
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_hydroponics_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/hydroponics
+		tier = 1
+	}
+	prerequisites = {
+		"tech_hydroponics"
+	}
+	upgrades = {
+		"building_eutab_hydroponics_tower" # EUTAB
+		"building_hydroponics_station" #OSA
+		"building_avb_hydroponics_farm_2" #AVB
+		"PR_building_RES_food_farm_2" #PR
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = hydroponics_farm
+		TRIGGER = " "
+	}
+}
+building_avb_hydroponics_farm_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_hydroponics = yes
+	}
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+		OR = {
+			owner = { is_ai = no }
+			AND = {
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value < 30
+					}
+				}
+				free_district_slots = 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			planet = {
+				NOT = { is_planet_class = pc_habitat }
+				free_building_slots = 0
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value > 100
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/resource/berg_hydroponics_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/hydroponics
+		tier = 2
+	}
+	prerequisites = {
+		"tech_avb_hydroponics_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hydroponics_farm_2
+		TRIGGER = " "
+	}
+}
+building_avb_hydroponics_farm_3 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_hydroponics = yes
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+		OR = {
+			owner = { is_ai = no }
+			AND = {
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value < 30
+					}
+				}
+				free_district_slots = 0
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			planet = {
+				NOT = { is_planet_class = pc_habitat }
+				free_building_slots = 0
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value > 100
+					}
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_hydroponics_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/hydroponics
+		tier = 3
+	}
+
+	prerequisites = {
+		"tech_avb_hydroponics_3"
+	}
+	ai_resource_production = {
+		food = 3
+		trigger = {
+			always = yes
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_hydroponics_farm_3
+		TRIGGER = " "
+	}
+}
+
+building_food_processing_facility = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+
+	potential = {
+		berg_st_can_build_food_processing = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+	convert_to = {
+		PR_building_RES_food_boost_1
+	}
+	inline_script = {
+		script = vanilla/resource/berg_food_processing_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/food_processing
+		tier = 1
+	}
+
+	upgrades = {
+		building_food_processing_center
+	}
+
+	prerequisites = {
+		"tech_food_processing_1"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = food_processing_facility
+		TRIGGER = " "
+	}
+}
+
+building_food_processing_center = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		exists = owner
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		berg_st_can_build_food_processing = yes
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				OR = {
+					owner = {
+						is_ai = yes
+						country_uses_food = no
+					}
+					AND = {
+						owner = {
+							is_ai = yes
+						}
+						has_any_farming_district_or_buildings = no
+					}
+				}
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+		}
+	}
+	convert_to = {
+		PR_building_RES_food_boost_2
+	}
+	inline_script = {
+		script = vanilla/resource/berg_food_processing_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/food_processing
+		tier = 2
+	}
+	prerequisites = {
+		"tech_food_processing_2"
+	}
+	upgrades = {
+		"building_avb_food_processing_3" #AVB
+		"building_roci_nourishment_center_mod" #ROCI
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = food_processing_center
+		TRIGGER = " "
+	}
+}
+building_avb_food_processing_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	category = resource
+	
+	allow = {
+		exists = owner
+		has_fully_upgraded_capital = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_food_processing = yes
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				OR = {
+					owner = {
+						is_ai = yes
+						country_uses_food = no
+					}
+					AND = {
+						owner = {
+							is_ai = yes
+						}
+						has_any_farming_district_or_buildings = no
+					}
+				}
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_food_processing_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/food_processing
+		tier = 3
+	}
+	upgrades = {
+		building_avb_food_processing_4
+	}
+	
+	prerequisites = {
+		"tech_avb_food_processing_3"
+	}	
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_food_processing_3
+		TRIGGER = " "
+	}
+}
+
+building_avb_food_processing_4 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+	category = resource
+	allow = {
+		exists = owner
+		has_upgraded_capital_4 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_food_processing = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				OR = {
+					owner = {
+						is_ai = yes
+						country_uses_food = no
+					}
+					AND = {
+						owner = {
+							is_ai = yes
+						}
+						has_any_farming_district_or_buildings = no
+					}
+				}
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+		}
+	}
+
+	inline_script = {
+		script = vanilla/resource/berg_food_processing_script
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla/food_processing
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_food_processing_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_food_processing_4
+		TRIGGER = " "
+	}
+}
+
+building_baol_organic_plant = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = resource
+
+	potential = {
+		berg_st_can_build_baol_plant = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+		}
+	}
+	convert_to = {
+		PR_building_RES_food_artifact_1
+	}
+	inline_script = {
+		script = vanilla/resource/berg_baol_organic_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/baol_plant
+		tier = 1
+	}
+	prerequisites = {
+		"tech_secrets_baol"
+	}
+	upgrades = {
+		"building_avb_baol_organic_plant_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = baol_organic_plant
+		TRIGGER = " "
+	}
+}
+building_avb_baol_organic_plant_2 = {
+	base_buildtime = @avb_b4_time
+	category = resource
+	can_build = no
+
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_baol_plant = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_baol_organic_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/baol_plant
+		tier = 2
+	}
+	prerequisites = {
+		"tech_avb_baol_organic_plant_2"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_baol_organic_plant_2
+		TRIGGER = " "
+	}
+}
+
+building_mineral_purification_plant = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_mining_district = no
+			}
+		}
+	}
+	convert_to = {
+		PR_building_RES_minerals_boost_1
+	}
+
+	potential = {
+		berg_st_can_build_mineral_purification = yes
+	}
+	inline_script = {
+		script = vanilla/resource/berg_mineral_purification_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/mineral_purification
+		tier = 1
+	}
+
+	prerequisites = {
+		tech_mineral_purification_1
+	}
+
+	upgrades = {
+		building_mineral_purification_hub
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = mineral_purification_plant
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = scrap_processing_plant
+		TRIGGER = "berg_is_shattered_ring = yes"
+	}
+}
+
+building_mineral_purification_hub = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+		NOR = {
+			berg_is_resort_world = yes
+			
+		}
+	}
+	potential = {
+		berg_st_can_build_mineral_purification = yes
+	}
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_mining_district = no
+			}
+		}
+	}
+	convert_to = {
+		PR_building_RES_minerals_boost_2
+	}
+	inline_script = {
+		script = vanilla/resource/berg_mineral_purification_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/mineral_purification
+		tier = 2
+	}
+
+	prerequisites = {
+		tech_mineral_purification_2
+	}
+	upgrades = {
+		"building_avb_mineral_purification_3" #AVB
+		"building_roci_dimensional_fabricator_mod" #ROCI
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = mineral_purification_hub
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = scrap_processing_hub
+		TRIGGER = "berg_is_shattered_ring = yes"
+	}
+}
+building_avb_mineral_purification_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_fully_upgraded_capital = yes
+		NOR = {
+			berg_is_resort_world = yes
+		}
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_mineral_purification = yes
+	}
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_mining_district = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_mineral_purification_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/mineral_purification
+		tier = 3
+	}
+	upgrades = {
+		building_avb_mineral_purification_4
+	}
+	
+	prerequisites = {
+		"tech_avb_mineral_purification_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_3
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_3_scrap
+		TRIGGER = "berg_is_shattered_ring = yes"
+	}
+}
+
+building_avb_mineral_purification_4 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+	category = resource
+	allow = {
+		has_upgraded_capital_4 = yes
+		NOR = {
+			berg_is_resort_world = yes
+			
+		}
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_mineral_purification = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_mining_district = no
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/resource/berg_mineral_purification_script
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla/mineral_purification
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_mineral_purification_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_4
+		TRIGGER = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_mineral_purification_4_scrap
+		TRIGGER = "berg_is_shattered_ring = yes"
+	}
+}
+
+building_energy_grid = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+
+	destroy_trigger = {
+		OR = {
+			OR = {
+				berg_is_resort_world = yes
+				
+			}
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
+			}
+			berg_pr_cannot_vanilla = yes
+		}
+	}
+	convert_to = {
+		PR_building_RES_energy_boost_1
+	}
+
+	potential = {
+		berg_st_can_build_energy_grid = yes
+	}
+	triggered_desc = {
+		trigger = {
+			berg_has_ecc_mod = yes
+		}
+		text = building_energy_grid_effect_desc
+	}
+	inline_script = {
+		script = vanilla/resource/berg_energy_grid_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/energy_grid
+		tier = 1
+	}
+
+	prerequisites = {
+		tech_power_hub_1
+	}
+
+	upgrades = {
+		building_energy_nexus
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = energy_grid
+		TRIGGER = " "
+	}
+}
+
+building_energy_nexus = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		berg_st_can_build_energy_grid = yes
+	}
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
+			}
+			berg_pr_cannot_vanilla = yes
+		}
+	}
+	convert_to = {
+		PR_building_RES_energy_boost_2
+	}
+	inline_script = {
+		script = vanilla/resource/berg_energy_grid_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/energy_grid
+		tier = 2
+	}
+
+	prerequisites = {
+		tech_power_hub_2
+	}
+	upgrades = {
+		"building_avb_energy_grid_3" #AVB
+		"building_eludium_plant"  #PD?
+		"building_roci_class_4_singularity_mod" #ROCI
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = energy_nexus
+		TRIGGER = " "
+	}
+}
+building_avb_energy_grid_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	category = resource
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
+			}
+		}
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_energy_grid = yes
+	}
+	inline_script = {
+		script = vanilla/resource/berg_energy_grid_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/energy_grid
+		tier = 3
+	}
+	upgrades = {
+		building_avb_energy_grid_4
+	}
+	
+	prerequisites = {
+		"tech_avb_power_hub_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_energy_grid_3
+		TRIGGER = " "
+	}
+}
+
+building_avb_energy_grid_4 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+	category = resource
+	
+	allow = {
+		has_upgraded_capital_5 = yes
+	}
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_energy_grid = yes
+	}
+
+	destroy_trigger = {
+		OR = {
+			berg_is_resort_world = yes
+			
+			AND = {
+				exists = owner
+				owner = {
+					is_ai = yes
+				}
+				has_any_generator_district_or_building = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_energy_grid_script
+		tier = 4
+	}
+	inline_script = {
+		script = building_resources/vanilla/energy_grid
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_power_hub_4"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_energy_grid_4
+		TRIGGER = " "
+	}
+}
+
+building_resource_silo = {
+	base_buildtime = 180
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_resource_silo = yes
+	}
+
+	allow = {
+		exists = owner
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				AND = {
+					berg_st_has_any_silo = no
+					OR = {
+						owner = {
+							is_machine_empire = yes
+							has_active_tradition = tr_domination_modular_depot
+						}
+						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+						owner = {
+							has_ascension_perk = ap_arcology_project
+							NOT = { has_technology = tech_mega_engineering }
+						}
+					}
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_silo_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/silo
+		tier = 1
+	}
+	prerequisites = {
+		"tech_basic_industry"
+	}
+	upgrades = {
+		"building_avb_resource_silo_2" #AVB
+		"PR_building_RES_soil_2" #PR
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = resource_silo
+		TRIGGER = " "
+	}
+}
+building_avb_resource_silo_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_resource_silo = yes
+	}
+	
+	allow = {
+		exists = owner
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				AND = {
+					berg_st_has_any_silo = no
+					OR = {
+						owner = {
+							is_machine_empire = yes
+							has_active_tradition = tr_domination_modular_depot
+						}
+						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+						owner = {
+							has_ascension_perk = ap_arcology_project
+							NOT = { has_technology = tech_mega_engineering }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/resource/berg_silo_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/silo
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_mining_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_resource_silo_2
+		TRIGGER = " "
+	}
+}
+building_avb_resource_silo_3 = {
+	base_buildtime = @avb_b3_time
+	can_build = no
+
+	category = resource
+	
+	potential = {
+		berg_has_avb_mod = yes
+		avb_hg_changes = yes
+		berg_st_can_build_resource_silo = yes
+	}
+	
+	allow = {
+		exists = owner
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				AND = {
+					berg_st_has_any_silo = no
+					OR = {
+						owner = {
+							is_machine_empire = yes
+							has_active_tradition = tr_domination_modular_depot
+						}
+						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
+						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+						owner = {
+							has_ascension_perk = ap_arcology_project
+							NOT = { has_technology = tech_mega_engineering }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/resource/berg_silo_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/silo
+		tier = 3
+	}
+	prerequisites = {
+		tech_avb_mining_5
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_resource_silo_3
+		TRIGGER = " "
+	}
+}
+
+
+building_bio_reactor = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = resource
+
+	potential = {
+		berg_st_can_build_bioreactor = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+	convert_to = {
+		PR_building_RES_reactor_1
+	}
+	inline_script = {
+		script = building_resources/vanilla/bioreactor
+		tier = 1
+	}
+	inline_script = {
+		script = vanilla/resource/berg_bioreactor_script
+		tier = 1
+	}
+
+	upgrades = {
+		building_bio_reactor_2
+	}
+
+	prerequisites = {
+		"tech_bio_reactor"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = bio_reactor
+		TRIGGER = " "
+	}
+}
+
+building_bio_reactor_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		berg_st_can_build_bioreactor = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			berg_pr_cannot_vanilla = yes
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+	convert_to = {
+		PR_building_RES_reactor_2
+	}
+	inline_script = {
+		script = building_resources/vanilla/bioreactor
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/resource/berg_bioreactor_script
+		tier = 2
+	}
+	upgrades = {
+		building_avb_bio_reactor_3
+	}
+	prerequisites = {
+		tech_bio_reactor_2
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bio_reactor_2
+		TRIGGER = " "
+	}
+}
+
+building_avb_bio_reactor_3 = {
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_bioreactor = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			
+			AND = {
+				owner = {
+					is_ai = yes
+				}
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/bioreactor
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/resource/berg_bioreactor_script
+		tier = 3
+	}
+
+	prerequisites = {
+		"tech_avb_bio_reactor_3"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_bio_reactor_3
+		TRIGGER = " "
+	}
+}

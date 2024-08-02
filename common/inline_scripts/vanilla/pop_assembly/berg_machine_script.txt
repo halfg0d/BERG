@@ -1,38 +1,54 @@
-planet_modifier = {
-	job_replicator_add = @berg_pop_assembly_machine_plant_job_t$tier$
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+		}
+	}
+	job_replicator_add = @berg_pop_assembly_machine_plant_job1_t$tier$
 }
 triggered_planet_modifier = {
 	potential = {
-		berg_has_osa_mod = yes
 		exists = owner
-		owner = { has_active_tradition = tr_synthetics_finish_machine }
+		owner = {
+			is_individual_machine = yes
+		}
 	}
-	modifier = {
-		job_replicator_add = 1
-	}
+	job_roboticist_add = @berg_pop_assembly_machine_plant_job2_t$tier$
 }
-triggered_desc = {
-	text = job_replicator_effect_desc
-}
-triggered_planet_modifier = { # Bug Branch
+triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			berg_has_bug_mod = yes
-			is_bugged_happy_gestalt = yes
+			OR = {
+				is_machine_empire = yes
+				is_individual_machine = yes
+			}
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
 		}
 	}
 	modifier = {
-		job_artisan_drone_add = 1
+		auto_mod_monthly_add = @berg_pop_assembly_machine_plant_auto_mod_t$tier$
 	}
 }
-triggered_desc = { # Bug Branch
+triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
-			berg_has_bug_mod = yes
-			is_bugged_happy_gestalt = yes
+			is_machine_empire = yes
 		}
 	}
-	text = job_artisan_drone_effect_desc
+	text = job_replicator_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_individual_machine = yes
+		}
+	}
+	text = job_roboticist_effect_desc
 }

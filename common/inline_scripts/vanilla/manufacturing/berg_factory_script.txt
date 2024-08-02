@@ -38,7 +38,7 @@ inline_script = {
 #}
 #OST
 inline_script = {
-	scrript = tradition_script/ost_metallurgy
+	script = tradition_script/ost_metallurgy
 	isForge = no
 	job_add = @berg_manufactury_factory_ost_job_t$tier$
 }

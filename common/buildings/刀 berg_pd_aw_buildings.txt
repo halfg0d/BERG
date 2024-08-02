@@ -1,0 +1,250 @@
+# Holding
+holding_pd_aw_tree_of_life_sapling = {
+	base_buildtime = @b1_time
+	owner_type = subject_holding
+	icon = holding_tree_of_life_sapling
+	base_cap_amount = 1
+
+	category = resource
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			food = 1000
+		}
+	}
+
+	potential = {
+		owner.overlord = { has_origin = origin_pd_aw_tree_of_life }
+		NOR = {
+			owner = {
+				OR = {
+					has_origin = origin_tree_of_life
+					has_origin = origin_pd_aw_tree_of_life
+				}
+				country_uses_food = no
+			}
+		}
+		NOR = {
+			berg_is_city_world = yes
+			berg_is_machine_world = yes
+			berg_is_relic_world = yes
+		}
+		is_artificial = no
+	}
+	destroy_trigger = {
+		OR = {
+			berg_is_city_world = yes
+			berg_is_machine_world = yes
+			berg_is_relic_world = yes
+		}
+	}
+
+	planet_modifier = {
+		monthly_loyalty = 1
+		pop_environment_tolerance = 0.1
+		planet_farmers_food_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_arborist_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_arborist_drone_add = 1
+	}
+}
+# Infesters
+### Planetary Infesters
+building_pd_aw_planet_infester_1 = {
+	base_buildtime = 900
+	base_cap_amount = 1
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_pd_aw_planet_infester_2" }
+
+	potential = {
+		exists = owner
+		owner = {
+			is_country_type = default
+			has_civic = civic_hive_pd_planetary_infesters
+		}
+		habitable_planet_not_urban = yes
+		NOR = {
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_relic_world = yes
+		}
+		is_artificial = no
+	}
+
+	allow = {
+		exists = owner
+		owner = {
+			is_country_type = default
+			has_civic = civic_hive_pd_planetary_infesters
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			habitable_planet_not_urban = no
+			berg_is_hive_world = yes	# No double bonuses if player uses other tools to turn it into a Hive world.
+			berg_is_city_world = yes
+			berg_is_machine_world = yes
+			berg_is_relic_world = yes
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_civic = civic_hive_pd_planetary_infesters }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 2000
+		}
+		upkeep = {
+			energy = 20
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 1
+		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.2
+	}
+
+	on_destroy = {
+		pd_aw_back_to_normal_view_effect = yes
+	}
+
+	is_essential = yes
+}
+
+building_pd_aw_planet_infester_2 = {
+	base_buildtime = 900
+	can_build = no
+	category = government
+	can_be_disabled = no
+	upgrades = { "building_pd_aw_planet_infester_3" }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 2000
+			exotic_gases = 10
+		}
+		upkeep = {
+			energy = 20
+			exotic_gases = 2
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 2
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			habitable_planet_not_urban = no
+			is_planet_class = pc_gaia
+			berg_is_city_world = yes
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_civic = civic_hive_pd_planetary_infesters }
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.4
+	}
+
+	on_destroy = {
+		pd_aw_back_to_normal_view_effect = yes
+	}
+
+	is_essential = yes
+}
+
+building_pd_aw_planet_infester_3 = {
+	base_buildtime = 1800
+	category = government
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	destroy_trigger = {
+		OR = {
+			# NOT = {
+			# 	berg_is_hive_world = yes
+			# }
+			NOT = { exists = owner }
+			owner = {
+				NOT = { has_civic = civic_hive_pd_planetary_infesters }
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	planet_modifier = {
+		planet_jobs_produces_mult = 0.1
+		pop_amenities_usage_mult = -0.2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			energy = 2000
+			exotic_gases = 20
+		}
+		upkeep = {
+			energy = 20
+		}
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
+		}
+	}
+
+	triggered_desc = {
+		text = building_pd_aw_planet_infester_3_effect_desc
+		trigger = {
+			exists = planet
+			planet = {
+				NOT = {
+					berg_is_hive_world = yes
+				}
+			}
+		}
+	}
+
+	on_destroy = {
+		change_pc = pc_arid
+	}
+
+	is_essential = yes
+}

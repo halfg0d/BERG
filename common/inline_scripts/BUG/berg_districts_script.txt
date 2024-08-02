@@ -6,9 +6,9 @@ triggered_planet_modifier = {
 			is_bugged_functional_architecture = yes
 		}
 		NOR = {
-			is_planet_class = pc_habitat
+			berg_is_habitat = yes
 			berg_is_machine_world = yes
-			is_planet_class = pc_hive
+			berg_is_hive_world = yes
 			berg_is_city_world = yes
 		}
 	}

@@ -1,0 +1,25 @@
+#Bath Attendant jobs
+#Swaps between empires type
+
+# Machine
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = bath_attendant_machine
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	owner = { is_machine_empire = yes }
+	"
+}
+# Individual
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = bath_attendant_individual_machine
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	owner = { is_individual_machine = yes }
+	"
+}

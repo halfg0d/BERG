@@ -1,0 +1,439 @@
+#############
+# Rise of Cosmic Industry Buildings
+#############
+building_roci_affluence_center_mod = {
+	base_buildtime = @b4_time
+	can_build = no
+	can_demolish = yes
+	#icon = building_hyper_entertainment_forum
+	
+	potential = {
+		berg_has_roci_mod = yes
+		NOT = { has_global_flag = no_fe_buildings }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = 10
+			rare_crystals = 2
+		}
+	}
+	
+	planet_modifier = {
+		planet_artisans_consumer_goods_produces_add = 6
+		planet_artisans_energy_upkeep_add = 3
+		planet_artisans_minerals_upkeep_add = 6
+	}
+	inline_script = {
+		script = berg_jobs_group/factory_add
+		AMOUNT = @b1_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	#UAP
+	inline_script = {
+		script = UAP/berg_uap_industrialist
+		AMOUNT = @berg_manufactury_factory_uap_industrialist_t$tier$
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_metallurgy
+		isForge = no
+		job_add = @berg_manufactury_factory_ost_job_t$tier$
+	}
+	prerequisites = {
+		"tech_roci_affluence_center"
+	}
+	
+	on_built = {	
+	
+	}
+	
+	upgrades = {
+	}
+}
+
+building_roci_nourishment_center_mod = {
+	base_buildtime = @b4_time
+	can_build = no
+	can_demolish = yes
+	#icon = building_food_processing_center
+	
+	potential = {
+		berg_has_roci_mod = yes
+		NOT = { has_global_flag = no_fe_buildings }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = 10
+			volatile_motes = 2
+		}
+	}
+	
+	planet_modifier = {
+		planet_farmers_food_produces_add = 6
+		planet_farmers_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = berg_jobs_group/farmer_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	# BUG
+	inline_script = {
+		script = BUG/berg_districts_script
+		tier = 3
+		district = farming
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_perseverance
+		osa_job = @berg_osa_f$tier$_job
+		farmer_subtract = @berg_osa_f$tier$_job
+		canAngler = yes
+		angler_subtract = @berg_osa_f$tier$_job
+	}
+	inline_script = {
+		script = tradition_script/ost_omni_drone
+		tradition = perseverance
+		job_add = @berg_osa_f$tier$_job
+		job_subtract = @berg_osa_f$tier$_job
+		drone = agri_drone
+		trigger = ""
+	}
+	prerequisites = {
+		"tech_roci_nourishment_center"
+	}
+		
+	upgrades = {
+	}
+}
+building_roci_class_4_singularity_mod = {
+	base_buildtime = @b4_time
+	can_build = no
+	can_demolish = yes
+	#icon = building_class_4_singularity
+	
+	potential = {
+		berg_has_roci_mod = yes
+		NOT = { has_global_flag = no_fe_buildings }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			exotic_gases = 2
+		}
+	}
+	
+	planet_modifier = {
+		planet_technician_energy_produces_add = 4
+	}
+	inline_script = {
+		script = berg_jobs_group/technician_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_robot_empire = yes
+			}
+			NOR = {
+				berg_is_habitat = yes
+				berg_is_machine_world = yes
+				berg_is_hive_world = yes
+				berg_is_city_world = yes
+			}
+		}
+		modifier = {
+			district_generator_max = 6
+		}
+	}
+	inline_script = {
+		script = BUG/berg_districts_script
+		tier = 3
+		district = generator
+	}
+	#ECC
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_ecc_mod = yes
+			exists = owner
+			owner = { has_policy_flag = economic_stance_market }
+		}
+		modifier = {
+			trade_value_add = @berg_resource_energy_grid_ecc_trade_t3
+			planet_jobs_energy_produces_mult = @berg_resource_energy_grid_ecc_mult_t3
+		}
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_radiance
+		osa_job = 1
+		job_subtract = 1
+		technician = technician
+		trigger = ""
+	}
+	inline_script = {
+		script = tradition_script/ost_omni_drone
+		tradition = radiance
+		job_add = 1
+		job_subtract = 1
+		drone = technician_drone
+		trigger = ""
+	}
+	upgrades = {
+	}
+
+	prerequisites = {
+		"tech_roci_singularity_power"
+	}
+}
+building_roci_nano_forge_mod = {
+	base_buildtime = @b4_time
+	can_build = no
+	can_demolish = yes
+	#icon = building_nano_forge
+	
+	potential = {
+		berg_has_roci_mod = yes
+		NOT = { has_global_flag = no_fe_buildings }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = 10
+			volatile_motes = 2
+		}
+	}
+	
+	planet_modifier = {
+		planet_metallurgists_alloys_produces_add = 3
+		planet_metallurgists_energy_upkeep_add = 3
+	}
+	inline_script = {
+		script = berg_jobs_group/foundry_add
+		AMOUNT = @b1_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = no
+			}
+		}
+		modifier = {
+			planet_metallurgists_minerals_upkeep_add = 6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = yes
+			}
+		}
+		modifier = {
+			planet_metallurgists_food_upkeep_add = 12
+		}
+	}
+	#UAP
+	inline_script = {
+		script = UAP/berg_uap_industrialist
+		AMOUNT = @berg_manufactury_foundry_uap_industrialist_t4
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_metallurgy
+		isForge = yes
+		job_add = @berg_manufactury_foundry_ost_jobs_t4
+	}
+	upgrades = {
+	}
+
+	prerequisites = {
+		"tech_roci_auto_forge"
+	}
+}
+building_roci_dimensional_fabricator_mod = {
+	base_buildtime = @b4_time
+	can_build = no
+	can_demolish = yes
+	#icon = building_nanite_transmuter
+	
+	potential = {
+		berg_has_roci_mod = yes
+		NOT = { has_global_flag = no_fe_buildings }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = 10
+			volatile_motes = 2
+		}
+	}
+	
+	planet_modifier = {
+		planet_miners_energy_upkeep_add = 2
+		
+		planet_chemists_volatile_motes_produces_add = 2
+		planet_chemists_energy_upkeep_add = 4
+		
+		planet_refiners_exotic_gases_produces_add = 2
+		planet_refiners_energy_upkeep_add = 4
+		
+		planet_translucers_rare_crystals_produces_add = 2
+		planet_translucers_energy_upkeep_add = 4
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = no }
+		}
+		modifier = {
+			planet_chemists_minerals_upkeep_add = 10
+			planet_refiners_minerals_upkeep_add = 10
+			planet_translucers_minerals_upkeep_add = 10
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = yes }
+		}
+		modifier = {
+			planet_chemists_food_upkeep_add = 20
+			planet_refiners_food_upkeep_add = 20
+			planet_translucers_food_upkeep_add = 20
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_is_shattered_ring = no
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			berg_is_shattered_ring = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 2
+			planet_miners_alloys_produces_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_robot_empire = yes
+			}
+			NOR = {
+				berg_is_habitat = yes
+				berg_is_machine_world = yes
+				berg_is_hive_world = yes
+				berg_is_city_world = yes
+			}
+		}
+		modifier = {
+			district_mining_max = 6
+		}
+	}
+	inline_script = {
+		script = BUG/berg_districts_script
+		tier = 3
+		district = mining
+	}
+	inline_script = {
+		script = berg_jobs_group/miner_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	#ECC
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_ecc_mod = yes
+			berg_is_shattered_ring = no
+			exists = owner
+			owner = { has_valid_civic = civic_mining_guilds }
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_mettle
+		osa_job = 1
+		job_subtract = 1
+		miner = miner
+		trigger = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = tradition_script/ost_mettle
+		osa_job = 1
+		job_subtract = 1
+		miner = scrap_miner
+		trigger = "berg_is_shattered_ring = yes"
+	}
+	inline_script = {
+		script = tradition_script/ost_omni_drone
+		tradition = mettle
+		job_add = 1
+		job_subtract = 1
+		drone = mining_drone
+		trigger = "berg_is_shattered_ring = no"
+	}
+	inline_script = {
+		script = tradition_script/ost_omni_drone
+		tradition = mettle
+		job_add = 1
+		job_subtract = 1
+		drone = scrap_miner_drone
+		trigger = "berg_is_shattered_ring = yes"
+	}
+
+	prerequisites = {
+		"tech_roci_dimensional_fabricator"
+	}
+		
+	upgrades = {
+	}
+}

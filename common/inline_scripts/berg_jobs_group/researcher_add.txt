@@ -1,0 +1,34 @@
+
+#Researcher
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = researcher
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	owner = { is_regular_empire = yes }
+	$TRIGGER$
+	"
+}
+# Brain Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = brain_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	owner = { is_hive_empire = yes }
+	$TRIGGER$
+	"
+}
+# Calculator
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = calculator
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	owner = { is_machine_empire = yes }
+	$TRIGGER$
+	"
+}

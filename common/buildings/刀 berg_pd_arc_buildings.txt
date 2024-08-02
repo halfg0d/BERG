@@ -1,0 +1,174 @@
+#############
+# Buildings for Arc Mod
+#############
+building_pd_rogue_council = {
+	base_buildtime = @b2_time
+	icon = building_senate_building
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		berg_pd_has_arcology_mod = yes
+		exists = owner
+		planet = {
+			OR = {
+				has_building = building_pd_rogue_council
+				owner = { is_ai = no }
+			}
+		}
+		owner = {
+			is_machine_empire = yes
+			berg_is_servitor_empire = yes
+		}
+		berg_is_slave_world = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = {
+				is_machine_empire = yes
+				berg_is_servitor_empire = yes
+			}
+		}
+	}
+	show_tech_unlock_if = {
+		berg_pd_has_arcology_mod = yes
+	}
+	planet_modifier = {
+		job_pd_capital_bio_politician_add = 4
+		planet_housing_add = 4
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OST
+		inline_script = {
+			script = tradition_script/ost_order
+			tier = 3
+		}
+	}
+	triggered_desc = {
+		text = job_pd_capital_bio_effect_desc
+	}
+
+}
+
+building_navel_base = {
+	base_buildtime = 240
+	position_priority = 100
+	icon = holding_recruitment_office
+
+	category = army
+	exempt_from_ai_planet_specialization = no
+
+	potential = {
+		berg_pd_has_arcology_mod = yes
+		berg_is_slave_world = no
+		berg_is_resort_world = no
+		berg_is_penal_world = no
+	}
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	prerequisites = {
+		"tech_planetary_defenses"
+	}
+	show_tech_unlock_if = {
+		berg_pd_has_arcology_mod = yes
+	}
+
+	upgrades = {
+		"building_navel_command"
+	}
+	inline_script = {
+		script = berg_jobs_group/pd_naval_admin
+		AMOUNT = 3
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_defence
+		tier = $tier$
+		commander_add = 1
+		soldier1_subtract = 0
+		commando_add = 0
+		soldier2_subtract = 0
+		commando_drone_add = 1
+		warrior_drone_subtract = 0
+	}
+}
+
+building_navel_command = {
+	base_buildtime = @b1_time
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+	icon = holding_overlord_garrison
+
+	category = army
+
+	potential = {
+		berg_pd_has_arcology_mod = yes
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	show_tech_unlock_if = {
+		berg_pd_has_arcology_mod = yes
+	}
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 1
+			volatile_motes = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_global_defense_grid"
+	}
+
+	inline_script = {
+		script = berg_jobs_group/pd_naval_admin
+		AMOUNT = 6
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	#OST
+	inline_script = {
+		script = tradition_script/ost_defence
+		tier = $tier$
+		commander_add = 1
+		soldier1_subtract = 0
+		commando_add = 1
+		soldier2_subtract = 0
+		commando_drone_add = 2
+		warrior_drone_subtract = 0
+	}
+}

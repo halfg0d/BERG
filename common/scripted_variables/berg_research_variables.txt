@@ -107,8 +107,8 @@
 @berg_research_archaeostudies_job_t2 = 6
 @berg_research_archaeostudies_osa_research_t1 = 0.25
 @berg_research_archaeostudies_osa_research_t2 = 0.35
-@berg_research_archaeostudies_research_t1 = 1.0
-@berg_research_archaeostudies_research_t2 = 2.0
+@berg_research_archaeostudies_research_t1 = 0.5
+@berg_research_archaeostudies_research_t2 = 1.0
 @berg_research_archaeostudies_silo_t1 = 1000
 @berg_research_archaeostudies_silo_t2 = 2000
 # vultaum

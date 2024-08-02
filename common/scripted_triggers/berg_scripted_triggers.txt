@@ -143,10 +143,16 @@ berg_is_resort_world = {
 		berg_pd_resort_habitat = yes
 	}
 }
-
-berg_has_giga_mod = {
-	has_global_flag = gigastructures_enabled
+berg_is_slave_world = {
+	has_modifier = slave_colony
 }
+berg_is_gestation_world = {
+	has_modifier = gestation_colony
+}
+berg_is_penal_world = {
+	has_modifier = penal_colony
+}
+
 
 berg_void_dweller_housing = {
 	AND = {
@@ -263,9 +269,7 @@ berg_can_duelist_be_changed = {
 		}
 	}
 }
-berg_has_avb_mod = {
-	has_global_flag = avb_mod_flag
-}
+
 berg_avb_build_imperial_capital = {
 	OR = {
 		berg_has_avb_mod = no
@@ -279,75 +283,7 @@ berg_avb_build_imperial_capital = {
 		}
 	}
 }
-berg_has_acot_mod = {
-	has_acot = yes
-}
-berg_has_osa_mod = {
-	has_global_flag = osa_active
-}
-berg_has_ost_mod = {
-	OR = {
-		berg_has_osa_mod = yes
-		has_global_flag = ost_active
-	}
-}
-berg_has_zexpanded_mod = {
-	has_global_flag = expanded_pops_active
-}
 
-berg_has_any_memorialist_civic = {
-	OR = {
-		has_valid_civic = civic_memorialist
-		has_valid_civic = civic_hive_memorialist
-		has_valid_civic = civic_machine_memorialist
-		AND = {
-			berg_has_zexpanded_mod = yes
-			has_valid_civic = civic_memorialist_corp
-		}
-	}
-}
-berg_slave_colony_manufactury = {
-	OR = {
-		#Vanilla
-		AND = {
-			berg_has_zexpanded_mod = no
-			NOT = { has_modifier = slave_colony }
-		}
-		AND = {
-			berg_has_zexpanded_mod = yes
-			OR = {
-				NOT = { has_modifier = slave_colony }
-				owner = {
-					OR = {
-						has_valid_civic = civic_indentured_assets
-						has_valid_civic = civic_slaver_guilds
-					}
-				}
-			}
-		}
-		#zExpanded
-	}
-}
-berg_slave_colony_manufactury_not = {
-	OR = {
-		#Vanilla
-		AND = {
-			berg_has_zexpanded_mod = no
-			has_modifier = slave_colony
-		}
-		#zExpanded
-		AND = {
-			berg_has_zexpanded_mod = yes
-			has_modifier = slave_colony
-			owner = {
-				NOR = {
-					has_valid_civic = civic_indentured_assets
-					has_valid_civic = civic_slaver_guilds
-				}
-			}
-		}
-	}
-}
 berg_is_machine_cult = {
 	OR = {
 		berg_has_ecc_mod = yes
@@ -358,25 +294,50 @@ berg_is_machine_cult = {
 can_show_support_desc = {
 	always = no #DESC Support
 }
-berg_has_gpm_mod = {
-	gpm_mod_active = yes
-}
-berg_has_zexpanded_mod = {
-	always = no
-}
-berg_has_any_supported_mod = {
-	OR = {
-		berg_has_planetary_diversity_mod = yes
-		berg_has_osa_mod = yes
-		berg_has_ost_mod = yes
-		berg_has_ecc_mod = yes
-		berg_has_avb_mod = yes
-		berg_has_bug_mod = yes
-		berg_has_gpm_mod = yes
-		berg_has_uap_mod = yes
-		berg_has_giga_mod = yes
-		berg_has_zexpanded_mod = yes
+
+
+berg_has_holy_covenant_perk = {
+	exists = owner.federation
+	owner = {
+		federation = {
+			has_federation_perk = all_the_priests_2
+		}
 	}
+
+}
+berg_has_any_high_spiritual_civic = {
+	exists = owner
+	owner = {
+		OR = {
+			has_civic = civic_imperial_cult
+			has_civic = civic_divine_council
+			has_civic = civic_spiritual_democracy
+			has_civic = civic_exalted_priesthood
+		}
+	}
+}
+
+berg_production_revolution_decision = {
+	has_planet_flag = PR_flg_plnt_VALID
+}
+berg_pr_can_vanilla = {
+	OR = {
+		berg_has_production_revolution_mod = no
+		AND = {
+			berg_has_production_revolution_mod = yes
+			berg_production_revolution_decision = no
+		}
+	}
+}
+berg_pr_cannot_vanilla = {
+	berg_has_production_revolution_mod = yes
+	berg_production_revolution_decision = yes
+}
+berg_has_better_diplo_mod = {
+	has_global_flag = better_diplo_installed
+}
+berg_has_zofe_sandbox_mod = {
+	zofe_sandbox = yes
 }
 berg_has_private_military_companies = {
 	has_valid_civic = civic_private_military_companies

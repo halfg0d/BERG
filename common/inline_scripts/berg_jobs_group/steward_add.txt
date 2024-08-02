@@ -1,0 +1,11 @@
+
+#Steward
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = steward
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	"
+}

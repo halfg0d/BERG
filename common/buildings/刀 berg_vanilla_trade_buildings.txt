@@ -1,0 +1,437 @@
+#############
+# Trade buildings
+#############
+building_commercial_zone = {
+	base_buildtime = @b1_time
+
+	exempt_from_ai_planet_specialization = no
+	category = trade
+
+	potential = {
+		berg_st_can_build_commercial_zone = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 1
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 1
+	}
+	prerequisites = {
+		"tech_interplanetary_commerce"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	upgrades = {
+		"building_commercial_megaplex"
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = commercial_zone
+		TRIGGER = " "
+	}
+}
+
+building_commercial_megaplex = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = trade
+
+	potential = {
+		berg_st_can_build_commercial_zone = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 2
+	}
+	prerequisites = {
+		"tech_interstellar_economics"
+	}
+
+	upgrades = {
+		"building_commercial_trading_terminal" #OSA
+		"building_avb_commercial_3" #AVB
+		"mcp_building_commercial_megaplex_1" #MCP
+	}
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+				job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = commercial_megaplex
+		TRIGGER = " "
+	}
+}
+building_avb_commercial_3 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = trade
+	
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_commercial_zone = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+		}
+	}
+	
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 3
+	}
+	upgrades = {
+		building_avb_commercial_4
+	}
+	
+	prerequisites = {
+		"tech_avb_interstellar_economics_2"
+	}
+	
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+				job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_commercial_3
+		TRIGGER = " "
+	}
+}
+
+building_avb_commercial_4 = {
+	base_buildtime = @avb_b5_time
+	can_build = no
+
+	category = trade
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_commercial_zone = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = yes }
+			has_modifier = slave_colony
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 4
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 4
+	}
+	upgrades = {
+		building_avb_commercial_5
+	}
+	
+	prerequisites = {
+		"tech_avb_interstellar_economics_3"
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_commercial_4
+		TRIGGER = " "
+	}
+}
+
+building_avb_commercial_5 = {
+	base_buildtime = @avb_b6_time
+	can_build = no
+
+	category = trade
+	
+	allow = {
+		has_upgraded_capital_5 = yes
+	}
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_commercial_zone = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = yes }
+			has_modifier = slave_colony
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 5
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 5
+	}
+	prerequisites = {
+		"tech_avb_interstellar_economics_4"
+	}
+	
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_commercial_5
+		TRIGGER = " "
+	}
+}
+
+building_galactic_stock_exchange = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	category = trade
+
+	potential = {
+		berg_has_bug_mod = no
+		berg_st_can_build_galactic_stock = yes
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_galactic_stock_exchange
+						is_starbase_building_building = ring_galactic_stock_exchange
+					}
+				}
+			}
+		}
+	}
+	convert_to = {
+		building_bugged_planetary_stock_exchange
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+			berg_has_bug_mod = yes
+		}
+	}
+	inline_script = {
+		script = vanilla/trade/berg_galactic_stock_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/galactic_stock
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_galactic_markets"
+	}
+	upgrades = {
+		"building_avb_galactic_stock_exchange_2" #AVB
+	}
+	show_tech_unlock_if = {
+		berg_has_bug_mod = no
+	}
+	ai_resource_production = {
+		energy = 5
+		trigger = {
+			solar_system = {
+				has_system_trade_value >= 50
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 3
+		trigger = {
+			solar_system = {
+				has_system_trade_value >= 80
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = galactic_stock_exchange
+		TRIGGER = " "
+	}
+}
+building_avb_galactic_stock_exchange_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+
+	category = trade
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_st_can_build_galactic_stock = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_gestalt = yes }
+			has_modifier = slave_colony
+			has_modifier = resort_colony
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital_4 = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_galactic_stock_exchange
+						is_starbase_building_building = ring_galactic_stock_exchange
+					}
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/trade/berg_galactic_stock_script
+		tier = 3
+	}
+	inline_script = {
+		script = building_resources/vanilla/galactic_stock
+		tier = 3
+	}
+	prerequisites = {
+		"tech_avb_galactic_markets_2"
+	}
+	
+	triggered_desc = {
+		text = job_merchant_effect_desc
+	}
+	
+	ai_resource_production = {
+		energy = 5
+		trigger = {
+			solar_system = {
+				has_system_trade_value >= 50
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 3
+		trigger = {
+			solar_system = {
+				has_system_trade_value >= 80
+			}
+		}
+	}
+	inline_script = {
+		script = berg_desc/berg_building_desc
+		BUILDING = avb_galactic_stock_exchange_2
+		TRIGGER = " "
+	}
+}

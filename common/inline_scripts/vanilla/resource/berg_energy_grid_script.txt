@@ -2,41 +2,13 @@ planet_modifier = {
 	planet_technician_energy_produces_add = @berg_resource_energy_grid_energy_add_t$tier$
 }
 
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			is_fallen_empire_spiritualist = no
-		}
-	}
-	modifier = {
-		job_technician_add = @berg_resource_energy_grid_job_t$tier$
-	}
+inline_script = {
+	script = berg_jobs_group/technician_add
+	AMOUNT = @berg_resource_energy_grid_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_fallen_empire_spiritualist = yes }
-	}
-	modifier = {
-		job_fe_acolyte_generator_add = @berg_resource_energy_grid_job_t$tier$
-	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_gestalt = yes
-		}
-	}
-	modifier = {
-		job_technician_drone_add = @berg_resource_energy_grid_job_t$tier$
-	}
-}
-
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -68,7 +40,7 @@ triggered_planet_modifier = {
 }
 #BUG
 inline_script = {
-	script = BUG/berg_district_script
+	script = BUG/berg_districts_script
 	tier = $tier$
 	district = generator
 }
@@ -103,28 +75,4 @@ inline_script = {
 	job_subtract = 1
 	drone = technician_drone
 	trigger = ""
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_technician_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			is_gestalt = no
-			is_fallen_empire_spiritualist = no
-		}
-	}
-	text = job_technician_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_fallen_empire_spiritualist = yes }
-	}
-	text = job_fe_acolyte_generator_effect_desc
 }

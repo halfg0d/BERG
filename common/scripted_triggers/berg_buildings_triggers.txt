@@ -1,0 +1,1198 @@
+#############
+# Building Triggers
+#############
+# Capitals
+berg_st_can_build_regular_capital = {
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_fallen_empire = no
+	}
+	NOR = {
+		has_modifier = resort_colony
+		berg_is_slave_world = yes
+		uses_habitat_capitals = yes
+		uses_district_set = cosmogenesis_world
+	}
+}
+
+berg_st_can_build_machine_capital = {
+	exists = owner
+	owner = {
+		OR = {
+			is_machine_empire = yes
+			is_country_type = ai_empire
+			AND = {
+				exists = event_target:mechanocalibrator_country
+				is_same_value = event_target:mechanocalibrator_country
+			}
+		}
+		is_fallen_empire = no
+	}
+	uses_habitat_capitals = no
+	NOT = {
+		uses_district_set = cosmogenesis_world
+	}
+}
+
+berg_st_can_build_hive_capital = {
+	exists = owner
+	owner = {
+		OR = {
+			is_hive_empire = yes
+			is_country_type = swarm
+		}
+		is_fallen_empire = no
+	}
+	uses_habitat_capitals = no
+	NOT = {
+		uses_district_set = cosmogenesis_world
+	}
+}
+
+berg_st_can_build_hab_capital = {
+	uses_habitat_capitals = yes
+	exists = owner
+	owner = {
+		is_fallen_empire = no
+	}
+}
+
+berg_st_can_build_resort_capital = {
+	OR = {
+		has_modifier = resort_colony
+		berg_pd_resort_habitat = yes
+	}
+}
+
+berg_st_can_build_thrall_capital = {
+	berg_is_slave_world = yes
+}
+
+berg_st_can_build_imperial_capital = {
+	exists = owner
+	owner = {
+		$EMPIRE$
+		is_galactic_emperor = yes
+	}
+	planet = {
+		is_capital = yes
+	}
+}
+
+berg_st_can_build_nanotech_capital = {
+	exists = owner
+	owner = {
+		OR = {
+			is_machine_empire = yes
+			is_country_type = ai_empire
+			AND = {
+				exists = event_target:mechanocalibrator_country
+				is_same_value = event_target:mechanocalibrator_country
+			}
+		}
+		is_fallen_empire = no
+	}
+	uses_habitat_capitals = no
+	NOT = {
+		uses_district_set = cosmogenesis_world
+	}
+}
+
+# Amenity
+berg_st_can_build_luxury_residence = {
+	OR = {
+		berg_is_habitat = no
+		berg_pd_resort_habitat = yes
+		berg_void_dweller_housing = yes
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		berg_has_any_shared_burden_civic = no
+	}
+	NOT = {
+		has_building = building_low_tech_capital
+	}
+}
+
+berg_st_can_build_communal_housing = {
+	OR = {
+		berg_is_habitat = no
+		berg_pd_resort_habitat = yes
+		berg_void_dweller_housing = yes
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		berg_has_any_shared_burden_civic = yes
+	}
+}
+
+berg_st_can_build_drone_storage = {
+	exists = owner
+	owner = {
+		is_machine_empire = yes
+	}
+}
+
+berg_st_can_build_warren = {
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+	}
+}
+
+berg_st_can_build_holotheatres = {
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_regular_empire = yes
+		berg_is_dystopian_society = no
+	}
+	OR = {
+		owner = {
+			NOT = {
+				is_ai = yes
+			}
+		}
+		AND = {
+			NOT = {
+				has_available_jobs = entertainer
+			}
+			NOT = {
+				has_forbidden_jobs = entertainer
+			}
+		}
+	}
+	NOT = {
+		has_building = building_low_tech_capital
+	}
+}
+
+berg_st_can_build_clinic = {
+	owner = {
+		OR = {
+			is_regular_empire = yes
+			AND = {
+				berg_is_fear_of_the_dark_empire = yes
+				is_country_type = primitive
+			}
+		}
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	OR = {
+		owner = {
+			OR = {
+				is_ai = no
+				berg_is_private_healthcare_empire = yes
+				prev = {
+					has_branch_office = yes
+					branch_office_owner = {
+						berg_is_private_healthcare_empire = yes
+					}
+				}
+			}
+		}
+		AND = {
+			NOT = {
+				has_available_jobs = entertainer
+			}
+			NOT = {
+				has_forbidden_jobs = entertainer
+			}
+			planet_stability < 50
+			free_amenities < 0
+		}
+	}
+}
+
+berg_st_can_build_depot = {
+	owner = {
+		is_gestalt = yes
+	}
+}
+
+berg_st_can_build_huts = {
+	berg_is_slave_world = yes
+}
+
+berg_st_can_build_overseer = {
+	berg_is_slave_world = yes
+}
+
+berg_st_can_build_ranger = {
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_regular_empire = yes
+		berg_is_environmental = yes
+	}
+	NOR = {
+		berg_is_city_world = yes
+		berg_is_hive_world = yes
+		berg_is_machine_world = yes
+		is_planet_class = pc_relic
+	}
+	is_artificial = no
+}
+
+berg_st_can_build_toxic_bath = {
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_regular_empire = yes
+		has_toxic_baths = yes
+	}
+}
+
+# Army
+berg_st_can_build_military_academy = {
+	exists = owner
+	owner = {
+		berg_reanimator_civic = no
+	}
+}
+
+berg_st_can_build_dread_encampment = {
+	exists = owner
+	owner = {
+		berg_reanimator_civic = yes
+	}
+}
+
+berg_st_can_build_stronghold = {
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_planetary_shield = {
+	OR = {
+		berg_has_osa_mod = no
+		AND = {
+			berg_has_osa_mod = yes
+			NOR = {
+				has_building = "building_mem_planetary_shield_generator"
+				has_building = "building_mem_planetary_shield_generator_heavy"
+				has_building = "building_mem_planetary_shield_generator_orila"
+			}
+			planet = {
+				NOR = {
+					uses_habitat_capitals = yes
+					is_planet_class = pc_habitat
+				}
+			}
+		}
+	}
+}
+
+# Deposit
+berg_st_can_build_mote_harvesters = {
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_gas_extractors = {
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_crystal_mines = {
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_betharian = {
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_xeno_zoo = {
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_guided_sapience_empire = no
+	}
+	planet = {
+		OR = {
+			has_deposit = d_alien_pets_deposit
+			AND = {
+				exists = owner
+				owner = {
+					has_policy_flag = pre_sapients_protect
+				}
+				any_owned_pop = {
+					is_sapient = no
+				}
+			}
+			any_owned_pop = {
+				is_livestock = yes
+			}
+		}
+	}
+}
+
+# Government
+berg_st_can_build_noble_estates = {
+	exists = owner
+	planet = {
+		or = {
+			has_building = building_noble_estates
+			owner = {
+				is_ai = no
+			}
+		}
+	}
+	owner = {
+		berg_has_any_noble_civic = yes
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_slave_processing = {
+	owner = {
+		is_regular_empire = yes
+		has_policy_flag = slavery_allowed
+	}
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_precinct_house = {
+	owner = {
+		is_regular_empire = yes
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	if = {
+		limit = {
+			owner = {
+				is_ai = yes
+			}
+		}
+		NOT = {
+			has_forbidden_jobs = enforcer
+		}
+		NOT = {
+			has_available_jobs = enforcer
+		}
+	}
+}
+
+berg_st_can_build_sentinel_posts = {
+	exists = owner
+	owner = {
+		is_gestalt = yes
+	}
+}
+
+berg_st_can_build_order_keep = {
+	owner = {
+		berg_is_toxic_knight_empire = yes
+	}
+	has_planet_flag = toxic_knights_habitat
+	owner = {
+		NOT = {
+			has_country_flag = quest_abandoned
+		}
+	}
+}
+
+berg_st_can_build_order_castle = {
+	always = yes
+}
+
+berg_st_can_build_psi_corps = {
+	has_utopia = yes
+	owner = {
+		has_tradition = tr_psionics_psi_corps
+	}
+	NOT = {
+		has_modifier = resort_colony
+	}
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_embassy = {
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+	}
+	exists = planet
+	planet = {
+		is_capital = yes
+	}
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+}
+berg_st_can_build_embassy_machine = {
+	berg_has_better_diplo_mod = yes
+	exists = owner
+	owner = {
+		is_machine_empire = yes
+	}
+	exists = planet
+	planet = {
+		is_capital = yes
+	}
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+}
+berg_st_can_build_embassy_hive = {
+	berg_has_better_diplo_mod = yes
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+	}
+	exists = planet
+	planet = {
+		is_capital = yes
+	}
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+}
+
+berg_st_can_build_gaiaseeders = {
+	exists = owner
+	owner = {
+		is_playable = yes
+		is_idyllic_bloom_empire = yes
+	}
+	berg_can_gaiaseeders_planet = yes
+}
+
+berg_st_can_build_gaiaseeders_T4 = {
+	OR = {
+		berg_is_gaia_world = yes
+		has_building = building_gaiaseeders_3
+	}
+}
+
+# Manufactury
+berg_st_can_build_foundry = {
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+	berg_pr_can_vanilla = yes
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_industry_district = yes
+	}
+}
+
+berg_st_can_build_factory = {
+	exists = owner
+	owner = {
+		OR = {
+			country_uses_consumer_goods = yes
+			berg_is_fear_of_the_dark_empire = yes
+		}
+	}
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+	berg_pr_can_vanilla = yes
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		and = {
+			has_any_industry_district = yes
+			owner = {
+				should_ai_focus_on_trade = no
+			}
+		}
+	}
+}
+
+berg_st_can_build_refinery = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_chemical_plant = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_crystal_plant = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_nanite_transmuter = {
+	exists = owner
+	OWNER = {
+		OR = {
+			has_monthly_income = {
+				resource = nanites
+				value > 0
+			}
+			AND = {
+				is_ai = no
+				has_resource = {
+					type = nanites
+					amount > 0
+				}
+			}
+		}
+	}
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_ministry_production = {
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+	}
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_industry_district = yes
+	}
+}
+
+berg_st_can_build_production_center = {
+	exists = owner
+	owner = {
+		is_gestalt = yes
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_industry_district = yes
+	}
+}
+
+berg_st_can_build_fulfillment_center = {
+	exists = owner
+	owner = {
+		is_relentless_industrialist_empire = yes
+	}
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_industry_district = yes
+	}
+}
+
+berg_st_can_build_archaeo_refinery = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+# Paragon
+berg_st_can_build_memory_vault = {
+	custom_tooltip = {
+		text = EMPIRE_UNIQUE_BUILDING
+		owner = {
+			is_memory_vault_empire = yes
+		}
+	}
+	exists = planet
+}
+
+# Pop Assembly
+berg_st_can_build_robot_plant = {
+	exists = owner
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		NOT = {
+			exists = assembling_species
+		}
+		assembling_species = {
+			berg_is_robotic = yes
+		}
+	}
+	owner = {
+		is_regular_empire = yes
+		is_individual_machine = no
+		NOT = {
+			has_policy_flag = robots_outlawed
+		}
+		OR = {
+			is_ai = no
+			NOT = {
+				has_ascension_perk = ap_engineered_evolution
+			}
+			is_materialist = yes
+		}
+	}
+	NOR = {
+		berg_is_slave_world = yes
+		berg_is_resort_world = yes
+	}
+	NAND = {
+		berg_has_bug_mod = yes
+		owner = {
+			is_bugged_machine_cult = yes
+		}
+	}
+}
+
+berg_st_can_build_machine_plant = {
+	exists = owner
+	owner = {
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
+	berg_is_gestation_world = no
+}
+berg_st_can_build_spawning_pool = {
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+		berg_is_progenitor_empire = no
+	}
+	OR = {
+		num_buildings = {
+			type = any
+			value < 15
+		}
+		owner = {
+			is_ai = no
+		}
+	}
+}
+
+berg_st_can_build_offspring_nest = {
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+		berg_is_progenitor_empire = yes
+	}
+	OR = {
+		num_buildings = {
+			type = any
+			value < 15
+		}
+		owner = {
+			is_ai = no
+		}
+	}
+}
+
+berg_st_can_build_necrophage = {
+	exists = owner
+	owner = {
+		berg_is_necrophage_empire = yes
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+}
+
+berg_st_can_build_clone_vats = {
+	exists = owner
+	owner = {
+		has_tradition = tr_genetics_adopt
+	}
+	berg_is_resort_world = no
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		NOT = {
+			exists = assembling_species
+		}
+		assembling_species = {
+			is_organic_species = yes
+		}
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		NAND = {
+			free_district_slots = 0
+			free_building_slots <= 1
+			free_housing <= 0
+			free_jobs <= 0
+		}
+	}
+}
+
+berg_st_can_build_clone_army_vats = {
+	exists = owner
+	owner = {
+		berg_is_clone_army_empire = yes
+		NOT = {
+			has_country_flag = clone_army_fertility_unlocked
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				is_ai = yes
+			}
+		}
+		NOR = {
+			has_building = building_clone_army_clone_vat
+			has_building = building_avb_clone_army_clone_vat_2
+			AND = {
+				exists = assembling_species
+				assembling_species = {
+					berg_is_robotic = yes
+				}
+			}
+		}
+	}
+}
+
+berg_st_can_build_posthumous_employment = {
+	exists = owner
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		NOT = {
+			exists = assembling_species
+		}
+		assembling_species = {
+			is_organic_species = yes
+		}
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		NAND = {
+			free_district_slots = 0
+			free_building_slots <= 1
+			free_housing <= 0
+			free_jobs <= 0
+		}
+	}
+	owner = {
+		is_regular_empire = yes
+		berg_is_permanent_employment = yes
+	}
+}
+
+berg_st_can_build_toxic_bath_hive = {
+	owner = {
+		is_hive_empire = yes
+		has_valid_civic = civic_hive_toxic_baths
+		NAND = {
+			is_ai = yes
+			prev = {
+				has_any_industry_district = no
+			}
+		}
+	}
+}
+
+berg_st_can_build_toxic_bath_machine = {
+	owner = {
+		has_toxic_baths = yes
+		OR = {
+			is_machine_empire = yes
+			is_individual_machine = yes
+		}
+	}
+}
+
+# Research
+berg_st_can_build_research_lab = {
+	berg_pr_can_vanilla = yes
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+}
+
+berg_st_can_build_institute = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+	}
+}
+
+berg_st_can_build_supercomputer = {
+	exists = owner
+	owner = {
+		is_gestalt = yes
+	}
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_archaeostudies_faculty = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+	exists = owner
+}
+
+berg_st_can_build_vultaum_computer = {
+	exists = owner
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+# Resource
+berg_st_can_build_hydroponics = {
+	exists = owner
+	owner = {
+		OR = {
+			country_uses_food = yes
+			is_ai = no
+		}
+	}
+	berg_is_machine_world = no
+	berg_is_resort_world = no
+}
+
+berg_st_can_build_food_processing = {
+	exists = owner
+	berg_is_machine_world = no
+	berg_is_resort_world = no
+	berg_pr_can_vanilla = yes
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_farming_district_or_buildings = yes
+	}
+}
+
+berg_st_can_build_baol_plant = {
+	exists = owner
+	berg_is_machine_world = no
+	berg_is_resort_world = no
+	berg_pr_can_vanilla = yes
+}
+
+berg_st_can_build_mineral_purification = {
+	berg_is_resort_world = no
+	berg_pr_can_vanilla = yes
+	NOR = {
+		# Ringworlds don't have mines
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_cybrex
+	}
+	OR = {
+		berg_is_habitat = no
+		AND = {
+			berg_is_habitat = yes
+			check_modifier_value = {
+				modifier = district_hab_mining_max
+				value > 0
+			}
+		}
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_mining_district = yes
+	}
+}
+
+berg_st_can_build_energy_grid = {
+	berg_is_resort_world = no
+	berg_pr_can_vanilla = yes
+	OR = {
+		berg_is_habitat = no
+		AND = {
+			berg_is_habitat = yes
+			check_modifier_value = {
+				modifier = district_hab_energy_max
+				value > 0
+			}
+		}
+	}
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_generator_district_or_building = yes
+	}
+}
+
+berg_st_can_build_resource_silo = {
+	berg_is_resort_world = no
+	berg_is_slave_world = no
+}
+
+berg_st_has_any_silo = {
+	OR = {
+		has_building = building_resource_silo
+		AND = {
+			berg_has_production_revolution_mod = yes
+			OR = {
+				has_building = PR_building_RES_soil_2
+				has_building = PR_building_RES_soil_3
+			}
+		}
+		AND = {
+			berg_has_avb_mod = yes
+			OR = {
+				has_building = building_avb_resource_silo_2
+				has_building = building_avb_resource_silo_3
+			}
+		}
+	}
+}
+
+berg_st_can_build_bioreactor = {
+	exists = owner
+	berg_is_machine_world = no
+	berg_is_resort_world = no
+	berg_pr_can_vanilla = yes
+	OR = {
+		owner = {
+			is_ai = no
+		}
+		has_any_farming_district_or_buildings = yes
+	}
+}
+
+# Trade
+berg_st_can_build_commercial_zone = {
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	NOT = {
+		has_building = building_low_tech_capital
+	}
+}
+
+berg_st_can_build_galactic_stock = {
+	NOR = {
+		berg_is_resort_world = yes
+		berg_is_slave_world = yes
+	}
+}
+
+# Unity
+berg_st_can_build_autochton_monument = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		NOR = {
+			is_gestalt = yes
+			is_megacorp = yes
+			is_memorialist_empire = yes
+		}
+	}
+	owner = {
+		is_ai = no
+	}
+}
+
+berg_st_can_build_bureaucratic = {
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+		is_spiritualist = no
+		has_make_spiritualist_perk = no
+	}
+	NOR = {
+		berg_is_slave_world = yes
+		berg_is_resort_world = yes
+	}
+}
+
+berg_st_can_build_temple = {
+	exists = owner
+	owner = {
+		OR = {
+			is_spiritualist = yes
+			AND = {
+				is_gestalt = no
+				has_make_spiritualist_perk = yes
+				NAND = {
+					#building disabled when DeathCultCivic
+					berg_has_ecc_mod = yes
+					is_death_cult_empire = yes
+				}
+			}
+		}
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_uplink_node = {
+	exists = owner
+	owner = {
+		is_machine_empire = yes
+		berg_is_servitor_empire = no
+	}
+}
+
+berg_st_can_build_hive_node = {
+	exists = owner
+	owner = {
+		is_hive_empire = yes
+	}
+}
+
+berg_st_can_build_death_temple = {
+	exists = owner
+	owner = {
+		is_death_cult_empire = yes
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_galactic_memorial = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_memorialist_empire = yes
+	}
+}
+
+berg_st_can_build_simulation = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_machine_empire = yes
+		is_memorialist_empire = no
+	}
+}
+
+berg_st_can_build_corporate_monument = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_megacorp = yes
+		is_memorialist_empire = no
+	}
+}
+
+berg_st_can_build_sensorium = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_hive_empire = yes
+		is_memorialist_empire = no
+	}
+}
+
+berg_st_can_build_autocurating_vault = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_machine_empire = no		# see 'building_alpha_hub'
+		is_megacorp = no		# see 'building_corporate_vault'
+		is_spiritualist = no		# see 'building_citadel_of_faith'
+		OR = {
+			# only Hive Minds may avoid effects and restrictions imposed by the 'make_spiritualist_1' Federation Perk
+			is_hive_empire = yes
+			has_make_spiritualist_perk = no
+		}
+	}
+}
+
+berg_st_can_build_citadel_faith = {
+	exists = owner
+	owner = {
+		OR = {
+			is_spiritualist = yes
+			AND = {
+				is_gestalt = no
+				has_make_spiritualist_perk = yes
+			}
+		}
+	}
+	NOT = {
+		berg_is_slave_world = yes
+	}
+}
+
+berg_st_can_build_corporate_vault = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+	owner = {
+		is_megacorp = yes
+		is_spiritualist = no
+		has_make_spiritualist_perk = no
+	}
+}
+
+berg_st_can_build_alpha_hub = {
+	exists = owner
+	owner = {
+		is_machine_empire = yes
+	}
+}
+
+berg_st_can_build_organic_sanctuary = {
+	exists = owner
+	owner = {
+		berg_is_servitor_empire = yes
+	}
+}
+
+berg_st_can_build_league_offices = {
+	exists = owner
+	NOT = {
+		berg_is_slave_world = yes
+	}
+}
