@@ -346,11 +346,113 @@ berg_pr_cannot_vanilla = {
 	berg_has_production_revolution_mod = yes
 	berg_production_revolution_decision = yes
 }
-berg_has_better_diplo_mod = {
-	has_global_flag = better_diplo_installed
+berg_has_any_alien_pets_deposit = {
+	OR = {
+		has_deposit = d_alien_pets_deposit
+		AND = {
+			berg_has_pfe_mod = yes
+			OR = {
+				has_deposit = d_alien_pets_arid 
+				has_deposit = d_alien_pets_desert 
+				has_deposit = d_alien_pets_savannah 
+				has_deposit = d_alien_pets_alpine 
+				has_deposit = d_alien_pets_arctic
+				has_deposit = d_alien_pets_tundra
+				has_deposit = d_alien_pets_continental
+				has_deposit = d_alien_pets_ocean
+				has_deposit = d_alien_pets_tropical
+				has_deposit = d_alien_pets_nuked
+				has_deposit = d_alien_pets_gaia
+			}
+		}
+	}
 }
-berg_has_zofe_sandbox_mod = {
-	zofe_sandbox = yes
+berg_has_private_military_companies = {
+	has_valid_civic = civic_private_military_companies
+}
+berg_has_integrated_bioarchitecture = {
+	has_valid_civic = civic_integrated_bioarchitecture
+}
+berg_has_any_alien_deposit = {
+	OR = {
+		has_deposit = d_alien_pets_deposit
+	}
+}
+berg_ST_30_cost = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+	}
+}
+berg_ST_21_cost = {
+	owner = {
+		berg_has_integrated_bioarchitecture = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+		is_lithoid_empire = no
+	}
+}
+berg_ST_03_cost = {
+	exists = owner
+	owner = {
+		berg_has_integrated_bioarchitecture = yes
+		is_lithoid_empire = no
+	}
+}
+berg_ST_30_upkeep = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+		berg_has_integrated_bioarchitecture = no
+	}
+}
+berg_ST_21_upkeep = {
+	exists = owner
+	owner = {
+		is_lithoid_empire = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+	}
+}
+is_berg_host = {
+	has_country_flag = berg_host
+}
+berg_has_plentiful_aspiration_3 = {
+	berg_has_pt_mod = yes
+	has_tradition = tr_plentiful_aspiration_3
+}
+berg_has_any_clone_vat = {
+	OR = {
+		has_[[need_active]active_]building = building_clone_vat
+		has_[[need_active]active_]building = building_avb_clone_vat_2
+	}
+}
+berg_has_any_slave_processing_building = {
+	OR = {
+		has_[[need_active]active_]building = building_plentiful_traditions_advanced_slave_processing
+		has_[[need_active]active_]building = building_slave_processing
+	}
+}
+berg_pt_clone_vat_slave = {
+	berg_has_pt_mod = yes
+	owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
+	berg_has_any_slave_processing_building = { need_active = no }
 }
 berg_has_private_military_companies = {
 	has_valid_civic = civic_private_military_companies

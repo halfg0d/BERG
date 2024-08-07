@@ -279,7 +279,7 @@ building_xeno_zoo = {
 			}
 			planet = {
 				NOR = {
-					berg_has_any_alien_deposit = yes
+					berg_has_any_alien_pets_deposit = yes
 					AND = {
 						exists = owner
 						owner = { has_policy_flag = pre_sapients_protect }
@@ -339,7 +339,7 @@ building_avb_xeno_zoo_2 = {
 			}
 			planet = {
 				NOR = {
-					berg_has_any_alien_deposit = yes
+					berg_has_any_alien_pets_deposit = yes
 					AND = {
 						exists = owner
 						owner = { has_policy_flag = pre_sapients_protect }

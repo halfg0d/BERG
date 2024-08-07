@@ -78,6 +78,15 @@ berg_has_any_supported_mod = {
 		berg_has_zexpanded_mod = yes
 	}
 }
+berg_has_better_diplo_mod = {
+	has_global_flag = better_diplo_installed
+}
+berg_has_zofe_sandbox_mod = {
+	zofe_sandbox = yes
+}
+berg_has_pfe_mod = {
+	has_global_flag = planetary_features_expanded_enabled
+}
 berg_has_pt_mod = {
 	has_global_flag = berg_pt_mod
 }

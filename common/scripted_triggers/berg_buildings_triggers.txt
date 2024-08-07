@@ -323,7 +323,7 @@ berg_st_can_build_xeno_zoo = {
 	}
 	planet = {
 		OR = {
-			berg_has_any_alien_deposit = yes
+			berg_has_any_alien_pets_deposit = yes
 			AND = {
 				exists = owner
 				owner = {
