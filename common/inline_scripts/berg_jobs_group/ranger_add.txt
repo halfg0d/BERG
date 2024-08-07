@@ -1,23 +1,26 @@
 
-# Entertainer
+# Ranger
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = entertainer
+	JOB = ranger
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	berg_can_duelist_be_changed = no
+	exists = owner
+	owner = { is_gestalt = no }
 	"
 }
-# Duelist
+# Ranger Drone
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = duelist
+	JOB = ranger_drone
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	berg_can_duelist_be_changed = yes
+	berg_has_zexpanded_mod = yes
+	exists = owner
+	owner = { is_gestalt = yes }
 	"
 }

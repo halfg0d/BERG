@@ -12,6 +12,7 @@ inline_script = {
 	DESC = with
 	TRIGGER = " "
 }
+#Tradition
 inline_script = {
 	script = berg_jobs_group/trader_add
 	AMOUNT = @berg_trade_commercial_trader_t$tier$
@@ -72,4 +73,35 @@ inline_script = {
 	}
 	"
 	DESC = with
+}
+#ZEX
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+	}
+	modifier = {
+		trade_value_mult = 0.2
+	}
+}
+inline_script = {
+	script = berg_jobs_group/clerk_add
+	AMOUNT = 1
+	MULT = -1
+	DESC = no
+	TRIGGER = "
+	berg_has_zexpanded_mod = yes
+	exists = owner
+	owner = { has_civic = civic_merchant_guilds }
+	"
+}
+inline_script = {
+	script = berg_jobs/berg_job_with_desc
+	JOB = manager
+	AMOUNT = 1
+	MULT = 1
+	TRIGGER = "
+	berg_has_zexpanded_mod = yes
+	exists = owner
+	owner = { has_civic = civic_merchant_guilds }
+	"
 }

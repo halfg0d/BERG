@@ -1,0 +1,70 @@
+
+#trick the ai into building this
+ai_resource_production = {
+	trigger = {
+		NOR = { has_designation = col_research has_designation = col_bureau }
+		solar_system = {
+			any_neighbor_system = {
+				exists = space_owner
+				NOT = { is_same_value = prev.space_owner }
+			}
+		}
+	}
+	alloys = 4
+	minerals = 4
+}
+ai_resource_production = {
+	trigger = {
+		exists = owner
+		owner = { used_naval_capacity_percent > 0.9 }
+		NOR = {
+			num_pops < 10
+			has_designation = col_refinery
+			has_designation = col_habitat_refinery
+			has_designation = col_research
+			has_designation = col_ecu_research
+			has_designation = col_bureau
+			has_designation = col_resort
+		}
+	}
+	alloys = 4
+	minerals = 4
+}
+ai_resource_production = {
+	trigger = {
+		exists = owner
+		owner = { used_naval_capacity_percent > 0.8 }
+		NOR = {
+			num_pops < 10
+			has_designation = col_refinery
+			has_designation = col_habitat_refinery
+			has_designation = col_research
+			has_designation = col_ecu_research
+			has_designation = col_bureau
+			has_designation = col_resort
+		}
+	}
+	alloys = 4
+	minerals = 4
+}
+ai_resource_production = {
+	trigger = {
+		OR = {
+			num_buildings = { type = building_stronghold value >= 1 }
+			num_buildings = { type = building_fortress value >= 1 }
+			num_buildings = { type = building_citadel value >= 1 }
+		}
+	}
+	alloys = 4
+	minerals = 4
+}
+ai_resource_production = {
+	trigger = {
+		OR = {
+			has_designation = col_fortress
+			has_designation = col_habitat_fortress
+		}
+	}
+	alloys = 8
+	minerals = 8
+}

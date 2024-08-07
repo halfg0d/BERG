@@ -1,23 +1,49 @@
 planet_modifier = {
-	job_ranger_add = @berg_amenity_ranger_job_t$tier$
 	deposit_blockers_natural_unity_produces_add = @berg_amenity_ranger_unity_t$tier$
 }
+inline_script = {
+	script = berg_jobs_group/ranger_add
+	AMOUNT = @berg_amenity_ranger_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+# +1 Ranger per natural blocker
+inline_script = {
+	script = berg_jobs_group/ranger_add
+	AMOUNT = 1
+	MULT = value:natural_blocker_count
+	DESC = with
+	TRIGGER = "always = yes"
+}
+# +1 Ranger per natural blocker if GalCom approves
+inline_script = {
+	script = berg_jobs_group/ranger_add
+	AMOUNT = 1
+	MULT = value:natural_blocker_count
+	DESC = with
+	TRIGGER = "owner_has_resolution = { RES = resolution_ecology_paradise_initiative }"
+}
+inline_script = vanilla/amenity/berg_resolution_script
+#ZEX
 triggered_planet_modifier = {
 	potential = {
-		always = yes
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_technology = tech_terrestrial_sculpting
+		}
 	}
-	job_ranger_add = 1 # +1 Ranger per natural blocker
-	mult = value:natural_blocker_count
+	pop_environment_tolerance = 0.05
 }
 
 triggered_planet_modifier = {
 	potential = {
-		owner_has_resolution = { RES = resolution_ecology_paradise_initiative }
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_technology = tech_ecological_adaptation
+		}
 	}
-	job_ranger_add = 1 # +1 Ranger per natural blocker if GalCom approves
-	mult = value:natural_blocker_count
+	pop_environment_tolerance = 0.05
 }
-triggered_desc = {
-	text = job_ranger_effect_desc
-}
-inline_script = vanilla/amenity/berg_resolution_script

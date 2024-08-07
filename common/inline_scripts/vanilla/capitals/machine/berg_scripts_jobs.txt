@@ -1,7 +1,15 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { berg_is_assimilator_empire = yes }
+		owner = {
+			OR = {
+				berg_is_assimilator_empire = yes
+				AND = {
+					berg_has_zexpanded_mod = yes
+					has_origin = origin_extant_creators
+				}
+			}
+		}
 	}
 	modifier = {
 		job_replicator_add = -1

@@ -218,6 +218,7 @@ building_stronghold = {
 		BUILDING = stronghold
 		TRIGGER = " "
 	}
+	inline_script = ZEX/stronghold_ai_trick
 }
 
 building_fortress = {

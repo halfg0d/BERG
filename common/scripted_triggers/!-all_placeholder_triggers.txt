@@ -60,3 +60,15 @@ is_pd_necro_world = { always = no }
 is_pd_robot_arcology = { always = no }
 is_pd_planetary_megaproject = { always = no }
 zofe_sandbox = { always = no }
+is_agrarian_empire = { always = no }
+has_high_prio_holdings = { always = no }
+is_democratic_crusaders = { always = no }
+is_evangelising_zealots = { always = no }
+is_civic_materialist = { always = no }
+is_xenophobic_isolationists = { always = no }
+is_civic_machine_servitor = { always = no }
+is_inwards_perfection_empire = { always = no }
+is_pompous_empire = { always = no }
+is_civic_militarist = { always = no }
+is_civic_environmentalist = { always = no }
+is_civic_mining_guilds = { always = no }

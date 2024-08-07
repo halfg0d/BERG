@@ -146,6 +146,20 @@ berg_is_resort_world = {
 berg_is_slave_world = {
 	has_modifier = slave_colony
 }
+berg_is_slave_world_industrial = {
+	OR = {
+		berg_is_slave_world = no
+		berg_is_slaver_empire = yes
+	}
+}
+berg_is_slaver_empire = {
+	owner = {
+		OR = {
+			has_valid_civic = civic_indentured_assets
+			has_valid_civic = civic_slaver_guilds
+		}
+	}
+}
 berg_is_gestation_world = {
 	has_modifier = gestation_colony
 }
@@ -344,4 +358,9 @@ berg_has_private_military_companies = {
 }
 berg_has_integrated_bioarchitecture = {
 	has_valid_civic = civic_integrated_bioarchitecture
+}
+berg_has_any_alien_deposit = {
+	OR = {
+		has_deposit = d_alien_pets_deposit
+	}
 }

@@ -1,0 +1,252 @@
+#############################
+#	Augmentation Bazaars	#
+#############################
+# Not every building are overrided here :)
+
+# Synth MegaCorp Physical Branch Office Building
+building_ai_emporium = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_synth_corporate = yes
+			has_country_flag = synth_physical
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = building_ai_emporium_fail_tt
+			planet.owner = {
+				NOT = {
+					any_owned_planet = {
+						has_branch_office = yes
+						has_holding = {
+							holding = building_ai_emporium
+							owner = root.branch_office_owner
+						}
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = building_ai_emporium_outlawed_robots_tt
+			planet.owner = {
+				NOT = { has_policy_flag = robots_outlawed }
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_roboticist_branch_office_value_mult = 0.10
+		job_identity_designer_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_amenities_add = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 20
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	on_built = {
+		planet.owner = {
+			create_built_robot_species = yes
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 10
+			physics_research = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 10
+			physics_research = 10
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+
+		modifier = {
+			weight = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+		modifier = {
+			weight = 200
+			berg_has_zexpanded_mod = yes
+		}
+	}
+}
+
+# Synth MegaCorp Virtual Branch Office Building
+building_clear_thought_clinic = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_synth_corporate = yes
+			has_country_flag = synth_virtual
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 20
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.10
+		pop_happiness = -0.05
+		job_clerk_add = 2
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_jobs_society_research_produces_mult = 0.05
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 10
+			society_research = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 5
+			society_research = 5
+		}
+	}
+
+	on_built = {
+		planet.owner = {
+			save_event_target_as = planet_owner
+		}
+		branch_office_owner = {
+			save_event_target_as = branch_office_owner
+			random_spynetwork = {
+				limit = {
+					owner = {
+						is_same_value = event_target:branch_office_owner
+					}
+					target = {
+						is_same_value = event_target:planet_owner
+					}
+				}
+				add_modifier = {
+					modifier = clear_thought_clinic_modifier
+					days = -1
+				}
+			}
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			save_event_target_as = planet
+		}
+		planet.owner = {
+			save_event_target_as = planet_owner
+		}
+		branch_office_owner = {
+			save_event_target_as = branch_office_owner
+		}
+		if = {
+			limit = {
+				event_target:planet_owner = {
+					any_owned_planet = {
+						NOT = {
+							is_same_value = event_target:planet
+						}
+						has_branch_office = yes
+						branch_office_owner = {
+							is_same_value = event_target:branch_office_owner
+						}
+						has_holding = {
+							holding = building_clear_thought_clinic
+							owner = event_target:branch_office_owner
+						}
+					}
+				}
+			}
+			# Do nothing
+		}
+		else = {
+			event_target:branch_office_owner = {
+				random_spynetwork = {
+					limit = {
+						owner = {
+							is_same_value = event_target:branch_office_owner
+						}
+						target = {
+							is_same_value = event_target:planet_owner
+						}
+					}
+					remove_modifier = clear_thought_clinic_modifier
+				}
+			}
+		}
+	}
+
+	triggered_desc = {
+		text = clear_thought_clinic_tt
+	}
+
+	ai_weight = {
+		weight = 2
+
+		modifier = {
+			weight = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+	}
+}

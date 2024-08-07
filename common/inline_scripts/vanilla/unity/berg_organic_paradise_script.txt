@@ -3,17 +3,8 @@ planet_modifier = {
 }
 triggered_planet_modifier = {
 	potential = {
-		OR = {
-			berg_has_zexpanded_mod = no
-			AND = {
-				berg_has_zexpanded_mod = yes
-				has_valid_civic = civic_machine_consciousness
-			}
-		}
-		check_variable_arithmetic = {
-			which = $tier$
-			value > 1
-		}
+		berg_has_zexpanded_mod = yes
+		has_valid_civic = civic_machine_consciousness
 	}
 	modifier = {
 		job_maintenance_drone_add = @berg_unity_organic_paradise_maintenance_t$tier$
@@ -25,17 +16,8 @@ triggered_desc = {
 
 triggered_desc = {
 	trigger = {
-		OR = {
-			berg_has_zexpanded_mod = no
-			AND = {
-				berg_has_zexpanded_mod = yes
-				has_valid_civic = civic_machine_consciousness
-			}
-		}
-		check_variable_arithmetic = {
-			which = $tier$
-			value > 1
-		}
+		berg_has_zexpanded_mod = yes
+		has_valid_civic = civic_machine_consciousness
 	}
 	text = job_maintenance_drone_effect_desc
 }

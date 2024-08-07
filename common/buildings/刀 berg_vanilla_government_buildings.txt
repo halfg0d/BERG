@@ -28,10 +28,8 @@ building_noble_estates = {
 	}
 	destroy_trigger = {
 		exists = owner
-		NOT = {
-			owner = {
-				berg_has_any_noble_civic = yes
-			}
+		owner = {
+			berg_has_any_noble_civic = no
 		}
 	}
 	inline_script = {
@@ -44,6 +42,7 @@ building_noble_estates = {
 	}
 	upgrades = {
 		"building_avb_noble_estates_2"		#AVB
+		"building_palatial_estates" #ZEX
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -115,8 +114,7 @@ building_palatial_estates = {
 		owner = {
 			berg_has_any_noble_civic = yes
 		}
-		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
+		berg_has_slave_world = no
 	}
 
 	allow = {
@@ -143,15 +141,9 @@ building_palatial_estates = {
 			owner = { berg_has_any_noble_civic = yes }
 		}
 	}
-
-	planet_modifier = {
-		job_noble_add = 2
-		planet_housing_add = 6
-		planet_amenities_add = 10
-	}
-
-	triggered_desc = {
-		text = job_noble_effect_desc
+	inline_script = {
+		script = vanilla/government/berg_noble_scripts
+		tier = 2
 	}
 	
 	resources = {
@@ -216,7 +208,7 @@ building_slave_processing = {
 					has_policy_flag = slavery_allowed
 				}
 			}
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 		}
 	}
 	inline_script = {

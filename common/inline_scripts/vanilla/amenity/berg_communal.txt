@@ -25,3 +25,14 @@ triggered_planet_modifier = {
 }
 #zExpanded
 inline_script = ZEX/housing_tech
+inline_script = {
+	script = berg_jobs_group/entertainer_add
+	AMOUNT = $tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = "
+	berg_has_zexpanded_mod = yes
+	exists = owner
+	owner = { is_pleasure_seeker = yes }
+	"
+}

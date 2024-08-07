@@ -26,6 +26,7 @@ building_colony_shelter = {
 		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_colony_shelter_nanotech
+		building_penal_capital
 	}
 
 	planet_modifier = {
@@ -150,6 +151,7 @@ building_capital = {
 		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_capital_nanotech
+		building_penal_capital
 	}
 
 	allow = {
@@ -290,6 +292,7 @@ building_major_capital = {
 		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_major_capital_nanotech
+		building_penal_major_capital
 	}
 
 	prerequisites = {
@@ -437,6 +440,7 @@ building_system_capital = {
 		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
 		building_system_capital_nanotech
+		building_penal_major_capital
 	}
 
 	allow = {
@@ -596,7 +600,8 @@ building_avb_capital_4 = {
 		building_slave_major_capital	
 		building_ancient_control_center
 		building_ancient_control_center_dummy # Dummy
-		building_ancient_palace		
+		building_ancient_palace	
+		building_penal_major_capital	
 	}
 	
 	allow = {
@@ -752,7 +757,8 @@ building_avb_capital_5 = {
 		building_avb_slave_capital_3		
 		building_ancient_control_center
 		building_ancient_control_center_dummy # Dummy
-		building_ancient_palace		
+		building_ancient_palace	
+		building_penal_major_capital	
 	}
 	
 	allow = {
@@ -909,6 +915,7 @@ building_avb_capital_6 = {
 		building_ancient_control_center
 		building_ancient_control_center_dummy # Dummy
 		building_ancient_palace
+		building_penal_major_capital
 	}
 	
 	allow = {
