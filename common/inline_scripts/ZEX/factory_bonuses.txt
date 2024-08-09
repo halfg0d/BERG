@@ -1,6 +1,7 @@
 # Regular
 triggered_planet_modifier = {
 	potential = {
+		berg_has_zexpanded_mod = yes
 		exists = owner
 		owner = {
 			has_valid_civic = civic_agrarian_idyll
@@ -11,9 +12,28 @@ triggered_planet_modifier = {
 		planet_farmers_consumer_goods_produces_add = @berg_manufactury_factory_zex_basic_jobs_cg_produces_t$tier$
 	}
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll
+			has_technology = tech_agrarian_goods 
+		}
+	}
+	modifier = {
+		planet_farmers_consumer_goods_produces_add = 1.5
+	}
+}
 # Lithoids
 triggered_planet_modifier = {
 	potential = {
+		berg_has_zexpanded_mod = yes
 		exists = owner
 		owner = {
 			has_valid_civic = civic_agrarian_idyll_lithoid
@@ -24,9 +44,28 @@ triggered_planet_modifier = {
 		planet_miners_consumer_goods_produces_add = @berg_manufactury_factory_zex_basic_jobs_cg_produces_t$tier$
 	}
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll_lithoid
+			has_technology = tech_agrarian_goods_lithoid 
+		}
+	}
+	modifier = {
+		planet_miners_consumer_goods_produces_add = 1.5
+	}
+}
 # Machines
 triggered_planet_modifier = {
 	potential = {
+		berg_has_zexpanded_mod = yes
 		exists = owner
 		owner = {
 			has_valid_civic = civic_agrarian_idyll_machine
@@ -37,61 +76,22 @@ triggered_planet_modifier = {
 		planet_technician_consumer_goods_produces_add = @berg_manufactury_factory_zex_basic_jobs_cg_produces_t$tier$
 	}
 }
-#
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			OR = {
-				is_civic_plant_organic = yes
-				AND = {
-					OR = {
-						is_lithoid_empire = yes
-						is_individual_machine = yes
-					}
-					OR = {
-						has_valid_civic = civic_agribusiness
-						is_anglers_empire = yes
-					}
-				}
-			}
-		}
-	} #855-903 #985-1031
-	modifier = {
-		planet_artisans_minerals_upkeep_add = 0.5
-		planet_artisans_food_upkeep_add = 0.5
-	}
-}
-#
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			NOR = {
-				is_civic_plant_organic = yes
-				AND = {
-					OR = {
-						is_lithoid_empire = yes
-						is_individual_machine = yes
-					}
-					OR = {
-						has_valid_civic = civic_agribusiness
-						is_anglers_empire = yes
-					}
-				}
-			}
-		}
-	}
-	modifier = {
-		planet_artisans_minerals_upkeep_add = 1
-	}
-}
-# Both up
 triggered_planet_modifier = {
 	potential = {
 		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll_machine
+			has_technology = tech_agrarian_goods_machine 
+		}
 	}
 	modifier = {
-		planet_artisans_consumer_goods_produces_add = 1
+		planet_technician_consumer_goods_produces_add = 1.5
 	}
 }
+#

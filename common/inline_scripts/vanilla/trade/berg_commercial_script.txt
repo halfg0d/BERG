@@ -80,8 +80,9 @@ triggered_planet_modifier = {
 		berg_has_zexpanded_mod = yes
 	}
 	modifier = {
-		trade_value_mult = 0.2
+		trade_value_mult = 0.02
 	}
+	mult = $tier$
 }
 inline_script = {
 	script = berg_jobs_group/clerk_add

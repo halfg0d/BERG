@@ -28,3 +28,23 @@ l_english:
  building_avb_grand_embassy_machine_2_desc: "$building_avb_grand_embassy_2_desc$"
  building_avb_grand_embassy_hive_2: "$building_avb_grand_embassy_2$"
  building_avb_grand_embassy_hive_2_desc: "$building_avb_grand_embassy_2_desc$"
+# Introduced ZEX+AVB
+# Farmer Trade 
+ building_avb_zex_farmer_trade_3: "Gigaplexes Market"
+ building_avb_zex_farmer_trade_3_desc: "These gleaming structures are the epicenter of intergalactic commerce, where exotic goods from across the galaxy mingle with rare, locally-sourced delicacies. Gigaplexes Market is a sensory overload of sights, smells, and sounds."
+ building_avb_zex_farmer_trade_4: "Market Edifice"
+ building_avb_zex_farmer_trade_4_desc: "Market Edifice is more than just a building – it's an icon of galactic commerce, where the boundaries between cultures are blurred and the possibilities are endless. Step inside and discover a world of wonder, where rare artifacts, exotic delicacies, and cutting-edge tech come together in a celebration of our's greatest achievements."
+ building_avb_zex_farmer_trade_5: "Farmer Universal Market"
+ building_avb_zex_farmer_trade_5_desc: ""The Farmer's Universal Market is a true marvel of the galaxy, where the most skilled farmers and traders from across the stars converge to showcase their finest wares. From the rarest, most exotic spices to the freshest, most succulent meats, this market is a treasure trove of gastronomic delights waiting to be discovered.""
+# Combat Arena
+ building_zex_avb_combat_arena_3: "Epic Arena"
+ building_zex_avb_combat_arena_3_desc: "The pinnacle of holographic innovation brings the rush of combat to life, immersing audiences in breathtakingly realistic battles. State-of-the-art projection systems and advanced algorithms converge to create photorealistic holograms that transport participants into a world of thrilling competition, strategy, and excitement. With cutting-edge audio design and 360-degree immersion, every seat becomes a front-row experience, as the action unfolds before your very eyes."
+ building_zex_avb_combat_arena_4: "Matrix Arena"
+ building_zex_avb_combat_arena_4_desc: "Step into the realm of limitless possibility where the boundaries between reality and fantasy blur. This immersive entertainment complex combines cutting-edge technology with innovative design, transporting visitors to a world of endless choice and adventure. At every corner, a formidable opponent awaits, ready to engage in a battle of wits, strength, or strategy. From simulated gladiatorial combat to intense mental challenges, the Matrix is alive with competition. With an array of interactive experiences, from surreal art installations to high-stakes games, every visitor can tailor their journey through the Matrix. Let the possibilities unfold as you navigate this ever-changing landscape, where the thrill of discovery and the rush of victory await around every corner."
+ tech_zex_avb_holo_entertainment_3: "$building_zex_avb_combat_arena_3$"
+ tech_zex_avb_holo_entertainment_3_desc: "$building_zex_avb_combat_arena_3_desc$"
+ tech_zex_avb_holo_entertainment_4: "$building_zex_avb_combat_arena_4$"
+ tech_zex_avb_holo_entertainment_4_desc: "$building_zex_avb_combat_arena_4_desc$"
+# Hive Vault
+ building_zex_avb_hive_primary_confluence_2: "Throne of Thought"
+ building_zex_avb_hive_primary_confluence_2_desc: "All synaptic pathways converge at the Throne of Thought, the colossal neural nexus where quintillions of meganeurons coalesce to become the collective epicenter of the hive's intellect. This sacred site is the seat of the hive's unified consciousness, where ancient instincts and cutting-edge knowledge blend in a dance of synergy."

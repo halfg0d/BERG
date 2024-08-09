@@ -152,12 +152,14 @@ berg_st_can_build_warren = {
 }
 
 berg_st_can_build_holotheatres = {
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	owner = {
 		is_regular_empire = yes
 		berg_is_dystopian_society = no
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			berg_is_warrior_culture = yes
+		}
 	}
 	OR = {
 		owner = {
@@ -1100,11 +1102,12 @@ berg_st_can_build_autocurating_vault = {
 		is_spiritualist = no		# see 'building_citadel_of_faith'
 		OR = {
 			# only Hive Minds may avoid effects and restrictions imposed by the 'make_spiritualist_1' Federation Perk
-			NAND = {
-				is_hive_empire = yes
-				berg_has_zexpanded_mod = yes
-			}
+			is_hive_empire = yes
 			has_make_spiritualist_perk = no
+		}
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_hive_empire = yes
 		}
 	}
 }

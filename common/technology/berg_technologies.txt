@@ -102,3 +102,79 @@ berg_tech_empath_3 = {
 		}
 	}
 }
+
+# ZEX+AVB
+tech_zex_avb_holo_entertainment_3 = {
+	cost = @tier3cost3
+	area = society
+	category = { statecraft }
+	tier = 3
+	prerequisites = { "tech_virtual_combat_arena" }
+	weight = @tier3weight3
+	icon = tech_avb_holo_entertainment_3
+	potential = {
+		berg_has_avb_mod = yes
+		berg_has_zexpanded_mod = yes
+		is_gestalt = no
+		berg_is_warrior_culture = yes
+	}
+
+	weight_modifier = {	
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_exotic_gases
+				has_technology = tech_exotic_gases
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = { # No tech without builded previous cbuilding
+			factor = 0
+			NOT = {
+				any_owned_planet = { has_building = building_virtual_combat_arena }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4
+	}
+}
+
+tech_zex_avb_holo_entertainment_4 = {
+	cost = @tier5cost3
+	area = society
+	category = { statecraft }
+	tier = 5
+	prerequisites = { "tech_zex_avb_holo_entertainment_3" }
+	weight = @tier5weight3
+	icon = tech_avb_holo_entertainment_4
+	
+	potential = {
+		berg_has_avb_mod = yes
+		berg_has_zexpanded_mod = yes
+		is_gestalt = no
+		berg_is_warrior_culture = yes
+	}
+
+	weight_modifier = {	
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_exotic_gases
+				has_technology = tech_exotic_gases
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = { # No tech without builded previous cbuilding
+			factor = 0
+			NOT = {
+				any_owned_planet = { has_building = building_zex_avb_combat_arena_3 }
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 4
+	}
+}

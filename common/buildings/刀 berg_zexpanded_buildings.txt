@@ -182,20 +182,69 @@ building_hive_primary_confluence = {
 		}
 	}
 	inline_script = {
-		script = building_resources/vanilla/vault
+		script = vanilla/unity/berg_vault_script
 		tier = 1
-	}
-
-	triggered_desc = {
-		text = job_evaluator_effect_desc
 	}
 	
 	prerequisites = {
 		"tech_autocurating_vault"
 	}
+	upgrades = {
+		"building_zex_avb_hive_primary_confluence_2" #AVB+ZEX
+	}
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_hive_empire = yes
+	}
+}
+building_zex_avb_hive_primary_confluence_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	icon = building_hive_major_capital
+
+	category = unity
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_hive_empire = no }
+		}
+	}
+
+	convert_to = {
+		building_autocurating_vault
+		building_citadel_of_faith
+		building_corporate_vault
+		building_alpha_hub
+	}
+
+	inline_script = {
+		script = building_resources/vanilla/vault
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/unity/berg_vault_script
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_autocurating_vault_2"
+	}
 
 	show_tech_unlock_if = {
 		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
 		is_hive_empire = yes
 	}
 }
@@ -622,7 +671,7 @@ holding_overlord_arena = {
 		has_high_prio_holdings = yes
 		owner.overlord = {
 			OR = {
-				has_warrior_culture = yes
+				berg_is_warrior_culture = yes
 				is_despoiler_empire = yes
 			}
 		}
@@ -1262,7 +1311,7 @@ building_farmer_market = {
 		is_regular_empire = yes
 		is_agrarian_empire = { allow_invalid = yes }
 	}
-
+a
 	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
@@ -1314,7 +1363,7 @@ building_farmer_complex = {
 	}
 
 	convert_to = {
-		building_commercial_zone
+		building_commercial_megaplex
 	}
 
 	planet_modifier = {
@@ -1422,10 +1471,12 @@ building_farmer_complex = {
 	}
 
 	show_tech_unlock_if = { 
-		is_regular_empire = yes
+		is_regular_empire = yesv
 		is_agrarian_empire = { allow_invalid = yes }
 	}
-
+	upgrades = {
+		building_avb_zex_farmer_trade_3
+	}
 	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
@@ -1461,6 +1512,283 @@ building_farmer_complex = {
 		}
 	}
 }
+#AVB+ZEX
+building_avb_zex_farmer_trade_3 = {
+	base_buildtime = @avb_b4_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+	icon = building_avb_food_processing_3
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		berg_is_slave_world = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+			berg_has_avb_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_commercial_3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.06
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.06
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 3
+	}
+	prerequisites = {
+		"tech_avb_food_processing_3"
+	}
+
+	show_tech_unlock_if = { 
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+	upgrades = {
+		building_avb_zex_farmer_trade_4
+	}
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+building_avb_zex_farmer_trade_4 = {
+	base_buildtime = @avb_b5_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+	icon = building_avb_food_processing_4
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		berg_is_slave_world = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+			berg_has_avb_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_commercial_4
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.08
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.08
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 4
+	}
+
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_food_processing_4"
+	}
+	upgrades = {
+		building_avb_zex_farmer_trade_5
+	}
+	show_tech_unlock_if = { 
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+building_avb_zex_farmer_trade_5 = {
+	base_buildtime = @avb_b6_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+	icon = building_avb_food_processing_4
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		berg_is_slave_world = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+			berg_has_avb_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_commercial_5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.1
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 5
+	}
+
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 5
+	}
+	prerequisites = {
+		"tech_avb_food_processing_4"
+	}
+
+	show_tech_unlock_if = { 
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
 # Individualistic Enclave
 # currently no
 
@@ -1473,13 +1801,16 @@ building_combat_arena = {
 	category = amenity
 	
 	potential = {
-		NOT = {	has_modifier = slave_colony	}	
-		owner = { is_regular_empire = yes }
-		owner = { has_warrior_culture = yes }
-		owner = { has_dystopian_society = no }
+		berg_has_zexpanded_mod = yes
+		berg_is_slave_world = no
+		owner = {
+			is_regular_empire = yes
+			berg_is_warrior_culture = yes
+			has_dystopian_society = no
+		}
 		OR = {
 			owner = {
-				NOT = { is_ai = yes }
+				is_ai = no
 			}
 			AND = {
 				NOT = { has_available_jobs = duelist }
@@ -1488,14 +1819,14 @@ building_combat_arena = {
 		}
 		NOT = { has_building = building_low_tech_capital }
 	}
-
 	destroy_trigger = {
 		exists = owner
 		OR = {
+			berg_has_zexpanded_mod = no
 			owner = { is_regular_empire = no }
-			owner = { NOT = { has_warrior_culture = yes } }
+			owner = { berg_is_warrior_culture = no }
 			owner = { has_dystopian_society = yes }
-			has_modifier = slave_colony
+			berg_is_slave_world = yes
 			AND = {
 				owner = { is_ai = yes }
 				free_amenities > 60
@@ -1540,20 +1871,9 @@ building_combat_arena = {
 	convert_to = {
 		building_holo_theatres
 	}
-		
-	planet_modifier = {
-		pop_happiness = 0.01
-	}
-
 	inline_script = {
-		script = job_groups/entertainer_add
-		trigger = " "
-		count = @b1_jobs
-		desc = " "
-	}
-
-	army_modifier = {
-		army_defense_morale_mult = 0.20
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 1
 	}
 
 	resources = {
@@ -1575,13 +1895,9 @@ building_combat_arena = {
 	}
 
 	show_tech_unlock_if = {
-		owner = { has_warrior_culture = yes }
+		berg_has_zexpanded_mod = yes
+		owner = { berg_is_warrior_culture = yes }
 	}
-
-	triggered_desc = {
-		text = job_duelist_effect_desc
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -1614,7 +1930,7 @@ building_virtual_combat_arena = {
 	category = amenity
 	
 	potential = {
-		has_building = building_combat_arena
+		berg_has_zexpanded_mod = yes
 	}
 
 	allow = {
@@ -1625,30 +1941,19 @@ building_virtual_combat_arena = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { NOT = { has_warrior_culture = yes } }
+			owner = { berg_is_warrior_culture = no }
 			owner = { has_dystopian_society = yes }
-			has_modifier = slave_colony
-
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
 		}
 	}
 
 	convert_to = {
 		building_hyper_entertainment_forum
 	}
-		
-	planet_modifier = {
-		pop_happiness = 0.02
-	}
-
 	inline_script = {
-		script = job_groups/entertainer_add
-		trigger = " "
-		count = @b2_jobs
-		desc = " "
-	}
-
-	army_modifier = {
-		army_defense_morale_mult = 0.40
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 2
 	}
 
 	resources = {
@@ -1666,16 +1971,133 @@ building_virtual_combat_arena = {
 	prerequisites = {
 		"tech_virtual_combat_arena"
 	}
-
-	show_tech_unlock_if = {
-		owner = { has_warrior_culture = yes }
+	upgrades = {
+		building_zex_avb_combat_arena_3
 	}
-
-	triggered_desc = {
-		text = job_duelist_effect_desc
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		owner = { berg_is_warrior_culture = yes }
 	}
 }
 
+building_zex_avb_combat_arena_3 = {
+	base_buildtime = @b3_time
+	position_priority = 170
+	can_build = no
+	icon = building_avb_holo_theatre_3
+
+	category = amenity
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { berg_is_warrior_culture = no }
+			owner = { has_dystopian_society = yes }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_holo_theatre_3
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_zex_avb_holo_entertainment_3"
+	}
+	upgrades = {
+		building_zex_avb_combat_arena_4
+	}
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		owner = { berg_is_warrior_culture = yes }
+	}
+}
+building_zex_avb_combat_arena_4 = {
+	base_buildtime = @b4_time
+	position_priority = 170
+	can_build = no
+	icon = building_avb_holo_theatre_4
+
+	category = amenity
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { berg_is_warrior_culture = no }
+			owner = { has_dystopian_society = yes }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_holo_theatre_4
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 4
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			exotic_gases = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			exotic_gases = @b4_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_zex_avb_holo_entertainment_4"
+	}
+
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		owner = { berg_is_warrior_culture = yes }
+	}
+}
 # Holdings
 building_godfather_mansion = {
 	base_buildtime = 600
@@ -2553,4 +2975,313 @@ building_indentured_employment = {
 	ai_weight = {
 		weight = 1000
 	}#Check resource income for a need
+}
+
+# Penal-World Capital
+building_penal_capital = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	icon = building_capital
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_penal_world = yes
+	}
+
+	convert_to = {
+		building_hive_capital
+		building_machine_capital
+		building_capital
+		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
+		building_ancient_palace
+		building_capital_nanotech
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+			berg_is_slave_world = no
+		}
+		job_roboticist_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 5
+		job_warden_add = 2
+		job_enforcer_add = 2
+		planet_max_buildings_add = @buildings_t1
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch_add = 1
+		osa_branch_add = 5
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = no
+		prod3 = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_warden_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_enforcer_effect_desc
+	}
+
+	upgrades = {
+		"building_penal_major_capital"
+	}
+}
+
+# Penal-World Major Capital
+building_penal_major_capital = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	icon = building_major_capital
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_penal_world = yes
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 20
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+			NOT = { has_modifier = slave_colony }
+		}
+		job_roboticist_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 10
+		job_warden_add = 2
+		job_enforcer_add = 3
+		planet_max_buildings_add = @buildings_t3
+		defense_armies_add = @tier_3_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch_add = 2
+		osa_branch_add = 4
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = no
+	}
+	upgrades = {
+		building_zex_avb_penal_capital_3
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_warden_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_enforcer_effect_desc
+	}
+}
+# System Penal Capital
+building_zex_avb_penal_capital_3 = {
+	base_buildtime = @b3_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	icon = building_system_capital
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		berg_is_penal_world = yes
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 40
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital	
+		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
+		building_ancient_palace
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+			NOT = { has_modifier = slave_colony }
+		}
+		job_roboticist_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 20
+		job_warden_add = 2
+		job_enforcer_add = 4
+		planet_max_buildings_add = @buildings_t4
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch_add = 3
+		osa_branch_add = 3
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = yes
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_warden_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_enforcer_effect_desc
+	}
 }

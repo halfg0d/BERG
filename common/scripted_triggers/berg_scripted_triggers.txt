@@ -274,7 +274,7 @@ berg_has_food_processing = {
 		has_active_building = building_avb_food_processing_4
 	}
 }
-berg_can_duelist_be_changed = {
+berg_is_warrior_culture = {
 	OR = {
 		has_valid_civic = civic_warrior_culture
 		AND = {
@@ -283,7 +283,6 @@ berg_can_duelist_be_changed = {
 		}
 	}
 }
-
 berg_avb_build_imperial_capital = {
 	OR = {
 		berg_has_avb_mod = no

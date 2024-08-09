@@ -141,10 +141,16 @@ building_avb_commercial_3 = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			has_modifier = slave_colony
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { is_agrarian_empire = { allow_invalid = yes } }
+			}
 		}
 	}
-	
+	convert_to = {
+		building_avb_zex_farmer_trade_3
+	}
 	inline_script = {
 		script = building_resources/vanilla/commercial
 		tier = 3
@@ -163,6 +169,10 @@ building_avb_commercial_3 = {
 	
 	show_tech_unlock_if = {
 		is_regular_empire = yes
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
 	}
 	ai_resource_production = {
 		energy = 6
@@ -201,9 +211,16 @@ building_avb_commercial_4 = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			owner = { is_gestalt = yes }
-			has_modifier = slave_colony
+			owner = { is_regular_empire = no }
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { is_agrarian_empire = { allow_invalid = yes } }
+			}
 		}
+	}
+	convert_to = {
+		building_avb_zex_farmer_trade_4
 	}
 	inline_script = {
 		script = building_resources/vanilla/commercial
@@ -223,6 +240,10 @@ building_avb_commercial_4 = {
 	
 	show_tech_unlock_if = { 
 		is_regular_empire = yes
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
 	}
 	ai_resource_production = {
 		energy = 6
@@ -261,9 +282,16 @@ building_avb_commercial_5 = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			owner = { is_gestalt = yes }
-			has_modifier = slave_colony
+			owner = { is_regular_empire = no }
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { is_agrarian_empire = { allow_invalid = yes } }
+			}
 		}
+	}
+	convert_to = {
+		building_avb_zex_farmer_trade_5
 	}
 	inline_script = {
 		script = building_resources/vanilla/commercial
@@ -279,6 +307,10 @@ building_avb_commercial_5 = {
 	
 	show_tech_unlock_if = { 
 		is_regular_empire = yes
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
 	}
 	ai_resource_production = {
 		energy = 6

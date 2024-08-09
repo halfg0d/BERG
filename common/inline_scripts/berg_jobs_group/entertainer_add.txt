@@ -7,7 +7,7 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	berg_can_duelist_be_changed = no
+	berg_is_warrior_culture = no
 	"
 }
 # Duelist
@@ -18,6 +18,6 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	berg_can_duelist_be_changed = yes
+	berg_is_warrior_culture = yes
 	"
 }

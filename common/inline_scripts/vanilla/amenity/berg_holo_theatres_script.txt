@@ -1,51 +1,38 @@
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			berg_can_duelist_be_changed = no
-		}
-	}
-	modifier = {
-		job_entertainer_add = @berg_amenity_holo_theatres_job_t$tier$
-	}
+inline_script = {
+	script = berg_jobs_group/entertainer_add
+	AMOUNT = @berg_amenity_holo_theatres_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
-
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			berg_can_duelist_be_changed = yes
-		}
-	}
-	modifier = {
-		job_duelist_add = @berg_amenity_holo_theatres_job_t$tier$
-	}
-}
-# zEX
+# ZEX
 triggered_planet_modifier = {
 	potential = {
 		berg_has_zexpanded_mod = yes
+		has_warrior_culture = no
 	}
 	modifier = {
 		trade_value_mult = 0.01
 	}
+	mult = $tier$
 }
-#Descriptions
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			berg_can_duelist_be_changed = no
-		}
+triggered_army_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_warrior_culture = yes
 	}
-	text = job_entertainer_effect_desc
+	modifier = {
+		army_defense_morale_mult = 0.20
+	}
+	mult = $tier$
 }
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			berg_can_duelist_be_changed = yes
-		}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_warrior_culture = yes
 	}
-	text = job_duelist_effect_desc
+	modifier = {
+		pop_happiness = 0.01
+	}
+	mult = $tier$
 }

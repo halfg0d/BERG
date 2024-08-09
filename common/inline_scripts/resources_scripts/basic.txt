@@ -12,3 +12,16 @@ upkeep = {
 	}
 	energy = @berg_$category$_$building$_upkeep_t$tier$
 }
+#
+inline_script = {
+	script = resources_scripts/special/zExpanded/Cost-modded
+	category = $category$
+	building = $building$
+	tier = $tier$
+}
+inline_script = {
+	script = resources_scripts/special/zExpanded/Upkeep-modded
+	category = $category$
+	building = $building$
+	tier = $tier$
+}

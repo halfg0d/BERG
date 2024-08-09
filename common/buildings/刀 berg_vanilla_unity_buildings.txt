@@ -3756,11 +3756,13 @@ building_autocurating_vault = {
 		is_spiritualist = no
 		is_megacorp = no
 		OR = {
-			NAND = {
-				is_hive_empire = yes
-				berg_has_zexpanded_mod = yes
-			}
+			# only Hive Minds may avoid effects and restrictions imposed by the 'make_spiritualist_1' Federation Perk
+			is_hive_empire = yes
 			has_make_spiritualist_perk = no
+		}
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_hive_empire = yes
 		}
 	}
 	inline_script = {
