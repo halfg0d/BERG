@@ -1,0 +1,25 @@
+# twisted code for merge two civics
+# shortcuts to understanding| Minerals:Food
+
+# upkeep 3:0
+upkeep = {
+	trigger = {
+		OR = {
+			berg_has_zexpanded_mod = no
+			AND = {
+				berg_has_zexpanded_mod = yes
+				berg_ST_30_upkeep = yes
+			}
+		}
+	}
+	energy = @berg_thirded_full_version_$version$
+}
+# upkeep 2:1
+upkeep = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		berg_ST_21_upkeep = yes
+	}
+	energy = @berg_thirded_twoThird_version_$version$
+	food = @berg_thirded_oneThird_version_$version$
+}

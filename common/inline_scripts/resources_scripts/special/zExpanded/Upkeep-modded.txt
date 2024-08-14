@@ -5,17 +5,7 @@
 upkeep = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				is_lithoid_empire = yes
-				AND = {
-					is_hive_empire = no
-					is_civic_plant_organic = no
-				}
-			}
-			berg_has_integrated_bioarchitecture = no
-		}
+		berg_ST_30_upkeep = yes
 	}
 	energy = @berg_$category$_$building$_upkeep_t$tier$
 }
@@ -23,14 +13,7 @@ upkeep = {
 upkeep = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		exists = owner
-		owner = {
-			is_lithoid_empire = no
-			OR = {
-				is_hive_empire = yes
-				is_civic_plant_organic = yes
-			}
-		}
+		berg_ST_21_upkeep = yes
 	}
 	energy = @berg_$category$_$building$_upkeepTwoThird_t$tier$
 	food = @berg_$category$_$building$_upkeepOneThird_t$tier$

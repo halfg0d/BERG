@@ -1,5 +1,9 @@
 #army variables
 # military_academy
+@berg_army_military_academy_costOneThird_t1 = 200.0
+@berg_army_military_academy_costOneThird_t2 = 333.33
+@berg_army_military_academy_costTwoThird_t1 = 400.0
+@berg_army_military_academy_costTwoThird_t2 = 666.67
 @berg_army_military_academy_cost_t1 = 600
 @berg_army_military_academy_cost_t2 = 1000
 @berg_army_military_academy_ecc_unity_t1 = 5
@@ -12,6 +16,10 @@
 @berg_army_military_academy_rare_cost_t2 = 150
 @berg_army_military_academy_rare_upkeep_t1 = 1
 @berg_army_military_academy_rare_upkeep_t2 = 4
+@berg_army_military_academy_upkeepOneThird_t1 = 1.67
+@berg_army_military_academy_upkeepOneThird_t2 = 2.0
+@berg_army_military_academy_upkeepTwoThird_t1 = 3.33
+@berg_army_military_academy_upkeepTwoThird_t2 = 4.0
 @berg_army_military_academy_upkeep_t1 = 5
 @berg_army_military_academy_upkeep_t2 = 6
 @berg_army_military_academy_cap_t1 = 1
@@ -43,13 +51,31 @@
 @berg_army_military_academy_ship_tracking_t1 = 0.01
 @berg_army_military_academy_ship_tracking_t2 = 0.015
 # dread_encampment
+@berg_army_dread_encampment_costOneThird_t1 = 200.0
+@berg_army_dread_encampment_costOneThird_t2 = 200.0
+@berg_army_dread_encampment_costTwoThird_t1 = 400.0
+@berg_army_dread_encampment_costTwoThird_t2 = 400.0
 @berg_army_dread_encampment_cost_t1 = 600
 @berg_army_dread_encampment_cost_t2 = 600
+@berg_army_dread_encampment_upkeepOneThird_t1 = 0.67
+@berg_army_dread_encampment_upkeepOneThird_t2 = 1.33
+@berg_army_dread_encampment_upkeepTwoThird_t1 = 1.33
+@berg_army_dread_encampment_upkeepTwoThird_t2 = 2.67
 @berg_army_dread_encampment_upkeep_t1 = 2
 @berg_army_dread_encampment_upkeep_t2 = 4
 @berg_army_dread_encampment_job_t1 = 2
 @berg_army_dread_encampment_job_t2 = 4
 # stronghold
+@berg_army_stronghold_costOneThird_t1 = 133.33
+@berg_army_stronghold_costOneThird_t2 = 200.0
+@berg_army_stronghold_costOneThird_t3 = 333.33
+@berg_army_stronghold_costOneThird_t4 = 666.67
+@berg_army_stronghold_costOneThird_t5 = 1333.33
+@berg_army_stronghold_costTwoThird_t1 = 266.67
+@berg_army_stronghold_costTwoThird_t2 = 400.0
+@berg_army_stronghold_costTwoThird_t3 = 666.67
+@berg_army_stronghold_costTwoThird_t4 = 1333.33
+@berg_army_stronghold_costTwoThird_t5 = 2666.67
 @berg_army_stronghold_cost_t1 = 400
 @berg_army_stronghold_cost_t2 = 600
 @berg_army_stronghold_cost_t3 = 1000
@@ -85,6 +111,16 @@
 @berg_army_stronghold_rare_upkeep_t3 = 4
 @berg_army_stronghold_rare_upkeep_t4 = 6
 @berg_army_stronghold_rare_upkeep_t5 = 8
+@berg_army_stronghold_upkeepOneThird_t1 = 0.33
+@berg_army_stronghold_upkeepOneThird_t2 = 0.33
+@berg_army_stronghold_upkeepOneThird_t3 = 2.0
+@berg_army_stronghold_upkeepOneThird_t4 = 4.0
+@berg_army_stronghold_upkeepOneThird_t5 = 6.0
+@berg_army_stronghold_upkeepTwoThird_t1 = 0.67
+@berg_army_stronghold_upkeepTwoThird_t2 = 0.67
+@berg_army_stronghold_upkeepTwoThird_t3 = 4.0
+@berg_army_stronghold_upkeepTwoThird_t4 = 8.0
+@berg_army_stronghold_upkeepTwoThird_t5 = 12.0
 @berg_army_stronghold_upkeep_t1 = 1
 @berg_army_stronghold_upkeep_t2 = 1
 @berg_army_stronghold_upkeep_t3 = 6
@@ -137,6 +173,14 @@
 @berg_army_planetary_shield_avb_dark_matter_upkeep_t2 = 0.0
 @berg_army_planetary_shield_avb_dark_matter_upkeep_t3 = 0.0
 @berg_army_planetary_shield_avb_dark_matter_upkeep_t4 = 4
+@berg_army_planetary_shield_costOneThird_t1 = 200.0
+@berg_army_planetary_shield_costOneThird_t2 = 333.33
+@berg_army_planetary_shield_costOneThird_t3 = 666.67
+@berg_army_planetary_shield_costOneThird_t4 = 1333.33
+@berg_army_planetary_shield_costTwoThird_t1 = 400.0
+@berg_army_planetary_shield_costTwoThird_t2 = 666.67
+@berg_army_planetary_shield_costTwoThird_t3 = 1333.33
+@berg_army_planetary_shield_costTwoThird_t4 = 2666.67
 @berg_army_planetary_shield_cost_t1 = 600
 @berg_army_planetary_shield_cost_t2 = 1000
 @berg_army_planetary_shield_cost_t3 = 2000
@@ -159,6 +203,14 @@
 @berg_army_planetary_shield_rare_upkeep_t2 = 4
 @berg_army_planetary_shield_rare_upkeep_t3 = 6
 @berg_army_planetary_shield_rare_upkeep_t4 = 8
+@berg_army_planetary_shield_upkeepOneThird_t1 = 1.67
+@berg_army_planetary_shield_upkeepOneThird_t2 = 2.0
+@berg_army_planetary_shield_upkeepOneThird_t3 = 4.0
+@berg_army_planetary_shield_upkeepOneThird_t4 = 6.0
+@berg_army_planetary_shield_upkeepTwoThird_t1 = 3.33
+@berg_army_planetary_shield_upkeepTwoThird_t2 = 4.0
+@berg_army_planetary_shield_upkeepTwoThird_t3 = 8.0
+@berg_army_planetary_shield_upkeepTwoThird_t4 = 12.0
 @berg_army_planetary_shield_upkeep_t1 = 5
 @berg_army_planetary_shield_upkeep_t2 = 6
 @berg_army_planetary_shield_upkeep_t3 = 12

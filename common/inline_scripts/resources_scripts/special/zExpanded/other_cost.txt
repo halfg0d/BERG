@@ -1,0 +1,33 @@
+# twisted code for merge two civics
+# shortcuts to understanding| Minerals:Food
+
+# cost 3:0
+cost = {
+	trigger = {
+		OR = {
+			berg_has_zexpanded_mod = no
+			AND = {
+				berg_has_zexpanded_mod = yes
+				berg_ST_30_cost = yes
+			}
+		}
+	}
+	minerals = @berg_thirded_full_version_$version$
+}
+# cost 2:1
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		berg_ST_21_cost = yes
+	}
+	minerals = @berg_thirded_twoThird_version_$version$
+	food = @berg_thirded_oneThird_version_$version$
+}
+# cost 0:3
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		berg_ST_03_cost = yes
+	}
+	food = @berg_thirded_full_version_$version$
+}

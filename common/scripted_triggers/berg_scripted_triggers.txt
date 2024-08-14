@@ -363,3 +363,58 @@ berg_has_any_alien_deposit = {
 		has_deposit = d_alien_pets_deposit
 	}
 }
+berg_ST_30_cost = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+	}
+}
+berg_ST_21_cost = {
+	owner = {
+		berg_has_integrated_bioarchitecture = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+		is_lithoid_empire = no
+	}
+}
+berg_ST_03_cost = {
+	exists = owner
+	owner = {
+		berg_has_integrated_bioarchitecture = yes
+		is_lithoid_empire = no
+	}
+}
+berg_ST_30_upkeep = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+		berg_has_integrated_bioarchitecture = no
+	}
+}
+berg_ST_21_upkeep = {
+	exists = owner
+	owner = {
+		is_lithoid_empire = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+	}
+}
+is_berg_host = {
+	has_country_flag = berg_host
+}

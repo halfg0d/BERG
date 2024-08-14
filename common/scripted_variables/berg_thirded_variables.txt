@@ -1,0 +1,39 @@
+### Here are stored variabels for cost/upkeep for buidling when z Expanded is installed and it's awesome feature can be added
+# Schematic:
+# @berg_thirded_full_version_$version$ = 
+# @berg_thirded_twoThird_version_$version$ = 
+# @berg_thirded_oneThird_version_$version$ = 
+# Example:
+# @berg_thirded_full_version_600 = 600
+# @berg_thirded_twoThird_version_600 = 400
+# @berg_thirded_oneThird_version_600 = 200
+@berg_thirded_full_version_200 = 200
+@berg_thirded_oneThird_version_200 = 66.67
+@berg_thirded_twoThird_version_200 = 133.33
+@berg_thirded_full_version_1 = 1
+@berg_thirded_oneThird_version_1 = 0.33
+@berg_thirded_twoThird_version_1 = 0.67
+@berg_thirded_full_version_400 = 400
+@berg_thirded_oneThird_version_400 = 133.33
+@berg_thirded_twoThird_version_400 = 266.67
+@berg_thirded_full_version_2 = 2
+@berg_thirded_oneThird_version_2 = 0.67
+@berg_thirded_twoThird_version_2 = 1.33
+@berg_thirded_full_version_600 = 600
+@berg_thirded_oneThird_version_600 = 200.0
+@berg_thirded_twoThird_version_600 = 400.0
+@berg_thirded_full_version_5 = 5
+@berg_thirded_oneThird_version_5 = 1.67
+@berg_thirded_twoThird_version_5 = 3.33
+@berg_thirded_full_version_800 = 800
+@berg_thirded_oneThird_version_800 = 266.67
+@berg_thirded_twoThird_version_800 = 533.33
+@berg_thirded_full_version_8 = 8
+@berg_thirded_oneThird_version_8 = 2.67
+@berg_thirded_twoThird_version_8 = 5.33
+@berg_thirded_full_version_2000 = 2000
+@berg_thirded_oneThird_version_2000 = 666.67
+@berg_thirded_twoThird_version_2000 = 1333.33
+@berg_thirded_full_version_10 = 10
+@berg_thirded_oneThird_version_10 = 3.33
+@berg_thirded_twoThird_version_10 = 6.67

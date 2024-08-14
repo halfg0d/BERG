@@ -5,16 +5,7 @@
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		exists = owner
-		owner = {
-			OR = {
-				is_lithoid_empire = yes
-				AND = {
-					is_hive_empire = no
-					is_civic_plant_organic = no
-				}
-			}
-		}
+		berg_ST_30_cost = yes
 	}
 	minerals = @berg_$category$_$building$_cost_t$tier$
 }
@@ -22,14 +13,7 @@ cost = {
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		owner = {
-			berg_has_integrated_bioarchitecture = no
-			OR = {
-				is_hive_empire = yes
-				is_civic_plant_organic = yes
-			}
-			is_lithoid_empire = no
-		}
+		berg_ST_21_cost = yes
 	}
 	minerals = @berg_$category$_$building$_costTwoThird_t$tier$
 	food = @berg_$category$_$building$_costOneThird_t$tier$
@@ -37,11 +21,8 @@ cost = {
 # cost 0:3
 cost = {
 	trigger = {
-		exists = owner
-		owner = {
-			berg_has_integrated_bioarchitecture = yes
-			is_lithoid_empire = no
-		}
+		berg_has_zexpanded_mod = yes
+		berg_ST_03_cost = yes
 	}
 	food = @berg_$category$_$building$_cost_t$tier$
 }
