@@ -499,3 +499,9 @@ berg_ST_21_upkeep = {
 is_berg_host = {
 	has_country_flag = berg_host
 }
+berg_has_better_diplo_mod = {
+	has_global_flag = better_diplo_installed
+}
+berg_has_zofe_sandbox_mod = {
+	zofe_sandbox = yes
+}
