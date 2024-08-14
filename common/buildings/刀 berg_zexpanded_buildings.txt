@@ -1,0 +1,3306 @@
+#############
+# z Expanded pops buildings
+#############
+@b1_hive_minerals = 267
+@b1_hive_food = 133
+@b1_upkeep_hive = 1.3
+@b1_upkeep_food = 0.7
+
+@b2_hive_minerals = 400
+@b2_hive_food = 200
+@b2_upkeep_hive = 3.3
+@b2_upkeep_food = 1.7
+
+@b3_hive_minerals = 533
+@b3_hive_food = 267
+@b3_upkeep_hive = 5.3
+@b3_upkeep_food = 2.7
+
+@b4_hive_minerals = 1333
+@b4_hive_food = 667
+@b4_upkeep_hive = 6.7
+@b4_upkeep_food = 3.3
+
+building_hive_primary_confluence = {
+	base_buildtime = @b3_time
+	empire_limit = {
+		base = 1
+	}
+	icon = building_hive_capital
+
+	category = unity
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_hive_empire = no }
+		}
+	}
+
+	convert_to = {
+		building_autocurating_vault
+		building_citadel_of_faith
+		building_corporate_vault
+		building_alpha_hub
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+					is_lithoid_empire = no
+				}
+			}
+			minerals = @b2_hive_minerals
+			food = @b2_hive_food
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					has_valid_civic = civic_integrated_bioarchitecture
+					is_lithoid_empire = no
+				}
+			}
+			food = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			minerals = 1200
+			exotic_gases = 375
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+					is_lithoid_empire = no
+				}
+			}
+			minerals = 800
+			food = 400
+			exotic_gases = 375
+		}
+		cost = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					has_valid_civic = civic_integrated_bioarchitecture
+					is_lithoid_empire = no
+				}
+			}
+			food = 1200
+			exotic_gases = 375
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+				}
+			}
+			energy = @b2_upkeep_hive
+			food = @b2_upkeep_food
+			exotic_gases = @b2_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = no
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+				}
+			}
+			energy = 8
+			exotic_gases = 3
+		}
+
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+				}
+			}
+			energy = 5.3
+			food = 2.7
+			exotic_gases = 3
+		}
+		upkeep = {
+			trigger = {
+				has_ringworld_output_boost = yes
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+				}
+			}
+			energy = 8
+			exotic_gases = 3
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+					has_edict = synaptic_reinforcement
+				}
+			}
+			energy = 1
+			food = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					has_edict = synaptic_reinforcement
+				}
+			}
+			energy = 1
+			minerals = 1
+		}
+	}
+	inline_script = {
+		script = vanilla/unity/berg_vault_script
+		tier = 1
+	}
+	
+	prerequisites = {
+		"tech_autocurating_vault"
+	}
+	upgrades = {
+		"building_zex_avb_hive_primary_confluence_2" #AVB+ZEX
+	}
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_hive_empire = yes
+	}
+}
+building_zex_avb_hive_primary_confluence_2 = {
+	base_buildtime = @avb_b4_time
+	can_build = no
+	icon = building_hive_major_capital
+
+	category = unity
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+
+	allow = {
+		has_upgraded_capital_4 = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_hive_empire = no }
+		}
+	}
+
+	convert_to = {
+		building_autocurating_vault
+		building_citadel_of_faith
+		building_corporate_vault
+		building_alpha_hub
+	}
+
+	inline_script = {
+		script = building_resources/vanilla/vault
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/unity/berg_vault_script
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_avb_autocurating_vault_2"
+	}
+
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_hive_empire = yes
+	}
+}
+
+
+building_citadel = {
+	base_buildtime = @b2_time
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+	icon = building_fortress
+
+	category = army
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+	}
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_ai = yes }
+		OR = {
+			AND = {
+				num_buildings = { type = building_citadel value > 1 }
+				free_building_slots = 0
+				owner = {
+					is_militarist = no
+					used_naval_capacity_percent < 0.4
+				}
+			}
+			AND = {
+				num_buildings = { type = building_citadel value > 2 }
+				free_building_slots = 0
+				owner = {
+					is_militarist = yes
+					used_naval_capacity_percent < 0.4
+				}
+			}
+		}
+	}
+	
+	inline_script = {
+		script = vanilla/army/berg_stronghold_script
+		tier = 3
+	}
+
+	resources = {
+		category = planet_buildings_strongholds
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_active_tradition = tr_unyielding_resistance_is_frugal
+				}
+			}
+			unity = 3
+		}
+		cost = {
+			minerals = @b3_minerals
+			volatile_motes = @b3_rare_cost
+		}			
+		upkeep = {
+			energy = 1
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_planetary_citadel"
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+}
+
+building_animal_evaluation_laboratory = {
+	base_buildtime = @b1_time
+	position_priority = 135
+	icon = building_xeno_zoo
+
+	category = resource
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_guided_sapience_empire = no
+		}
+		planet = {
+			OR = {
+				berg_has_any_alien_deposit = yes
+				AND = {
+					exists = owner
+					owner = { has_policy_flag = pre_sapients_protect }
+					any_owned_pop = {
+						is_sapient = no
+					}
+				}
+				any_owned_pop = {
+					is_livestock = yes
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_machine_empire = no
+				}
+			}
+			planet = {
+				NOR = {
+					berg_has_any_alien_deposit = yes
+					AND = {
+						exists = owner
+						owner = { has_policy_flag = pre_sapients_protect }
+						any_owned_pop = {
+							is_sapient = no
+						}
+					}
+					any_owned_pop = {
+						is_livestock = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_machine_empire = yes
+	}
+	
+	planet_modifier = {
+		job_calculator_add = 1
+		job_xeno_zoo_keeper_drone_add = 1
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			has_global_flag = better_diplo_installed
+			is_active_resolution = resolution_galacticcooperation_sanctity_of_life					
+		}
+		modifier = {
+			planet_amenities_no_happiness_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				has_global_flag = better_diplo_installed
+				is_active_resolution = resolution_galacticcooperation_sanctity_of_life
+			}
+			society_research = 5
+		}
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_alien_life_studies_gestalt"
+	}
+
+	triggered_desc = {
+		text = job_calculator_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_xeno_zoo_keeper_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				any_owned_pop = {
+					is_sapient = no
+				}
+			}
+		}
+		text = job_xeno_zoo_animal_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				any_owned_pop = {
+					is_livestock = yes
+				}
+			}
+		}
+		text = job_livestock_zoo_animal_effect_desc
+	}
+}
+
+building_animal_evaluation_laboratory_hive = {
+	base_buildtime = @b1_time
+	position_priority = 135
+	icon = building_xeno_zoo
+
+	category = resource
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_guided_sapience_empire = no
+		}
+		planet = {
+			OR = {
+				berg_has_any_alien_deposit = yes
+				AND = {
+					exists = owner
+					owner = { has_policy_flag = pre_sapients_protect }
+					any_owned_pop = {
+						is_sapient = no
+					}
+				}
+				any_owned_pop = {
+					is_livestock = yes
+				}
+			}
+		}
+	}
+	
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				owner = {
+					is_hive_empire = no
+				}
+			}
+			planet = {
+				NOR = {
+					berg_has_any_alien_deposit = yes
+					AND = {
+						exists = owner
+						owner = { has_policy_flag = pre_sapients_protect }
+						any_owned_pop = {
+							is_sapient = no
+						}
+					}
+					any_owned_pop = {
+						is_livestock = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_hive_empire = yes
+	}
+	
+	planet_modifier = {
+		job_brain_drone_add = 1
+		job_xeno_zoo_keeper_drone_add = 1
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			has_global_flag = better_diplo_installed
+			is_active_resolution = resolution_galacticcooperation_sanctity_of_life					
+		}
+		modifier = {
+			planet_amenities_no_happiness_add = 5
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = {
+				has_global_flag = better_diplo_installed
+				is_active_resolution = resolution_galacticcooperation_sanctity_of_life
+			}
+			society_research = 5
+		}
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_alien_life_studies_gestalt"
+	}
+
+	triggered_desc = {
+		text = job_brain_drone_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_xeno_zoo_keeper_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				any_owned_pop = {
+					is_sapient = no
+				}
+			}
+		}
+		text = job_xeno_zoo_animal_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			planet = {
+				any_owned_pop = {
+					is_livestock = yes
+				}
+			}
+		}
+		text = job_livestock_zoo_animal_effect_desc
+	}
+}
+
+# overlord
+
+holding_house_of_pleasure = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	base_cap_amount = 1
+
+	category = amenity
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			rare_crystals = 2
+		}
+	}
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_high_prio_holdings = yes
+		owner.overlord = { is_pleasure_seeker = yes }
+	}
+	
+	triggered_country_modifier = {
+		planet_amenities_mult = 0.1
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			planet = {
+				OR = {
+					berg_is_gaia_world = yes
+					berg_is_resort_world = yes
+					has_modifier = pleasure_palace
+				}
+			}
+		}
+		planet_amenities_mult = 0.05
+	}
+
+	planet_modifier = {
+		monthly_loyalty = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		planet_amenities_add = -15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		planet_amenities_no_happiness_add = -15
+	}
+}
+holding_overlord_arena = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_combat_arena
+	base_cap_amount = 1
+
+	category = amenity
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_high_prio_holdings = yes
+		owner.overlord = {
+			OR = {
+				berg_is_warrior_culture = yes
+				is_despoiler_empire = yes
+			}
+		}
+	}
+	
+	triggered_country_modifier = {
+		planet_amenities_mult = 0.06
+	}
+	
+	triggered_country_modifier = {
+		potential = {
+			planet.owner = {
+				OR = {
+					is_militarist = yes
+					is_civic_militarist = yes
+				}
+			}
+		}
+		planet_amenities_mult = 0.03
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				OR = {
+					is_militarist = yes
+					is_civic_militarist = yes
+				}
+			}
+		}
+		monthly_loyalty = 0.5
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				OR = {
+					is_pacifist = yes
+					is_civic_machine_servitor = yes
+					is_inwards_perfection_empire = yes
+					is_pompous_empire = yes
+				}
+			}
+		}
+		monthly_loyalty = -0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_duelist_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_duelist_drone_add = 2
+	}
+
+	triggered_desc = {
+		text = job_overlord_duelist_effect_desc
+	}
+}
+holding_hunting_lodge = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = holding_park_ranger_lodge
+	base_cap_amount = 1
+
+	category = amenity
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_high_prio_holdings = yes
+		owner.overlord = {
+			has_origin = origin_natural_hunters
+		}
+		NOR = {
+			is_city_world = yes
+			berg_is_hive_world = yes
+			is_machine_world = yes
+			is_relic_world = yes
+			has_deposit = d_exploited_homeworld
+		}
+		is_artificial = no
+	}
+
+	destroy_trigger = {
+		OR = {
+			is_city_world = yes
+			berg_is_hive_world = yes
+			is_machine_world = yes
+			is_relic_world = yes
+			has_deposit = d_exploited_homeworld
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = no_free_district_for_hunting_lodge
+			planet = {
+				num_free_districts = {
+					type = any
+					value > 0
+				}
+			}
+		}
+	}
+	
+	triggered_country_modifier = {
+		planet_amenities_mult = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_huntmaster_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_huntmaster_drone_add = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				NOT = { has_origin = origin_natural_hunters }
+			}
+		}
+		monthly_loyalty = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				has_origin = origin_natural_hunters
+			}
+		}
+		monthly_loyalty = -0.5
+	}
+	
+	on_built = {
+		planet = {
+			add_blocker = { type = d_hunting_preserve_blocker }
+			planet_event = { id = onactionpops.9 days = 360 }
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			if = {
+				limit = { has_deposit = d_hunting_preserve_blocker }
+				remove_deposit = d_hunting_preserve_blocker
+			}
+		}
+	}
+
+	triggered_desc = {
+		text = job_overlord_huntmaster_effect_desc
+	}
+}
+holding_coordination_center = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = holding_distributed_processing
+	base_cap_amount = 1
+
+	category = research
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_high_prio_holdings = yes
+		owner.overlord = {
+			is_machine_empire = yes
+			OR = {
+				has_valid_civic = civic_harm_machine
+				has_valid_civic = civic_machine_memorialist
+				has_valid_civic = civic_machine_diplomatic_protocols
+				has_origin = origin_extant_creators
+				has_origin = origin_scion
+			}
+		}
+		has_overlord_dlc = yes
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_coordinator_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_coordinator_drone_add = 2
+	}
+
+	triggered_desc = {
+		text = job_overlord_coordinator_effect_desc
+	}
+}
+holding_overlord_necrophage_elevation_chamber = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_chamber_of_elevation_1
+	base_cap_amount = 1
+
+	desc = {
+		trigger = {
+			OR = {
+				NOT = { exists = owner }
+				owner = { is_hive_empire = no }
+			}
+		}
+		text = holding_necrophage_elevation_chamber_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = holding_necrophage_elevation_chamber_desc_hive
+	}
+
+	category = pop_assembly
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		owner.overlord = {
+			is_necrophage_empire = yes
+		}
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
+		owner = {
+			is_necrophage_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			consumer_goods = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		monthly_loyalty = -1
+		job_overlord_necro_apprentice_add = 4
+	}
+
+	triggered_desc = {
+		text = job_overlord_necro_apprentice_effect_desc
+		trigger = {
+			exists = owner
+			owner = {
+				is_lithoid_empire = no
+				is_hive_empire = no
+			}
+		}
+	}
+	triggered_desc = {
+		text = job_overlord_necro_apprentice_effect_lithoid_desc
+		trigger = {
+			exists = owner
+			owner = {
+				is_lithoid_empire = yes
+				is_hive_empire = no
+			}
+		}
+	}
+	triggered_desc = {
+		text = job_overlord_necro_apprentice_effect_hive_desc
+		trigger = {
+			exists = owner
+			owner = {
+				is_lithoid_empire = no
+				is_hive_empire = yes
+			}
+		}
+	}
+	triggered_desc = {
+		text = job_overlord_necro_apprentice_effect_hive_lithoid_desc
+		trigger = {
+			exists = owner
+			owner = {
+				is_lithoid_empire = yes
+				is_hive_empire = yes
+			}
+		}
+	}
+	triggered_desc = {
+		text = necrophage_elevation_timer_tooltip
+		trigger = {
+			has_planet_flag = necrophage_elevation_timer
+		}
+	}
+}
+holding_brood_chamber = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_spawning_pool
+	base_cap_amount = 1
+
+	category = pop_assembly
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		owner.overlord = {
+			has_valid_civic = civic_living_hosts
+		}
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
+		owner = {
+			NOR = {
+				has_valid_civic = civic_living_hosts
+				is_robot_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		owner = {
+			OR = {
+				has_valid_civic = civic_living_hosts
+				is_robot_empire = yes
+				is_lithoid_empire = yes
+			}
+		}
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			consumer_goods = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		monthly_loyalty = -2
+		job_overlord_living_tribute_add = 4
+	}
+
+	triggered_desc = {
+		text = job_overlord_living_tribute_effect_desc
+	}
+}
+
+### NPC ###
+
+holding_enlightenment_center = {
+	base_buildtime = @b2_time
+	owner_type = subject_holding
+	icon = building_heritage_site
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		owner.overlord = {
+			is_minamar = yes
+		}
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
+	}
+
+	resources = {
+		category = planet_holdings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			consumer_goods = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		monthly_loyalty = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = no }
+		}
+		job_overlord_debt_collector_add = 1
+		job_overlord_enlightenment_technician_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = { is_gestalt = yes }
+		}
+		job_overlord_debt_collector_drone_add = 1
+		job_overlord_enlightenment_technician_add = 1
+	}
+
+	triggered_desc = {
+		text = job_overlord_enlightenment_technician_effect_desc
+	}
+	triggered_desc = {
+		text = job_overlord_enlightenment_technician_drone_effect_desc
+	}
+	triggered_desc = {
+		text = holding_enlightenment_center_effect_desc
+	}
+	on_built = {
+		planet = {
+			planet_event = { id = onactionpops.19 days = 360 }
+		}
+	}
+}
+# Farmer Trade
+building_farmer_market = {
+	base_buildtime = @b1_time
+	position_priority = 160
+
+	exempt_from_ai_planet_specialization = no
+	category = trade
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		NOT = { has_modifier = slave_colony }
+		NOT = { has_building = building_low_tech_capital }
+	}
+
+	allow = {
+		OR = {
+			NOR = {
+				has_building = building_farmer_complex
+				num_buildings = { type = building_farmer_market value > 1 }
+			}
+			owner = { is_ai = no }
+		}
+	}
+
+	destroy_trigger = {
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			has_modifier = slave_colony
+			AND = {
+				owner = { is_ai = yes }
+				OR = {
+					has_building = building_farmer_complex
+					num_buildings = { type = building_farmer_market value > 2 }
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_commercial_zone
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.02
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.02
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_civic = civic_merchant_guilds } }
+		}
+		modifier = {
+			job_clerk_add = 2
+			job_trader_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		modifier = {
+			job_manager_add = 1
+			job_clerk_add = 1
+			job_trader_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_mercantile_commercial_enterprise
+			}
+		}
+		modifier = {
+			job_trader_add = 1
+		}
+	}
+
+	triggered_desc = {
+		text = job_trader_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+					is_individual_machine = no
+				}
+			}
+			energy = @b1_upkeep
+			food = @b2_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			energy = @b1_upkeep
+			minerals = @b2_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_individual_machine = yes
+				}
+			}
+			energy = @b3_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_interplanetary_commerce"
+	}
+
+	show_tech_unlock_if = { 
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+a
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		text = job_manager_effect_desc
+	}
+
+	upgrades = {
+		"building_farmer_complex"
+	}
+
+	ai_resource_production = {
+		energy = 2
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_farmer_complex = {
+	base_buildtime = @b2_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		NOT = { has_modifier = slave_colony }
+		has_building = building_farmer_market
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			has_modifier = slave_colony
+		}
+	}
+
+	convert_to = {
+		building_commercial_megaplex
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.04
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.04
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.04
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_civic = civic_merchant_guilds } }
+		}
+		modifier = {
+			job_clerk_add = 4
+			job_trader_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		modifier = {
+			job_manager_add = 1
+			job_clerk_add = 3
+			job_trader_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_mercantile_commercial_enterprise
+			}
+		}
+		modifier = {
+			job_trader_add = 1
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+					is_individual_machine = no
+				}
+			}
+			energy = @b2_upkeep
+			food = @b3_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			energy = @b2_upkeep
+			minerals = @b3_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_individual_machine = yes
+				}
+			}
+			energy = @b4_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_interstellar_economics"
+	}
+
+	show_tech_unlock_if = { 
+		is_regular_empire = yesv
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+	upgrades = {
+		building_avb_zex_farmer_trade_3
+	}
+	triggered_desc = {
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_trader_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		text = job_manager_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+#AVB+ZEX
+building_avb_zex_farmer_trade_3 = {
+	base_buildtime = @avb_b4_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+	icon = building_avb_food_processing_3
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		berg_is_slave_world = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+			berg_has_avb_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_commercial_3
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.06
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.06
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 3
+	}
+	prerequisites = {
+		"tech_avb_food_processing_3"
+	}
+
+	show_tech_unlock_if = { 
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+	upgrades = {
+		building_avb_zex_farmer_trade_4
+	}
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+building_avb_zex_farmer_trade_4 = {
+	base_buildtime = @avb_b5_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+	icon = building_avb_food_processing_4
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		berg_is_slave_world = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+			berg_has_avb_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_commercial_4
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.08
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.08
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 4
+	}
+
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 4
+	}
+	prerequisites = {
+		"tech_avb_food_processing_4"
+	}
+	upgrades = {
+		building_avb_zex_farmer_trade_5
+	}
+	show_tech_unlock_if = { 
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+building_avb_zex_farmer_trade_5 = {
+	base_buildtime = @avb_b6_time
+	position_priority = 160
+	can_build = no
+
+	category = trade
+	icon = building_avb_food_processing_4
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		berg_is_slave_world = no
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { NOT = { is_agrarian_empire = { allow_invalid = yes } } }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+			berg_has_avb_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_commercial_5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = no }
+		}
+		modifier = {
+			pop_growth_speed = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_individual_machine = yes }
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.1
+		}
+	}
+	inline_script = {
+		script = building_resources/vanilla/commercial
+		tier = 5
+	}
+
+	inline_script = {
+		script = vanilla/trade/berg_commercial_script
+		tier = 5
+	}
+	prerequisites = {
+		"tech_avb_food_processing_4"
+	}
+
+	show_tech_unlock_if = { 
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		is_regular_empire = yes
+		is_agrarian_empire = { allow_invalid = yes }
+	}
+
+	ai_resource_production = {
+		energy = 4
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		energy = 6
+		trigger = {
+			OR = {
+				num_unemployed >= 10
+				num_assigned_jobs = {
+					job = servant
+					value >= 10
+				}
+			}
+		}
+	}
+}
+# Individualistic Enclave
+# currently no
+
+# Amenity Buildings
+building_combat_arena = {
+	base_buildtime = @b1_time
+	position_priority = 170
+	#icon = building_holo_theatres
+
+	category = amenity
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_slave_world = no
+		owner = {
+			is_regular_empire = yes
+			berg_is_warrior_culture = yes
+			has_dystopian_society = no
+		}
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			AND = {
+				NOT = { has_available_jobs = duelist }
+				NOT = { has_forbidden_jobs = duelist }
+			}
+		}
+		NOT = { has_building = building_low_tech_capital }
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			berg_has_zexpanded_mod = no
+			owner = { is_regular_empire = no }
+			owner = { berg_is_warrior_culture = no }
+			owner = { has_dystopian_society = yes }
+			berg_is_slave_world = yes
+			AND = {
+				owner = { is_ai = yes }
+				free_amenities > 60
+			}
+			AND = {
+				owner = { is_ai = yes }
+				free_amenities > 40
+				num_buildings = { type = building_holo_theatres value > 2 }
+			}
+			AND = {
+				free_building_slots = 0
+				free_district_slots = 0 # can build more city districts
+				owner = { is_ai = yes }
+				OR = {
+					free_amenities > 40
+					AND = {
+						count_owned_pop = { limit = { is_sapient = yes } count < 75 }
+						owner = {
+							is_ai = yes
+							is_robot_empire = no
+							has_technology = tech_frontier_health 
+						}
+						NOR = {
+							has_building = building_clinic
+							has_building = building_hospital
+						}
+					}
+					AND = {
+						owner = {
+							is_ai = yes
+							NOT = { has_policy_flag = robots_outlawed }
+							has_technology = tech_robotic_workers 
+						}
+						NOT = { has_building = building_robot_assembly_plant }
+						NOT = { has_building = building_clone_vats }
+					}
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_holo_theatres
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_virtual_combat_arena"
+	}
+
+	prerequisites = {
+		"tech_holo_entertainment"
+	}
+
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		owner = { berg_is_warrior_culture = yes }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_ai = yes }
+			str_force_holotheatre = yes
+		}
+		modifier = {
+			job_starnet_spice_melange_farmer_add = 3
+			job_starnet_spice_melange_antifarmer_add = -3
+		}
+	}
+
+	ai_resource_production = {
+		alloys = 10
+		trigger = { free_amenities < -11 }
+	}
+	ai_resource_production = {
+		energy = 10
+		physics_research = 15
+		trigger = { free_amenities < -11 }
+	}
+}
+
+building_virtual_combat_arena = {
+	base_buildtime = @b2_time
+	position_priority = 170
+	can_build = no
+	#icon = building_hyper_entertainment_forum
+
+	category = amenity
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { berg_is_warrior_culture = no }
+			owner = { has_dystopian_society = yes }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+		}
+	}
+
+	convert_to = {
+		building_hyper_entertainment_forum
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_virtual_combat_arena"
+	}
+	upgrades = {
+		building_zex_avb_combat_arena_3
+	}
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		owner = { berg_is_warrior_culture = yes }
+	}
+}
+
+building_zex_avb_combat_arena_3 = {
+	base_buildtime = @b3_time
+	position_priority = 170
+	can_build = no
+	icon = building_avb_holo_theatre_3
+
+	category = amenity
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { berg_is_warrior_culture = no }
+			owner = { has_dystopian_society = yes }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_holo_theatre_3
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 3
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_zex_avb_holo_entertainment_3"
+	}
+	upgrades = {
+		building_zex_avb_combat_arena_4
+	}
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		owner = { berg_is_warrior_culture = yes }
+	}
+}
+building_zex_avb_combat_arena_4 = {
+	base_buildtime = @b4_time
+	position_priority = 170
+	can_build = no
+	icon = building_avb_holo_theatre_4
+
+	category = amenity
+	
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+	}
+
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			owner = { berg_is_warrior_culture = no }
+			owner = { has_dystopian_society = yes }
+			berg_is_slave_world = yes
+			berg_has_zexpanded_mod = no
+		}
+	}
+
+	convert_to = {
+		building_avb_holo_theatre_4
+	}
+	inline_script = {
+		script = vanilla/amenity/berg_holo_theatres_script
+		tier = 4
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+			exotic_gases = @b4_rare_cost
+		}
+		upkeep = {
+			energy = @b4_upkeep
+			exotic_gases = @b4_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_zex_avb_holo_entertainment_4"
+	}
+
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		owner = { berg_is_warrior_culture = yes }
+	}
+}
+# Holdings
+building_godfather_mansion = {
+	base_buildtime = 600
+	base_cap_amount = 1
+	icon = building_luxury_residence
+
+	owner_type = corporate
+
+	category = government
+
+	prerequisites = {"tech_executive_retreat" }
+
+	show_tech_unlock_if = {
+		is_criminal_syndicate = yes
+	}
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {is_criminal_syndicate = yes }
+	}
+
+	allow = {
+		num_pops >= 25
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.1
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.05
+		job_mob_boss_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 60
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 5
+			exotic_gases = 1
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value >= 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			branch_office_owner = {
+				NOT = {
+					any_owned_planet = {free_amenities < 20 }
+				}
+			}
+		}
+	}
+}
+
+building_xeno_tourism_agency_crime = {
+	base_buildtime = 600
+	base_cap_amount = 1
+	icon = building_public_relations_office
+
+	owner_type = corporate
+
+	category = government
+
+	prerequisites = {"tech_xeno_tourism_agency" }
+
+	show_tech_unlock_if = {
+		is_criminal_syndicate = yes
+	}
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {is_criminal_syndicate = yes }
+	}
+
+	allow = {
+		num_pops >= 25
+	}
+
+	country_modifier = {
+		planet_immigration_pull_mult = 0.33
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.1
+		planet_emigration_push_add = 25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 50
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	triggered_desc = {
+		text = building_xeno_tourism_agency_crime_effect_desc
+	}
+
+	on_built = {
+		planet = {
+			planet_event = {id = onactionpops.8 days = 1800 }
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			rare_crystals = 50
+		}
+		upkeep = {
+			energy = 5
+			rare_crystals = 1
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 0
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = rare_crystals
+					value >= 2
+				}
+			}
+		}
+	}
+}
+
+building_corp_robot = {
+
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_robot_assembly_plant
+
+	owner_type = corporate
+
+	category = pop_assembly
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			OR = {
+				has_origin = origin_mechanists
+				has_valid_civic = civic_corp_machine_replication
+			}
+			is_criminal_syndicate = no
+		}
+		exists = owner
+		owner = {NOT = {has_policy_flag = robots_outlawed } }
+	}
+
+	allow = {
+		exists = owner
+		owner = {has_technology = tech_robotic_workers }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {has_policy_flag = robots_outlawed }
+			owner = {NOT = {has_technology = tech_robotic_workers } }
+		}
+	}
+
+	planet_modifier = {
+		job_roboticist_corp_add = 1
+		planet_pop_assemblers_upkeep_mult = -0.1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 15
+			engineering_research = 15
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				OR = {
+					NOT = {has_technology = tech_robotic_workers }
+					has_policy_flag = robots_outlawed
+				}
+			}
+		}
+	}
+}
+building_corp_robot_crime = {
+
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_robot_assembly_plant
+
+	owner_type = corporate
+
+	category = pop_assembly
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			OR = {
+				has_origin = origin_mechanists
+				has_valid_civic = civic_corp_machine_replication
+			}
+			is_criminal_syndicate = yes
+		}
+		exists = owner
+		owner = {NOT = {has_policy_flag = robots_outlawed } }
+	}
+
+	allow = {
+		exists = owner
+		owner = {has_technology = tech_robotic_workers }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {has_policy_flag = robots_outlawed }
+			owner = {NOT = {has_technology = tech_robotic_workers } }
+		}
+	}
+
+	planet_modifier = {
+		job_roboticist_corp_add = 1
+		planet_pop_assemblers_upkeep_mult = -0.08
+		trade_value_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 15
+			engineering_research = 15
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				OR = {
+					NOT = {has_technology = tech_robotic_workers }
+					has_policy_flag = robots_outlawed
+				}
+			}
+		}
+	}
+}
+
+building_corp_construction = {
+
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_residence
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			OR = {
+				has_valid_civic = civic_functional_architecture_megacorp
+				has_valid_civic = civic_corp_plant_organic
+			}
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.15
+		job_manager_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+		exists = branch_office_owner
+			branch_office_owner = {has_valid_civic = civic_corp_plant_organic }
+		}
+		modifier = {
+			planet_building_build_speed_mult = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			engineering_research = 12
+		}
+	}
+
+	triggered_desc = {
+		text = building_corp_construction_effect_desc
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_corp_construction_crime = {
+
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_residence
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			OR = {
+				has_valid_civic = civic_functional_architecture_megacorp
+				has_valid_civic = civic_corp_plant_organic
+			}
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.10
+		trade_value_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_branch_office = yes
+		exists = branch_office_owner
+			branch_office_owner = {has_valid_civic = civic_corp_plant_organic }
+		}
+		modifier = {
+			planet_building_build_speed_mult = 0.05
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			engineering_research = 12
+		}
+	}
+
+	triggered_desc = {
+		text = building_corp_construction_effect_desc
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_corp_security = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_precinct_house
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			has_valid_civic = civic_corp_security
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier = {
+		job_enforcer_add = 1
+		planet_crime_add = -20
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_corp_security_crime = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	icon = building_precinct_house
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			has_valid_civic = civic_corp_security
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_megastore = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_galactic_stock_exchange
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_criminal_syndicate = no
+			has_valid_civic = civic_megastore
+		}
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 0.10
+		job_store_manager_add = 1
+		job_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+			consumer_goods = 100
+		}
+		produces = {
+			energy = 12
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}#Check resource income for a need
+}
+
+building_black_market = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_commercial_zone
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+			has_valid_civic = civic_megastore
+		}
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 0.10
+		trade_value_add = 10
+		job_criminal_smuggler_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+			consumer_goods = 100
+		}
+		produces = {
+			energy = 12
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_mega_farmer_market = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_farmer_market
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_criminal_syndicate = no
+			has_valid_civic = civic_agribusiness
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_biological_pops"
+			count_owned_pop = {
+				limit = {
+					is_sapient = yes
+					is_robot_pop = no
+					is_lithoid = no
+				}
+				count >= 10
+			}
+		}
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 0.10
+		biological_pop_growth_speed = 0.1
+		job_clerk_add = 2
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+			food = 400
+		}
+		produces = {
+			energy = 12
+		}
+		upkeep = {
+			food = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}#Check resource income for a need
+}
+
+building_black_farmer_market = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_farmer_market
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+			has_valid_civic = civic_agribusiness
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_biological_pops"
+			count_owned_pop = {
+				limit = {
+					is_sapient = yes
+					is_robot_pop = no
+					is_lithoid = no
+				}
+				count >= 10
+			}
+		}
+	}
+
+	planet_modifier = {
+		biological_pop_happiness = 0.05
+		branch_office_value_mult = 0.10
+		trade_value_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 400
+			food = 400
+		}
+		produces = {
+			energy = 12
+		}
+		upkeep = {
+			food = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_dread_encampment_corp = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_posthumous_employment_center
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {NOT = {has_valid_civic = civic_permanent_employment } }
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_criminal_syndicate = no
+			has_valid_civic = civic_permanent_employment
+		}
+	}
+
+	planet_modifier = {
+		job_manager_add = 1
+		branch_office_value_mult = 0.10
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		text = building_dread_encampment_corp_effect_desc
+	}
+
+	on_built = {
+		planet = {
+			planet_event = {id = civicsexpanded.18 days = 360 }
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_dread_encampment_corp_crime = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_posthumous_employment_center
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {NOT = {has_valid_civic = civic_permanent_employment } }
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+			has_valid_civic = civic_permanent_employment
+		}
+	}
+
+	planet_modifier = {
+		job_manager_add = 1
+		trade_value_add = 10
+		branch_office_value_mult = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			energy = 20
+		}
+	}
+
+	triggered_desc = {
+		text = building_dread_encampment_corp_effect_desc
+	}
+
+	on_built = {
+		planet = {
+			planet_event = {id = civicsexpanded.18 days = 360 }
+		}
+	}
+
+	ai_weight = {
+		weight = 500
+	}
+}
+
+### MSI ###
+building_indentured_employment = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	icon = building_production_center
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_minamar = yes }
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 0.25
+		planet_jobs_worker_produces_mult = 0.10
+		planet_jobs_slave_produces_mult = 0.15
+		job_manager_add = 1
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	triggered_desc = {
+		text = building_indentured_employment_effect_desc
+	}
+
+	ai_weight = {
+		weight = 1000
+	}#Check resource income for a need
+}
+
+# Penal-World Capital
+building_penal_capital = {
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	icon = building_capital
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_penal_world = yes
+	}
+
+	convert_to = {
+		building_hive_capital
+		building_machine_capital
+		building_capital
+		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
+		building_ancient_palace
+		building_capital_nanotech
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+			berg_is_slave_world = no
+		}
+		job_roboticist_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 5
+		job_warden_add = 2
+		job_enforcer_add = 2
+		planet_max_buildings_add = @buildings_t1
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch_add = 1
+		osa_branch_add = 5
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = no
+		prod3 = no
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_warden_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_enforcer_effect_desc
+	}
+
+	upgrades = {
+		"building_penal_major_capital"
+	}
+}
+
+# Penal-World Major Capital
+building_penal_major_capital = {
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	icon = building_major_capital
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_is_penal_world = yes
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 20
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital
+		building_ancient_control_center
+		building_ancient_palace
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+			NOT = { has_modifier = slave_colony }
+		}
+		job_roboticist_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 10
+		job_warden_add = 2
+		job_enforcer_add = 3
+		planet_max_buildings_add = @buildings_t3
+		defense_armies_add = @tier_3_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch_add = 2
+		osa_branch_add = 4
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = no
+	}
+	upgrades = {
+		building_zex_avb_penal_capital_3
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_warden_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_enforcer_effect_desc
+	}
+}
+# System Penal Capital
+building_zex_avb_penal_capital_3 = {
+	base_buildtime = @b3_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+
+	icon = building_system_capital
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		berg_has_avb_mod = yes
+		berg_is_penal_world = yes
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 40
+		}
+	}
+
+	convert_to = {
+		building_hive_major_capital
+		building_machine_major_capital
+		building_major_capital	
+		building_ancient_control_center
+		building_ancient_control_center_dummy # Dummy
+		building_ancient_palace
+	}
+
+	inline_script = {
+		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+			NOT = { has_modifier = slave_colony }
+		}
+		job_roboticist_add = 1
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_active_tradition = tr_synthetics_finish }
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 20
+		planet_amenities_add = 20
+		job_warden_add = 2
+		job_enforcer_add = 4
+		planet_max_buildings_add = @buildings_t4
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+	inline_script = {
+		script = vanilla/misc/berg_branch_office_add
+		branch_add = 3
+		osa_branch_add = 3
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = yes
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_warden_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		text = job_enforcer_effect_desc
+	}
+}

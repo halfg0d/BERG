@@ -607,6 +607,7 @@ building_avb_bureaucratic_4 = {
 		script = building_resources/vanilla/bureaucratic
 		tier = 4
 	}
+	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_avb_bureaucratic_4"
 	}
@@ -666,6 +667,7 @@ building_avb_bureaucratic_5 = {
 		script = building_resources/vanilla/bureaucratic
 		tier = 5
 	}
+	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_avb_bureaucratic_5"
 	}
@@ -726,6 +728,7 @@ building_avb_bureaucratic_6 = {
 		script = building_resources/vanilla/bureaucratic
 		tier = 6
 	}
+	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_avb_bureaucratic_6"
 	}
@@ -777,7 +780,7 @@ building_temple = {
 					is_gestalt = yes
 				}
 			}
-			has_modifier = slave_colony
+			berg_is_slave_world = yes
 		}
 	}
 
@@ -1033,6 +1036,7 @@ building_avb_temple_4 = {
 		script = vanilla/unity/berg_temple_script
 		tier = 4
 	}
+	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_avb_temple_4"
 	}
@@ -1110,6 +1114,7 @@ building_avb_temple_5 = {
 		script = vanilla/unity/berg_temple_script
 		tier = 5
 	}
+	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_avb_temple_5"
 	}
@@ -1187,6 +1192,7 @@ building_avb_temple_6 = {
 		script = vanilla/unity/berg_temple_script
 		tier = 6
 	}
+	inline_script = vanilla/unity/berg_priest_federation_script
 	prerequisites = {
 		"tech_avb_temple_6"
 	}
@@ -3711,7 +3717,7 @@ building_autocurating_vault = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			has_modifier = slave_colony
+			berg_has_zexpanded_mod = yes
 			owner = {
 				OR = {
 					is_machine_empire = yes
@@ -3726,6 +3732,7 @@ building_autocurating_vault = {
 		building_citadel_of_faith
 		building_alpha_hub
 		building_corporate_vault
+		building_hive_primary_confluence
 	}
 
 	inline_script = {
@@ -3749,8 +3756,13 @@ building_autocurating_vault = {
 		is_spiritualist = no
 		is_megacorp = no
 		OR = {
+			# only Hive Minds may avoid effects and restrictions imposed by the 'make_spiritualist_1' Federation Perk
 			is_hive_empire = yes
 			has_make_spiritualist_perk = no
+		}
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_hive_empire = yes
 		}
 	}
 	inline_script = {
@@ -3811,7 +3823,10 @@ building_avb_autocurating_vault_2 = {
 		is_spiritualist = no
 		is_megacorp = no
 		OR = {
-			is_hive_empire = yes
+			NAND = {
+				is_hive_empire = yes
+				berg_has_zexpanded_mod = yes
+			}
 			has_make_spiritualist_perk = no
 		}
 	}

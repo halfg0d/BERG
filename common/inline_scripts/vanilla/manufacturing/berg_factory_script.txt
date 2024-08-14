@@ -5,9 +5,68 @@ triggered_planet_modifier = {
 	}
 	modifier = {
 		planet_artisans_consumer_goods_produces_add = @berg_manufactury_factory_produce_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = no
+	}
+	modifier = {
 		planet_artisans_minerals_upkeep_add = @berg_manufactury_factory_produce_upkeep_t$tier$
 	}
 }
+# Upkeep 
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			OR = {
+				is_civic_plant_organic = yes
+				AND = {
+					OR = {
+						is_lithoid_empire = yes
+						is_individual_machine = yes
+					}
+					OR = {
+						has_valid_civic = civic_agribusiness
+						is_anglers_empire = yes
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		planet_artisans_minerals_upkeep_add = @berg_manufactury_factory_zex_artisan_upkeep_t$tier$
+		planet_artisans_food_upkeep_add = @berg_manufactury_factory_zex_artisan_upkeep_t$tier$
+	}
+}
+#
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			NOR = {
+				is_civic_plant_organic = yes
+				AND = {
+					OR = {
+						is_lithoid_empire = yes
+						is_individual_machine = yes
+					}
+					OR = {
+						has_valid_civic = civic_agribusiness
+						is_anglers_empire = yes
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		planet_artisans_minerals_upkeep_add = @berg_manufactury_factory_produce_upkeep_t$tier$
+	}
+}
+# RW bonus
 triggered_planet_modifier = {
 	potential = {
 		check_variable_arithmetic = {
@@ -32,13 +91,15 @@ inline_script = {
 	script = UAP/berg_uap_industrialist
 	AMOUNT = @berg_manufactury_factory_uap_industrialist_t$tier$
 }
-#inline_script = {
-#	script = OSA/berg_osa_factory_jobs
-#	tier = $tier$
-#}
 #OST
 inline_script = {
 	script = tradition_script/ost_metallurgy
 	isForge = no
 	job_add = @berg_manufactury_factory_ost_job_t$tier$
+}
+#ZEX
+# too much
+inline_script = {
+	script = ZEX/factory_bonuses
+	tier = $tier$
 }

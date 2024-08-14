@@ -28,10 +28,8 @@ building_noble_estates = {
 	}
 	destroy_trigger = {
 		exists = owner
-		NOT = {
-			owner = {
-				berg_has_any_noble_civic = yes
-			}
+		owner = {
+			berg_has_any_noble_civic = no
 		}
 	}
 	inline_script = {
@@ -44,6 +42,7 @@ building_noble_estates = {
 	}
 	upgrades = {
 		"building_avb_noble_estates_2"		#AVB
+		"building_palatial_estates" #ZEX
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -103,6 +102,76 @@ building_avb_noble_estates_2 = {
 	}
 }
 
+building_palatial_estates = {
+	base_buildtime = @b2_time
+
+	category = government
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		has_building = building_noble_estates
+		owner = {
+			berg_has_any_noble_civic = yes
+		}
+		berg_has_slave_world = no
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_noble_estates
+						is_starbase_building_building = ring_noble_estates
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {
+			owner = { berg_has_any_noble_civic = yes }
+		}
+	}
+	inline_script = {
+		script = vanilla/government/berg_noble_scripts
+		tier = 2
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 3
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+	
+	prerequisites = {
+		"tech_paradise_dome"
+	}
+	
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		berg_has_any_noble_civic = yes
+	}
+	
+	ai_resource_production = {
+		trigger = { num_pops > 40 }
+		unity > 8
+	}
+}
 building_slave_processing = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
@@ -139,7 +208,7 @@ building_slave_processing = {
 					has_policy_flag = slavery_allowed
 				}
 			}
-			has_modifier = resort_colony
+			berg_is_resort_world = yes
 		}
 	}
 	inline_script = {

@@ -33,11 +33,9 @@ building_sentinel_hubs = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b2_minerals
 			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
-			energy = 5
 			minerals = 5
 			exotic_gases = 1
 		}
@@ -48,6 +46,14 @@ building_sentinel_hubs = {
 				}
 			}
 			unity = 10
+		}
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 600
+		}
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 5
 		}
 	}
 		
@@ -91,7 +97,6 @@ building_commercial_trading_terminal = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b2_minerals
 			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
@@ -106,6 +111,10 @@ building_commercial_trading_terminal = {
 				}
 			}
 			unity = 20
+		}
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 600
 		}
 	}
 

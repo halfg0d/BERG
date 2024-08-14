@@ -1,0 +1,35 @@
+
+# Bureaucratic
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = bureaucratic
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	always = yes
+	"
+}
+# Manager
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = manager
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	always = yes
+	"
+}
+
+# Steward
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = steward
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	always = yes
+	"
+}

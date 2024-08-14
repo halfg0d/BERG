@@ -103,9 +103,35 @@ inline_script = {
 	isForge = yes
 	job_add = @berg_manufactury_foundry_ost_jobs_t$tier$
 }
-
-
-#inline_script = {
-#	script = OSA/berg_osa_foundry_jobs
-#	tier = $tier$
-#}
+# ZEX
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_technology = tech_agrarian_alloys 
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+	}
+	modifier = {
+		planet_miners_alloys_produces_add = @berg_manufactury_foundry_zex_miners_alloys_t
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		exists = owner
+		owner = {
+			has_technology = tech_agrarian_alloys 
+			is_agrarian_empire = { allow_invalid = yes }
+		}
+		has_ringworld_output_boost = yes
+	}
+	modifier = {
+		planet_miners_alloys_produces_add = 0.5
+	}
+}

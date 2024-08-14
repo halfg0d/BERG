@@ -1,37 +1,10 @@
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_gestalt = no
-			berg_ecc_private_militaries_civic = no
-		}
-	}
-	modifier = {
-		job_soldier_add = @berg_army_stronghold_job_t$tier$
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	modifier = {
-		job_warrior_drone_add = @berg_army_stronghold_job_t$tier$
-	}
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = yes }
-	}
-	text = job_warrior_drone_effect_desc
-}
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_gestalt = no }
-	}
-	text = job_soldier_effect_desc
+
+inline_script = {
+	script = berg_jobs_group/warrior_add
+	AMOUNT = @berg_army_stronghold_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = "berg_ecc_private_militaries_civic = no"
 }
 #ECC
 triggered_planet_modifier = {
@@ -110,3 +83,29 @@ inline_script = {
 	commando_drone_add = @berg_army_stronghold_osa_drone_t$tier$
 	warrior_drone_subtract = @berg_army_stronghold_osa_drone_t$tier$
 }
+#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+				is_gestalt = no
+			}					
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_synaptic_extensions
+			}					
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}

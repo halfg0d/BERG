@@ -7,7 +7,7 @@ produces = {
 }
 produces = {
 	trigger = {
-		fromfrom.planet = { has_deposit = d_alien_pets_deposit }
+		fromfrom.planet = { berg_has_any_alien_deposit = yes }
 	}
 	unity = 4
 	society_research = 2

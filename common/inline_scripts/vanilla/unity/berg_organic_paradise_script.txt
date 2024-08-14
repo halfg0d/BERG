@@ -1,6 +1,46 @@
 planet_modifier = {
 	job_bio_trophy_add = @berg_unity_organic_paradise_biotrophy_t$tier$
 }
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_valid_civic = civic_machine_consciousness
+	}
+	modifier = {
+		job_maintenance_drone_add = @berg_unity_organic_paradise_maintenance_t$tier$
+	}
+}
 triggered_desc = {
 	text = job_bio_trophy_effect_desc
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		has_valid_civic = civic_machine_consciousness
+	}
+	text = job_maintenance_drone_effect_desc
+}
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_servitor_empire = yes
+		}
+	}
+	modifier = {
+		job_servitor_caretaker_drone_add = @berg_unity_organic_paradise_maintenance_t$tier$
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_servitor_empire = yes
+		}
+	}
+	text = job_servitor_caretaker_drone_effect_desc
 }

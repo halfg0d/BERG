@@ -1,0 +1,3112 @@
+###########################
+# Branch Office Buildings #
+###########################
+
+## N.B.: ai_weight is still used for branch offices!
+
+## REGULAR MEGACORP ##
+building_private_mining_consortium = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+			OR = {
+				berg_has_zexpanded_mod = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					OR = {
+						is_ai = no
+						has_valid_civic = civic_mining_company
+					}
+				}
+			}
+		}
+		is_artificial = no
+		NOR = {
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_city_world = yes
+		}
+	}
+
+	planet_modifier = {
+		job_miner_add = 1
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		job_miner_add = 1
+		job_osa_mining_director_add = 1
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.10
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_mining_company }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			minerals = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			minerals = 20
+		}
+		#ZEX
+		produces = {
+			trigger = { berg_has_zexpanded_mod = yes }
+			minerals = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = branch_office_owner
+				branch_office_owner = { has_technology = tech_mine_volatile_motes }
+				check_modifier_value = {
+					modifier = building_mote_harvesters_max
+					value >= 1
+				}
+			}
+			volatile_motes = 2
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = branch_office_owner
+				branch_office_owner = { has_technology = tech_mine_exotic_gases }
+				check_modifier_value = {
+					modifier = building_gas_extractors_max
+					value >= 1
+				}
+			}
+			exotic_gases = 2
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = branch_office_owner
+				branch_office_owner = { has_technology = tech_mine_rare_crystals }
+				check_modifier_value = {
+					modifier = building_crystal_mines_max
+					value >= 1
+				}
+			}
+			rare_crystals = 2
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_private_mining_consortium owner = branch_office_owner } }
+			exists = branch_office_owner
+			branch_office_owner = {has_valid_civic = civic_mining_company }
+		}
+		modifier = {
+			weight = 20
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_private_mining_consortium owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_monthly_income = {resource = minerals value < 5 } }
+		}
+	}
+}
+
+building_food_conglomerate = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+			OR = {
+				berg_has_zexpanded_mod = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					OR = {
+						is_ai = no
+						has_valid_civic = civic_agribusiness
+					}
+				}
+			}
+		}
+		NOR = {
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_relic_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				is_habitat = yes
+			}
+		}
+	}
+	allow = {
+		OR = {
+			berg_has_zexpanded_mod = no
+			AND = {
+				berg_has_zexpanded_mod = yes
+				custom_tooltip = {
+					fail_text = "requires_biological_pops"
+					count_owned_pop = {
+						limit = {
+							is_sapient = yes
+							is_robot_pop = no
+							is_lithoid = no
+						}
+						count >= 10
+					}
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = jobs/farmers_add
+		FARMER_AMOUNT = 1
+		ANGLER_AMOUNT = 1
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_osa_agri_director_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+			exists = owner
+			owner = {
+				OR = {
+					is_anglers_empire = no
+					AND = {
+						is_anglers_empire = yes
+						PREV = { planet = { is_wet = no } }
+					}
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+			exists = owner
+			owner = {
+				is_anglers_empire = yes
+				PREV = { planet = { is_wet = yes } }
+			}
+		}
+		modifier = {
+			job_angler_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_farmers_food_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_agribusiness }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			food = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			food = 20
+		}
+		#ZEX
+		produces = {
+			trigger = { berg_has_zexpanded_mod = yes }
+			food = 10
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_food_conglomerate owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_agribusiness }
+		}
+		modifier = {
+			weight = 20
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_food_conglomerate owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {
+				has_monthly_income = {resource = food value < 5 }
+				country_uses_food = yes
+			}
+		}
+	}#AI has many other sources for this resource
+}
+
+building_virtual_entertainment_studios = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_clerk_add = -2
+			job_game_dev_add = 1
+			planet_artisans_produces_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_media_conglomerate }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			consumer_goods = 6
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			consumer_goods = 9
+		}
+		#ZEX
+		produces = {
+			trigger = { berg_has_zexpanded_mod = yes }
+			consumer_goods = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value >= 10
+				}
+			}
+		}
+		#ZEX
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_virtual_entertainment_studios owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_media_conglomerate }
+		}
+		modifier = {
+			weight = 300
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_virtual_entertainment_studios owner = branch_office_owner } }
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+	}
+}
+
+building_private_shipyards = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+	}
+	#OSA/ZEX
+	inline_script = {
+		script = berg_jobs_group/foundry_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = no
+		TRIGGER = "
+		OR = {
+			berg_has_osa_mod = yes
+			berg_has_zexpanded_mod = yes
+		}"
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_metallurgists_produces_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_naval_contractors }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			alloys = 3
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			alloys = 12
+		}
+		#ZEX
+		produces = {
+			trigger = { berg_has_zexpanded_mod = yes }
+			alloys = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			weight = 500
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_private_shipyards owner = branch_office_owner } }
+			branch_office_owner = {
+				has_valid_civic = civic_naval_contractors
+			}
+		}
+		modifier = {
+			weight = 5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 15
+				}
+			}
+		}
+		modifier = {
+			weight = 300
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_private_shipyards owner = branch_office_owner } }
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 15
+				}
+			}
+		}
+	}
+}
+
+building_military_contractors = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = army
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = no
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 10
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	inline_script = {
+		script = berg_jobs_group/warrior_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = no
+		TRIGGER = ""
+	}
+	#OSA
+	triggered_country_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			country_naval_cap_add = 5
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_soldier_add = 1
+			job_healthcare_add = 1
+		}
+	}
+	#zExpanded
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_private_military_companies }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/warrior_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = no
+		TRIGGER = "berg_has_zexpanded_mod = yes"
+	}
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			country_naval_cap_add = 10
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = owner
+				owner = {is_at_war = yes }
+				exists = branch_office_owner 
+				branch_office_owner = {NOT = {is_at_war_with = prev.owner } }
+			}
+			energy = 10
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			weight = 500
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_military_contractors owner = branch_office_owner } }
+			branch_office_owner = {
+				has_valid_civic = civic_private_military_companies
+				used_naval_capacity_percent > 0.50
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {used_naval_capacity_percent > 0.90 }
+		}
+		modifier = {
+			weight = 350
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_military_contractors owner = branch_office_owner } }
+			branch_office_owner = {used_naval_capacity_percent > 0.90 }
+		}
+	}
+}
+
+building_public_relations_office = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_clerk_add = -2
+			job_manager_add = 1
+			planet_jobs_unity_produces_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_public_relations_specialists }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			unity = 6
+		}
+		upkeep = {
+			energy = 3
+		}
+		#OSA
+		produces = {
+			trigger = {
+				berg_has_osa_mod = yes
+			}
+			unity = 14
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			unity = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_public_relations_office owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_public_relations_specialists }
+		}
+	}
+}
+
+building_private_research_initiative = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = research
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+	#Vanilla
+	triggered_planet_modifier = {
+		potential = {
+			NOR = {
+				berg_has_zexpanded_mod = yes
+				berg_has_osa_mod = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 2
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_researcher_add = 2
+			job_head_researcher_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_researcher_add = 1
+			planet_researchers_produces_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {
+				OR = {
+					has_valid_civic = civic_technocracy_corp
+					has_valid_civic = civic_corp_public_informants
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			physics_research = 6
+			engineering_research = 6
+			society_research = 6
+		}
+		upkeep = {
+			energy = 3
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			physics_research = 9
+			engineering_research = 9
+			society_research = 9
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			physics_research = 6
+			engineering_research = 6
+			society_research = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 1.5
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {
+				OR = {
+					has_valid_civic = civic_technocracy_corp
+					has_valid_civic = civic_corp_public_informants
+				}
+			}
+		}
+		modifier = {
+			factor = 20
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_private_research_initiative owner = branch_office_owner } }
+		}
+	}
+}
+
+building_amusement_megaplex = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = no }
+		branch_office_owner = {
+			NOR = {
+				berg_is_toxic_knight_empire = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					has_country_flag = quest_abandoned
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = { berg_has_osa_mod = yes }
+		modifier = {
+			job_clerk_add = 1
+			job_culture_worker_add = 2
+		}
+	}
+	#zExpanded
+	inline_script = {
+		script = berg_jobs_group/entertainer_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = with
+		TRIGGER = "berg_has_zexpanded_mod = yes"
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 10
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 20
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					berg_is_resort_world = yes
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					has_modifier = pleasure_palace
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					berg_is_gaia_world = yes
+				}
+			}
+			energy = 10
+		}
+	}
+
+	ai_weight = {
+		weight = 2
+
+		modifier = {
+			weight = 0.5
+			berg_has_zexpanded_mod = no
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+		#ZEX
+		
+		modifier = {
+			factor = 0.5
+			berg_has_zexpanded_mod = yes
+			NOR = {
+				has_modifier = resort_colony
+				has_modifier = pleasure_palace
+				is_planet_class = pc_gaia
+			}
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+		modifier = {
+			factor = 300
+			berg_has_zexpanded_mod = yes
+			OR = {
+				has_modifier = resort_colony
+				has_modifier = pleasure_palace
+				is_planet_class = pc_gaia
+			}
+		}
+	}
+}
+
+building_commercial_forum = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+	#Vanilla
+	planet_modifier = {
+		branch_office_value_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = no
+		}
+		branch_office_value_mult = 0.10
+	}
+	
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = " "
+		DESC = no
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = @berg_trade_galactic_stock_job_t$tier$
+		MULT = 2
+		TRIGGER = "berg_has_osa_mod = yes"
+		DESC = no
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		job_clerk_add = 1
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			trade_value_mult = 0.1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_trading_posts }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_free_traders }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 10
+			berg_has_zexpanded_mod = yes
+		}
+	}
+}
+
+building_corporate_embassy = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_criminal_syndicate = no }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+		owner = { is_gestalt = no }
+	}
+
+	prerequisites = {
+		"tech_xeno_diplomacy"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+
+	country_modifier = {
+		diplo_weight_economy_mult = 0.05
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_politician_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_clerk_add = -2
+			trade_value_add = 10
+			job_manager_add = 1
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+		modifier = {
+			factor = 10
+			branch_office_owner = {
+				is_galactic_community_member = yes
+			}
+		}
+	}
+}
+
+## CRIME MEGACORP ##
+building_wildcat_miners = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+			OR = {
+				berg_has_zexpanded_mod = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					OR = {
+						is_ai = no
+						has_valid_civic = civic_mining_company
+					}
+				}
+			}
+		}
+		is_artificial = no
+		NOR = {
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_city_world = yes
+		}
+	}
+
+	planet_modifier = {
+		trade_value_add = 5
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = -0.15
+		}
+	}
+	#ZEX
+	inline_script = {
+		script = berg_jobs_group/miner_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = no
+		TRIGGER = "berg_has_zexpanded_mod = yes"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_miners_minerals_produces_mult = 0.08
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_mining_company }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			minerals = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			minerals = 20
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			minerals = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = branch_office_owner
+				branch_office_owner = { has_technology = tech_mine_volatile_motes }
+				OR = {
+					has_deposit = d_dust_caverns
+					has_deposit = d_dust_desert
+					has_deposit = d_industrial_sector
+				}
+			}
+			volatile_motes = 2
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = branch_office_owner
+				branch_office_owner = { has_technology = tech_mine_exotic_gases }
+				OR = {
+					has_deposit = d_bubbling_swamp
+					has_deposit = d_fuming_bog
+					has_deposit = d_industrial_sector
+					has_deposit = d_disco_planet
+					has_deposit = d_toxic_god_envenomed_seas_upgraded
+				}
+			}
+			exotic_gases = 2
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = branch_office_owner
+				branch_office_owner = { has_technology = tech_mine_rare_crystals }
+				OR = {
+					has_deposit = d_crystalline_caverns
+					has_deposit = d_crystal_forest
+					has_deposit = d_crystal_reef
+					has_deposit = d_industrial_sector
+					has_deposit = d_nano_corpses
+					has_deposit = d_crystal_kraken_body
+					has_deposit = d_crystal_kraken_body_bombed
+				}
+			}
+			rare_crystals = 2
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_wildcat_miners owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_mining_company }
+		}
+		modifier = {
+			weight = 20
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_wildcat_miners owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_monthly_income = {resource = minerals value < 5 } }
+		}
+	}
+}
+
+building_bio_reprocessing_facilities = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+			OR = {
+				berg_has_zexpanded_mod = no
+				AND = {
+					berg_has_zexpanded_mod = yes
+					OR = {
+						is_ai = no
+						has_valid_civic = civic_agribusiness
+					}
+				}
+			}
+		}
+		NOR = {
+			berg_is_hive_world = yes
+			berg_is_machine_world = yes
+			berg_is_relic_world = yes
+		}
+	}
+	allow = {
+		OR = {
+			berg_has_zexpanded_mod = no
+			AND = {
+				berg_has_zexpanded_mod = yes
+				custom_tooltip = {
+					fail_text = "requires_biological_pops"
+					count_owned_pop = {
+						limit = {
+							is_sapient = yes
+							is_robot_pop = no
+							is_lithoid = no
+						}
+						count >= 10
+					}
+				}
+			}
+		}
+	}
+	planet_modifier = {
+		trade_value_add = 5
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_farmers_food_produces_mult = 0.08
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/farmer_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = no
+		TRIGGER = "berg_has_zexpanded_mod = yes"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_agribusiness }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_farmers_food_produces_mult = -0.15
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			food = 10
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			food = 20
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			food = 10
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_bio_reprocessing_facilities owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = { has_valid_civic = civic_agribusiness }
+		}
+		modifier = {
+			weight = 20
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_bio_reprocessing_facilities owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {
+				has_monthly_income = {resource = food value < 5 }
+				country_uses_food = yes
+			}
+		}
+	}
+}
+
+building_underground_chemists = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		exists = branch_office_owner
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		trade_value_add = 5
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_apothecary_add = 1
+			planet_artisans_produces_mult = 0.03
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_jobs_consumer_goods_produces_mult = -0.15
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			consumer_goods = 6
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			consumer_goods = 9
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			consumer_goods = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 3
+		modifier = {
+			factor = 5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value >= 10
+				}
+			}
+		}
+		modifier = {
+			weight = 10
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 15
+				}
+			}
+		}
+		modifier = {
+			weight = 300
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_underground_chemists owner = branch_office_owner } }
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = consumer_goods
+					value < 10
+				}
+			}
+		}
+	}
+}
+
+building_wrecking_yards = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = manufacturing
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+		}
+	}
+
+	planet_modifier = {
+		trade_value_add = 5
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_scrap_dealer_add = 1
+			planet_metallurgists_produces_mult = 0.03
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_jobs_alloys_produces_mult = -0.15
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		produces = {
+			alloys = 3
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			alloys = 12
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			alloys = 3
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 10
+				}
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 15
+				}
+			}
+		}
+		modifier = {
+			weight = 300
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_wrecking_yards owner = branch_office_owner } }
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = alloys
+					value < 15
+				}
+			}
+		}
+	}
+}
+
+building_pirate_haven = {
+	base_buildtime = @b1_time
+
+	owner_type = corporate
+
+	category = army
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			is_criminal_syndicate = yes
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 10
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = no
+		}
+		modifier = {
+			job_soldier_add = 1
+		}
+	}
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+
+	#zExpanded
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			country_naval_cap_add = 10
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_private_military_companies }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_pirate_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_naval_contractors }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = owner
+				owner = {
+					OR = {
+						is_at_war = yes
+						any_system_within_border = {
+							any_ship_in_system = {
+								OR = {
+									is_ship_size = pirate_station
+									is_ship_size = pirate_corvette
+									is_ship_size = pirate_destroyer
+									is_ship_size = pirate_cruiser
+									is_ship_size = galleon
+								}
+							}
+						}
+					}
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {planet_crime >= 50 }
+			}
+			energy = 5
+		}
+	}
+
+	ai_weight = {
+		factor = 15
+		modifier = {
+			weight = 500
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_pirate_haven owner = branch_office_owner } }
+			branch_office_owner = {
+				has_valid_civic = civic_naval_contractors
+				used_naval_capacity_percent > 0.50
+			}
+		}
+		modifier = {
+			weight = 500
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_pirate_haven owner = branch_office_owner } }
+			branch_office_owner = {
+				has_valid_civic = civic_private_military_companies
+				used_naval_capacity_percent > 0.50
+			}
+		}
+		modifier = {
+			weight = 5
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {used_naval_capacity_percent > 0.90 }
+		}
+		modifier = {
+			weight = 350
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_pirate_haven owner = branch_office_owner } }
+			branch_office_owner = {used_naval_capacity_percent > 0.90 }
+		}
+	}
+}
+
+building_underground_clubs = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	inline_script = {
+		script = berg_jobs_group/entertainer_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = with
+		TRIGGER = "berg_has_zexpanded_mod = yes"
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			planet_technician_energy_produces_mult = -0.15
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 10
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 20
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					berg_is_resort_world = yes
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					has_modifier = pleasure_palace
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					berg_is_gaia_world = yes
+				}
+			}
+			energy = 10
+		}
+	}
+
+	ai_weight = {
+		weight = 5
+
+		modifier = {
+			factor = 3
+			berg_has_zexpanded_mod = no
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value < 0
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			berg_has_zexpanded_mod = no
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+		modifier = {
+			factor = 0.1
+			berg_has_zexpanded_mod = yes
+			NOR = {
+				has_modifier = resort_colony
+				has_modifier = pleasure_palace
+				is_planet_class = pc_gaia
+			}
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = energy
+					value > 50
+				}
+			}
+		}
+		modifier = {
+			factor = 300
+			berg_has_zexpanded_mod = yes
+			OR = {
+				has_modifier = resort_colony
+				has_modifier = pleasure_palace
+				is_planet_class = pc_gaia
+			}
+		}
+	}
+}
+
+building_syndicate_outreach_office = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		job_clerk_add = 2
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_clerk_add = -2
+			job_spin_doctor_add = 1
+			planet_jobs_unity_produces_mult = 0.08
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_media_conglomerate }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_public_relations_specialists }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			unity = 6
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			unity = 19
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			unity = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_syndicate_outreach_office owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_media_conglomerate }
+		}
+		modifier = {
+			weight = 100
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_syndicate_outreach_office owner = branch_office_owner } }
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_public_relations_specialists }
+		}
+	}
+}
+
+building_illicit_research_labs = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = research
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = no
+		}
+		modifier = {
+			job_clerk_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_researcher_add = 1
+			planet_researchers_produces_mult = 0.03
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {
+				OR = {
+					has_valid_civic = civic_technocracy_corp
+					has_valid_civic = civic_corp_public_informants
+				}
+			}
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			physics_research = 6
+			engineering_research = 6
+			society_research = 6
+		}
+		upkeep = {
+			energy = 3
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			physics_research = 4
+			engineering_research = 4
+			society_research = 4
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			physics_research = 6
+			engineering_research = 6
+			society_research = 6
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 1.5
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {
+				OR = {
+					has_valid_civic = civic_technocracy_corp
+					has_valid_civic = civic_corp_public_informants
+				}
+			}
+		}
+		modifier = {
+			factor = 20
+			berg_has_zexpanded_mod = yes
+			NOT = {has_holding = {holding = building_illicit_research_labs owner = branch_office_owner } }
+		}
+	}
+}
+
+building_smuggling_rings = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 0.15
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = " "
+		DESC = no
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 50
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_amenities_mult = 0.05
+			job_criminal_smuggler_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_trading_posts }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			exists = branch_office_owner 
+			branch_office_owner = {has_valid_civic = civic_free_traders }
+		}
+		modifier = {
+			trade_value_add = 8
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = { berg_has_osa_mod = no }
+		modifier = {
+			branch_office_value_mult = 0.10
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+building_disinformation_center = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { is_criminal_syndicate = yes }
+	}
+
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	prerequisites = {
+		"tech_xeno_diplomacy"
+	}
+
+	show_tech_unlock_if = {
+		is_megacorp = yes
+		is_criminal_syndicate = yes
+	}
+
+	country_modifier = {
+		spy_network_levels_add = 5
+	}
+
+	planet_modifier = {
+		pop_government_ethic_attraction = -0.25
+		job_clerk_add = 2
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 40
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			job_clerk_add = -2
+			trade_value_add = 10
+			job_spin_doctor_add = 1
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			pop_government_ethic_attraction = -0.25
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	ai_weight = {
+		weight = 50
+	}
+}
+
+building_subversive_shrine = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_valid_civic = civic_gospel_of_the_masses
+			is_criminal_syndicate = yes
+		}
+	}
+	planet_modifier = {
+		job_preacher_add = 2
+		pop_ethic_spiritualist_attraction_mult = 0.25
+	}
+	triggered_planet_modifier = {
+		planet_crime_add = 25
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.03
+		}
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			pop_ethic_spiritualist_attraction_mult = 0.25
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_councilor = { COUNCILOR = "councilor_gospel_of_the_masses" }
+			}
+		}
+		pop_ethics_shift_speed_mult = 0.05
+		mult = value:councilor_level|TYPE|councilor_gospel_of_the_masses|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			unity = 12
+		}
+	}
+	ai_weight = {
+		weight = 250
+		modifier = {
+			factor = 2
+			berg_has_zexpanded_mod = yes
+		}
+	}
+}
+
+## GOSPEL MEGACORP ##
+
+building_temple_of_prosperity = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = unity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			has_valid_civic = civic_gospel_of_the_masses
+			is_criminal_syndicate = no
+			OR = {
+				berg_has_bug_mod = no
+				AND = {
+					berg_has_bug_mod = yes
+					is_bugged_basic_cult = no
+				}
+			}
+		}
+	}
+
+	planet_modifier = {
+		job_preacher_add = 2
+		pop_ethic_spiritualist_attraction_mult = 0.5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = {
+				has_councilor = { COUNCILOR = "councilor_gospel_of_the_masses" }
+			}
+		}
+		pop_ethics_shift_speed_mult = 0.05
+		mult = value:branch_office_councilor_level|TYPE|councilor_gospel_of_the_masses|
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_high_priest_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.05
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 2
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			unity = 10
+			society_research = 10
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			unity = 12
+		}
+	}
+
+	ai_weight = {
+		weight = 250
+	}
+}
+
+## SPECIAL ##
+
+building_executive_retreat = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	prerequisites = { "tech_executive_retreat" }
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			OR = {
+				AND = {
+					berg_has_zexpanded_mod = no
+					is_ai = no
+				}
+				AND = {
+					berg_has_zexpanded_mod = yes
+					is_criminal_syndicate = no
+				}
+			}
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			berg_has_zexpanded_mod = no
+			is_criminal_syndicate = no
+		}
+	}
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
+	}
+
+	country_modifier = {
+		planet_amenities_mult = 0.1
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.05
+	}
+	#ZEX
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_amenities_mult = 0.05
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			trade_value_mult = 0.1
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+
+	ai_weight = {
+		factor = 100
+		modifier = {
+			factor = 0
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value >= 2
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				NOT = {
+					any_owned_planet = {free_amenities < 20 }
+				}
+			}
+		}
+	}
+}
+
+building_xeno_tourism_agency = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	prerequisites = { "tech_xeno_tourism_agency" }
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			OR = {
+				AND = {
+					berg_has_zexpanded_mod = no
+					is_ai = no
+				}
+				AND = {
+					berg_has_zexpanded_mod = yes
+					is_criminal_syndicate = no
+				}
+			}
+		}
+	}
+
+	show_tech_unlock_if = {
+		OR = {
+			berg_has_zexpanded_mod = no
+			is_criminal_syndicate = no
+		}
+	}
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
+	}
+
+	country_modifier = {
+		planet_immigration_pull_mult = 0.25
+	}
+
+	planet_modifier = {
+		trade_value_mult = 0.05
+	}
+	#ZEX
+	triggered_country_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_immigration_pull_mult = 0.08
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			trade_value_mult = 0.05
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			berg_has_zexpanded_mod = yes
+		}
+		text = building_xeno_tourism_agency_effect_desc
+	}
+	on_built = {
+		if = {
+			limit = {
+				berg_has_zexpanded_mod = yes
+			}
+			planet = {
+				planet_event = {id = onactionpops.8 days = 1800 }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0.5
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			factor = 0
+			berg_has_zexpanded_mod = yes
+			branch_office_owner = {
+				has_monthly_income = {
+					resource = rare_crystals
+					value >= 2
+				}
+			}
+		}
+	}
+}
+
+building_imperial_concession_port = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = government
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			OR = {
+				has_modifier = imperial_charter
+				has_civic = civic_galactic_sovereign_megacorp
+			}
+		}
+	}
+
+	country_modifier = {
+		diplo_weight_economy_mult = 0.05
+	}
+
+	planet_modifier = {
+		branch_office_value_mult = 0.25
+	}
+	#OSA
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_osa_mod = yes
+		}
+		modifier = {
+			job_politician_add = 2
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 2
+		MULT = 1
+		TRIGGER = "berg_has_osa_mod = yes"
+		DESC = no
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+			has_branch_office = yes
+			exists = branch_office_owner
+			branch_office_owner = {is_criminal_syndicate = yes }
+		}
+		modifier = {
+			planet_crime_add = 50
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			trade_value_mult = 0.1
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			energy = 8
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 42
+			alloys = 50
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 8
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+## TOXIC KNIGHTS ##
+
+building_knightly_theme_park = {
+	base_buildtime = @b2_time
+	icon = building_order_holding
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = amenity
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = {
+			berg_is_toxic_knight_empire = yes
+			NOT = { has_country_flag = quest_abandoned }
+		}
+	}
+
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 10
+	}
+
+	#zExpanded
+	inline_script = {
+		script = berg_jobs_group/entertainer_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = with
+		TRIGGER = "berg_has_zexpanded_mod = yes"
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 10
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					berg_is_resort_world = yes
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					has_modifier = pleasure_palace
+				}
+			}
+			energy = 10
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				planet = {
+					berg_is_gaia_world = yes
+				}
+			}
+			energy = 10
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = planet.owner
+		}
+		text = knightly_theme_park_quest_effect_desc
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 300
+			berg_has_zexpanded_mod = yes
+			OR = {
+				has_modifier = resort_colony
+				has_modifier = pleasure_palace
+				is_planet_class = pc_gaia
+			}
+		}
+	}
+}
+
+## Pharmaceutical Companies ##
+building_corporate_clinics = {
+	base_buildtime = @b2_time
+	icon = building_corporate_clinic
+	base_cap_amount = 1
+
+	owner_type = corporate
+
+	category = resource
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { berg_is_private_healthcare_empire = yes }
+	}
+
+	on_built = {
+		planet = {
+			set_planet_flag = has_private_clinics
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			remove_planet_flag = has_private_clinics
+		}
+	}
+	planet_modifier = {
+		job_healthcare_add = 1
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			branch_office_owner = { is_criminal_syndicate = yes }
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_crime_add = 20
+		}
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		produces = {
+			energy = 8
+			unity = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+		#OSA
+		produces = {
+			trigger = { berg_has_osa_mod = yes }
+			energy = 2
+			unity = 3
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			energy = 8
+			unity = 2
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = planet.owner
+		}
+		text = building_corporate_clinics_effect
+	}
+
+	ai_weight = {
+		weight = 120
+	}
+}
+
+###########################
+# Augmentation Bazaars    #
+###########################
+
+building_augmentation_bazaars_branch = {
+	base_buildtime = @b2_time
+	icon = building_corporate_augmentation_bazaars
+	base_cap_amount = 1
+
+	category = trade
+
+	owner_type = corporate
+
+	potential = {
+		has_branch_office = yes
+		branch_office_owner = { has_valid_civic = civic_augmentation_bazaars }
+	}
+
+	allow = {
+		always = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			berg_is_slave_world = yes
+			berg_is_resort_world = yes
+		}
+	}
+
+
+	triggered_planet_modifier = {
+		trade_value_mult = 0.10
+		job_augmentor_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = branch_office_owner
+			branch_office_owner = { is_criminal_syndicate = yes }
+		}
+		planet_crime_add = 20
+		mult = branch_office_owner.value:scripted_modifier_mult|MODIFIER|branch_office_holding_crime_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cybernetics_integrated_anatomy
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 1
+		}
+	}
+	#ZEX
+	triggered_planet_modifier = {
+		potential = {
+			berg_has_zexpanded_mod = yes
+		}
+		modifier = {
+			planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+	resources = {
+		category = planet_branch_office_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		produces = {
+			engineering_research = 10
+		}
+		#ZEX
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+			}
+			engineering_research = 10
+		}
+	}
+
+	prerequisites = {}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+			is_cyborg_empire = yes
+		}
+		text = job_augmentor_growth_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			OR = {
+				is_scope_valid = no
+				AND = {
+					exists = owner
+					owner = {
+						is_gestalt = no
+					}
+					is_cyborg_empire = no
+				}
+			}
+		}
+		text = job_augmentor_research_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 5
+		trigger = {
+			solar_system = {
+				has_system_trade_value >= 50
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 3
+		trigger = {
+			solar_system = {
+				has_system_trade_value >= 80
+			}
+		}
+	}
+}

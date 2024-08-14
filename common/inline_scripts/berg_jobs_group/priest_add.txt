@@ -1,6 +1,6 @@
 #Priest add
 #Swaps between empires
-#Civics: defenders_faith(ECC)
+#Civics: defenders_faith(ECC), machine_cult(ECC/ZEX), private_military_companies(ZEX)
 
 #Priest
 inline_script = {
@@ -15,6 +15,7 @@ inline_script = {
 		is_megacorp = no
 		berg_ecc_is_defender_faith = no
 		berg_is_machine_cult = no
+		berg_has_private_military_companies = no
 	}
 	"
 }
@@ -31,6 +32,7 @@ inline_script = {
 		is_megacorp = yes
 		berg_ecc_is_defender_faith = no
 		berg_is_machine_cult = no
+		berg_has_private_military_companies = no
 	}
 	"
 }
@@ -47,6 +49,7 @@ inline_script = {
 		is_megacorp = no
 		berg_ecc_is_defender_faith = yes
 		berg_is_machine_cult = no
+		berg_has_private_military_companies = no
 	}
 	"
 }
@@ -63,6 +66,24 @@ inline_script = {
 		is_megacorp = no
 		berg_ecc_is_defender_faith = no
 		berg_is_machine_cult = yes
+		berg_has_private_military_companies = no
+	}
+	"
+}
+# Chaplain
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = chaplain
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_megacorp = yes
+		berg_ecc_is_defender_faith = no
+		berg_is_machine_cult = no
+		berg_has_private_military_companies = yes
 	}
 	"
 }

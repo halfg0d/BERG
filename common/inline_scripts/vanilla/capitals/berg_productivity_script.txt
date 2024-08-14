@@ -33,3 +33,48 @@ triggered_planet_modifier = {
 		planet_jobs_productive_produces_mult = 0.1
 	}
 }
+#ZEX
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		always = $prod1$
+		exists = owner
+		owner = {
+			has_technology = tech_capital_productivity_1
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		always = $prod2$
+		exists = owner
+		owner = {
+			has_technology = tech_capital_productivity_2
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		always = $prod3$
+		exists = owner
+		owner = {
+			has_technology = tech_capital_productivity_3
+			is_gestalt = no
+		}
+	}
+	modifier = {
+		trade_value_mult = 0.1
+	}
+}

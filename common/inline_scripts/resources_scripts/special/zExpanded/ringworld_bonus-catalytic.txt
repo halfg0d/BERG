@@ -1,0 +1,81 @@
+# shortcuts to understanding| Minerals:Food
+# 3:0
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { is_catalytic_empire = no }
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	minerals = 700
+	$material$ = 500
+}
+# 2:1
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { 
+			is_catalytic_empire = yes 
+			berg_has_integrated_bioarchitecture = no
+		} 
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	minerals = 466.7
+	food = 233.3
+	$material$ = 500
+}
+# 0:3
+cost = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_catalytic_empire = yes
+			berg_has_integrated_bioarchitecture = yes
+		}
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	food = 700
+	$material$ = 500
+}
+# upkeep 
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = { is_catalytic_empire = no } 
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	energy = 7
+	$material$ = 4
+}
+upkeep = {
+	trigger = {
+		exists = owner
+		owner = { is_catalytic_empire = yes } 
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+	}
+	energy = 4.7
+	food = 2.3
+	$material$ = 4
+}

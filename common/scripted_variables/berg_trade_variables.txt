@@ -1,5 +1,15 @@
 #trade variables
 # commercial
+@berg_trade_commercial_costOneThird_t1 = 133.33
+@berg_trade_commercial_costOneThird_t2 = 200.0
+@berg_trade_commercial_costOneThird_t3 = 333.33
+@berg_trade_commercial_costOneThird_t4 = 666.67
+@berg_trade_commercial_costOneThird_t5 = 1333.33
+@berg_trade_commercial_costTwoThird_t1 = 266.67
+@berg_trade_commercial_costTwoThird_t2 = 400.0
+@berg_trade_commercial_costTwoThird_t3 = 666.67
+@berg_trade_commercial_costTwoThird_t4 = 1333.33
+@berg_trade_commercial_costTwoThird_t5 = 2666.67
 @berg_trade_commercial_cost_t1 = 400
 @berg_trade_commercial_cost_t2 = 600
 @berg_trade_commercial_cost_t3 = 1000
@@ -30,6 +40,16 @@
 @berg_trade_commercial_rare_upkeep_t3 = 4
 @berg_trade_commercial_rare_upkeep_t4 = 6
 @berg_trade_commercial_rare_upkeep_t5 = 8
+@berg_trade_commercial_upkeepOneThird_t1 = 0.67
+@berg_trade_commercial_upkeepOneThird_t2 = 1.67
+@berg_trade_commercial_upkeepOneThird_t3 = 2.0
+@berg_trade_commercial_upkeepOneThird_t4 = 4.0
+@berg_trade_commercial_upkeepOneThird_t5 = 6.0
+@berg_trade_commercial_upkeepTwoThird_t1 = 1.33
+@berg_trade_commercial_upkeepTwoThird_t2 = 3.33
+@berg_trade_commercial_upkeepTwoThird_t3 = 4.0
+@berg_trade_commercial_upkeepTwoThird_t4 = 8.0
+@berg_trade_commercial_upkeepTwoThird_t5 = 12.0
 @berg_trade_commercial_upkeep_t1 = 2
 @berg_trade_commercial_upkeep_t2 = 5
 @berg_trade_commercial_upkeep_t3 = 6
@@ -51,6 +71,12 @@
 @berg_trade_commercial_trader_t4 = 4
 @berg_trade_commercial_trader_t5 = 5
 # galactic_stock
+@berg_trade_galactic_stock_costOneThird_t1 = 133.33
+@berg_trade_galactic_stock_costOneThird_t2 = 200.0
+@berg_trade_galactic_stock_costOneThird_t3 = 333.33
+@berg_trade_galactic_stock_costTwoThird_t1 = 266.67
+@berg_trade_galactic_stock_costTwoThird_t2 = 400.0
+@berg_trade_galactic_stock_costTwoThird_t3 = 666.67
 @berg_trade_galactic_stock_cost_t1 = 400
 @berg_trade_galactic_stock_cost_t2 = 600
 @berg_trade_galactic_stock_cost_t3 = 1000
@@ -60,6 +86,12 @@
 @berg_trade_galactic_stock_rare_upkeep_t1 = 0
 @berg_trade_galactic_stock_rare_upkeep_t2 = 2
 @berg_trade_galactic_stock_rare_upkeep_t3 = 4
+@berg_trade_galactic_stock_upkeepOneThird_t1 = 0.67
+@berg_trade_galactic_stock_upkeepOneThird_t2 = 1.33
+@berg_trade_galactic_stock_upkeepOneThird_t3 = 2.0
+@berg_trade_galactic_stock_upkeepTwoThird_t1 = 1.33
+@berg_trade_galactic_stock_upkeepTwoThird_t2 = 2.67
+@berg_trade_galactic_stock_upkeepTwoThird_t3 = 4.0
 @berg_trade_galactic_stock_upkeep_t1 = 2
 @berg_trade_galactic_stock_upkeep_t2 = 4
 @berg_trade_galactic_stock_upkeep_t3 = 6

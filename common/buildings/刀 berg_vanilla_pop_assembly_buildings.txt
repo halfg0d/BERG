@@ -1287,6 +1287,7 @@ building_toxic_bath_hive = {
 	}
 	upgrades = {
 		"building_avb_toxic_bath_hive_2" #AVB
+		"building_toxic_bath_hive_advanced" #ZEX
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -1353,6 +1354,108 @@ building_avb_toxic_bath_hive_2 = {
 		TRIGGER = " "
 	}
 }
+building_toxic_bath_hive_advanced = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = amenity
+	icon = building_toxic_bath_hive_advanced
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_building = building_toxic_bath_hive
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = no
+				has_toxic_baths = no
+				AND = {
+					is_ai = yes
+					prev = { has_any_industry_district = no }
+				}
+				AND = {
+					is_ai = yes
+					prev = { buildings_stop_pop = yes }
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/pop_assembly/berg_toxic_bath_hive_script
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_colonization_3"
+	}
+
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_hive_empire = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = {
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture } is_lithoid_empire = no
+				}
+			}
+			minerals = @b2_hive_minerals
+			food = @b2_hive_food
+			exotic_gases = @b2_rare_cost
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_integrated_bioarchitecture is_lithoid_empire = no }
+			}
+			food = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = no
+				}
+			}
+			energy = @b2_upkeep_hive
+			food = @b2_upkeep_food
+			exotic_gases = @b2_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = {
+					is_lithoid_empire = yes
+					NOT = { has_valid_civic = civic_integrated_bioarchitecture }
+				}
+			}
+			energy = @b2_upkeep_hive
+			minerals = @b2_upkeep_food
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+}
 
 building_toxic_bath_machine = {
 	base_buildtime = @b1_time
@@ -1381,12 +1484,6 @@ building_toxic_bath_machine = {
 		script = vanilla/pop_assembly/berg_toxic_bath_machine_script
 		tier = 1
 	}
-	# inline_script = {
-	# 	script = berg_jobs_group/bath_attendant_machine_add
-	# 	DESC = with
-	# 	AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t1
-	# 	MULT = 1
-	# }
 	inline_script = {
 		script = building_resources/vanilla/toxic_bath_machine
 		tier = 1
@@ -1450,5 +1547,65 @@ building_avb_toxic_bath_machine_2 = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_toxic_bath_machine_2
 		TRIGGER = " "
+	}
+}
+
+building_toxic_bath_machine_advanced = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = amenity
+	icon = building_toxic_bath_machine_advanced
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_building = building_toxic_bath_machine
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					is_machine_empire = no
+					is_individual_machine = no
+				}
+			}
+			owner = {
+				has_toxic_baths = no
+			}
+			AND = {
+				owner = { is_ai = yes }
+				has_any_industry_district = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/pop_assembly/berg_toxic_bath_machine_script
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_micro_replicators"
+	}
+	
+	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
+		is_machine_empire = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
 	}
 }

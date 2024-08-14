@@ -218,6 +218,7 @@ building_stronghold = {
 		BUILDING = stronghold
 		TRIGGER = " "
 	}
+	inline_script = ZEX/stronghold_ai_trick
 }
 
 building_fortress = {
@@ -249,6 +250,7 @@ building_fortress = {
 	upgrades = {
 		"building_zitadom" #OSA
 		"building_avb_stronghold_3" #AVB
+		"building_citadel" #zExpanded
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc

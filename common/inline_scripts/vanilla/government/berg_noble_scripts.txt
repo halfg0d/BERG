@@ -91,3 +91,13 @@ triggered_planet_modifier = {
 triggered_desc = {
 	text = job_noble_effect_desc
 }
+#ZEX
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+	}
+	modifier = {
+		planet_amenities_add = 5
+	}
+	mult = $tier$
+}

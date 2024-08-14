@@ -1,0 +1,26 @@
+
+# Ranger
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = ranger
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { is_gestalt = no }
+	"
+}
+# Ranger Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = ranger_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	berg_has_zexpanded_mod = yes
+	exists = owner
+	owner = { is_gestalt = yes }
+	"
+}

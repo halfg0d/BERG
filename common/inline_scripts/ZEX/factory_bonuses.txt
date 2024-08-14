@@ -1,0 +1,97 @@
+# Regular
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll
+			has_technology = tech_agrarian_goods 
+		}
+	}
+	modifier = {
+		planet_farmers_consumer_goods_produces_add = @berg_manufactury_factory_zex_basic_jobs_cg_produces_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll
+			has_technology = tech_agrarian_goods 
+		}
+	}
+	modifier = {
+		planet_farmers_consumer_goods_produces_add = 1.5
+	}
+}
+# Lithoids
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll_lithoid
+			has_technology = tech_agrarian_goods_lithoid 
+		}
+	}
+	modifier = {
+		planet_miners_consumer_goods_produces_add = @berg_manufactury_factory_zex_basic_jobs_cg_produces_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll_lithoid
+			has_technology = tech_agrarian_goods_lithoid 
+		}
+	}
+	modifier = {
+		planet_miners_consumer_goods_produces_add = 1.5
+	}
+}
+# Machines
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll_machine
+			has_technology = tech_agrarian_goods_machine 
+		}
+	}
+	modifier = {
+		planet_technician_consumer_goods_produces_add = @berg_manufactury_factory_zex_basic_jobs_cg_produces_t$tier$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		check_variable_arithmetic = {
+			which = $tier$
+			value >= 3
+		}
+		has_ringworld_output_boost = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll_machine
+			has_technology = tech_agrarian_goods_machine 
+		}
+	}
+	modifier = {
+		planet_technician_consumer_goods_produces_add = 1.5
+	}
+}
+#

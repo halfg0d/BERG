@@ -11,3 +11,45 @@ event = {
 
 	immediate = { set_global_flag = berg_active }
 }
+
+namespace = berg_event
+event = {
+	id = berg_event.21
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		has_global_flag = berg_active
+		NOT = { has_global_flag = berg_warned }
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_playable = yes
+				is_ai = no
+			}
+			country_event = { id = berg_event.22 days = 30 } # Warning
+		}
+	}
+}
+country_event = {
+	id = berg_event.22
+	is_triggered_only = yes
+	picture = GFX_evt_berg
+	title = berg_event.22.name
+	desc = {
+		text = berg_event.22.desc
+	}
+	trigger = {
+		berg_has_zexpanded_mod = yes
+	}
+	
+	option = {
+		name = berg_event.22.a
+		hidden_effect = {
+			set_global_flag = berg_warned
+		}
+	}
+}

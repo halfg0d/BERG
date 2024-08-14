@@ -23,3 +23,17 @@ triggered_desc = {
 triggered_desc = {
 	text = job_squire_effect_desc
 }
+#ZEX
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_active_tradition = tr_domination_imperious_architecture
+			is_gestalt = no
+		}	
+	}
+	modifier = {
+		planet_housing_add = 1
+	}
+}

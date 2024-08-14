@@ -29,7 +29,13 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			is_robot_empire = yes
+			OR = {
+				is_robot_empire = yes
+				AND = {
+					berg_has_zexpanded_mod = yes
+					is_lithoid_empire = yes
+				}
+			}
 		}
 		NOR = {
 			berg_is_habitat = yes
@@ -89,4 +95,25 @@ inline_script = {
 	job_subtract = 1
 	drone = scrap_miner_drone
 	trigger = "berg_is_shattered_ring = yes"
+}
+#ZEX
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { has_civic = civic_mining_guilds }
+	}
+	modifier = {
+		job_guildmaster_add = 1
+	}
+}
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_civic = civic_mining_guilds
+		}
+	}
+	text = job_guildmaster_effect_desc
 }

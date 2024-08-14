@@ -1,24 +1,10 @@
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			berg_can_duelist_be_changed = yes
-		}
-	}
-	modifier = {
-		job_duelist_add = @berg_deposit_xeno_zoo_job_t$tier$
-	}
-}
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			berg_can_duelist_be_changed = no
-		}
-	}
-	modifier = {
-		job_entertainer_add = @berg_deposit_xeno_zoo_job_t$tier$
-	}
+
+inline_script = {
+	script = berg_jobs_group/entertainer_add
+	AMOUNT = @berg_deposit_xeno_zoo_job_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
 planet_modifier = {
 	job_xeno_zoo_keeper_add = @berg_deposit_xeno_zoo_keeper_t$tier$
@@ -57,24 +43,18 @@ triggered_planet_modifier = {
 		job_livestock_zoo_beast_add = @berg_deposit_xeno_zoo_animal_t$tier$
 	}
 }
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+	}
+	modifier = {
+		planet_immigration_pull_mult = 0.25
+	}
+}
+#Desc
 triggered_desc = {
 	text = job_xeno_zoo_keeper_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { berg_can_duelist_be_changed = no }
-	}
-	text = job_entertainer_effect_desc
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { berg_can_duelist_be_changed = yes }
-	}
-	text = job_duelist_effect_desc
 }
 
 triggered_desc = {

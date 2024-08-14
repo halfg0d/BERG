@@ -1101,21 +1101,33 @@ building_holo_theatres = {
 		OR = {
 			owner = { is_regular_empire = no }
 			owner = { berg_is_dystopian_society = yes }
-			has_modifier = slave_colony
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { berg_is_warrior_culture = yes }
+			}
 		}
 	}
 	inline_script = {
 		script = vanilla/amenity/berg_holo_theatres_script
 		tier = 1
-	}
+	}`
 	inline_script = {
 		script = building_resources/vanilla/holo_theatres
 		tier = 1
 	}
-
+	convert_to = {
+		building_combat_arena
+	}
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			owner = { berg_is_warrior_culture = yes }
+		}
+	}
 	upgrades = {
 		"building_hyper_entertainment_forum"
-	}
+	} 
 
 	prerequisites = {
 		"tech_holo_entertainment"
@@ -1155,10 +1167,23 @@ building_hyper_entertainment_forum = {
 
 	destroy_trigger = {
 		exists = owner
-		owner = { berg_is_dystopian_society = yes }
 		OR = {
 			owner = { is_regular_empire = no }
-			has_modifier = slave_colony
+			owner = { berg_is_dystopian_society = yes }
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { berg_is_warrior_culture = yes }
+			}
+		}
+	}
+	convert_to = {
+		building_virtual_combat_arena
+	}
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			owner = { berg_is_warrior_culture = yes }
 		}
 	}
 	inline_script = {
@@ -1198,24 +1223,37 @@ building_avb_holo_theatre_3 = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { has_valid_civic = civic_dystopian_society }
-			has_modifier = slave_colony
+			owner = { berg_is_dystopian_society = yes }
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { berg_is_warrior_culture = yes }
+			}
 		}
 	}
 	
 	allow = {
 		has_major_upgraded_capital = yes
 		owner = {
-			NOT = { has_valid_civic = civic_dystopian_society }
+			berg_is_dystopian_society = no
 		}
 		OR = {
 			owner = {
-				NOT = { is_ai = yes }
+				is_ai = no
 			}
 			AND = {
 				NOT = { has_available_jobs = entertainer }
 				NOT = { has_forbidden_jobs = entertainer }
 			}
+		}
+	}
+	convert_to = {
+		building_zex_avb_combat_arena_3
+	}
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			owner = { berg_is_warrior_culture = yes }
 		}
 	}
 
@@ -1257,15 +1295,28 @@ building_avb_holo_theatre_4 = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			owner = { has_valid_civic = civic_dystopian_society }
-			has_modifier = slave_colony
+			owner = { berg_is_dystopian_society = yes }
+			berg_is_slave_world = yes
+			AND = {
+				berg_has_zexpanded_mod = yes
+				owner = { berg_is_warrior_culture = yes }
+			}
+		}
+	}
+	convert_to = {
+		building_zex_avb_combat_arena_4
+	}
+	show_tech_unlock_if = {
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			owner = { berg_is_warrior_culture = yes }
 		}
 	}
 	
 	allow = {
 		has_fully_upgraded_capital = yes
 		owner = {
-			NOT = { has_valid_civic = civic_dystopian_society }
+			berg_is_dystopian_society = no
 		}
 		OR = {
 			owner = {
@@ -1857,6 +1908,24 @@ building_ranger_lodge = {
 		berg_st_can_build_ranger = yes
 	}
 
+	desc = {
+		trigger = {
+			OR = {
+				berg_has_zexpanded_mod = no
+				NOT = { exists = owner }
+				owner = { is_machine_empire = no }
+			}
+		}
+		text = building_ranger_lodge_desc
+	}
+	desc = {
+		trigger = {
+			berg_has_zexpanded_mod = yes
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = building_ranger_lodge_mach_desc
+	}
 	allow = {
 		custom_tooltip = {
 			fail_text = no_free_district_for_ranger_lodge
@@ -1873,7 +1942,7 @@ building_ranger_lodge = {
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = no }
-			has_modifier = slave_colony
+			berg_is_slave_world = yes
 			owner = { berg_is_environmental = no }
 			berg_is_city_world = yes
 			berg_is_hive_world = yes
@@ -2008,7 +2077,7 @@ building_toxic_bath = {
 					}
 				}
 			}
-			has_modifier = slave_colony
+			berg_is_slave_world = yes
 		}
 	}
 
@@ -2022,6 +2091,7 @@ building_toxic_bath = {
 	}
 	upgrades = {
 		"building_avb_toxic_bath_2" #AVB
+		"building_toxic_bath_advanced" #ZEX
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -2072,5 +2142,64 @@ building_avb_toxic_bath_2 = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_toxic_bath_2
 		TRIGGER = " "
+	}
+}
+building_toxic_bath_advanced = {
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = amenity
+	icon = building_toxic_bath_advanced
+
+	potential = {
+		berg_has_zexpanded_mod = yes
+		has_building = building_toxic_bath
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_regular_empire = no
+				has_toxic_baths = no
+				AND = {
+					is_ai = yes
+					prev = { has_any_industry_district = no }
+				}
+				AND = {
+					is_ai = yes
+					prev = { buildings_stop_pop = yes }
+				}
+				prev = { has_modifier = slave_colony }
+			}
+		}
+	}
+
+	inline_script = {
+		script = vanilla/amenity/berg_toxic_bath_script
+		tier = 2
+	}
+
+	prerequisites = {
+		"tech_frontier_hospital"
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
 	}
 }

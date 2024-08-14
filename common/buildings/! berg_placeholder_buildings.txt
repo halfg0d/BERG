@@ -34,3 +34,5 @@ PR_building_RES_soil_2 = { potential = { always = no } allow = { always = no } }
 building_acot_dm_ancient_palace = { potential = { always = no } allow = { always = no } }
 building_acot_dm_ancient_hive_cluster = { potential = { always = no } allow = { always = no } }
 building_acot_dm_ancient_control_center = { potential = { always = no } allow = { always = no } }
+building_penal_capital = { potential = { always = no } allow = { always = no } }
+building_penal_major_capital = { potential = { always = no } allow = { always = no } }

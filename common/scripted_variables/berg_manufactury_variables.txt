@@ -1,5 +1,17 @@
 #manufactury variables
 # foundry
+@berg_manufactury_foundry_costOneThird_t1 = 133.33
+@berg_manufactury_foundry_costOneThird_t2 = 200.0
+@berg_manufactury_foundry_costOneThird_t3 = 266.67
+@berg_manufactury_foundry_costOneThird_t4 = 666.67
+@berg_manufactury_foundry_costOneThird_t5 = 1333.33
+@berg_manufactury_foundry_costOneThird_t6 = 1800.0
+@berg_manufactury_foundry_costTwoThird_t1 = 266.67
+@berg_manufactury_foundry_costTwoThird_t2 = 400.0
+@berg_manufactury_foundry_costTwoThird_t3 = 533.33
+@berg_manufactury_foundry_costTwoThird_t4 = 1333.33
+@berg_manufactury_foundry_costTwoThird_t5 = 2666.67
+@berg_manufactury_foundry_costTwoThird_t6 = 3600.0
 @berg_manufactury_foundry_cost_t1 = 400
 @berg_manufactury_foundry_cost_t2 = 600
 @berg_manufactury_foundry_cost_t3 = 800
@@ -36,6 +48,18 @@
 @berg_manufactury_foundry_rare_upkeep_t4 = 6
 @berg_manufactury_foundry_rare_upkeep_t5 = 8
 @berg_manufactury_foundry_rare_upkeep_t6 = 11
+@berg_manufactury_foundry_upkeepOneThird_t1 = 0.67
+@berg_manufactury_foundry_upkeepOneThird_t2 = 1.67
+@berg_manufactury_foundry_upkeepOneThird_t3 = 2.67
+@berg_manufactury_foundry_upkeepOneThird_t4 = 4.0
+@berg_manufactury_foundry_upkeepOneThird_t5 = 6.0
+@berg_manufactury_foundry_upkeepOneThird_t6 = 8.67
+@berg_manufactury_foundry_upkeepTwoThird_t1 = 1.33
+@berg_manufactury_foundry_upkeepTwoThird_t2 = 3.33
+@berg_manufactury_foundry_upkeepTwoThird_t3 = 5.33
+@berg_manufactury_foundry_upkeepTwoThird_t4 = 8.0
+@berg_manufactury_foundry_upkeepTwoThird_t5 = 12.0
+@berg_manufactury_foundry_upkeepTwoThird_t6 = 17.33
 @berg_manufactury_foundry_upkeep_t1 = 2
 @berg_manufactury_foundry_upkeep_t2 = 5
 @berg_manufactury_foundry_upkeep_t3 = 8
@@ -96,7 +120,25 @@
 @berg_manufactury_foundry_uap_industrialist_t4 = 3.0
 @berg_manufactury_foundry_uap_industrialist_t5 = 4.0
 @berg_manufactury_foundry_uap_industrialist_t6 = 5.0
+@berg_manufactury_foundry_zex_miners_alloys_t1 = 0.0
+@berg_manufactury_foundry_zex_miners_alloys_t2 = 0.5
+@berg_manufactury_foundry_zex_miners_alloys_t3 = 1.0
+@berg_manufactury_foundry_zex_miners_alloys_t4 = 1.5
+@berg_manufactury_foundry_zex_miners_alloys_t5 = 2.0
+@berg_manufactury_foundry_zex_miners_alloys_t6 = 2.5
 # factory
+@berg_manufactury_factory_costOneThird_t1 = 133.33
+@berg_manufactury_factory_costOneThird_t2 = 200.0
+@berg_manufactury_factory_costOneThird_t3 = 266.67
+@berg_manufactury_factory_costOneThird_t4 = 666.67
+@berg_manufactury_factory_costOneThird_t5 = 1333.33
+@berg_manufactury_factory_costOneThird_t6 = 1800.0
+@berg_manufactury_factory_costTwoThird_t1 = 266.67
+@berg_manufactury_factory_costTwoThird_t2 = 400.0
+@berg_manufactury_factory_costTwoThird_t3 = 533.33
+@berg_manufactury_factory_costTwoThird_t4 = 1333.33
+@berg_manufactury_factory_costTwoThird_t5 = 2666.67
+@berg_manufactury_factory_costTwoThird_t6 = 3600.0
 @berg_manufactury_factory_cost_t1 = 400
 @berg_manufactury_factory_cost_t2 = 600
 @berg_manufactury_factory_cost_t3 = 800
@@ -133,6 +175,18 @@
 @berg_manufactury_factory_rare_upkeep_t4 = 6
 @berg_manufactury_factory_rare_upkeep_t5 = 8
 @berg_manufactury_factory_rare_upkeep_t6 = 11
+@berg_manufactury_factory_upkeepOneThird_t1 = 0.67
+@berg_manufactury_factory_upkeepOneThird_t2 = 1.67
+@berg_manufactury_factory_upkeepOneThird_t3 = 2.67
+@berg_manufactury_factory_upkeepOneThird_t4 = 4.0
+@berg_manufactury_factory_upkeepOneThird_t5 = 6.0
+@berg_manufactury_factory_upkeepOneThird_t6 = 8.67
+@berg_manufactury_factory_upkeepTwoThird_t1 = 1.33
+@berg_manufactury_factory_upkeepTwoThird_t2 = 3.33
+@berg_manufactury_factory_upkeepTwoThird_t3 = 5.33
+@berg_manufactury_factory_upkeepTwoThird_t4 = 8.0
+@berg_manufactury_factory_upkeepTwoThird_t5 = 12.0
+@berg_manufactury_factory_upkeepTwoThird_t6 = 17.33
 @berg_manufactury_factory_upkeep_t1 = 2
 @berg_manufactury_factory_upkeep_t2 = 5
 @berg_manufactury_factory_upkeep_t3 = 8
@@ -169,7 +223,25 @@
 @berg_manufactury_factory_uap_industrialist_t4 = 6.0
 @berg_manufactury_factory_uap_industrialist_t5 = 8.0
 @berg_manufactury_factory_uap_industrialist_t6 = 10.0
+@berg_manufactury_factory_zex_artisan_upkeep_t1 = 0.0
+@berg_manufactury_factory_zex_artisan_upkeep_t2 = 0.5
+@berg_manufactury_factory_zex_artisan_upkeep_t3 = 1.0
+@berg_manufactury_factory_zex_artisan_upkeep_t4 = 1.5
+@berg_manufactury_factory_zex_artisan_upkeep_t5 = 2.0
+@berg_manufactury_factory_zex_artisan_upkeep_t6 = 2.5
+@berg_manufactury_factory_zex_basic_jobs_cg_produces_t1 = 0.0
+@berg_manufactury_factory_zex_basic_jobs_cg_produces_t2 = 0.5
+@berg_manufactury_factory_zex_basic_jobs_cg_produces_t3 = 1.0
+@berg_manufactury_factory_zex_basic_jobs_cg_produces_t4 = 1.5
+@berg_manufactury_factory_zex_basic_jobs_cg_produces_t5 = 2.0
+@berg_manufactury_factory_zex_basic_jobs_cg_produces_t6 = 2.5
 # refinery
+@berg_manufactury_refinery_costOneThird_t1 = 166.67
+@berg_manufactury_refinery_costOneThird_t2 = 200.0
+@berg_manufactury_refinery_costOneThird_t3 = 333.33
+@berg_manufactury_refinery_costTwoThird_t1 = 333.33
+@berg_manufactury_refinery_costTwoThird_t2 = 400.0
+@berg_manufactury_refinery_costTwoThird_t3 = 666.67
 @berg_manufactury_refinery_cost_t1 = 500
 @berg_manufactury_refinery_cost_t2 = 600
 @berg_manufactury_refinery_cost_t3 = 1000
@@ -182,6 +254,12 @@
 @berg_manufactury_refinery_rare_cost_t1 = 0
 @berg_manufactury_refinery_rare_cost_t2 = 100
 @berg_manufactury_refinery_rare_cost_t3 = 200
+@berg_manufactury_refinery_upkeepOneThird_t1 = 1.0
+@berg_manufactury_refinery_upkeepOneThird_t2 = 1.33
+@berg_manufactury_refinery_upkeepOneThird_t3 = 2.0
+@berg_manufactury_refinery_upkeepTwoThird_t1 = 2.0
+@berg_manufactury_refinery_upkeepTwoThird_t2 = 2.67
+@berg_manufactury_refinery_upkeepTwoThird_t3 = 4.0
 @berg_manufactury_refinery_upkeep_t1 = 3
 @berg_manufactury_refinery_upkeep_t2 = 4
 @berg_manufactury_refinery_upkeep_t3 = 6
@@ -189,6 +267,12 @@
 @berg_manufactury_refinery_job_t2 = 2
 @berg_manufactury_refinery_job_t3 = 3
 # chemical_plant
+@berg_manufactury_chemical_plant_costOneThird_t1 = 200.0
+@berg_manufactury_chemical_plant_costOneThird_t2 = 200.0
+@berg_manufactury_chemical_plant_costOneThird_t3 = 333.33
+@berg_manufactury_chemical_plant_costTwoThird_t1 = 400.0
+@berg_manufactury_chemical_plant_costTwoThird_t2 = 400.0
+@berg_manufactury_chemical_plant_costTwoThird_t3 = 666.67
 @berg_manufactury_chemical_plant_cost_t1 = 600
 @berg_manufactury_chemical_plant_cost_t2 = 600
 @berg_manufactury_chemical_plant_cost_t3 = 1000
@@ -201,6 +285,12 @@
 @berg_manufactury_chemical_plant_rare_cost_t1 = 0
 @berg_manufactury_chemical_plant_rare_cost_t2 = 100
 @berg_manufactury_chemical_plant_rare_cost_t3 = 200
+@berg_manufactury_chemical_plant_upkeepOneThird_t1 = 1.0
+@berg_manufactury_chemical_plant_upkeepOneThird_t2 = 1.33
+@berg_manufactury_chemical_plant_upkeepOneThird_t3 = 2.0
+@berg_manufactury_chemical_plant_upkeepTwoThird_t1 = 2.0
+@berg_manufactury_chemical_plant_upkeepTwoThird_t2 = 2.67
+@berg_manufactury_chemical_plant_upkeepTwoThird_t3 = 4.0
 @berg_manufactury_chemical_plant_upkeep_1 = 3
 @berg_manufactury_chemical_plant_upkeep_t1 = 3
 @berg_manufactury_chemical_plant_upkeep_t2 = 4
@@ -209,6 +299,12 @@
 @berg_manufactury_chemical_plant_job_t2 = 2
 @berg_manufactury_chemical_plant_job_t3 = 3
 # crystal_plant
+@berg_manufactury_crystal_plant_costOneThird_t1 = 200.0
+@berg_manufactury_crystal_plant_costOneThird_t2 = 200.0
+@berg_manufactury_crystal_plant_costOneThird_t3 = 333.33
+@berg_manufactury_crystal_plant_costTwoThird_t1 = 400.0
+@berg_manufactury_crystal_plant_costTwoThird_t2 = 400.0
+@berg_manufactury_crystal_plant_costTwoThird_t3 = 666.67
 @berg_manufactury_crystal_plant_cost_t1 = 600
 @berg_manufactury_crystal_plant_cost_t2 = 600
 @berg_manufactury_crystal_plant_cost_t3 = 1000
@@ -221,6 +317,12 @@
 @berg_manufactury_crystal_plant_rare_cost_t1 = 0
 @berg_manufactury_crystal_plant_rare_cost_t2 = 100
 @berg_manufactury_crystal_plant_rare_cost_t3 = 200
+@berg_manufactury_crystal_plant_upkeepOneThird_t1 = 1.0
+@berg_manufactury_crystal_plant_upkeepOneThird_t2 = 1.33
+@berg_manufactury_crystal_plant_upkeepOneThird_t3 = 2.0
+@berg_manufactury_crystal_plant_upkeepTwoThird_t1 = 2.0
+@berg_manufactury_crystal_plant_upkeepTwoThird_t2 = 2.67
+@berg_manufactury_crystal_plant_upkeepTwoThird_t3 = 4.0
 @berg_manufactury_crystal_plant_upkeep_1 = 3
 @berg_manufactury_crystal_plant_upkeep_t1 = 3
 @berg_manufactury_crystal_plant_upkeep_t2 = 4
@@ -229,6 +331,10 @@
 @berg_manufactury_crystal_plant_job_t2 = 2
 @berg_manufactury_crystal_plant_job_t3 = 3
 # nanite_transmuter
+@berg_manufactury_nanite_transmuter_costOneThird_t1 = 333.33
+@berg_manufactury_nanite_transmuter_costOneThird_t2 = 666.67
+@berg_manufactury_nanite_transmuter_costTwoThird_t1 = 666.67
+@berg_manufactury_nanite_transmuter_costTwoThird_t2 = 1333.33
 @berg_manufactury_nanite_transmuter_cost_t1 = 1000
 @berg_manufactury_nanite_transmuter_cost_t2 = 2000
 @berg_manufactury_nanite_transmuter_nanite_upkeep_t1 = 1
@@ -237,9 +343,17 @@
 @berg_manufactury_nanite_transmuter_produce_t2 = 5
 @berg_manufactury_nanite_transmuter_rare_cost_t1 = 0
 @berg_manufactury_nanite_transmuter_rare_cost_t2 = 50
+@berg_manufactury_nanite_transmuter_upkeepOneThird_t1 = 1.67
+@berg_manufactury_nanite_transmuter_upkeepOneThird_t2 = 4.0
+@berg_manufactury_nanite_transmuter_upkeepTwoThird_t1 = 3.33
+@berg_manufactury_nanite_transmuter_upkeepTwoThird_t2 = 8.0
 @berg_manufactury_nanite_transmuter_upkeep_t1 = 5
 @berg_manufactury_nanite_transmuter_upkeep_t2 = 12
 # ministry_production
+@berg_manufactury_ministry_production_costOneThird_t1 = 200.0
+@berg_manufactury_ministry_production_costOneThird_t2 = 666.67
+@berg_manufactury_ministry_production_costTwoThird_t1 = 400.0
+@berg_manufactury_ministry_production_costTwoThird_t2 = 1333.33
 @berg_manufactury_ministry_production_cost_t1 = 600
 @berg_manufactury_ministry_production_cost_t2 = 2000
 @berg_manufactury_ministry_production_osa_upkeep_energy_t1 = 0.0
@@ -252,6 +366,10 @@
 @berg_manufactury_ministry_production_rare_cost_t2 = 250
 @berg_manufactury_ministry_production_rare_upkeep_t1 = 1
 @berg_manufactury_ministry_production_rare_upkeep_t2 = 6
+@berg_manufactury_ministry_production_upkeepOneThird_t1 = 1.67
+@berg_manufactury_ministry_production_upkeepOneThird_t2 = 4.0
+@berg_manufactury_ministry_production_upkeepTwoThird_t1 = 3.33
+@berg_manufactury_ministry_production_upkeepTwoThird_t2 = 8.0
 @berg_manufactury_ministry_production_upkeep_t1 = 5
 @berg_manufactury_ministry_production_upkeep_t2 = 12
 @berg_manufactury_ministry_production_job_t1 = 1
@@ -263,6 +381,10 @@
 @berg_manufactury_ministry_production_uap_industrialist_t1 = 1
 @berg_manufactury_ministry_production_uap_industrialist_t2 = 3
 # production_center
+@berg_manufactury_production_center_costOneThird_t1 = 200.0
+@berg_manufactury_production_center_costOneThird_t2 = 666.67
+@berg_manufactury_production_center_costTwoThird_t1 = 400.0
+@berg_manufactury_production_center_costTwoThird_t2 = 1333.33
 @berg_manufactury_production_center_cost_t1 = 600
 @berg_manufactury_production_center_cost_t2 = 2000
 @berg_manufactury_production_center_osa_upkeep_energy_t1 = 0.0
@@ -275,6 +397,10 @@
 @berg_manufactury_production_center_rare_cost_t2 = 250
 @berg_manufactury_production_center_rare_upkeep_t1 = 1
 @berg_manufactury_production_center_rare_upkeep_t2 = 6
+@berg_manufactury_production_center_upkeepOneThird_t1 = 1.67
+@berg_manufactury_production_center_upkeepOneThird_t2 = 4.0
+@berg_manufactury_production_center_upkeepTwoThird_t1 = 3.33
+@berg_manufactury_production_center_upkeepTwoThird_t2 = 8.0
 @berg_manufactury_production_center_upkeep_t1 = 5
 @berg_manufactury_production_center_upkeep_t2 = 12
 @berg_manufactury_production_center_job_hive_t1 = 2
@@ -286,8 +412,16 @@
 # archaeo_refinery
 @berg_manufactury_archaeo_refinery_artifacts_cost_t1 = 50
 @berg_manufactury_archaeo_refinery_artifacts_cost_t2 = 150
+@berg_manufactury_archaeo_refinery_costOneThird_t1 = 200.0
+@berg_manufactury_archaeo_refinery_costOneThird_t2 = 333.33
+@berg_manufactury_archaeo_refinery_costTwoThird_t1 = 400.0
+@berg_manufactury_archaeo_refinery_costTwoThird_t2 = 666.67
 @berg_manufactury_archaeo_refinery_cost_t1 = 600
 @berg_manufactury_archaeo_refinery_cost_t2 = 1000
+@berg_manufactury_archaeo_refinery_upkeepOneThird_t1 = 1.67
+@berg_manufactury_archaeo_refinery_upkeepOneThird_t2 = 2.0
+@berg_manufactury_archaeo_refinery_upkeepTwoThird_t1 = 3.33
+@berg_manufactury_archaeo_refinery_upkeepTwoThird_t2 = 4.0
 @berg_manufactury_archaeo_refinery_upkeep_t1 = 5
 @berg_manufactury_archaeo_refinery_upkeep_t2 = 6
 @berg_manufactury_archaeo_refinery_job_t1 = 1
@@ -295,6 +429,10 @@
 @berg_manufactury_archaeo_refinery_mult_t1 = 0.25
 @berg_manufactury_archaeo_refinery_mult_t2 = 0.35
 # fulfillment_center
+@berg_manufactury_fulfillment_center_costOneThird_t1 = 133.33
+@berg_manufactury_fulfillment_center_costOneThird_t2 = 200.0
+@berg_manufactury_fulfillment_center_costTwoThird_t1 = 266.67
+@berg_manufactury_fulfillment_center_costTwoThird_t2 = 400.0
 @berg_manufactury_fulfillment_center_cost_t1 = 400
 @berg_manufactury_fulfillment_center_cost_t2 = 600
 @berg_manufactury_fulfillment_center_produce_t1 = 10
@@ -305,6 +443,10 @@
 @berg_manufactury_fulfillment_center_rare_upkeep_t2 = 2
 @berg_manufactury_fulfillment_center_unity_upkeep_t1 = 10
 @berg_manufactury_fulfillment_center_unity_upkeep_t2 = 20
+@berg_manufactury_fulfillment_center_upkeepOneThird_t1 = 0.67
+@berg_manufactury_fulfillment_center_upkeepOneThird_t2 = 1.67
+@berg_manufactury_fulfillment_center_upkeepTwoThird_t1 = 1.33
+@berg_manufactury_fulfillment_center_upkeepTwoThird_t2 = 3.33
 @berg_manufactury_fulfillment_center_upkeep_t1 = 2
 @berg_manufactury_fulfillment_center_upkeep_t2 = 5
 @berg_manufactury_fulfillment_center_habitability_ceil_policy_t1 = -0.075

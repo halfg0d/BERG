@@ -17,11 +17,13 @@ building_low_tech_scrap_refinery = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b0_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 200
 		}
-		upkeep = {
-			energy = @b0_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 1
 		}
 	}
 
@@ -79,11 +81,13 @@ building_low_tech_admin_hub = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b0_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 200
 		}
-		upkeep = {
-			energy = @b0_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 1
 		}
 	}
 
@@ -183,11 +187,13 @@ building_low_tech_power_plant = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b0_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 200
 		}
-		upkeep = {
-			energy = @b0_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 1
 		}
 	}
 
@@ -230,11 +236,13 @@ building_low_tech_farm = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b0_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 200
 		}
-		upkeep = {
-			energy = @b0_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 1
 		}
 	}
 
@@ -328,11 +336,13 @@ building_low_tech_research_lab = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b0_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 200
 		}
-		upkeep = {
-			energy = @b0_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 1
 		}
 	}
 

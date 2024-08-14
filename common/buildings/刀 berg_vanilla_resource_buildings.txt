@@ -4,7 +4,7 @@
 
 building_hydroponics_farm = {
 	base_buildtime = @b1_time
-
+	inline_script = ZEX/hydroponics_desc
 	category = resource
 
 	potential = {

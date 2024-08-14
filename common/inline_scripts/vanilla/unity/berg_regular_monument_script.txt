@@ -17,3 +17,14 @@ triggered_planet_modifier = {
 }
 #OST
 inline_script = tradition_script/ost_solidarity_effect
+#zExpanded Hedonism
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { has_valid_civic = civic_ethical_hedonism }
+	}
+	modifier = {
+		job_culture_worker_add = @berg_unity_monument_regular_zex_hedonism_job_t$tier$
+	}
+}

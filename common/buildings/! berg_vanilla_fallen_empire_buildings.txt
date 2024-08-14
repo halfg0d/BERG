@@ -1376,6 +1376,14 @@ building_ancient_cryo_chamber = {
 			sr_living_metal = 1
 			energy = 50
 		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = owner
+				owner = { is_fallen_empire = yes }
+			}
+			unity = 20
+		}
 	}
 
 	upgrades = {

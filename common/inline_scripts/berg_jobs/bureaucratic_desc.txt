@@ -1,0 +1,146 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_megacorp = no
+		}
+		$trigger$
+	}
+	modifier = {
+		job_bureaucrat_add = $AMOUNT$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+			NOT = { has_valid_civic = civic_private_military_companies }
+		}
+		$trigger$
+	}
+	modifier = {
+		job_manager_add = $AMOUNT$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_worker_coop_empire = yes
+		}
+		$trigger$
+	}
+	modifier = {
+		job_steward_add = $AMOUNT$
+	}
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_megacorp = no }
+		$trigger$
+	}
+	text = job_bureaucrat_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+			NOT = { has_valid_civic = civic_private_military_companies }
+		}
+		$trigger$
+	}
+	text = job_manager_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+			NOT = { has_valid_civic = civic_private_military_companies }
+		}
+		$trigger$
+	}
+	text = job_steward_effect_desc
+}
+###zExpanded
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			uses_regular_empire_jobs = yes
+			is_megacorp = no
+			is_worker_coop_empire = no
+			is_spiritualist = no
+			has_valid_civic = civic_ethical_hedonism
+		}
+		$trigger$
+	}
+	modifier = {
+		job_bureaucrat_add = -@[$AMOUNT$/2]
+		job_culture_worker_add = @[$AMOUNT$/2]
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			uses_regular_empire_jobs = yes
+			is_megacorp = no
+			is_worker_coop_empire = no
+			is_spiritualist = no
+			has_valid_civic = civic_ethical_hedonism
+		}
+		$trigger$
+	}
+	text = job_culture_worker_effect_desc
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = no
+			has_valid_civic = civic_private_military_companies
+		}
+	}
+	modifier = {
+		job_logistics_officer_add = $AMOUNT$
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_megacorp = yes
+			is_worker_coop_empire = yes
+			has_valid_civic = civic_private_military_companies
+		}
+	}
+	modifier = {
+		job_steward_add = @[$AMOUNT$/2]
+		job_logistics_officer_add = @[$AMOUNT$/2]
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			has_valid_civic = civic_private_military_companies
+		}
+	}
+	text = job_logistics_officer_effect_desc
+}

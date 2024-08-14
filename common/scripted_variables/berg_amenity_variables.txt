@@ -1,5 +1,15 @@
 #amenity variables
 # residence
+@berg_amenity_residence_costOneThird_t1 = 133.33
+@berg_amenity_residence_costOneThird_t2 = 200.0
+@berg_amenity_residence_costOneThird_t3 = 333.33
+@berg_amenity_residence_costOneThird_t4 = 666.67
+@berg_amenity_residence_costOneThird_t5 = 1333.33
+@berg_amenity_residence_costTwoThird_t1 = 266.67
+@berg_amenity_residence_costTwoThird_t2 = 400.0
+@berg_amenity_residence_costTwoThird_t3 = 666.67
+@berg_amenity_residence_costTwoThird_t4 = 1333.33
+@berg_amenity_residence_costTwoThird_t5 = 2666.67
 @berg_amenity_residence_cost_t1 = 400
 @berg_amenity_residence_cost_t2 = 600
 @berg_amenity_residence_cost_t3 = 1000
@@ -50,6 +60,16 @@
 @berg_amenity_residence_rare_upkeep_t3 = 4
 @berg_amenity_residence_rare_upkeep_t4 = 6
 @berg_amenity_residence_rare_upkeep_t5 = 8
+@berg_amenity_residence_upkeepOneThird_t1 = 0.67
+@berg_amenity_residence_upkeepOneThird_t2 = 1.0
+@berg_amenity_residence_upkeepOneThird_t3 = 2.0
+@berg_amenity_residence_upkeepOneThird_t4 = 4.0
+@berg_amenity_residence_upkeepOneThird_t5 = 6.0
+@berg_amenity_residence_upkeepTwoThird_t1 = 1.33
+@berg_amenity_residence_upkeepTwoThird_t2 = 2.0
+@berg_amenity_residence_upkeepTwoThird_t3 = 4.0
+@berg_amenity_residence_upkeepTwoThird_t4 = 8.0
+@berg_amenity_residence_upkeepTwoThird_t5 = 12.0
 @berg_amenity_residence_upkeep_t1 = 2
 @berg_amenity_residence_upkeep_t2 = 3
 @berg_amenity_residence_upkeep_t3 = 6
@@ -86,6 +106,16 @@
 @berg_amenity_residence_osa_housing_t4 = 36
 @berg_amenity_residence_osa_housing_t5 = 40
 # communal
+@berg_amenity_communal_costOneThird_t1 = 133.33
+@berg_amenity_communal_costOneThird_t2 = 200.0
+@berg_amenity_communal_costOneThird_t3 = 333.33
+@berg_amenity_communal_costOneThird_t4 = 666.67
+@berg_amenity_communal_costOneThird_t5 = 1333.33
+@berg_amenity_communal_costTwoThird_t1 = 266.67
+@berg_amenity_communal_costTwoThird_t2 = 400.0
+@berg_amenity_communal_costTwoThird_t3 = 666.67
+@berg_amenity_communal_costTwoThird_t4 = 1333.33
+@berg_amenity_communal_costTwoThird_t5 = 2666.67
 @berg_amenity_communal_cost_t1 = 400
 @berg_amenity_communal_cost_t2 = 600
 @berg_amenity_communal_cost_t3 = 1000
@@ -111,6 +141,16 @@
 @berg_amenity_communal_rare_upkeep_t3 = 4
 @berg_amenity_communal_rare_upkeep_t4 = 6
 @berg_amenity_communal_rare_upkeep_t5 = 8
+@berg_amenity_communal_upkeepOneThird_t1 = 0.67
+@berg_amenity_communal_upkeepOneThird_t2 = 1.0
+@berg_amenity_communal_upkeepOneThird_t3 = 2.0
+@berg_amenity_communal_upkeepOneThird_t4 = 4.0
+@berg_amenity_communal_upkeepOneThird_t5 = 6.0
+@berg_amenity_communal_upkeepTwoThird_t1 = 1.33
+@berg_amenity_communal_upkeepTwoThird_t2 = 2.0
+@berg_amenity_communal_upkeepTwoThird_t3 = 4.0
+@berg_amenity_communal_upkeepTwoThird_t4 = 8.0
+@berg_amenity_communal_upkeepTwoThird_t5 = 12.0
 @berg_amenity_communal_upkeep_t1 = 2
 @berg_amenity_communal_upkeep_t2 = 3
 @berg_amenity_communal_upkeep_t3 = 6
@@ -127,6 +167,16 @@
 @berg_amenity_communal_housing_t4 = 35
 @berg_amenity_communal_housing_t5 = 60
 # warren
+@berg_amenity_warren_costOneThird_t1 = 133.33
+@berg_amenity_warren_costOneThird_t2 = 200.0
+@berg_amenity_warren_costOneThird_t3 = 333.33
+@berg_amenity_warren_costOneThird_t4 = 666.67
+@berg_amenity_warren_costOneThird_t5 = 1333.33
+@berg_amenity_warren_costTwoThird_t1 = 266.67
+@berg_amenity_warren_costTwoThird_t2 = 400.0
+@berg_amenity_warren_costTwoThird_t3 = 666.67
+@berg_amenity_warren_costTwoThird_t4 = 1333.33
+@berg_amenity_warren_costTwoThird_t5 = 2666.67
 @berg_amenity_warren_cost_t1 = 400
 @berg_amenity_warren_cost_t2 = 600
 @berg_amenity_warren_cost_t3 = 1000
@@ -142,6 +192,16 @@
 @berg_amenity_warren_rare_upkeep_t3 = 4
 @berg_amenity_warren_rare_upkeep_t4 = 6
 @berg_amenity_warren_rare_upkeep_t5 = 8
+@berg_amenity_warren_upkeepOneThird_t1 = 0.67
+@berg_amenity_warren_upkeepOneThird_t2 = 1.0
+@berg_amenity_warren_upkeepOneThird_t3 = 2.0
+@berg_amenity_warren_upkeepOneThird_t4 = 4.0
+@berg_amenity_warren_upkeepOneThird_t5 = 6.0
+@berg_amenity_warren_upkeepTwoThird_t1 = 1.33
+@berg_amenity_warren_upkeepTwoThird_t2 = 2.0
+@berg_amenity_warren_upkeepTwoThird_t3 = 4.0
+@berg_amenity_warren_upkeepTwoThird_t4 = 8.0
+@berg_amenity_warren_upkeepTwoThird_t5 = 12.0
 @berg_amenity_warren_upkeep_t1 = 2
 @berg_amenity_warren_upkeep_t2 = 3
 @berg_amenity_warren_upkeep_t3 = 6
@@ -168,6 +228,16 @@
 @berg_amenity_warren_osa_housing_t4 = 28
 @berg_amenity_warren_osa_housing_t5 = 20
 # drone_storage
+@berg_amenity_drone_storage_costOneThird_t1 = 133.33
+@berg_amenity_drone_storage_costOneThird_t2 = 200.0
+@berg_amenity_drone_storage_costOneThird_t3 = 333.33
+@berg_amenity_drone_storage_costOneThird_t4 = 666.67
+@berg_amenity_drone_storage_costOneThird_t5 = 1333.33
+@berg_amenity_drone_storage_costTwoThird_t1 = 266.67
+@berg_amenity_drone_storage_costTwoThird_t2 = 400.0
+@berg_amenity_drone_storage_costTwoThird_t3 = 666.67
+@berg_amenity_drone_storage_costTwoThird_t4 = 1333.33
+@berg_amenity_drone_storage_costTwoThird_t5 = 2666.67
 @berg_amenity_drone_storage_cost_t1 = 400
 @berg_amenity_drone_storage_cost_t2 = 600
 @berg_amenity_drone_storage_cost_t3 = 1000
@@ -183,6 +253,16 @@
 @berg_amenity_drone_storage_rare_upkeep_t3 = 4
 @berg_amenity_drone_storage_rare_upkeep_t4 = 6
 @berg_amenity_drone_storage_rare_upkeep_t5 = 8
+@berg_amenity_drone_storage_upkeepOneThird_t1 = 0.67
+@berg_amenity_drone_storage_upkeepOneThird_t2 = 1.67
+@berg_amenity_drone_storage_upkeepOneThird_t3 = 2.0
+@berg_amenity_drone_storage_upkeepOneThird_t4 = 4.0
+@berg_amenity_drone_storage_upkeepOneThird_t5 = 6.0
+@berg_amenity_drone_storage_upkeepTwoThird_t1 = 1.33
+@berg_amenity_drone_storage_upkeepTwoThird_t2 = 3.33
+@berg_amenity_drone_storage_upkeepTwoThird_t3 = 4.0
+@berg_amenity_drone_storage_upkeepTwoThird_t4 = 8.0
+@berg_amenity_drone_storage_upkeepTwoThird_t5 = 12.0
 @berg_amenity_drone_storage_upkeep_2 = 3
 @berg_amenity_drone_storage_upkeep_t1 = 2
 @berg_amenity_drone_storage_upkeep_t2 = 5
@@ -210,6 +290,14 @@
 @berg_amenity_drone_storage_osa_housing_t4 = 28
 @berg_amenity_drone_storage_osa_housing_t5 = 32
 # holo_theatres
+@berg_amenity_holo_theatres_costOneThird_t1 = 133.33
+@berg_amenity_holo_theatres_costOneThird_t2 = 200.0
+@berg_amenity_holo_theatres_costOneThird_t3 = 333.33
+@berg_amenity_holo_theatres_costOneThird_t4 = 666.67
+@berg_amenity_holo_theatres_costTwoThird_t1 = 266.67
+@berg_amenity_holo_theatres_costTwoThird_t2 = 400.0
+@berg_amenity_holo_theatres_costTwoThird_t3 = 666.67
+@berg_amenity_holo_theatres_costTwoThird_t4 = 1333.33
 @berg_amenity_holo_theatres_cost_t1 = 400
 @berg_amenity_holo_theatres_cost_t2 = 600
 @berg_amenity_holo_theatres_cost_t3 = 1000
@@ -232,6 +320,14 @@
 @berg_amenity_holo_theatres_rare_upkeep_t2 = 1
 @berg_amenity_holo_theatres_rare_upkeep_t3 = 4
 @berg_amenity_holo_theatres_rare_upkeep_t4 = 6
+@berg_amenity_holo_theatres_upkeepOneThird_t1 = 0.67
+@berg_amenity_holo_theatres_upkeepOneThird_t2 = 1.67
+@berg_amenity_holo_theatres_upkeepOneThird_t3 = 2.0
+@berg_amenity_holo_theatres_upkeepOneThird_t4 = 4.0
+@berg_amenity_holo_theatres_upkeepTwoThird_t1 = 1.33
+@berg_amenity_holo_theatres_upkeepTwoThird_t2 = 3.33
+@berg_amenity_holo_theatres_upkeepTwoThird_t3 = 4.0
+@berg_amenity_holo_theatres_upkeepTwoThird_t4 = 8.0
 @berg_amenity_holo_theatres_upkeep_t1 = 2
 @berg_amenity_holo_theatres_upkeep_t2 = 5
 @berg_amenity_holo_theatres_upkeep_t3 = 6
@@ -241,6 +337,14 @@
 @berg_amenity_holo_theatres_job_t3 = 8
 @berg_amenity_holo_theatres_job_t4 = 16
 # clinic
+@berg_amenity_clinic_costOneThird_t1 = 133.33
+@berg_amenity_clinic_costOneThird_t2 = 200.0
+@berg_amenity_clinic_costOneThird_t3 = 333.33
+@berg_amenity_clinic_costOneThird_t4 = 666.67
+@berg_amenity_clinic_costTwoThird_t1 = 266.67
+@berg_amenity_clinic_costTwoThird_t2 = 400.0
+@berg_amenity_clinic_costTwoThird_t3 = 666.67
+@berg_amenity_clinic_costTwoThird_t4 = 1333.33
 @berg_amenity_clinic_cost_t1 = 400
 @berg_amenity_clinic_cost_t2 = 600
 @berg_amenity_clinic_cost_t3 = 1000
@@ -267,6 +371,14 @@
 @berg_amenity_clinic_rare_upkeep_t2 = 1
 @berg_amenity_clinic_rare_upkeep_t3 = 4
 @berg_amenity_clinic_rare_upkeep_t4 = 6
+@berg_amenity_clinic_upkeepOneThird_t1 = 0.67
+@berg_amenity_clinic_upkeepOneThird_t2 = 1.67
+@berg_amenity_clinic_upkeepOneThird_t3 = 2.0
+@berg_amenity_clinic_upkeepOneThird_t4 = 4.0
+@berg_amenity_clinic_upkeepTwoThird_t1 = 1.33
+@berg_amenity_clinic_upkeepTwoThird_t2 = 3.33
+@berg_amenity_clinic_upkeepTwoThird_t3 = 4.0
+@berg_amenity_clinic_upkeepTwoThird_t4 = 8.0
 @berg_amenity_clinic_upkeep_t1 = 2
 @berg_amenity_clinic_upkeep_t2 = 5
 @berg_amenity_clinic_upkeep_t3 = 6
@@ -292,12 +404,20 @@
 @berg_amenity_clinic_osa_housing_t3 = 5
 @berg_amenity_clinic_osa_housing_t4 = 5
 # depot
+@berg_amenity_depot_costOneThird_t1 = 133.33
+@berg_amenity_depot_costOneThird_t2 = 200.0
+@berg_amenity_depot_costTwoThird_t1 = 266.67
+@berg_amenity_depot_costTwoThird_t2 = 400.0
 @berg_amenity_depot_cost_t1 = 400
 @berg_amenity_depot_cost_t2 = 600
 @berg_amenity_depot_osa_upkeep_energy_t1 = 0.5
 @berg_amenity_depot_osa_upkeep_energy_t2 = 0.5
 @berg_amenity_depot_osa_upkeep_minerals_t1 = 2.5
 @berg_amenity_depot_osa_upkeep_minerals_t2 = 2.5
+@berg_amenity_depot_upkeepOneThird_t1 = 0.67
+@berg_amenity_depot_upkeepOneThird_t2 = 1.33
+@berg_amenity_depot_upkeepTwoThird_t1 = 1.33
+@berg_amenity_depot_upkeepTwoThird_t2 = 2.67
 @berg_amenity_depot_upkeep_t1 = 2
 @berg_amenity_depot_upkeep_t2 = 4
 @berg_amenity_depot_job_t1 = 5
@@ -305,6 +425,10 @@
 @berg_amenity_depot_osa_mult_t1 = 0.1
 @berg_amenity_depot_osa_mult_t2 = 0.2
 # slave_huts
+@berg_amenity_slave_huts_costOneThird_t1 = 133.33
+@berg_amenity_slave_huts_costOneThird_t2 = 333.33
+@berg_amenity_slave_huts_costTwoThird_t1 = 266.67
+@berg_amenity_slave_huts_costTwoThird_t2 = 666.67
 @berg_amenity_slave_huts_cost_t0 = 200
 @berg_amenity_slave_huts_cost_t1 = 400
 @berg_amenity_slave_huts_cost_t2 = 1000
@@ -314,6 +438,10 @@
 @berg_amenity_slave_huts_osa_upkeep_food_t2 = 25
 @berg_amenity_slave_huts_osa_upkeep_minerals_t1 = 15
 @berg_amenity_slave_huts_osa_upkeep_minerals_t2 = 25
+@berg_amenity_slave_huts_upkeepOneThird_t1 = 0.67
+@berg_amenity_slave_huts_upkeepOneThird_t2 = 2.0
+@berg_amenity_slave_huts_upkeepTwoThird_t1 = 1.33
+@berg_amenity_slave_huts_upkeepTwoThird_t2 = 4.0
 @berg_amenity_slave_huts_upkeep_t0 = 1
 @berg_amenity_slave_huts_upkeep_t1 = 2
 @berg_amenity_slave_huts_upkeep_t2 = 6
@@ -322,6 +450,10 @@
 @berg_amenity_slave_huts_osa_housing_t1 = 17
 @berg_amenity_slave_huts_osa_housing_t2 = 24
 # overseer_home
+@berg_amenity_overseer_home_costOneThird_t1 = 66.67
+@berg_amenity_overseer_home_costOneThird_t2 = 333.33
+@berg_amenity_overseer_home_costTwoThird_t1 = 133.33
+@berg_amenity_overseer_home_costTwoThird_t2 = 666.67
 @berg_amenity_overseer_home_cost_t0 = 200
 @berg_amenity_overseer_home_cost_t1 = 200
 @berg_amenity_overseer_home_cost_t2 = 1000
@@ -331,6 +463,10 @@
 @berg_amenity_overseer_home_osa_upkeep_food_t2 = 20
 @berg_amenity_overseer_home_osa_upkeep_minerals_t1 = 10
 @berg_amenity_overseer_home_osa_upkeep_minerals_t2 = 20
+@berg_amenity_overseer_home_upkeepOneThird_t1 = 0.33
+@berg_amenity_overseer_home_upkeepOneThird_t2 = 2.0
+@berg_amenity_overseer_home_upkeepTwoThird_t1 = 0.67
+@berg_amenity_overseer_home_upkeepTwoThird_t2 = 4.0
 @berg_amenity_overseer_home_upkeep_t0 = 1
 @berg_amenity_overseer_home_upkeep_t1 = 1
 @berg_amenity_overseer_home_upkeep_t2 = 6
@@ -343,8 +479,16 @@
 @berg_amenity_overseer_home_osa_job_t1 = 3
 @berg_amenity_overseer_home_osa_job_t2 = 6
 # ranger
+@berg_amenity_ranger_costOneThird_t1 = 133.33
+@berg_amenity_ranger_costOneThird_t2 = 200.0
+@berg_amenity_ranger_costTwoThird_t1 = 266.67
+@berg_amenity_ranger_costTwoThird_t2 = 400.0
 @berg_amenity_ranger_cost_t1 = 400
 @berg_amenity_ranger_cost_t2 = 600
+@berg_amenity_ranger_upkeepOneThird_t1 = 0.67
+@berg_amenity_ranger_upkeepOneThird_t2 = 1.33
+@berg_amenity_ranger_upkeepTwoThird_t1 = 1.33
+@berg_amenity_ranger_upkeepTwoThird_t2 = 2.67
 @berg_amenity_ranger_upkeep_t1 = 2
 @berg_amenity_ranger_upkeep_t2 = 4
 @berg_amenity_ranger_job_t1 = 1
@@ -352,12 +496,20 @@
 @berg_amenity_ranger_unity_t1 = 1
 @berg_amenity_ranger_unity_t2 = 2
 # toxic_bath
+@berg_amenity_toxic_bath_costOneThird_t1 = 133.33
+@berg_amenity_toxic_bath_costOneThird_t2 = 200.0
+@berg_amenity_toxic_bath_costTwoThird_t1 = 266.67
+@berg_amenity_toxic_bath_costTwoThird_t2 = 400.0
 @berg_amenity_toxic_bath_cost_t1 = 400
 @berg_amenity_toxic_bath_cost_t2 = 600
 @berg_amenity_toxic_bath_rare_cost_t1 = 0
 @berg_amenity_toxic_bath_rare_cost_t2 = 100
 @berg_amenity_toxic_bath_rare_upkeep_t1 = 0
 @berg_amenity_toxic_bath_rare_upkeep_t2 = 2
+@berg_amenity_toxic_bath_upkeepOneThird_t1 = 0.67
+@berg_amenity_toxic_bath_upkeepOneThird_t2 = 1.33
+@berg_amenity_toxic_bath_upkeepTwoThird_t1 = 1.33
+@berg_amenity_toxic_bath_upkeepTwoThird_t2 = 2.67
 @berg_amenity_toxic_bath_upkeep_t1 = 2
 @berg_amenity_toxic_bath_upkeep_t2 = 4
 @berg_amenity_toxic_bath_job_t1 = 2

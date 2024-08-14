@@ -152,6 +152,24 @@ building_paragon_memory_vaults = {
 		upkeep = {
 			energy = @b2_upkeep
 		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = owner
+				owner = { has_councilor = { COUNCILOR = "councilor_memory_vaults" } }
+			}
+			unity = 5
+			mult = value:councilor_level|TYPE|councilor_memory_vaults|
+		}
+		produces = {
+			trigger = {
+				berg_has_zexpanded_mod = yes
+				exists = owner
+				owner = { has_councilor = { COUNCILOR = "councilor_memory_vault_corporate" } }
+			}
+			unity = 5
+			mult = value:councilor_level|TYPE|councilor_memory_vault_corporate|
+		}
 	}
 
 	triggered_planet_modifier = {

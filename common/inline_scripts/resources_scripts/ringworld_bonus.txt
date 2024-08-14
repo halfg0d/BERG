@@ -1,5 +1,6 @@
 cost = {
 	trigger = {
+		berg_has_zexpanded_mod = no
 		check_variable_arithmetic = {
 			which = $tier$
 			value >= 3
@@ -11,6 +12,7 @@ cost = {
 }
 upkeep = {
 	trigger = {
+		berg_has_zexpanded_mod = no
 		check_variable_arithmetic = {
 			which = $tier$
 			value >= 3

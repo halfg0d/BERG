@@ -1,7 +1,15 @@
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { berg_is_assimilator_empire = yes }
+		owner = {
+			OR = {
+				berg_is_assimilator_empire = yes
+				AND = {
+					berg_has_zexpanded_mod = yes
+					has_origin = origin_extant_creators
+				}
+			}
+		}
 	}
 	modifier = {
 		job_replicator_add = -1
@@ -27,3 +35,15 @@ inline_script = {
 	tier = $tier$
 }
 inline_script = "vanilla/capitals/machine/berg_scripts_jobs_desc"
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { is_servitor_empire = yes }
+	}
+	modifier = {
+		job_bio_trophy_add = @berg_capital_machine_capital_zex_biotrophy_t$tier$
+		job_servitor_caretaker_drone_add = @berg_capital_machine_capital_zex_catetaker_t$tier$
+	}
+}

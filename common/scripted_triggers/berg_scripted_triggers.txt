@@ -5,6 +5,24 @@ berg_has_organic_pop_assembly = {
 		has_building = building_posthumous_employment_center
 	}
 }
+berg_has_artificial_pop_assembly = {
+	OR = {
+		has_building = building_robot_assembly_plant
+		has_building = building_robot_assembly_complex
+		has_building = building_avb_robot_assembly_plant_2
+	}
+}
+berg_has_any_special_civic = {
+	OR = {
+		berg_has_any_spiritualist_civic = yes
+		berg_has_any_noble_civic = yes
+		berg_has_any_technocracy_civic = yes
+		berg_has_any_merchant_civic = yes
+		berg_ecc_military_dictatorship_civic = yes
+		berg_ecc_supervisor_civic = yes
+		is_bugged_governmental_spiritualist = yes
+	}
+}
 berg_has_any_spiritualist_civic = {
 	OR = {
 		has_civic = civic_exalted_priesthood
@@ -22,7 +40,10 @@ berg_has_any_noble_civic = {
 			berg_has_ecc_mod = yes
 			berg_ecc_noble_civic = yes
 		}
-		is_bugged_governmental_elitist = yes
+		AND = {
+			berg_has_bug_mod = yes
+			is_bugged_governmental_elitist = yes
+		}
 	}
 }
 berg_has_any_technocracy_civic = {
@@ -32,7 +53,10 @@ berg_has_any_technocracy_civic = {
 			berg_has_ecc_mod = yes
 			berg_ecc_technocracy_civic = yes
 		}
-		is_bugged_governmental_materialist = yes
+		AND = {
+			berg_has_bug_mod = yes
+			is_bugged_governmental_materialist = yes
+		}
 	}
 }
 berg_has_any_merchant_civic = {
@@ -121,6 +145,20 @@ berg_is_resort_world = {
 }
 berg_is_slave_world = {
 	has_modifier = slave_colony
+}
+berg_is_slave_world_industrial = {
+	OR = {
+		berg_is_slave_world = no
+		berg_is_slaver_empire = yes
+	}
+}
+berg_is_slaver_empire = {
+	owner = {
+		OR = {
+			has_valid_civic = civic_indentured_assets
+			has_valid_civic = civic_slaver_guilds
+		}
+	}
 }
 berg_is_gestation_world = {
 	has_modifier = gestation_colony
@@ -236,7 +274,7 @@ berg_has_food_processing = {
 		has_active_building = building_avb_food_processing_4
 	}
 }
-berg_can_duelist_be_changed = {
+berg_is_warrior_culture = {
 	OR = {
 		has_valid_civic = civic_warrior_culture
 		AND = {
@@ -245,7 +283,6 @@ berg_can_duelist_be_changed = {
 		}
 	}
 }
-
 berg_avb_build_imperial_capital = {
 	OR = {
 		berg_has_avb_mod = no
@@ -261,8 +298,11 @@ berg_avb_build_imperial_capital = {
 }
 
 berg_is_machine_cult = {
-	berg_has_ecc_mod = yes
-	has_civic = civic_machine_cult
+	OR = {
+		berg_has_ecc_mod = yes
+		berg_has_zexpanded_mod = yes
+	}
+	has_valid_civic = civic_machine_cult
 }
 can_show_support_desc = {
 	always = no #DESC Support
@@ -326,4 +366,136 @@ berg_has_any_alien_pets_deposit = {
 			}
 		}
 	}
+}
+berg_has_private_military_companies = {
+	has_valid_civic = civic_private_military_companies
+}
+berg_has_integrated_bioarchitecture = {
+	has_valid_civic = civic_integrated_bioarchitecture
+}
+berg_has_any_alien_deposit = {
+	OR = {
+		has_deposit = d_alien_pets_deposit
+	}
+}
+berg_ST_30_cost = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+	}
+}
+berg_ST_21_cost = {
+	owner = {
+		berg_has_integrated_bioarchitecture = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+		is_lithoid_empire = no
+	}
+}
+berg_ST_03_cost = {
+	exists = owner
+	owner = {
+		berg_has_integrated_bioarchitecture = yes
+		is_lithoid_empire = no
+	}
+}
+berg_ST_30_upkeep = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+		berg_has_integrated_bioarchitecture = no
+	}
+}
+berg_ST_21_upkeep = {
+	exists = owner
+	owner = {
+		is_lithoid_empire = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+	}
+}
+is_berg_host = {
+	has_country_flag = berg_host
+}
+berg_has_private_military_companies = {
+	has_valid_civic = civic_private_military_companies
+}
+berg_has_integrated_bioarchitecture = {
+	has_valid_civic = civic_integrated_bioarchitecture
+}
+berg_has_any_alien_deposit = {
+	OR = {
+		has_deposit = d_alien_pets_deposit
+	}
+}
+berg_ST_30_cost = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+	}
+}
+berg_ST_21_cost = {
+	owner = {
+		berg_has_integrated_bioarchitecture = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+		is_lithoid_empire = no
+	}
+}
+berg_ST_03_cost = {
+	exists = owner
+	owner = {
+		berg_has_integrated_bioarchitecture = yes
+		is_lithoid_empire = no
+	}
+}
+berg_ST_30_upkeep = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+		berg_has_integrated_bioarchitecture = no
+	}
+}
+berg_ST_21_upkeep = {
+	exists = owner
+	owner = {
+		is_lithoid_empire = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+	}
+}
+is_berg_host = {
+	has_country_flag = berg_host
 }

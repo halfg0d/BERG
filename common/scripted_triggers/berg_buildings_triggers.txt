@@ -9,10 +9,14 @@ berg_st_can_build_regular_capital = {
 		is_fallen_empire = no
 	}
 	NOR = {
-		has_modifier = resort_colony
+		berg_is_slave_world = yes
 		berg_is_slave_world = yes
 		uses_habitat_capitals = yes
 		uses_district_set = cosmogenesis_world
+		AND = {
+			berg_has_zexpanded_mod = yes
+			berg_is_penal_world = yes
+		}
 	}
 }
 
@@ -106,9 +110,7 @@ berg_st_can_build_luxury_residence = {
 		berg_pd_resort_habitat = yes
 		berg_void_dweller_housing = yes
 	}
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	exists = owner
 	owner = {
 		is_regular_empire = yes
@@ -150,12 +152,14 @@ berg_st_can_build_warren = {
 }
 
 berg_st_can_build_holotheatres = {
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	owner = {
 		is_regular_empire = yes
 		berg_is_dystopian_society = no
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			berg_is_warrior_culture = yes
+		}
 	}
 	OR = {
 		owner = {
@@ -187,9 +191,7 @@ berg_st_can_build_clinic = {
 			}
 		}
 	}
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	OR = {
 		owner = {
 			OR = {
@@ -231,11 +233,12 @@ berg_st_can_build_overseer = {
 }
 
 berg_st_can_build_ranger = {
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = yes
 	owner = {
-		is_regular_empire = yes
+		OR = {
+			is_regular_empire = yes
+			berg_has_zexpanded_mod = yes
+		}
 		berg_is_environmental = yes
 	}
 	NOR = {
@@ -248,12 +251,11 @@ berg_st_can_build_ranger = {
 }
 
 berg_st_can_build_toxic_bath = {
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	owner = {
 		is_regular_empire = yes
 		has_toxic_baths = yes
+		is_individual_machine = no
 	}
 }
 
@@ -341,20 +343,10 @@ berg_st_can_build_xeno_zoo = {
 # Government
 berg_st_can_build_noble_estates = {
 	exists = owner
-	planet = {
-		or = {
-			has_building = building_noble_estates
-			owner = {
-				is_ai = no
-			}
-		}
-	}
 	owner = {
 		berg_has_any_noble_civic = yes
 	}
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 }
 
 berg_st_can_build_slave_processing = {
@@ -369,22 +361,7 @@ berg_st_can_build_precinct_house = {
 	owner = {
 		is_regular_empire = yes
 	}
-	NOT = {
-		berg_is_slave_world = yes
-	}
-	if = {
-		limit = {
-			owner = {
-				is_ai = yes
-			}
-		}
-		NOT = {
-			has_forbidden_jobs = enforcer
-		}
-		NOT = {
-			has_available_jobs = enforcer
-		}
-	}
+	berg_is_slave_world = no
 }
 
 berg_st_can_build_sentinel_posts = {
@@ -479,7 +456,7 @@ berg_st_can_build_gaiaseeders_T4 = {
 # Manufactury
 berg_st_can_build_foundry = {
 	berg_is_resort_world = no
-	berg_is_slave_world = no
+	berg_is_slave_world_industrial = yes
 	berg_pr_can_vanilla = yes
 	OR = {
 		owner = {
@@ -498,7 +475,7 @@ berg_st_can_build_factory = {
 		}
 	}
 	berg_is_resort_world = no
-	berg_is_slave_world = no
+	berg_is_slave_world_industrial = yes
 	berg_pr_can_vanilla = yes
 	OR = {
 		owner = {
@@ -908,11 +885,7 @@ berg_st_can_build_baol_plant = {
 berg_st_can_build_mineral_purification = {
 	berg_is_resort_world = no
 	berg_pr_can_vanilla = yes
-	NOR = {
-		# Ringworlds don't have mines
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_cybrex
-	}
+	NOT = { uses_district_set = ring_world }
 	OR = {
 		berg_is_habitat = no
 		AND = {
@@ -996,36 +969,31 @@ berg_st_can_build_commercial_zone = {
 	owner = {
 		is_regular_empire = yes
 	}
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	NOT = {
 		has_building = building_low_tech_capital
+	}
+	NAND = {
+		berg_has_zexpanded_mod = yes
+		owner = { is_agrarian_empire = { allow_invalid = yes } }
 	}
 }
 
 berg_st_can_build_galactic_stock = {
-	NOR = {
-		berg_is_resort_world = yes
-		berg_is_slave_world = yes
-	}
+	berg_is_resort_world = no
+	berg_is_slave_world = no
 }
 
 # Unity
 berg_st_can_build_autochton_monument = {
 	exists = owner
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	owner = {
 		NOR = {
 			is_gestalt = yes
 			is_megacorp = yes
 			is_memorialist_empire = yes
 		}
-	}
-	owner = {
-		is_ai = no
 	}
 }
 
@@ -1036,10 +1004,8 @@ berg_st_can_build_bureaucratic = {
 		is_spiritualist = no
 		has_make_spiritualist_perk = no
 	}
-	NOR = {
-		berg_is_slave_world = yes
-		berg_is_resort_world = yes
-	}
+	berg_is_slave_world = no
+	berg_is_resort_world = no
 }
 
 berg_st_can_build_temple = {
@@ -1058,9 +1024,7 @@ berg_st_can_build_temple = {
 			}
 		}
 	}
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 }
 
 berg_st_can_build_uplink_node = {
@@ -1090,9 +1054,7 @@ berg_st_can_build_death_temple = {
 
 berg_st_can_build_galactic_memorial = {
 	exists = owner
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	owner = {
 		is_memorialist_empire = yes
 	}
@@ -1133,9 +1095,7 @@ berg_st_can_build_sensorium = {
 
 berg_st_can_build_autocurating_vault = {
 	exists = owner
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 	owner = {
 		is_machine_empire = no		# see 'building_alpha_hub'
 		is_megacorp = no		# see 'building_corporate_vault'
@@ -1144,6 +1104,10 @@ berg_st_can_build_autocurating_vault = {
 			# only Hive Minds may avoid effects and restrictions imposed by the 'make_spiritualist_1' Federation Perk
 			is_hive_empire = yes
 			has_make_spiritualist_perk = no
+		}
+		NAND = {
+			berg_has_zexpanded_mod = yes
+			is_hive_empire = yes
 		}
 	}
 }
@@ -1192,7 +1156,5 @@ berg_st_can_build_organic_sanctuary = {
 
 berg_st_can_build_league_offices = {
 	exists = owner
-	NOT = {
-		berg_is_slave_world = yes
-	}
+	berg_is_slave_world = no
 }

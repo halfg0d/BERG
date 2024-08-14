@@ -1,5 +1,17 @@
 #research variables
 # research_lab
+@berg_research_research_lab_costOneThird_t1 = 133.33
+@berg_research_research_lab_costOneThird_t2 = 200.0
+@berg_research_research_lab_costOneThird_t3 = 266.67
+@berg_research_research_lab_costOneThird_t4 = 666.67
+@berg_research_research_lab_costOneThird_t5 = 1333.33
+@berg_research_research_lab_costOneThird_t6 = 1800.0
+@berg_research_research_lab_costTwoThird_t1 = 266.67
+@berg_research_research_lab_costTwoThird_t2 = 400.0
+@berg_research_research_lab_costTwoThird_t3 = 533.33
+@berg_research_research_lab_costTwoThird_t4 = 1333.33
+@berg_research_research_lab_costTwoThird_t5 = 2666.67
+@berg_research_research_lab_costTwoThird_t6 = 3600.0
 @berg_research_research_lab_cost_t1 = 400
 @berg_research_research_lab_cost_t2 = 600
 @berg_research_research_lab_cost_t3 = 800
@@ -36,6 +48,18 @@
 @berg_research_research_lab_resolution_upkeep_t4 = 1
 @berg_research_research_lab_resolution_upkeep_t5 = 1
 @berg_research_research_lab_resolution_upkeep_t6 = 1
+@berg_research_research_lab_upkeepOneThird_t1 = 0.67
+@berg_research_research_lab_upkeepOneThird_t2 = 1.67
+@berg_research_research_lab_upkeepOneThird_t3 = 2.67
+@berg_research_research_lab_upkeepOneThird_t4 = 4.0
+@berg_research_research_lab_upkeepOneThird_t5 = 6.0
+@berg_research_research_lab_upkeepOneThird_t6 = 8.67
+@berg_research_research_lab_upkeepTwoThird_t1 = 1.33
+@berg_research_research_lab_upkeepTwoThird_t2 = 3.33
+@berg_research_research_lab_upkeepTwoThird_t3 = 5.33
+@berg_research_research_lab_upkeepTwoThird_t4 = 8.0
+@berg_research_research_lab_upkeepTwoThird_t5 = 12.0
+@berg_research_research_lab_upkeepTwoThird_t6 = 17.33
 @berg_research_research_lab_upkeep_t1 = 2
 @berg_research_research_lab_upkeep_t2 = 5
 @berg_research_research_lab_upkeep_t3 = 8
@@ -55,6 +79,10 @@
 @berg_research_research_lab_osa_produce_t5 = 35
 @berg_research_research_lab_osa_produce_t6 = 40
 # institute
+@berg_research_institute_costOneThird_t1 = 200.0
+@berg_research_institute_costOneThird_t2 = 333.33
+@berg_research_institute_costTwoThird_t1 = 400.0
+@berg_research_institute_costTwoThird_t2 = 666.67
 @berg_research_institute_cost_t1 = 600
 @berg_research_institute_cost_t2 = 1000
 @berg_research_institute_osa_produce_t1 = 20
@@ -65,8 +93,14 @@
 @berg_research_institute_rare_cost_t2 = 150
 @berg_research_institute_rare_upkeep_t1 = 1
 @berg_research_institute_rare_upkeep_t2 = 4
+@berg_research_institute_upkeepOneThird_t1 = 1.67
+@berg_research_institute_upkeepOneThird_t2 = 2.0
+@berg_research_institute_upkeepTwoThird_t1 = 3.33
+@berg_research_institute_upkeepTwoThird_t2 = 4.0
 @berg_research_institute_upkeep_t1 = 5
 @berg_research_institute_upkeep_t2 = 6
+@berg_research_institute_bug_unity_t1 = 0.05
+@berg_research_institute_bug_unity_t2 = 0.1
 @berg_research_institute_ecc_housing_t1 = 3
 @berg_research_institute_ecc_housing_t2 = 6
 @berg_research_institute_ecc_unity_t1 = 0.1
@@ -76,12 +110,20 @@
 @berg_research_institute_research_t1 = 0.05
 @berg_research_institute_research_t2 = 0.1
 # supercomputer
+@berg_research_supercomputer_costOneThird_t1 = 200.0
+@berg_research_supercomputer_costOneThird_t2 = 333.33
+@berg_research_supercomputer_costTwoThird_t1 = 400.0
+@berg_research_supercomputer_costTwoThird_t2 = 666.67
 @berg_research_supercomputer_cost_t1 = 600
 @berg_research_supercomputer_cost_t2 = 1000
 @berg_research_supercomputer_osa_produce_t1 = 20
 @berg_research_supercomputer_osa_produce_t2 = 30
 @berg_research_supercomputer_osa_upkeep_energy_t2 = 0.0
 @berg_research_supercomputer_osa_upkeep_minerals_t2 = 5.0
+@berg_research_supercomputer_upkeepOneThird_t1 = 1.67
+@berg_research_supercomputer_upkeepOneThird_t2 = 2.0
+@berg_research_supercomputer_upkeepTwoThird_t1 = 3.33
+@berg_research_supercomputer_upkeepTwoThird_t2 = 4.0
 @berg_research_supercomputer_upkeep_t1 = 5
 @berg_research_supercomputer_upkeep_t2 = 6
 @berg_research_supercomputer_job_t1 = 2
@@ -93,12 +135,20 @@
 # archaeostudies
 @berg_research_archaeostudies_artifacts_cost_t1 = 50
 @berg_research_archaeostudies_artifacts_cost_t2 = 150
+@berg_research_archaeostudies_costOneThird_t1 = 200.0
+@berg_research_archaeostudies_costOneThird_t2 = 333.33
+@berg_research_archaeostudies_costTwoThird_t1 = 400.0
+@berg_research_archaeostudies_costTwoThird_t2 = 666.67
 @berg_research_archaeostudies_cost_t1 = 600
 @berg_research_archaeostudies_cost_t2 = 1000
 @berg_research_archaeostudies_osa_produce_t1 = 20
 @berg_research_archaeostudies_osa_produce_t2 = 30
 @berg_research_archaeostudies_osa_upkeep_energy_t1 = 3.0
 @berg_research_archaeostudies_osa_upkeep_energy_t2 = 3.0
+@berg_research_archaeostudies_upkeepOneThird_t1 = 3.33
+@berg_research_archaeostudies_upkeepOneThird_t2 = 6.67
+@berg_research_archaeostudies_upkeepTwoThird_t1 = 6.67
+@berg_research_archaeostudies_upkeepTwoThird_t2 = 13.33
 @berg_research_archaeostudies_upkeep_t1 = 10
 @berg_research_archaeostudies_upkeep_t2 = 20
 @berg_research_archaeostudies_gpm_research_t1 = 1.0
@@ -114,6 +164,10 @@
 # vultaum
 @berg_research_vultaum_artifacts_cost_t1 = 30
 @berg_research_vultaum_artifacts_cost_t2 = 60
+@berg_research_vultaum_costOneThird_t1 = 133.33
+@berg_research_vultaum_costOneThird_t2 = 200.0
+@berg_research_vultaum_costTwoThird_t1 = 266.67
+@berg_research_vultaum_costTwoThird_t2 = 400.0
 @berg_research_vultaum_cost_t1 = 400
 @berg_research_vultaum_cost_t2 = 600
 @berg_research_vultaum_osa_produce_t1 = 150
@@ -122,6 +176,10 @@
 @berg_research_vultaum_osa_upkeep_energy_t2 = 1.0
 @berg_research_vultaum_osa_upkeep_minerals_t1 = 2.5
 @berg_research_vultaum_osa_upkeep_minerals_t2 = 5.0
+@berg_research_vultaum_upkeepOneThird_t1 = 0.67
+@berg_research_vultaum_upkeepOneThird_t2 = 1.33
+@berg_research_vultaum_upkeepTwoThird_t1 = 1.33
+@berg_research_vultaum_upkeepTwoThird_t2 = 2.67
 @berg_research_vultaum_upkeep_t1 = 2
 @berg_research_vultaum_upkeep_t2 = 4
 @berg_research_vultaum_job_t1 = 1

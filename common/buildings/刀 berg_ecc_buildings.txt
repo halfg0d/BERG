@@ -45,11 +45,13 @@ building_national_park = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b3_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 8
 		}
 		inline_script = ECC/berg_ecc_national_park_script
 		inline_script = {
@@ -120,11 +122,13 @@ building_deep_space_scanner_ecc = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b2_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 5
 		}
 		produces = {
 			unity = 5
@@ -184,8 +188,9 @@ building_climate_control = {
 		cost = {
 			alloys = 150
 		}
-		upkeep = {
-			energy = 10
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 10
 		}
 		produces = {
 			physics_research = 2
@@ -349,11 +354,13 @@ building_tribal_council = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b2_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 5
 		}
 		upkeep = {
 			trigger = {
@@ -490,11 +497,13 @@ building_tribal_palace = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b4_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 2000
 		}
-		upkeep = {
-			energy = @b3_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 8
 		}
 		inline_script = {
 			script = tradition_script/ost_order
@@ -537,8 +546,9 @@ building_nature_sanctuary = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b1_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 400
 		}
 		upkeep = {
 			food = 12
@@ -631,11 +641,13 @@ building_galactic_navy_academy = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b3_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 8
 		}
 	}
 }
@@ -706,11 +718,13 @@ building_galactic_temple = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b3_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 8
 		}
 		inline_script = {
 			script = tradition_script/ost_benevolence
@@ -787,11 +801,13 @@ building_galactic_trade_center = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b3_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 8
 		}
 		inline_script = {
 			script = tradition_script/ost_commerce
@@ -867,11 +883,13 @@ building_pangalactic_forum = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = @b3_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 8
 		}
 		inline_script = {
 			script = tradition_script/ost_insight
@@ -914,11 +932,13 @@ building_ecotourism_center = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b2_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 400
 		}
-		upkeep = {
-			energy = @b2_upkeep
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 5
 		}
 		inline_script = {
 			script = tradition_script/ost_commerce
@@ -963,11 +983,13 @@ building_symbol_harmony = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = 3
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 3
 		}
 		inline_script = {
 			script = tradition_script/ost_benevolence
@@ -1011,11 +1033,13 @@ building_symbol_purity = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b3_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 800
 		}
-		upkeep = {
-			energy = 4
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 4
 		}
 		inline_script = {
 			script = tradition_script/ost_benevolence
@@ -1058,14 +1082,16 @@ building_collosal_monument = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = @b4_minerals
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 2000
+		}
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 7
 		}
 		produces = {
 			unity = 7
-		}
-		upkeep = {
-			energy = 7
 		}
 		inline_script = {
 			script = tradition_script/ost_benevolence
@@ -1094,8 +1120,9 @@ building_biofuel_plant = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 500
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 500
 		}
 	}
 
@@ -1187,8 +1214,11 @@ building_thermal_borehole = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 300
 			alloys = 200
+		}
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 300
 		}
 	}
 	inline_script = {
@@ -1310,11 +1340,15 @@ building_colliseum = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 500
 			alloys = 50
 		}
-		upkeep = {
-			energy = 2
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 500
+		}
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 2
 		}
 	}
 
@@ -1355,11 +1389,13 @@ building_mecha_monastery = {
 
 	resources = {
 		category = planet_buildings
-		cost = {
-			minerals = 500
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_cost
+			version = 500
 		}
-		upkeep = {
-			energy = 3
+		inline_script = {
+			script = resources_scripts/special/zExpanded/other_upkeep
+			version = 3
 		}
 	}
 

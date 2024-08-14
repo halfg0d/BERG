@@ -42,7 +42,7 @@ berg_has_gpm_mod = {
 	gpm_mod_active = yes
 }
 berg_has_zexpanded_mod = {
-	always = no
+	has_global_flag = expanded_pops_active
 }
 berg_has_production_revolution_mod = {
 	has_global_flag = PR_installed

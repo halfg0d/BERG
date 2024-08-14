@@ -1,5 +1,5 @@
 
-#Entertainer
+# Entertainer
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
 	JOB = entertainer
@@ -7,5 +7,17 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
+	berg_is_warrior_culture = no
+	"
+}
+# Duelist
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = duelist
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	berg_is_warrior_culture = yes
 	"
 }
