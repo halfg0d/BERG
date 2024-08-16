@@ -1,6 +1,9 @@
 inline_script = {
-	script = berg_jobs/bureaucratic_desc
+	script = berg_jobs_group/bureaucratic_add
 	AMOUNT = @berg_unity_bureaucratic_job_t$tier$
+	DESC = with
+	MULT = 1
+	TRIGGER = ""
 }
 #OSA
 triggered_planet_modifier = {

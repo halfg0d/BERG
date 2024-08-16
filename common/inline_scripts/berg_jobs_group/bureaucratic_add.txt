@@ -7,7 +7,11 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	always = yes
+	is_megacorp = no
+	NAND = {
+		berg_has_zexpanded_mod = yes
+		has_valid_civic = civic_ethical_hedonism
+	}
 	"
 }
 # Manager
@@ -18,7 +22,12 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	always = yes
+	is_megacorp = yes
+	is_worker_coop_empire = no
+	NAND = {
+		berg_has_zexpanded_mod = yes
+		berg_has_private_military_companies = yes
+	}
 	"
 }
 
@@ -30,6 +39,81 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	always = yes
+	is_megacorp = yes
+	is_worker_coop_empire = yes
+	NAND = {
+		berg_has_zexpanded_mod = yes
+		berg_has_private_military_companies = yes
+	}
+	"
+}
+
+# Logistic Officer
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = logistics_officer
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_megacorp = yes
+	is_worker_coop_empire = no
+	berg_has_zexpanded_mod = yes
+	berg_has_private_military_companies = yes
+	"
+}
+
+# Logistic Officer + Steward
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = steward
+	AMOUNT = @[$AMOUNT$/2]
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_megacorp = yes
+	is_worker_coop_empire = yes
+	berg_has_zexpanded_mod = yes
+	berg_has_private_military_companies = yes
+	"
+}
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = logistics_officer
+	AMOUNT = @[$AMOUNT$/2]
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_megacorp = yes
+	is_worker_coop_empire = yes
+	berg_has_zexpanded_mod = yes
+	berg_has_private_military_companies = yes
+	"
+}
+# Bureaucrat + Culture Worker
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = bureaucratic
+	AMOUNT = @[$AMOUNT$/2]
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_megacorp = no
+	berg_has_zexpanded_mod = yes
+	has_valid_civic = civic_ethical_hedonism
+	"
+}
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = culture_worker
+	AMOUNT = @[$AMOUNT$/2]
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_megacorp = no
+	NAND = {
+		berg_has_zexpanded_mod = yes
+		has_valid_civic = civic_ethical_hedonism
+	}
 	"
 }
