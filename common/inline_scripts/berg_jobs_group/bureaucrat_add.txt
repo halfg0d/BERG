@@ -1,5 +1,5 @@
 
-# Bureaucratic
+# Bureaucrat
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
 	JOB = bureaucrat
@@ -93,7 +93,7 @@ inline_script = {
 # Bureaucrat + Culture Worker
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = bureaucratic
+	JOB = bureaucrat
 	AMOUNT = @[$AMOUNT$/2]
 	MULT = $MULT$
 	TRIGGER = "
@@ -101,19 +101,5 @@ inline_script = {
 	is_megacorp = no
 	berg_has_zexpanded_mod = yes
 	has_valid_civic = civic_ethical_hedonism
-	"
-}
-inline_script = {
-	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = culture_worker
-	AMOUNT = @[$AMOUNT$/2]
-	MULT = $MULT$
-	TRIGGER = "
-	$TRIGGER$
-	is_megacorp = no
-	NAND = {
-		berg_has_zexpanded_mod = yes
-		has_valid_civic = civic_ethical_hedonism
-	}
 	"
 }
