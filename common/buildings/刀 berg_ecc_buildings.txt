@@ -1382,9 +1382,13 @@ building_mecha_monastery = {
 	allow = {
 		has_upgraded_capital = yes
 	}
-
-	planet_modifier = {
-		job_techno_priest_add = 2
+	inline_script = {
+		script = berg_jobs/berg_aspiration_tradition
+		JOB = techno_priest
+		AMOUNT = 2
+		MULT = 1 
+		DESC = with
+		TRIGGER = " "
 	}
 
 	resources = {

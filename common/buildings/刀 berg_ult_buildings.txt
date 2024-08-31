@@ -1443,10 +1443,17 @@ building_ult_diplomacy_intelligence = {
 	
 	planet_modifier = {
 		job_politician_add = 2
-		job_bureaucrat_add = 4
 		job_culture_worker_add = 2
 	}
 
+	inline_script = {
+		script = berg_jobs/berg_aspiration_tradition
+		JOB = bureaucrat
+		AMOUNT = 4
+		MULT = 1 
+		DESC = with
+		TRIGGER = " "
+	}
 	country_modifier = {
 		envoys_add = 4
 		diplo_weight_mult = 0.2

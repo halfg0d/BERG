@@ -6,12 +6,20 @@ country_modifier = {
 planet_modifier = {
 	pop_ethic_spiritualist_attraction_mult = @berg_unity_citadel_faith_attraction_t$tier$
 }
+# inline_script = {
+# 	script = berg_jobs_group/high_priest_add
+# 	MULT = 1
+# 	AMOUNT = @berg_unity_citadel_faith_job_t$tier$
+# 	TRIGGER = " "
+# 	DESC = with
+# }
 inline_script = {
-	script = berg_jobs_group/high_priest_add
-	MULT = 1
+	script = berg_jobs/berg_aspiration_tradition
+	JOB = high_priest
 	AMOUNT = @berg_unity_citadel_faith_job_t$tier$
-	TRIGGER = " "
+	MULT = 1 
 	DESC = with
+	TRIGGER = " "
 }
 triggered_planet_modifier = {
 	potential = {
@@ -53,10 +61,19 @@ triggered_planet_modifier = {
 		job_transcend_add = @berg_unity_citadel_faith_ecc_transcend_t$tier$
 	}
 }
+# inline_script = {
+# 	script = berg_jobs_group/high_priest_add
+# 	MULT = 1
+# 	AMOUNT = @berg_unity_citadel_faith_ecc_high_priest_t$tier$
+# 	DESC = no
+# 	TRIGGER = "berg_has_ecc_mod = yes
+# 	berg_has_any_high_spiritual_civic = yes"
+# }
 inline_script = {
-	script = berg_jobs_group/high_priest_add
-	MULT = 1
+	script = berg_jobs/berg_aspiration_tradition
+	JOB = high_priest
 	AMOUNT = @berg_unity_citadel_faith_ecc_high_priest_t$tier$
+	MULT = 1 
 	DESC = no
 	TRIGGER = "berg_has_ecc_mod = yes
 	berg_has_any_high_spiritual_civic = yes"

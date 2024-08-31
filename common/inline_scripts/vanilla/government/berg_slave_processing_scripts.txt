@@ -18,3 +18,17 @@ triggered_planet_modifier = {
 		planet_resettlement_unemployed_mult = @berg_government_slave_processing_resettlment_t$tier$
 	}
 }
+#PT
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
+		has_building = building_clone_vats
+		berg_has_any_clone_vat = {
+			need_active = yes
+		}
+	}
+	modifier = {
+		planet_pop_assembly_organic_add = @berg_government_slave_processing_pt_vat_t$tier$
+	}
+}

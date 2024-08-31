@@ -2,7 +2,7 @@
 # Bureaucratic
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = bureaucratic
+	JOB = bureaucrat
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "

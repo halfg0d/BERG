@@ -418,3 +418,24 @@ berg_ST_21_upkeep = {
 is_berg_host = {
 	has_country_flag = berg_host
 }
+berg_has_plentiful_aspiration_3 = {
+	berg_has_pt_mod = yes
+	# has_tradition = tr_plentiful_aspiration_3
+}
+berg_has_any_clone_vat = {
+	OR = {
+		has_[[need_active]active_]building = building_clone_vat
+		has_[[need_active]active_]building = building_avb_clone_vat_2
+	}
+}
+berg_has_any_slave_processing_building = {
+	OR = {
+		has_[[need_active]active_]building = building_plentiful_traditions_advanced_slave_processing
+		has_[[need_active]active_]building = building_slave_processing
+	}
+}
+berg_pt_clone_vat_slave = {
+	berg_has_pt_mod = yes
+	owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
+	berg_has_any_slave_processing_building = { need_active = no }
+}

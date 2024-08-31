@@ -224,6 +224,7 @@ building_slave_processing = {
 	}
 	upgrades = {
 		"building_avb_slave_processing_2"		#AVB
+		"building_plentiful_traditions_advanced_slave_processing" #PT
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc

@@ -78,3 +78,6 @@ berg_has_any_supported_mod = {
 		berg_has_zexpanded_mod = yes
 	}
 }
+berg_has_pt_mod = {
+	has_global_flag = berg_pt_mod
+}

@@ -1,7 +1,11 @@
-planet_modifier = {
-	job_synapse_drone_add = @berg_unity_hive_node_job_t$tier$
+inline_script = {
+	script = berg_jobs/berg_aspiration_tradition
+	JOB = synapse_drone
+	AMOUNT = @berg_unity_hive_node_job_t$tier$
+	MULT = 1 
+	DESC = with
+	TRIGGER = " "
 }
-
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -23,11 +27,6 @@ triggered_planet_modifier = {
 	}
 	job_maintenance_drone_add = 1
 }
-
-triggered_desc = {
-	text = job_synapse_drone_effect_desc
-}
-
 triggered_desc = {
 	trigger = {
 		exists = owner

@@ -1,0 +1,12 @@
+
+# Techno Priest
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = techno_priest
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	"
+}

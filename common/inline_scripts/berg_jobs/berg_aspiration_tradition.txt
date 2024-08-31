@@ -1,0 +1,22 @@
+# Without
+inline_script = {
+	script = berg_jobs_group/$JOB$_add
+	MULT = $MULT$
+	AMOUNT = $AMOUNT$
+	DESC = $DESC$
+	TRIGGER = "
+	berg_has_plentiful_aspiration_3 = no
+	$TRIGGER$
+	"
+}
+# With
+inline_script = {
+	script = berg_jobs_group/$JOB$_add
+	MULT = @[$MULT$*2]
+	AMOUNT = $AMOUNT$
+	DESC = $DESC$
+	TRIGGER = "
+	berg_has_plentiful_aspiration_3 = yes
+	$TRIGGER$
+	"
+}

@@ -1,7 +1,22 @@
 planet_modifier = {
 	pop_ethic_spiritualist_attraction_mult = @berg_unity_death_temple_attraction_t$tier$
-	job_death_priest_add = @berg_unity_death_temple_job_t$tier$
-	job_mortal_initiate_add = @berg_unity_death_temple_job_t$tier$
+}
+
+inline_script = {
+	script = berg_jobs/berg_aspiration_tradition
+	JOB = death_priest
+	AMOUNT = @berg_unity_death_temple_job_t$tier$
+	MULT = 1 
+	DESC = with
+	TRIGGER = " "
+}
+inline_script = {
+	script = berg_jobs/berg_aspiration_tradition
+	JOB = mortal_initiate
+	AMOUNT = @berg_unity_death_temple_job_t$tier$
+	MULT = 1 
+	DESC = with
+	TRIGGER = " "
 }
 triggered_planet_modifier = {
 	potential = {
@@ -108,13 +123,6 @@ triggered_desc = {
 		}
 	}
 	text = job_bugged_templar_effect_desc
-}
-
-triggered_desc = {
-	text = job_death_priest_effect_desc
-}
-triggered_desc = {
-	text = job_mortal_initiate_effect_desc
 }
 #OSA
 triggered_planet_modifier = {

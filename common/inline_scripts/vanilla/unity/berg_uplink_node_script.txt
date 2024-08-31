@@ -1,9 +1,10 @@
-planet_modifier = {
-	job_coordinator_add = @berg_unity_uplink_node_job_t$tier$
-}
-
-triggered_desc = {
-	text = job_coordinator_effect_desc
+inline_script = {
+	script = berg_jobs/berg_aspiration_tradition
+	JOB = coordinator
+	AMOUNT = @berg_unity_uplink_node_job_t$tier$
+	MULT = 1 
+	DESC = with
+	TRIGGER = " "
 }
 triggered_planet_modifier = {
 	potential = {

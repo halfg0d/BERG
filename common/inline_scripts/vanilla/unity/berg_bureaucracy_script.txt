@@ -2,6 +2,15 @@ inline_script = {
 	script = berg_jobs/bureaucratic_desc
 	AMOUNT = @berg_unity_bureaucratic_job_t$tier$
 }
+## berg_has_plentiful_aspiration_3
+# inline_script = {
+# 	script = berg_jobs/berg_aspiration_tradition
+# 	JOB = high_priest
+# 	AMOUNT = @berg_unity_citadel_faith_job_t$tier$
+# 	MULT = 1 
+# 	DESC = with
+# 	TRIGGER = " "
+# }
 #OSA
 triggered_planet_modifier = {
 	potential = {
