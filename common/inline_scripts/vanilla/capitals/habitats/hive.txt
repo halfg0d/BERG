@@ -1,0 +1,10 @@
+inline_script = {
+	script = berg_jobs_group/synapse_drone_add
+	AMOUNT = @berg_capital_habitat_capital_synapse_drone_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = "
+	exists = owner
+	owner = { is_hive_empire = yes }
+	"
+}

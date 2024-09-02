@@ -1,0 +1,21 @@
+inline_script = {
+	script = berg_jobs_group/evaluator_add
+	AMOUNT = @berg_capital_habitat_capital_evaluator_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/replicator_add
+	AMOUNT = @berg_capital_habitat_capital_replicator_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/maintenance_drone_add
+	AMOUNT = @berg_capital_habitat_capital_maintenance_drone_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}

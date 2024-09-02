@@ -39,6 +39,8 @@
 @berg_government_slave_processing_costTwoThird_t2 = 400.0
 @berg_government_slave_processing_cost_t1 = 400
 @berg_government_slave_processing_cost_t2 = 600
+@berg_government_slave_processing_pt_vat_t1 = 1.0
+@berg_government_slave_processing_pt_vat_t2 = 1.5
 @berg_government_slave_processing_upkeepOneThird_t1 = 0.67
 @berg_government_slave_processing_upkeepOneThird_t2 = 1.33
 @berg_government_slave_processing_upkeepTwoThird_t1 = 1.33

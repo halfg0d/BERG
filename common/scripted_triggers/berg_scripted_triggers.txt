@@ -505,3 +505,6 @@ berg_has_better_diplo_mod = {
 berg_has_zofe_sandbox_mod = {
 	zofe_sandbox = yes
 }
+is_toxic_habitat = {
+	has_planet_flag = toxic_knights_habitat
+}

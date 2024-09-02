@@ -160,6 +160,8 @@
 @berg_pop_assembly_clone_vats_costOneThird_t2 = 333.33
 @berg_pop_assembly_clone_vats_costTwoThird_t1 = 333.33
 @berg_pop_assembly_clone_vats_costTwoThird_t2 = 666.67
+@berg_pop_assembly_clone_vats_cost_special_half_t1 = 250
+@berg_pop_assembly_clone_vats_cost_special_half_t2 = 500
 @berg_pop_assembly_clone_vats_cost_special_t1 = 500
 @berg_pop_assembly_clone_vats_cost_special_t2 = 1000
 @berg_pop_assembly_clone_vats_cost_t1 = 500
@@ -168,6 +170,8 @@
 @berg_pop_assembly_clone_vats_upkeepOneThird_t2 = 1.33
 @berg_pop_assembly_clone_vats_upkeepTwoThird_t1 = 1.33
 @berg_pop_assembly_clone_vats_upkeepTwoThird_t2 = 2.67
+@berg_pop_assembly_clone_vats_upkeep_special_half_t1 = 15
+@berg_pop_assembly_clone_vats_upkeep_special_half_t2 = 30
 @berg_pop_assembly_clone_vats_upkeep_special_t1 = 30
 @berg_pop_assembly_clone_vats_upkeep_special_t2 = 60
 @berg_pop_assembly_clone_vats_upkeep_t1 = 2

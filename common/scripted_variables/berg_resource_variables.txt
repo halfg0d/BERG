@@ -27,9 +27,12 @@
 @berg_resource_hydroponics_upkeep_t1 = 2
 @berg_resource_hydroponics_upkeep_t2 = 4
 @berg_resource_hydroponics_upkeep_t3 = 6
-@berg_resource_hydroponics_job_t1 = 2
-@berg_resource_hydroponics_job_t2 = 4
-@berg_resource_hydroponics_job_t3 = 6
+@berg_resource_hydroponics_job2_t1 = 2
+@berg_resource_hydroponics_job2_t2 = 4
+@berg_resource_hydroponics_job2_t3 = 6
+@berg_resource_hydroponics_job_t1 = 3
+@berg_resource_hydroponics_job_t2 = 5
+@berg_resource_hydroponics_job_t3 = 7
 # food_processing
 @berg_resource_food_processing_costOneThird_t1 = 133.33
 @berg_resource_food_processing_costOneThird_t2 = 200.0

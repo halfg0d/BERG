@@ -9,37 +9,58 @@ inline_script = {
 		is_regular_empire = yes
 		is_megacorp = no
 	}
+	NOR = {
+		has_planet_flag = toxic_knights_habitat
+		owner = { has_origin = origin_toxic_knights }
+	}
 	"
 }
 # Politican Job
 inline_script = {
 	script = berg_jobs_group/politician_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_politician1_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_primary_job_t$tier$
 	DESC = no
-	TRIGGER = "berg_RCJT_can_politician = yes"
+	TRIGGER = "
+	berg_HCJT_can_politician = yes
+	"
+}
+# Toxic Knight
+inline_script = {
+	script = berg_jobs_group/knight_commander_add
+	AMOUNT = @berg_capital_habitat_capital_knight_commander_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/knight_add
+	AMOUNT = @berg_capital_habitat_capital_knight_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
 }
 # Holy Civic
 inline_script = {
 	script = berg_jobs_group/high_priest_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_RCJT_holy_civic = yes"
+	TRIGGER = "berg_HCJT_holy_civic = yes"
 }
 # Elite
 inline_script = {
 	script = berg_jobs_group/noble_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_RCJT_noble_civic = yes"
+	TRIGGER = "berg_HCJT_noble_civic = yes"
 }
 # Additional Nobles Jobs from Cyber Imperial Governments
 inline_script = {
 	script = berg_jobs_group/noble_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = no
 	TRIGGER = "exists = owner
 	owner = {
@@ -50,9 +71,9 @@ inline_script = {
 	script = berg_jobs/berg_job_with_desc
 	JOB = noble
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	TRIGGER = "OR = {
-		berg_RCJT_noble_civic = yes
+		berg_HCJT_noble_civic = yes
 		owner = { is_cyber_imperial = yes }
 	}"
 }
@@ -60,23 +81,23 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/head_researcher_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
-	TRIGGER = "berg_RCJT_techno_civic = yes"
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
+	TRIGGER = "berg_HCJT_techno_civic = yes"
 	DESC = with
 }
 # Merchant Guilds
 inline_script = {
 	script = berg_jobs_group/merchant_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_RCJT_merchant_civic = yes"
+	TRIGGER = "berg_HCJT_merchant_civic = yes"
 }
 # Corporate Empire
 inline_script = {
 	script = berg_jobs_group/executive_add
 	MULT = 1
-	AMOUNT = @[berg_capital_regular_capital_primary_job_t$tier$ + berg_capital_regular_capital_secondary_job_t$tier$]
+	AMOUNT = @[berg_capital_habitat_capital_primary_job_t$tier$ + berg_capital_habitat_capital_secondary_job_t$tier$]
 	DESC = with
 	TRIGGER = "
 		exists = owner
@@ -91,7 +112,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/steward_add
 	MULT = 1
-	AMOUNT = @[berg_capital_regular_capital_primary_job_t$tier$ + berg_capital_regular_capital_secondary_job_t$tier$ + berg_capital_regular_capital_tertiary_job_t$tier$]
+	AMOUNT = @[berg_capital_habitat_capital_primary_job_t$tier$ + berg_capital_habitat_capital_secondary_job_t$tier$ + berg_capital_habitat_capital_tertiary_job_t$tier$]
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -108,18 +129,10 @@ inline_script = {
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
-		is_regular_empire = yes
-		has_active_tradition = tr_synthetics_prefabricated_components
-	}"
-}
-inline_script = {
-	script = berg_jobs_group/roboticist_add
-	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_primary_job_t$tier$
-	DESC = with
-	TRIGGER = "exists = owner
-	owner = {
-		is_individual_machine = yes
+		OR = {
+			has_active_tradition = tr_synthetics_prefabricated_components
+			is_individual_machine = yes
+		}
 	}"
 }
 # Pharma State
@@ -146,23 +159,23 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/commandante_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_RCJT_military_dictatorship_civic = yes"
+	TRIGGER = "berg_HCJT_military_dictatorship_civic = yes"
 }
 # Supervisor
 inline_script = {
 	script = berg_jobs_group/supervisor_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_RCJT_supervisor_civic = yes"
+	TRIGGER = "berg_HCJT_supervisor_civic = yes"
 }
 # Enlightment
 inline_script = {
 	script = berg_jobs_group/healthcare_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_ecc_healthcare_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_ecc_healthcare_t$tier$
 	DESC = no
 	TRIGGER = "
 	berg_has_ecc_mod = yes
@@ -176,19 +189,19 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/transcend_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_ecc_transcend_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_ecc_transcend_t$tier$
 	DESC = with
 	TRIGGER = "berg_has_ecc_mod = yes
 	exists = owner
 	owner = { has_civic = civic_spiritual_seekers }"
 }
 # ECC Enforcer
-inline_script = ECC/berg_regular_capital_enforcer
+inline_script = ECC/berg_habitat_capital_enforcer
 # Commander
 inline_script = {
 	script = berg_jobs_group/commander_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -199,7 +212,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/thinker_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -210,7 +223,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/advisor_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -221,7 +234,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/financier_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -232,7 +245,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/industry_captain_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -243,7 +256,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/eco_logistician_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
+	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -255,8 +268,8 @@ inline_script = {
 	script = OSA/berg_osa_capital_jobs
 	tier = $tier$
 }
-#Venture Politics
-inline_script = {
-	script = VP/berg_vp_capital_job
-	tier = r$tier$
-}
+# #Venture Politics
+# inline_script = {
+# 	script = VP/berg_vp_capital_job
+# 	tier = r$tier$
+# }
