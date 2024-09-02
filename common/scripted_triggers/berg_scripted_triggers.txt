@@ -526,6 +526,9 @@ berg_has_better_diplo_mod = {
 berg_has_zofe_sandbox_mod = {
 	zofe_sandbox = yes
 }
+is_toxic_habitat = {
+	has_planet_flag = toxic_knights_habitat
+}
 berg_has_plentiful_aspiration_3 = {
 	berg_has_pt_mod = yes
 	has_tradition = tr_plentiful_aspiration_3

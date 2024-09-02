@@ -102,9 +102,7 @@ triggered_planet_modifier = {
 # Speleology Societies Civic
 triggered_planet_modifier = {
 	potential = {
-		NOT = { 
-			is_planet_class = pc_habitat
-		}
+		berg_is_habitat = no
 		berg_has_osa_mod = yes
 		exists = owner
 		owner = {

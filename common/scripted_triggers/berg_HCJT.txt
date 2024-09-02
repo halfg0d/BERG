@@ -1,0 +1,131 @@
+#############
+# Habitat Capital Jobs Triggers
+#############
+# HCJT - Habitat Capital Job Trigger
+berg_HCJT_can_politician = {
+	owner = {
+		NOR = {
+			is_gestalt = yes
+			is_megacorp = yes
+			berg_HCJT_holy_civic = yes
+			berg_HCJT_noble_civic = yes
+			berg_HCJT_techno_civic = yes
+			berg_HCJT_merchant_civic = yes
+			berg_HCJT_military_dictatorship_civic = yes
+			berg_HCJT_supervisor_civic = yes
+		}
+	}
+	NOR = {
+		has_planet_flag = toxic_knights_habitat
+		owner = { has_origin = origin_toxic_knights }
+	}
+}
+berg_HCJT_holy_civic = {
+	owner = {
+		OR = {
+			# Vanilla
+			has_civic = civic_exalted_priesthood
+			# ECC
+			AND = {
+				berg_has_ecc_mod = yes
+				berg_ecc_spiritualist_civic = yes
+			}
+			# BUG
+			AND = {
+				berg_has_bug_mod = yes
+				is_bugged_governmental_spiritualist = yes
+			}
+		}
+	}
+	is_toxic_habitat = no
+}
+berg_HCJT_noble_civic = {
+	owner = {
+		OR = {
+			# Vanilla
+			has_civic = civic_aristocratic_elite
+			# ECC
+			AND = {
+				berg_has_ecc_mod = yes
+				berg_ecc_noble_civic = yes
+			}
+			# BUG
+			AND = {
+				berg_has_bug_mod = yes
+				is_bugged_governmental_elitist = yes
+			}
+		}
+	}
+	is_toxic_habitat = no
+}
+berg_HCJT_techno_civic = {
+	owner = {
+		OR = {
+			# Vanilla
+			has_civic = civic_technocracy
+			# ECC
+			AND = {
+				berg_has_ecc_mod = yes
+				berg_ecc_technocracy_civic = yes
+			}
+			# BUG
+			AND = {
+				berg_has_bug_mod = yes
+				is_bugged_governmental_materialist = yes
+			}
+		}
+	}
+	is_toxic_habitat = no
+}
+berg_HCJT_merchant_civic = {
+	owner = {
+		OR = {
+			# Vanilla
+			has_civic = civic_merchant_guilds
+			# ECC
+			AND = {
+				berg_has_ecc_mod = yes
+				berg_ecc_merchant_civic = yes
+			}
+		}
+	}
+	is_toxic_habitat = no
+}
+berg_HCJT_military_dictatorship_civic = {
+	# ECC
+	berg_has_ecc_mod = yes
+	owner = {
+		OR = {
+			has_civic = civic_military_dictatorship
+			has_civic = civic_military_junta
+			has_civic = civic_citizen_service
+			has_civic = civic_stratocracy
+		}
+	}
+	is_toxic_habitat = no
+}
+berg_HCJT_supervisor_civic = {
+	# ECC
+	berg_has_ecc_mod = yes
+	owner = {
+		OR = {
+			has_civic = civic_executive_committee
+			has_civic = civic_philosopher_king
+			has_civic = civic_peaceful_republic
+			has_civic = civic_bureaucracy
+		}
+	}
+	is_toxic_habitat = no
+}
+berg_HCJT_any_bugged_government = {
+	berg_has_bug_mod = yes
+	OR = {
+		is_bugged_governmental_militarist = yes
+		is_bugged_governmental_pacifist = yes
+		is_bugged_governmental_pluralist = yes
+		is_bugged_governmental_competitive = yes
+		is_bugged_governmental_anthropocentric = yes
+		is_bugged_governmental_ecocentric = yes
+	}
+	is_toxic_habitat = no
+}

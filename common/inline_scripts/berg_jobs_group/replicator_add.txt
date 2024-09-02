@@ -1,0 +1,13 @@
+
+# Replicator
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = replicator
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { is_machine_empire = yes }
+	"
+}

@@ -1,0 +1,19 @@
+inline_script = {
+	script = vanilla/capitals/habitats/regular
+	TIER = $tier$
+}
+inline_script = {
+	script = vanilla/capitals/habitats/machine
+	TIER = $tier$
+}
+inline_script = {
+	script = vanilla/capitals/habitats/hive
+	TIER = $tier$
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	planet_amenities_add = @berg_capital_habitat_capital_amenities_t$tier$
+}

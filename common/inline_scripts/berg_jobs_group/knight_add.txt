@@ -1,0 +1,16 @@
+
+# Knight
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = knight
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	"
+}
