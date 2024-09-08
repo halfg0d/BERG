@@ -72,3 +72,8 @@ is_pompous_empire = { always = no }
 is_civic_militarist = { always = no }
 is_civic_environmentalist = { always = no }
 is_civic_mining_guilds = { always = no }
+has_any_organic_assembly_building = { always = no }
+merg_is_nuked_basic = { always = no }
+merg_is_habitat = { always = no }
+merg_is_true_ringworld = { always = no }
+merg_is_arcology = { always = no }

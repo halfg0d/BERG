@@ -9,7 +9,7 @@ berg_st_can_build_regular_capital = {
 		is_fallen_empire = no
 	}
 	NOR = {
-		berg_is_slave_world = yes
+		berg_is_resort_world = yes
 		berg_is_slave_world = yes
 		uses_habitat_capitals = yes
 		uses_district_set = cosmogenesis_world
@@ -64,7 +64,7 @@ berg_st_can_build_hab_capital = {
 
 berg_st_can_build_resort_capital = {
 	OR = {
-		has_modifier = resort_colony
+		berg_is_resort_world = yes
 		berg_pd_resort_habitat = yes
 	}
 }
@@ -245,7 +245,7 @@ berg_st_can_build_ranger = {
 		berg_is_city_world = yes
 		berg_is_hive_world = yes
 		berg_is_machine_world = yes
-		is_planet_class = pc_relic
+		berg_is_relic_world = yes
 	}
 	is_artificial = no
 }
@@ -283,11 +283,7 @@ berg_st_can_build_planetary_shield = {
 		berg_has_osa_mod = no
 		AND = {
 			berg_has_osa_mod = yes
-			NOR = {
-				has_building = "building_mem_planetary_shield_generator"
-				has_building = "building_mem_planetary_shield_generator_heavy"
-				has_building = "building_mem_planetary_shield_generator_orila"
-			}
+			berg_has_any_planetary_shield = no
 			planet = {
 				NOR = {
 					uses_habitat_capitals = yes
@@ -391,9 +387,6 @@ berg_st_can_build_psi_corps = {
 	has_utopia = yes
 	owner = {
 		has_tradition = tr_psionics_psi_corps
-	}
-	NOT = {
-		has_modifier = resort_colony
 	}
 	berg_is_resort_world = no
 }

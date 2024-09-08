@@ -65,7 +65,7 @@ berg_ecc_has_any_natural_blocker = {
 		has_deposit = d_wandering_forests
 		has_deposit = d_migrating_forest_reserve
 		has_deposit = d_migrating_forests
-		berg_has_any_alien_deposit = yes
+		berg_has_any_alien_pets_deposit = yes
 		has_deposit = d_savage_wildlands
 	}
 }

@@ -370,7 +370,7 @@ building_animal_evaluation_laboratory = {
 		}
 		planet = {
 			OR = {
-				berg_has_any_alien_deposit = yes
+				berg_has_any_alien_pets_deposit = yes
 				AND = {
 					exists = owner
 					owner = { has_policy_flag = pre_sapients_protect }
@@ -395,7 +395,7 @@ building_animal_evaluation_laboratory = {
 			}
 			planet = {
 				NOR = {
-					berg_has_any_alien_deposit = yes
+					berg_has_any_alien_pets_deposit = yes
 					AND = {
 						exists = owner
 						owner = { has_policy_flag = pre_sapients_protect }
@@ -500,7 +500,7 @@ building_animal_evaluation_laboratory_hive = {
 		}
 		planet = {
 			OR = {
-				berg_has_any_alien_deposit = yes
+				berg_has_any_alien_pets_deposit = yes
 				AND = {
 					exists = owner
 					owner = { has_policy_flag = pre_sapients_protect }
@@ -525,7 +525,7 @@ building_animal_evaluation_laboratory_hive = {
 			}
 			planet = {
 				NOR = {
-					berg_has_any_alien_deposit = yes
+					berg_has_any_alien_pets_deposit = yes
 					AND = {
 						exists = owner
 						owner = { has_policy_flag = pre_sapients_protect }
