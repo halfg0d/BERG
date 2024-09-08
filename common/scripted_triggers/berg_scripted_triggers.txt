@@ -3,6 +3,7 @@ berg_has_organic_pop_assembly = {
 		has_building = building_clone_vats
 		has_building = building_clone_army_clone_vat
 		has_building = building_posthumous_employment_center
+		has_any_organic_assembly_building = yes
 	}
 }
 berg_has_artificial_pop_assembly = {
@@ -79,12 +80,14 @@ berg_archeostudies_faculty_planet = {
 	OR = {
 		is_planet_class = pc_relic
 		berg_pd_faculty_relic_planet = yes
+		merg_is_relic_world = yes
 	}
 }
 berg_is_habitat = {
 	OR = {
 		is_planet_class = pc_habitat
 		is_pd_habitat = yes
+		merg_is_habitat = yes
 	}
 }
 berg_fulfillment_center_planet = {
@@ -97,7 +100,6 @@ berg_fulfillment_center_planet = {
 		is_pd_nuked = yes
 		is_nuked_world = yes
 		is_city_world = yes
-		
 	}
 }
 berg_can_gaiaseeders_planet = {
@@ -116,6 +118,7 @@ berg_is_gaia_world = {
 		is_planet_class = pc_gaia
 		berg_pd_gaiaseeders_planet = yes
 		is_gaia_world = yes
+		merg_is_gaia_basic = yes
 	}
 }
 berg_is_hive_world = {
@@ -123,18 +126,21 @@ berg_is_hive_world = {
 		is_planet_class = pc_hive
 		is_pd_hive_world = yes
 		is_pd_hive_arcology = yes
+		merg_is_hive_world = yes
 	}
 }
 berg_is_relic_world = {
 	OR = {
 		is_planet_class = pc_relic
 		is_relic_world = yes
+		merg_is_relic_world = yes
 	}
 }
 berg_is_city_world = {
 	OR = {
 		is_planet_class = pc_city
 		is_city_world = yes
+		merg_is_arcology = yes
 	}
 }
 berg_is_resort_world = {
@@ -192,6 +198,7 @@ berg_is_machine_world = {
 	OR = {
 		is_machine_world = yes
 		is_planet_class = pc_machine
+		merg_is_machine_world = yes
 	}
 }
 
@@ -373,11 +380,6 @@ berg_has_private_military_companies = {
 berg_has_integrated_bioarchitecture = {
 	has_valid_civic = civic_integrated_bioarchitecture
 }
-berg_has_any_alien_deposit = {
-	OR = {
-		has_deposit = d_alien_pets_deposit
-	}
-}
 berg_ST_30_cost = {
 	exists = owner
 	owner = {
@@ -438,11 +440,6 @@ berg_has_private_military_companies = {
 }
 berg_has_integrated_bioarchitecture = {
 	has_valid_civic = civic_integrated_bioarchitecture
-}
-berg_has_any_alien_deposit = {
-	OR = {
-		has_deposit = d_alien_pets_deposit
-	}
 }
 berg_ST_30_cost = {
 	exists = owner
@@ -507,4 +504,12 @@ berg_has_zofe_sandbox_mod = {
 }
 is_toxic_habitat = {
 	has_planet_flag = toxic_knights_habitat
+}
+berg_has_any_planetary_shield = {
+	OR = {
+		has_building = building_mem_planetary_shield_generator
+		has_building = building_mem_planetary_shield_generator_heavy
+		has_building = building_mem_planetary_shield_generator_orila
+		merg_has_planetary_shield = yes
+	}
 }

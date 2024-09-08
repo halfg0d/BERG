@@ -21,7 +21,7 @@ triggered_planet_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		berg_has_any_alien_deposit = yes
+		berg_has_any_alien_pets_deposit = yes
 	}
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.1
