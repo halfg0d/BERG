@@ -3,7 +3,7 @@
 #############
 building_research_lab_1 = {
 	base_buildtime = @b1_time
-
+	icon = @research_lab_1_icon
 	exempt_from_ai_planet_specialization = no
 
 	category = research

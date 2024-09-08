@@ -1,0 +1,96 @@
+namespace = berg_panel
+event = {
+	id = berg_panel.0
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = berg_panel.1
+				days = 15
+			}
+		}
+	}
+}
+country_event = {
+	id = berg_panel.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { is_ai = no }
+	immediate = {
+		set_country_flag = berg_panel_vanilla_on
+		set_country_flag = berg_panel_fe_on
+	}
+}
+country_event = {
+	id = berg_panel.100
+	picture = GFX_evt_arguing_senate
+	is_triggered_only = yes
+	hide_window = no
+	title = "berg_panel.1.name"
+	desc = "berg_panel.1.desc"
+	
+	trigger = {
+		is_ai = no
+	}
+	# Vanilla Buildings
+	option = {
+		trigger = {
+			has_country_flag = berg_panel_vanilla_on
+		}
+		name = berg_planet.1.vanilla_on
+		hidden_effect = {
+			remove_country_flag = berg_panel_vanilla_on
+			set_country_flag = berg_panel_vanilla_off
+			country_event = {
+				id = berg_panel.100
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = berg_panel_vanilla_off
+		}
+		name = berg_planet.1.vanilla_off
+		hidden_effect = {
+			remove_country_flag = berg_panel_vanilla_off
+			set_country_flag = berg_panel_vanilla_on
+			country_event = {
+				id = berg_panel.100
+			}
+		}
+	}
+	# FE Buildings
+	option = {
+		trigger = {
+			has_country_flag = berg_panel_fe_on
+		}
+		name = berg_planet.1.fe_on
+		hidden_effect = {
+			remove_country_flag = berg_panel_fe_on
+			set_country_flag = berg_panel_fe_off
+			country_event = {
+				id = berg_panel.100
+			}
+		}
+	}
+	option = {
+		trigger = {
+			has_country_flag = berg_panel_fe_off
+		}
+		name = berg_planet.1.fe_off
+		hidden_effect = {
+			remove_country_flag = berg_panel_fe_off
+			set_country_flag = berg_panel_fe_on
+			country_event = {
+				id = berg_panel.100
+			}
+		}
+	}
+	option = {
+		name = berg_planet.1.done
+	}
+}
