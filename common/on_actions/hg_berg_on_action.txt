@@ -2,6 +2,7 @@ on_game_start = {
 	events = {
 		berg_mod_flag.1
 		berg_event.21
+		berg_panel.0
 	}
 }
 on_monthly = {

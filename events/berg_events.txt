@@ -53,3 +53,13 @@ country_event = {
 		}
 	}
 }
+event = {
+	id = berg_event.100
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		every_country = {
+			set_variable = { which = research_lab_1_icon value = @research_lab_2_icon }
+		}
+	}
+}
