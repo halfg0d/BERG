@@ -2,200 +2,200 @@
 ## Limited by deposits ##
 #########################
 @avb_d4_time = 960
-building_mote_harvesters = {
-	base_buildtime = @b1_time
-	icon = building_mote_harvesting_traps
+# building_mote_harvesters = {
+# 	base_buildtime = @b1_time
+# 	icon = building_mote_harvesting_traps
 
-	is_capped_by_modifier = yes
+# 	is_capped_by_modifier = yes
 
-	category = resource
+# 	category = resource
 
-	potential = {
-		berg_st_can_build_mote_harvesters = yes
-	}
-	inline_script = {
-		script = vanilla/deposit/berg_mote_harvesters_script
-		tier = 1
-	}
-	inline_script = {
-		script = building_resources/vanilla/mote_harvesters
-		tier = 1
-	}
+# 	potential = {
+# 		berg_st_can_build_mote_harvesters = yes
+# 	}
+# 	inline_script = {
+# 		script = vanilla/deposit/berg_mote_harvesters_script
+# 		tier = 1
+# 	}
+# 	inline_script = {
+# 		script = building_resources/vanilla/mote_harvesters
+# 		tier = 1
+# 	}
 
-	prerequisites = {
-		"tech_mine_volatile_motes"
-	}
-	upgrades = {
-		"building_avb_mote_harvesters_2" #AVB
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = mote_harvesters
-		TRIGGER = " "
-	}
-}
-building_avb_mote_harvesters_2 = {
-	base_buildtime = @avb_d4_time
-	can_build = no
+# 	prerequisites = {
+# 		"tech_mine_volatile_motes"
+# 	}
+# 	upgrades = {
+# 		"building_avb_mote_harvesters_2" #AVB
+# 	}
+# 	inline_script = {
+# 		script = berg_desc/berg_building_desc
+# 		BUILDING = mote_harvesters
+# 		TRIGGER = " "
+# 	}
+# }
+# building_avb_mote_harvesters_2 = {
+# 	base_buildtime = @avb_d4_time
+# 	can_build = no
 
-	category = resource
+# 	category = resource
 	
-	potential = {
-		berg_has_avb_mod = yes
-		berg_st_can_build_mote_harvesters = yes
-	}
+# 	potential = {
+# 		berg_has_avb_mod = yes
+# 		berg_st_can_build_mote_harvesters = yes
+# 	}
 	
-	allow = {
-		has_major_upgraded_capital = yes
-	}
-	inline_script = {
-		script = vanilla/deposit/berg_mote_harvesters_script
-		tier = 2
-	}
-	inline_script = {
-		script = building_resources/vanilla/mote_harvesters
-		tier = 2
-	}
+# 	allow = {
+# 		has_major_upgraded_capital = yes
+# 	}
+# 	inline_script = {
+# 		script = vanilla/deposit/berg_mote_harvesters_script
+# 		tier = 2
+# 	}
+# 	inline_script = {
+# 		script = building_resources/vanilla/mote_harvesters
+# 		tier = 2
+# 	}
 	
-	prerequisites = {
-		"tech_avb_mote_harvesters_2"
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = avb_mote_harvesters_2
-		TRIGGER = " "
-	}
-}
-building_gas_extractors = {
-	base_buildtime = @b1_time
-	icon = building_gas_extractors
+# 	prerequisites = {
+# 		"tech_avb_mote_harvesters_2"
+# 	}
+# 	inline_script = {
+# 		script = berg_desc/berg_building_desc
+# 		BUILDING = avb_mote_harvesters_2
+# 		TRIGGER = " "
+# 	}
+# }
+# building_gas_extractors = {
+# 	base_buildtime = @b1_time
+# 	icon = building_gas_extractors
 
-	is_capped_by_modifier = yes
+# 	is_capped_by_modifier = yes
 
-	category = resource
+# 	category = resource
 
-	potential = {
-		berg_st_can_build_gas_extractors = yes
-	}
-	inline_script = {
-		script = vanilla/deposit/berg_gas_extractors_script
-		tier = 1
-	}
-	inline_script = {
-		script = building_resources/vanilla/gas_extractors
-		tier = 1
-	}
+# 	potential = {
+# 		berg_st_can_build_gas_extractors = yes
+# 	}
+# 	inline_script = {
+# 		script = vanilla/deposit/berg_gas_extractors_script
+# 		tier = 1
+# 	}
+# 	inline_script = {
+# 		script = building_resources/vanilla/gas_extractors
+# 		tier = 1
+# 	}
 
-	prerequisites = {
-		"tech_mine_exotic_gases"
-	}
-	upgrades = {
-		"building_avb_gas_extractors_2" #AVB
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = gas_extractors
-		TRIGGER = " "
-	}
-}
-building_avb_gas_extractors_2 = {
-	base_buildtime = @avb_d4_time
-	icon = building_gas_extractors
-	can_build = no
+# 	prerequisites = {
+# 		"tech_mine_exotic_gases"
+# 	}
+# 	upgrades = {
+# 		"building_avb_gas_extractors_2" #AVB
+# 	}
+# 	inline_script = {
+# 		script = berg_desc/berg_building_desc
+# 		BUILDING = gas_extractors
+# 		TRIGGER = " "
+# 	}
+# }
+# building_avb_gas_extractors_2 = {
+# 	base_buildtime = @avb_d4_time
+# 	icon = building_gas_extractors
+# 	can_build = no
 
-	category = resource
+# 	category = resource
 
-	potential = {
-		berg_has_avb_mod = yes
-		berg_st_can_build_gas_extractors = yes
-	}
+# 	potential = {
+# 		berg_has_avb_mod = yes
+# 		berg_st_can_build_gas_extractors = yes
+# 	}
 	
-	allow = {
-		has_major_upgraded_capital = yes
-	}
-	inline_script = {
-		script = vanilla/deposit/berg_gas_extractors_script
-		tier = 2
-	}
-	inline_script = {
-		script = building_resources/vanilla/gas_extractors
-		tier = 2
-	}
+# 	allow = {
+# 		has_major_upgraded_capital = yes
+# 	}
+# 	inline_script = {
+# 		script = vanilla/deposit/berg_gas_extractors_script
+# 		tier = 2
+# 	}
+# 	inline_script = {
+# 		script = building_resources/vanilla/gas_extractors
+# 		tier = 2
+# 	}
 	
-	prerequisites = {
-		"tech_avb_gas_extractors_2"
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = avb_gas_extractors_2
-		TRIGGER = " "
-	}
-}
+# 	prerequisites = {
+# 		"tech_avb_gas_extractors_2"
+# 	}
+# 	inline_script = {
+# 		script = berg_desc/berg_building_desc
+# 		BUILDING = avb_gas_extractors_2
+# 		TRIGGER = " "
+# 	}
+# }
 
-building_crystal_mines = {
-	base_buildtime = @b1_time
+# building_crystal_mines = {
+# 	base_buildtime = @b1_time
 
-	is_capped_by_modifier = yes
+# 	is_capped_by_modifier = yes
 
-	category = resource
+# 	category = resource
 
-	potential = {
-		berg_st_can_build_crystal_mines = yes
-	}
-	inline_script = {
-		script = vanilla/deposit/berg_crystal_mines_script
-		tier = 1
-	}
-	inline_script = {
-		script = building_resources/vanilla/crystal_mines
-		tier = 1
-	}
+# 	potential = {
+# 		berg_st_can_build_crystal_mines = yes
+# 	}
+# 	inline_script = {
+# 		script = vanilla/deposit/berg_crystal_mines_script
+# 		tier = 1
+# 	}
+# 	inline_script = {
+# 		script = building_resources/vanilla/crystal_mines
+# 		tier = 1
+# 	}
 
-	prerequisites = {
-		"tech_mine_rare_crystals"
-	}
-	upgrades = {
-		"building_avb_crystal_mines_2" #AVB
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = crystal_mines
-		TRIGGER = " "
-	}
-}
+# 	prerequisites = {
+# 		"tech_mine_rare_crystals"
+# 	}
+# 	upgrades = {
+# 		"building_avb_crystal_mines_2" #AVB
+# 	}
+# 	inline_script = {
+# 		script = berg_desc/berg_building_desc
+# 		BUILDING = crystal_mines
+# 		TRIGGER = " "
+# 	}
+# }
 
-building_avb_crystal_mines_2 = {
-	base_buildtime = @avb_d4_time
-	can_build = no
+# building_avb_crystal_mines_2 = {
+# 	base_buildtime = @avb_d4_time
+# 	can_build = no
 
-	category = resource
+# 	category = resource
 	
-	potential = {
-		berg_has_avb_mod = yes
-		berg_st_can_build_crystal_mines = yes
-	}
+# 	potential = {
+# 		berg_has_avb_mod = yes
+# 		berg_st_can_build_crystal_mines = yes
+# 	}
 	
-	allow = {
-		has_major_upgraded_capital = yes
-	}
-	inline_script = {
-		script = vanilla/deposit/berg_crystal_mines_script
-		tier = 2
-	}
-	inline_script = {
-		script = building_resources/vanilla/crystal_mines
-		tier = 2
-	}	
+# 	allow = {
+# 		has_major_upgraded_capital = yes
+# 	}
+# 	inline_script = {
+# 		script = vanilla/deposit/berg_crystal_mines_script
+# 		tier = 2
+# 	}
+# 	inline_script = {
+# 		script = building_resources/vanilla/crystal_mines
+# 		tier = 2
+# 	}	
 	
-	prerequisites = {
-		"tech_avb_crystal_mines_2"
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = avb_crystal_mines_2
-		TRIGGER = " "
-	}
-}
+# 	prerequisites = {
+# 		"tech_avb_crystal_mines_2"
+# 	}
+# 	inline_script = {
+# 		script = berg_desc/berg_building_desc
+# 		BUILDING = avb_crystal_mines_2
+# 		TRIGGER = " "
+# 	}
+# }
 
 building_betharian_power_plant = {
 	base_buildtime = @b1_time
