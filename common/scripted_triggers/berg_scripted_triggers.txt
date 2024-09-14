@@ -356,6 +356,7 @@ berg_pr_cannot_vanilla = {
 berg_has_any_alien_pets_deposit = {
 	OR = {
 		has_deposit = d_alien_pets_deposit
+		has_deposit = d_avian_reserve
 		AND = {
 			berg_has_pfe_mod = yes
 			OR = {
