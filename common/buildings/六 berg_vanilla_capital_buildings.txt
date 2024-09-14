@@ -75,6 +75,23 @@ building_colony_shelter = {
 		job_roboticist_add = 1
 		job_colonist_add = -1
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			berg_is_penal_colony = yes
+		}
+		job_warden_add = 1
+		job_colonist_add = -1
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			berg_is_penal_colony = yes
+		}
+		text = job_warden_effect_desc
+	}
 
 	resources = {
 		category = planet_buildings

@@ -534,6 +534,13 @@ berg_has_any_planetary_shield = {
 		merg_has_planetary_shield = yes
 	}
 }
+berg_is_vanilla_special_planet = {
+	OR = {
+		has_modifier = slave_colony
+		has_modifier = resort_colony
+		has_modifier = penal_colony
+	}
+}
 berg_has_plentiful_aspiration_3 = {
 	berg_has_pt_mod = yes
 	has_tradition = tr_plentiful_aspiration_3

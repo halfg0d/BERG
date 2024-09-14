@@ -1,0 +1,16 @@
+
+# Warden
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = warden
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_regular_empire = yes
+	}
+	berg_is_penal_colony = yes
+	"
+}
