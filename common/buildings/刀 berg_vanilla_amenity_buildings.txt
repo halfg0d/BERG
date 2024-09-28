@@ -1111,7 +1111,7 @@ building_holo_theatres = {
 	inline_script = {
 		script = vanilla/amenity/berg_holo_theatres_script
 		tier = 1
-	}`
+	}
 	inline_script = {
 		script = building_resources/vanilla/holo_theatres
 		tier = 1
