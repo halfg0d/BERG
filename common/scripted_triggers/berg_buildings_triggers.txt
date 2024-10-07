@@ -298,15 +298,19 @@ berg_st_can_build_planetary_shield = {
 }
 
 # Deposit
+# Few of them was deleted, but I will store them for future
 berg_st_can_build_mote_harvesters = {
+	always = no
 	berg_is_resort_world = no
 }
 
 berg_st_can_build_gas_extractors = {
+	always = no
 	berg_is_resort_world = no
 }
 
 berg_st_can_build_crystal_mines = {
+	always = no
 	berg_is_resort_world = no
 }
 

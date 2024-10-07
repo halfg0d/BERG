@@ -8,6 +8,7 @@ building_commercial_zone = {
 	category = trade
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_commercial_zone = yes
 	}
 
@@ -338,6 +339,7 @@ building_galactic_stock_exchange = {
 	category = trade
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_has_bug_mod = no
 		berg_st_can_build_galactic_stock = yes
 	}

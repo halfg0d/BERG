@@ -41,7 +41,7 @@ country_event = {
 		trigger = {
 			has_country_flag = berg_panel_vanilla_on
 		}
-		name = berg_planet.1.vanilla_on
+		name = berg_planet.100.vanilla_on
 		hidden_effect = {
 			remove_country_flag = berg_panel_vanilla_on
 			set_country_flag = berg_panel_vanilla_off
@@ -54,7 +54,7 @@ country_event = {
 		trigger = {
 			has_country_flag = berg_panel_vanilla_off
 		}
-		name = berg_planet.1.vanilla_off
+		name = berg_planet.100.vanilla_off
 		hidden_effect = {
 			remove_country_flag = berg_panel_vanilla_off
 			set_country_flag = berg_panel_vanilla_on
@@ -68,7 +68,7 @@ country_event = {
 		trigger = {
 			has_country_flag = berg_panel_fe_on
 		}
-		name = berg_planet.1.fe_on
+		name = berg_planet.100.fe_on
 		hidden_effect = {
 			remove_country_flag = berg_panel_fe_on
 			set_country_flag = berg_panel_fe_off
@@ -81,7 +81,7 @@ country_event = {
 		trigger = {
 			has_country_flag = berg_panel_fe_off
 		}
-		name = berg_planet.1.fe_off
+		name = berg_planet.100.fe_off
 		hidden_effect = {
 			remove_country_flag = berg_panel_fe_off
 			set_country_flag = berg_panel_fe_on
@@ -91,6 +91,6 @@ country_event = {
 		}
 	}
 	option = {
-		name = berg_planet.1.done
+		name = berg_planet.100.done
 	}
 }

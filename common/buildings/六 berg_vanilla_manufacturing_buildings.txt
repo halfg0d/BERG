@@ -7,6 +7,7 @@ building_foundry_1 = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_foundry = yes
 	}
 
@@ -247,6 +248,7 @@ building_factory_1 = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_factory = yes
 	}
 
@@ -574,6 +576,7 @@ building_refinery = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_refinery = yes
 	}
 	inline_script = {
@@ -675,6 +678,7 @@ building_chemical_plant = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_chemical_plant = yes
 	}
 
@@ -775,6 +779,7 @@ building_crystal_plant = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_crystal_plant = yes
 	}
 	prerequisites = {
@@ -877,6 +882,7 @@ building_nanite_transmuter = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_nanite_transmuter = yes
 	}
 
@@ -954,6 +960,7 @@ building_ministry_production = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_ministry_production = yes
 	}
 
@@ -1104,6 +1111,7 @@ building_production_center = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_production_center = yes
 	}
 
@@ -1246,6 +1254,7 @@ building_coordinated_fulfillment_center_1 = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_fulfillment_center = yes
 	}
 
@@ -1383,6 +1392,7 @@ building_archaeo_refinery = {
 	category = manufacturing
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_archaeo_refinery = yes
 		owner = { has_technology = tech_archaeo_refinery }
 	}
