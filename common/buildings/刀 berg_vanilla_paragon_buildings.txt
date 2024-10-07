@@ -19,6 +19,7 @@ building_paragon_origin_academy = {
 	category = research
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		custom_tooltip = {
 			text = EMPIRE_UNIQUE_BUILDING
 			owner = { has_country_flag = legendary_leader_resigned_academy }

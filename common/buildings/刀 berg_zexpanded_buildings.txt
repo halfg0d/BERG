@@ -1184,6 +1184,7 @@ building_farmer_market = {
 	category = trade
 
 	potential = {
+		berg_has_zexpanded_mod = yes
 		exists = owner
 		owner = {
 			is_regular_empire = yes
