@@ -2032,6 +2032,7 @@ building_avb_hive_capital_3 = {
 	category = government
 	
 	potential = {
+		berg_has_avb_mod = yes
 		berg_st_can_build_hive_capital = yes
 	}
 	
@@ -3348,33 +3349,8 @@ building_resort_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = "vanilla/capitals/special/berg_script_resort_jobs"
-		tier = resort1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		job_roboticist_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
-			has_current_purge = yes
-			growing_species = { has_trait = trait_cybernetic }
-		}
-		pop_growth_speed = 0.10
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		text = job_roboticist_effect_desc
+		script = vanilla/capitals/special/resort_world
+		tier = 1
 	}
 	upgrades = {
 		"building_resort_major_capital"
@@ -3438,8 +3414,8 @@ building_resort_major_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = "vanilla/capitals/special/berg_script_resort_jobs"
-		tier = resort2
+		script = vanilla/capitals/special/resort_world
+		tier = 2
 	}
 	#OSA
 	triggered_planet_modifier = {
@@ -3455,37 +3431,12 @@ building_resort_major_capital = {
 		branch_add = 1 
 		osa_branch_add = 5
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		job_roboticist_add = 1
-	}
 
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = no
 		prod3 = no
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
-			has_current_purge = yes
-			growing_species = { has_trait = trait_cybernetic }
-		}
-		pop_growth_speed = 0.10
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		text = job_roboticist_effect_desc
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -3547,8 +3498,8 @@ building_avb_resort_capital_3 = {
 		script = buildings/on_all_capital_buildings
 	}
 	inline_script = {
-		script = "vanilla/capitals/special/berg_script_resort_jobs"
-		tier = resort3
+		script = vanilla/capitals/special/resort_world
+		tier = 3
 	}
 	#OSA
 	triggered_planet_modifier = {
@@ -3564,37 +3515,11 @@ building_avb_resort_capital_3 = {
 		branch_add = 1 
 		osa_branch_add = 5
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		job_roboticist_add = 1
-	}
-
 	inline_script = {
 		script = vanilla/capitals/berg_productivity_script
 		prod1 = yes
 		prod2 = yes
 		prod3 = no
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
-			has_current_purge = yes
-			growing_species = { has_trait = trait_cybernetic }
-		}
-		pop_growth_speed = 0.10
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		text = job_roboticist_effect_desc
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc

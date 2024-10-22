@@ -20,3 +20,8 @@ berg_panel_can_build_fe = {
 		has_country_flag = berg_panel_fe_on
 	}
 }
+berg_panel_can_build_nuclei = {
+	owner = {
+		has_country_flag = berg_panel_sparble_on
+	}
+}

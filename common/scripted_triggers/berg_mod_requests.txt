@@ -87,3 +87,6 @@ berg_has_zofe_sandbox_mod = {
 berg_has_pfe_mod = {
 	has_global_flag = planetary_features_expanded_enabled
 }
+berg_has_hyperconstruct_mod = {
+	has_global_flag = sparbles_stellar_hyperconstructs
+}
