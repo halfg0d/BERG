@@ -2200,6 +2200,7 @@ building_toxic_bath_advanced = {
 	}
 
 	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
 		is_regular_empire = yes
 	}
 

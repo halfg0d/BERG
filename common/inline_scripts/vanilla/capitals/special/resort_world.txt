@@ -1,0 +1,37 @@
+inline_script = {
+	script = berg_jobs_group/resort_worker_add
+	AMOUNT = @berg_capital_resort_capital_resort_worker_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/roboticist_add
+	AMOUNT = 1
+	MULT = 1
+	DESC = with
+	TRIGGER = "
+	exists = owner
+	owner = { has_active_tradition = tr_synthetics_prefabricated_components"
+}
+inline_script = {
+	script = berg_jobs_group/politician_add
+	AMOUNT = @berg_capital_resort_capital_job_t$tier$
+	DESC = with
+	MULT = 1
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/executive_add
+	AMOUNT = @berg_capital_resort_capital_job_t$tier$
+	DESC = with
+	MULT = 1
+	TRIGGER = ""
+}
+inline_script = {
+	script = berg_jobs_group/steward_add
+	AMOUNT = @berg_capital_resort_capital_job_t$tier$
+	DESC = with
+	MULT = 2
+	TRIGGER = ""
+}
