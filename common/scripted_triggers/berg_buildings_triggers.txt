@@ -234,7 +234,7 @@ berg_st_can_build_overseer = {
 }
 
 berg_st_can_build_ranger = {
-	berg_is_slave_world = yes
+	berg_is_slave_world = no
 	owner = {
 		OR = {
 			is_regular_empire = yes
