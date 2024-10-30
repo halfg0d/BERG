@@ -4,3 +4,8 @@ on_game_start = {
 		berg_event.21
 	}
 }
+on_monthly = {
+	events = {
+		berg_sup.pt
+	}
+}

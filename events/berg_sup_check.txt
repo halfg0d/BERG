@@ -1,0 +1,20 @@
+namespace = berg_sup
+event = {
+	id = berg_sup.pt
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = { has_global_flag = berg_pt_mod }
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_country = {
+					OR = {
+						has_tradition = tr_plentiful_aspiration_adopt
+					}
+				}
+			}
+		}
+	}
+}
