@@ -22,4 +22,11 @@ resources = {
 		resource = minerals
 		amount = @berg_unity_monument_machine_cost_t$tier$
 	}
+	inline_script = {
+		script = resources_scripts/monument
+		trigger = "exists = owner"
+		resource = unity
+		amount = $tier$
+		mult = owner.trigger:num_ascension_perks
+	}
 }
