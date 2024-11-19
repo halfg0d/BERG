@@ -7,6 +7,7 @@ building_luxury_residence = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_luxury_residence = yes
 	}
 
@@ -298,6 +299,7 @@ building_communal_housing = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_communal_housing = yes
 	}
 
@@ -608,6 +610,7 @@ building_drone_storage = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_drone_storage = yes
 	}
 
@@ -851,6 +854,7 @@ building_hive_warren = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_warren = yes
 	}
 
@@ -890,6 +894,7 @@ building_expanded_warren = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_warren = yes
 	}
 
@@ -1093,6 +1098,7 @@ building_holo_theatres = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_holotheatres = yes
 	}
 
@@ -1352,6 +1358,7 @@ building_clinic = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_clinic = yes
 	}
 
@@ -1670,6 +1677,7 @@ building_maintenance_depot = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_depot = yes
 	}
 
@@ -1759,6 +1767,7 @@ building_slave_huts = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_huts = yes
 	}
 
@@ -1834,6 +1843,7 @@ building_overseer_homes = {
 	category = amenity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_overseer = yes
 	}
 
@@ -1905,6 +1915,7 @@ building_ranger_lodge = {
 	category = amenity
 	icon = holding_park_ranger_lodge
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_ranger = yes
 	}
 
@@ -2063,6 +2074,7 @@ building_toxic_bath = {
 	icon = building_toxic_bath
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_toxic_bath = yes
 	}
 	destroy_trigger = {
@@ -2188,6 +2200,7 @@ building_toxic_bath_advanced = {
 	}
 
 	show_tech_unlock_if = {
+		berg_has_zexpanded_mod = yes
 		is_regular_empire = yes
 	}
 

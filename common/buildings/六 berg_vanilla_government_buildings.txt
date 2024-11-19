@@ -7,6 +7,7 @@ building_noble_estates = {
 	base_cap_amount = 1
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_noble_estates = yes
 	}
 	allow = {
@@ -177,6 +178,7 @@ building_slave_processing = {
 	base_cap_amount = 1
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_slave_processing = yes
 	}
 	allow = {
@@ -293,6 +295,7 @@ building_precinct_house = {
 	base_buildtime = @b1_time
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_precinct_house = yes
 	}
 	allow = {
@@ -476,6 +479,7 @@ building_sentinel_posts = {
 	base_buildtime = @b1_time
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_sentinel_posts = yes
 	}
 	allow = {
@@ -598,6 +602,7 @@ building_order_keep = {
 	}
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_order_keep = yes
 	}
 	destroy_trigger = {
@@ -630,6 +635,7 @@ building_order_castle = {
 	can_build = no
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_order_castle = yes
 	}
 	destroy_trigger = {
@@ -663,6 +669,7 @@ building_psi_corps = {
 	category = government
 	base_cap_amount = 1
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_psi_corps = yes
 	}
 	allow = {
@@ -818,6 +825,7 @@ building_embassy = {
 	category = government
 	base_cap_amount = 1
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_embassy = yes
 	}
 	upgrades = {
@@ -879,6 +887,7 @@ building_grand_embassy = {
 	can_build = no
 	category = government
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_embassy = yes
 	}
 	allow = {
@@ -1003,6 +1012,7 @@ building_gaiaseeders_1 = {
 		"building_gaiaseeders_2"
 	}
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_gaiaseeders = yes
 	}
 	allow = {

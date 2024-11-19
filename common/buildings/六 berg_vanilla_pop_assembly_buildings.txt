@@ -9,6 +9,7 @@ building_robot_assembly_plant = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_robot_plant = yes
 	}
 
@@ -252,6 +253,7 @@ building_machine_assembly_plant = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_machine_plant = yes
 	}
 
@@ -423,6 +425,7 @@ building_spawning_pool = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_spawning_pool = yes
 	}
 
@@ -509,6 +512,7 @@ building_offspring_nest = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_offspring_nest = yes
 	}
 
@@ -616,6 +620,7 @@ building_necrophage_elevation_chamber = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_necrophage = yes
 	}
 
@@ -897,6 +902,7 @@ building_clone_vats = {
 	base_cap_amount = 1
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_clone_vats = yes
 	}
 	#BugBranch
@@ -1005,6 +1011,7 @@ building_clone_army_clone_vat = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_clone_army_vats = yes
 	}
 
@@ -1147,6 +1154,7 @@ building_posthumous_employment_center = {
 	category = pop_assembly
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_posthumous_employment = yes
 	}
 
@@ -1253,6 +1261,7 @@ building_toxic_bath_hive = {
 	icon = building_toxic_bath_hive
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_toxic_bath_hive = yes
 	}
 	allow = {
@@ -1464,6 +1473,7 @@ building_toxic_bath_machine = {
 	icon = building_toxic_bath_machine
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_toxic_bath_machine = yes
 	}
 	destroy_trigger = {

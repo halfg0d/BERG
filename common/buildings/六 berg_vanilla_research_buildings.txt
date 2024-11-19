@@ -3,12 +3,13 @@
 #############
 building_research_lab_1 = {
 	base_buildtime = @b1_time
-
+	icon = @research_lab_1_icon
 	exempt_from_ai_planet_specialization = no
 
 	category = research
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_research_lab = yes
 	}
 
@@ -276,6 +277,7 @@ building_institute = {
 	category = research
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_institute = yes
 	}
 
@@ -410,6 +412,7 @@ building_supercomputer = {
 	category = research
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_supercomputer = yes
 	}
 
@@ -565,6 +568,7 @@ building_archaeostudies_faculty = {
 	}
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_archaeostudies_faculty = yes
 	}
 
@@ -652,6 +656,7 @@ building_vultaum_reality_computer = {
 	category = research
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_vultaum_computer = yes
 	}
 

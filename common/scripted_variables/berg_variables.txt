@@ -22,3 +22,6 @@
 @tier_5_capital_defense_armies = 24
 @tier_6_capital_defense_armies = 32
 @tier_7_capital_defense_armies = 40
+
+@research_lab_1_icon = "building_research_lab_2"
+@research_lab_2_icon = "building_research_lab_1"

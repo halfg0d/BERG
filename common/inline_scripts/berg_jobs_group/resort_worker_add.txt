@@ -1,0 +1,12 @@
+
+# Resort Worker
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = resort_worker
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	planet = { berg_is_resort_world = yes }
+	"
+}

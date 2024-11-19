@@ -1,0 +1,360 @@
+#####################
+# Sparble's Hyperconstructs Nuclei buildings
+#####################
+
+# Nuclei Soup Transmuter - Strategic Resources
+building_ssh_nuclei_soup_transmuter_sr = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+
+	potential = {
+		berg_has_hyperconstruct_mod = yes
+		berg_panel_can_build_nuclei = yes
+		exists = owner
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = sr_nuclei_soup
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = sr_nuclei_soup
+						amount > 0
+					}
+				}
+			}
+		}
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+		berg_is_penal_world = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_deficit = sr_nuclei_soup
+					}
+				}
+			}
+			rare_crystals = 50
+			volatile_motes = 50
+			exotic_gases = 50
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = { has_deficit = sr_nuclei_soup }
+					has_technology = tech_mine_zro
+				}
+			}
+			sr_zro = 30
+		}
+		upkeep = {
+			sr_nuclei_soup = 125
+			energy = 30
+		}
+	}
+
+	prerequisites = {
+		"ssh_tech_system_disintegrator"
+	}
+
+	ai_resource_production = {
+		rare_crystals = @b3_rare_upkeep
+		volatile_motes = @b3_rare_upkeep
+		exotic_gases = @b3_rare_upkeep
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Nuclei Soup Transmuter - Minerals
+building_ssh_nuclei_soup_transmuter_minerals = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+
+	potential = {
+		berg_has_hyperconstruct_mod = yes
+		berg_panel_can_build_nuclei = yes
+		exists = owner
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = sr_nuclei_soup
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = sr_nuclei_soup
+						amount > 0
+					}
+				}
+			}
+		}
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+		berg_is_penal_world = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_deficit = sr_nuclei_soup
+					}
+				}
+			}
+			minerals = 200 # 1 mineral = 0.5 nuclei soup
+		}
+		upkeep = {
+			sr_nuclei_soup = 100
+			energy = 30
+		}
+	}
+
+	prerequisites = {
+		"ssh_tech_system_disintegrator"
+	}
+
+	ai_resource_production = {
+		minerals = @b3_upkeep
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Nuclei Soup Transmuter - Food
+building_ssh_nuclei_soup_transmuter_food = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+
+	potential = {
+		berg_has_hyperconstruct_mod = yes
+		berg_panel_can_build_nuclei = yes
+		exists = owner
+		OWNER = {
+			country_uses_food = yes
+			OR = {
+				has_monthly_income = {
+					resource = sr_nuclei_soup
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = sr_nuclei_soup
+						amount > 0
+					}
+				}
+			}
+		}
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+		berg_is_penal_world = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_deficit = sr_nuclei_soup
+					}
+				}
+			}
+			food = 200
+		}
+		upkeep = {
+			sr_nuclei_soup = 100 # 1 food = 0.5 nuclei soup
+			energy = 30
+		}
+	}
+
+	prerequisites = {
+		"ssh_tech_system_disintegrator"
+	}
+
+	ai_resource_production = {
+		food = @b3_upkeep
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Nuclei Soup Transmuter - Alloys / Cultrobium
+building_ssh_nuclei_soup_foundry = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+
+	potential = {
+		berg_has_hyperconstruct_mod = yes
+		berg_panel_can_build_nuclei = yes
+		exists = owner
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = sr_nuclei_soup
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = sr_nuclei_soup
+						amount > 0
+					}
+				}
+			}
+		}
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+		berg_is_penal_world = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = {
+						has_deficit = sr_nuclei_soup
+					}
+				}
+			}
+			alloys = 50
+			sr_cultrobium = 25
+		}
+		upkeep = {
+			sr_nuclei_soup = 100
+			energy = 25
+		}
+	}
+
+	prerequisites = {
+		"ssh_tech_system_disintegrator"
+	}
+
+	ai_resource_production = {
+		alloys = @b3_rare_upkeep
+		sr_cultrobium = @b3_rare_upkeep
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+# Nuclei Soup Transmuter - Nanites + Living Metal
+building_ssh_nuclei_soup_transmuter_nano = {
+	base_buildtime = @b3_time
+
+	category = manufacturing
+
+	potential = {
+		berg_has_hyperconstruct_mod = yes
+		berg_panel_can_build_nuclei = yes
+		exists = owner
+		OWNER = {
+			OR = {
+				has_monthly_income = {
+					resource = sr_nuclei_soup
+					value > 0
+				}
+				AND = {
+					is_ai = no
+					has_resource = {
+						type = sr_nuclei_soup
+						amount > 0
+					}
+				}
+			}
+		}
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+		berg_is_penal_world = no
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}
+		produces = {
+			trigger = {
+				owner = { NOT = { has_deficit = sr_nuclei_soup } }
+			}
+			nanites = 10 #1 nanites = ~2 nuclei soup (+ living metal)
+		}
+		produces = {
+			trigger = {
+				owner = {
+					NOT = { has_deficit = sr_nuclei_soup }
+					has_technology = tech_mine_living_metal
+				}
+			}
+			sr_living_metal = 10
+		}
+		upkeep = {
+			sr_nuclei_soup = 25
+			energy = 15
+		}
+	}
+
+	prerequisites = {
+		"ssh_tech_system_disintegrator"
+	}
+
+	ai_resource_production = {
+		nanites = @b3_rare_upkeep
+		#sr_living_metal = @b3_rare_upkeep
+		trigger = {
+			always = yes
+		}
+	}
+}

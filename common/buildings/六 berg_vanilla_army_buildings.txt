@@ -10,6 +10,7 @@ building_military_academy = {
 		base = 1
 	}
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_military_academy = yes
 	}
 
@@ -117,6 +118,7 @@ building_dread_encampment = {
 	category = army
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_dread_encampment = yes
 	}
 	allow = {
@@ -195,6 +197,7 @@ building_stronghold = {
 	exempt_from_ai_planet_specialization = no
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_stronghold = yes
 	}
 	inline_script = {
@@ -377,7 +380,9 @@ building_planetary_shield_generator = {
 	position_priority = 100
 	can_be_ruined = no
 	category = army
-
+	potential = {
+		berg_panel_can_build_vanilla = yes
+	}
 	allow = {
 		has_upgraded_capital = yes
 		hidden_trigger = { owner = { is_ai = no } }

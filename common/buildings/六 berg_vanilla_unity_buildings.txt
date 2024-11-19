@@ -9,6 +9,7 @@ building_autochthon_monument = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_autochton_monument = yes
 	}
 
@@ -399,6 +400,7 @@ building_bureaucratic_1 = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_bureaucratic = yes
 	}
 
@@ -756,6 +758,7 @@ building_temple = {
 	category = unity
 	
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_temple = yes
 	}
 
@@ -1226,6 +1229,7 @@ building_uplink_node = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_uplink_node = yes
 	}
 
@@ -1582,6 +1586,7 @@ building_hive_node = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_hive_node = yes
 	}
 
@@ -1863,6 +1868,7 @@ building_sacrificial_temple_1 = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_death_temple = yes
 	}
 
@@ -2196,6 +2202,7 @@ building_galactic_memorial_1 = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_galactic_memorial = yes
 	}
 
@@ -2537,6 +2544,7 @@ building_simulation_1 = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_simulation = yes
 	}
 
@@ -2928,6 +2936,7 @@ building_corporate_monument = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_corporate_monument = yes
 	}
 
@@ -3310,6 +3319,7 @@ building_sensorium_1 = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_sensorium = yes
 	}
 
@@ -3707,6 +3717,7 @@ building_autocurating_vault = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_autocurating_vault = yes
 	}
 
@@ -3847,6 +3858,7 @@ building_citadel_of_faith = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_citadel_faith = yes
 	}
 
@@ -3963,6 +3975,7 @@ building_corporate_vault = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_corporate_vault = yes
 	}
 
@@ -4088,6 +4101,7 @@ building_alpha_hub = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_alpha_hub = yes
 	}
 
@@ -4185,6 +4199,7 @@ building_organic_sanctuary = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_organic_sanctuary = yes
 		OR = {
 			owner = { is_ai = no }
@@ -4667,6 +4682,7 @@ building_league_offices = {
 	category = unity
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_league_offices = yes
 		owner = { has_technology = tech_secrets_league }
 	}

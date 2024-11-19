@@ -182,16 +182,28 @@
 # resort_capital
 @berg_capital_resort_capital_costOneThird_t1 = 133.33
 @berg_capital_resort_capital_costOneThird_t2 = 200.0
+@berg_capital_resort_capital_costOneThird_t3 = 333.33
 @berg_capital_resort_capital_costTwoThird_t1 = 266.67
 @berg_capital_resort_capital_costTwoThird_t2 = 400.0
+@berg_capital_resort_capital_costTwoThird_t3 = 666.67
 @berg_capital_resort_capital_cost_t1 = 400
 @berg_capital_resort_capital_cost_t2 = 600
+@berg_capital_resort_capital_cost_t3 = 1000
 @berg_capital_resort_capital_upkeepOneThird_t1 = 0.67
 @berg_capital_resort_capital_upkeepOneThird_t2 = 1.67
+@berg_capital_resort_capital_upkeepOneThird_t3 = 2.0
 @berg_capital_resort_capital_upkeepTwoThird_t1 = 1.33
 @berg_capital_resort_capital_upkeepTwoThird_t2 = 3.33
+@berg_capital_resort_capital_upkeepTwoThird_t3 = 4.0
 @berg_capital_resort_capital_upkeep_t1 = 2
 @berg_capital_resort_capital_upkeep_t2 = 5
+@berg_capital_resort_capital_upkeep_t3 = 6
+@berg_capital_resort_capital_job_t1 = 1
+@berg_capital_resort_capital_job_t2 = 1
+@berg_capital_resort_capital_job_t3 = 1
+@berg_capital_resort_capital_resort_worker_t1 = 1
+@berg_capital_resort_capital_resort_worker_t2 = 2
+@berg_capital_resort_capital_resort_worker_t3 = 3
 # habitat_capital
 @berg_capital_habitat_capital_costOneThird_t1 = 0.0
 @berg_capital_habitat_capital_costOneThird_t2 = 200.0

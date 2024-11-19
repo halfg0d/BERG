@@ -8,6 +8,7 @@ building_hydroponics_farm = {
 	category = resource
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_hydroponics = yes
 	}
 
@@ -202,6 +203,7 @@ building_food_processing_facility = {
 	category = resource
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_food_processing = yes
 	}
 
@@ -423,6 +425,7 @@ building_baol_organic_plant = {
 	category = resource
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_baol_plant = yes
 	}
 
@@ -524,6 +527,7 @@ building_mineral_purification_plant = {
 	}
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_mineral_purification = yes
 	}
 	inline_script = {
@@ -746,6 +750,7 @@ building_energy_grid = {
 	}
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_energy_grid = yes
 	}
 	triggered_desc = {
@@ -927,6 +932,7 @@ building_resource_silo = {
 	category = resource
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_resource_silo = yes
 	}
 
@@ -1089,6 +1095,7 @@ building_bio_reactor = {
 	category = resource
 
 	potential = {
+		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_bioreactor = yes
 	}
 
