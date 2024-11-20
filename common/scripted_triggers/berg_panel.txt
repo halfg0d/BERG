@@ -1,4 +1,4 @@
-berg_paneL_flag_both = {
+berg_panel_flag_both = {
 	OR = {
 		has_country_flag = berg_panel_$FLAG$_on
 		has_country_flag = berg_panel_$FLAG$_off
@@ -6,13 +6,17 @@ berg_paneL_flag_both = {
 }
 has_any_panel_flags = {
 	OR = {
-		berg_paneL_flag_both = { FLAG = vanilla }
-		berg_paneL_flag_both = { FLAG = fe }
+		berg_panel_flag_both = { FLAG = vanilla }
+		berg_panel_flag_both = { FLAG = fe }
+		berg_panel_flag_both = { FLAG = sparble }
 	}
 }
 berg_panel_can_build_vanilla = {
 	owner = {
-		has_country_flag = berg_panel_vanilla_on
+		OR = {
+			is_ai = yes
+			has_country_flag = berg_panel_vanilla_on
+		}
 	}
 }
 berg_panel_can_build_fe = {
