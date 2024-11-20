@@ -4,7 +4,6 @@ berg_panel_open_edict = {
 	potential = {
 		owner = {
 			is_ai = no
-			has_any_panel_flags = yes
 		}
 	}
 	allow = {

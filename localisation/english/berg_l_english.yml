@@ -53,6 +53,9 @@ l_english:
  berg_event.22.desc:0 "You have installed a §Gz Expanded Traits, Civics, Pops, and More mod with Berg§!. I must warn you that there are built-in features from §H$civic_integrated_bioarchitecture$§! and §H$civic_plant_organic$§! Civic in almost every vanilla building. Also, that feature is built into buildings from other mods §H(temporarily not every until feedback)§!. I hope you will enjoy that feature and have a good century in your gameplay!"
  berg_event.22.a:0 "I understand"
 # Berg Panel
+ berg_panel.1.name:0 "§MBerg Panel§!"
+ berg_panel.1.desc:0 "Panel which allow disabling buildings from certain category."
+ berg_panel.100.fix:0 "§YFix§!"
  berg_panel_button_on:0 "§GOn§!"
  berg_panel_button_off:0 "§ROff§!"
  berg_panel.100.name:0 "Berg Panel"
@@ -64,3 +67,5 @@ l_english:
  berg_panel.100.sparble_on:0 "Sparble Buildings $berg_panel_button_on$"
  berg_panel.100.sparble_off:0 "Sparble Buildings $berg_panel_button_off$"
  berg_panel.100.done:0 "Done"
+ edict_berg_panel_open_edict:0 "Open Berg Panel"
+ edict_berg_panel_open_edict_desc:0 "Open berg panel which allow to disable buildings from certain category."

@@ -10,7 +10,6 @@ event = {
 			}
 			country_event = {
 				id = berg_panel.1
-				days = 15
 			}
 		}
 	}
@@ -38,6 +37,17 @@ country_event = {
 		is_ai = no
 	}
 	# Vanilla Buildings
+	option = {
+		trigger = {
+			has_any_panel_flags = no
+		}
+		name = berg_panel.100.fix
+		hidden_effect = {
+			country_event = {
+				id = berg_panel.1
+			}
+		}
+	}
 	option = {
 		trigger = {
 			has_country_flag = berg_panel_vanilla_on
