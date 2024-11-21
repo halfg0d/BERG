@@ -1,0 +1,9 @@
+OR = {
+	AND = {
+		$MOD$ = yes
+		$WITH$
+	}
+	AND = {
+		$MOD$ = no
+	}
+}

@@ -1060,10 +1060,9 @@ building_clone_vats = {
 				free_housing <= 0
 				free_jobs <= 0
 			}
-			inline_script = {
-				script = supports/only_without
-				MOD = berg_has_expanded_megastructures_mod
-				WITHOT = "NOT = { owner = { has_tradition = tr_genetics_adopt } }"
+			AND = {
+				berg_has_expanded_megastructures_mod = no
+				NOT = { owner = { has_tradition = tr_genetics_adopt } }
 			}
 		}
 		inline_script = {
