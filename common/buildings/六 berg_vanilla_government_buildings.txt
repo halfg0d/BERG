@@ -623,7 +623,7 @@ building_order_keep = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla/berg_order_keep
+		script = building_resources/vanilla/order_keep
 		tier = 1
 	}
 }
@@ -656,7 +656,7 @@ building_order_castle = {
 		tier = 1
 	}
 	inline_script = {
-		script = building_resources/vanilla/berg_order_castle
+		script = building_resources/vanilla/order_castle
 		tier = 1
 	}
 }
