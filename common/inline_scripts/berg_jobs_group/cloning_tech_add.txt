@@ -1,0 +1,27 @@
+
+# Cloning Tech
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = cloning_tech
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	berg_has_expanded_megastructures_mod = yes
+	exists = owner
+	owner = { is_regular_empire = yes }
+	"
+}
+# Cloning Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = cloning_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	berg_has_expanded_megastructures_mod = yes
+	exists = owner
+	owner = { is_gestalt = yes }
+	"
+}

@@ -453,6 +453,7 @@ building_spawning_pool = {
 	upgrades = {
 		"building_eutab_spawning_garden" # EUTAB
 		"building_avb_spawning_pool_2" #AVB
+		"building_spawning_pool_2" #EXPMEGA
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -504,7 +505,52 @@ building_avb_spawning_pool_2 = {
 		TRIGGER = " "
 	}
 }
+building_spawning_pool_2 = {
 
+	base_buildtime = @b2_time
+	category = pop_assembly
+	can_build = no
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		has_building = building_spawning_pool
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		exists = owner
+		owner = { 
+			OR = {
+				is_hive_empire = no
+				has_origin = origin_progenitor_hive
+			}
+		}
+	}
+	
+	
+	inline_script = {
+		script = vanilla/pop_assembly/berg_pool_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/spawning_pool
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_spawning_pool_2" 
+	}
+
+	
+	ai_resource_production = {
+		unity = 15
+		trigger = { 
+			num_pops > 10
+		}
+	}
+}
 building_offspring_nest = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
@@ -535,7 +581,8 @@ building_offspring_nest = {
 	}
 
 	upgrades = {
-		"building_avb_offspring_nest_2"
+		"building_avb_offspring_nest_2" #AVB
+		"building_offspring_warren" #EXPMEGA
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -586,6 +633,62 @@ building_avb_offspring_nest_2 = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_offspring_nest_2
 		TRIGGER = " "
+	}
+}
+building_offspring_warren = {
+	base_buildtime = @b1_time
+	category = pop_assembly
+	can_build = no
+
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		has_building = building_offspring_nest
+		owner = { has_origin = origin_progenitor_hive }
+		or = {
+			num_buildings = { type = any value < 15 }
+			owner = { is_ai = no }
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { NOT = { has_origin = origin_progenitor_hive } }
+	}
+
+	convert_to = {
+		building_spawning_pool_2
+	}
+	inline_script = {
+		script = vanilla/pop_assembly/berg_nest_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/offspring_nest
+		tier = 2
+	}
+	
+	prerequisites = {
+		"tech_spawning_pool_2" 
+	}
+	
+	show_tech_unlock_if = {
+		owner = {
+			owner = { has_origin = origin_progenitor_hive }
+		}
+	}
+	triggered_desc = {
+		text = offspring_nest_tooltip
+	}
+	
+	ai_resource_production = {
+		unity = 15
+		trigger = { 
+			num_pops > 10
+		}
 	}
 }
 
@@ -905,6 +1008,32 @@ building_clone_vats = {
 		berg_panel_can_build_vanilla = yes
 		berg_st_can_build_clone_vats = yes
 	}
+	allow = {
+		inline_script = {
+			script = supports/only_with
+			MOD = berg_has_expanded_megastructures_mod
+			WITH = "
+			custom_tooltip = {
+				fail_text = \"requires_not_basic_clone_army\"
+				exists = owner
+				exists = planet
+				OR = {
+					owner = { NOT = { is_clone_army_empire = yes } }
+					owner = { has_country_flag = clone_army_full_potential }
+					owner = { has_country_flag = clone_army_fertility_unlocked }
+					owner = { has_tradition = tr_genetics_adopt }
+					planet = {
+						any_owned_pop = {
+							OR = {
+								has_trait = trait_clone_soldier_infertile_full_potential
+								has_trait = trait_clone_soldier_fertile
+							}
+						}
+					}
+				}
+			}"
+		}
+	}
 	#BugBranch
 	triggered_planet_modifier = {
 		potential = {
@@ -931,7 +1060,31 @@ building_clone_vats = {
 				free_housing <= 0
 				free_jobs <= 0
 			}
-			NOT = { owner = { has_tradition = tr_genetics_adopt } }
+			inline_script = {
+				script = supports/only_without
+				MOD = berg_has_expanded_megastructures_mod
+				WITHOT = "NOT = { owner = { has_tradition = tr_genetics_adopt } }"
+			}
+		}
+		inline_script = {
+			script = supports/only_with
+			MOD = berg_has_expanded_megastructures_mod
+			WITHOT = "
+			exists = planet
+			NOR = {
+				owner = { has_origin = origin_clones }
+				owner = { has_country_flag = clone_army_full_potential }
+				owner = { has_country_flag = clone_army_fertility_unlocked }
+				owner = { has_tradition = tr_genetics_adopt }
+				planet = {
+					any_owned_pop = {
+						OR = {
+							has_trait = trait_clone_soldier_infertile_full_potential
+							has_trait = trait_clone_soldier_fertile
+						}
+					}
+				}
+			}"
 		}
 	}
 	inline_script = {

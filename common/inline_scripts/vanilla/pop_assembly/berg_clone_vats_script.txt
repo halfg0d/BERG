@@ -1,7 +1,9 @@
-planet_modifier = {
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = no
+	}
 	planet_pop_assembly_organic_add = @berg_pop_assembly_clone_vats_assembly_t$tier$
 }
-
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -25,7 +27,22 @@ triggered_planet_modifier = {
 		auto_mod_monthly_add = @berg_pop_assembly_clone_vats_auto_mod_t$tier$
 	}
 }
-
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			has_technology = tech_gene_tailoring
+				has_technology = tech_adv_cloning
+		}
+		any_owned_pop = {
+			has_auto_modding_trait = yes
+		}
+	}
+	modifier = {
+		auto_mod_monthly_add = @berg_pop_assembly_clone_vats_auto_mod_t$tier$
+	}
+}
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
@@ -78,4 +95,121 @@ triggered_desc = {
 		}
 	}
 	text = tooltip_organic_and_artificial_assembly_warning
+}
+# EXPMEGA
+inline_script = {
+	script = berg_jobs_group/cloning_tech_add
+	AMOUNT = 1
+	MULT = 1
+	DESC = with
+	TRIGGER = ""
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = { has_tradition = tr_genetics_adopt }
+	}
+	planet_pop_assembly_organic_add = 2.5
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			has_technology = tech_adv_cloning
+		}
+	}
+	planet_pop_assembly_organic_add = 1
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = { has_tradition = tr_genetics_efficient_cloning }
+	}
+	modifier = {
+		planet_pop_assembly_organic_add = 1.5
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_xeno_compatibility
+		}
+	}
+	planet_pop_assembly_organic_add = 1
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			has_modifier = genesis_cloning_vats
+		}
+	}
+	planet_pop_assembly_organic_add = 1
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			has_ascension_perk = ap_total_assimilation
+		}
+	}
+	modifier = {
+		planet_pop_assembly_organic_add = 1
+	}
+}
+triggered_desc = {
+	text = building_clone_vats_clone_army_effects_desc
+	trigger = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			berg_is_clone_army_empire = yes
+			NOR = {
+				has_technology = tech_adv_cloning
+				has_tradition = tr_genetics_adopt
+			}
+		}
+	}
+}
+triggered_desc = {
+	text = building_clone_vats_adv_clone_army_effects_desc
+	trigger = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			berg_is_clone_army_empire = yes
+			OR = {
+				has_technology = tech_adv_cloning
+				has_tradition = tr_genetics_adopt
+			}
+			NAND = {
+				has_technology = tech_adv_cloning
+				has_tradition = tr_genetics_adopt
+			}
+		}
+	}
+}
+triggered_desc = {
+	text = building_clone_vats_very_adv_clone_army_effects_desc
+	trigger = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			berg_is_clone_army_empire = yes
+			has_technology = tech_adv_cloning
+			has_tradition = tr_genetics_adopt
+		}
+	}
 }

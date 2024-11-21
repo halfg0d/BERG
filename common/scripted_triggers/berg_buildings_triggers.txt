@@ -696,10 +696,19 @@ berg_st_can_build_necrophage = {
 
 berg_st_can_build_clone_vats = {
 	exists = owner
-	owner = {
-		has_tradition = tr_genetics_adopt
+	inline_script = {
+		script = supports/mod_changes
+		MOD = berg_has_expanded_megastructures_mod
+		WITHOUT = "
+		berg_is_resort_world = no
+		owner = { has_tradition = tr_genetics_adopt }"
+		WITH = "
+		OR = {
+			berg_is_resort_world = no
+			owner = { has_origin = origin_clones }
+			owner = { berg_is_clone_army_empire = yes }
+		}"
 	}
-	berg_is_resort_world = no
 	OR = {
 		owner = {
 			is_ai = no
