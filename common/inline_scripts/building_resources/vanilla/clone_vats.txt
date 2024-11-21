@@ -9,36 +9,36 @@ resources = {
 	inline_script = {
 		script = resources_scripts/cost
 		trigger = "exists = owner
-owner = {
-	is_lithoid_empire = no
-}"
+		owner = {
+			is_lithoid_empire = no
+		}"
 		resource = food
 		amount = @berg_pop_assembly_clone_vats_cost_special_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "exists = owner
-owner = {
-	is_lithoid_empire = no
-}"
+		owner = {
+			is_lithoid_empire = no
+		}"
 		resource = food
 		amount = @berg_pop_assembly_clone_vats_upkeep_special_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/cost
 		trigger = "exists = owner
-owner = {
-	is_lithoid_empire = yes
-}"
+		owner = {
+			is_lithoid_empire = yes
+		}"
 		resource = energy
 		amount = @berg_pop_assembly_clone_vats_cost_special_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "exists = owner
-owner = {
-	is_lithoid_empire = yes
-}"
+		owner = {
+			is_lithoid_empire = yes
+		}"
 		resource = minerals
 		amount = @berg_pop_assembly_clone_vats_upkeep_special_t$tier$
 	}

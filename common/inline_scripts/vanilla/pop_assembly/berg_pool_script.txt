@@ -1,6 +1,10 @@
 #Normal
-planet_modifier = {
-	job_spawning_drone_add = @berg_pop_assembly_spawning_pool_job_t$tier$
+inline_script = {
+	script = berg_jobs_group/spawning_drone_add
+	AMOUNT = @berg_pop_assembly_spawning_pool_job_t$tier$
+	MULT = 1
+	DESC = no
+	TRIGGER = ""
 }
 triggered_planet_modifier = {
 	potential = {
@@ -43,6 +47,10 @@ triggered_desc = {
 			growing_species = {
 				NOT = { has_trait = trait_hive_mind }
 			}
+			AND = {
+				berg_has_expanded_megastructures_mod = yes
+				owner = { has_origin = origin_hive_queen }
+			}
 		}
 	}
 	text = job_spawning_drone_effect_desc
@@ -55,8 +63,22 @@ triggered_desc = {
 		growing_species = {
 			NOT = { has_trait = trait_hive_mind }
 		}
+		NAND = {
+			berg_has_expanded_megastructures_mod = yes
+			owner = { has_origin = origin_hive_queen }
+		}
 	}
 	text = job_spawning_drone_necrophage_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = {
+			has_origin = origin_hive_queen
+		}
+	}
+	text = job_hive_queen_effect_desc
 }
 #Cyborgs
 triggered_planet_modifier = {
@@ -78,8 +100,7 @@ triggered_desc = {
 	text = job_augmentor_drone_effect_desc
 }
 #BUG
-
-triggered_planet_modifier = { # Bug Branch
+triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
@@ -100,4 +121,26 @@ triggered_desc = { # Bug Branch
 		}
 	}
 	text = job_artisan_drone_effect_desc
+}
+# Expanded Megastructures
+inline_script = {
+	script = berg_jobs_group/spawning_drone_add
+	AMOUNT = 1
+	MULT = 1
+	DESC = no
+	TRIGGER = "berg_is_hive_world = yes"
+}
+triggered_planet_modifier = {
+	potential = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value > 1
+		}
+		berg_has_expanded_megastructures_mod = yes
+		exists = owner
+		owner = { has_origin = origin_hive_queen }
+	}
+	modifier = {
+		planet_pop_assembly_organic_add = 2
+	}
 }

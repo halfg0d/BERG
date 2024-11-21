@@ -1,0 +1,47 @@
+# Spawning Drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = spawning_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		berg_is_progenitor_empire = no
+		OR = {
+			NOT = { has_origin = origin_hive_queen }
+			berg_has_expanded_megastructures_mod = no
+		}
+	}
+	"
+}
+# Offspring drone
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = offspring_drone
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		berg_is_progenitor_empire = yes
+	}
+	"
+}
+# Hive Queen
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = hive_queen
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = { 
+		berg_is_progenitor_empire = no
+		has_origin = origin_hive_queen
+	}
+	"
+}

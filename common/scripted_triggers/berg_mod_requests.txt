@@ -90,3 +90,6 @@ berg_has_pfe_mod = {
 berg_has_hyperconstruct_mod = {
 	has_global_flag = sparbles_stellar_hyperconstructs
 }
+berg_has_expanded_megastructures_mod = {
+	has_global_flag = expanded_megastructures_installed
+}
