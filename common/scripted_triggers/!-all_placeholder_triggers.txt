@@ -77,3 +77,4 @@ merg_is_nuked_basic = { always = no }
 merg_is_habitat = { always = no }
 merg_is_true_ringworld = { always = no }
 merg_is_arcology = { always = no }
+mem_has_shield_building = { always = no }
