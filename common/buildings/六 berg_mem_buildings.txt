@@ -1,0 +1,299 @@
+#####################
+# More Events Mod Buildings
+#####################
+building_mem_planetary_shield_generator = {
+	icon = building_planetary_shield_generator
+	base_buildtime = 600	
+	base_cap_amount = 1
+	position_priority = 100
+
+	category = army	
+		
+	potential = {
+		berg_has_mem_mod = yes
+		planet = {
+			NOT = {
+				is_planet_class = pc_asteroid
+			}	
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+		mem_has_shield_building = no
+	}
+
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}			
+		upkeep = {
+			energy = 5
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "
+			berg_has_ecc_mod = yes
+			exists = owner
+			owner = {
+				has_civic = civic_inwards_perfection
+			}"
+			resource = unity
+			amount = @berg_army_planetary_shield_ecc_unity_t1
+		}
+	}
+
+	upgrades = {
+		building_mem_planetary_shield_generator_heavy
+	}
+	inline_script = {
+		script = vanilla/misc/berg_planetary_shield_storms
+		VALUE = -0.5
+	}
+	inline_script = {
+		script = berg_jobs_group/warrior_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = ""
+		DESC = with
+	}
+	prerequisites = {
+		"tech_planetary_shield_generator"
+	}
+	show_tech_unlock_if = {
+		berg_has_mem_mod = yes
+	}
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			num_pops <= 29
+		}
+		modifier = {
+			factor = 10
+			num_pops >= 60
+		}
+		modifier = {
+			factor = 10
+			num_buildings = {
+				type = building_fortress
+				value > 0
+			}
+		}
+	}
+}
+
+#Heavy Shield Generator
+building_mem_planetary_shield_generator_heavy = {
+	icon = building_mem_heavy_shield_generator
+	base_buildtime = 600
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+
+	category = army
+	potential = {
+		berg_has_mem_mod = yes
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.6
+	}
+	inline_script = {
+		script = vanilla/misc/berg_planetary_shield_storms
+		VALUE = -0.6
+	}
+	inline_script = {
+		script = berg_jobs_group/warrior_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = ""
+		DESC = with
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 800
+			rare_crystals = 50
+		}	
+		upkeep = {
+			energy = 6
+			rare_crystals = 1				
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "
+			berg_has_ecc_mod = yes
+			exists = owner
+			owner = {
+				has_civic = civic_inwards_perfection
+			}"
+			resource = unity
+			amount = @berg_army_planetary_shield_ecc_unity_t2
+		}
+	}
+
+	prerequisites = {
+		"mem_tech_planetary_shield_generator_heavy"
+	}
+	show_tech_unlock_if = {
+		berg_has_mem_mod = yes
+	}
+
+	ai_weight = {
+		weight = 10000
+		modifier = {
+			factor = 0
+			owner = { 
+				has_monthly_income = {
+					resource = rare_crystals
+					value < 3
+				}
+			}
+		}
+	}
+}
+
+building_mem_planetary_shield_generator_orila = {
+	icon = building_mem_orila_shield_generator
+#	can_build = no
+	base_cap_amount = 1
+	can_demolish = yes
+	can_be_ruined = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+
+	category = army
+
+	potential = {
+		berg_has_mem_mod = yes
+		planet = {
+			NOT = {
+				is_planet_class = pc_asteroid
+			}	
+		}
+	}
+	
+	allow = {
+		mem_has_shield_building = no
+		custom_tooltip = {
+			fail_text = ancrel.10004.failtext #need its own text
+			owner = {
+				check_variable = { 
+					which = "mem_orila_shield_generator_country" 
+					value >= 1 
+				}
+			}
+		}
+	}
+
+	prerequisites = {
+		"mem_tech_planetary_shield_generator_orila"
+	}
+	show_tech_unlock_if = {
+		berg_has_mem_mod = yes
+	}
+
+	on_queued = {
+		owner = {
+			subtract_variable = { 
+				which = "mem_orila_shield_generator_country"
+				value = 1
+			}
+		}
+	}
+
+	on_unqueued = {
+		owner = {
+			change_variable = {
+				which = "mem_orila_shield_generator_country"
+				value = 1
+			}			
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "
+			berg_has_ecc_mod = yes
+			exists = owner
+			owner = {
+				has_civic = civic_inwards_perfection
+			}"
+			resource = unity
+			amount = @berg_army_planetary_shield_ecc_unity_t2
+		}
+	}
+
+	##################################################################################################
+	#Storms stuff
+	triggered_planet_modifier = {
+		potential = {
+			has_cosmic_storms_dlc = yes
+		}
+		modifier = {
+			planet_storm_devastation_mult = -0.7
+		}
+	}
+	on_built = {
+		if = {
+			limit = { has_cosmic_storms_dlc = yes }
+			solar_system = {
+				set_star_flag = storm_no_negative_effects
+				remove_modifier = storm_base_modifier
+			}
+		}
+	}
+	on_destroy = {
+		if = {
+			limit = { has_cosmic_storms_dlc = yes }
+			owner = { set_country_flag = shield_on_destroy } #an action when destroyed
+			solar_system = {
+				remove_star_flag = storm_no_negative_effects
+			}
+		}
+		owner = {
+			set_country_flag = mem_planetary_shield_generator_orila_can_build
+			change_variable = {
+				which = "mem_orila_shield_generator_country"
+				value = 1
+			}			
+		}
+	}
+	##################################################################################################
+	inline_script = {
+		script = berg_jobs_group/warrior_add
+		AMOUNT = 1
+		MULT = 1
+		TRIGGER = "owner = { is_primitive = no }"
+		DESC = with
+	}
+	inline_script = {
+		script = berg_jobs_group/researcher_add
+		AMOUNT = 2
+		MULT = 1
+		TRIGGER = "owner = { is_primitive = no }"
+		DESC = with
+	}
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.7
+	}
+
+	ai_weight = {
+		weight = 100000
+	}
+}

@@ -381,6 +381,7 @@ building_planetary_shield_generator = {
 	can_be_ruined = no
 	category = army
 	potential = {
+		berg_has_mem_mod = no
 		berg_panel_can_build_vanilla = yes
 	}
 	allow = {
@@ -402,7 +403,7 @@ building_planetary_shield_generator = {
 		}
 	}
 	upgrades = {
-		"building_mem_planetary_shield_generator" #OSA
+		"building_mem_planetary_shield_generator" #MEM
 		"building_avb_planetary_shield_generator_2" #AVB
 	}
 	potential = {

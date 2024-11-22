@@ -93,3 +93,6 @@ berg_has_hyperconstruct_mod = {
 berg_has_expanded_megastructures_mod = {
 	has_global_flag = expanded_megastructures_installed
 }
+berg_has_mem_mod = {
+	has_global_flag = mem_version_2_14_0
+}
