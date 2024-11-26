@@ -4,6 +4,7 @@ berg_has_organic_pop_assembly = {
 		has_building = building_clone_army_clone_vat
 		has_building = building_posthumous_employment_center
 		has_any_organic_assembly_building = yes
+		has_any_organic_assembly_building = yes
 	}
 }
 berg_has_artificial_pop_assembly = {
