@@ -12,9 +12,11 @@ event = {
 				any_country = {
 					OR = {
 						has_tradition = tr_plentiful_aspiration_adopt
+						has_tradition = tr_plentiful_malice
 					}
 				}
 			}
+			set_global_flag = berg_pt_mod
 		}
 	}
 }

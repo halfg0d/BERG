@@ -420,7 +420,7 @@ is_berg_host = {
 }
 berg_has_plentiful_aspiration_3 = {
 	berg_has_pt_mod = yes
-	# has_tradition = tr_plentiful_aspiration_3
+	has_tradition = tr_plentiful_aspiration_3
 }
 berg_has_any_clone_vat = {
 	OR = {
