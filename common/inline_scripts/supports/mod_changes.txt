@@ -1,10 +1,10 @@
 OR = {
 	AND = {
-		$MOD$ = yes
+		$MOD$ = no
 		$WITHOUT$
 	}
 	AND = {
-		$MOD$ = no
+		$MOD$ = yes
 		$WITH$
 	}
 }

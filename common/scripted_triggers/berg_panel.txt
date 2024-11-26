@@ -1,8 +1,20 @@
+is_berg_panel_enabled = {
+	has_country_flag = berg_panel_enabled
+}
+is_berg_panel_disabled = {
+	has_country_flag = berg_panel_disabled
+}
 berg_panel_flag_both = {
 	OR = {
 		has_country_flag = berg_panel_$FLAG$_on
 		has_country_flag = berg_panel_$FLAG$_off
 	}
+}
+berg_has_panel_flag_enabled = {
+	has_country_flag = berg_panel_$FLAG$_on
+}
+berg_has_panel_flag_disabled = {
+	has_country_flag = berg_panel_$FLAG$_off
 }
 has_any_panel_flags = {
 	OR = {
@@ -12,20 +24,32 @@ has_any_panel_flags = {
 	}
 }
 berg_panel_can_build_vanilla = {
-	owner = {
-		OR = {
-			is_ai = yes
-			has_country_flag = berg_panel_vanilla_on
-		}
-	}
+	always = yes
+	# owner = {
+	# 	OR = {
+	# 		is_ai = yes
+	# 		has_country_flag = berg_panel_vanilla_on
+	# 		is_berg_panel_disabled = yes
+	# 	}
+	# }
 }
 berg_panel_can_build_fe = {
-	owner = {
-		has_country_flag = berg_panel_fe_on
-	}
+	always = yes
+	# owner = {
+	# 	OR = {
+	# 		is_ai = yes
+	# 		has_country_flag = berg_panel_fe_on
+	# 		is_berg_panel_disabled = yes
+	# 	}
+	# }
 }
 berg_panel_can_build_nuclei = {
-	owner = {
-		has_country_flag = berg_panel_sparble_on
-	}
+	always = yes
+	# owner = {
+	# 	OR = {
+	# 		is_ai = yes
+	# 		has_country_flag = berg_panel_sparble_on
+	# 		is_berg_panel_disabled = yes
+	# 	}
+	# }
 }
