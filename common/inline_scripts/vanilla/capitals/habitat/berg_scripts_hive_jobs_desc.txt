@@ -1,7 +1,0 @@
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = { is_hive_empire = yes }
-	}
-	text = job_synapse_drone_effect_desc
-}

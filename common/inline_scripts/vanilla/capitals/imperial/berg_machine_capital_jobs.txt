@@ -1,0 +1,49 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				berg_is_assimilator_empire = yes
+				AND = {
+					berg_has_zexpanded_mod = yes
+					has_origin = origin_extant_creators
+				}
+			}
+		}
+	}
+	modifier = {
+		job_replicator_add = -1
+		job_maintenance_drone_add = 1
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		berg_is_gestation_world = yes
+	}
+	modifier = {
+		job_replicator_add = -1
+		job_gestation_drone_add = 2
+	}
+}
+# Solidarity Tradition
+inline_script = {
+	script = tradition_script/ost_solidarity_job
+}
+inline_script = {
+	script = BUG/berg_examinatron_job
+	tier = $tier$
+}
+inline_script = "vanilla/capitals/machine/berg_scripts_jobs_desc"
+#zExpanded
+triggered_planet_modifier = {
+	potential = {
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = { is_servitor_empire = yes }
+	}
+	modifier = {
+		job_bio_trophy_add = @berg_capital_imperial_machine_zex_biotrophy_t$tier$
+		job_servitor_caretaker_drone_add = @berg_capital_imperial_machine_zex_catetaker_t$tier$
+	}
+}

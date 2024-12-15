@@ -1,0 +1,13 @@
+resources = {
+	category = planet_buildings
+	inline_script = {
+		script = resources_scripts/basic
+		category = capital
+		building = imperial_hive
+		tier = $tier$
+	}
+	inline_script = {
+		script = resources_scripts/osa_influence_upkeep
+		resource = $tier$ 
+	}
+}

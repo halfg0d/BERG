@@ -1,9 +1,0 @@
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
-	}
-	job_synapse_drone_add = @berg_capital_$tier$_synapse_drone
-	planet_amenities_add = 3
-}
-inline_script = "vanilla/capitals/habitat/berg_scripts_hive_jobs_desc"
