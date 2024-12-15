@@ -8,7 +8,7 @@ cost = {
 			berg_has_zexpanded_mod = no
 			AND = {
 				berg_has_zexpanded_mod = yes
-				berg_ST_30_cost = yes
+				berg_ST_three_zero_cost = yes
 			}
 		}
 	}
@@ -18,7 +18,7 @@ cost = {
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		berg_ST_21_cost = yes
+		berg_ST_two_one_cost = yes
 	}
 	minerals = @berg_thirded_twoThird_version_$version$
 	food = @berg_thirded_oneThird_version_$version$
@@ -27,7 +27,7 @@ cost = {
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		berg_ST_03_cost = yes
+		berg_ST_zero_three_cost = yes
 	}
 	food = @berg_thirded_full_version_$version$
 }

@@ -1,0 +1,56 @@
+
+berg_has_integrated_bioarchitecture = {
+	has_civic = civic_integrated_bioarchitecture
+}
+berg_ST_three_zero_cost = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+	}
+}
+berg_ST_two_one_cost = {
+	owner = {
+		berg_has_integrated_bioarchitecture = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+		is_lithoid_empire = no
+	}
+}
+berg_ST_zero_three_cost = {
+	exists = owner
+	owner = {
+		berg_has_integrated_bioarchitecture = yes
+		is_lithoid_empire = no
+	}
+}
+berg_ST_three_zero_upkeep = {
+	exists = owner
+	owner = {
+		OR = {
+			is_lithoid_empire = yes
+			AND = {
+				is_hive_empire = no
+				is_civic_plant_organic = no
+			}
+		}
+		berg_has_integrated_bioarchitecture = no
+	}
+}
+berg_ST_two_one_upkeep = {
+	exists = owner
+	owner = {
+		is_lithoid_empire = no
+		OR = {
+			is_hive_empire = yes
+			is_civic_plant_organic = yes
+		}
+	}
+}

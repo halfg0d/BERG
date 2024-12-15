@@ -22,9 +22,10 @@ resources = {
 	inline_script = {
 		script = resources_scripts/produce
 		trigger = "berg_has_ecc_mod = yes
-exists = owner
-owner = {
-	has_civic = civic_inwards_perfection"
+		exists = owner
+		owner = {
+			has_civic = civic_inwards_perfection
+		}"
 		resource = unity
 		amount = @berg_army_planetary_shield_ecc_unity_t$tier$
 	}

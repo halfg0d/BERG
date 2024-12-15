@@ -16,9 +16,10 @@ resources = {
 	inline_script = {
 		script = resources_scripts/produce
 		trigger = "berg_has_ecc_mod = yes
-exists = owner
-owner = {
-	has_civic = civic_martial_brotherhood"
+		exists = owner
+		owner = {
+			has_civic = civic_martial_brotherhood
+		}"	
 		resource = unity
 		amount = @berg_army_military_academy_ecc_unity_t$tier$
 	}
@@ -31,23 +32,27 @@ owner = {
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_hive_empire = yes
-		is_regular_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_regular_empire = yes
+			}
+		}"
 		resource = food
 		amount = @berg_army_military_academy_osa_upkeep_minerals_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_machine_empire = yes
-		is_mechanical_empire = yes
-		is_lithoid_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}"
 		resource = minerals
 		amount = @berg_army_military_academy_osa_upkeep_minerals_t$tier$
 	}

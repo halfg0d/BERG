@@ -7,12 +7,6 @@ resources = {
 		tier = $tier$
 	}
 	inline_script = {
-		script = resources_scripts/special/zExpanded/civicPlantOrganic
-		category = amenity
-		building = residence
-		tier = $tier$
-	}
-	inline_script = {
 		script = resources_scripts/rare
 		category = amenity
 		building = residence
@@ -22,57 +16,67 @@ resources = {
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_hive_empire = yes
-		is_regular_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_regular_empire = yes
+			}
+		}"
 		resource = energy
 		amount = @berg_amenity_residence_osa_upkeep_energy_bio_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_hive_empire = yes
-		is_regular_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_regular_empire = yes
+			}
+		}"
 		resource = minerals
 		amount = @berg_amenity_residence_osa_upkeep_minerals_bio_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_hive_empire = yes
-		is_regular_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = yes
+				is_regular_empire = yes
+			}
+		}"
 		resource = food
 		amount = @berg_amenity_residence_osa_upkeep_food_bio_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_machine_empire = yes
-		is_mechanical_empire = yes
-		is_lithoid_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}"
 		resource = energy
 		amount = @berg_amenity_residence_osa_upkeep_energy_non_bio_t$tier$
 	}
 	inline_script = {
 		script = resources_scripts/upkeep
 		trigger = "berg_has_osa_mod = yes
-exists = owner
-owner = {
-	OR = {
-		is_machine_empire = yes
-		is_mechanical_empire = yes
-		is_lithoid_empire = yes"
+		exists = owner
+		owner = {
+			OR = {
+				is_machine_empire = yes
+				is_mechanical_empire = yes
+				is_lithoid_empire = yes
+			}
+		}"
 		resource = minerals
 		amount = @berg_amenity_residence_osa_upkeep_minerals_non_bio_t$tier$
 	}

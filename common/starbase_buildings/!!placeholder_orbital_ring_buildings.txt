@@ -418,7 +418,7 @@ ring_psi_corps = {
 		AMOUNT = 2
 		TRIGGER = " "
 		MULT = 1
-		DESC = with
+		DESC = no
 	}
 
 	resources = {

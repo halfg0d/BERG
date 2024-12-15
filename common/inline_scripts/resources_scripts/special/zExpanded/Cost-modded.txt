@@ -5,7 +5,7 @@
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		berg_ST_30_cost = yes
+		berg_ST_three_zero_cost = yes
 	}
 	minerals = @berg_$category$_$building$_cost_t$tier$
 }
@@ -13,7 +13,7 @@ cost = {
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		berg_ST_21_cost = yes
+		berg_ST_two_one_cost = yes
 	}
 	minerals = @berg_$category$_$building$_costTwoThird_t$tier$
 	food = @berg_$category$_$building$_costOneThird_t$tier$
@@ -22,7 +22,7 @@ cost = {
 cost = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		berg_ST_03_cost = yes
+		berg_ST_zero_three_cost = yes
 	}
 	food = @berg_$category$_$building$_cost_t$tier$
 }

@@ -8,7 +8,7 @@ upkeep = {
 			berg_has_zexpanded_mod = no
 			AND = {
 				berg_has_zexpanded_mod = yes
-				berg_ST_30_upkeep = yes
+				berg_ST_three_zero_upkeep = yes
 			}
 		}
 	}
@@ -18,7 +18,7 @@ upkeep = {
 upkeep = {
 	trigger = {
 		berg_has_zexpanded_mod = yes
-		berg_ST_21_upkeep = yes
+		berg_ST_two_one_upkeep = yes
 	}
 	energy = @berg_thirded_twoThird_version_$version$
 	food = @berg_thirded_oneThird_version_$version$

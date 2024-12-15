@@ -24,7 +24,8 @@ resources = {
 		trigger = "berg_has_ecc_mod = yes
 exists = owner
 owner = {
-	has_valid_civic = civic_consumerism"
+	has_valid_civic = civic_consumerism
+	}"
 		resource = unity
 		amount = @berg_trade_commercial_ecc_unity_t$tier$
 	}

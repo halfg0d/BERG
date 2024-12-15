@@ -7,7 +7,7 @@ upkeep = {
 			has_active_tradition = tr_nanobiotics_2
 		}
 	}
-	minerals = @berg_ost_nanobiotics_minerals_t$tier$
+	minerals = @berg_ost_nanobiotics_minerals_$tier$
 }
 produces = {
 	trigger = {
@@ -17,5 +17,5 @@ produces = {
 			has_active_tradition = tr_nanobiotics_2
 		}
 	}
-	$material$ = @berg_ost_nanobiotics_material_t$tier$
+	$material$ = @berg_ost_nanobiotics_material_$tier$
 }

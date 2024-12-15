@@ -44,13 +44,14 @@ resources = {
 	}
 	inline_script = {
 		script = resources_scripts/cost
-		trigger = "exists = owner
-owner = {
-	is_lithoid_empire = no
-}
-planet = {
-	berg_pt_clone_vat_slave = yes
-}"
+		trigger = "
+		exists = owner
+		owner = {
+			is_lithoid_empire = no
+		}
+		planet = {
+			berg_pt_clone_vat_slave = yes
+		}"
 		resource = food
 		amount = @berg_pop_assembly_clone_vats_cost_special_half_t$tier$
 	}

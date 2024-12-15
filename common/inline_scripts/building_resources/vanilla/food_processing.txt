@@ -36,12 +36,13 @@ resources = {
 	}
 	inline_script = {
 		script = resources_scripts/cost
-		trigger = "berg_has_zexpanded_mod = yes
-exists = owner
-owner = {
-	is_hive_empire = yes
-	owner = {
-		is_lithoid_empire = no"
+		trigger = "
+		berg_has_zexpanded_mod = yes
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			is_lithoid_empire = no
+		}"
 		resource = food
 		amount = @berg_resource_food_processing_zex_cost_t$tier$
 	}

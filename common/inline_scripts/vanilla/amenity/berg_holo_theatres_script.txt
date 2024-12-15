@@ -16,16 +16,16 @@ triggered_planet_modifier = {
 	}
 	mult = $tier$
 }
-triggered_army_modifier = {
-	potential = {
-		berg_has_zexpanded_mod = yes
-		berg_is_warrior_culture = yes
-	}
-	modifier = {
-		army_defense_morale_mult = 0.20
-	}
-	mult = $tier$
-}
+# triggered_army_modifier = {
+# 	potential = {
+# 		berg_has_zexpanded_mod = yes
+# 		berg_is_warrior_culture = yes
+# 	}
+# 	modifier = {
+# 		army_defense_morale_mult = 0.20
+# 	}
+# 	mult = $tier$
+# }
 triggered_planet_modifier = {
 	potential = {
 		berg_has_zexpanded_mod = yes

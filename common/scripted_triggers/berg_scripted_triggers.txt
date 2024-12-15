@@ -283,11 +283,13 @@ berg_has_food_processing = {
 	}
 }
 berg_is_warrior_culture = {
-	OR = {
-		has_valid_civic = civic_warrior_culture
-		AND = {
-			berg_has_osa_mod = yes
-			has_valid_civic = civic_corporate_mercenary_contractors
+	owner = {
+		OR = {
+			has_valid_civic = civic_warrior_culture
+			AND = {
+				berg_has_osa_mod = yes
+				has_valid_civic = civic_corporate_mercenary_contractors
+			}
 		}
 	}
 }
@@ -378,64 +380,6 @@ berg_has_any_alien_pets_deposit = {
 }
 berg_has_private_military_companies = {
 	has_valid_civic = civic_private_military_companies
-}
-berg_has_integrated_bioarchitecture = {
-	has_valid_civic = civic_integrated_bioarchitecture
-}
-berg_ST_30_cost = {
-	exists = owner
-	owner = {
-		OR = {
-			is_lithoid_empire = yes
-			AND = {
-				is_hive_empire = no
-				is_civic_plant_organic = no
-			}
-		}
-	}
-}
-berg_ST_21_cost = {
-	owner = {
-		berg_has_integrated_bioarchitecture = no
-		OR = {
-			is_hive_empire = yes
-			is_civic_plant_organic = yes
-		}
-		is_lithoid_empire = no
-	}
-}
-berg_ST_03_cost = {
-	exists = owner
-	owner = {
-		berg_has_integrated_bioarchitecture = yes
-		is_lithoid_empire = no
-	}
-}
-berg_ST_30_upkeep = {
-	exists = owner
-	owner = {
-		OR = {
-			is_lithoid_empire = yes
-			AND = {
-				is_hive_empire = no
-				is_civic_plant_organic = no
-			}
-		}
-		berg_has_integrated_bioarchitecture = no
-	}
-}
-berg_ST_21_upkeep = {
-	exists = owner
-	owner = {
-		is_lithoid_empire = no
-		OR = {
-			is_hive_empire = yes
-			is_civic_plant_organic = yes
-		}
-	}
-}
-is_berg_host = {
-	has_country_flag = berg_host
 }
 is_berg_host = {
 	has_country_flag = berg_host

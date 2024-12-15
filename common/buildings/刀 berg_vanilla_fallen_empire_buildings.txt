@@ -1332,11 +1332,9 @@ building_empyrean_shrine = {
 			trigger = {
 				berg_has_acot_mod = no
 			}
-			upkeep = {
-				alloys = @b2_alloy_upkeep
-				rare_crystals = 2
-				energy = 10
-			}
+			alloys = @b2_alloy_upkeep
+			rare_crystals = 2
+			energy = 10
 		}
 		#ACOT
 		produces = {

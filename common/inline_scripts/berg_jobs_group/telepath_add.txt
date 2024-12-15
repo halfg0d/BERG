@@ -6,19 +6,6 @@ inline_script = {
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
-	OR = {
-		berg_has_hme_mod = no
-		owner = { is_hive_empire = no }
-	}
-	"
-}
-inline_script = {
-	script = berg_jobs/berg_job_$DESC$_desc
-	JOB = telepath_drone
-	AMOUNT = $AMOUNT$
-	MULT = $MULT$
-	TRIGGER = "
-	berg_has_hme_mod = yes
-	owner = { is_hive_empire = yes }
+	always = yes
 	"
 }

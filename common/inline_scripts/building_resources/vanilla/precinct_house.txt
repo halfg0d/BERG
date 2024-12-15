@@ -7,12 +7,6 @@ resources = {
 		tier = $tier$
 	}
 	inline_script = {
-		script = resources_scripts/special/zExpanded/civicPlantOrganic
-		category = government
-		building = precinct_house
-		tier = $tier$
-	}
-	inline_script = {
 		script = resources_scripts/rare
 		category = government
 		building = precinct_house
