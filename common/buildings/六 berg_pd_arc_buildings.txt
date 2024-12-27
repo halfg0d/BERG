@@ -103,7 +103,7 @@ building_navel_base = {
 		"building_navel_command"
 	}
 	inline_script = {
-		script = berg_jobs_group/pd_naval_admin
+		script = berg_jobs_group/pd_naval_admin_add
 		AMOUNT = 3
 		MULT = 1
 		DESC = with
@@ -164,7 +164,7 @@ building_navel_command = {
 	}
 
 	inline_script = {
-		script = berg_jobs_group/pd_naval_admin
+		script = berg_jobs_group/pd_naval_admin_add
 		AMOUNT = 6
 		MULT = 1
 		DESC = with

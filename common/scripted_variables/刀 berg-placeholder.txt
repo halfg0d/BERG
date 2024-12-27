@@ -7,5 +7,6 @@
 @fe_jobs = 0
 @avb_b2_time = 0
 @avb_b3_time = 0
+@avb_b4_time = 0
 @avb_b5_time = 0
 @avb_b6_time = 0

@@ -5,6 +5,9 @@
 @berg_ost_benelovence_unity_t1 = 5
 @berg_ost_benelovence_unity_t2 = 10
 @berg_ost_benelovence_unity_t3 = 20
+@berg_ost_benelovence_unity_t4 = 25
+@berg_ost_benelovence_unity_t5 = 30	
+@berg_ost_benelovence_unity_t6 = 40	
 #
 @berg_ost_commerce_unity_t1 = 5
 @berg_ost_commerce_unity_t2 = 10
