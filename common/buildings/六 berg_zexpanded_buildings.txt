@@ -3058,7 +3058,7 @@ building_penal_capital = {
 		planet_amenities_add = 5
 		job_warden_add = 2
 		job_enforcer_add = 2
-		planet_max_buildings_add = @buildings_t1
+		planet_max_buildings_add = @berg_buildings_t1
 		defense_armies_add = @tier_2_capital_defense_armies
 	}
 	inline_script = {
@@ -3166,7 +3166,7 @@ building_penal_major_capital = {
 		planet_amenities_add = 10
 		job_warden_add = 2
 		job_enforcer_add = 3
-		planet_max_buildings_add = @buildings_t3
+		planet_max_buildings_add = @berg_buildings_t3
 		defense_armies_add = @tier_3_capital_defense_armies
 	}
 	inline_script = {
@@ -3273,7 +3273,7 @@ building_zex_avb_penal_capital_3 = {
 		planet_amenities_add = 20
 		job_warden_add = 2
 		job_enforcer_add = 4
-		planet_max_buildings_add = @buildings_t4
+		planet_max_buildings_add = @berg_buildings_t4
 		defense_armies_add = @tier_4_capital_defense_armies
 	}
 	inline_script = {

@@ -132,8 +132,10 @@
 # order_castle
 @berg_government_order_castle_costOneThird_t1 = 0.0
 @berg_government_order_castle_costTwoThird_t1 = 0.0
+@berg_government_order_castle_cost_t1 = 0
 @berg_government_order_castle_upkeepOneThird_t1 = 0.0
 @berg_government_order_castle_upkeepTwoThird_t1 = 0.0
+@berg_government_order_castle_upkeep_t1 = 0
 @berg_government_order_castle_immigration_t1 = 1
 @berg_government_order_castle_knight_t1 = 1
 @berg_government_order_castle_resettlement_t1 = 0.2

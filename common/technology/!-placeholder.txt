@@ -145,3 +145,9 @@ tech_avb_xeno_zoo_2 = { cost = 0 area = society category = { archaeostudies } ti
 tech_planetary_citadel = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_spawning_pool_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_virtual_combat_arena = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+mem_tech_planetary_shield_generator_heavy = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+mem_tech_planetary_shield_generator_orila = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+tech_avb_capital_5 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+tech_avb_housing_3 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+tech_avb_housing_4 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+tech_avb_housing_5 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }

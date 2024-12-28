@@ -114,7 +114,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		planet_miners_alloys_produces_add = @berg_manufactury_foundry_zex_miners_alloys_t
+		planet_miners_alloys_produces_add = @berg_manufactury_foundry_zex_miners_alloys_t$tier$
 	}
 }
 triggered_planet_modifier = {

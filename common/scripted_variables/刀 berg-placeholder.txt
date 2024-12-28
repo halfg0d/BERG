@@ -10,3 +10,9 @@
 @avb_b4_time = 0
 @avb_b5_time = 0
 @avb_b6_time = 0
+@avb_b3_minerals = 0
+@avb_b3_upkeep = 0
+@b2_hive_food = 0
+@b2_hive_minerals = 0
+@b2_upkeep_food = 0
+@b2_upkeep_hive = 0

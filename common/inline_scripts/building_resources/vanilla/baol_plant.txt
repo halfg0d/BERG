@@ -40,6 +40,6 @@ resources = {
 			is_lithoid_empire = no
 		}"
 		resource = food
-		amount = @berg_resource_baol_zex_cost_t$tier$
+		amount = @berg_resource_baol_plant_zex_cost_t$tier$
 	}
 }

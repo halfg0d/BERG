@@ -87,8 +87,10 @@
 @berg_research_institute_cost_t2 = 1000
 @berg_research_institute_osa_produce_t1 = 20
 @berg_research_institute_osa_produce_t2 = 30
-@berg_research_institute_osa_upkeep_energy_t2 = 0.0
-@berg_research_institute_osa_upkeep_minerals_t2 = 5.0
+@berg_research_institute_osa_upkeep_energy_t1 = 0.0
+@berg_research_institute_osa_upkeep_energy_t2 = 6.0
+@berg_research_institute_osa_upkeep_minerals_t1 = 5.0
+@berg_research_institute_osa_upkeep_minerals_t2 = 12.0
 @berg_research_institute_rare_cost_t1 = 50
 @berg_research_institute_rare_cost_t2 = 150
 @berg_research_institute_rare_upkeep_t1 = 1
@@ -118,8 +120,10 @@
 @berg_research_supercomputer_cost_t2 = 1000
 @berg_research_supercomputer_osa_produce_t1 = 20
 @berg_research_supercomputer_osa_produce_t2 = 30
-@berg_research_supercomputer_osa_upkeep_energy_t2 = 0.0
-@berg_research_supercomputer_osa_upkeep_minerals_t2 = 5.0
+@berg_research_supercomputer_osa_upkeep_energy_t1 = 0.0
+@berg_research_supercomputer_osa_upkeep_energy_t2 = 6.0
+@berg_research_supercomputer_osa_upkeep_minerals_t1 = 5.0
+@berg_research_supercomputer_osa_upkeep_minerals_t2 = 12.0
 @berg_research_supercomputer_upkeepOneThird_t1 = 1.67
 @berg_research_supercomputer_upkeepOneThird_t2 = 2.0
 @berg_research_supercomputer_upkeepTwoThird_t1 = 3.33

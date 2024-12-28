@@ -46,10 +46,12 @@
 @berg_pop_assembly_machine_plant_cost_t1 = 400
 @berg_pop_assembly_machine_plant_cost_t2 = 800
 @berg_pop_assembly_machine_plant_cost_t3 = 2000
-@berg_pop_assembly_machine_plant_osa_upkeep_energy_t1 = 0.5
-@berg_pop_assembly_machine_plant_osa_upkeep_energy_t2 = 0.5
+@berg_pop_assembly_machine_plant_osa_upkeep_energy_t1 = 0.0
+@berg_pop_assembly_machine_plant_osa_upkeep_energy_t2 = 0.0
+@berg_pop_assembly_machine_plant_osa_upkeep_energy_t3 = 0.0
 @berg_pop_assembly_machine_plant_osa_upkeep_minerals_t1 = 2.5
 @berg_pop_assembly_machine_plant_osa_upkeep_minerals_t2 = 2.5
+@berg_pop_assembly_machine_plant_osa_upkeep_minerals_t3 = 2.5
 @berg_pop_assembly_machine_plant_rare_cost_t1 = 0
 @berg_pop_assembly_machine_plant_rare_cost_t2 = 100
 @berg_pop_assembly_machine_plant_rare_cost_t3 = 200
@@ -131,8 +133,10 @@
 # necrophage
 @berg_pop_assembly_necrophage_costOneThird_t1 = 133.33
 @berg_pop_assembly_necrophage_costOneThird_t2 = 200.0
+@berg_pop_assembly_necrophage_costOneThird_t3 = 333.33
 @berg_pop_assembly_necrophage_costTwoThird_t1 = 266.67
 @berg_pop_assembly_necrophage_costTwoThird_t2 = 400.0
+@berg_pop_assembly_necrophage_costTwoThird_t3 = 666.67
 @berg_pop_assembly_necrophage_cost_t1 = 400
 @berg_pop_assembly_necrophage_cost_t2 = 600
 @berg_pop_assembly_necrophage_cost_t3 = 1000
@@ -150,8 +154,10 @@
 @berg_pop_assembly_necrophage_rare_upkeep_t3 = 4
 @berg_pop_assembly_necrophage_upkeepOneThird_t1 = 0.67
 @berg_pop_assembly_necrophage_upkeepOneThird_t2 = 1.67
+@berg_pop_assembly_necrophage_upkeepOneThird_t3 = 2.0
 @berg_pop_assembly_necrophage_upkeepTwoThird_t1 = 1.33
 @berg_pop_assembly_necrophage_upkeepTwoThird_t2 = 3.33
+@berg_pop_assembly_necrophage_upkeepTwoThird_t3 = 4.0
 @berg_pop_assembly_necrophage_upkeep_t1 = 2
 @berg_pop_assembly_necrophage_upkeep_t2 = 5
 @berg_pop_assembly_necrophage_upkeep_t3 = 6

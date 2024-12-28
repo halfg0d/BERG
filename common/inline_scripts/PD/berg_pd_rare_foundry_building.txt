@@ -48,6 +48,6 @@ resources = {
 	inline_script = {
 		script = tradition_script/ost_nanobiotics
 		tier = 2
-		material = "alloys"
+		material = alloys
 	}
 }	
