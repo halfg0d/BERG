@@ -97,7 +97,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/executive_add
 	MULT = 1
-	AMOUNT = @[berg_capital_habitat_capital_primary_job_t$tier$ + berg_capital_habitat_capital_secondary_job_t$tier$]
+	AMOUNT = value:berg_sum|NUM1|@berg_capital_habitat_capital_primary_job_t$tier$|NUM2|@berg_capital_habitat_capital_secondary_job_t$tier$|
 	DESC = with
 	TRIGGER = "
 		exists = owner
@@ -112,7 +112,7 @@ inline_script = {
 inline_script = {
 	script = berg_jobs_group/steward_add
 	MULT = 1
-	AMOUNT = @[berg_capital_habitat_capital_primary_job_t$tier$ + berg_capital_habitat_capital_secondary_job_t$tier$ + berg_capital_habitat_capital_tertiary_job_t$tier$]
+	AMOUNT = value:berg_sum|NUM1|@berg_capital_habitat_capital_primary_job_t$tier$|NUM2|@berg_capital_habitat_capital_secondary_job_t$tier$|NUM3|@berg_capital_habitat_capital_tertiary_job_t$tier$|
 	DESC = with
 	TRIGGER = "exists = owner
 	owner = {
@@ -196,7 +196,7 @@ inline_script = {
 	owner = { has_civic = civic_spiritual_seekers }"
 }
 # ECC Enforcer
-inline_script = ECC/berg_habitat_capital_enforcer
+# inline_script = ECC/berg_habitat_capital_enforcer
 # Commander
 inline_script = {
 	script = berg_jobs_group/commander_add

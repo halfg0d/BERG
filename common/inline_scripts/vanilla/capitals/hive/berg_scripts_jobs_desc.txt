@@ -10,5 +10,5 @@ triggered_desc = {
 	text = job_patrol_drone_effect_desc
 }
 inline_script = {
-	script = OSA/berg_osa_capital_job_desc
+	script = OSA/berg_osa_capital_jobs_desc
 }

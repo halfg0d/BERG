@@ -1,5 +1,5 @@
 resources = {
-	category = planet_buildings-hab_capital
+	category = planet_buildings_hab_capital
 	inline_script = {
 		script = resources_scripts/basic
 		category = capital

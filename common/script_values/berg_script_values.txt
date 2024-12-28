@@ -3,3 +3,8 @@ get_negative_of = {
 	set = $NUMBER$
 	mult = 2
 }
+berg_sum = {
+	base = $NUM1$
+	add = $NUM2$
+	add = $NUM3$
+}

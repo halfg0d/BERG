@@ -54,7 +54,6 @@ tech_avb_holo_entertainment_3 = { cost = 0 area = society category = { archaeost
 tech_avb_holo_entertainment_4 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_avb_clinic_3 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_avb_clinic_4 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
-tech_avb_slave_huts_2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_alien_life_studies_gestalt = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_avb_alloys_3 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_avb_alloys_4 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
