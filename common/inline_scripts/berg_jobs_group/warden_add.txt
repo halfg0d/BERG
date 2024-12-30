@@ -11,6 +11,6 @@ inline_script = {
 	owner = {
 		is_regular_empire = yes
 	}
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }

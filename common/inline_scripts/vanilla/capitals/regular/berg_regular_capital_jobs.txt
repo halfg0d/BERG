@@ -5,11 +5,12 @@ inline_script = {
 	AMOUNT = 1
 	DESC = with
 	TRIGGER = "
+	exists = owner
 	owner = {
 		is_regular_empire = yes
 		is_megacorp = no
 	}
-	berg_is_penal_colony = no
+	berg_is_penal_world = no
 	"
 }
 # Base 1 Warden 
@@ -18,13 +19,13 @@ inline_script = {
 	MULT = 1
 	AMOUNT = 1
 	DESC = with
-	TRIGGER = "berg_is_penal_colony = yes"
+	TRIGGER = "berg_is_penal_world = yes"
 }
 # Politican Job
 inline_script = {
 	script = berg_jobs_group/politician_add
 	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_politician1_t$tier$
+	AMOUNT = @berg_capital_regular_capital_primary_job_t$tier$
 	DESC = no
 	TRIGGER = "berg_RCJT_can_politician = yes"
 }
@@ -38,11 +39,15 @@ inline_script = {
 }
 # Elite
 inline_script = {
-	script = berg_jobs_group/noble_add
+	script = berg_jobs/berg_job_with_desc
+	JOB = noble
 	MULT = 1
 	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
-	DESC = with
-	TRIGGER = "berg_RCJT_noble_civic = yes"
+	TRIGGER = "
+	OR = {
+		berg_RCJT_noble_civic = yes
+		owner = { is_cyber_imperial = yes }
+	}"
 }
 # Additional Nobles Jobs from Cyber Imperial Governments
 inline_script = {
@@ -50,20 +55,13 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
 	DESC = no
-	TRIGGER = "exists = owner
-	owner = {
-		is_cyber_imperial = yes
-	}"
-}
-inline_script = {
-	script = berg_jobs/berg_job_with_desc
-	JOB = noble
-	MULT = 1
-	AMOUNT = @berg_capital_regular_capital_secondary_job_t$tier$
-	TRIGGER = "OR = {
+	TRIGGER = "
+	exists = owner
+	AND = {
 		berg_RCJT_noble_civic = yes
 		owner = { is_cyber_imperial = yes }
-	}"
+	}
+	"
 }
 # Technocracy
 inline_script = {
@@ -122,7 +120,7 @@ inline_script = {
 		is_megacorp = yes
 		is_worker_coop_empire = no
 	}
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }
 inline_script = {
@@ -137,7 +135,7 @@ inline_script = {
 		is_megacorp = yes
 		is_worker_coop_empire = yes
 	}
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }
 inline_script = {
@@ -146,7 +144,7 @@ inline_script = {
 	AMOUNT = berg_capital_regular_capital_primary_job_t$tier$
 	DESC = with
 	TRIGGER = "
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }
 # Roboticist

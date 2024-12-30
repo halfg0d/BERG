@@ -9,9 +9,15 @@ inline_script = {
 		is_regular_empire = yes
 		is_megacorp = no
 	}
-	NOR = {
-		has_planet_flag = toxic_knights_habitat
-		owner = { has_origin = origin_toxic_knights }
+	OR = {
+		check_variable_arithmetic = {
+			which = $tier$
+			value = 1
+		}
+		NOR = {
+			has_planet_flag = toxic_knights_habitat
+			owner = { has_origin = origin_toxic_knights }
+		}
 	}
 	"
 }

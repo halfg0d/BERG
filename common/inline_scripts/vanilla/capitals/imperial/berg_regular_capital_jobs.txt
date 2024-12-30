@@ -9,7 +9,7 @@ inline_script = {
 		is_regular_empire = yes
 		is_megacorp = no
 	}
-	berg_is_penal_colony = no
+	berg_is_penal_world = no
 	"
 }
 # Base 1 Warden 
@@ -18,7 +18,7 @@ inline_script = {
 	MULT = 1
 	AMOUNT = 1
 	DESC = with
-	TRIGGER = "berg_is_penal_colony = yes"
+	TRIGGER = "berg_is_penal_world = yes"
 }
 # Politican Job
 inline_script = {
@@ -122,7 +122,7 @@ inline_script = {
 		is_megacorp = yes
 		is_worker_coop_empire = no
 	}
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }
 inline_script = {
@@ -137,7 +137,7 @@ inline_script = {
 		is_megacorp = yes
 		is_worker_coop_empire = yes
 	}
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }
 inline_script = {
@@ -146,7 +146,7 @@ inline_script = {
 	AMOUNT = berg_capital_imperial_regular_primary_job_t$tier$
 	DESC = with
 	TRIGGER = "
-	berg_is_penal_colony = yes
+	berg_is_penal_world = yes
 	"
 }
 # Roboticist
