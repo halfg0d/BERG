@@ -25,3 +25,5 @@
 
 @research_lab_1_icon = "building_research_lab_2"
 @research_lab_2_icon = "building_research_lab_1"
+
+@has_berg_mod = 1
