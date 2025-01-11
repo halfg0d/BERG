@@ -951,7 +951,7 @@ building_avb_capital_6 = {
 	}
 	
 	upgrades = {
-		building_imperial_capital
+		building_avb_imperial_capital_2
 	}
 
 	planet_modifier = {
@@ -1766,7 +1766,7 @@ building_avb_machine_capital_6 = {
 		is_machine_empire = yes
 	}
 	upgrades = {
-		building_imperial_machine_capital
+		building_avb_imperial_machine_capital_2
 	}
 	planet_modifier = {
 		planet_housing_add = 24
@@ -2247,7 +2247,7 @@ building_avb_hive_capital_4 = {
 		job_patrol_drone_add = 1
 	}
 	upgrades = {
-		building_imperial_hive_capital
+		building_avb_imperial_hive_capital_2
 	}
 	inline_script = {
 		script = berg_desc/berg_building_desc
@@ -2663,8 +2663,6 @@ building_hab_system_capital = {
 		text = building_hab_system_capital_tooltip
 	}
 
-	
-
 	upgrades = {
 		building_avb_hab_capital_4
 		building_imperial_capital
@@ -2825,6 +2823,9 @@ building_avb_hab_capital_4 = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_hab_capital_3
 		TRIGGER = " "
+	}
+	upgrades = {
+		building_avb_imperial_capital_2
 	}
 }
 
@@ -3331,331 +3332,6 @@ building_avb_slave_capital_3 = {
 		script = berg_desc/berg_building_desc
 		BUILDING = avb_slave_capital_3
 		TRIGGER = " "
-	}
-}
-
-
-
-# Imperial Capital
-
-building_imperial_capital = {
-	base_buildtime = @b4_time
-	capital = yes
-	can_build = no
-	can_demolish = no
-	can_be_ruined = no
-	can_be_disabled = no
-	position_priority = 0
-
-	category = government
-
-	potential = {
-		berg_avb_build_imperial_capital = yes
-		berg_st_can_build_imperial_capital = {
-			EMPIRE = "is_regular_empire = yes"
-		}
-	}
-
-	convert_to = {
-		building_hive_major_capital
-		building_machine_system_capital
-		building_system_capital
-		building_hab_major_capital
-		building_ancient_control_center
-		building_ancient_control_center_dummy # Dummy
-		building_ancient_palace
-	}
-
-	allow = {
-		inline_script = {
-			script = building_triggers/more_num_pops
-			NUM = 50
-		}
-	}
-
-	prerequisites = {
-	}
-
-	planet_modifier = {
-		job_enforcer_add = 5
-		planet_housing_add = 18
-		planet_amenities_add = 18
-		planet_max_buildings_add = 11
-		planet_max_branch_office_buildings_add = 4
-		defense_armies_add = @tier_4_capital_defense_armies
-	}
-
-	inline_script = {
-		script = buildings/on_all_capital_buildings
-	}
-	inline_script = {
-		script = vanilla/capitals/berg_productivity_script
-		prod1 = yes
-		prod2 = yes
-		prod3 = yes
-	}
-	inline_script = {
-		script = vanilla/capitals/imperial/berg_regular_capital_jobs
-		tier = 1
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_domination_imperious_architecture
-			}
-		}
-		modifier = {
-			planet_housing_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		job_roboticist_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
-			has_current_purge = yes
-			growing_species = { has_trait = trait_cybernetic }
-		}
-		pop_growth_speed = 0.10
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			is_capital = yes
-			owner = {
-				has_councilor = { COUNCILOR = "councilor_feudal_realm" } 
-			}
-		}
-		country_naval_cap_add = 1
-		mult = value:naval_cap_vassals_councilor_feudal_realm
-	}
-
-	inline_script = {
-		script = building_resources/vanilla/imperial_regular
-		tier = 1
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
-		}
-		text = job_roboticist_effect_desc
-	}
-
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = imperial_capital
-		TRIGGER = "always = no"
-	}
-}
-
-# Imperial Center
-building_imperial_machine_capital = {
-	base_buildtime = @b4_time
-	capital = yes
-	can_build = no
-	can_demolish = no
-	can_be_ruined = no
-	can_be_disabled = no
-	position_priority = 0
-
-	category = government
-
-	potential = {
-		berg_avb_build_imperial_capital = yes
-		berg_st_can_build_imperial_capital = {
-			EMPIRE = "OR = {
-				is_machine_empire = yes
-				is_country_type = ai_empire
-			}"
-		}
-	}
-
-	convert_to = {
-		building_hive_major_capital
-		building_machine_system_capital
-		building_system_capital
-		building_hab_major_capital
-		building_ancient_control_center
-		building_ancient_control_center_dummy # Dummy
-		building_ancient_palace
-	}
-
-	allow = {
-		inline_script = {
-			script = building_triggers/more_num_pops
-			NUM = 50
-		}
-	}
-
-	prerequisites = {
-	}
-
-	planet_modifier = {
-		planet_housing_add = 18
-		planet_amenities_add = 20
-		job_replicator_add = 4
-		job_patrol_drone_add = 5
-		job_maintenance_drone_add = 6
-		planet_max_buildings_add = 11
-		planet_max_branch_office_buildings_add = 3
-		defense_armies_add = @tier_4_capital_defense_armies
-	}
-
-	inline_script = {
-		script = buildings/on_all_capital_buildings
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			inline_script = {
-				script = building_triggers/more_num_pops
-				NUM = 10
-			}
-		}
-		modifier = {
-			job_replicator_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			inline_script = {
-				script = building_triggers/more_num_pops
-				NUM = 40
-			}
-		}
-		modifier = {
-			job_replicator_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish_machine }
-		}
-		modifier = {
-			job_replicator_add = 1
-		}
-	}
-
-	inline_script = {
-		script = vanilla/capitals/berg_productivity_script
-		prod1 = yes
-		prod2 = yes
-		prod3 = yes
-	}
-	inline_script = {
-		berg = vanila/capitals/imperial/berg_machine_capital_jobs
-		tier = 1
-	}
-	inline_script = {
-		script = building_resources/vanilla/imperial_machine
-		tier = 1
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = imperial_machine_capital
-		TRIGGER = "always = no"
-	}
-}
-
-# Imperial Complex
-building_imperial_hive_capital = {
-	base_buildtime = @b4_time
-	capital = yes
-	can_build = no
-	can_demolish = no
-	can_be_ruined = no
-	can_be_disabled = no
-	position_priority = 0
-
-	category = government
-
-	potential = {
-		berg_avb_build_imperial_capital = yes
-		berg_st_can_build_imperial_capital = {
-			EMPIRE = "OR = {
-				is_hive_empire = yes
-				is_country_type = swarm
-			}"
-		}
-	}
-
-	convert_to = {
-		building_hive_major_capital
-		building_machine_system_capital
-		building_system_capital
-		building_hab_major_capital
-		building_ancient_control_center
-		building_ancient_control_center_dummy # Dummy
-		building_ancient_palace
-	}
-
-	allow = {
-		inline_script = {
-			script = building_triggers/more_num_pops
-			NUM = 50
-		}
-	}
-
-	prerequisites = {
-	}
-
-	planet_modifier = {
-		planet_housing_add = 20
-		planet_amenities_add = 20
-		job_synapse_drone_add = 5
-		job_maintenance_drone_add = 7
-		job_patrol_drone_add = 4
-		planet_max_buildings_add = 11
-		planet_max_branch_office_buildings_add = 3
-		defense_armies_add = @tier_4_capital_defense_armies
-	}
-
-	inline_script = {
-		script = buildings/on_all_capital_buildings
-	}
-
-	inline_script = {
-		berg = vanila/capitals/imperial/berg_hive_capital_jobs
-		tier = 1
-	}
-	inline_script = {
-		script = building_resources/vanilla/imperial_hive
-		tier = 1
-	}
-
-	inline_script = {
-		script = vanilla/capitals/berg_productivity_script
-		prod1 = yes
-		prod2 = yes
-		prod3 = yes
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_cybernetics_organ_harvesting }
-			has_current_purge = yes
-			growing_species = { has_trait = trait_cybernetic }
-		}
-		pop_growth_speed = 0.10
-	}
-	inline_script = {
-		script = berg_desc/berg_building_desc
-		BUILDING = imperial_hive_capital
-		TRIGGER = "always = no"
 	}
 }
 

@@ -150,3 +150,4 @@ tech_avb_capital_5 = { cost = 0 area = society category = { archaeostudies } tie
 tech_avb_housing_3 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_avb_housing_4 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
 tech_avb_housing_5 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }
+tech_avb_imperial_capital_t2 = { cost = 0 area = society category = { archaeostudies } tier = 1 potential = { always = no } weight = 0 }

@@ -16,3 +16,11 @@
 @b2_hive_minerals = 0
 @b2_upkeep_food = 0
 @b2_upkeep_hive = 0
+@avb_b4_minerals = 0
+@avb_b4_upkeep = 0
+@avb_b5_minerals = 0
+@avb_b5_upkeep = 0
+@avb_b6_minerals = 0
+@avb_b6_upkeep = 0
+@avb_b7_minerals = 0
+@avb_b7_upkeep = 0
