@@ -410,8 +410,8 @@ berg_has_plentiful_aspiration_3 = {
 }
 berg_has_any_clone_vat = {
 	OR = {
-		has_[[need_active]active_]building = building_clone_vat
-		has_[[need_active]active_]building = building_avb_clone_vat_2
+		has_[[need_active]active_]building = building_clone_vats
+		has_[[need_active]active_]building = building_avb_clone_vats_2
 	}
 }
 berg_has_any_slave_processing_building = {

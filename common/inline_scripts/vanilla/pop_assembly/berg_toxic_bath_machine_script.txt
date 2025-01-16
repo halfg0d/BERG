@@ -3,6 +3,7 @@ inline_script = {
 	DESC = with
 	AMOUNT = @berg_pop_assembly_toxic_bath_machine_job_t$tier$
 	MULT = 1
+	TRIGGER = " "
 }
 #OST
 inline_script = {

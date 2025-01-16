@@ -17,3 +17,4 @@ pd_lichen = {}
 pd_glaciovolcanic = {}
 pd_lanthanide = {}
 pd_petrified = {}
+resort_colony_pd_hab = {}

@@ -17,7 +17,8 @@ inline_script = {
 	TRIGGER = "berg_has_ecc_mod = yes
 	exists = owner
 	owner = {
-		has_ethic = ethic_authoritarian
+		is_fanatical = no
+		is_authoritarian = yes
 	}"
 }
 inline_script = {
@@ -28,6 +29,7 @@ inline_script = {
 	TRIGGER = "berg_has_ecc_mod = yes
 	exists = owner
 	owner = {
-		has_ethic = ethic_fanatic_authoritarian
+		is_fanatical = yes
+		is_authoritarian = yes
 	}"
 }

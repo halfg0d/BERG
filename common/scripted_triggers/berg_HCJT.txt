@@ -3,6 +3,7 @@
 #############
 # HCJT - Habitat Capital Job Trigger
 berg_HCJT_can_politician = {
+	exists = owner
 	owner = {
 		NOR = {
 			is_gestalt = yes
@@ -21,6 +22,7 @@ berg_HCJT_can_politician = {
 	}
 }
 berg_HCJT_holy_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -37,11 +39,11 @@ berg_HCJT_holy_civic = {
 			}
 		}
 	}
-	planet = {
-		is_toxic_habitat = no
-	}
+	exists = planet
+	is_toxic_habitat = no
 }
 berg_HCJT_noble_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -58,11 +60,10 @@ berg_HCJT_noble_civic = {
 			}
 		}
 	}
-	planet = {
-		is_toxic_habitat = no
-	}
+	is_toxic_habitat = no
 }
 berg_HCJT_techno_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -79,11 +80,10 @@ berg_HCJT_techno_civic = {
 			}
 		}
 	}
-	planet = {
-		is_toxic_habitat = no
-	}
+	is_toxic_habitat = no
 }
 berg_HCJT_merchant_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -95,13 +95,13 @@ berg_HCJT_merchant_civic = {
 			}
 		}
 	}
-	planet = {
-		is_toxic_habitat = no
-	}
+	exists = planet
+	is_toxic_habitat = no
 }
 berg_HCJT_military_dictatorship_civic = {
 	# ECC
 	berg_has_ecc_mod = yes
+	exists = owner
 	owner = {
 		OR = {
 			has_civic = civic_military_dictatorship
@@ -115,6 +115,7 @@ berg_HCJT_military_dictatorship_civic = {
 berg_HCJT_supervisor_civic = {
 	# ECC
 	berg_has_ecc_mod = yes
+	exists = owner
 	owner = {
 		OR = {
 			has_civic = civic_executive_committee
@@ -123,9 +124,7 @@ berg_HCJT_supervisor_civic = {
 			has_civic = civic_bureaucracy
 		}
 	}
-	planet = {
-		is_toxic_habitat = no
-	}
+	is_toxic_habitat = no
 }
 berg_HCJT_any_bugged_government = {
 	berg_has_bug_mod = yes
@@ -137,7 +136,5 @@ berg_HCJT_any_bugged_government = {
 		is_bugged_governmental_anthropocentric = yes
 		is_bugged_governmental_ecocentric = yes
 	}
-	planet = {
-		is_toxic_habitat = no
-	}
+	is_toxic_habitat = no
 }

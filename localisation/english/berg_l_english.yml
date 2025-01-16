@@ -69,3 +69,6 @@ l_english:
  berg_panel.100.done:0 "Done"
  edict_berg_panel_open_edict:0 "Open Berg Panel"
  edict_berg_panel_open_edict_desc:0 "Open berg panel which allow to disable buildings from certain category."
+# Toxic baths
+ job_bath_attendant_machine_effect_desc:0 "$job_toxic_baths_effect_machine_desc$"
+ job_bath_attendant_individual_machine_effect_desc:0 "$job_toxic_baths_effect_machine_desc_2$"

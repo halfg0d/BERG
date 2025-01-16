@@ -1,14 +1,14 @@
 inline_script = {
 	script = vanilla/capitals/habitats/regular
-	TIER = $tier$
+	tier = $tier$
 }
 inline_script = {
 	script = vanilla/capitals/habitats/machine
-	TIER = $tier$
+	tier = $tier$
 }
 inline_script = {
 	script = vanilla/capitals/habitats/hive
-	TIER = $tier$
+	tier = $tier$
 }
 triggered_planet_modifier = {
 	potential = {

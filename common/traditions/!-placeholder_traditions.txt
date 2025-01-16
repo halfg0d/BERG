@@ -19,3 +19,5 @@ tr_mettle_2_hive = { possible = { always = no } ai_weight = { factor = 0 } }
 tr_defense_5 = { possible = { always = no } ai_weight = { factor = 0 } }
 tr_defense_4 = { possible = { always = no } ai_weight = { factor = 0 } }
 tr_plentiful_aspiration_3 = { possible = { always = no } ai_weight = { factor = 0 } }
+tr_metallurgy_4 = { possible = { always = no } ai_weight = { factor = 0 } }
+tr_metallurgy_3_hive = { possible = { always = no } ai_weight = { factor = 0 } }
