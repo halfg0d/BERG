@@ -21,3 +21,18 @@ inline_script = {
 	is_gestalt = yes
 	"
 }
+# Fe Protector
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = fe_protector
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	exists = owner
+	owner = {
+		is_gestalt = yes
+		is_fallen_empire = yes
+	}
+	"
+}

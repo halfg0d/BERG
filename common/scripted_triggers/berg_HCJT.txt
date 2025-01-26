@@ -16,10 +16,6 @@ berg_HCJT_can_politician = {
 			berg_HCJT_supervisor_civic = yes
 		}
 	}
-	NOR = {
-		has_planet_flag = toxic_knights_habitat
-		owner = { has_origin = origin_toxic_knights }
-	}
 }
 berg_HCJT_holy_civic = {
 	exists = owner
@@ -39,8 +35,6 @@ berg_HCJT_holy_civic = {
 			}
 		}
 	}
-	exists = planet
-	is_toxic_habitat = no
 }
 berg_HCJT_noble_civic = {
 	exists = owner
@@ -60,7 +54,6 @@ berg_HCJT_noble_civic = {
 			}
 		}
 	}
-	is_toxic_habitat = no
 }
 berg_HCJT_techno_civic = {
 	exists = owner
@@ -80,7 +73,6 @@ berg_HCJT_techno_civic = {
 			}
 		}
 	}
-	is_toxic_habitat = no
 }
 berg_HCJT_merchant_civic = {
 	exists = owner
@@ -95,8 +87,6 @@ berg_HCJT_merchant_civic = {
 			}
 		}
 	}
-	exists = planet
-	is_toxic_habitat = no
 }
 berg_HCJT_military_dictatorship_civic = {
 	# ECC
@@ -110,9 +100,8 @@ berg_HCJT_military_dictatorship_civic = {
 			has_civic = civic_stratocracy
 		}
 	}
-	is_toxic_habitat = no
 }
-berg_HCJT_supervisor_civic = {
+berg_HCJT_supervisor_civic = { 
 	# ECC
 	berg_has_ecc_mod = yes
 	exists = owner
@@ -124,7 +113,6 @@ berg_HCJT_supervisor_civic = {
 			has_civic = civic_bureaucracy
 		}
 	}
-	is_toxic_habitat = no
 }
 berg_HCJT_any_bugged_government = {
 	berg_has_bug_mod = yes
@@ -136,5 +124,4 @@ berg_HCJT_any_bugged_government = {
 		is_bugged_governmental_anthropocentric = yes
 		is_bugged_governmental_ecocentric = yes
 	}
-	is_toxic_habitat = no
 }

@@ -1,0 +1,23 @@
+
+# Dimensional Portal Researcher
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = dimensional_portal_researcher
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	owner = { is_gestalt = no }
+	"
+}
+# Dimensional Portal Researcher Gestalt
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = dimensional_portal_researcher_gestalt
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	owner = { is_gestalt = yes }
+	"
+}

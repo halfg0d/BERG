@@ -258,7 +258,7 @@ building_hab_fe_capital = {
 	upgrades = {
 	}
 }
-# Affluecne
+# Affluence
 building_affluence_emporium = {
 	base_buildtime = @b2_time
 	can_build = yes
@@ -274,8 +274,15 @@ building_affluence_emporium = {
 			berg_has_zofe_sandbox_mod = no
 			OR = {
 				is_fallen_empire = yes
-				has_country_flag = affluence_center_can_build
 				has_technology = tech_fe_affluence_1
+				AND = {
+					berg_has_rebe_mod = no
+					has_country_flag = affluence_center_can_build
+				}
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = affluence_emporium_can_build
+				}
 			}
 		}
 		NOR = {
@@ -290,9 +297,16 @@ building_affluence_emporium = {
 			fail_text = ancrel.10004.failtext
 			owner = {
 				OR = {
-					check_variable = { which = affluence_center_build_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_affluence_1
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = affluence_center_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = affluence_emporium_can_build
+					}
 				}
 			}
 		}
@@ -316,8 +330,11 @@ building_affluence_emporium = {
 	}
 
 	inline_script = {
-		script = jobs/factory_add
+		script = berg_jobs_group/factory_add
+		MULT = 1
 		AMOUNT = @fe_jobs
+		DESC = with
+		TRIGGER = " "
 	}
 
 	on_queued = {
@@ -367,7 +384,14 @@ building_affluence_center = {
 			exists = owner
 			owner = {
 				OR = {
-					check_variable = { which = affluence_center_upgrade_count value >= 1 }
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = affluence_center_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = affluence_center_can_build
+					}
 					is_fallen_empire = yes
 					has_technology = tech_fe_affluence_2
 				}
@@ -418,7 +442,7 @@ building_affluence_center = {
 		MULT = 1
 		AMOUNT = @fe_jobs
 		DESC = with
-		TRIGGER = "berg_has_zofe_sandbox_mod = yes"
+		TRIGGER = " "
 	}
 	on_queued = {
 		owner = {
@@ -452,8 +476,15 @@ building_nourishment_complex = {
 			berg_has_zofe_sandbox_mod = no
 			OR = {
 				is_fallen_empire = yes
-				has_country_flag = nourishment_center_can_build
 				has_technology = tech_fe_nourishment_1
+				AND = {
+					berg_has_rebe_mod = no
+					has_country_flag = nourishment_center_can_build
+				}
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = nourishment_complex_can_build
+				}
 			}
 		}
 		NOR = {
@@ -468,9 +499,16 @@ building_nourishment_complex = {
 			fail_text = ancrel.10004.failtext
 			owner = {
 				OR = {
-					check_variable = { which = nourishment_center_build_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_nourishment_1
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = nourishment_center_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = nourishment_complex_can_build
+					}
 				}
 			}
 		}
@@ -545,9 +583,16 @@ building_nourishment_center = {
 			exists = owner
 			owner = {
 				OR = {
-					check_variable = { which = nourishment_center_upgrade_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_nourishment_2
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = nourishment_center_upgrade_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = nourishment_center_can_build
+					}
 				}
 			}
 		}
@@ -639,7 +684,14 @@ building_dimensional_replicator = {
 			OR = {
 				is_fallen_empire = yes
 				has_technology = tech_fe_fabricator_1
-				has_country_flag = dimensional_fabricator_can_build
+				AND = {
+					berg_has_rebe_mod = no
+					has_country_flag = dimensional_fabricator_can_build
+				}
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = dimensional_replicator_can_build
+				}
 			}
 		}
 		NOR = {
@@ -654,9 +706,16 @@ building_dimensional_replicator = {
 			fail_text = ancrel.10004.failtext
 			owner = {
 				OR = {
-					check_variable = { which = dimensional_fabricator_build_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_fabricator_1
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = dimensional_fabricator_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = dimensional_replicator_can_build
+					}
 				}
 			}
 		}
@@ -729,9 +788,16 @@ building_dimensional_fabricator = {
 			exists = owner
 			owner = {
 				OR = {
-					check_variable = { which = dimensional_fabricator_upgrade_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_fabricator_2
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = dimensional_fabricator_upgrade_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = dimensional_fabricator_can_build
+					}
 				}
 			}
 		}
@@ -833,7 +899,14 @@ building_class_3_singularity = {
 			OR = {
 				is_fallen_empire = yes
 				has_technology = tech_fe_singularity_1
+				AND = {
+					berg_has_rebe_mod = no
 				has_country_flag = class_4_singularity_can_build
+				}
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = class_3_singularity_can_build
+				}
 			}
 		}
 		NOR = {
@@ -848,9 +921,16 @@ building_class_3_singularity = {
 			fail_text = ancrel.10004.failtext
 			owner = {
 				OR = {
-					check_variable = { which = class_4_singularity_build_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_singularity_1
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = class_4_singularity_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = class_3_singularity_can_build
+					}
 				}
 			}
 		}
@@ -926,9 +1006,16 @@ building_class_4_singularity = {
 			exists = owner
 			owner = {
 				OR = {
-					check_variable = { which = class_4_singularity_upgrade_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_singularity_2
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = class_4_singularity_upgrade_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = class_4_singularity_can_build
+					}
 				}
 			}
 		}
@@ -1005,7 +1092,14 @@ building_micro_forge = {
 			OR = {
 				is_fallen_empire = yes
 				has_technology = tech_fe_forge_1
-				has_country_flag = nano_forge_can_build
+				AND = {
+					berg_has_rebe_mod = no
+					has_country_flag = nano_forge_can_build
+				}
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = micro_forge_can_build
+				}
 			}
 		}
 		NOR = {
@@ -1020,9 +1114,16 @@ building_micro_forge = {
 			fail_text = ancrel.10004.failtext
 			owner = {
 				OR = {
-					check_variable = { which = nano_forge_build_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_forge_1
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = nano_forge_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = micro_forge_can_build
+					}
 				}
 			}
 		}
@@ -1095,9 +1196,16 @@ building_nano_forge = {
 			exists = owner
 			owner = {
 				OR = {
-					check_variable = { which = nano_forge_upgrade_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_forge_2
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = nano_forge_upgrade_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = nano_forge_can_build
+					}
 				}
 			}
 		}
@@ -1483,9 +1591,16 @@ building_fe_sky_dome = {
 			fail_text = ancrel.10004.failtext
 			owner = {
 				OR = {
-					check_variable = { which = skydome_build_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_dome_1
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = skydome_build_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = skydome_can_build
+					}
 				}
 			}
 		}
@@ -1562,9 +1677,16 @@ building_fe_dome = {
 			exists = owner
 			owner = {
 				OR = {
-					check_variable = { which = skydome_upgrade_count value >= 1 }
 					is_fallen_empire = yes
 					has_technology = tech_fe_dome_2
+					AND = {
+						berg_has_rebe_mod = no
+						check_variable = { which = skydome_upgrade_count value >= 1 }
+					}
+					AND = {
+						berg_has_rebe_mod = yes
+						has_country_flag = skydome_can_build
+					}
 				}
 			}
 		}
@@ -1652,6 +1774,10 @@ building_fe_fortress = {
 			OR = {
 				is_fallen_empire = yes
 				has_technology = tech_fe_fortress_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fortress_can_build
+				}
 			}
 		}
 		NOR = {
@@ -1705,6 +1831,10 @@ building_fe_stronghold = {
 			OR = {
 				is_fallen_empire = yes
 				has_technology = tech_fe_fortress_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = stronghold_can_build
+				}
 			}
 		}
 		NOR = {
@@ -1811,3 +1941,1930 @@ building_fe_stronghold = {
 # 		building_ae_stronghold #ACOT
 # 	}
 # }
+
+building_fe_administration_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = no
+			is_machine_empire = no
+			is_spiritualist = no
+			has_make_spiritualist_perk = no
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_1_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			OR = {
+				is_regular_empire = no
+				is_spiritualist = yes
+				has_make_spiritualist_perk = yes
+			}
+		}
+	}
+
+	convert_to = {
+		building_fe_administration_hive_1
+		building_fe_temple_1
+		building_fe_administration_machine_1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	inline_script = {
+		script = berg_jobs_group/bureaucrat_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	upgrades = {
+		building_fe_administration_2
+	}
+
+	show_in_tech = tech_fe_administration_1
+
+	show_tech_unlock_if = {
+		is_hive_empire = no
+		is_machine_empire = no
+		is_spiritualist = no
+		has_make_spiritualist_perk = no
+	}
+}
+
+building_fe_administration_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_2_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			OR = {
+				is_regular_empire = no
+				is_spiritualist = yes
+				has_make_spiritualist_perk = yes
+			}
+		}
+	}
+
+	convert_to = {
+		building_fe_administration_hive_2
+		building_fe_temple_2
+		building_fe_administration_machine_2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+
+		produces = {
+			unity = 20
+		}
+	}
+
+	planet_modifier = {
+		pop_housing_usage_mult = -0.1
+	}
+
+	
+	inline_script = {
+		script = berg_jobs_group/bureaucrat_add
+		AMOUNT = @fe2_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_administration_2
+
+	show_tech_unlock_if = {
+		is_hive_empire = no
+		is_machine_empire = no
+		is_spiritualist = no
+		has_make_spiritualist_perk = no
+	}
+}
+
+building_fe_administration_hive_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_1_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+
+	convert_to = {
+		building_fe_administration_1
+		building_fe_temple_1
+		building_fe_administration_machine_1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/synapse_drone_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	upgrades = {
+		building_fe_administration_hive_2
+	}
+
+
+	show_in_tech = tech_fe_administration_1
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+}
+
+building_fe_administration_hive_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_2_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_hive_empire = no
+		}
+	}
+
+	convert_to = {
+		building_fe_administration_2
+		building_fe_temple_2
+		building_fe_administration_machine_2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+		produces = {
+			unity = 20
+		}
+	}
+
+	planet_modifier = {
+		pop_housing_usage_mult = -0.1
+	}
+
+	inline_script = {
+		script = berg_jobs_group/synapse_drone_add
+		AMOUNT = @fe2_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_administration_2
+
+	show_tech_unlock_if = {
+		is_hive_empire = yes
+	}
+}
+
+building_fe_administration_machine_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_1_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_machine_empire = no }
+	}
+
+	convert_to = {
+		building_fe_administration_1
+		building_fe_temple_1
+		building_fe_administration_hive_1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+	upgrades = {
+		building_fe_administration_machine_2
+	}
+
+	inline_script = {
+		script = berg_jobs_group/coordinator_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_administration_1
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+}
+
+building_fe_administration_machine_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_2_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_machine_empire = no
+		}
+	}
+
+	convert_to = {
+		building_fe_administration_2
+		building_fe_temple_2
+		building_fe_administration_hive_2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+
+		produces = {
+			unity = 20
+		}
+	}
+
+	planet_modifier = {
+		pop_housing_usage_mult = -0.1
+	}
+
+	inline_script = {
+		script = berg_jobs_group/coordinator_add
+		AMOUNT = @fe2_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_administration_2
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+}
+
+building_fe_temple_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_1_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = { is_spiritualist = no }
+	}
+
+	convert_to = {
+		building_fe_administration_1
+		building_fe_administration_machine_1
+		building_fe_administration_hive_1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	inline_script = {
+		AMOUNT = @fe_jobs
+	}
+	
+	inline_script = {
+		script = berg_jobs_group/priest_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	upgrades = {
+		building_fe_temple_2
+	}
+
+	show_in_tech = tech_fe_administration_1
+
+	show_tech_unlock_if = {
+		OR = {
+			is_spiritualist = yes
+			has_make_spiritualist_perk = yes
+		}
+	}
+}
+
+building_fe_temple_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_spiritualist = yes
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_administration_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_unity_2_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_spiritualist = no
+		}
+	}
+
+	convert_to = {
+		building_fe_administration_2
+		building_fe_administration_machine_2
+		building_fe_administration_hive_2
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+
+		produces = {
+			unity = 25
+		}
+	}
+
+	planet_modifier = {
+		pop_housing_usage_mult = -0.1
+	}
+	inline_script = {
+		script = berg_jobs_group/priest_add
+		AMOUNT = @fe2_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	show_in_tech = tech_fe_administration_2
+
+	show_tech_unlock_if = {
+		OR = {
+			is_spiritualist = yes
+			has_make_spiritualist_perk = yes
+		}
+	}
+}
+
+building_fe_assembly_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		OR = {
+			AND = {
+				OR = {
+					owner = { is_ai = no }
+					NOT = { exists = assembling_species }
+					assembling_species = { is_robotic_species = yes }
+				}
+				owner = {
+					is_regular_empire = yes
+					NOT = { has_policy_flag = robots_outlawed }
+					OR = {
+						NOT = { has_ascension_perk = ap_engineered_evolution }
+						is_materialist = yes
+					}
+				}
+			}
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_assembly_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = assembly_1_can_build
+				}
+			}
+		}
+
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			is_machine_empire = no
+			OR = {
+				is_regular_empire = no
+				has_policy_flag = robots_outlawed
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			sr_living_metal = @fe_sr_cost
+		}
+		upkeep = {
+			sr_living_metal = 1.5
+			alloys = @b3_alloy_upkeep
+			energy = 50
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_origin = origin_mechanists
+					is_individual_machine = yes
+					has_country_flag = synthetic_empire
+				}
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = synth_unscheduled_updates
+			}
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = synth_safe_updates
+			}
+		}
+		modifier = {
+			planet_pop_assembly_mult = -0.1
+			planet_stability_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = no
+			}
+		}
+		modifier = {
+			job_roboticist_add = 2
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = no
+				is_individual_machine = no
+			}
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_individual_machine = yes
+			}
+		}
+		text = job_roboticist_individual_machine_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 2
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/replicator_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	upgrades = {
+		building_fe_assembly_2
+	}
+
+	show_in_tech = tech_fe_assembly_1
+}
+
+building_fe_assembly_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		OR = {
+			AND = {
+				OR = {
+					owner = { is_ai = no }
+					NOT = { exists = assembling_species }
+					assembling_species = { is_robotic_species = yes }
+				}
+				owner = {
+					is_regular_empire = yes
+					NOT = { has_policy_flag = robots_outlawed }
+					OR = {
+						is_ai = no
+						NOT = { has_ascension_perk = ap_engineered_evolution }
+						is_materialist = yes
+					}
+				}
+			}
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_assembly_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = assembly_2_can_build
+				}
+			}
+		}
+
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_fallen_empire = no
+			is_machine_empire = no
+			OR = {
+				is_regular_empire = no
+				has_policy_flag = robots_outlawed
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			sr_living_metal = 2
+			alloys = @b3_alloy_upkeep
+			energy = 70
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = no
+			}
+		}
+		modifier = {
+			job_roboticist_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_origin = origin_mechanists
+					is_individual_machine = yes
+					has_country_flag = synthetic_empire
+				}
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = synth_unscheduled_updates
+			}
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = synth_safe_updates
+			}
+		}
+		modifier = {
+			planet_pop_assembly_mult = -0.1
+			planet_stability_add = 5
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = no
+			}
+		}
+		text = job_roboticist_effect_desc
+	}
+
+	inline_script = {
+		script = berg_jobs_group/replicator_add
+		AMOUNT = 5
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 5
+		}
+	}
+	show_in_tech = tech_fe_assembly_2
+}
+
+building_fe_clinic_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_regular_empire = yes
+				is_hive_empire = yes
+			}
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_clinic_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_clinic_1_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_fallen_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			exotic_gases = @fe_sr_cost
+		}
+		upkeep = {
+			exotic_gases = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	country_modifier = {
+		leader_lifespan_add = 1
+	}
+
+	inline_script = {
+		script = berg_jobs_group/spawning_drone_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	inline_script = {
+		script = berg_jobs_group/healthcare_add
+		AMOUNT = 4
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_overtuned
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 4
+		}
+	}
+
+	upgrades = {
+		building_fe_clinic_2
+	}
+
+	show_in_tech = tech_fe_clinic_1
+}
+
+building_fe_clinic_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_regular_empire = yes
+				is_hive_empire = yes
+			}
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_clinic_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_clinic_2_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			is_fallen_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			exotic_gases = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	country_modifier = {
+		leader_lifespan_add = 2
+	}
+
+	
+	inline_script = {
+		script = berg_jobs_group/spawning_drone_add
+		AMOUNT = 3
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	inline_script = {
+		script = berg_jobs_group/healthcare_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 6
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_origin = origin_overtuned
+			}
+			any_owned_pop = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 6
+		}
+	}
+
+	show_in_tech = tech_fe_clinic_2
+}
+
+building_fe_security_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_security_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_security_1_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+	
+	inline_script = {
+		script = berg_jobs_group/enforcer_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	upgrades = {
+		building_fe_security_2
+	}
+
+	show_in_tech = tech_fe_security_1
+}
+
+building_fe_security_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_security_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_security_2_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	country_modifier = {
+		country_edict_fund_add = 10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			planet_crime_add = -40
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			planet_crime_no_happiness_add = -40
+		}
+	}
+
+	inline_script = {
+		script = berg_jobs_group/enforcer_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_security_2
+}
+
+building_fe_market_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = trade
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = no
+			is_machine_empire = no
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_market_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_market_1_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+			is_fallen_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = 4
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	upgrades = {
+		building_fe_market_2
+	}
+
+	show_in_tech = tech_fe_market_1
+}
+
+building_fe_market_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = trade
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_market_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_market_2_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+			is_fallen_empire = no
+		}
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	inline_script = {
+		script = berg_jobs_group/merchant_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	country_modifier = {
+		trade_value_mult = 0.01
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+			}
+		}
+		branch_office_value_mult = 0.05
+	}
+	show_in_tech = tech_fe_market_2
+}
+
+building_fe_silo_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_silo_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_silo_1_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 50000
+	}
+
+	upgrades = {
+		building_fe_silo_2
+	}
+
+	show_in_tech = tech_fe_silo_1
+}
+
+building_fe_silo_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_silo_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_silo_2_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_add = 100000
+	}
+
+	show_in_tech = tech_fe_silo_2
+}
+
+building_fe_entertainment_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = no
+			is_machine_empire = no
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_entertainment_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_entertainment_1_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+			is_fallen_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			rare_crystals = @fe_sr_cost
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	inline_script = {
+		script = berg_jobs_group/entertainer_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	upgrades = {
+		building_fe_entertainment_2
+	}
+
+	show_in_tech = tech_fe_entertainment_1
+}
+
+building_fe_entertainment_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_entertainment_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_entertainment_2_can_build
+				}
+			}
+		}
+		NOT = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+			is_fallen_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			rare_crystals = 2
+			alloys = @b2_alloy_upkeep
+			energy = 15
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 100
+	}
+	inline_script = {
+		script = berg_jobs_group/entertainer_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_entertainment_2
+}
+
+building_fe_lab_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = research
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_lab_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_lab_1_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			exotic_gases = @fe_sr_cost
+		}
+		upkeep = {
+			exotic_gases = 2
+			alloys = @b3_alloy_upkeep
+			energy = 30
+		}
+	}
+
+	inline_script = {
+		script = berg_jobs_group/head_researcher_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	inline_script = {
+		script = berg_jobs_group/researcher_add
+		AMOUNT = 4
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	inline_script = {
+		script = berg_jobs_group/researcher_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = no
+		TRIGGER = "
+		owner = { is_gestalt = yes }
+		"
+	}
+	inline_script = {
+		script = berg_jobs_group/dimensional_portal_researcher_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = with
+		TRIGGER = "
+		exists = owner
+		owner = {
+			is_galactic_community_member = yes
+		}
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+		has_modifier = pm_extradimensional_experimentation
+		"
+	}
+	upgrades = {
+		building_fe_lab_2
+	}
+
+	show_in_tech = tech_fe_lab_1
+}
+
+building_fe_lab_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = research
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_lab_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_lab_2_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			exotic_gases = 2
+			alloys = @b3_alloy_upkeep
+			energy = 30
+		}
+		produces = {
+			physics_research = 20
+			society_research = 20
+			engineering_research = 20
+		}
+	}
+
+	inline_script = {
+		script = berg_jobs_group/head_researcher_add
+		AMOUNT = 1
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	inline_script = {
+		script = berg_jobs_group/researcher_add
+		AMOUNT = 4
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+	inline_script = {
+		script = berg_jobs_group/researcher_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = no
+		TRIGGER = "
+		owner = { is_gestalt = yes }
+		"
+	}
+	inline_script = {
+		script = berg_jobs_group/dimensional_portal_researcher_add
+		AMOUNT = 2
+		MULT = 1
+		DESC = with
+		TRIGGER = "
+		exists = owner
+		owner = {
+			is_galactic_community_member = yes
+		}
+		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+		has_modifier = pm_extradimensional_experimentation
+		"
+	}
+
+	show_in_tech = tech_fe_lab_2
+}
+
+building_fe_mine_1 = {
+	base_buildtime = @b2_time
+	can_build = yes
+	can_demolish = yes
+
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_mine_1
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_mine_1_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	inline_script = {
+		script = berg_jobs_group/miner_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+			volatile_motes = @fe_sr_cost
+		}
+		upkeep = {
+			volatile_motes = 2
+			alloys = @b3_alloy_upkeep
+			energy = 30
+		}
+		produces = {
+			minerals = 50
+		}
+	}
+
+	upgrades = {
+		building_fe_mine_2
+	}
+
+	show_in_tech = tech_fe_mine_1
+}
+
+building_fe_mine_2 = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = resource
+
+	potential = {
+		exists = owner
+		owner = {
+			OR = {
+				is_fallen_empire = yes
+				has_technology = tech_fe_mine_2
+				AND = {
+					berg_has_rebe_mod = yes
+					has_country_flag = fe_mine_2_can_build
+				}
+			}
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+	}
+
+	destroy_trigger = {
+		always = no
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = @b3_minerals
+		}
+		upkeep = {
+			volatile_motes = 2
+			alloys = @b3_alloy_upkeep
+			energy = 30
+		}
+		produces = {
+			minerals = 150
+		}
+	}
+	inline_script = {
+		script = berg_jobs_group/miner_add
+		AMOUNT = @fe_jobs
+		MULT = 1
+		DESC = with
+		TRIGGER = ""
+	}
+
+	show_in_tech = tech_fe_mine_2
+}

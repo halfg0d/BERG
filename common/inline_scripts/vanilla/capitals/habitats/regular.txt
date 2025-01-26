@@ -29,6 +29,10 @@ inline_script = {
 	DESC = no
 	TRIGGER = "
 	berg_HCJT_can_politician = yes
+	NOR = {
+		planet = { has_planet_flag = toxic_knights_habitat }
+		owner = { has_origin = origin_toxic_knights }
+	}
 	"
 }
 # Toxic Knight
@@ -52,7 +56,10 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_HCJT_holy_civic = yes"
+	TRIGGER = "
+	berg_HCJT_holy_civic = yes
+	planet = { is_toxic_habitat = no }
+	"
 }
 # Elite
 inline_script = {
@@ -60,7 +67,10 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_HCJT_noble_civic = yes"
+	TRIGGER = "
+	berg_HCJT_noble_civic = yes
+	planet = { is_toxic_habitat = no }
+	"
 }
 # Additional Nobles Jobs from Cyber Imperial Governments
 inline_script = {
@@ -78,17 +88,22 @@ inline_script = {
 	JOB = noble
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
-	TRIGGER = "OR = {
+	TRIGGER = "
+	OR = {
 		berg_HCJT_noble_civic = yes
 		owner = { is_cyber_imperial = yes }
-	}"
+	}
+	planet = { is_toxic_habitat = no }"
 }
 # Technocracy
 inline_script = {
 	script = berg_jobs_group/head_researcher_add
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
-	TRIGGER = "berg_HCJT_techno_civic = yes"
+	TRIGGER = "
+	berg_HCJT_techno_civic = yes
+	planet = { is_toxic_habitat = no }
+	"
 	DESC = with
 }
 # Merchant Guilds
@@ -97,7 +112,10 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_HCJT_merchant_civic = yes"
+	TRIGGER = "
+	berg_HCJT_merchant_civic = yes
+	planet = { is_toxic_habitat = no }
+	"
 }
 # Corporate Empire
 inline_script = {
@@ -167,7 +185,10 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_HCJT_military_dictatorship_civic = yes"
+	TRIGGER = "
+	berg_HCJT_military_dictatorship_civic = yes
+	planet = { is_toxic_habitat = no }
+	"
 }
 # Supervisor
 inline_script = {
@@ -175,7 +196,10 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "berg_HCJT_supervisor_civic = yes"
+	TRIGGER = "
+	berg_HCJT_supervisor_civic = yes
+	planet = { is_toxic_habitat = no }
+	"
 }
 # Enlightment
 inline_script = {
@@ -209,10 +233,12 @@ inline_script = {
 	MULT = 1
 	AMOUNT = @berg_capital_habitat_capital_secondary_job_t$tier$
 	DESC = with
-	TRIGGER = "exists = owner
+	TRIGGER = "
+	exists = owner
 	owner = {
 		is_bugged_governmental_militarist = yes
-	}"
+	}
+	planet = { is_toxic_habitat = no }"
 }
 # Thinker
 inline_script = {
