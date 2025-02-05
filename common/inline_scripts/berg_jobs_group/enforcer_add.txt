@@ -7,7 +7,7 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	is_gestalt = no
+	owner = { is_gestalt = no }
 	"
 }
 # Patrol Drone
@@ -18,7 +18,7 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	is_gestalt = yes
+	owner = { is_gestalt = yes }
 	"
 }
 # Fe Protector

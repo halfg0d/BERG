@@ -81,3 +81,4 @@ mem_has_shield_building = { always = no }
 is_bugged_functional_architecture = { always = no }
 is_gestalt = { has_ethic = ethic_gestalt_consciousness }
 has_rebe_mod = { always = no }
+has_enigmatic_capital = { always = no }

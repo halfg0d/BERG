@@ -1308,7 +1308,7 @@ building_master_archive = {
 		AMOUNT = @fe2_jobs
 		MULT = 1
 		DESC = with
-		TRIGGER = "is_regular_empire = no" # Regular gets head researcher
+		TRIGGER = "owner = { is_regular_empire = no }" # Regular gets head researcher
 	} 
 	inline_script = {
 		script = berg_jobs_group/head_researcher_add
@@ -3656,7 +3656,7 @@ building_fe_lab_1 = {
 		owner = {
 			is_galactic_community_member = yes
 		}
-		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+		is_active_resolution = \"resolution_galacticstudies_extradimensional_experimentation\"
 		has_modifier = pm_extradimensional_experimentation
 		"
 	}

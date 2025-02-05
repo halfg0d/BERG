@@ -29,6 +29,9 @@ berg_has_avb_mod = {
 berg_has_acot_mod = {
 	has_acot = yes
 }
+berg_has_aot_mod = {
+	has_global_flag = has_aot_mod
+}
 berg_has_osa_mod = {
 	has_global_flag = osa_active
 }

@@ -1,26 +1,52 @@
 planet_modifier = {
-	job_squire_add = @berg_government_order_keep_squire_t$tier$
-	job_knight_add = @berg_government_order_keep_knight_t$tier$
-	job_knight_per_pop = @berg_government_order_keep_per_pop_t$tier$
 
 	planet_immigration_pull_add = @berg_government_order_keep_immigration_t$tier$
 	planet_resettlement_unemployed_destination_mult = @berg_government_order_keep_resettlement_t$tier$
 }
-
+# Vanilla
+inline_script = {
+	script = berg_jobs_group/squire_add
+	AMOUNT = @berg_government_order_keep_squire_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = " "
+}
+inline_script = {
+	script = berg_jobs_group/knight_add
+	AMOUNT = @berg_government_order_keep_knight_t$tier$
+	MULT = 1
+	DESC = with
+	TRIGGER = " "
+}
 triggered_planet_modifier = {
 	potential = {
-		owner = { has_country_flag = toxoids_7060_A }
+		has_enigmatic_capital = no
 	}
-	modifier = { job_knight_add = 1 }
+	modifier = {
+		job_knight_per_pop = @berg_government_order_keep_per_pop_t$tier$
+	}
 }
-
+inline_script = {
+	script = berg_jobs_group/knight_add
+	AMOUNT = 1
+	MULT = 1
+	DESC = with
+	TRIGGER = "owner = { has_country_flag = toxoids_7060_A }"
+}
 # 1 for every 10 pop while quest active. 1 for 20 after quest.
+inline_script = {
+	script = berg_jobs_group/knight_add
+	AMOUNT = 1
+	MULT = 1
+	DESC = with
+	TRIGGER = "owner = { NOT = { has_country_flag = quest_over } }"
+}
 triggered_planet_modifier = {
 	potential = {
 		owner = { NOT = { has_country_flag = quest_over } }
+		has_enigmatic_capital = no
 	}
 	modifier = {
-		job_knight_add = 1
 		job_knight_per_pop = 0.05
 	}
 }
@@ -32,12 +58,6 @@ triggered_planet_modifier = {
 }
 triggered_desc = {
 	text = building_order_keep_effect
-}
-triggered_desc = {
-	text = job_knight_effect_desc
-}
-triggered_desc = {
-	text = job_squire_effect_desc
 }
 #ZEX
 triggered_planet_modifier = {
@@ -51,5 +71,77 @@ triggered_planet_modifier = {
 	}
 	modifier = {
 		planet_housing_add = 1
+	}
+}
+# ACOK Delta
+triggered_planet_modifier = {
+	potential = {
+		owner = { NOT = { has_country_flag = quest_over } }
+		berg_has_delta_capital = yes
+	}
+	modifier = {
+		job_delta_knight_per_pop = 0.05
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_delta_capital = yes
+	}
+	modifier = {
+		job_delta_knight_per_pop = @berg_government_order_keep_per_pop_t$tier$
+	}
+}
+# ACOK Alpha
+triggered_planet_modifier = {
+	potential = {
+		owner = { NOT = { has_country_flag = quest_over } }
+		berg_has_alpha_capital = yes
+	}
+	modifier = {
+		job_alpha_knight_per_pop = 0.05
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_alpha_capital = yes
+	}
+	modifier = {
+		job_alpha_knight_per_pop = @berg_government_order_keep_per_pop_t$tier$
+	}
+}
+# ACOK Phanon
+triggered_planet_modifier = {
+	potential = {
+		owner = { NOT = { has_country_flag = quest_over } }
+		berg_has_phanon_capital = yes
+	}
+	modifier = {
+		job_phanon_knight_per_pop = 0.05
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_phanon_capital = yes
+	}
+	modifier = {
+		job_phanon_knight_per_pop = @berg_government_order_keep_per_pop_t$tier$
+	}
+}
+# ACOK Stellarite
+triggered_planet_modifier = {
+	potential = {
+		owner = { NOT = { has_country_flag = quest_over } }
+		berg_has_stellarite_capital = yes
+	}
+	modifier = {
+		job_stellarite_knight_per_pop = 0.05
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		berg_has_stellarite_capital = yes
+	}
+	modifier = {
+		job_delta_knight_pejob_stellarite_knight_per_popr_pop = @berg_government_order_keep_per_pop_t$tier$
 	}
 }

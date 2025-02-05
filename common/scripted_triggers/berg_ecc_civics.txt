@@ -44,7 +44,7 @@ berg_ecc_functional_architecture_civic = {
 }
 berg_ecc_private_militaries_civic = {
 	berg_has_ecc_mod = yes
-	has_civic = civic_private_militaries
+	owner = { has_civic = civic_private_militaries }
 }
 berg_ecc_naturalism_civic = {
 	berg_has_ecc_mod = yes

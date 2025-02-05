@@ -7,6 +7,6 @@ inline_script = {
 	MULT = $MULT$
 	TRIGGER = "
 	$TRIGGER$
-	planet = { berg_is_resort_world = yes }
+	berg_is_resort_world = yes
 	"
 }

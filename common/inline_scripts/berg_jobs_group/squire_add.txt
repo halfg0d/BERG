@@ -1,0 +1,75 @@
+
+# Squire
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = squire
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	"
+}
+# Delta Squire
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = delta_squire
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+		berg_has_delta_capital = yes
+	"
+}
+# Alpha Squire
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = alpha_squire
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_alpha_capital = yes
+	"
+}
+# Phanon Squire
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = phanon_squire
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_phanon_capital = yes
+	"
+}
+# Stellarite Squire
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = stellarite_squire
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_stellarite_capital = yes
+	"
+}

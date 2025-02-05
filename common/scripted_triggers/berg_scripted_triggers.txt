@@ -425,3 +425,32 @@ berg_pt_clone_vat_slave = {
 	owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
 	berg_has_any_slave_processing_building = { need_active = no }
 }
+berg_has_delta_capital = {
+	berg_has_acot_mod = yes
+	OR = {
+		has_building = building_acot_dm_ancient_hive_cluster
+		has_building = building_acot_dm_ancient_control_center
+		has_building = building_acot_dm_ancient_palace
+	}
+}
+berg_has_alpha_capital = {
+	berg_has_acot_mod = yes
+	OR = {
+		has_building = building_acot_ae_ancient_hive_cluster
+		has_building = building_acot_ae_ancient_control_center
+		has_building = building_acot_ae_ancient_palace
+	}
+}
+berg_has_phanon_capital = {
+	berg_has_acot_mod = yes
+	OR = {
+		has_building = building_phanon_hive_cluster
+		has_building = building_phanon_control_center
+		has_building = building_phanon_palace
+	}
+}
+berg_has_stellarite_capital = {
+	berg_has_acot_mod = yes
+	berg_has_aot_mod = yes
+	has_stellarite_capital = yes
+}

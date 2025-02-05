@@ -6,19 +6,21 @@ inline_script = {
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
-	owner = { is_gestalt = no }
+	exists = owner
 	$TRIGGER$
+	owner = { is_gestalt = no }
 	"
 }
 
-# Warrior droe
+# Warrior drone
 inline_script = {
 	script = berg_jobs/berg_job_$DESC$_desc
 	JOB = warrior_drone
 	AMOUNT = $AMOUNT$
 	MULT = $MULT$
 	TRIGGER = "
-	owner = { is_gestalt = yes }
+	exists = owner
 	$TRIGGER$
+	owner = { is_gestalt = yes }
 	"
 }

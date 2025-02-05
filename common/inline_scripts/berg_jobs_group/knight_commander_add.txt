@@ -12,5 +12,70 @@ inline_script = {
 	owner = {
 		has_origin = origin_toxic_knights
 	}
+	has_enigmatic_capital = no
+	"
+}
+# Delta Knight Commander
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = delta_knight_commander
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_delta_capital = yes
+	"
+}
+# Alpha Knight Commander
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = alpha_knight_commander
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_alpha_capital = yes
+	"
+}
+# Phanon Knight Commander
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = phanon_knight_commander
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_phanon_capital = yes
+	"
+}
+# Stellarite Knight Commander
+inline_script = {
+	script = berg_jobs/berg_job_$DESC$_desc
+	JOB = stellarite_knight_commander
+	AMOUNT = $AMOUNT$
+	MULT = $MULT$
+	TRIGGER = "
+	$TRIGGER$
+	is_toxic_habitat = yes
+	exists = owner
+	owner = {
+		has_origin = origin_toxic_knights
+	}
+	berg_has_stellarite_capital = yes
 	"
 }
