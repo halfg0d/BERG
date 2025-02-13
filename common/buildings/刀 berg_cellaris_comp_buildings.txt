@@ -1,0 +1,1422 @@
+#########################
+## Cellaris Buildings
+#########################
+
+# Template: building_clone_vats
+building_cell_clone_vats = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	category = pop_assembly
+	base_cap_amount = 1
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_tradition = tr_genetics_adopt }
+		berg_has_resort_world = no
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+			NOT = { owner = { has_tradition = tr_genetics_adopt } }
+		}
+	}
+	planet_modifier = { planet_pop_assembly_organic_add = 3 }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = tech_gene_tailoring }
+			any_owned_pop = { has_auto_modding_trait = yes }
+		}
+		modifier = { auto_mod_monthly_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_overtuned }
+			any_owned_pop = { has_auto_modding_trait = yes }
+		}
+		modifier = { auto_mod_monthly_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_genetics_efficient_cloning }
+		}
+		modifier = { planet_pop_assembly_organic_add = 1.5 }
+	}
+	resources = {
+		category = planet_buildings_clone_vats
+		# Base cost
+		cost = { food = 550 }
+		# Org/Lith cost
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 500
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			energy = 500
+		}
+		# Base upkeep
+		upkeep = { energy = 2 }
+		# Org/Lith upkeep
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = no }
+			}
+			food = 30
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { is_lithoid_empire = yes }
+			}
+			minerals = 30
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			OR = {
+				has_building = building_robot_assembly_plant
+				AND = {
+					exists = assembling_species
+					assembling_species = { is_robotic_species = yes }
+				}
+			}
+		}
+		text = tooltip_organic_and_artificial_assembly_warning
+	}
+}
+
+# Template: building_bio_reactor
+
+building_cell_bio_reactor = {
+	building_sets = { cellaris_biomechanical }
+	icon = building_bio_reactor
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_ai = no }
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			is_planet_class = pc_machine
+			berg_is_resort_world = yes
+			owner = { is_ai = yes }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b1_minerals }
+		upkeep = { food = @b1_upkeep }
+	}
+	inline_script = {
+		script = jobs/farmers_add
+		FARMER_AMOUNT = 1
+		ANGLER_AMOUNT = 1
+	}
+	planet_modifier = {
+		planet_farmers_food_produces_add = -2
+		planet_farmers_energy_produces_add = 2
+	}
+	upgrades = { building_cell_bio_reactor_2 }
+	prerequisites = { "tech_bio_reactor" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+}
+
+# Template: building_bio_reactor_2
+
+building_cell_bio_reactor_2 = {
+	building_sets = { cellaris_biomechanical }
+	icon = building_bio_reactor_2
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+	allow = { has_upgraded_capital_cell = yes }
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			is_planet_class = pc_machine
+			berg_is_resort_world = yes
+			owner = { is_ai = yes }
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b2_minerals }
+		upkeep = { food = @b2_upkeep }
+	}
+	inline_script = {
+		script = jobs/farmers_add
+		FARMER_AMOUNT = 2
+		ANGLER_AMOUNT = 2
+	}
+	planet_modifier = {
+		planet_farmers_food_produces_add = -3
+		planet_farmers_energy_produces_add = 2
+		planet_farmers_exotic_gases_produces_add = 0.1
+	}
+	prerequisites = { tech_bio_reactor_2 }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+}
+
+# Template: building_institute
+
+building_cell_institute = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	empire_limit = { base = 1 }
+	icon = building_institute
+	category = research
+	potential = {
+		berg_has_cellaris_mod = yes
+		NOR = {
+			berg_is_resort_world = yes
+			berg_is_slave_world = yes
+			berg_is_penal_world = yes
+		}
+		exists = owner
+		owner = { is_regular_empire = yes }
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			berg_is_resort_world = yes
+			berg_is_slave_world = yes
+			berg_is_penal_world = yes
+			owner = { is_regular_empire = no }
+		}
+	}
+	convert_to = { building_cell_supercomputer }
+	allow = { has_major_upgraded_capital_cell = yes }
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+	country_modifier = {
+		country_scientist_cap_add = 1
+		all_technology_research_speed = 0.05
+	}
+	planet_modifier = {
+		job_head_researcher_add = 1
+	}
+	prerequisites = { "tech_global_research_initiative" }
+	triggered_desc = { text = job_head_researcher_effect_desc }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 30
+			}
+		}
+		physics_research = 5
+		society_research = 5
+		engineering_research = 5
+	}
+	on_built = {
+		owner = {
+			random_owned_planet = {
+				limit = { OR = { has_building = building_institute has_building = building_supercomputer } }
+				remove_building = building_institute
+				remove_building = building_supercomputer
+			}
+		}
+	}
+}
+
+# Template: building_supercomputer
+
+building_cell_supercomputer = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	empire_limit = { base = 1 }
+	icon = building_institute
+	category = research
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+		NOR = {
+			berg_is_resort_world = yes
+			berg_is_slave_world = yes
+			berg_is_penal_world = yes
+		}
+	}
+	allow = { has_major_upgraded_capital_cell = yes }
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			berg_is_resort_world = yes
+			berg_is_slave_world = yes
+			berg_is_penal_world = yes
+			owner = { is_regular_empire = yes }
+		}
+	}
+	convert_to = { building_cell_institute }
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+	country_modifier = {
+		country_scientist_cap_add = 1
+		all_technology_research_speed = 0.05
+	}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = 2
+	}
+	prerequisites = { "tech_global_research_initiative" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 20
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	ai_resource_production = {
+		trigger = {
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 40
+			}
+		}
+		physics_research = 3
+		society_research = 3
+		engineering_research = 3
+	}
+	on_built = {
+		owner = {
+			random_owned_planet = {
+				limit = { OR = { has_building = building_institute has_building = building_supercomputer } }
+				remove_building = building_institute
+				remove_building = building_supercomputer
+			}
+		}
+	}
+}
+
+# COSMIC STORMS DLC
+
+# Template: building_storm_attraction_center
+
+building_cell_storm_attraction = {
+	icon = building_storm_attraction_center
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = research
+	potential = {
+		berg_has_cellaris_mod = yes
+		NOR = {
+			berg_is_resort_world = yes
+			berg_is_slave_world = yes
+		}
+	}
+	allow = {
+		custom_tooltip =  {
+			fail_text = storm_attracting_allow
+			solar_system = {
+				system_has_storm_repelling_tech = no
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			trigger = {
+				exists = owner
+				NOT = { owner = { has_origin = origin_storm_chasers } }
+			}
+			minerals = @b1_minerals
+			rare_crystals = 25
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { has_origin = origin_storm_chasers }
+			}
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				NOT = { owner = { has_origin = origin_storm_chasers } }
+			}
+			energy = @b1_upkeep
+			rare_crystals = 0.75
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_origin = origin_storm_chasers }
+			}
+			energy = @b1_upkeep
+		}
+	}
+	prerequisites = { "tech_storm_manipulation" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	custom_tooltip = "building_cosmic_storm_attraction_center_tt"
+	upgrades = { "building_cell_advanced_storm_attraction" }
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b1_jobs
+	}
+	inline_script = { script = cosmic_storms/StormBuildingModifiers }
+	planet_modifier = { storm_attraction_field_modifier = 0.4 }
+	on_built = { create_influence_field_if_needed = yes }
+	on_enabled = { create_influence_field_if_needed = yes }
+	custom_storm_ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 2
+			AND = {
+				exists = owner
+				owner = { has_origin = origin_storm_chasers }
+			}
+		}
+		modifier = {
+			factor = 10
+			AND = {
+				exists = owner
+				owner = { is_astrometeorologist_empire = yes  }
+			}
+		}
+		modifier = {
+			factor = 2
+			AND = {
+				exists = owner
+				owner = { is_storm_callers_empire = yes  }
+			}
+		}
+		modifier = {
+			add = 10
+			AND = {
+				exists = owner
+				owner = { num_storm_exploitation_buildings >= 1  }
+			}
+		}
+		modifier = {
+			set = 0
+			solar_system = {
+				cosmic_storm_influence_value > 0.75
+			}
+		}
+	}
+}
+
+# Template: building_advanced_storm_attraction_center
+
+building_cell_advanced_storm_attraction = {
+	icon = building_advanced_storm_attraction_center
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = research
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			trigger = {
+				exists = owner
+				NOT = { owner = { has_origin = origin_storm_chasers } }
+			}
+			minerals = @b2_minerals
+			rare_crystals = 50
+		}
+		cost = {
+			trigger = {
+				exists = owner
+				owner = { has_origin = origin_storm_chasers }
+			}
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				NOT = { owner = { has_origin = origin_storm_chasers } }
+			}
+			energy = @b1_upkeep
+			rare_crystals = 2.25
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_origin = origin_storm_chasers }
+			}
+			energy = @b1_upkeep
+		}
+	}
+	prerequisites = { "tech_advanced_storm_manipulation" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	allow = {
+		custom_tooltip =  {
+			fail_text = storm_attracting_allow
+			solar_system = {
+				system_has_storm_repelling_tech = no
+			}
+		}
+	}
+	planet_modifier = { storm_attraction_field_modifier = 0.6 }
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b2_jobs
+	}
+	inline_script = { script = cosmic_storms/StormBuildingModifiers }
+	custom_storm_ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 10
+			AND = {
+				exists = owner
+				owner = { has_origin = origin_storm_chasers }
+			}
+		}
+	}
+	custom_tooltip = "building_cosmic_storm_advanced_attraction_center_tt"
+}
+
+# Template: building_storm_repellent_center
+
+building_cell_storm_repellent = {
+	icon = building_storm_repellent_center
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = research
+	prerequisites = { "tech_storm_manipulation" }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	allow = {
+		custom_tooltip =  {
+			fail_text = storm_repellent_allow
+			solar_system = { system_has_storm_attraction_tech = no }
+		}
+	}
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			minerals = @b1_minerals
+			rare_crystals = 25
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			rare_crystals = 0.75
+		}
+	}
+	upgrades = { "building_cell_advanced_storm_repellent" }
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b1_jobs
+	}
+	inline_script = { script = cosmic_storms/StormBuildingModifiers }
+	planet_modifier = { storm_repelling_field_modifier = 0.4 }
+	on_built = { create_influence_field_if_needed = yes }
+	on_enabled = { create_influence_field_if_needed = yes }
+	custom_storm_ai_weight = {
+		weight = 0
+		modifier = {
+			add = 10
+			AND = {
+				solar_system = {
+					exists = owner
+					owner = { num_cosmic_storms_encountered >=1 }
+				}
+			}
+		}
+		modifier = {
+			add = 10
+			AND = {
+				exists = owner
+				owner = { num_cosmic_storms_encountered >= 2 }
+				solar_system = {
+					is_on_border = yes
+				}
+			}
+		}
+		modifier = {
+			add = 10
+			exists = owner
+			owner = { num_storm_exploitation_buildings < 2 }
+		}
+	}
+	custom_tooltip = "building_cosmic_storm_repellent_center_tt"
+}
+
+# Template: building_advanced_storm_repellent_center
+
+building_cell_advanced_storm_repellent = {
+	icon = building_advanced_storm_repellent_center
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = research
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = 50
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			rare_crystals = 2.25
+		}
+	}
+	prerequisites = { "tech_advanced_storm_manipulation" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b2_jobs
+	}
+	inline_script = { script = cosmic_storms/StormBuildingModifiers }
+	planet_modifier = { storm_repelling_field_modifier = 0.6 }
+	custom_tooltip = "building_cosmic_storm_advanced_repellent_center_tt"
+}
+
+# Template: building_storm_resistant_production
+
+building_cell_storm_resistant_production = {
+	icon = building_storm_resistant_production
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+		if = {
+			limit = { owner = { is_ai = yes } }
+			solar_system = { system_has_storm_repelling_tech = no }
+		}
+	}
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = { minerals = @b1_minerals }
+		upkeep = { energy = @b1_upkeep }
+		upkeep = {
+			trigger = { has_modifier = storm_hunkered_down_modifier }
+			energy = @b1_upkeep
+		}
+	}
+	prerequisites = { "tech_industrial_storm_protection" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	upgrades = { "building_cell_advanced_storm_resistant_production" }
+	inline_script = { script = cosmic_storms/StormBuildingModifiers }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			solar_system = { has_star_flag = storm_system }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 1
+			planet_farmers_food_produces_add = 1
+			planet_technician_energy_produces_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = { job_clerk_add = @b1_jobs }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = "job_clerk_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = { job_maintenance_drone_add = @b1_jobs }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = "job_maintenance_drone_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+			    is_galactic_community_member = yes
+			}
+		}
+		modifier = {
+			planet_miners_produces_mult = 1
+			planet_farmers_produces_mult = 1
+			planet_technician_produces_mult = 1
+		}
+		mult = value:storm_building_production_multiplier
+	}
+	custom_tooltip = "building_storm_resistant_production_tt"
+	custom_storm_ai_weight = {
+		weight = 0
+		modifier = {
+			add = 30
+			AND = {
+				exists = owner
+				owner = { num_unique_cosmic_storms_encountered >= 2 }
+			}
+		}
+	}
+	destroy_trigger = { influence_building_destruction_trigger = yes }
+}
+
+# Template: building_advanced_storm_resistant_production
+
+building_cell_advanced_storm_resistant_production = {
+	icon = building_advanced_storm_resistant_production
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+		if = {
+			limit = { owner = { is_ai = yes } }
+			solar_system = {
+				system_has_storm_repelling_tech = no
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings_storm_tech
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = { energy = @b2_upkeep }
+		upkeep = {
+			trigger = { has_modifier = storm_hunkered_down_modifier }
+			energy = @b2_upkeep
+		}
+	}
+	prerequisites = { "tech_advanced_industrial_storm_protection" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		always = no
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			solar_system = { is_inside_storm = yes }
+		}
+		modifier = {
+			planet_miners_minerals_produces_add = 2
+			planet_farmers_food_produces_add = 2
+			planet_technician_energy_produces_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = { job_clerk_add = @b2_jobs }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = "job_clerk_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = { job_maintenance_drone_add = @b2_jobs }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = "job_maintenance_drone_effect_desc"
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_galactic_community_member = yes }
+		}
+		modifier = {
+			planet_miners_produces_mult = 1
+			planet_farmers_produces_mult = 1
+			planet_technician_produces_mult = 1
+		}
+		mult = value:storm_building_production_multiplier
+	}
+	inline_script = { script = cosmic_storms/StormBuildingModifiers }
+	custom_tooltip = "building_advanced_storm_resistant_production_tt"
+	custom_storm_ai_weight = {
+		weight = 0
+		modifier = {
+			add = 20
+			AND = {
+				exists = owner
+				owner = { num_unique_cosmic_storms_encountered >= 3 }
+			}
+		}
+	}
+	destroy_trigger = { influence_building_destruction_trigger = yes }
+}
+
+# EVENT BUILDINGS
+
+# Template: building_waste_reprocessing_center
+
+building_cell_waste_reprocessing = {
+	icon = building_waste_reprocessing_center
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	can_build = yes
+	can_demolish = yes
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+		owner = { has_country_flag = bought_waste_reprocessing_center }
+		berg_is_slave_world = no
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	planet_modifier = {
+		planet_amenities_add = 5
+		job_technician_drone_add = 2
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = 100 }
+		produces = {
+			minerals = 10
+			energy = 10
+		}
+	}
+	triggered_desc = { text = job_technician_drone_effect_desc }
+}
+
+# Template: building_augmentation_center
+# CYBERIZATION SITUATION
+
+building_cell_augmentation_center = {
+	icon = building_augmentation_center
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b3_time
+	category = pop_assembly
+	base_cap_amount = 1
+
+	desc = { # Regular empire, default
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_origin = origin_cybernetic_creed }
+				NOR = {
+					has_country_flag = cyber_control_government
+					has_country_flag = cyber_control_corporate
+					has_country_flag = cyber_control_independent
+				}
+			}
+		}
+		text = building_augmentation_center_desc
+	}
+	desc = { # Regular empire, government control
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_origin = origin_cybernetic_creed }
+				has_country_flag = cyber_control_government
+			}
+		}
+		text = building_augmentation_center_government_desc
+	}
+	desc = { # Regular empire, corporate control
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_origin = origin_cybernetic_creed }
+				has_country_flag = cyber_control_corporate
+			}
+		}
+		text = building_augmentation_center_corporate_desc
+	}
+	desc = { # Regular empire, independent control
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				NOT = { has_origin = origin_cybernetic_creed }
+				has_country_flag = cyber_control_independent
+			}
+		}
+		text = building_augmentation_center_independent_desc
+	}
+	desc = { # Cybernetic Creed
+		trigger = {
+			exists = owner
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		text = building_augmentation_center_creed_desc
+	}
+	desc = { # Hive
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = building_augmentation_center_hive_desc
+	}
+
+	potential = {
+		berg_has_cellaris_mod = yes
+		owner = {
+			OR = {
+				has_country_flag = augmentation_center_available
+				has_active_tradition = tr_cybernetics_augmentation_centers
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			NOR = {
+				has_country_flag = augmentation_center_available
+				has_active_tradition = tr_cybernetics_augmentation_centers
+			}
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cybernetics_integrated_anatomy
+			}
+			any_owned_pop = { has_auto_modding_trait = yes }
+		}
+		modifier = {
+			auto_mod_monthly_add = 6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_augmentor_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_cybernetics_augmentation_overload }
+		}
+		modifier = {
+			job_augmentor_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_augmentor_drone_add = 2
+		}
+	}
+
+	### CONTROLLING SECTOR MODIFIERS ###
+	triggered_planet_modifier = { # Government control, after Cyberization
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_augmentation_center_government
+			}
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.10
+		}
+	}
+	triggered_planet_modifier = { # Corporate control, after Cyberization
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_augmentation_center_corporate
+			}
+		}
+		modifier = {
+			planet_jobs_consumer_goods_produces_mult = 0.10
+		}
+	}
+	triggered_planet_modifier = { # Independent control, after Cyberization
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_augmentation_center_independent
+			}
+		}
+		modifier = {
+			planet_jobs_upkeep_mult = -0.05
+		}
+	}
+
+	### JOB STRATA FOCUS MODIFIERS ###
+	triggered_planet_modifier = { # Ruler focus
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_focus_rulers
+			}
+		}
+		modifier = {
+			planet_jobs_ruler_produces_mult = 0.10
+		}
+	}
+	triggered_planet_modifier = { # Specialist focus
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_focus_specialists
+			}
+		}
+		modifier = {
+			planet_jobs_specialist_produces_mult = 0.10
+		}
+	}
+	triggered_planet_modifier = { # Worker focus
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_focus_workers
+			}
+		}
+		modifier = {
+			planet_jobs_worker_produces_mult = 0.10
+		}
+	}
+	triggered_planet_modifier = { # General focus
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = cyber_focus_everyone
+			}
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.05
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b3_minerals }
+		upkeep = { energy = @b3_upkeep }
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+			is_cyborg_empire = yes
+		}
+		text = job_augmentor_growth_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+			is_cyborg_empire = no
+		}
+		text = job_augmentor_research_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_cyborg_empire = yes
+				can_assemble_hive_pop = yes
+			}
+		}
+		text = job_augmentor_drone_assembly_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			NOR = {
+				is_cyborg_empire = yes
+				can_assemble_hive_pop = yes
+			}
+		}
+		text = job_augmentor_drone_research_effect_desc
+	}
+	is_essential = yes
+}
+
+# UNITY BOOST
+
+# Template: building_autocurating_vault , building_alpha_hub , building_corporate_vault , building_citadel_of_faith
+
+building_cell_unity_vault = {
+	icon = building_autocurating_vault
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	empire_limit = { base = 1 }
+	category = unity
+	allow = { has_major_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_country_flag = cellaris_unity_vault } # Added via event after researching the original techs.
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			rare_crystals = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			rare_crystals = @b2_rare_upkeep
+		}
+	}
+	country_modifier = {
+		country_official_cap_add = 1
+		country_unity_produces_mult = 0.05
+	}
+
+# Regular
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_megacorp = no
+				is_spiritualist = no
+			}
+		}
+		modifier = { job_politician_add = 1 }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_megacorp = no
+				is_spiritualist = no
+			}
+		}
+		text = job_politician_effect_desc
+	}
+
+# Gestalt
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = { job_evaluator_add = 2 }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_evaluator_effect_desc
+	}
+
+# Megacorp
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+				is_spiritualist = no
+			}
+		}
+		modifier = { job_executive_add = 1 }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = no
+				is_spiritualist = no
+			}
+		}
+		text = job_executive_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+				is_spiritualist = no
+			}
+		}
+		modifier = { job_steward_add = 2 }
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_megacorp = yes
+				is_worker_coop_empire = yes
+				is_spiritualist = no
+			}
+		}
+		text = job_steward_effect_desc
+	}
+
+# Spiritualist
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		pop_ethic_spiritualist_attraction_mult = 0.20
+		planet_administrators_produces_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		job_high_priest_add = 2
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_spiritualist = yes }
+		}
+		text = job_high_priest_effect_desc
+	}
+
+	on_built = {
+		owner = {
+			random_owned_planet = {
+				limit = {
+					OR = {
+						has_building = building_autocurating_vault
+						has_building = building_citadel_of_faith
+						has_building = building_corporate_vault
+						has_building = building_alpha_hub
+					}
+				}
+				remove_building = building_autocurating_vault
+				remove_building = building_citadel_of_faith
+				remove_building = building_corporate_vault
+				remove_building = building_alpha_hub
+			}
+		}
+	}
+}
+
+# CIVIC BUILDINGS
+
+# Template: building_hive_transcendental_retreat
+
+building_cell_transcendental_retreat = {
+	icon = building_hive_transcendental_retreat
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	base_cap_amount = 1
+	category = pop_assembly
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_valid_civic = civic_hive_natural_design }
+		berg_has_resort_world = no
+		berg_is_slave_world = no
+	}
+	allow = { always = yes }
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { NOT = { has_valid_civic = civic_hive_natural_design } }
+			berg_is_slave_world = yes
+			berg_is_resort_world = yes
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner }
+		pop_growth_speed = 0.025
+		planet_pop_assemblers_unity_produces_add = 1
+		mult = owner.value:transcendental_growth
+	}
+	triggered_planet_modifier = {
+		potential = { always = yes }
+		planet_jobs_produces_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				is_scope_valid = no
+				AND = {
+					exists = owner
+					owner = { NOT = { has_origin = origin_progenitor_hive } }
+				}
+			}
+		}
+		modifier = { job_spawning_drone_add = 1 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_progenitor_hive }
+		}
+		modifier = { job_offspring_drone_add = 1 }
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b3_minerals }
+		upkeep = { energy = @b3_upkeep }
+	}
+	triggered_desc = {
+		trigger = { is_scope_valid = yes }
+		text = natural_design_hive_ascension_bonus
+	}
+	triggered_desc = {
+		trigger = {
+			is_scope_valid = no
+		}
+		text = natural_design_hive_ascension_bonus_no_scope
+	}
+	triggered_desc = {
+		trigger = {
+			OR = {
+				is_scope_valid = no
+				AND = {
+					exists = owner
+					owner = { NOT = { has_origin = origin_progenitor_hive } }
+				}
+			}
+		}
+		text = job_spawning_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_origin = origin_progenitor_hive }
+		}
+		text = job_offspring_drone_effect_desc
+	}
+	prerequisites = {}
+}

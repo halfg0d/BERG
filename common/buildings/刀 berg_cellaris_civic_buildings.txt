@@ -1,0 +1,128 @@
+#########################
+## Cellaris Buildings
+#########################
+
+building_cell_neuron_node = {
+	base_cap_amount = 1
+	base_buildtime = 730
+	exempt_from_ai_planet_specialization = yes
+	category = government
+	resources = {
+		category = planet_buildings
+		cost = { food = 650 exotic_gases = 25 }
+		upkeep = { food = 6 }
+	}
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_civic = civic_cell_sub_mind }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_cell_sub_mind }
+		}
+		modifier = { job_cellaris_sensory_drone_add = 3 }
+	}
+	triggered_desc = { text = job_cellaris_sensory_drone_effect }
+}
+
+building_cell_neuron_node_bm = {
+	building_sets = { cellaris_biomechanical }
+	base_cap_amount = 1
+	base_buildtime = 730
+	exempt_from_ai_planet_specialization = yes
+	category = government
+	resources = {
+		category = planet_buildings
+		cost = { food = 650 exotic_gases = 25 }
+		upkeep = { energy = 3 food = 3 }
+	}
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_civic = civic_cell_sub_mind }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_cell_sub_mind }
+		}
+		modifier = { job_cellaris_sensory_drone_add = 3 }
+	}
+	triggered_desc = { text = job_cellaris_sensory_drone_effect }
+}
+
+building_cell_bio_engineers = {
+	base_cap_amount = 1
+	base_buildtime = 730
+	exempt_from_ai_planet_specialization = yes
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_civic = civic_cell_engineers }
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 650 exotic_gases = 25 }
+		upkeep = { food = 10 }
+	}
+	triggered_desc = { text = building_cell_bio_engineers_effect }
+}
+
+building_cell_bio_engineers_bm = {
+	building_sets = { cellaris_biomechanical }
+	base_cap_amount = 1
+	base_buildtime = 730
+	exempt_from_ai_planet_specialization = yes
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_civic = civic_cell_engineers }
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 650 exotic_gases = 25 }
+		upkeep = { food = 10 }
+	}
+	triggered_desc = { text = building_cell_bio_engineers_effect }
+}
+
+building_cell_healthcare = {
+	base_cap_amount = 1
+	base_buildtime = 730
+	exempt_from_ai_planet_specialization = yes
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_country_flag = cellaris_got_infected }
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 650 exotic_gases = 25 }
+		upkeep = { energy = 6 exotic_gases = 1 }
+	}
+	triggered_desc = { text = building_cell_healthcare_effect }
+}
+
+building_cell_healthcare_bm = {
+	building_sets = { cellaris_biomechanical }
+	base_cap_amount = 1
+	base_buildtime = 730
+	exempt_from_ai_planet_specialization = yes
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { has_country_flag = cellaris_got_infected }
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 650 exotic_gases = 25 }
+		upkeep = { energy = 6 exotic_gases = 1 }
+	}
+	triggered_desc = { text = building_cell_healthcare_effect }
+}

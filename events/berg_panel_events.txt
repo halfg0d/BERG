@@ -26,6 +26,7 @@ country_event = {
 		change_berg_panel_flag_status = { FLAG = vanilla STATUS = on }
 		change_berg_panel_flag_status = { FLAG = fe STATUS = on }
 		change_berg_panel_flag_status = { FLAG = sparble STATUS = on }
+		change_berg_panel_flag_status = { FLAG = cellaris STATUS = on }
 	}
 }
 # Disable
@@ -38,6 +39,7 @@ country_event = {
 		change_berg_panel_flag_status = { FLAG = vanilla STATUS = off }
 		change_berg_panel_flag_status = { FLAG = fe STATUS = off }
 		change_berg_panel_flag_status = { FLAG = sparble STATUS = off }
+		change_berg_panel_flag_status = { FLAG = cellaris STATUS = off }
 	}
 }
 country_event = {
@@ -149,6 +151,36 @@ country_event = {
 		hidden_effect = {
 			remove_country_flag = berg_panel_sparble_on
 			set_country_flag = berg_panel_sparble_off
+			country_event = {
+				id = berg_panel.100
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_berg_panel_enabled = yes
+			berg_has_cellaris_mod = yes
+			has_country_flag = berg_panel_cellaris_on
+		}
+		name = berg_panel.100.cellaris_on
+		hidden_effect = {
+			remove_country_flag = berg_panel_cellaris_on
+			set_country_flag = berg_panel_cellaris_off
+			country_event = {
+				id = berg_panel.100
+			}
+		}
+	}
+	option = {
+		trigger = {
+			is_berg_panel_enabled = yes
+			berg_has_cellaris_mod = yes
+			has_country_flag = berg_panel_cellaris_off
+		}
+		name = berg_panel.100.cellaris_off
+		hidden_effect = {
+			remove_country_flag = berg_panel_cellaris_off
+			set_country_flag = berg_panel_cellaris_on
 			country_event = {
 				id = berg_panel.100
 			}

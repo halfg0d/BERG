@@ -425,6 +425,15 @@ berg_pt_clone_vat_slave = {
 	owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
 	berg_has_any_slave_processing_building = { need_active = no }
 }
+berg_is_cellaris_scourge = {
+	has_origin = origin_cellaris_scourge
+}
+berg_has_cell_biomech_world = {
+	is_hive_empire = yes
+	any_owned_planet = {
+		is_planet_class = pc_cell_biomechanical
+	}
+}
 berg_has_delta_capital = {
 	berg_has_acot_mod = yes
 	OR = {

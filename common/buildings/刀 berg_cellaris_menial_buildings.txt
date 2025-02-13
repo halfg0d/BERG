@@ -1,0 +1,381 @@
+#########################
+## Cellaris Buildings
+#########################
+
+# ENERGY
+building_cell_grid_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = { is_ai = yes }
+			has_any_generator_district_or_building = no
+		}
+	}
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	inline_script = {
+		script = vanilla/resource/berg_energy_grid_script
+		tier = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 450 }
+		upkeep = { energy = 2 }
+		inline_script = {
+			script = resources_scripts/osa_upkeep
+			category = resource
+			building = energy_grid
+			tier = 1
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus
+			tier = 1
+			material = exotic_gases
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus_osa
+			tier = 1
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "berg_has_osa_mod = yes"
+			resource = energy
+			amount = @berg_resource_energy_grid_osa_produce_t1
+		}
+	}
+	prerequisites = { tech_power_hub_1 }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_has_cell_biomech_world = yes
+	}
+	upgrades = { building_cell_grid_2 }
+}
+
+building_cell_grid_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+	allow = { has_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = { is_ai = yes }
+			has_any_generator_district_or_building = no
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_energy_grid_script
+		tier = 2
+	}
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = resources_scripts/basic
+			category = resource
+			building = energy_grid
+			tier = 2
+		}
+		inline_script = {
+			script = resources_scripts/rare
+			category = resource
+			building = energy_grid
+			tier = 2
+			material = exotic_gases
+		}
+		inline_script = {
+			script = resources_scripts/osa_upkeep
+			category = resource
+			building = energy_grid
+			tier = 2
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus
+			tier = 2
+			material = exotic_gases
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus_osa
+			tier = 2
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "berg_has_osa_mod = yes"
+			resource = energy
+			amount = @berg_resource_energy_grid_osa_produce_t2
+		}
+	}
+	prerequisites = { tech_power_hub_2 }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+}
+
+# MINERALS
+
+building_cell_mining_1 = {
+	building_sets = { cellaris_biomechanical }
+	desc = { text = building_mineral_purification_plant_desc }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = { is_ai = yes }
+			has_any_mining_district = no
+		}
+	}
+	potential = {
+		berg_has_cell_biomech_world = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	inline_script = {
+		script = vanilla/resource/berg_mineral_purification_script
+		tier = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 200 }
+		upkeep = { energy = 2 }
+		inline_script = {
+			script = resources_scripts/osa_upkeep_energy
+			category = resource
+			building = mineral_purification
+			tier = 1
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus
+			tier = 1
+			material = volatile_motes
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus_osa
+			tier = 1
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "berg_has_osa_mod = yes"
+			resource = minerals
+			amount = @berg_resource_mineral_purification_osa_produce_t1
+		}
+	}
+	prerequisites = { tech_mineral_purification_1 }
+	show_tech_unlock_if = { has_origin = origin_cellaris_scourge }
+	upgrades = { building_cell_mining_2 }
+}
+
+building_cell_mining_2 = {
+	building_sets = { cellaris_biomechanical }
+	desc = { text = building_scrap_processing_hub_desc }
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	allow = {
+		has_upgraded_capital_cell = yes
+	}
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = { is_ai = yes }
+			has_any_mining_district = no
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_mineral_purification_script
+		tier = 2
+	}
+	resources = {
+		category = planet_buildings
+		inline_script = {
+			script = resources_scripts/basic
+			category = resource
+			building = mineral_purification
+			tier = 2
+		}
+		inline_script = {
+			script = resources_scripts/rare
+			category = resource
+			building = mineral_purification
+			tier = 2
+			material = volatile_motes
+		}
+		inline_script = {
+			script = resources_scripts/osa_upkeep_energy
+			category = resource
+			building = mineral_purification
+			tier = 2
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus
+			tier = 2
+			material = volatile_motes
+		}
+		inline_script = {
+			script = resources_scripts/ringworld_bonus_osa
+			tier = 2
+		}
+		inline_script = {
+			script = resources_scripts/produce
+			trigger = "berg_has_osa_mod = yes"
+			resource = minerals
+			amount = @berg_resource_mineral_purification_osa_produce_t2
+		}
+	}
+	prerequisites = { tech_mineral_purification_2 }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+}
+
+# FOOD
+
+building_cell_farming_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+			AND = {
+				owner = { is_ai = yes }
+				has_any_farming_district_or_buildings = no
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_food_processing_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/food_processing
+		tier = 1
+	}
+	upgrades = { building_cell_farming_2 }
+	prerequisites = { "tech_food_processing_1" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+}
+
+building_cell_farming_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	allow = {
+		exists = owner
+		has_upgraded_capital_cell = yes
+	}
+	destroy_trigger = {
+		OR = {
+			AND = {
+				exists = owner
+				OR = {
+					owner = {
+						is_ai = yes
+						country_uses_food = no
+					}
+					AND = {
+						owner = { is_ai = yes }
+						has_any_farming_district_or_buildings = no
+					}
+				}
+			}
+			berg_is_machine_world = yes
+			berg_is_resort_world = yes
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_food_processing_script
+		tier = 2
+	}
+	inline_script = {
+		script = building_resources/vanilla/food_processing
+		tier = 2
+	}
+	prerequisites = { "tech_food_processing_2" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+}
+
+# FOOD - SIMPLE
+
+building_cell_hydroponics = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	category = resource
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+    }
+	allow = {}
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = {
+				is_ai = yes
+				country_uses_food = no
+			}
+			planet = {
+				berg_is_habitat = no
+				free_building_slots = 0
+				owner = {
+					is_ai = yes
+					has_monthly_income = {
+						resource = food
+						value > 100
+					}
+				}
+			}
+		}
+	}
+	inline_script = {
+		script = vanilla/resource/berg_hydroponics_script
+		tier = 1
+	}
+	inline_script = {
+		script = building_resources/vanilla/hydroponics
+		tier = 1
+	}
+	prerequisites = { "tech_hydroponics" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+}

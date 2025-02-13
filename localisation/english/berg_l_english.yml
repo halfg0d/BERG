@@ -66,9 +66,18 @@ l_english:
  berg_panel.100.fe_off:0 "Fallen $berg_panel_button_off$"
  berg_panel.100.sparble_on:0 "Sparble Buildings $berg_panel_button_on$"
  berg_panel.100.sparble_off:0 "Sparble Buildings $berg_panel_button_off$"
+ berg_panel.100.cellaris_on:0 "Cellaris Buildings $berg_panel_button_on$"
+ berg_panel.100.cellaris_off:0 "Cellaris Buildings $berg_panel_button_off$"
  berg_panel.100.done:0 "Done"
  edict_berg_panel_open_edict:0 "Open Berg Panel"
  edict_berg_panel_open_edict_desc:0 "Open berg panel which allow to disable buildings from certain category."
+# Cellaris + AVB
+ requires_building_fully_cell_capital: "§RRequires a §Y$building_avb_cell_capital_3$§! on the planet.§!"
+ requires_building_upg_4_cell_capital: "§RRequires a §Y$building_avb_cell_capital_4$§! on the planet.§!"
+ building_avb_cell_capital_3:0 "Hive Locus"
+ building_avb_cell_capital_3_desc:0 "This humming conglomeration of organizational facilities governs our ever expanding mind, focusing and ordering executive tasks and coordinating trillions of drones in real time with ease."
+ building_avb_cell_capital_4:0 "Hive Apex"
+ building_avb_cell_capital_4_desc:0 "The beating heart from which our highest level coordination routines are devised and distributed. This sprawling complex dwarfs every other structure on the planet, radiating the intelligence and authority that the teeming quintillions of drones enforce."
 # Toxic baths
  job_bath_attendant_machine_effect_desc:0 "$job_toxic_baths_effect_machine_desc$"
  job_bath_attendant_individual_machine_effect_desc:0 "$job_toxic_baths_effect_machine_desc_2$"

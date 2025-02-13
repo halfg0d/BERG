@@ -731,10 +731,7 @@ building_energy_grid = {
 
 	destroy_trigger = {
 		OR = {
-			OR = {
-				berg_is_resort_world = yes
-				
-			}
+			berg_is_resort_world = yes
 			AND = {
 				exists = owner
 				owner = {

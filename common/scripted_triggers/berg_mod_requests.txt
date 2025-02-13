@@ -105,3 +105,6 @@ berg_has_mem_mod = {
 berg_has_rebe_mod = {
 	has_rebe_mod = yes
 }
+berg_has_cellaris_mod = {
+	has_global_flag = cellaris_installed
+}

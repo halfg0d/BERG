@@ -7,6 +7,10 @@ triggered_planet_modifier = {
 	job_spawning_drone_add = -1
 	job_offspring_drone_add = 1
 }
+
+triggered_desc = { text = job_synapse_drone_effect_desc }
+triggered_desc = { text = job_maintenance_drone_effect_desc }
+triggered_desc = { text = job_patrol_drone_effect_desc }
 # OSA
 triggered_planet_modifier = {
 	potential = {

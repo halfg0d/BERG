@@ -1,0 +1,303 @@
+#########################
+## Cellaris Buildings
+#########################
+
+# Capital
+building_cell_capital_1 = {
+	building_sets = { cellaris_biomechanical }
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+	}
+	prerequisites = { "tech_colonial_centralization" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+	upgrades = { "building_cell_capital_2" }
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 8
+		job_synapse_drone_add = 2
+		job_maintenance_drone_add = 2
+		job_patrol_drone_add = 1
+		planet_max_buildings_add = @berg_buildings_t2
+		defense_armies_add = @tier_2_capital_defense_armies
+	}
+	inline_script = { script = buildings/on_all_capital_buildings }
+	inline_script = {
+		script = vanilla/capitals/hive/berg_scripts_jobs
+		tier = 1
+	}
+
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = no
+		prod3 = no
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 1000 }
+		upkeep = { energy = 2 }
+		inline_script = {
+			script = resources_scripts/osa_influence_upkeep
+			resource = 1
+		}
+	}
+}
+
+building_cell_capital_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	potential = {
+		exists = owner
+		berg_has_cellaris_mod = yes
+	}
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 25
+		}
+	}
+	prerequisites = { "tech_colonial_centralization" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+	planet_modifier = {
+		planet_housing_add = 10
+		planet_amenities_add = 12
+		job_synapse_drone_add = 3
+		job_maintenance_drone_add = 5
+		job_patrol_drone_add = 2
+		planet_max_buildings_add = @berg_buildings_t3
+		defense_armies_add = @tier_3_capital_defense_armies
+	}
+	inline_script = { script = buildings/on_all_capital_buildings }
+	inline_script = {
+		script = vanilla/capitals/hive/berg_scripts_jobs
+		tier = 2
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = yes
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = @b2_minerals }
+		upkeep = { energy = @b2_upkeep }
+		inline_script = {
+			script = resources_scripts/osa_influence_upkeep
+			resource = 2
+		}
+	}
+	upgrades = {
+		"building_avb_cell_capital_3"
+	}
+}
+building_avb_cell_capital_3 = {
+	icon = building_cell_capital_2
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @avb_b3_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	potential = {
+		exists = owner
+		berg_has_avb_mod = yes
+		berg_has_cellaris_mod = yes
+	}
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 50
+		}
+	}
+	prerequisites = { "tech_galactic_administration" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_has_avb_mod = yes
+		berg_is_cellaris_scourge = yes
+	}
+	planet_modifier = {
+		planet_housing_add = 16
+		planet_amenities_add = 16
+		job_synapse_drone_add = 4
+		job_maintenance_drone_add = 6
+		job_patrol_drone_add = 3
+		planet_max_buildings_add = @berg_buildings_t5
+		defense_armies_add = @tier_4_capital_defense_armies
+	}
+	inline_script = { script = buildings/on_all_capital_buildings }
+	inline_script = {
+		script = vanilla/capitals/hive/berg_scripts_jobs
+		tier = 3
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = yes
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = @avb_b3_minerals }
+		upkeep = { energy = @avb_b3_upkeep }
+		inline_script = {
+			script = resources_scripts/osa_influence_upkeep
+			resource = 3
+		}
+	}
+	upgrades = {
+		building_avb_cell_capital_4		
+	}
+}
+building_avb_cell_capital_4 = {
+	icon = building_cell_capital_2
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	capital = yes
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	potential = {
+		exists = owner
+		berg_has_cellaris_mod = yes
+		berg_has_avb_mod = yes
+	}
+	allow = {
+		inline_script = {
+			script = building_triggers/more_num_pops
+			NUM = 80
+		}
+	 }
+	prerequisites = { "tech_avb_capital_4" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		berg_is_cellaris_scourge = yes
+		berg_has_avb_mod = yes
+	}
+	planet_modifier = {
+		planet_housing_add = 22
+		planet_amenities_add = 22
+		job_synapse_drone_add = 5
+		job_maintenance_drone_add = 10
+		job_patrol_drone_add = 4
+		planet_max_buildings_add = @berg_buildings_t6
+		defense_armies_add = @tier_5_capital_defense_armies
+	}
+	inline_script = { script = buildings/on_all_capital_buildings }
+	inline_script = {
+		script = vanilla/capitals/hive/berg_scripts_jobs
+		tier = 4
+	}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = yes
+		prod3 = yes
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = @avb_b4_minerals }
+		upkeep = { energy = @avb_b4_upkeep }
+		inline_script = {
+			script = resources_scripts/osa_influence_upkeep
+			resource = 4
+		}
+	}
+}
+# Metamorph Center
+
+building_cell_m_harvest = {
+	building_sets = { cellaris_metamorph }
+	capital = yes
+	can_build = yes
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 0
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		uses_district_set = cellaris_metamorph
+		exists = owner
+	}
+	planet_modifier = {
+		planet_housing_add = 5
+		planet_amenities_add = 10
+		job_maintenance_drone_add = 3
+		job_patrol_drone_add = 1
+		defense_armies_add = 4
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 1000 }
+		upkeep = { energy = 7 }
+		inline_script = {
+			script = resources_scripts/osa_influence_upkeep
+			resource = 1
+		}
+	}
+	triggered_desc = { text = job_maintenance_drone_effect_desc }
+	triggered_desc = { text = job_patrol_drone_effect_desc }
+}
+
+building_cell_m_stability = {
+	base_cap_amount = 1
+	building_sets = { cellaris_metamorph }
+	base_buildtime = @b2_time
+	capital = no
+	can_build = yes
+	can_demolish = yes
+	can_be_ruined = yes
+	can_be_disabled = yes
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		uses_district_set = cellaris_metamorph
+		exists = owner
+	}
+	planet_modifier = {
+		planet_stability_add = 15
+		planet_amenities_add = 10
+		job_maintenance_drone_add = 3
+		job_patrol_drone_add = 3
+		pop_purge_speed = -0.2
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = 1000 }
+		upkeep = { energy = 7 }
+		inline_script = {
+			script = resources_scripts/osa_influence_upkeep
+			resource = 1
+		}
+	}
+	triggered_desc = { text = job_maintenance_drone_effect_desc }
+	triggered_desc = { text = job_patrol_drone_effect_desc }
+}

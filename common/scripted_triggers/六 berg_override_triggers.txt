@@ -1,0 +1,37 @@
+has_upgraded_capital_cell = {
+	custom_tooltip = {
+		fail_text = "requires_building_cell_capital"
+		OR = {
+			has_building = building_cell_capital_1
+			has_building = building_cell_capital_2
+			has_building = building_avb_cell_capital_3
+			has_building = building_avb_cell_capital_4
+		}
+	}
+}
+
+has_major_upgraded_capital_cell = {
+	custom_tooltip = {
+		fail_text = "requires_building_major_cell_capital"
+		OR = {
+			has_building = building_cell_capital_2
+			has_building = building_avb_cell_capital_3
+			has_building = building_avb_cell_capital_4
+		}
+	}
+}
+has_fully_upgraded_capital_cell = {
+	custom_tooltip = {
+		fail_text = "requires_building_fully_cell_capital"
+		OR = {
+			has_building = building_avb_cell_capital_3
+			has_building = building_avb_cell_capital_4
+		}
+	}
+}
+has_upgraded_capital_4_cell = {
+	custom_tooltip = {
+		fail_text = "requires_building_upg_4_cell_capital"
+		has_building = building_avb_cell_capital_4
+	}
+}

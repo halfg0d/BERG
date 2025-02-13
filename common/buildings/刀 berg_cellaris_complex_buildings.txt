@@ -1,0 +1,878 @@
+#########################
+## Cellaris Buildings
+#########################
+
+# GASES
+building_cell_refinery = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	potential = {
+		berg_has_cellaris_mod = yes
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+	}
+	inline_script = {
+		script = jobs/refiner_add
+		AMOUNT = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = 500 }
+		upkeep = { energy = 3 }
+	}
+	prerequisites = { "tech_exotic_gases" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+	}
+}
+
+# MOTES
+
+building_cell_chemical_plant = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	potential = {
+		berg_has_cellaris_mod = yes
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+	}
+	inline_script = {
+		script = jobs/chemist_add
+		AMOUNT = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b2_minerals }
+		upkeep = { energy = 3 }
+	}
+	prerequisites = { "tech_volatile_motes" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+	}
+}
+
+# CRYSTALS
+
+building_cell_crystal_plant = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	exempt_from_ai_planet_specialization = no
+	category = manufacturing
+	potential = {
+		berg_has_cellaris_mod = yes
+		berg_is_resort_world = no
+		berg_is_slave_world = no
+	}
+	inline_script = {
+		script = jobs/translucer_add
+		AMOUNT = 1
+	}
+	resources = {
+		category = planet_buildings
+		cost = { minerals = @b2_minerals }
+		upkeep = { energy = 3 }
+	}
+	prerequisites = { "tech_rare_crystals" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+	}
+}
+
+# RESEARCH
+
+building_cell_research_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	exempt_from_ai_planet_specialization = no
+	category = research
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b1_jobs
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = @b1_minerals }
+		upkeep = { energy = @b1_upkeep }
+	}
+	upgrades = { "building_cell_research_2" }
+	prerequisites = { "tech_basic_science_lab_1" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+}
+
+building_cell_research_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = research
+	allow = { has_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b2_jobs
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			food = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+	}
+	upgrades = { "building_cell_research_3" }
+	prerequisites = { "tech_basic_science_lab_2" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+}
+
+building_cell_research_3 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b3_time
+	can_build = no
+	category = research
+	allow = { has_major_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	inline_script = {
+		script = jobs/researchers_add
+		AMOUNT = @b3_jobs
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_galactic_community_member = yes
+			}
+			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			has_modifier = pm_extradimensional_experimentation
+		}
+		modifier = { job_dimensional_portal_researcher_add = 1 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				is_galactic_community_member = yes
+			}
+			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			has_modifier = pm_extradimensional_experimentation
+		}
+		modifier = { job_dimensional_portal_researcher_gestalt_add = 1 }
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			food = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				owner = { is_galactic_community_member = yes }
+				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+				planet = { has_modifier = pm_extradimensional_experimentation }
+			}
+			sr_zro = 1
+		}
+	}
+	prerequisites = { "tech_basic_science_lab_3" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+}
+
+# ALLOYS
+
+building_cell_foundry_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = manufacturing
+	potential = {
+		berg_has_cellaris_mod = yes
+		OR = {
+			owner = { is_ai = no }
+			has_any_industry_district = yes
+		}
+	}
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			has_any_industry_district = no
+		}
+	}
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @b1_jobs
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = @b1_minerals }
+		upkeep = { energy = @b1_upkeep }
+	}
+	upgrades = { building_cell_foundry_2 }
+	prerequisites = { tech_basic_industry }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+}
+
+building_cell_foundry_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = manufacturing
+	allow = { has_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = { is_ai = yes }
+			has_any_industry_district = no
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			food = @b2_minerals
+			volatile_motes = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			volatile_motes = @b3_rare_upkeep
+		}
+	}
+	upgrades = { building_cell_foundry_3 }
+	prerequisites = { tech_alloys_1 }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = no }
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 1
+			planet_metallurgists_minerals_upkeep_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = yes }
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 1.25
+			planet_metallurgists_food_upkeep_add = 3
+		}
+	}
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @b1_jobs
+	}
+}
+
+building_cell_foundry_3 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b3_time
+	can_build = no
+	category = manufacturing
+	allow = { has_major_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	destroy_trigger = {
+		AND = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			has_any_industry_district = no
+		}
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			trigger = { has_ringworld_output_boost = no }
+			food = @b3_minerals
+			volatile_motes = @b4_rare_cost
+		}
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			food = 1500
+			volatile_motes = 600
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = no }
+			energy = @b3_upkeep
+			volatile_motes = @b4_rare_upkeep
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = 15
+			volatile_motes = 8
+		}
+	}
+	prerequisites = { tech_alloys_2 }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = no }
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 2
+			planet_metallurgists_minerals_upkeep_add = 4
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_catalytic_empire = yes }
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 2.5
+			planet_metallurgists_food_upkeep_add = 6
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			exists = owner
+			owner = { is_catalytic_empire = no }
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 1
+			planet_metallurgists_minerals_upkeep_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			exists = owner
+			owner = { is_catalytic_empire = yes }
+		}
+		modifier = {
+			planet_metallurgists_alloys_produces_add = 1.25
+			planet_metallurgists_food_upkeep_add = 3
+		}
+	}
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @b1_jobs
+	}
+}
+
+# UNITY
+
+building_cell_unity_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	exempt_from_ai_planet_specialization = no
+	category = unity
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+	resources = {
+		category = planet_buildings
+		cost = { food = @b1_minerals }
+		upkeep = { energy = @b1_upkeep }
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = synaptic_reinforcement }
+			}
+			energy = 2
+		}
+	}
+	planet_modifier = { job_synapse_drone_add = @b1_jobs }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_synaptic_extensions }
+		}
+		modifier = { planet_housing_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = synaptic_reinforcement }
+		}
+		job_maintenance_drone_add = 1
+	}
+	triggered_desc = { text = job_synapse_drone_effect_desc }
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_edict = synaptic_reinforcement }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+	prerequisites = { "tech_hive_node" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	upgrades = { building_cell_unity_2 }
+}
+
+building_cell_unity_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	exempt_from_ai_planet_specialization = no
+	category = unity
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	allow = { has_upgraded_capital_cell = yes }
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			food = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = synaptic_reinforcement }
+			}
+			energy = 2
+		}
+	}
+	planet_modifier = { job_synapse_drone_add = @b2_jobs }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_synaptic_extensions }
+		}
+		modifier = { planet_housing_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = synaptic_reinforcement }
+		}
+		job_maintenance_drone_add = 1
+	}
+	triggered_desc = { text = job_synapse_drone_effect_desc }
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_edict = synaptic_reinforcement }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+	prerequisites = { "tech_hive_cluster" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	upgrades = { building_cell_unity_3 }
+}
+
+building_cell_unity_3 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b3_time
+	can_build = no
+	category = unity
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_hive_empire = yes }
+	}
+	allow = { has_major_upgraded_capital_cell = yes }
+	destroy_trigger = {
+		exists = owner
+		owner = { is_hive_empire = no }
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			food = @b3_minerals
+			exotic_gases = @b3_rare_cost
+		}
+		upkeep = {
+			energy = @b3_upkeep
+			exotic_gases = @b3_rare_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_edict = synaptic_reinforcement }
+			}
+			energy = 2
+		}
+	}
+	planet_modifier = { job_synapse_drone_add = @b3_jobs }
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_synaptic_extensions }
+		}
+		modifier = { planet_housing_add = 2 }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = synaptic_reinforcement }
+		}
+		job_maintenance_drone_add = 1
+	}
+	prerequisites = { "tech_hive_confluence" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	triggered_desc = { text = job_synapse_drone_effect_desc }
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_edict = synaptic_reinforcement }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+}
+
+# UNITY BOOST
+
+building_cell_unity_center_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = unity
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		berg_is_slave_world = no
+		owner = {
+			is_hive_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = no
+				is_memorialist_empire = yes
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 1
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = { food = @b1_minerals }
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+		job_evaluator_add = @b1_jobs
+	}
+	triggered_desc = { text = building_autochthon_monument_effect }
+	triggered_desc = { text = job_evaluator_effect_desc }
+	prerequisites = { "tech_hive_node" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	upgrades = { building_cell_unity_center_2 }
+}
+
+building_cell_unity_center_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b2_time
+	can_build = no
+	category = unity
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		berg_is_slave_world = no
+		owner = {
+			is_hive_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+	allow = { has_upgraded_capital_cell = yes }
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_hive_empire = no
+				is_memorialist_empire = yes
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = { food = @b2_minerals }
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.10
+		job_evaluator_add = @b2_jobs
+	}
+	triggered_desc = { text = building_heritage_site_effect }
+	triggered_desc = { text = job_evaluator_effect_desc }
+	prerequisites = { "tech_hive_cluster" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	upgrades = { building_cell_unity_center_3 }
+}
+
+building_cell_unity_center_3 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b3_time
+	can_build = no
+	category = unity
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		berg_is_slave_world = no
+		owner = {
+			is_hive_empire = yes
+			is_memorialist_empire = no
+		}
+	}
+	allow = { has_major_upgraded_capital_cell = yes }
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			berg_is_slave_world = yes
+			owner = {
+				OR = {
+					is_hive_empire = no
+					is_memorialist_empire = yes
+				}
+			}
+		}
+	}
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 3
+			multiplier = owner.trigger:num_ascension_perks
+		}
+		cost = { food = @b3_minerals }
+	}
+	planet_modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+		job_evaluator_add = @b3_jobs
+	}
+	triggered_desc = { text = building_hypercomms_forum_effect }
+	triggered_desc = { text = job_evaluator_effect_desc }
+	prerequisites = { "tech_hive_confluence" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge 
+	}
+}
+
+# ARMY
+
+building_cell_army_1 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = 240
+	position_priority = 100
+	can_be_ruined = no
+	category = army
+	exempt_from_ai_planet_specialization = no
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = { job_soldier_add = @b1_jobs }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = { job_warrior_drone_add = @b1_jobs }
+	}
+	resources = {
+		category = planet_buildings_strongholds
+		cost = { food = @b1_minerals }
+		upkeep = { energy = 1 }
+	}
+	prerequisites = { "tech_planetary_defenses" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	upgrades = { "building_cell_army_2" }
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = { # Kept in case of conquering.
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+}
+
+building_cell_army_2 = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+	can_be_ruined = no
+	category = army
+	allow = { has_upgraded_capital_cell = yes }
+	potential = {
+		berg_has_cellaris_mod = yes
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = { job_soldier_add = @b2_jobs }
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = { job_warrior_drone_add = @b2_jobs }
+	}
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			food = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = { energy = 1 volatile_motes = @b2_rare_upkeep }
+	}
+	prerequisites = { "tech_global_defense_grid" }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	triggered_desc = { # Kept in case of conquering.
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+}
+
+# DEVIANCY
+
+building_cell_sentinel = {
+	building_sets = { cellaris_biomechanical }
+	base_buildtime = @b1_time
+	category = government
+	potential = {
+		berg_has_cellaris_mod = yes
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	allow = {
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				AND = {
+					NOT = { has_building = building_sentinel_posts }
+					NOT = { has_forbidden_jobs = patrol_drone }
+					NOT = { has_available_jobs = patrol_drone }
+				}
+			}
+		}
+	}
+	destroy_trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	planet_modifier = { job_patrol_drone_add = 2 }
+	resources = {
+		category = planet_buildings
+		cost = { food = @b1_minerals }
+		upkeep = { energy = 2 }
+	}
+	prerequisites = { "tech_planetary_government" }
+	triggered_desc = { text = job_patrol_drone_effect_desc }
+	show_tech_unlock_if = {
+		berg_has_cellaris_mod = yes
+		has_origin = origin_cellaris_scourge
+	}
+}

@@ -3,6 +3,7 @@
 #############
 # RCJT - Regular Capital Job Trigger
 berg_RCJT_can_politician = {
+	exists = owner
 	owner = {
 		NOR = {
 			is_gestalt = yes
@@ -17,6 +18,7 @@ berg_RCJT_can_politician = {
 	}
 }
 berg_RCJT_holy_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -35,6 +37,7 @@ berg_RCJT_holy_civic = {
 	}
 }
 berg_RCJT_noble_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -53,6 +56,7 @@ berg_RCJT_noble_civic = {
 	}
 }
 berg_RCJT_techno_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -71,6 +75,7 @@ berg_RCJT_techno_civic = {
 	}
 }
 berg_RCJT_merchant_civic = {
+	exists = owner
 	owner = {
 		OR = {
 			# Vanilla
@@ -86,6 +91,7 @@ berg_RCJT_merchant_civic = {
 berg_RCJT_military_dictatorship_civic = {
 	# ECC
 	berg_has_ecc_mod = yes
+	exists = owner
 	owner = {
 		OR = {
 			has_civic = civic_military_dictatorship
@@ -98,6 +104,7 @@ berg_RCJT_military_dictatorship_civic = {
 berg_RCJT_supervisor_civic = {
 	# ECC
 	berg_has_ecc_mod = yes
+	exists = owner
 	owner = {
 		OR = {
 			has_civic = civic_executive_committee

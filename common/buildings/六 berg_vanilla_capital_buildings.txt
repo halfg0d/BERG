@@ -1887,6 +1887,10 @@ building_hive_capital = {
 
 	show_tech_unlock_if = {
 		is_hive_empire = yes
+		NAND = {
+			berg_has_cellaris_mod = yes
+			berg_is_cellaris_scourge = yes
+		}
 	}
 
 	planet_modifier = {
@@ -1906,15 +1910,11 @@ building_hive_capital = {
 		script = vanilla/capitals/hive/berg_scripts_jobs
 		tier = 1
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_capital_productivity_1 }
-		}
-		modifier = {
-			planet_jobs_productive_upkeep_mult = 0.1
-			planet_jobs_productive_produces_mult = 0.1
-		}
+	inline_script = {
+		script = vanilla/capitals/berg_productivity_script
+		prod1 = yes
+		prod2 = no
+		prod3 = no
 	}
 
 	triggered_planet_modifier = {
@@ -1979,6 +1979,10 @@ building_hive_major_capital = {
 
 	show_tech_unlock_if = {
 		is_hive_empire = yes
+		NAND = {
+			berg_has_cellaris_mod = yes
+			berg_is_cellaris_scourge = yes
+		}
 	}
 
 	planet_modifier = {
@@ -2074,6 +2078,10 @@ building_avb_hive_capital_3 = {
 	
 	show_tech_unlock_if = { 
 		is_hive_empire = yes
+		NAND = {
+			berg_has_cellaris_mod = yes
+			berg_is_cellaris_scourge = yes
+		}
 	}
 	
 	planet_modifier = {
@@ -2179,6 +2187,10 @@ building_avb_hive_capital_4 = {
 	
 	show_tech_unlock_if = { 
 		is_hive_empire = yes
+		NAND = {
+			berg_has_cellaris_mod = yes
+			berg_is_cellaris_scourge = yes
+		}
 	}
 	
 	planet_modifier = {
